@@ -1,0 +1,17 @@
+corridor,vehicle,direction,minutes,open_road_minutes,wet_extra,p5,p95
+kampala_elegu,car,outbound,346.3,287.1,36.8,317.1,396.6
+kampala_hoima,car,outbound,163.9,129.6,17.6,148.0,191.1
+kampala_katuna,car,outbound,364.1,283.7,38.5,330.9,418.5
+kampala_malaba,car,outbound,214.6,142.6,21.1,193.8,250.3
+kampala_elegu,car,inbound,346.3,287.1,36.8,317.1,396.6
+kampala_hoima,car,inbound,163.9,129.6,17.6,148.0,191.1
+kampala_katuna,car,inbound,364.1,283.7,38.5,330.9,418.5
+kampala_malaba,car,inbound,214.6,142.6,21.1,193.8,250.3
+kampala_elegu,truck,outbound,476.1,369.4,48.3,442.1,592.7
+kampala_hoima,truck,outbound,225.6,166.7,23.9,203.8,272.4
+kampala_katuna,truck,outbound,526.5,365.1,52.8,489.2,648.3
+kampala_malaba,truck,outbound,303.9,185.1,27.2,287.9,401.8
+kampala_elegu,truck,inbound,479.6,369.4,48.7,445.6,595.0
+kampala_hoima,truck,inbound,225.5,166.7,23.9,203.8,272.2
+kampala_katuna,truck,inbound,518.7,365.1,52.0,483.1,640.2
+kampala_malaba,truck,inbound,306.2,185.1,27.4,289.5,404.2

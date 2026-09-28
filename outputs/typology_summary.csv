@@ -1,0 +1,13 @@
+corridor,type_rank,road_type,km,buildings_100m,joining_roads,activity,share
+kampala_elegu,0,open road,147.5,4.8,0.5,0.0,0.342
+kampala_elegu,1,roadside settlement,251.0,86.8,1.8,0.4,0.582
+kampala_elegu,2,town,32.5,363.7,6.5,10.6,0.075
+kampala_hoima,0,open road,32.0,8.6,0.3,0.0,0.165
+kampala_hoima,1,roadside settlement,147.0,118.1,1.6,0.2,0.756
+kampala_hoima,2,town,15.5,416.4,7.3,11.1,0.08
+kampala_katuna,0,open road,106.5,3.6,0.6,0.0,0.25
+kampala_katuna,1,roadside settlement,271.5,105.8,1.8,0.2,0.637
+kampala_katuna,2,town,48.0,345.5,7.4,15.7,0.113
+kampala_malaba,0,open road,43.0,3.3,0.7,0.1,0.199
+kampala_malaba,1,roadside settlement,125.5,154.1,1.8,0.4,0.581
+kampala_malaba,2,town,47.5,339.8,6.4,12.4,0.22

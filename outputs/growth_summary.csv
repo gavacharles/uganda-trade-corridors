@@ -1,0 +1,17 @@
+corridor,built_ha_2000,built_ha_2005,built_ha_2010,built_ha_2015,built_ha_2020,built_ha_2026_proj,growth_2000_2020_pct,growth_2020_2026_proj_pct,road_type,growth_pct
+kampala_elegu,855.0,954.0,1094.0,1266.0,1437.0,1560.0,68.0,9.0,all,
+kampala_hoima,477.0,527.0,596.0,676.0,748.0,815.0,57.0,9.0,all,
+kampala_katuna,1188.0,1288.0,1416.0,1566.0,1704.0,1837.0,43.0,8.0,all,
+kampala_malaba,1078.0,1143.0,1221.0,1305.0,1370.0,1435.0,27.0,5.0,all,
+kampala_elegu,26.0,,,,73.0,,,,open road,181.0
+kampala_elegu,444.0,,,,903.0,,,,roadside settlement,103.0
+kampala_elegu,385.0,,,,461.0,,,,town,20.0
+kampala_hoima,4.0,,,,13.0,,,,open road,225.0
+kampala_hoima,242.0,,,,465.0,,,,roadside settlement,92.0
+kampala_hoima,230.0,,,,269.0,,,,town,17.0
+kampala_katuna,12.0,,,,38.0,,,,open road,217.0
+kampala_katuna,585.0,,,,980.0,,,,roadside settlement,68.0
+kampala_katuna,591.0,,,,687.0,,,,town,16.0
+kampala_malaba,4.0,,,,10.0,,,,open road,150.0
+kampala_malaba,457.0,,,,661.0,,,,roadside settlement,45.0
+kampala_malaba,618.0,,,,698.0,,,,town,13.0

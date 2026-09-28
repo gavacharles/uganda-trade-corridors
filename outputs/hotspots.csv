@@ -1,0 +1,41 @@
+corridor,km_from,km_to,place,car_excess_min,truck_excess_min,road_type,main_causes
+kampala_elegu,59.5,61.5,Kizito,0.66,10.8,roadside settlement,weighbridge 10.0; roadside activity 0.5; speed humps (assumed) 0.3
+kampala_elegu,429.0,430.91,Bibia West Lc1,1.31,3.98,roadside settlement,police posts 3.5; roadside activity 0.9; speed humps (assumed) 0.3
+kampala_elegu,0.0,2.0,Bishop-mukwaya,2.2,2.77,town,speed humps (assumed) 1.3; signals and crossings 1.2; roadside activity 0.6
+kampala_elegu,56.5,58.5,Kasana,1.94,2.27,town,speed humps (assumed) 1.3; signals and crossings 0.7; roadside activity 0.5
+kampala_elegu,3.5,5.5,Kawempe B,1.61,2.14,town,speed humps (assumed) 1.3; roadside activity 0.7; joining roads 0.4
+kampala_elegu,12.5,14.5,Kabonza,1.61,2.11,town,speed humps (assumed) 1.3; roadside activity 0.5; joining roads 0.3
+kampala_elegu,5.5,7.5,Kagoma,1.6,1.98,town,speed humps (assumed) 1.3; roadside activity 0.5; joining roads 0.3
+kampala_elegu,361.5,363.5,Kal Centre,1.21,2.27,roadside settlement,police posts 1.2; roadside activity 0.7; speed humps (assumed) 0.7
+kampala_elegu,7.5,9.5,Kawanda,1.6,1.71,town,speed humps (assumed) 1.3; town speed limit 0.5; roadside activity 0.2
+kampala_elegu,43.0,45.0,Wobulenzi,1.6,1.64,town,speed humps (assumed) 1.3; town speed limit 0.7; roadside activity 0.1
+kampala_hoima,6.0,8.0,Ocheng B,1.82,4.01,town,police posts 2.3; speed humps (assumed) 1.0; roadside activity 0.6
+kampala_hoima,2.5,4.5,Nansana East II A,1.77,3.31,town,speed humps (assumed) 1.3; police posts 1.2; roadside activity 0.5
+kampala_hoima,192.0,194.0,Hospital Cell,1.9,2.82,town,speed humps (assumed) 1.3; police posts 1.2; town speed limit 0.7
+kampala_hoima,190.0,192.0,Bwikya Cell,1.87,1.9,town,speed humps (assumed) 1.3; town speed limit 0.6; signals and crossings 0.5
+kampala_hoima,0.0,2.0,Namugoona Roundabout,1.64,2.0,town,speed humps (assumed) 1.3; roadside activity 0.5; joining roads 0.3
+kampala_hoima,10.5,12.5,Kasangobe,1.42,1.84,town,speed humps (assumed) 1.0; roadside activity 0.6; joining roads 0.2
+kampala_hoima,8.0,10.0,Kayunga,0.92,1.21,roadside settlement,roadside activity 1.0; speed humps (assumed) 0.3; joining roads 0.3
+kampala_hoima,114.5,116.5,Hospital,0.82,1.27,roadside settlement,roadside activity 0.5; speed humps (assumed) 0.3; hills (trucks) 0.3
+kampala_hoima,20.5,22.5,Kigaaga,0.89,1.11,roadside settlement,roadside activity 1.0; speed humps (assumed) 0.3; joining roads 0.3
+kampala_hoima,12.5,14.5,Namusera,0.75,1.22,roadside settlement,roadside activity 1.3; joining roads 0.3; hills (trucks) 0.3
+kampala_katuna,98.0,100.0,Magezi Cell,1.6,11.91,town,weighbridge 10.0; speed humps (assumed) 1.3; roadside activity 0.4
+kampala_katuna,256.0,258.0,Rwebihuro,0.19,10.28,open road,weighbridge 10.0; roadside activity 0.3; joining roads 0.2
+kampala_katuna,4.5,6.5,Kigwanya,1.78,3.18,town,speed humps (assumed) 1.3; police posts 1.2; roadside activity 0.7
+kampala_katuna,160.0,162.0,Industry,1.37,3.45,roadside settlement,police posts 2.3; speed humps (assumed) 0.7; roadside activity 0.4
+kampala_katuna,268.0,270.0,Ruti,1.2,3.14,roadside settlement,police posts 2.3; roadside activity 1.0; speed humps (assumed) 0.3
+kampala_katuna,12.5,14.5,Kitemu,1.95,2.37,town,signals and crossings 1.1; speed humps (assumed) 1.0; roadside activity 0.9
+kampala_katuna,125.5,127.5,Mutuba Musisi,1.6,2.34,town,speed humps (assumed) 1.3; hills (trucks) 0.8; town speed limit 0.6
+kampala_katuna,15.0,17.0,Nsangi,1.73,2.2,town,speed humps (assumed) 1.3; roadside activity 0.6; joining roads 0.3
+kampala_katuna,2.0,4.0,Kabusu,1.64,2.19,town,speed humps (assumed) 1.3; roadside activity 0.7; joining roads 0.5
+kampala_katuna,261.5,263.5,Agip,1.8,2.0,town,speed humps (assumed) 1.3; town speed limit 0.5; signals and crossings 0.3
+kampala_malaba,2.0,4.0,Nakawa Vocation Institute,7.58,8.51,town,signals and crossings 11.5; speed humps (assumed) 1.3; police posts 1.2
+kampala_malaba,97.5,99.5,Buwanga B,0.54,12.26,roadside settlement,weighbridge 10.0; police posts 2.3; roadside activity 0.4
+kampala_malaba,174.0,176.0,Namutere,0.85,10.83,open road,weighbridge 10.0; signals and crossings 0.8; speed humps (assumed) 0.3
+kampala_malaba,0.0,2.0,Community Flats,4.57,5.26,town,signals and crossings 5.3; speed humps (assumed) 1.3; police posts 1.2
+kampala_malaba,213.5,215.5,Asinge 'b',1.89,3.47,town,police posts 2.3; speed humps (assumed) 1.0; signals and crossings 0.5
+kampala_malaba,7.5,9.5,Kireka Central,1.77,3.06,town,speed humps (assumed) 1.3; police posts 1.2; roadside activity 0.5
+kampala_malaba,19.0,21.0,Butebe,1.8,3.0,town,speed humps (assumed) 1.3; police posts 1.2; roadside activity 0.5
+kampala_malaba,114.0,116.0,Iganga,1.94,2.34,town,speed humps (assumed) 1.3; signals and crossings 0.6; roadside activity 0.5
+kampala_malaba,27.5,29.5,Mbalala,1.45,2.58,town,police posts 1.2; speed humps (assumed) 1.0; roadside activity 0.5
+kampala_malaba,5.5,7.5,Kireka,1.61,2.07,town,speed humps (assumed) 1.3; roadside activity 0.6; joining roads 0.4
