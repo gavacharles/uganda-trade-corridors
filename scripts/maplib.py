@@ -23,7 +23,7 @@ import cartography as K  # noqa: E402  (map furniture, shared with the accessibi
 INK, INK2, SURF = K.INK, K.INK2, K.SURF
 WATER, NEIGHBOUR, LAND = "#c9dcee", "#e6e4de", "#fbfaf7"
 BUILDING, ROAD, STREAM = "#9d988c", "#6f6c66", "#7fa9cf"
-COL = dict(zip(C.CORRIDORS, ["#2a78d6", "#eb6834", "#1baf7a", "#eda100"]))  # categorical slots 1-4
+COL = dict(zip(C.CORRIDORS, ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#8a5cc7"]))  # categorical slots 1-5
 DELAY_BOUNDS = [0, 0.25, 0.5, 1, 2, 4, 100]  # minutes lost per km
 DELAY_LABELS = ["< 0.25", "0.25–0.5", "0.5–1", "1–2", "2–4", "> 4"]
 DELAY_CMAP = ListedColormap(["#f3eee6", "#fde6da", "#f6b596", "#eb6834", "#b8491c", "#7c2e0f"])

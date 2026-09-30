@@ -199,8 +199,10 @@ fig.subplots_adjust(bottom=0.1)
 save(fig, "g03_strip_maps.png")
 
 # ---------------------------------------------------------------- g04 time map
-# Only meaningful when every corridor leaves the same place (Kampala in the Uganda study)
-if len({tuple(c["start"]) for c in C.CORRIDORS.values()}) > 1:
+# Only meaningful when every corridor leaves the same city (Kampala in the Uganda study):
+# all start points within 12 km of each other
+_st = np.array([c["start"] for c in C.CORRIDORS.values()])
+if np.hypot((_st[:, 0, None] - _st[:, 0]) * 111.3, (_st[:, 1, None] - _st[:, 1]) * 110.6).max() > 12:
     raise SystemExit("corridors start in different places: g04 skipped")
 d = P.merge(tt[["corridor", "piece", "truck_outbound_min"]])
 g = gpd.GeoDataFrame(d, geometry=gpd.points_from_xy(d.lon, d.lat), crs=4326).to_crs(C.UTM)

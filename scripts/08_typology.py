@@ -90,9 +90,10 @@ for i, (corridor, cfg) in enumerate(C.CORRIDORS.items()):
     ax.tick_params(colors=INK2, labelsize=8, length=0)
     ax.set_xlabel("km from Kampala", fontsize=8.5, color=INK2)
     sh = summ[summ.corridor == corridor].set_index("road_type").share
-    ax.text(0, 1.25, title, transform=ax.transAxes, fontsize=11, color=INK, va="bottom")
-    ax.text(0, 1.08, " · ".join(f"{t} {sh.get(t, 0):.0%}" for t in NAMES[k]), transform=ax.transAxes,
-            fontsize=8.5, color=INK2, va="bottom")
+    ax.annotate(title, (0, 1), xycoords="axes fraction", xytext=(0, 17), textcoords="offset points",
+                fontsize=11, color=INK, va="bottom")
+    ax.annotate(" · ".join(f"{t} {sh.get(t, 0):.0%}" for t in NAMES[k]), (0, 1), xycoords="axes fraction",
+                xytext=(0, 4), textcoords="offset points", fontsize=8.5, color=INK2, va="bottom")
 
 # Legend with what each type means
 lx, ly = 0.44, 0.06

@@ -183,9 +183,12 @@ for ax, (corridor, cfg) in zip(axs, C.CORRIDORS.items()):
                  f"truck {t.loc['truck', 'minutes']:.0f} min (open road {t.loc['truck', 'open_road_minutes']:.0f})",
                  loc="left", fontsize=10, color=INK)
 axs[0].legend(loc="lower right", frameon=False, fontsize=9, labelcolor=INK2)
-fig.text(0.02, 1.02, "What each cause adds to the trip, in light traffic", fontsize=15, color=INK)
-fig.text(0.02, 0.965, "Central estimate; whiskers show the 5th–95th percentile over 1,000 draws of all assumptions. "
-         "Rain is a wet-day scenario, not an annual average. Congestion is not modelled. All panels share one scale.", fontsize=9, color=INK2)
+H = fig.get_figheight()
+fig.subplots_adjust(top=1 - 1.0 / H)
+fig.text(0.02, 1 - 0.05 / H, "What each cause adds to the trip, in light traffic", fontsize=15, color=INK, va="top")
+fig.text(0.02, 1 - 0.42 / H, "Central estimate; whiskers show the 5th–95th percentile over 1,000 draws of all assumptions. "
+         "Rain is a wet-day scenario, not an annual average. Congestion is not modelled. All panels share one scale.", fontsize=9, color=INK2,
+         va="top")
 fig.savefig(os.path.join(C.FIGURES, "f04_minutes_by_cause.png"), dpi=150, facecolor=SURF, bbox_inches="tight")
 
 # Figure 5: excess minutes per km along each corridor, hotspots labelled
