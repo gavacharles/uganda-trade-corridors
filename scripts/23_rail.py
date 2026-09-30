@@ -61,7 +61,9 @@ TOWNS = {"Kampala": (32.5825, 0.3136), "Mukono": (32.7550, 0.3530), "Lugazi": (3
          "Katuna": (30.0000, -1.4200), "Luweero": (32.4730, 0.8490), "Kafu": (32.0560, 1.5700),
          "Bweyale": (32.1100, 1.8200), "Karuma": (32.2380, 2.2480), "Gulu": (32.2990, 2.7740),
          "Atiak": (32.1200, 3.2600), "Elegu": (32.0800, 3.5750), "Kiboga": (31.7730, 0.9160),
-         "Kakumiro": (31.3230, 0.7810), "Hoima": (31.3520, 1.4320)}
+         "Kakumiro": (31.3230, 0.7810), "Hoima": (31.3520, 1.4320),
+         "Mityana": (32.0420, 0.4170), "Mubende": (31.3950, 0.5580), "Kyenjojo": (30.6420, 0.6320),
+         "Fort Portal": (30.2750, 0.6710), "Kasese": (30.0830, 0.1830), "Bwera": (29.7350, 0.0350)}
 LINES = {  # name: (road it serves, stations in order, status)
     "Eastern": ("kampala_malaba", ["Kampala", "Mukono", "Lugazi", "Jinja", "Iganga", "Bugiri", "Tororo", "Malaba"],
                 "SGR contracted; metre gauge in use"),
@@ -70,6 +72,8 @@ LINES = {  # name: (road it serves, stations in order, status)
     "Northern direct": ("kampala_elegu", ["Kampala", "Luweero", "Kafu", "Bweyale", "Karuma", "Gulu", "Atiak", "Elegu"],
                         "proposed here (SGR plan reaches Gulu from Tororo)"),
     "Albertine": ("kampala_hoima", ["Kampala", "Kiboga", "Kakumiro", "Hoima"], "proposed here (no line planned)"),
+    "Western": ("kampala_bwera", ["Kampala", "Mityana", "Mubende", "Kyenjojo", "Fort Portal", "Kasese", "Bwera"],
+                "proposed here (metre gauge to Kasese disused)"),
 }
 # (central, low, high)
 RAIL_PARAMS = {
@@ -285,7 +289,7 @@ r4[r4.railway == "rail"].plot(ax=ax, color=INK, linewidth=1.4, zorder=3)
 r4[r4.railway == "disused"].plot(ax=ax, color=INK2, linewidth=1.0, linestyle=(0, (3, 2)), zorder=3)
 v = (pp.truck_excess_min / 0.5).clip(upper=2)
 ax.scatter(pp.lon, pp.lat, c=v, cmap="Oranges", s=9, vmin=0, vmax=2, zorder=4, linewidths=0)
-cols = {"Eastern": "#2a78d6", "Southwestern": "#1aa878", "Northern direct": "#e8643a", "Albertine": "#7a5bc4"}
+cols = {"Eastern": "#2a78d6", "Southwestern": "#1aa878", "Northern direct": "#e8643a", "Albertine": "#e89c10", "Western": "#8a5cc7"}
 for rw in GA.itertuples():
     ax.plot(*rw.geometry.xy, color=cols[rw.line], linewidth=2.2, alpha=0.85, zorder=5, label=f"{rw.line} (screening alignment)")
 for n in ("Kampala", "Jinja", "Tororo", "Malaba", "Masaka", "Mbarara", "Kabale", "Gulu", "Karuma", "Elegu", "Hoima", "Luweero"):
