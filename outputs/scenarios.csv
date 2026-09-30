@@ -1,0 +1,49 @@
+corridor,vehicle,scenario,label,minutes_saved,p5,p95,share_of_excess,km_treated,min_saved_per_km
+kampala_elegu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_elegu,car,no_police,No stops at police posts,2.5,0.4,7.0,0.042,,
+kampala_elegu,car,bypass_2,Bypass the 2 worst towns,1.9,-0.7,4.3,0.032,6.0,0.31
+kampala_elegu,car,service_all,"Service roads, all settlements",13.7,7.3,27.0,0.232,251.0,0.05
+kampala_elegu,car,service_20km,"Service roads, worst 20 km",3.5,1.5,7.1,0.058,20.0,0.17
+kampala_elegu,car,all,All four (with worst 20 km),7.6,4.0,14.7,0.129,,
+kampala_elegu,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.075,,
+kampala_elegu,truck,no_police,No stops at police posts,15.0,3.5,71.4,0.141,,
+kampala_elegu,truck,bypass_2,Bypass the 2 worst towns,2.0,-1.1,5.1,0.019,6.0,0.33
+kampala_elegu,truck,service_all,"Service roads, all settlements",15.5,7.7,32.3,0.145,251.0,0.06
+kampala_elegu,truck,service_20km,"Service roads, worst 20 km",4.3,1.7,8.9,0.04,20.0,0.22
+kampala_elegu,truck,all,All four (with worst 20 km),29.1,22.3,91.7,0.273,,
+kampala_hoima,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_hoima,car,no_police,No stops at police posts,0.7,0.1,1.9,0.019,,
+kampala_hoima,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+kampala_hoima,car,service_all,"Service roads, all settlements",9.8,4.9,19.5,0.285,147.0,0.07
+kampala_hoima,car,service_20km,"Service roads, worst 20 km",3.8,1.4,7.6,0.112,20.0,0.19
+kampala_hoima,car,all,All four (with worst 20 km),4.5,2.4,9.0,0.131,,
+kampala_hoima,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_hoima,truck,no_police,No stops at police posts,4.0,0.9,19.0,0.068,,
+kampala_hoima,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+kampala_hoima,truck,service_all,"Service roads, all settlements",9.8,4.5,20.9,0.166,147.0,0.07
+kampala_hoima,truck,service_20km,"Service roads, worst 20 km",4.2,1.4,9.2,0.072,20.0,0.21
+kampala_hoima,truck,all,All four (with worst 20 km),8.2,4.6,24.6,0.14,,
+kampala_katuna,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_katuna,car,no_police,No stops at police posts,1.5,0.3,4.2,0.019,,
+kampala_katuna,car,bypass_2,Bypass the 2 worst towns,6.5,1.7,11.6,0.08,15.0,0.43
+kampala_katuna,car,service_all,"Service roads, all settlements",17.1,8.9,33.7,0.213,271.5,0.06
+kampala_katuna,car,service_20km,"Service roads, worst 20 km",4.0,1.3,7.8,0.05,20.0,0.2
+kampala_katuna,car,all,All four (with worst 20 km),12.0,6.1,19.3,0.149,,
+kampala_katuna,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.099,,
+kampala_katuna,truck,no_police,No stops at police posts,9.0,2.1,42.9,0.056,,
+kampala_katuna,truck,bypass_2,Bypass the 2 worst towns,4.7,-1.2,11.5,0.029,15.0,0.31
+kampala_katuna,truck,service_all,"Service roads, all settlements",16.9,8.1,36.2,0.105,271.5,0.06
+kampala_katuna,truck,service_20km,"Service roads, worst 20 km",4.1,1.2,8.6,0.026,20.0,0.21
+kampala_katuna,truck,all,All four (with worst 20 km),33.8,29.3,85.8,0.21,,
+kampala_malaba,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_malaba,car,no_police,No stops at police posts,1.7,0.3,4.7,0.023,,
+kampala_malaba,car,bypass_2,Bypass the 2 worst towns,5.3,1.5,9.0,0.074,12.5,0.42
+kampala_malaba,car,service_all,"Service roads, all settlements",10.1,4.9,19.9,0.141,125.5,0.08
+kampala_malaba,car,service_20km,"Service roads, worst 20 km",3.3,0.7,7.6,0.046,20.0,0.17
+kampala_malaba,car,all,All four (with worst 20 km),10.2,5.8,16.7,0.142,,
+kampala_malaba,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.135,,
+kampala_malaba,truck,no_police,No stops at police posts,10.0,2.3,47.6,0.084,,
+kampala_malaba,truck,bypass_2,Bypass the 2 worst towns,3.8,-0.7,9.2,0.032,12.5,0.31
+kampala_malaba,truck,service_all,"Service roads, all settlements",10.5,4.8,22.5,0.088,125.5,0.08
+kampala_malaba,truck,service_20km,"Service roads, worst 20 km",3.5,0.8,8.9,0.03,20.0,0.18
+kampala_malaba,truck,all,All four (with worst 20 km),33.3,29.5,88.1,0.281,,

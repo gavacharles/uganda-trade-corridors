@@ -17,6 +17,12 @@ PBF = os.path.join(DATA, "uganda-latest.osm.pbf")               # Geofabrik OSM 
 DISTRICTS = os.path.join(DATA, "uga_districts.geojson")         # HDX COD-AB admin 2
 CHIRPS_DIR = os.path.join(DATA, "chirps_uganda")                # CHIRPS daily, clipped to Uganda
 PROBES_GPKG = os.path.join(DATA, "probes.gpkg")
+PBFS = [PBF]                          # every OSM extract the corridors run through
+CHIRPS_PREFIX = "chirps_uganda"       # CHIRPS files are <CHIRPS_DIR>/<prefix>_<year>.nc
+CHIRPS_BOX = (29.4, 35.1, -1.6, 4.4)  # lon min, lon max, lat min, lat max
+GHSL_TILES = ["R9_C22", "R10_C22"]    # GHSL 1000 km Mollweide tiles covering the corridors
+WORLDPOP = ["https://data.worldpop.org/GIS/Population/Global_2015_2030/R2024B/2025/UGA/v1/100m/constrained/"
+            "uga_pop_2025_CN_100m_R2024B_v1.tif"]  # 2025 constrained population, 100 m
 RAW = os.path.join(DATA, "raw")          # every API response, gzipped, as received
 ARCHIVE = os.path.join(DATA, "archive")  # parsed rows, one CSV per source per month
 LOGS = os.path.join(DATA, "logs")
@@ -55,6 +61,33 @@ HERE_MATCH_M = 60
 # Simplification tolerance (degrees) for the corridor polyline sent to HERE.
 HERE_SIMPLIFY_DEG = 0.0002  # about 20 m, well inside the query radius
 HERE_CORRIDOR_RADIUS_M = 50
+
+# Published trip times to check the model against (10_travel_time.py), per (corridor, vehicle):
+# (label, low minutes, high minutes, kind, compare up to (lon, lat) or None for the whole corridor)
+VALIDATION = {
+    ("kampala_malaba", "car"): [("Rome2rio routing estimate, Kampala–Njeru", 66, 66, "estimate", (33.17, 0.44)),
+                                ("Reported typical trip Kampala–Jinja, press and project sources", 120, 180,
+                                 "observed", (33.204, 0.439))],
+    ("kampala_elegu", "car"): [("Rome2rio routing estimate, Kampala–Gulu", 286, 286, "estimate", (32.299, 2.774)),
+                               ("Scheduled buses Kampala–Gulu incl. stops (Bookaway, Friends Coach)", 300, 495,
+                                "observed", (32.299, 2.774))],
+    ("kampala_katuna", "car"): [("Rome2rio routing estimate, Kampala–Kabale", 345, 345, "estimate", (29.9856, -1.2486)),
+                                ("Scheduled bus, Kampala–Kabale (Rome2rio)", 480, 480, "observed", (29.9856, -1.2486))],
+    ("kampala_hoima", "car"): [("Rome2rio routing estimate", 172, 172, "estimate", None),
+                               ("Scheduled bus (Rome2rio)", 206, 206, "observed", None)],
+}
+
+# Heavy goods vehicles a day, both directions, averaged along each corridor: (central, low, high).
+# Used by 17_costs.py and 19_safety.py. Only the Malaba road has a sourced anchor: 8.684 Mt of
+# cargo between Malaba and Kampala in 2017, ~4% by rail (Jinja-Kampala-Mpigi Corridor Physical
+# Development Plan, 2023, ch. 6), i.e. ~900 loaded trucks a day plus empties. The others are
+# assumptions with wide ranges, to be replaced with UNRA traffic counts.
+TRUCKS_PER_DAY = {
+    "kampala_malaba": (1500, 1000, 2500),
+    "kampala_elegu": (600, 300, 1200),
+    "kampala_katuna": (800, 400, 1500),
+    "kampala_hoima": (400, 200, 900),
+}
 
 UTM = 32636  # metres, for lengths and distances
 
