@@ -1,0 +1,73 @@
+corridor,vehicle,cause,share_first,share_top3
+kampala_elegu,car,town speed limit,0.065,0.432
+kampala_elegu,car,roadside activity,0.852,1.0
+kampala_elegu,car,joining roads,0.0,0.596
+kampala_elegu,car,signals and crossings,0.0,0.165
+kampala_elegu,car,speed humps (assumed),0.083,0.662
+kampala_elegu,car,police posts,0.0,0.145
+kampala_elegu,car,weighbridge,0.0,0.0
+kampala_elegu,car,hills (trucks),0.0,0.0
+kampala_elegu,car,curves,0.0,0.0
+kampala_elegu,truck,town speed limit,0.0,0.004
+kampala_elegu,truck,roadside activity,0.35,0.899
+kampala_elegu,truck,joining roads,0.0,0.119
+kampala_elegu,truck,signals and crossings,0.0,0.0
+kampala_elegu,truck,speed humps (assumed),0.033,0.358
+kampala_elegu,truck,police posts,0.555,0.809
+kampala_elegu,truck,weighbridge,0.052,0.552
+kampala_elegu,truck,hills (trucks),0.01,0.259
+kampala_elegu,truck,curves,0.0,0.0
+kampala_hoima,car,town speed limit,0.005,0.456
+kampala_hoima,car,roadside activity,0.979,1.0
+kampala_hoima,car,joining roads,0.0,0.696
+kampala_hoima,car,signals and crossings,0.0,0.001
+kampala_hoima,car,speed humps (assumed),0.016,0.73
+kampala_hoima,car,police posts,0.0,0.043
+kampala_hoima,car,weighbridge,0.0,0.0
+kampala_hoima,car,hills (trucks),0.0,0.0
+kampala_hoima,car,curves,0.0,0.074
+kampala_hoima,truck,town speed limit,0.0,0.003
+kampala_hoima,truck,roadside activity,0.614,0.974
+kampala_hoima,truck,joining roads,0.0,0.161
+kampala_hoima,truck,signals and crossings,0.0,0.0
+kampala_hoima,truck,speed humps (assumed),0.018,0.335
+kampala_hoima,truck,police posts,0.097,0.639
+kampala_hoima,truck,weighbridge,0.0,0.0
+kampala_hoima,truck,hills (trucks),0.271,0.888
+kampala_hoima,truck,curves,0.0,0.0
+kampala_katuna,car,town speed limit,0.081,0.53
+kampala_katuna,car,roadside activity,0.803,1.0
+kampala_katuna,car,joining roads,0.0,0.574
+kampala_katuna,car,signals and crossings,0.0,0.022
+kampala_katuna,car,speed humps (assumed),0.116,0.773
+kampala_katuna,car,police posts,0.0,0.017
+kampala_katuna,car,weighbridge,0.0,0.0
+kampala_katuna,car,hills (trucks),0.0,0.0
+kampala_katuna,car,curves,0.0,0.084
+kampala_katuna,truck,town speed limit,0.0,0.001
+kampala_katuna,truck,roadside activity,0.348,0.725
+kampala_katuna,truck,joining roads,0.0,0.022
+kampala_katuna,truck,signals and crossings,0.0,0.0
+kampala_katuna,truck,speed humps (assumed),0.034,0.334
+kampala_katuna,truck,police posts,0.048,0.389
+kampala_katuna,truck,weighbridge,0.246,0.705
+kampala_katuna,truck,hills (trucks),0.324,0.824
+kampala_katuna,truck,curves,0.0,0.0
+kampala_malaba,car,town speed limit,0.185,0.493
+kampala_malaba,car,roadside activity,0.563,0.938
+kampala_malaba,car,joining roads,0.0,0.12
+kampala_malaba,car,signals and crossings,0.029,0.787
+kampala_malaba,car,speed humps (assumed),0.223,0.658
+kampala_malaba,car,police posts,0.0,0.004
+kampala_malaba,car,weighbridge,0.0,0.0
+kampala_malaba,car,hills (trucks),0.0,0.0
+kampala_malaba,car,curves,0.0,0.0
+kampala_malaba,truck,town speed limit,0.0,0.015
+kampala_malaba,truck,roadside activity,0.215,0.745
+kampala_malaba,truck,joining roads,0.0,0.03
+kampala_malaba,truck,signals and crossings,0.0,0.082
+kampala_malaba,truck,speed humps (assumed),0.115,0.529
+kampala_malaba,truck,police posts,0.203,0.657
+kampala_malaba,truck,weighbridge,0.467,0.869
+kampala_malaba,truck,hills (trucks),0.0,0.073
+kampala_malaba,truck,curves,0.0,0.0

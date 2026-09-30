@@ -29,7 +29,7 @@ YEARS = [2000, 2005, 2010, 2015, 2020, 2025, 2030]  # 2025 and 2030 are GHSL pro
 OBSERVED = [2000, 2005, 2010, 2015, 2020]
 URL = ("https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/"
        "GHS_BUILT_S_E{y}_GLOBE_R2023A_54009_100/V1-0/tiles/GHS_BUILT_S_E{y}_GLOBE_R2023A_54009_100_V1_0_{t}.zip")
-TILES = ["R9_C22", "R10_C22"]  # 1000 km Mollweide tiles; R10 covers south of the equator
+TILES = C.GHSL_TILES  # 1000 km Mollweide tiles
 GDIR = os.path.join(C.DATA, "ghsl")
 BUF_M = 300
 MOLL = "ESRI:54009"
