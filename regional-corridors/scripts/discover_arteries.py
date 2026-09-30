@@ -1,0 +1,182 @@
+"""Find every major road leaving each capital, from OpenStreetMap, and prepare it for the
+shared pipeline (02_segments.py onwards).
+
+For each hub city:
+  1. Graph of motorway, trunk and primary roads (and their links) in the country's OSM
+     extract. Countries tag their national roads differently (Uganda's A roads are mostly
+     "primary", Kenya's B roads "trunk"), so all three classes count as arteries.
+  2. Shortest network distance from the city centre (every road node within 4 km of it is
+     a source, starting at its straight-line distance from the centre).
+  3. An artery is a motorway, trunk or primary road that crosses the RING_KM ring of network
+     distance. Crossings within 5 km of each other (the two carriageways of one road, or
+     a road and its link) are one artery.
+  4. Each artery is followed outward along the shortest-path tree to its farthest point
+     (the longest branch, where it forks after the ring), then cut where it first leaves
+     the country (Natural Earth borders) and at MAX_KM unless it is a trade corridor
+     (TRADE, run to the border or port). Arteries shorter than MIN_KM are dropped.
+  5. The artery's roads (every motorway, trunk or primary way within 300 m of its path) go
+     to data/corridors.gpkg, one layer per artery, with an empty _fill layer, which is what
+     02_segments.py reads; data/arteries.json lists start, end, route number and length.
+
+config.py builds CORRIDORS from data/arteries.json, so the rest of the pipeline runs as usual:
+    python scripts/discover_arteries.py && python run.py 02 03 04 05 06 08 09 10 ...
+"""
+import json, os, sys
+import numpy as np
+import geopandas as gpd
+import networkx as nx
+import pyogrio
+from shapely.geometry import LineString, Point
+from shapely.ops import substring
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(HERE, "..", "data")
+RING_KM, MIN_KM, MAX_KM, SRC_KM, HUB_KM, GAP_PENALTY = 60, 100, 200, 4, 8, 3.0
+# hub: (region, country as in Natural Earth ADMIN, Geofabrik extract, lon, lat of the centre)
+HUBS = {
+    "kampala": ("East", "Uganda", "uganda", 32.5825, 0.3136),
+    "nairobi": ("East", "Kenya", "kenya", 36.8219, -1.2921),
+    "kigali": ("East", "Rwanda", "rwanda", 30.0619, -1.9441),
+    "dodoma": ("East", "United Republic of Tanzania", "tanzania", 35.7516, -6.1630),
+    "dar_es_salaam": ("East", "United Republic of Tanzania", "tanzania", 39.2803, -6.8161),
+    "pretoria": ("Southern", "South Africa", "south-africa", 28.1881, -25.7461),
+    "johannesburg": ("Southern", "South Africa", "south-africa", 28.0473, -26.2041),
+    "gaborone": ("Southern", "Botswana", "botswana", 25.9086, -24.6282),
+    "harare": ("Southern", "Zimbabwe", "zimbabwe", 31.0530, -17.8292),
+    "lusaka": ("Southern", "Zambia", "zambia", 28.2871, -15.4167),
+    "maputo": ("Southern", "Mozambique", "mozambique", 32.5732, -25.9692),
+    "windhoek": ("Southern", "Namibia", "namibia", 17.0832, -22.5609),
+}
+# Trade corridors run their full length inside the country: (hub, town the artery's far end
+# is named after). Set after a first run that lists every artery with TRADE empty.
+TRADE = {("kampala", "*"), ("nairobi", "Mombasa"), ("nairobi", "Malaba"), ("nairobi", "Eldoret"),
+         ("dar_es_salaam", "Tunduma"), ("dar_es_salaam", "Mbeya"), ("dar_es_salaam", "Dodoma"),
+         ("johannesburg", "Durban"), ("johannesburg", "Harrismith"), ("pretoria", "Musina"),
+         ("pretoria", "Beitbridge"), ("pretoria", "Komatipoort"), ("pretoria", "Mbombela"),
+         ("harare", "Beitbridge"), ("harare", "Chirundu"), ("harare", "Mutare"),
+         ("lusaka", "Chirundu"), ("lusaka", "Livingstone"), ("windhoek", "Walvis Bay"),
+         ("windhoek", "Buitepos"), ("gaborone", "Francistown"), ("maputo", "Ressano Garcia")}
+LIST_ONLY = "--list" in sys.argv   # print the arteries, write nothing
+ONLY = next((a.split("=", 1)[1].split(",") for a in sys.argv if a.startswith("--hubs=")), None)
+if ONLY:
+    HUBS = {k: v for k, v in HUBS.items() if k in ONLY}
+
+countries = gpd.read_file(os.path.join(DATA, "ne_admin0", "ne_10m_admin_0_countries.shp"))
+out_json, layers = [], {}
+cache = {}
+for hub, (region, admin, extract, lon, lat) in HUBS.items():
+    aeqd = f"+proj=aeqd +lat_0={lat} +lon_0={lon} +datum=WGS84 +units=m +no_defs"
+    if extract not in cache:
+        pbf = os.path.join(DATA, f"{extract}-latest.osm.pbf")
+        r = pyogrio.read_dataframe(pbf, layer="lines", columns=["osm_id", "name", "highway", "other_tags"],
+                                   where="highway IN ('motorway','motorway_link','trunk','trunk_link',"
+                                         "'primary','primary_link')")
+        tags = r.other_tags.fillna("")
+        r["ref"] = tags.str.extract(r'"ref"=>"([^"]+)"', expand=False)
+        r["oneway"] = tags.str.extract(r'"oneway"=>"([^"]+)"', expand=False)
+        for t in ("lanes", "maxspeed", "surface"):
+            r[t] = tags.str.extract(rf'"{t}"=>"([^"]+)"', expand=False)
+        pl = pyogrio.read_dataframe(pbf, layer="points", columns=["name", "place"],
+                                    where="place IN ('city','town')")
+        cache[extract] = (r.drop(columns="other_tags"), pl)
+    roads, places = cache[extract]
+    border = countries[countries.ADMIN == admin].to_crs(aeqd).geometry.union_all()
+    R = roads.to_crs(aeqd).explode(index_parts=False)
+    G = nx.Graph()
+    for w in R.itertuples():
+        xy = [(round(x, 1), round(y, 1)) for x, y in w.geometry.coords]
+        for a, b in zip(xy[:-1], xy[1:]):
+            G.add_edge(a, b, w=float(np.hypot(b[0] - a[0], b[1] - a[1])), ref=w.ref if isinstance(w.ref, str) else None)
+    nodes = np.array([n for n in G.nodes])
+    d0 = np.hypot(nodes[:, 0], nodes[:, 1])
+    src = [(tuple(n), float(d)) for n, d in zip(nodes[d0 < SRC_KM * 1000], d0[d0 < SRC_KM * 1000])]
+    # route numbers that reach the city: on a road within HUB_KM of the centre
+    near_refs = set()
+    for u, v, e in G.edges(data=True):
+        if e["ref"] and min(np.hypot(*u), np.hypot(*v)) < HUB_KM * 1000:
+            near_refs |= {r.strip() for r in e["ref"].split(";")}
+    found = []
+    for r in sorted(near_refs):
+        # follow route r; other roads only bridge untagged gaps, at GAP_PENALTY
+        H = nx.Graph()
+        for u, v, e in G.edges(data=True):
+            on = bool(e["ref"]) and r in [x.strip() for x in e["ref"].split(";")]
+            H.add_edge(u, v, w=e["w"] * (1 if on else GAP_PENALTY), real=e["w"], on=on)
+        for n, d in src:
+            if n in H:
+                H.add_edge("SRC", n, w=d * GAP_PENALTY, real=d, on=False)
+        if "SRC" not in H:
+            continue
+        dist, paths = nx.single_source_dijkstra(H, "SRC", weight="w", cutoff=3e6)
+        on_nodes = {n for u, v, e in H.edges(data=True) if e["on"] for n in (u, v)}
+        ends = [n for n in on_nodes if n in dist and np.hypot(*n) > RING_KM * 1000]
+        # branches: group ends by where their path crosses 30 km from the centre
+        branch = {}
+        for n in ends:
+            pth = paths[n]
+            k = next((p for p in pth[1:] if np.hypot(*p) > 30000), pth[-1])
+            branch.setdefault(k, []).append(n)
+        heads = []
+        for k, ns in branch.items():
+            far = max(ns, key=lambda n: dist[n])
+            if any(np.hypot(k[0] - h[0], k[1] - h[1]) < 5000 and dist[far] <= dist[hf] for h, hf in heads):
+                continue
+            heads = [(h, hf) for h, hf in heads if not (np.hypot(k[0] - h[0], k[1] - h[1]) < 5000)] + [(k, far)]
+        for _, far in heads:
+            path = [p for p in paths[far] if p != "SRC"]
+            on_len = sum(H[a][b]["real"] for a, b in zip(path[:-1], path[1:]) if H[a][b]["on"])
+            tot = sum(H[a][b]["real"] for a, b in zip(path[:-1], path[1:]))
+            if tot == 0 or on_len / tot < 0.7:
+                continue   # mostly on other roads: not this route
+            line = LineString(path)
+            if not border.contains(Point(path[-1])):   # cut where the route first leaves the country
+                inside = [border.contains(Point(p)) for p in path]
+                kk = inside.index(False) if False in inside else len(path)
+                if kk >= 2:
+                    line = LineString(path[:kk])
+            full_km = line.length / 1000
+            if full_km < MIN_KM:
+                continue
+            end_pt = Point(line.coords[-1])
+            pls = places.to_crs(aeqd)
+            dd = pls.distance(end_pt)
+            toward = pls.name[dd.idxmin()] if len(pls) and dd.min() < 40000 else f"{int(full_km)} km"
+            ref = r
+            trade = (hub, "*") in TRADE or (hub, toward) in TRADE
+            use = line if trade or full_km <= MAX_KM else substring(line, 0, MAX_KM * 1000)
+            found.append(dict(hub=hub, region=region, country=admin, ref=ref, toward=toward, full_km=round(full_km, 1),
+                              km=round(use.length / 1000, 1), trade=trade, line=use))
+    # de-duplicate: two routes that end at the same place (concurrent numbers) are one artery
+    found = sorted(found, key=lambda f: -f["full_km"])
+    keep = []
+    for f in found:
+        if all(Point(f["line"].coords[-1]).distance(Point(k["line"].coords[-1])) > 10000 for k in keep):
+            keep.append(f)
+    for f in keep:
+        name = f"{hub}_{(f['ref'] or 'road').lower().replace(' ', '')}_{f['toward'].lower().replace(' ', '_')}"
+        name = "".join(ch for ch in name if ch.isalnum() or ch == "_")
+        while name in layers:
+            name += "_b"
+        g = gpd.GeoSeries([f["line"]], crs=aeqd).to_crs(4326).iloc[0]
+        ways = R[R.intersects(f["line"].buffer(300))].to_crs(4326)
+        layers[name] = ways
+        x0, y0, x1, y1 = g.bounds
+        out_json.append(dict(name=name, hub=hub, region=f["region"], country=f["country"], ref=f["ref"],
+                             toward=f["toward"], km=f["km"], full_km=f["full_km"], trade=f["trade"],
+                             start=list(g.coords[0]), end=list(g.coords[-1]),
+                             bbox=[x0 - 0.05, y0 - 0.05, x1 + 0.05, y1 + 0.05]))
+        print(f"{hub:14s} {f['ref']:8s} → {f['toward']:22s} full {f['full_km']:6.0f} km, used {f['km']:5.0f}"
+              f"{'  TRADE' if f['trade'] else ''}", flush=True)
+
+if LIST_ONLY:
+    raise SystemExit
+json.dump(out_json, open(os.path.join(DATA, "arteries.json"), "w"), indent=1)
+gpkg = os.path.join(DATA, "corridors.gpkg")
+if os.path.exists(gpkg):
+    os.remove(gpkg)
+for name, ways in layers.items():
+    cols = ["osm_id", "name", "highway", "ref", "lanes", "maxspeed", "surface", "oneway", "geometry"]
+    ways[cols].to_file(gpkg, layer=name, driver="GPKG")
+    ways[cols].iloc[:0].to_file(gpkg, layer=name + "_fill", driver="GPKG")
+print(f"wrote {len(out_json)} arteries to data/arteries.json and data/corridors.gpkg "
+      f"({sum(a['km'] for a in out_json):,.0f} km)")

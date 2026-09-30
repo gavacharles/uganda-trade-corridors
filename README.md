@@ -25,8 +25,16 @@ What slows Uganda's main trade corridors, how much each cause costs in travel ti
 - For trucks, the five weighbridges (Magamaga, Busitema/Namutere, Luwero, Lukaya, Mbarara) are the largest single delays, if each stop takes around ten minutes.
 - Built-up land within 300 m of the road grew 27–68% between 2000 and 2020 (Elegu road +68%, Hoima +57%, Katuna +43%, Malaba +27%), mostly in roadside settlements between towns, where new friction is appearing.
 - Most of each corridor is now roadside settlement (58–76% of its length); open road is only 17–34%, and towns 8–22%.
+- Rankings are uncertain for trucks: across 1,000 draws, police posts are the largest truck delay on the Elegu road in 56% of draws and weighbridges on the Malaba road in 47% (`outputs/rank_stability.csv`). For cars, roadside activity comes first in 56–98% of draws.
 
-**Status.** Analysis, maps and animations complete; write-up not started. The truck index is experimental.
+**Extensions (scripts 16–22).**
+- *Fixes* (`16`): per truck trip, weigh-in-motion screening saves 8–16 min where there are weighbridges, and ending police-post stops saves 4–15 min. Service roads through every roadside settlement save 10–17 min, but need 125–270 km each. Bypassing the two worst towns saves only 2–5 min in light traffic (congestion relief is not captured). All four together save 29–34 min on the Malaba, Elegu and Katuna roads.
+- *Money* (`17`): delay costs heavy trucks about US$42 M a year across the four roads at central values: $19 M on the Malaba road, $14 M Katuna, $7 M Elegu, $2.5 M Hoima. Ranges are wide, because truck counts are sourced only for the Malaba road and time costs are assumed.
+- *Reliability* (`18`): from where rain actually fell on each day in 2006–2025, the 95th-percentile day is 5–9% slower than a typical day (buffer index). The Malaba road is slowed on about 87 days a year. The flood-exposure ranking puts the Busitema–Busabi wetland stretch (A1) and Lukaya–Kyoko (A2) first.
+- *Safety exposure* (`19`): roadside settlements hold 50–66% of the ~930,000 people living within 300 m of the roads, but 66–81% of the exposure (people × trucks × (speed/50)⁴), because trucks still run at 55–60 km/h there. 545 half-km pieces have a school, trucks above 50 km/h and no mapped crossing within 500 m (an upper bound, since OSM under-maps crossings).
+- *Trucks from space* (`21`, `22`): a classifier trained on 321 hand-labelled Sentinel-2 chips reaches 72% precision and 76% recall (cross-validated, AUC 0.92). The fixed threshold reaches 38% precision at the same recall. Density ranks Malaba > Katuna > Elegu > Hoima, matching the traffic ordering, but the candidate step still misses most trucks, so it remains a relative index. Parked-truck clusters cannot be resolved at 10 m.
+
+**Status.** Analysis, extensions, maps and animations complete; write-up not started. A second paper, comparing the roads out of East and Southern African capitals, is in `regional-corridors/`.
 
 **Related repositories.** Companion papers by the same author: `uganda-seasons-construction-delay` (rain and construction delay) and `uganda-rainy-season-access-study` (seasonal access to health care, schools and markets).
 
@@ -83,7 +91,13 @@ Not measurable from open data, and reported as limits: congestion, crashes, brea
 | `figures/a4_growth_<corridor>_to2026_projected.gif` | The same per road, continued to end-2026 on GHSL's projection |
 | `figures/f06_trucks.png`, `figures/trucks_check/` | Moving-truck index from Sentinel-2 (experimental), and image chips of the strongest detections for checking by eye |
 | `figures/f01_causes_<corridor>.png` | Strip charts of every cause along each road |
-| `figures/f02_typology.png`, `f03_growth.png`, `f04_minutes_by_cause.png`, `f05_hotspots.png` | Road types, growth profiles, minutes by cause with intervals, excess minutes along each road |
+| `figures/f02_typology.png`, `f03_growth.png`, `f04_minutes_by_cause.png`, `f05_hotspots.png` | Road types, growth profiles, minutes by cause with intervals (one scale for all roads), excess minutes along each road |
+| `figures/f07_scenarios.png` … `f11_trucks_classified.png` | Fix scenarios, annual cost of delay, rain reliability by month, safety exposure along each road, classified truck index |
+| `figures/g01_waterfall.png` | How a truck trip grows from open-road time, cause by cause |
+| `figures/g02_rank_stability.png` | Share of Monte Carlo draws in which each cause is the largest |
+| `figures/g03_strip_maps.png` | Each road straightened into a line: road type, delay, controls, towns, new building |
+| `figures/g04_time_map.png` | The corridors redrawn with length proportional to truck travel time |
+| `presentation/highways_high_streets.pptx` | Slide deck: background, problem, method, results, discussion |
 
 ## Pipeline
 
@@ -106,18 +120,26 @@ Install the packages in `requirements.txt` (Python 3.9) and run each script from
 | `12_corridor_atlas.py` | Per-corridor sheets |
 | `13_animations.py` | Truck race and bottleneck tour GIFs |
 | `15_growth_animations.py` | Roadside growth GIFs, observed (2000–2020) and projected (to end-2026) |
+| `travel_model.py` | The travel-time model (assumptions, pieces, minutes per piece) shared by `10` and `16`–`19` |
+| `16_scenarios.py` | Fix scenarios through the model: weigh-in-motion, no police stops, bypasses, service roads |
+| `17_costs.py` | Delay in money: per trip, and per year for trucks (truck counts in `config.TRUCKS_PER_DAY`) |
+| `18_reliability.py` | Daily trip times 2006–2025 from CHIRPS rain; flood-exposure ranking of 2 km stretches |
+| `19_safety.py` | People near the road (WorldPop 2025), truck speed and crossings: exposure ranking |
+| `20_story_figures.py` | Waterfall, rank stability, strip maps, time map |
+| `21_truck_candidates.py`, `22_truck_classifier.py`, `s2lib.py` | Truck candidates with image patches; labelling sheets, classifier and calibrated index (labels in `outputs/truck_labels.csv`) |
 | `14_trucks.py` | Moving-truck index from Sentinel-2 L2A (Earth Search), 2023–2025, < 10% cloud (experimental; `debug_trucks.py` tests one chunk) |
 
 `poll.py` (live TomTom/HERE collection) is kept but is not part of the plan.
 
 ## Known limits
 
+- Annual costs rest on assumed truck counts and time costs (sourced anchor: 8.7 Mt of cargo on Malaba–Kampala in 2017). Replace them with UNRA counts and HDM-4 values before quoting absolute figures. Per-trip minutes do not depend on them.
 - Congestion is not modelled. Results describe light traffic; peak-hour delay near Kampala is larger.
 - OSM records few speed humps (under 60 within 1 km of all four roads), far below reality; one hump per town piece is assumed, with a 0–2 range.
 - Police posts are OSM police stations within 30 m of the road; whether and how long they stop trucks is an assumption (0–5 min).
 - Weighbridges are found by name in OSM and each counted once, in the nearest piece: Magamaga and Busitema/Namutere (A1), Luwero (A6), Lukaya and Mbarara (A2). None is mapped on the A9. The Malaba border weighbridge is not named in OSM.
 - Lakes are Natural Earth 1:10m; place names on close-ups are OSM place nodes.
-- The truck index is unsupervised and unvalidated: a simplified version of the band-offset idea in Fisser et al. (2022), with a threshold set on one test chunk (counts at looser and stricter thresholds are kept as a range). Earth Search COGs read without the documented −1000 reflectance offset, although their metadata says it is not applied; the script checks the data. The index is not used in the travel-time model. First results (2023–2025, about six clear scenes per 5 km): 0.01–0.06 candidates per km on average (0.07–0.21 at the looser threshold), well below the roughly 0.7 trucks per km a busy corridor should hold, so it undercounts. A visual check of the strongest candidates (`figures/trucks_check/`) shows plausible moving trucks on open road but false positives from roofs and clutter in towns. Use it, if at all, as a relative index on open-road stretches; training on labelled chips is the next step.
+- The classified truck index (`22`) rests on 321 chips labelled by one person at 10 m resolution, so the labels are noisy. It still undercounts, because candidates come from a loose threshold that misses most trucks. The original index, described next, is kept for comparison. The original truck index is unsupervised and unvalidated: a simplified version of the band-offset idea in Fisser et al. (2022), with a threshold set on one test chunk (counts at looser and stricter thresholds are kept as a range). Earth Search COGs read without the documented −1000 reflectance offset, although their metadata says it is not applied; the script checks the data. The index is not used in the travel-time model. First results (2023–2025, about six clear scenes per 5 km): 0.01–0.06 candidates per km on average (0.07–0.21 at the looser threshold), well below the roughly 0.7 trucks per km a busy corridor should hold, so it undercounts. A visual check of the strongest candidates (`figures/trucks_check/`) shows plausible moving trucks on open road but false positives from roofs and clutter in towns. Use it, if at all, as a relative index on open-road stretches (`22` now does this with labelled chips).
 - OSM has no A6 route tag between roughly Kafu and Kigumba; the centreline follows the untagged main road there. On the A1 near Malaba, one-way tags are ignored because they leave no directed route.
 - Copernicus GLO-30 is a surface model; grades are averaged over 500 m to remove rooftop and canopy noise. FABDEM would be better for the final paper.
 - Open Buildings v3 reflects imagery from about 2020–2022; change over time comes from GHSL.

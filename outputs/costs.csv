@@ -1,0 +1,9 @@
+corridor,vehicle,minutes_lost,minutes_lost_p5,minutes_lost_p95,cost_per_trip_usd,cost_per_trip_usd_p5,cost_per_trip_usd_p95,cost_per_trip_ugx,cost_per_year_usd_m,cost_per_year_usd_m_p5,cost_per_year_usd_m_p95
+kampala_elegu,car,59.28,44.12,89.13,5.93,3.47,11.39,21900.0,,,
+kampala_elegu,truck,106.64,90.68,189.75,44.43,32.74,103.93,164400.0,6.81,4.36,24.64
+kampala_hoima,car,34.24,24.21,52.43,3.42,1.83,6.8,12700.0,,,
+kampala_hoima,truck,58.91,47.16,91.47,24.55,16.28,49.74,90800.0,2.51,1.32,8.65
+kampala_katuna,car,80.32,58.09,118.29,8.03,4.43,15.23,29700.0,,,
+kampala_katuna,truck,161.36,143.01,251.37,67.23,48.48,136.39,248800.0,13.74,7.38,40.64
+kampala_malaba,car,72.08,53.65,101.09,7.21,4.02,13.57,26700.0,,,
+kampala_malaba,truck,118.75,105.05,201.7,49.48,37.15,107.85,183100.0,18.96,13.03,55.88

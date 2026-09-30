@@ -1,0 +1,37 @@
+corridor,cause,minutes,cost_per_year_usd_m
+kampala_elegu,town speed limit,0.6,0.04
+kampala_elegu,roadside activity,29.2,1.87
+kampala_elegu,joining roads,10.2,0.65
+kampala_elegu,signals and crossings,3.6,0.23
+kampala_elegu,speed humps (assumed),13.0,0.83
+kampala_elegu,police posts,15.0,0.96
+kampala_elegu,weighbridge,10.0,0.64
+kampala_elegu,hills (trucks),13.0,0.83
+kampala_elegu,curves,0.2,0.01
+kampala_hoima,town speed limit,0.2,0.01
+kampala_hoima,roadside activity,18.5,0.79
+kampala_hoima,joining roads,4.9,0.21
+kampala_hoima,signals and crossings,0.5,0.02
+kampala_hoima,speed humps (assumed),6.2,0.26
+kampala_hoima,police posts,4.0,0.17
+kampala_hoima,weighbridge,0.0,0.0
+kampala_hoima,hills (trucks),13.7,0.58
+kampala_hoima,curves,0.7,0.03
+kampala_katuna,town speed limit,0.7,0.06
+kampala_katuna,roadside activity,34.6,2.95
+kampala_katuna,joining roads,11.2,0.95
+kampala_katuna,signals and crossings,2.9,0.25
+kampala_katuna,speed humps (assumed),19.2,1.64
+kampala_katuna,police posts,9.0,0.77
+kampala_katuna,weighbridge,20.0,1.7
+kampala_katuna,hills (trucks),38.1,3.24
+kampala_katuna,curves,2.0,0.17
+kampala_malaba,town speed limit,0.9,0.14
+kampala_malaba,roadside activity,25.1,4.01
+kampala_malaba,joining roads,7.1,1.13
+kampala_malaba,signals and crossings,10.5,1.68
+kampala_malaba,speed humps (assumed),19.0,3.03
+kampala_malaba,police posts,10.0,1.6
+kampala_malaba,weighbridge,20.0,3.19
+kampala_malaba,hills (trucks),8.6,1.37
+kampala_malaba,curves,0.1,0.02
