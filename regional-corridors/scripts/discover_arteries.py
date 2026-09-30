@@ -95,20 +95,21 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
     for u, v, e in G.edges(data=True):
         if e["ref"] and min(np.hypot(*u), np.hypot(*v)) < HUB_KM * 1000:
             near_refs |= {r.strip() for r in e["ref"].split(";")}
+    # route length in the country, so short local numbers are skipped
+    ref_len = {}
+    for u, v, e in G.edges(data=True):
+        e["refs"] = frozenset(x.strip() for x in e["ref"].split(";")) if e["ref"] else frozenset()
+        for x in e["refs"]:
+            ref_len[x] = ref_len.get(x, 0) + e["w"]
+    for n, d in src:
+        G.add_edge("SRC", n, w=d, ref=None, refs=frozenset())
     found = []
-    for r in sorted(near_refs):
-        # follow route r; other roads only bridge untagged gaps, at GAP_PENALTY
-        H = nx.Graph()
-        for u, v, e in G.edges(data=True):
-            on = bool(e["ref"]) and r in [x.strip() for x in e["ref"].split(";")]
-            H.add_edge(u, v, w=e["w"] * (1 if on else GAP_PENALTY), real=e["w"], on=on)
-        for n, d in src:
-            if n in H:
-                H.add_edge("SRC", n, w=d * GAP_PENALTY, real=d, on=False)
-        if "SRC" not in H:
-            continue
-        dist, paths = nx.single_source_dijkstra(H, "SRC", weight="w", cutoff=3e6)
-        on_nodes = {n for u, v, e in H.edges(data=True) if e["on"] for n in (u, v)}
+    for r in sorted(x for x in near_refs if ref_len.get(x, 0) >= MIN_KM * 1000):
+        # follow route r; other roads only bridge untagged gaps, at GAP_PENALTY (weights set on the fly)
+        wfun = lambda u, v, e, r=r: e["w"] if r in e["refs"] else e["w"] * GAP_PENALTY  # noqa: E731
+        H = G
+        dist, paths = nx.single_source_dijkstra(H, "SRC", weight=wfun, cutoff=6e6)
+        on_nodes = {n for u, v, e in H.edges(data=True) if r in e["refs"] for n in (u, v)}
         ends = [n for n in on_nodes if n in dist and np.hypot(*n) > RING_KM * 1000]
         # branches: group ends by where their path crosses 30 km from the centre
         branch = {}
@@ -124,8 +125,8 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
             heads = [(h, hf) for h, hf in heads if not (np.hypot(k[0] - h[0], k[1] - h[1]) < 5000)] + [(k, far)]
         for _, far in heads:
             path = [p for p in paths[far] if p != "SRC"]
-            on_len = sum(H[a][b]["real"] for a, b in zip(path[:-1], path[1:]) if H[a][b]["on"])
-            tot = sum(H[a][b]["real"] for a, b in zip(path[:-1], path[1:]))
+            on_len = sum(H[a][b]["w"] for a, b in zip(path[:-1], path[1:]) if r in H[a][b]["refs"])
+            tot = sum(H[a][b]["w"] for a, b in zip(path[:-1], path[1:]))
             if tot == 0 or on_len / tot < 0.7:
                 continue   # mostly on other roads: not this route
             line = LineString(path)

@@ -34,6 +34,10 @@ What slows Uganda's main trade corridors, how much each cause costs in travel ti
 - *Safety exposure* (`19`): roadside settlements hold 50–66% of the ~930,000 people living within 300 m of the roads, but 66–81% of the exposure (people × trucks × (speed/50)⁴), because trucks still run at 55–60 km/h there. 545 half-km pieces have a school, trucks above 50 km/h and no mapped crossing within 500 m (an upper bound, since OSM under-maps crossings).
 - *Trucks from space* (`21`, `22`): a classifier trained on 321 hand-labelled Sentinel-2 chips reaches 72% precision and 76% recall (cross-validated, AUC 0.92). The fixed threshold reaches 38% precision at the same recall. Density ranks Malaba > Katuna > Elegu > Hoima, matching the traffic ordering, but the candidate step still misses most trucks, so it remains a relative index. Parked-truck clusters cannot be resolved at 10 m.
 
+- *Rail* (`23`): 81% of the Malaba road's truck delay and 78% of its safety exposure lie within 10 km of the metre-gauge railway, whose corridor the contracted SGR follows. On the other roads it's 16% or less. The script draws least-cost screening alignments for the other roads: Kampala–Masaka–Mbarara–Katuna (516 km), Kampala–Luwero–Karuma–Gulu–Elegu (427 km) and Kampala–Hoima (250 km). Moving 30% of each road's truck freight to rail does not pay back on Uganda's own freight: benefit/cost is at most 0.15, and rail takes about 17 h door to door against 5 h by truck. Even carrying transit freight through from Mombasa, the eastern line needs about 93 Mt a year to break even, roughly 11 times the Malaba road's freight today.
+
+**Formats.** The slide deck (`presentation/`, rebuilt by `presentation/build_deck.py`) has 20 slides, including the animations and the new results. The web pages are in `web/`. The interactive corridor explorer (`explorer.html`, data from `build_web_data.py`) is at https://claude.ai/artifact/XN16h4dSE1NWx4JQiKBxkh. The plain-language story (`story.html`) is at https://claude.ai/artifact/H9P23nQSbxic3we5ZyRFzw. A two-page policy brief is at https://claude.ai/code/artifact/bc8d3184-ea02-4582-bfe1-cda7aeb2e288. All three links are private until shared.
+
 **Status.** Analysis, extensions, maps and animations complete; write-up not started. A second paper, comparing the roads out of East and Southern African capitals, is in `regional-corridors/`.
 
 **Related repositories.** Companion papers by the same author: `uganda-seasons-construction-delay` (rain and construction delay) and `uganda-rainy-season-access-study` (seasonal access to health care, schools and markets).
@@ -98,6 +102,7 @@ Not measurable from open data, and reported as limits: congestion, crashes, brea
 | `figures/g03_strip_maps.png` | Each road straightened into a line: road type, delay, controls, towns, new building |
 | `figures/g04_time_map.png` | The corridors redrawn with length proportional to truck travel time |
 | `presentation/highways_high_streets.pptx` | Slide deck: background, problem, method, results, discussion |
+| `figures/f12_rail_map.png`, `f13_rail_economics.png` | Existing railway and screening rail alignments over road delay; what a shift of freight to rail would pay back |
 
 ## Pipeline
 
@@ -127,6 +132,7 @@ Install the packages in `requirements.txt` (Python 3.9) and run each script from
 | `19_safety.py` | People near the road (WorldPop 2025), truck speed and crossings: exposure ranking |
 | `20_story_figures.py` | Waterfall, rank stability, strip maps, time map |
 | `21_truck_candidates.py`, `22_truck_classifier.py`, `s2lib.py` | Truck candidates with image patches; labelling sheets, classifier and calibrated index (labels in `outputs/truck_labels.csv`) |
+| `23_rail.py` | Rail near the bottlenecks, least-cost screening alignments (250 m grid: grade, built-up land, lakes), freight-shift economics |
 | `14_trucks.py` | Moving-truck index from Sentinel-2 L2A (Earth Search), 2023–2025, < 10% cloud (experimental; `debug_trucks.py` tests one chunk) |
 
 `poll.py` (live TomTom/HERE collection) is kept but is not part of the plan.
