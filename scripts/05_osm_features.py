@@ -14,7 +14,12 @@ import pyogrio
 
 import config as C
 
-PBF = C.PBF
+
+
+def read_osm(layer, **kw):
+    """One layer from every extract in config.PBFS, concatenated."""
+    return pd.concat([pyogrio.read_dataframe(pbf, layer=layer, **kw) for pbf in C.PBFS], ignore_index=True)
+
 OUT = os.path.join(C.DATA, "osm_features.gpkg")
 BUFFER_M = 1000
 
@@ -65,7 +70,7 @@ def clip(df):
 
 
 # Points
-pts = clip(pyogrio.read_dataframe(PBF, layer="points", bbox=bbox))
+pts = clip(read_osm("points", bbox=bbox))
 for k in ("traffic_calming", "railway", "amenity", "shop", "public_transport"):
     pts[k] = tag(pts, k)
 pts["kind"] = pts.apply(classify_point, axis=1)
@@ -75,21 +80,20 @@ pts.loc[pts.name.fillna("").str.contains(WEIGH), "kind"] = "weighbridge"
 pts = pts[pts.kind.notna()][["osm_id", "name", "kind", "place", "geometry"]]
 
 # Roads (all classes) for junctions
-roads = clip(pyogrio.read_dataframe(PBF, layer="lines", bbox=bbox, where="highway IS NOT NULL"))
+roads = clip(read_osm("lines", bbox=bbox, where="highway IS NOT NULL"))
 roads = roads[["osm_id", "name", "highway", "geometry"]]
 
 # Waterways
-water = clip(pyogrio.read_dataframe(PBF, layer="lines", bbox=bbox, where="waterway IS NOT NULL"))
+water = clip(read_osm("lines", bbox=bbox, where="waterway IS NOT NULL"))
 water = water[["osm_id", "name", "waterway", "geometry"]]
 
 # Areas
-areas = clip(pyogrio.read_dataframe(
-    PBF, layer="multipolygons", bbox=bbox,
+areas = clip(read_osm("multipolygons", bbox=bbox,
     where="amenity = 'marketplace' OR landuse IN ('retail','commercial') OR natural = 'wetland'"))
 areas["kind"] = areas.apply(lambda r: "wetland" if r.natural == "wetland" else
                             ("market" if r.amenity == "marketplace" else "commercial"), axis=1)
 areas = areas[["osm_id", "osm_way_id", "name", "kind", "geometry"]]
-wb = clip(pyogrio.read_dataframe(PBF, layer="multipolygons", bbox=bbox, where="name IS NOT NULL"))
+wb = clip(read_osm("multipolygons", bbox=bbox, where="name IS NOT NULL"))
 wb = wb[wb.name.str.contains(WEIGH)]
 wb = gpd.GeoDataFrame(dict(osm_id=wb.osm_way_id.fillna(wb.osm_id), name=wb.name, kind="weighbridge", place=None),
                       geometry=wb.geometry.representative_point(), crs=4326)

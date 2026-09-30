@@ -49,7 +49,7 @@ bld = gpd.GeoDataFrame(b, geometry=gpd.points_from_xy(b.longitude, b.latitude), 
 
 # Elevation tiles (sampled tile by tile) and CHIRPS wet days
 dem_src = [rasterio.open(p) for p in sorted(glob.glob(os.path.join(C.DATA, "dem", "*.tif")))]
-chirps = sorted(glob.glob(os.path.join(C.CHIRPS_DIR, "chirps_uganda_20*.nc")))
+chirps = sorted(glob.glob(os.path.join(C.CHIRPS_DIR, f"{C.CHIRPS_PREFIX}_20*.nc")))
 chirps = [p for p in chirps if 2006 <= int(p[-7:-3]) <= 2025]
 wet = sum((xr.open_dataset(p).precip >= 10).sum("time") for p in chirps) / len(chirps)
 
