@@ -1,0 +1,5 @@
+line,corridor,status,stations,rail_km,road_km,share_steeper_than_1_5pct,share_steeper_than_2_5pct,built_ha_in_100m_strip
+Eastern,kampala_malaba,SGR contracted; metre gauge in use,Kampala – Mukono – Lugazi – Jinja – Iganga – Bugiri – Tororo – Malaba,244.6,215.6,0.085,0.005,99.0
+Southwestern,kampala_katuna,proposed here (SGR plan reaches Mbarara via Bihanga),Kampala – Mpigi – Lukaya – Masaka – Lyantonde – Mbarara – Ntungamo – Kabale – Katuna,516.3,425.8,0.087,0.032,101.0
+Northern direct,kampala_elegu,proposed here (SGR plan reaches Gulu from Tororo),Kampala – Luweero – Kafu – Bweyale – Karuma – Gulu – Atiak – Elegu,427.3,430.8,0.021,0.001,68.0
+Albertine,kampala_hoima,proposed here (no line planned),Kampala – Kiboga – Kakumiro – Hoima,250.1,194.3,0.096,0.034,49.0
