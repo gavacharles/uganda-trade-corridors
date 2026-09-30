@@ -91,6 +91,25 @@ top = top[["corridor", "km_from", "km_to", "place", "fragility"] + comp].round(2
 top.to_csv(os.path.join(C.OUTPUTS, "fragile_stretches.csv"), index=False)
 print(top.groupby("corridor").head(3).to_string(index=False))
 
+# Check against documented road floods (inputs/documented_road_floods.csv): where does the
+# stretch holding each event rank on the exposure score within its corridor?
+ev = pd.read_csv(os.path.join(C.ROOT, "inputs", "documented_road_floods.csv"))
+ev = ev[ev.corridor.isin(C.CORRIDORS)]
+W["pct_rank"] = W.groupby("corridor").fragility.rank(pct=True) * 100
+chk = []
+for e in ev.itertuples():
+    d = P[P.corridor == e.corridor]
+    if d.empty:
+        continue
+    km = d.km_start.loc[((d.lon - e.lon) ** 2 + (d.lat - e.lat) ** 2).idxmin()]
+    s = W[(W.corridor == e.corridor) & (W.km_from <= km) & (W.km_to > km)]
+    if len(s):
+        chk.append(dict(corridor=e.corridor, date=e.date, place=e.place, km=km,
+                        fragility=round(s.fragility.iloc[0], 2), percentile=round(s.pct_rank.iloc[0], 1),
+                        in_top10=bool(((W.corridor == e.corridor) & (W.fragility >= s.fragility.iloc[0])).sum() <= 10)))
+pd.DataFrame(chk).to_csv(os.path.join(C.OUTPUTS, "flood_events_check.csv"), index=False)
+print("documented floods against the exposure ranking:\n", pd.DataFrame(chk).to_string(index=False))
+
 # ---- Figure: month-by-month truck trip time (mean and 95th percentile) and wet share
 fig, axs = plt.subplots(1, len(C.CORRIDORS), figsize=(15, 4.6), facecolor=SURF, sharey=True)
 for ax, corridor in zip(axs, C.CORRIDORS):
