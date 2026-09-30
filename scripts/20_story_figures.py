@@ -32,7 +32,7 @@ CAUSE_COL = {"roadside activity": "#c4532d", "hills (trucks)": "#8a6b4e", "weigh
              "speed humps (assumed)": "#d9a441", "police posts": "#4e7c8a", "joining roads": "#3a7d5c",
              "signals and crossings": "#9fb3b0", "town speed limit": "#e89a7a", "curves": "#c9c2b8"}
 TYPE_COL = {"open road": "#cfe0d6", "roadside settlement": "#e8c77e", "town": "#c4532d"}
-CORR_COL = {"kampala_malaba": "#2a78d6", "kampala_elegu": "#e8643a", "kampala_katuna": "#1aa878",
+CORR_COL = {"kampala_malaba": "#2a78d6", "kampala_elegu": "#e8643a", "kampala_katuna": "#1aa878", "kampala_bwera": "#8a5cc7",
             "kampala_hoima": "#e89c10"}
 for _c, _col in zip([c for c in CORR if c not in CORR_COL], ["#2a78d6", "#e8643a", "#1aa878", "#e89c10", "#7a5bc4"]):
     CORR_COL[_c] = _col   # corridors of another study area

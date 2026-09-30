@@ -148,9 +148,13 @@ hs.to_csv(os.path.join(C.OUTPUTS, "hotspots.csv"), index=False)
 print(hs.to_string(index=False))
 
 # Figure 4: minutes added by each cause, car and truck, outbound, with p5-p95 whiskers
-# One x scale for all four panels, so bar lengths compare across corridors
-fig, axs = plt.subplots(2, 2, figsize=(13, 11), facecolor=SURF, sharex=True, gridspec_kw=dict(wspace=0.55, hspace=0.45))
+# One x scale for all panels, so bar lengths compare across corridors
+nrow = -(-len(C.CORRIDORS) // 2)
+fig, axs = plt.subplots(nrow, 2, figsize=(13, 5.5 * nrow), facecolor=SURF, sharex=True,
+                        gridspec_kw=dict(wspace=0.55, hspace=0.45))
 axs = axs.ravel()
+for ax in axs[len(C.CORRIDORS):]:
+    ax.set_visible(False)
 labels = CAUSES + ["rain (wet day)"]
 for ax, (corridor, cfg) in zip(axs, C.CORRIDORS.items()):
     title = cfg["label"]

@@ -40,6 +40,10 @@ CORRIDORS = {
                            bbox=(29.90, -1.50, 32.62, 0.35), start=(32.5650, 0.3000), end=(30.0000, -1.4200)),
     "kampala_hoima": dict(label="Kampala → Hoima (A9)", short="Hoima", ref="A9",
                           bbox=(31.30, 0.28, 32.60, 1.48), start=(32.5550, 0.3250), end=(31.3520, 1.4320)),
+    # A5 starts at Busega roundabout, about 7 km west of the centre; ends at the Mpondwe/Bwera border post.
+    "kampala_bwera": dict(label="Kampala → Mubende → Fort Portal → Kasese → Bwera, DR Congo border (A5)",
+                          short="Bwera", ref="A5",
+                          bbox=(29.70, -0.05, 32.53, 0.72), start=(32.5166, 0.3071), end=(29.7202, 0.0413)),
 }
 
 # TomTom probe points: spacing along the centreline (km) and which directions.
@@ -75,18 +79,27 @@ VALIDATION = {
                                 ("Scheduled bus, Kampala–Kabale (Rome2rio)", 480, 480, "observed", (29.9856, -1.2486))],
     ("kampala_hoima", "car"): [("Rome2rio routing estimate", 172, 172, "estimate", None),
                                ("Scheduled bus (Rome2rio)", 206, 206, "observed", None)],
+    ("kampala_bwera", "car"): [("Rome2rio routing estimate, Kampala–Fort Portal", 269, 269, "estimate", (30.275, 0.671)),
+                               ("Scheduled bus, Kampala–Fort Portal (Link Bus, Rome2rio)", 271, 271, "observed",
+                                (30.275, 0.671))],
 }
 
-# Heavy goods vehicles a day, both directions, averaged along each corridor: (central, low, high).
-# Used by 17_costs.py and 19_safety.py. Only the Malaba road has a sourced anchor: 8.684 Mt of
-# cargo between Malaba and Kampala in 2017, ~4% by rail (Jinja-Kampala-Mpigi Corridor Physical
-# Development Plan, 2023, ch. 6), i.e. ~900 loaded trucks a day plus empties. The others are
-# assumptions with wide ranges, to be replaced with UNRA traffic counts.
+# Heavy goods vehicles (5+ axles) a day, both directions, averaged along each corridor:
+# (central, low, high). Used by 17_costs.py, 19_safety.py, 23_rail.py and 26_fuel_co2.py.
+# Surveyed counts: NCTTCA GHG Emissions Baseline Report 2025, Table 21 (average daily traffic by
+# class and station, Uganda). Malaba road: Magamaga 1,995, Malaba border 1,080 (some traffic
+# leaves for Busia before the border), so the corridor average lies between; this agrees with
+# the older anchor of 8.684 Mt Malaba-Kampala in 2017 (~900 loaded trucks a day plus empties,
+# Jinja-Kampala-Mpigi Corridor Physical Development Plan, 2023, ch. 6). Katuna road: Lukaya 565,
+# Mbarara 292. Bwera road: Mpondwe border 151, a lower bound for the Kampala end. The Elegu and
+# Hoima roads have no station on them (transit to South Sudan runs Tororo-Mbale-Lira-Gulu,
+# joining the A6 only north of Karuma), so their ranges remain assumptions.
 TRUCKS_PER_DAY = {
-    "kampala_malaba": (1500, 1000, 2500),
+    "kampala_malaba": (1540, 1080, 1995),
     "kampala_elegu": (600, 300, 1200),
-    "kampala_katuna": (800, 400, 1500),
+    "kampala_katuna": (430, 290, 565),
     "kampala_hoima": (400, 200, 900),
+    "kampala_bwera": (400, 150, 900),
 }
 
 UTM = 32636  # metres, for lengths and distances
