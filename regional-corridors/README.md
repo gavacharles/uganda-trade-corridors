@@ -38,3 +38,20 @@ python scripts/compare.py                       # East against Southern: tables 
 - Truck counts per artery are not available across ten countries. Annual costs are therefore not compared; per-truck and per-km measures are.
 - No published trip times have been collected yet to validate the model outside Uganda.
 - The model's assumptions (speeds, stop times) are the Uganda study's. South Africa's toll plazas are not yet a cause in the model.
+
+## Figures
+
+Made by `scripts/figures.py` (after `run.py ... 26` and `scripts/compare.py`); every rate is per 100 km of road or per km, so long and short roads compare.
+
+| File | Shows |
+|---|---|
+| `figures/r01_study_area.png` | The 54 arteries out of 12 hubs; trade corridors full length; Gauteng inset |
+| `figures/r02_delay_by_cause.png` | Truck minutes lost per 100 km by cause, per hub, East against Southern |
+| `figures/r03_bottlenecks_east.png`, `r03_bottlenecks_southern.png` | The worst 2 km stretches: where the road itself costs most, and weighbridges (assumed ~10 min each); Gauteng inset |
+| `figures/r04_safety.png` | Exposure per km; settlements' share of people vs share of exposure; school stretches with fast trucks and no mapped crossing |
+| `figures/r05_fuel_co2.png` | Extra diesel and CO₂ per 100 km by cause, and the share of trip fuel burnt by stop-and-go |
+| `figures/r06_trade_corridors.png` | The main freight routes side by side: minutes, diesel and exposure per km |
+| `figures/r10_country_<iso>.png` | One sheet per country: roads coloured by delay, bottlenecks pinned, causes per road |
+| `figures/c01`–`c04` | The East–Southern comparison from `compare.py` |
+
+Caveats that the figures carry: signals, crossings, humps, police posts and weighbridges come from OSM, mapped far more densely in South Africa (and schools in Uganda); speed humps and stop times are assumptions; trucks per day are one assumed figure for every artery; population is GHS-POP 2025.
