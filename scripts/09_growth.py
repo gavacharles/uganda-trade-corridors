@@ -60,6 +60,12 @@ pieces = gpd.read_file(os.path.join(C.DATA, "pieces.gpkg")).merge(P[["corridor",
 buf = pieces.to_crs(C.UTM).buffer(BUF_M)
 bounds = gpd.GeoSeries(buf, crs=C.UTM).to_crs(MOLL).total_bounds
 
+# Only cells near a road are kept: each tile window is first rasterised with the 300 m zones
+# (all_touched, a superset; the nearest-piece join below applies the exact 300 m), then each
+# epoch is read and only those cells extracted. Whole 1000 km tiles never sit in memory as
+# tables, which matters for the regional study's dozens of tiles.
+from rasterio.features import rasterize
+buf_moll = gpd.GeoSeries(buf, crs=C.UTM).to_crs(MOLL)
 parts = []
 for t in TILES:
     cells = None
@@ -70,15 +76,23 @@ for t in TILES:
             if clipped[0] >= clipped[2] or clipped[1] >= clipped[3]:
                 break
             w = from_bounds(*clipped, transform=src.transform).round_offsets().round_lengths()
-            a = src.read(1, window=w).astype(float)
-            if src.nodata is not None:
-                a[a == src.nodata] = 0
             if cells is None:
                 tf = src.window_transform(w)
-                rr, cc = np.meshgrid(np.arange(a.shape[0]), np.arange(a.shape[1]), indexing="ij")
-                xs, ys = rasterio.transform.xy(tf, rr.ravel(), cc.ravel())
+                shp = buf_moll.cx[clipped[0]:clipped[2], clipped[1]:clipped[3]]
+                if shp.empty:
+                    break
+                mask = rasterize(((g, 1) for g in shp), out_shape=(int(w.height), int(w.width)), transform=tf,
+                                 all_touched=True, dtype="uint8").ravel().astype(bool)
+                idx = np.flatnonzero(mask)
+                del mask
+                if not len(idx):
+                    break
+                xs, ys = rasterio.transform.xy(tf, idx // int(w.width), idx % int(w.width))
                 cells = pd.DataFrame({"x": xs, "y": ys})
-            cells[f"b{y}"] = a.ravel()
+            a = src.read(1, window=w).ravel()[idx].astype(float)
+            if src.nodata is not None:
+                a[a == src.nodata] = 0
+            cells[f"b{y}"] = a
     if cells is not None:
         parts.append(cells)
 cells = pd.concat(parts, ignore_index=True)
