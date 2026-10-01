@@ -25,7 +25,7 @@ causes off). Switching one cause off at a time gives each cause's share, as in 1
 1,000 Monte Carlo draws cover both the travel-time assumptions and the fuel ones below. A year's
 total uses config.TRUCKS_PER_DAY and the same trip share as 17_costs.py; that is the weak input.
 
-Writes outputs/fuel_co2.csv (per corridor), outputs/fuel_co2_by_cause.csv, figures/f16_fuel_co2.png.
+Writes outputs/fuel_co2_pieces.csv (central case, outbound, per piece), outputs/fuel_co2.csv (per corridor), outputs/fuel_co2_by_cause.csv, figures/f16_fuel_co2.png.
 """
 import os
 import numpy as np
@@ -125,6 +125,9 @@ for i in range(N):
     for direction in ("outbound", "inbound"):
         base, idle = fuel_litres(p, f, direction)
         openr, _ = fuel_litres(p, f, direction, off=ALL_OFF)
+        if i == 0 and direction == "outbound":   # central case per piece, for maps and animations
+            PIECES = TM.P[["corridor", "piece", "km_start", "lon", "lat", "road_type", "place"]].assign(
+                litres=base, litres_open=openr, friction_litres=base - openr)
         by = {c: base - fuel_litres(p, f, direction, off=(c,))[0] for c in TM.CAUSES}
         for c in order:
             k = corr == c
@@ -140,6 +143,7 @@ for i in range(N):
             if direction == "outbound":
                 crows += [dict(draw=i, corridor=c, cause=cz, litres_trip=by[cz][k].sum()) for cz in TM.CAUSES]
 D, DC = pd.DataFrame(rows), pd.DataFrame(crows)
+PIECES.round(4).to_csv(os.path.join(C.OUTPUTS, "fuel_co2_pieces.csv"), index=False)
 
 cols = ["litres_trip", "l_per_100km", "litres_open", "friction_litres_trip", "idle_litres_trip", "friction_co2_kg_trip"]
 yearly = ["friction_litres_year_m", "friction_co2_kt_year", "friction_fuel_usd_year_m"]

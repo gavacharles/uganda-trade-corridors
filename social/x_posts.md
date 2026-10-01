@@ -1,17 +1,24 @@
-## Post 1 — media: x1_truck_race.gif
+## Post 1 · fuel and carbon — media: a6_fuel_meter.gif
 
-A loaded truck leaves Kampala on each of Uganda's five trade roads at once, beside the same truck on open road.
+Every hump, junction and village crossing makes a 40-tonne truck brake, then burn diesel to get back up to speed.
 
-Trading centres, junctions, humps, police posts, weighbridges and hills add 59–161 minutes per trip.
+One loaded trip, Kampala to Malaba: 60 extra litres, +161 kg of CO₂.
 
-56–74% of each road now runs through roadside settlement. 🧵
+Across Uganda's five trade roads: ~138,000 t of CO₂ and US$70M of diesel a year.
 
-## Post 2 — media: x2_hoima_road_growth.gif
+## Post 2 · road safety — media: s1_safety_card.png
 
-The roadside keeps filling in. Built-up land within 300 m of the Kampala–Hoima road rose from 477 to 748 ha in 2000–2020 (+57%).
+Towns slow trucks down. The villages between them don't.
 
-On all five corridors, roadside buildings grew another 22–48% in 2016–23.
+On Uganda's trade roads, trucks pass homes and schools at 55–60 km/h. Those settlements hold 49–76% of roadside residents but 65–79% of the safety risk.
 
-Today's open road is tomorrow's trading centre.
+688 half-km stretches: a school, fast trucks, no crossing.
 
-[Substack link]
+## Post 3 · interactive map — media: a5_bottleneck_pins.gif
+
+Where do Uganda's trade roads lose the most time?
+
+Five weighbridges top the list, each costing a loaded truck 10–12 minutes. Then Kampala's Nakawa signals.
+
+Explore every 500 m of the five corridors, free and open:
+https://gavacharles.github.io/uganda-trade-corridors/
