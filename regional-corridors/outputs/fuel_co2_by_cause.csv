@@ -1,0 +1,487 @@
+corridor,cause,litres,p5,p95
+dar_es_salaam_road_dodoma,curves,-0.04,-1.7,-0.01
+dar_es_salaam_road_dodoma,hills (trucks),-2.52,-6.89,-1.09
+dar_es_salaam_road_dodoma,joining roads,13.18,1.8,38.01
+dar_es_salaam_road_dodoma,police posts,0.28,0.15,0.79
+dar_es_salaam_road_dodoma,roadside activity,6.27,-11.29,26.24
+dar_es_salaam_road_dodoma,signals and crossings,20.33,10.78,29.98
+dar_es_salaam_road_dodoma,speed humps (assumed),40.37,3.69,80.85
+dar_es_salaam_road_dodoma,town speed limit,-19.68,-64.76,-3.02
+dar_es_salaam_road_dodoma,weighbridge,2.9,2.18,6.14
+dar_es_salaam_t1_tunduma,curves,0.16,-1.02,0.25
+dar_es_salaam_t1_tunduma,hills (trucks),-9.33,-21.72,-4.9
+dar_es_salaam_t1_tunduma,joining roads,21.86,3.62,61.04
+dar_es_salaam_t1_tunduma,police posts,0.35,0.2,0.92
+dar_es_salaam_t1_tunduma,roadside activity,20.97,-8.44,68.69
+dar_es_salaam_t1_tunduma,signals and crossings,31.22,19.36,44.11
+dar_es_salaam_t1_tunduma,speed humps (assumed),56.16,4.85,111.05
+dar_es_salaam_t1_tunduma,town speed limit,-25.11,-83.74,-4.27
+dar_es_salaam_t1_tunduma,weighbridge,3.71,2.76,8.02
+dar_es_salaam_t7_lindi,curves,-0.15,-0.76,-0.02
+dar_es_salaam_t7_lindi,hills (trucks),-0.57,-1.84,-0.09
+dar_es_salaam_t7_lindi,joining roads,3.81,-0.38,12.43
+dar_es_salaam_t7_lindi,police posts,0.12,0.06,0.36
+dar_es_salaam_t7_lindi,roadside activity,1.73,-8.35,11.27
+dar_es_salaam_t7_lindi,signals and crossings,6.22,1.34,10.02
+dar_es_salaam_t7_lindi,speed humps (assumed),11.95,0.95,23.37
+dar_es_salaam_t7_lindi,town speed limit,-4.36,-18.28,-0.87
+dar_es_salaam_t7_lindi,weighbridge,0.0,0.0,0.0
+dodoma_t3_morogoro,curves,0.0,0.0,0.0
+dodoma_t3_morogoro,hills (trucks),-0.67,-1.98,-0.13
+dodoma_t3_morogoro,joining roads,6.77,2.68,16.32
+dodoma_t3_morogoro,police posts,0.0,0.0,0.0
+dodoma_t3_morogoro,roadside activity,6.52,2.17,16.37
+dodoma_t3_morogoro,signals and crossings,0.89,0.31,1.29
+dodoma_t3_morogoro,speed humps (assumed),9.22,0.85,18.77
+dodoma_t3_morogoro,town speed limit,-4.94,-15.17,-0.69
+dodoma_t3_morogoro,weighbridge,0.0,0.0,0.0
+dodoma_t3_rusomo,curves,0.0,-0.43,0.0
+dodoma_t3_rusomo,hills (trucks),0.36,-0.23,0.68
+dodoma_t3_rusomo,joining roads,3.5,1.11,8.83
+dodoma_t3_rusomo,police posts,0.0,0.0,0.0
+dodoma_t3_rusomo,roadside activity,2.99,-0.54,8.25
+dodoma_t3_rusomo,signals and crossings,2.71,1.32,3.99
+dodoma_t3_rusomo,speed humps (assumed),9.6,0.85,19.21
+dodoma_t3_rusomo,town speed limit,-4.87,-15.78,-0.65
+dodoma_t3_rusomo,weighbridge,1.05,0.81,2.14
+dodoma_t5_arusha,curves,-0.21,-0.4,0.01
+dodoma_t5_arusha,hills (trucks),0.23,-0.49,1.28
+dodoma_t5_arusha,joining roads,2.83,0.77,7.3
+dodoma_t5_arusha,police posts,0.0,0.0,0.0
+dodoma_t5_arusha,roadside activity,3.16,0.03,9.18
+dodoma_t5_arusha,signals and crossings,0.0,0.0,0.0
+dodoma_t5_arusha,speed humps (assumed),6.73,0.61,13.66
+dodoma_t5_arusha,town speed limit,-3.24,-10.43,-0.48
+dodoma_t5_arusha,weighbridge,0.0,0.0,0.0
+dodoma_t5_iringa,curves,-0.37,-0.95,-0.11
+dodoma_t5_iringa,hills (trucks),0.06,-0.52,0.24
+dodoma_t5_iringa,joining roads,5.03,1.88,11.71
+dodoma_t5_iringa,police posts,0.0,0.0,0.0
+dodoma_t5_iringa,roadside activity,3.96,0.99,9.76
+dodoma_t5_iringa,signals and crossings,1.08,0.28,1.61
+dodoma_t5_iringa,speed humps (assumed),7.85,0.69,15.39
+dodoma_t5_iringa,town speed limit,-3.38,-11.96,-0.42
+dodoma_t5_iringa,weighbridge,0.0,0.0,0.0
+gaborone_a12_326_km,curves,-1.17,-2.89,-0.04
+gaborone_a12_326_km,hills (trucks),-0.28,-0.69,-0.16
+gaborone_a12_326_km,joining roads,4.67,0.89,10.94
+gaborone_a12_326_km,police posts,0.0,0.0,0.0
+gaborone_a12_326_km,roadside activity,1.53,-2.32,4.37
+gaborone_a12_326_km,signals and crossings,10.32,5.95,14.57
+gaborone_a12_326_km,speed humps (assumed),7.86,0.69,15.28
+gaborone_a12_326_km,town speed limit,-5.79,-17.7,-0.53
+gaborone_a12_326_km,weighbridge,0.0,0.0,0.0
+gaborone_a1_121_km,curves,-0.04,-1.22,-0.02
+gaborone_a1_121_km,hills (trucks),0.31,-0.08,0.57
+gaborone_a1_121_km,joining roads,3.12,0.47,7.55
+gaborone_a1_121_km,police posts,0.0,0.0,0.0
+gaborone_a1_121_km,roadside activity,0.79,-1.16,3.29
+gaborone_a1_121_km,signals and crossings,9.84,5.57,13.67
+gaborone_a1_121_km,speed humps (assumed),4.6,0.41,9.08
+gaborone_a1_121_km,town speed limit,-3.71,-11.53,-0.23
+gaborone_a1_121_km,weighbridge,0.0,0.0,0.0
+gaborone_a1_ramokgwebana,curves,0.0,-0.18,0.0
+gaborone_a1_ramokgwebana,hills (trucks),0.34,0.06,0.59
+gaborone_a1_ramokgwebana,joining roads,8.3,3.36,19.31
+gaborone_a1_ramokgwebana,police posts,0.63,0.37,1.59
+gaborone_a1_ramokgwebana,roadside activity,2.54,0.13,6.73
+gaborone_a1_ramokgwebana,signals and crossings,8.23,4.77,11.75
+gaborone_a1_ramokgwebana,speed humps (assumed),8.1,0.74,16.28
+gaborone_a1_ramokgwebana,town speed limit,-6.6,-18.96,-0.53
+gaborone_a1_ramokgwebana,weighbridge,1.04,0.8,2.13
+harare_a1_chirundu,curves,0.33,0.04,0.67
+harare_a1_chirundu,hills (trucks),1.79,0.26,2.75
+harare_a1_chirundu,joining roads,6.35,2.68,15.36
+harare_a1_chirundu,police posts,0.42,0.25,1.07
+harare_a1_chirundu,roadside activity,1.97,-0.15,5.44
+harare_a1_chirundu,signals and crossings,3.59,2.19,4.87
+harare_a1_chirundu,speed humps (assumed),5.49,0.52,10.94
+harare_a1_chirundu,town speed limit,-2.94,-9.32,-0.36
+harare_a1_chirundu,weighbridge,0.0,0.0,0.0
+harare_a4_beitbridge,curves,-0.15,-0.54,-0.04
+harare_a4_beitbridge,hills (trucks),1.4,0.32,2.3
+harare_a4_beitbridge,joining roads,9.82,4.51,22.78
+harare_a4_beitbridge,police posts,1.43,0.85,3.6
+harare_a4_beitbridge,roadside activity,3.16,0.98,8.61
+harare_a4_beitbridge,signals and crossings,1.06,0.55,1.58
+harare_a4_beitbridge,speed humps (assumed),6.05,0.56,12.1
+harare_a4_beitbridge,town speed limit,-3.3,-9.82,-0.38
+harare_a4_beitbridge,weighbridge,0.0,0.0,0.0
+harare_p1_mucumbura,curves,0.05,-0.1,0.08
+harare_p1_mucumbura,hills (trucks),0.89,-0.26,1.51
+harare_p1_mucumbura,joining roads,4.29,1.95,10.02
+harare_p1_mucumbura,police posts,0.65,0.38,1.62
+harare_p1_mucumbura,roadside activity,2.43,0.96,6.51
+harare_p1_mucumbura,signals and crossings,0.16,0.09,0.23
+harare_p1_mucumbura,speed humps (assumed),1.61,0.14,3.03
+harare_p1_mucumbura,town speed limit,-0.51,-2.0,-0.08
+harare_p1_mucumbura,weighbridge,0.0,0.0,0.0
+harare_r2_plumtree,curves,-0.06,-0.18,-0.01
+harare_r2_plumtree,hills (trucks),-0.97,-1.54,-0.61
+harare_r2_plumtree,joining roads,4.47,1.91,10.64
+harare_r2_plumtree,police posts,0.44,0.26,1.11
+harare_r2_plumtree,roadside activity,1.81,0.29,5.24
+harare_r2_plumtree,signals and crossings,1.94,1.01,3.06
+harare_r2_plumtree,speed humps (assumed),3.37,0.3,6.72
+harare_r2_plumtree,town speed limit,-1.56,-5.05,-0.27
+harare_r2_plumtree,weighbridge,0.0,0.0,0.0
+harare_r4_nyamapanda,curves,-0.08,-0.25,-0.02
+harare_r4_nyamapanda,hills (trucks),0.9,-0.1,1.53
+harare_r4_nyamapanda,joining roads,4.62,1.46,11.44
+harare_r4_nyamapanda,police posts,0.56,0.33,1.46
+harare_r4_nyamapanda,roadside activity,1.41,-0.8,5.14
+harare_r4_nyamapanda,signals and crossings,3.14,1.17,4.76
+harare_r4_nyamapanda,speed humps (assumed),2.34,0.2,4.47
+harare_r4_nyamapanda,town speed limit,-0.84,-4.2,-0.15
+harare_r4_nyamapanda,weighbridge,0.0,0.0,0.0
+harare_r5_mutare,curves,0.0,-0.17,0.0
+harare_r5_mutare,hills (trucks),0.52,-0.4,1.06
+harare_r5_mutare,joining roads,4.53,1.91,10.87
+harare_r5_mutare,police posts,0.42,0.25,1.06
+harare_r5_mutare,roadside activity,1.69,0.21,4.81
+harare_r5_mutare,signals and crossings,1.93,1.19,2.82
+harare_r5_mutare,speed humps (assumed),3.87,0.35,7.75
+harare_r5_mutare,town speed limit,-1.51,-5.28,-0.18
+harare_r5_mutare,weighbridge,0.0,0.0,0.0
+johannesburg_n12_de_rust,curves,-0.02,-0.15,0.06
+johannesburg_n12_de_rust,hills (trucks),0.14,-0.67,0.51
+johannesburg_n12_de_rust,joining roads,4.04,-2.99,10.63
+johannesburg_n12_de_rust,police posts,0.0,0.0,0.0
+johannesburg_n12_de_rust,roadside activity,1.65,-5.08,5.86
+johannesburg_n12_de_rust,signals and crossings,30.46,16.47,42.81
+johannesburg_n12_de_rust,speed humps (assumed),7.98,0.74,16.22
+johannesburg_n12_de_rust,town speed limit,-10.78,-33.64,-0.45
+johannesburg_n12_de_rust,weighbridge,0.0,0.0,0.0
+johannesburg_n12_emalahleni,curves,-0.03,-0.07,-0.01
+johannesburg_n12_emalahleni,hills (trucks),0.28,-0.54,0.69
+johannesburg_n12_emalahleni,joining roads,0.73,-1.21,2.42
+johannesburg_n12_emalahleni,police posts,0.0,0.0,0.0
+johannesburg_n12_emalahleni,roadside activity,2.02,-1.49,6.88
+johannesburg_n12_emalahleni,signals and crossings,5.16,2.67,7.09
+johannesburg_n12_emalahleni,speed humps (assumed),3.37,0.3,6.88
+johannesburg_n12_emalahleni,town speed limit,-1.98,-7.6,-0.3
+johannesburg_n12_emalahleni,weighbridge,0.0,0.0,0.0
+johannesburg_n17_msauli,curves,-0.71,-1.38,-0.09
+johannesburg_n17_msauli,hills (trucks),1.37,0.34,2.14
+johannesburg_n17_msauli,joining roads,3.58,1.56,8.7
+johannesburg_n17_msauli,police posts,2.32,1.39,5.85
+johannesburg_n17_msauli,roadside activity,1.75,0.6,5.15
+johannesburg_n17_msauli,signals and crossings,1.05,0.61,1.73
+johannesburg_n17_msauli,speed humps (assumed),1.35,0.11,2.59
+johannesburg_n17_msauli,town speed limit,-0.25,-1.22,-0.02
+johannesburg_n17_msauli,weighbridge,0.0,0.0,0.0
+johannesburg_n3_durban,curves,0.03,-4.52,0.12
+johannesburg_n3_durban,hills (trucks),3.94,0.36,6.12
+johannesburg_n3_durban,joining roads,7.07,-2.0,16.37
+johannesburg_n3_durban,police posts,3.49,2.05,8.92
+johannesburg_n3_durban,roadside activity,4.5,-3.63,12.7
+johannesburg_n3_durban,signals and crossings,31.82,16.01,42.84
+johannesburg_n3_durban,speed humps (assumed),7.16,0.64,14.01
+johannesburg_n3_durban,town speed limit,-8.71,-30.59,-0.51
+johannesburg_n3_durban,weighbridge,1.08,0.83,2.17
+johannesburg_r24_rustenburg,curves,-0.29,-2.32,-0.1
+johannesburg_r24_rustenburg,hills (trucks),-0.75,-2.32,-0.23
+johannesburg_r24_rustenburg,joining roads,-4.24,-13.49,7.35
+johannesburg_r24_rustenburg,police posts,0.0,0.0,0.0
+johannesburg_r24_rustenburg,roadside activity,-10.97,-30.06,1.68
+johannesburg_r24_rustenburg,signals and crossings,38.47,19.44,57.08
+johannesburg_r24_rustenburg,speed humps (assumed),12.29,1.02,24.19
+johannesburg_r24_rustenburg,town speed limit,-7.3,-32.39,-0.86
+johannesburg_r24_rustenburg,weighbridge,0.0,0.0,0.0
+johannesburg_r25_groblersdal,curves,-0.48,-1.8,-0.06
+johannesburg_r25_groblersdal,hills (trucks),-0.73,-2.14,-0.24
+johannesburg_r25_groblersdal,joining roads,0.53,-6.51,10.11
+johannesburg_r25_groblersdal,police posts,0.0,0.0,0.0
+johannesburg_r25_groblersdal,roadside activity,-5.0,-16.5,3.24
+johannesburg_r25_groblersdal,signals and crossings,29.89,16.31,43.23
+johannesburg_r25_groblersdal,speed humps (assumed),8.4,0.71,16.41
+johannesburg_r25_groblersdal,town speed limit,-4.98,-21.37,-0.53
+johannesburg_r25_groblersdal,weighbridge,0.0,0.0,0.0
+johannesburg_r29_evander,curves,-0.5,-1.91,-0.09
+johannesburg_r29_evander,hills (trucks),-0.47,-1.2,-0.23
+johannesburg_r29_evander,joining roads,0.35,-8.37,8.7
+johannesburg_r29_evander,police posts,0.0,0.0,0.0
+johannesburg_r29_evander,roadside activity,-2.84,-17.24,4.74
+johannesburg_r29_evander,signals and crossings,24.78,12.21,35.56
+johannesburg_r29_evander,speed humps (assumed),12.81,1.06,24.9
+johannesburg_r29_evander,town speed limit,-5.25,-26.35,-0.95
+johannesburg_r29_evander,weighbridge,0.0,0.0,0.0
+johannesburg_r59_dealesville,curves,-0.17,-0.88,-0.06
+johannesburg_r59_dealesville,hills (trucks),0.1,-0.65,0.47
+johannesburg_r59_dealesville,joining roads,3.46,-0.57,8.16
+johannesburg_r59_dealesville,police posts,0.12,0.06,0.36
+johannesburg_r59_dealesville,roadside activity,1.73,-1.13,4.79
+johannesburg_r59_dealesville,signals and crossings,9.89,4.89,13.83
+johannesburg_r59_dealesville,speed humps (assumed),3.79,0.34,7.33
+johannesburg_r59_dealesville,town speed limit,-3.28,-11.78,-0.22
+johannesburg_r59_dealesville,weighbridge,0.0,0.0,0.0
+kampala_a1_malaba,curves,-0.23,-1.28,-0.02
+kampala_a1_malaba,hills (trucks),-3.84,-7.92,-2.04
+kampala_a1_malaba,joining roads,1.88,-3.94,10.5
+kampala_a1_malaba,police posts,1.05,0.59,3.08
+kampala_a1_malaba,roadside activity,5.85,-11.45,27.59
+kampala_a1_malaba,signals and crossings,7.85,3.96,10.87
+kampala_a1_malaba,speed humps (assumed),24.94,2.07,50.66
+kampala_a1_malaba,town speed limit,-8.99,-33.55,-1.69
+kampala_a1_malaba,weighbridge,1.93,1.46,4.08
+kampala_a2_katuna,curves,-0.65,-2.42,-0.14
+kampala_a2_katuna,hills (trucks),-7.4,-16.54,-4.11
+kampala_a2_katuna,joining roads,7.97,0.82,24.89
+kampala_a2_katuna,police posts,1.65,0.97,4.74
+kampala_a2_katuna,roadside activity,11.67,-5.54,45.27
+kampala_a2_katuna,signals and crossings,7.74,4.66,11.04
+kampala_a2_katuna,speed humps (assumed),22.1,1.82,44.98
+kampala_a2_katuna,town speed limit,-7.14,-26.38,-1.4
+kampala_a2_katuna,weighbridge,1.91,1.42,4.04
+kampala_a5_bwera,curves,-1.34,-4.04,-0.26
+kampala_a5_bwera,hills (trucks),-6.78,-15.79,-2.99
+kampala_a5_bwera,joining roads,11.9,3.54,35.05
+kampala_a5_bwera,police posts,0.67,0.38,2.17
+kampala_a5_bwera,roadside activity,12.57,-0.25,46.69
+kampala_a5_bwera,signals and crossings,6.28,2.71,10.08
+kampala_a5_bwera,speed humps (assumed),9.17,0.74,19.18
+kampala_a5_bwera,town speed limit,-2.7,-10.59,-0.65
+kampala_a5_bwera,weighbridge,0.0,0.0,0.0
+kampala_a6_elegu,curves,-0.04,-0.44,-0.02
+kampala_a6_elegu,hills (trucks),-2.86,-6.18,-1.66
+kampala_a6_elegu,joining roads,9.55,2.48,27.52
+kampala_a6_elegu,police posts,1.41,0.82,3.95
+kampala_a6_elegu,roadside activity,11.98,-3.77,42.09
+kampala_a6_elegu,signals and crossings,5.69,2.72,8.98
+kampala_a6_elegu,speed humps (assumed),24.66,2.02,49.59
+kampala_a6_elegu,town speed limit,-9.19,-32.08,-1.54
+kampala_a6_elegu,weighbridge,0.98,0.75,2.07
+kampala_a9_hoima,curves,-0.43,-1.07,-0.08
+kampala_a9_hoima,hills (trucks),-3.17,-7.77,-1.61
+kampala_a9_hoima,joining roads,3.01,0.25,9.69
+kampala_a9_hoima,police posts,0.31,0.17,1.04
+kampala_a9_hoima,roadside activity,8.2,0.03,26.55
+kampala_a9_hoima,signals and crossings,1.15,0.61,1.67
+kampala_a9_hoima,speed humps (assumed),8.19,0.67,16.52
+kampala_a9_hoima,town speed limit,-2.64,-9.87,-0.58
+kampala_a9_hoima,weighbridge,0.0,0.0,0.0
+kigali_nr1_huye,curves,-3.48,-9.03,-0.98
+kigali_nr1_huye,hills (trucks),-3.61,-8.16,-1.87
+kigali_nr1_huye,joining roads,2.75,0.42,9.71
+kigali_nr1_huye,police posts,0.14,0.08,0.4
+kigali_nr1_huye,roadside activity,5.67,-0.5,21.49
+kigali_nr1_huye,signals and crossings,2.56,1.06,4.07
+kigali_nr1_huye,speed humps (assumed),6.74,0.53,13.03
+kigali_nr1_huye,town speed limit,-1.34,-6.48,-0.29
+kigali_nr1_huye,weighbridge,0.0,0.0,0.0
+kigali_nr2_gisenyi,curves,-2.89,-7.13,-0.94
+kigali_nr2_gisenyi,hills (trucks),-3.46,-7.42,-1.98
+kigali_nr2_gisenyi,joining roads,2.15,0.23,7.14
+kigali_nr2_gisenyi,police posts,0.17,0.1,0.47
+kigali_nr2_gisenyi,roadside activity,6.02,-0.74,19.9
+kigali_nr2_gisenyi,signals and crossings,0.84,0.48,1.18
+kigali_nr2_gisenyi,speed humps (assumed),9.73,0.78,19.12
+kigali_nr2_gisenyi,town speed limit,-2.37,-10.47,-0.5
+kigali_nr2_gisenyi,weighbridge,0.0,0.0,0.0
+kigali_nr3_gatuna,curves,-0.89,-2.46,-0.21
+kigali_nr3_gatuna,hills (trucks),-0.78,-1.7,-0.53
+kigali_nr3_gatuna,joining roads,1.04,0.35,2.62
+kigali_nr3_gatuna,police posts,0.0,0.0,0.0
+kigali_nr3_gatuna,roadside activity,1.91,0.3,5.8
+kigali_nr3_gatuna,signals and crossings,0.0,0.0,0.0
+kigali_nr3_gatuna,speed humps (assumed),1.89,0.15,3.67
+kigali_nr3_gatuna,town speed limit,-0.63,-2.47,-0.15
+kigali_nr3_gatuna,weighbridge,0.0,0.0,0.0
+kigali_road_rusumo,curves,-0.83,-1.91,-0.24
+kigali_road_rusumo,hills (trucks),-4.17,-8.63,-2.42
+kigali_road_rusumo,joining roads,3.55,0.05,11.23
+kigali_road_rusumo,police posts,0.0,0.0,0.0
+kigali_road_rusumo,roadside activity,8.98,-0.64,28.92
+kigali_road_rusumo,signals and crossings,1.26,0.24,2.08
+kigali_road_rusumo,speed humps (assumed),14.06,1.15,27.95
+kigali_road_rusumo,town speed limit,-4.72,-18.16,-0.83
+kigali_road_rusumo,weighbridge,0.0,0.0,0.0
+lusaka_m9_mongu,curves,0.0,0.0,0.0
+lusaka_m9_mongu,hills (trucks),-6.29,-9.01,-3.8
+lusaka_m9_mongu,joining roads,6.11,2.44,15.42
+lusaka_m9_mongu,police posts,0.82,0.49,2.07
+lusaka_m9_mongu,roadside activity,2.28,-0.44,7.4
+lusaka_m9_mongu,signals and crossings,8.39,5.2,12.77
+lusaka_m9_mongu,speed humps (assumed),3.95,0.34,7.91
+lusaka_m9_mongu,town speed limit,-1.67,-5.97,-0.34
+lusaka_m9_mongu,weighbridge,0.0,0.0,0.0
+lusaka_t1_livingstone,curves,0.0,-3.06,0.0
+lusaka_t1_livingstone,hills (trucks),1.01,0.02,1.64
+lusaka_t1_livingstone,joining roads,13.67,4.65,33.27
+lusaka_t1_livingstone,police posts,1.22,0.7,3.1
+lusaka_t1_livingstone,roadside activity,5.38,-0.71,14.92
+lusaka_t1_livingstone,signals and crossings,27.65,17.79,36.61
+lusaka_t1_livingstone,speed humps (assumed),14.95,1.38,29.49
+lusaka_t1_livingstone,town speed limit,-9.4,-28.74,-1.1
+lusaka_t1_livingstone,weighbridge,1.01,0.77,2.11
+lusaka_t2_chirundu,curves,0.39,-2.54,0.5
+lusaka_t2_chirundu,hills (trucks),0.29,-0.19,0.5
+lusaka_t2_chirundu,joining roads,5.89,0.55,13.8
+lusaka_t2_chirundu,police posts,1.27,0.71,3.38
+lusaka_t2_chirundu,roadside activity,2.4,-1.8,6.75
+lusaka_t2_chirundu,signals and crossings,10.64,5.29,13.9
+lusaka_t2_chirundu,speed humps (assumed),11.97,1.1,23.78
+lusaka_t2_chirundu,town speed limit,-8.49,-25.99,-0.9
+lusaka_t2_chirundu,weighbridge,0.0,0.0,0.0
+lusaka_t2_nakonde,curves,-0.16,-1.88,-0.02
+lusaka_t2_nakonde,hills (trucks),1.12,-2.88,3.09
+lusaka_t2_nakonde,joining roads,34.05,15.03,81.44
+lusaka_t2_nakonde,police posts,2.26,1.33,5.71
+lusaka_t2_nakonde,roadside activity,13.84,4.53,37.13
+lusaka_t2_nakonde,signals and crossings,6.49,3.34,8.49
+lusaka_t2_nakonde,speed humps (assumed),15.08,1.34,29.57
+lusaka_t2_nakonde,town speed limit,-6.27,-22.92,-0.92
+lusaka_t2_nakonde,weighbridge,0.0,0.0,0.0
+lusaka_t4_234_km,curves,-0.01,-0.38,0.07
+lusaka_t4_234_km,hills (trucks),1.14,0.12,1.81
+lusaka_t4_234_km,joining roads,5.5,0.71,13.33
+lusaka_t4_234_km,police posts,0.4,0.24,1.03
+lusaka_t4_234_km,roadside activity,2.86,-1.62,8.41
+lusaka_t4_234_km,signals and crossings,5.08,2.28,7.13
+lusaka_t4_234_km,speed humps (assumed),8.87,0.78,17.43
+lusaka_t4_234_km,town speed limit,-4.8,-16.57,-0.57
+lusaka_t4_234_km,weighbridge,0.0,0.0,0.0
+maputo_en4_ressano_garcia,curves,-0.17,-1.94,-0.04
+maputo_en4_ressano_garcia,hills (trucks),0.17,-0.49,0.27
+maputo_en4_ressano_garcia,joining roads,2.12,-2.16,5.98
+maputo_en4_ressano_garcia,police posts,0.5,0.3,1.37
+maputo_en4_ressano_garcia,roadside activity,0.38,-8.06,3.64
+maputo_en4_ressano_garcia,signals and crossings,12.88,5.29,17.95
+maputo_en4_ressano_garcia,speed humps (assumed),10.58,0.88,21.26
+maputo_en4_ressano_garcia,town speed limit,-7.28,-24.71,-0.81
+maputo_en4_ressano_garcia,weighbridge,0.0,0.0,0.0
+maputo_n1_pemba,curves,0.0,-0.25,0.0
+maputo_n1_pemba,hills (trucks),-0.25,-0.83,-0.07
+maputo_n1_pemba,joining roads,7.92,-1.96,21.47
+maputo_n1_pemba,police posts,0.26,0.16,0.8
+maputo_n1_pemba,roadside activity,4.13,-10.31,16.01
+maputo_n1_pemba,signals and crossings,10.41,2.66,16.04
+maputo_n1_pemba,speed humps (assumed),31.86,2.92,64.53
+maputo_n1_pemba,town speed limit,-20.72,-63.04,-2.78
+maputo_n1_pemba,weighbridge,0.83,0.6,1.9
+nairobi_a2_moyale,curves,-0.29,-0.78,-0.04
+nairobi_a2_moyale,hills (trucks),-2.86,-6.4,-1.71
+nairobi_a2_moyale,joining roads,8.05,2.86,19.93
+nairobi_a2_moyale,police posts,0.28,0.16,0.8
+nairobi_a2_moyale,roadside activity,6.92,-0.07,19.38
+nairobi_a2_moyale,signals and crossings,4.47,2.16,6.46
+nairobi_a2_moyale,speed humps (assumed),17.8,1.6,35.83
+nairobi_a2_moyale,town speed limit,-9.48,-30.41,-1.15
+nairobi_a2_moyale,weighbridge,0.83,0.61,1.92
+nairobi_a2_namanga,curves,-0.16,-0.93,-0.02
+nairobi_a2_namanga,hills (trucks),-0.01,-0.8,0.33
+nairobi_a2_namanga,joining roads,5.03,1.69,12.58
+nairobi_a2_namanga,police posts,2.32,1.34,6.37
+nairobi_a2_namanga,roadside activity,2.42,-0.9,6.8
+nairobi_a2_namanga,signals and crossings,0.7,0.19,1.0
+nairobi_a2_namanga,speed humps (assumed),12.21,1.15,24.4
+nairobi_a2_namanga,town speed limit,-6.5,-20.24,-0.77
+nairobi_a2_namanga,weighbridge,1.64,1.18,3.79
+nairobi_a8_malaba,curves,-0.11,-3.02,-0.03
+nairobi_a8_malaba,hills (trucks),-6.6,-14.65,-3.81
+nairobi_a8_malaba,joining roads,13.49,0.29,40.29
+nairobi_a8_malaba,police posts,1.23,0.71,3.57
+nairobi_a8_malaba,roadside activity,9.96,-13.27,40.34
+nairobi_a8_malaba,signals and crossings,23.53,13.66,31.93
+nairobi_a8_malaba,speed humps (assumed),39.45,3.37,78.67
+nairobi_a8_malaba,town speed limit,-17.29,-62.12,-2.66
+nairobi_a8_malaba,weighbridge,2.88,2.16,6.08
+nairobi_a8_mombasa,curves,-0.32,-0.78,-0.03
+nairobi_a8_mombasa,hills (trucks),-0.14,-1.47,0.54
+nairobi_a8_mombasa,joining roads,10.76,4.44,26.3
+nairobi_a8_mombasa,police posts,2.26,1.31,6.25
+nairobi_a8_mombasa,roadside activity,9.84,2.64,26.41
+nairobi_a8_mombasa,signals and crossings,0.45,0.13,0.79
+nairobi_a8_mombasa,speed humps (assumed),16.83,1.52,34.41
+nairobi_a8_mombasa,town speed limit,-9.19,-27.95,-1.34
+nairobi_a8_mombasa,weighbridge,2.12,1.62,4.3
+pretoria_n14_springbok,curves,-0.06,-0.69,-0.0
+pretoria_n14_springbok,hills (trucks),-0.38,-1.51,0.42
+pretoria_n14_springbok,joining roads,3.94,1.4,8.95
+pretoria_n14_springbok,police posts,0.0,0.0,0.0
+pretoria_n14_springbok,roadside activity,2.93,0.97,7.6
+pretoria_n14_springbok,signals and crossings,5.69,2.78,8.07
+pretoria_n14_springbok,speed humps (assumed),3.14,0.28,6.19
+pretoria_n14_springbok,town speed limit,-2.62,-8.11,-0.16
+pretoria_n14_springbok,weighbridge,0.0,0.0,0.0
+pretoria_n1_beitbridge,curves,0.02,-0.18,0.15
+pretoria_n1_beitbridge,hills (trucks),1.32,-0.04,2.12
+pretoria_n1_beitbridge,joining roads,5.16,0.72,13.87
+pretoria_n1_beitbridge,police posts,2.8,1.63,7.11
+pretoria_n1_beitbridge,roadside activity,0.39,-3.29,6.49
+pretoria_n1_beitbridge,signals and crossings,6.53,2.12,10.64
+pretoria_n1_beitbridge,speed humps (assumed),3.72,0.35,7.41
+pretoria_n1_beitbridge,town speed limit,-2.09,-8.52,-0.27
+pretoria_n1_beitbridge,weighbridge,4.21,3.24,8.55
+pretoria_n1_cape_town,curves,0.0,-0.11,0.0
+pretoria_n1_cape_town,hills (trucks),-1.99,-5.69,-1.32
+pretoria_n1_cape_town,joining roads,1.79,0.68,4.1
+pretoria_n1_cape_town,police posts,0.98,0.57,2.5
+pretoria_n1_cape_town,roadside activity,5.04,2.07,13.79
+pretoria_n1_cape_town,signals and crossings,2.14,1.05,3.39
+pretoria_n1_cape_town,speed humps (assumed),2.45,0.23,4.94
+pretoria_n1_cape_town,town speed limit,-1.37,-4.22,-0.11
+pretoria_n1_cape_town,weighbridge,0.0,0.0,0.0
+pretoria_n4_lebombo,curves,0.03,-0.04,0.1
+pretoria_n4_lebombo,hills (trucks),2.94,0.41,4.74
+pretoria_n4_lebombo,joining roads,7.73,3.48,18.85
+pretoria_n4_lebombo,police posts,1.43,0.84,3.63
+pretoria_n4_lebombo,roadside activity,1.98,0.01,7.21
+pretoria_n4_lebombo,signals and crossings,3.09,1.77,4.61
+pretoria_n4_lebombo,speed humps (assumed),3.7,0.35,7.65
+pretoria_n4_lebombo,town speed limit,-2.74,-7.78,-0.31
+pretoria_n4_lebombo,weighbridge,1.07,0.82,2.15
+pretoria_n4_lekubu,curves,0.04,-0.02,0.12
+pretoria_n4_lekubu,hills (trucks),0.67,-0.23,1.21
+pretoria_n4_lekubu,joining roads,2.85,1.24,6.74
+pretoria_n4_lekubu,police posts,1.09,0.64,2.72
+pretoria_n4_lekubu,roadside activity,2.74,1.11,7.52
+pretoria_n4_lekubu,signals and crossings,2.68,1.64,3.86
+pretoria_n4_lekubu,speed humps (assumed),1.9,0.18,3.96
+pretoria_n4_lekubu,town speed limit,-1.22,-3.59,-0.12
+pretoria_n4_lekubu,weighbridge,0.0,0.0,0.0
+windhoek_b1_797_km,curves,0.0,-0.18,0.0
+windhoek_b1_797_km,hills (trucks),0.15,-0.18,0.34
+windhoek_b1_797_km,joining roads,2.99,0.69,6.68
+windhoek_b1_797_km,police posts,0.12,0.07,0.37
+windhoek_b1_797_km,roadside activity,0.71,-0.81,1.72
+windhoek_b1_797_km,signals and crossings,5.75,3.13,8.16
+windhoek_b1_797_km,speed humps (assumed),4.84,0.44,9.82
+windhoek_b1_797_km,town speed limit,-3.62,-11.08,-0.22
+windhoek_b1_797_km,weighbridge,0.0,0.0,0.0
+windhoek_b2_walvis_bay,curves,-0.02,-0.42,0.01
+windhoek_b2_walvis_bay,hills (trucks),0.13,-0.23,0.38
+windhoek_b2_walvis_bay,joining roads,3.4,1.56,8.36
+windhoek_b2_walvis_bay,police posts,0.44,0.26,1.1
+windhoek_b2_walvis_bay,roadside activity,0.35,-0.7,2.25
+windhoek_b2_walvis_bay,signals and crossings,1.08,0.59,1.7
+windhoek_b2_walvis_bay,speed humps (assumed),2.7,0.25,5.36
+windhoek_b2_walvis_bay,town speed limit,-1.12,-3.75,-0.16
+windhoek_b2_walvis_bay,weighbridge,1.07,0.82,2.16
+windhoek_b6_buitepos,curves,0.04,-0.16,0.07
+windhoek_b6_buitepos,hills (trucks),-0.09,-0.46,0.42
+windhoek_b6_buitepos,joining roads,3.15,1.22,7.88
+windhoek_b6_buitepos,police posts,0.21,0.12,0.53
+windhoek_b6_buitepos,roadside activity,0.05,-1.97,1.19
+windhoek_b6_buitepos,signals and crossings,3.19,1.72,4.42
+windhoek_b6_buitepos,speed humps (assumed),2.92,0.27,5.72
+windhoek_b6_buitepos,town speed limit,-1.3,-5.07,-0.18
+windhoek_b6_buitepos,weighbridge,1.06,0.82,2.16
+windhoek_c26_194_km,curves,0.03,-1.12,0.13
+windhoek_c26_194_km,hills (trucks),1.06,0.18,1.84
+windhoek_c26_194_km,joining roads,1.82,-0.88,5.23
+windhoek_c26_194_km,police posts,0.14,0.08,0.41
+windhoek_c26_194_km,roadside activity,-0.48,-3.91,0.38
+windhoek_c26_194_km,signals and crossings,9.73,5.39,13.34
+windhoek_c26_194_km,speed humps (assumed),3.26,0.27,6.13
+windhoek_c26_194_km,town speed limit,-1.26,-7.03,-0.17
+windhoek_c26_194_km,weighbridge,1.1,0.85,2.18
+windhoek_c28_swakopmund,curves,0.29,-0.03,0.6
+windhoek_c28_swakopmund,hills (trucks),1.51,0.32,2.8
+windhoek_c28_swakopmund,joining roads,1.48,0.6,3.75
+windhoek_c28_swakopmund,police posts,0.0,0.0,0.0
+windhoek_c28_swakopmund,roadside activity,0.46,-0.26,1.06
+windhoek_c28_swakopmund,signals and crossings,1.35,0.76,1.94
+windhoek_c28_swakopmund,speed humps (assumed),0.73,0.06,1.38
+windhoek_c28_swakopmund,town speed limit,-0.3,-1.34,-0.06
+windhoek_c28_swakopmund,weighbridge,0.0,0.0,0.0
