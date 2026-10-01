@@ -81,6 +81,42 @@ if ONLY:
 HUB_DIR = os.path.join(DATA, "arteries")
 
 
+def build_graph(R):
+    """Road graph on junctions and way ends only (shared vertices and ends become nodes); each edge
+    keeps its vertices as a small float32 array for the geometry. Far fewer nodes than one per
+    vertex, which keeps large countries (South Africa) within a laptop's memory."""
+    lines = [np.round(np.asarray(g.coords)[:, :2], 1) for g in R.geometry]
+    refs = [r if isinstance(r, str) else None for r in R.ref]
+    allxy = np.concatenate(lines)
+    _, inv, cnt = np.unique(allxy, axis=0, return_inverse=True, return_counts=True)
+    shared = cnt[inv.ravel()] > 1
+    del allxy, inv, cnt
+    starts = np.cumsum([0] + [len(ln) for ln in lines])
+    G = nx.Graph()
+    for i, xy in enumerate(lines):
+        nm = shared[starts[i]:starts[i + 1]].copy()
+        nm[0] = nm[-1] = True
+        idx = np.flatnonzero(nm)
+        cum = np.r_[0, np.cumsum(np.hypot(*np.diff(xy, axis=0).T))]
+        for a, b in zip(idx[:-1], idx[1:]):
+            u, v = (float(xy[a, 0]), float(xy[a, 1])), (float(xy[b, 0]), float(xy[b, 1]))
+            w = float(cum[b] - cum[a])
+            if u == v or (G.has_edge(u, v) and G[u][v]["w"] <= w):
+                continue
+            G.add_edge(u, v, w=w, ref=refs[i], start=u, xy=xy[a:b + 1].astype(np.float32))
+    return G
+
+
+def path_coords(G, path):
+    """The full vertex sequence along a path of graph nodes."""
+    out = [path[0]]
+    for a, b in zip(path[:-1], path[1:]):
+        e = G[a][b]
+        xy = e["xy"] if e["start"] == a else e["xy"][::-1]
+        out += [(float(x), float(y)) for x, y in xy[1:]]
+    return out
+
+
 def write(out_json, layers, json_path, gpkg):
     json.dump(out_json, open(json_path, "w"), indent=1)
     if os.path.exists(gpkg):
@@ -126,11 +162,7 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
     roads, places = cache[extract]
     border = countries[countries.ADMIN == admin].to_crs(aeqd).geometry.union_all()
     R = roads.to_crs(aeqd).explode(index_parts=False)
-    G = nx.Graph()
-    for w in R.itertuples():
-        xy = [(round(x, 1), round(y, 1)) for x, y in w.geometry.coords]
-        for a, b in zip(xy[:-1], xy[1:]):
-            G.add_edge(a, b, w=float(np.hypot(b[0] - a[0], b[1] - a[1])), ref=w.ref if isinstance(w.ref, str) else None)
+    G = build_graph(R)
     nodes = np.array([n for n in G.nodes])
     d0 = np.hypot(nodes[:, 0], nodes[:, 1])
     src = [(tuple(n), float(d)) for n, d in zip(nodes[d0 < SRC_KM * 1000], d0[d0 < SRC_KM * 1000])]
@@ -152,13 +184,20 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
         # follow route r; other roads only bridge untagged gaps, at GAP_PENALTY (weights set on the fly)
         wfun = lambda u, v, e, r=r: e["w"] if r in e["refs"] else e["w"] * GAP_PENALTY  # noqa: E731
         H = G
-        dist, paths = nx.single_source_dijkstra(H, "SRC", weight=wfun, cutoff=6e6)
+        # predecessors only: storing every node's full path ran to 30 GB on South Africa
+        pred, dist = nx.dijkstra_predecessor_and_distance(H, "SRC", weight=wfun, cutoff=6e6)
+
+        def path_to(n, pred=pred):
+            p = [n]
+            while p[-1] != "SRC":
+                p.append(pred[p[-1]][0])
+            return p[::-1]
         on_nodes = {n for u, v, e in H.edges(data=True) if r in e["refs"] for n in (u, v)}
         ends = [n for n in on_nodes if n in dist and np.hypot(*n) > RING_KM * 1000]
         # branches: group ends by where their path crosses 30 km from the centre
         branch = {}
         for n in ends:
-            pth = paths[n]
+            pth = path_to(n)
             k = next((p for p in pth[1:] if np.hypot(*p) > 30000), pth[-1])
             branch.setdefault(k, []).append(n)
         heads = []
@@ -168,17 +207,18 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
                 continue
             heads = [(h, hf) for h, hf in heads if not (np.hypot(k[0] - h[0], k[1] - h[1]) < 5000)] + [(k, far)]
         for _, far in heads:
-            path = [p for p in paths[far] if p != "SRC"]
+            path = [p for p in path_to(far) if p != "SRC"]
             on_len = sum(H[a][b]["w"] for a, b in zip(path[:-1], path[1:]) if r in H[a][b]["refs"])
             tot = sum(H[a][b]["w"] for a, b in zip(path[:-1], path[1:]))
             if tot == 0 or on_len / tot < 0.7:
                 continue   # mostly on other roads: not this route
-            line = LineString(path)
-            if not border.contains(Point(path[-1])):   # cut where the route first leaves the country
-                inside = [border.contains(Point(p)) for p in path]
-                kk = inside.index(False) if False in inside else len(path)
+            coords = path_coords(H, path)
+            line = LineString(coords)
+            if not border.contains(Point(coords[-1])):   # cut where the route first leaves the country
+                inside = [border.contains(Point(p)) for p in coords]
+                kk = inside.index(False) if False in inside else len(coords)
                 if kk >= 2:
-                    line = LineString(path[:kk])
+                    line = LineString(coords[:kk])
             full_km = line.length / 1000
             if full_km < MIN_KM:
                 continue
@@ -206,12 +246,13 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
         except nx.NetworkXNoPath:
             print(f"{hub}: no road path to {ptoward}", flush=True)
             continue
-        line = LineString(path)
-        if not border.contains(Point(path[-1])):
-            inside = [border.contains(Point(p)) for p in path]
-            kk = inside.index(False) if False in inside else len(path)
+        coords = path_coords(G, path)
+        line = LineString(coords)
+        if not border.contains(Point(coords[-1])):
+            inside = [border.contains(Point(p)) for p in coords]
+            kk = inside.index(False) if False in inside else len(coords)
             if kk >= 2:
-                line = LineString(path[:kk])
+                line = LineString(coords[:kk])
         pinned.append(dict(hub=hub, region=region, country=admin, ref=pref, toward=ptoward,
                            full_km=round(line.length / 1000, 1), km=round(line.length / 1000, 1), trade=True, line=line))
     at60 = lambda f: f["line"].interpolate(min(60000, f["line"].length))  # noqa: E731
