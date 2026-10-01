@@ -4,8 +4,11 @@ kampala_malaba,97.5,99.5,Buwanga B,0.54,12.26,roadside settlement,weighbridge 10
 kampala_malaba,174.0,176.0,Namutere,0.85,10.83,open road,weighbridge 10.0; signals and crossings 0.8; speed humps (assumed) 0.3,11.68,3,33.96656168097715,0.5246504005686957
 kampala_elegu,59.5,61.5,Kizito,0.66,10.8,roadside settlement,weighbridge 10.0; roadside activity 0.5; speed humps (assumed) 0.3,11.46,4,32.48658400819858,0.8549235222912183
 kampala_elegu,429.0,430.91,Bibia West Lc1,1.31,3.98,roadside settlement,police posts 3.5; roadside activity 0.9; speed humps (assumed) 0.3,5.29,5,32.07099732278135,3.5666310463176
-kampala_katuna,98.0,100.0,Magezi Cell,1.6,11.91,town,weighbridge 10.0; speed humps (assumed) 1.3; roadside activity 0.4,13.51,6,31.87730162220144,-0.14554822568992992
+kampala_katuna,98.0,100.0,Magezi Cell,1.45,11.71,town,weighbridge 10.0; speed humps (assumed) 1.0; roadside activity 0.7,13.16,6,31.87730162220144,-0.14554822568992992
 kampala_katuna,256.0,258.0,Rwebihuro,0.19,10.28,open road,weighbridge 10.0; roadside activity 0.3; joining roads 0.2,10.469999999999999,7,30.698220912082025,-0.5695293416075603
 kampala_hoima,6.0,8.0,Ocheng B,1.82,4.01,town,police posts 2.3; speed humps (assumed) 1.0; roadside activity 0.6,5.83,8,32.51562593144927,0.385283170767096
 kampala_hoima,192.0,194.0,Hospital Cell,1.9,2.82,town,speed humps (assumed) 1.3; police posts 1.2; town speed limit 0.7,4.72,9,31.359758585634005,1.4263150562908522
 kampala_hoima,190.0,192.0,Bwikya Cell,1.87,1.9,town,speed humps (assumed) 1.3; town speed limit 0.6; signals and crossings 0.5,3.77,10,31.374701700628446,1.4194313382776127
+kampala_bwera,9.0,11.0,Buloba Bunwa Kapeeka,1.58,3.66,roadside settlement,police posts 2.3; roadside activity 1.2; speed humps (assumed) 0.7,5.24,11,32.44461404285888,0.3205294800910124
+kampala_bwera,416.0,417.92,Mpondwe,1.08,2.92,roadside settlement,police posts 2.3; roadside activity 0.9; joining roads 0.3,4.0,12,29.72573419251662,0.04047287273652638
+kampala_bwera,282.5,284.5,Fort Portal,1.85,2.1,town,speed humps (assumed) 1.3; signals and crossings 0.5; town speed limit 0.4,3.95,13,30.27493190233737,0.6532584290303023

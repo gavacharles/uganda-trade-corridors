@@ -1,4 +1,149 @@
 corridor,km_start,place,road_type,schools_300m,people_300m,truck_kmh
+kampala_bwera,17.5,Nalya Nansesa,roadside settlement,1,177.0,55.9
+kampala_bwera,26.0,Muduuma,roadside settlement,1,241.0,51.0
+kampala_bwera,26.5,Muduuma,roadside settlement,1,330.0,53.4
+kampala_bwera,27.5,Muduuma,roadside settlement,1,240.0,54.4
+kampala_bwera,28.0,Muduuma,roadside settlement,3,315.0,53.0
+kampala_bwera,32.0,Jezza,roadside settlement,1,405.0,51.3
+kampala_bwera,34.5,Buwalula A,roadside settlement,1,205.0,66.9
+kampala_bwera,35.5,Kiwawu,roadside settlement,1,247.0,58.6
+kampala_bwera,37.5,Ssese,open road,1,24.0,68.3
+kampala_bwera,39.0,Kikonge,roadside settlement,2,310.0,57.6
+kampala_bwera,40.5,Kyengeza,roadside settlement,2,235.0,64.5
+kampala_bwera,41.5,Kyengeza,roadside settlement,3,352.0,54.1
+kampala_bwera,42.5,Zigoti East,roadside settlement,4,305.0,58.1
+kampala_bwera,44.5,Nakaseta,roadside settlement,1,150.0,59.7
+kampala_bwera,45.0,Nakaseta,roadside settlement,2,295.0,51.9
+kampala_bwera,47.0,Nakitolo (ttanda),roadside settlement,1,149.0,58.5
+kampala_bwera,48.0,Nakanyenya,roadside settlement,1,203.0,56.5
+kampala_bwera,48.5,Nakanyenya,roadside settlement,1,163.0,59.0
+kampala_bwera,51.0,Ttamu A,roadside settlement,2,310.0,52.4
+kampala_bwera,51.5,Tamu,roadside settlement,2,280.0,53.3
+kampala_bwera,54.5,Kitinkola B,roadside settlement,1,485.0,51.5
+kampala_bwera,59.5,Buswa-bulongo,roadside settlement,1,640.0,54.1
+kampala_bwera,60.0,Kikumbi,roadside settlement,2,354.0,63.6
+kampala_bwera,67.0,Lusundo,roadside settlement,2,238.0,64.8
+kampala_bwera,68.0,Busundo-mpanga,roadside settlement,2,127.0,67.2
+kampala_bwera,71.0,Kyengeza (kigalama),roadside settlement,2,315.0,58.4
+kampala_bwera,75.5,Kiswera,roadside settlement,2,241.0,61.0
+kampala_bwera,78.5,,roadside settlement,1,210.0,61.2
+kampala_bwera,83.5,Kakungube,roadside settlement,1,336.0,50.8
+kampala_bwera,85.5,Kakungube,roadside settlement,1,206.0,56.5
+kampala_bwera,86.0,,open road,1,85.0,69.0
+kampala_bwera,90.5,Kyakatebe,roadside settlement,1,243.0,56.1
+kampala_bwera,95.0,Kasambya,roadside settlement,1,180.0,60.8
+kampala_bwera,95.5,Kasambya,roadside settlement,1,139.0,58.0
+kampala_bwera,97.0,Kisolooza A,roadside settlement,1,240.0,65.6
+kampala_bwera,97.5,Kasambya (kinoni),roadside settlement,1,271.0,57.1
+kampala_bwera,98.0,Kinyerera,roadside settlement,1,220.0,60.3
+kampala_bwera,101.0,Nasulu,roadside settlement,4,340.0,57.3
+kampala_bwera,102.5,Mpumudde (kawungera),roadside settlement,2,323.0,55.9
+kampala_bwera,103.5,Kyamusota,roadside settlement,2,294.0,54.0
+kampala_bwera,104.0,Kyamusota,roadside settlement,2,253.0,60.1
+kampala_bwera,134.5,Bakijulula,roadside settlement,3,457.0,50.7
+kampala_bwera,135.0,Bakijulula,roadside settlement,2,437.0,52.8
+kampala_bwera,138.5,Kabasojjo,roadside settlement,2,873.0,51.8
+kampala_bwera,139.0,Kabasojjo,roadside settlement,1,594.0,52.8
+kampala_bwera,139.5,Kasenyi,roadside settlement,1,383.0,58.7
+kampala_bwera,143.0,Delphi,roadside settlement,1,267.0,61.0
+kampala_bwera,144.0,Delphi,roadside settlement,2,169.0,54.3
+kampala_bwera,144.5,Delphi,roadside settlement,1,252.0,59.4
+kampala_bwera,145.0,Buwanga,roadside settlement,1,134.0,65.0
+kampala_bwera,159.5,Gwanika,roadside settlement,1,380.0,53.7
+kampala_bwera,162.5,Lwemivubo (Nabingoola),open road,1,276.0,57.3
+kampala_bwera,166.5,Lwamazzi,roadside settlement,1,247.0,65.7
+kampala_bwera,167.0,Lwamazzi,open road,1,128.0,68.5
+kampala_bwera,172.0,Butooke,roadside settlement,1,166.0,67.7
+kampala_bwera,173.0,Lunyongoli,roadside settlement,1,334.0,57.9
+kampala_bwera,175.5,Ngaija,open road,1,224.0,57.9
+kampala_bwera,179.0,Kako,roadside settlement,2,441.0,65.0
+kampala_bwera,179.5,Haisaza,roadside settlement,2,412.0,58.7
+kampala_bwera,181.0,Humura,roadside settlement,2,232.0,60.8
+kampala_bwera,181.5,Humura,roadside settlement,1,173.0,67.7
+kampala_bwera,183.0,Rwera,open road,1,52.0,70.0
+kampala_bwera,188.5,Kyatega,roadside settlement,1,250.0,61.2
+kampala_bwera,189.0,Kyatega,open road,1,155.0,68.1
+kampala_bwera,194.0,Misenyi,roadside settlement,2,390.0,65.1
+kampala_bwera,195.5,Kikyedo,roadside settlement,1,207.0,57.6
+kampala_bwera,196.0,Kikyedo,roadside settlement,1,294.0,62.9
+kampala_bwera,199.5,Kyeema,roadside settlement,1,292.0,59.7
+kampala_bwera,200.0,Kakongorano,roadside settlement,1,184.0,60.3
+kampala_bwera,205.0,Lwebali,roadside settlement,2,177.0,62.2
+kampala_bwera,224.5,Kicwamba,open road,1,120.0,66.6
+kampala_bwera,225.0,Kicwamba,open road,1,169.0,67.5
+kampala_bwera,234.0,Kyenjojo,roadside settlement,3,422.0,51.0
+kampala_bwera,234.5,Kyenjojo,roadside settlement,1,320.0,53.6
+kampala_bwera,235.0,Kyenjojo,roadside settlement,1,127.0,66.1
+kampala_bwera,241.5,Kaihura Central,roadside settlement,1,233.0,61.5
+kampala_bwera,242.5,Kaihura Central,roadside settlement,2,264.0,53.1
+kampala_bwera,245.0,Miranga,open road,1,203.0,56.8
+kampala_bwera,245.5,Miranga,roadside settlement,1,309.0,63.7
+kampala_bwera,246.0,Miranga,roadside settlement,2,194.0,62.0
+kampala_bwera,253.0,Rugombe Nyamasobya,roadside settlement,1,217.0,62.8
+kampala_bwera,255.0,Nyanjaetagera,roadside settlement,1,226.0,60.7
+kampala_bwera,255.5,Kyabagonza,roadside settlement,2,218.0,65.8
+kampala_bwera,256.0,Bukoiko,roadside settlement,1,230.0,61.9
+kampala_bwera,257.0,Kagorogoro,roadside settlement,1,216.0,58.3
+kampala_bwera,257.5,Kagorogoro,roadside settlement,1,205.0,60.0
+kampala_bwera,259.0,Kyeragira,roadside settlement,2,198.0,61.7
+kampala_bwera,259.5,Ntoroko Road,roadside settlement,2,237.0,61.4
+kampala_bwera,261.5,Kyakiroro,roadside settlement,1,135.0,61.2
+kampala_bwera,262.0,Hiima,roadside settlement,1,159.0,50.4
+kampala_bwera,269.0,Kanyankukuru,roadside settlement,1,56.0,66.7
+kampala_bwera,271.0,Kiamara C,open road,1,87.0,66.7
+kampala_bwera,271.5,Kiamara C,open road,1,63.0,65.0
+kampala_bwera,276.5,Kabegira,roadside settlement,1,243.0,57.3
+kampala_bwera,277.0,Kabegira,roadside settlement,1,289.0,52.7
+kampala_bwera,278.0,Nyabinamba,roadside settlement,2,423.0,50.8
+kampala_bwera,278.5,Kaihokwa,roadside settlement,2,421.0,53.7
+kampala_bwera,281.0,Njara C,roadside settlement,2,576.0,53.7
+kampala_bwera,281.5,Nyakabale B,roadside settlement,1,449.0,59.4
+kampala_bwera,282.0,Boma East,roadside settlement,1,422.0,60.0
+kampala_bwera,284.5,Harukooto K Se A,roadside settlement,2,504.0,50.6
+kampala_bwera,285.5,Virika,roadside settlement,6,438.0,56.5
+kampala_bwera,288.5,Karambi I,roadside settlement,1,365.0,53.0
+kampala_bwera,289.0,Karambi I,roadside settlement,2,355.0,52.8
+kampala_bwera,289.5,Nyansozi,roadside settlement,2,250.0,55.1
+kampala_bwera,290.0,Karambi Ii,roadside settlement,2,289.0,57.5
+kampala_bwera,290.5,Karambi,roadside settlement,1,267.0,54.7
+kampala_bwera,298.5,Nyakagongo,roadside settlement,2,330.0,54.4
+kampala_bwera,299.0,Nyakagongo,roadside settlement,1,295.0,54.0
+kampala_bwera,308.0,Nyakigumba,roadside settlement,1,209.0,62.8
+kampala_bwera,309.0,Busiita,roadside settlement,1,246.0,64.4
+kampala_bwera,309.5,Busiita,roadside settlement,1,164.0,65.7
+kampala_bwera,313.0,Kasaali B,roadside settlement,2,282.0,65.4
+kampala_bwera,315.0,Kibiito,roadside settlement,1,387.0,60.7
+kampala_bwera,317.0,Maligo,roadside settlement,1,288.0,61.8
+kampala_bwera,318.0,Kabale,roadside settlement,1,264.0,56.8
+kampala_bwera,321.5,Kasunganyanja,roadside settlement,1,383.0,50.6
+kampala_bwera,322.5,Kasunganyanja,roadside settlement,2,379.0,56.6
+kampala_bwera,323.0,Rweihara,roadside settlement,1,351.0,62.1
+kampala_bwera,324.5,Kaburaisoke North,roadside settlement,1,331.0,60.9
+kampala_bwera,325.0,Kaburaisoke,roadside settlement,1,349.0,56.8
+kampala_bwera,325.5,Kaburaisoke,roadside settlement,1,341.0,61.2
+kampala_bwera,326.0,Kyeibumba,roadside settlement,1,385.0,57.6
+kampala_bwera,333.0,,roadside settlement,1,113.0,64.2
+kampala_bwera,348.0,Kabukelo West,roadside settlement,1,441.0,54.6
+kampala_bwera,348.5,Kabukelo West,roadside settlement,2,374.0,57.9
+kampala_bwera,349.0,Kabukelo West,roadside settlement,1,340.0,60.2
+kampala_bwera,355.0,Nyakasanga Lower,roadside settlement,3,647.0,59.5
+kampala_bwera,356.0,Nyakasanga Lower,roadside settlement,4,1016.0,51.7
+kampala_bwera,358.5,Kilembe Quarters,roadside settlement,3,970.0,56.7
+kampala_bwera,359.0,Industrial Zone,roadside settlement,2,897.0,62.2
+kampala_bwera,359.5,Kamaiba Main,roadside settlement,1,403.0,61.0
+kampala_bwera,388.0,,open road,1,82.0,68.8
+kampala_bwera,388.5,,open road,1,18.0,68.6
+kampala_bwera,393.5,Kiburara,roadside settlement,1,261.0,64.9
+kampala_bwera,394.0,Kiburara,roadside settlement,1,317.0,65.3
+kampala_bwera,401.5,,roadside settlement,1,593.0,54.8
+kampala_bwera,402.0,,roadside settlement,1,356.0,63.8
+kampala_bwera,403.5,,open road,1,205.0,68.1
+kampala_bwera,404.0,,roadside settlement,1,256.0,63.6
+kampala_bwera,409.0,Harukungu B,roadside settlement,1,468.0,53.0
+kampala_bwera,410.0,Kyempara I,roadside settlement,1,589.0,55.2
+kampala_bwera,411.5,Kyanduli II,roadside settlement,3,597.0,53.1
+kampala_bwera,413.0,Bwera,roadside settlement,4,755.0,51.1
+kampala_bwera,413.5,Karughe,roadside settlement,2,876.0,56.8
 kampala_elegu,9.5,Kaayi,roadside settlement,1,1338.0,59.4
 kampala_elegu,26.0,,roadside settlement,2,432.0,61.0
 kampala_elegu,26.5,Bombo,roadside settlement,1,198.0,64.3
@@ -28,7 +173,7 @@ kampala_elegu,95.0,Kaleire,open road,1,110.0,68.4
 kampala_elegu,101.0,Kyaluweza,open road,1,24.0,69.6
 kampala_elegu,101.5,Kyaluweza,open road,1,57.0,69.7
 kampala_elegu,109.0,Kirembo,open road,1,124.0,69.8
-kampala_elegu,109.5,Kiwongoire,roadside settlement,1,128.0,67.8
+kampala_elegu,109.5,Kiwongoire,open road,1,128.0,67.8
 kampala_elegu,114.0,Sasira,roadside settlement,4,259.0,52.3
 kampala_elegu,114.5,Sasira,roadside settlement,5,393.0,57.7
 kampala_elegu,121.0,Namansa,roadside settlement,2,183.0,59.2
@@ -111,13 +256,13 @@ kampala_elegu,299.5,,roadside settlement,1,182.0,61.2
 kampala_elegu,300.0,Pato,roadside settlement,1,195.0,58.0
 kampala_elegu,301.5,Pato,roadside settlement,1,205.0,59.8
 kampala_elegu,302.0,Bobi,roadside settlement,1,256.0,52.9
-kampala_elegu,303.0,Bobi,roadside settlement,1,140.0,69.2
+kampala_elegu,303.0,Bobi,open road,1,140.0,69.2
 kampala_elegu,303.5,Omoro,roadside settlement,1,192.0,63.9
 kampala_elegu,304.0,Omoro,roadside settlement,1,128.0,64.7
 kampala_elegu,304.5,Omoro,roadside settlement,2,245.0,54.4
 kampala_elegu,305.0,Kalamomia,roadside settlement,1,235.0,65.8
 kampala_elegu,308.5,Palenga,roadside settlement,1,137.0,68.3
-kampala_elegu,314.0,Barogal,roadside settlement,1,80.0,66.1
+kampala_elegu,314.0,Barogal,open road,1,80.0,66.1
 kampala_elegu,314.5,Barogal,roadside settlement,1,142.0,66.5
 kampala_elegu,319.0,Koro Abili,roadside settlement,2,123.0,61.6
 kampala_elegu,320.0,Lajwatek,roadside settlement,1,199.0,58.6
@@ -153,7 +298,6 @@ kampala_elegu,361.5,Agole,roadside settlement,2,312.0,54.4
 kampala_elegu,363.5,Pabo,roadside settlement,5,208.0,64.5
 kampala_elegu,364.0,Pabo,roadside settlement,2,297.0,60.0
 kampala_elegu,370.0,Pawel Pukumu,open road,2,36.0,60.1
-kampala_elegu,370.5,Pawel Pukumu,roadside settlement,2,163.0,57.5
 kampala_elegu,373.5,Pawel,roadside settlement,2,124.0,64.6
 kampala_elegu,374.0,Pawel,roadside settlement,2,224.0,61.1
 kampala_elegu,384.5,Palukere West,roadside settlement,1,126.0,68.4
@@ -259,7 +403,7 @@ kampala_hoima,177.0,Katereiga I,roadside settlement,1,211.0,67.4
 kampala_hoima,179.0,Butema,roadside settlement,1,272.0,53.2
 kampala_hoima,179.5,Butema,roadside settlement,1,363.0,55.9
 kampala_hoima,180.0,Butema,roadside settlement,1,328.0,60.6
-kampala_hoima,180.5,Kihenda,roadside settlement,1,183.0,68.2
+kampala_hoima,180.5,Kihenda,open road,1,183.0,68.2
 kampala_hoima,182.5,Kinogozi East,open road,1,176.0,68.8
 kampala_hoima,183.0,Kinogozi East,roadside settlement,1,227.0,66.1
 kampala_hoima,183.5,Kinogozi East,roadside settlement,1,150.0,66.2
@@ -314,7 +458,7 @@ kampala_katuna,115.0,Mpugwe,roadside settlement,1,458.0,55.1
 kampala_katuna,115.5,Nsangamu,roadside settlement,1,319.0,58.7
 kampala_katuna,116.5,Kadugala,roadside settlement,2,280.0,56.3
 kampala_katuna,117.0,Kadugala,open road,2,86.0,68.8
-kampala_katuna,117.5,Kyalusowe,roadside settlement,1,180.0,67.2
+kampala_katuna,117.5,Kyalusowe,open road,1,180.0,67.2
 kampala_katuna,128.0,Old Kumbu,roadside settlement,3,781.0,55.7
 kampala_katuna,130.5,Kyabakuza Trading Centre,roadside settlement,1,199.0,65.7
 kampala_katuna,132.0,Kyabakuza B,roadside settlement,1,508.0,53.7
@@ -381,7 +525,7 @@ kampala_katuna,276.5,,roadside settlement,1,141.0,68.3
 kampala_katuna,280.5,Rugando,roadside settlement,2,117.0,63.8
 kampala_katuna,281.0,Rugando,roadside settlement,2,187.0,57.0
 kampala_katuna,281.5,Rugando,roadside settlement,1,189.0,65.2
-kampala_katuna,282.0,Rugando,roadside settlement,1,124.0,67.7
+kampala_katuna,282.0,Rugando,open road,1,124.0,67.7
 kampala_katuna,282.5,Rugando,roadside settlement,2,150.0,60.2
 kampala_katuna,283.0,Rugando,roadside settlement,3,202.0,55.6
 kampala_katuna,283.5,,roadside settlement,2,167.0,62.1
@@ -475,7 +619,6 @@ kampala_malaba,73.0,Triangle,roadside settlement,2,570.0,60.0
 kampala_malaba,75.5,Nalufenya B,roadside settlement,1,773.0,61.6
 kampala_malaba,77.0,Mvule,roadside settlement,1,686.0,52.9
 kampala_malaba,77.5,Mvule,roadside settlement,1,923.0,59.4
-kampala_malaba,78.5,Railways,roadside settlement,3,1044.0,54.5
 kampala_malaba,79.0,Railways,roadside settlement,7,801.0,59.1
 kampala_malaba,80.5,Masese III,roadside settlement,1,720.0,55.5
 kampala_malaba,86.5,Mwiri Primary LC I,roadside settlement,2,667.0,64.7

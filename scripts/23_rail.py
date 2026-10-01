@@ -292,7 +292,8 @@ ax.scatter(pp.lon, pp.lat, c=v, cmap="Oranges", s=9, vmin=0, vmax=2, zorder=4, l
 cols = {"Eastern": "#2a78d6", "Southwestern": "#1aa878", "Northern direct": "#e8643a", "Albertine": "#e89c10", "Western": "#8a5cc7"}
 for rw in GA.itertuples():
     ax.plot(*rw.geometry.xy, color=cols[rw.line], linewidth=2.2, alpha=0.85, zorder=5, label=f"{rw.line} (screening alignment)")
-for n in ("Kampala", "Jinja", "Tororo", "Malaba", "Masaka", "Mbarara", "Kabale", "Gulu", "Karuma", "Elegu", "Hoima", "Luweero"):
+for n in ("Kampala", "Jinja", "Tororo", "Malaba", "Masaka", "Mbarara", "Kabale", "Gulu", "Karuma", "Elegu", "Hoima", "Luweero",
+          "Mubende", "Fort Portal", "Kasese", "Bwera"):
     ax.plot(*TOWNS[n], "o", color="white", markeredgecolor=INK, markersize=4, zorder=6)
     ax.text(TOWNS[n][0] + 0.05, TOWNS[n][1] + 0.03, n, fontsize=8.5, color=INK, zorder=7)
 ax.plot([], [], color=INK, linewidth=1.4, label="metre-gauge railway in use (OSM)")

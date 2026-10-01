@@ -2,7 +2,8 @@
 
     python presentation/build_deck.py
 
-Needs python-pptx and Pillow. Numbers on the new-results slides are read from outputs/.
+Needs python-pptx and Pillow. Numbers on the slides are read from outputs/ and scripts/config.py,
+so the deck follows the corridors in config.CORRIDORS; the few fixed figures are noted in place.
 """
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -11,11 +12,14 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.chart.data import CategoryChartData
 from pptx.enum.chart import XL_CHART_TYPE, XL_LEGEND_POSITION, XL_LABEL_POSITION
-import os, tempfile
+import os, sys, tempfile
 import pandas as pd
 from PIL import Image
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import config as C  # noqa: E402
+
 FIG = os.path.join(ROOT, "figures")
 OUTP = os.path.join(ROOT, "outputs")
 OUT = os.path.join(ROOT, "presentation", "highways_high_streets.pptx")
@@ -27,26 +31,25 @@ def crop(src, box, name):
 
 
 crop("m01_study_area.png", (160, 150, 1375, 1530), "m01.png")
-crop("m01_study_area.png", (160, 340, 1375, 1530), "m01_title.png")
+crop("m01_study_area.png", (160, 370, 1375, 1530), "m01_title.png")
 crop("m02_bottlenecks.png", (140, 140, 1590, 1545), "m02.png")
-crop("g04_time_map.png", (0, 120, 1713, 1005), "g04.png")
+crop("g04_time_map.png", (0, 120, 1713, 999), "g04.png")
 crop("f12_rail_map.png", (0, 60, 1193, 1318), "f12.png")
-_im = Image.open(os.path.join(FIG, "m04_growth.png"))
-_f = 1.0575
-_panels = [_im.crop((int(x0 * _f), int(180 * _f), int((x0 + 472) * _f), int(705 * _f))) for x0 in (14, 514, 1014, 1514)]
-_w, _h = _panels[0].size
-_g = Image.new("RGB", (2 * _w + 20, 2 * _h + 20), (255, 255, 255))
-for _i, _p in enumerate(_panels):
-    _g.paste(_p, ((_i % 2) * (_w + 20), (_i // 2) * (_h + 20)))
-_g.save(os.path.join(S, "m04_grid.png"))
-SC = pd.read_csv(os.path.join(OUTP, "scenarios.csv"))
-SB = pd.read_csv(os.path.join(OUTP, "safety_by_type.csv"))
-REL = pd.read_csv(os.path.join(OUTP, "reliability.csv"))
-COST = pd.read_csv(os.path.join(OUTP, "costs.csv"))
-RE = pd.read_csv(os.path.join(OUTP, "rail_economics.csv"))
-RP = pd.read_csv(os.path.join(OUTP, "rail_proximity.csv"))
-CORR = ["kampala_malaba", "kampala_elegu", "kampala_katuna", "kampala_hoima"]
-CLAB = ["Malaba (A1)", "Elegu (A6)", "Katuna (A2)", "Hoima (A9)"]
+_m4 = Image.open(os.path.join(FIG, "m04_growth.png"))
+crop("m04_growth.png", (0, 180, _m4.width, _m4.height - 80), "m04.png")
+
+R = lambda f: pd.read_csv(os.path.join(OUTP, f))  # noqa: E731
+SC, SB, REL, COST = R("scenarios.csv"), R("safety_by_type.csv"), R("reliability.csv"), R("costs.csv")
+RE, RP, TYP, VAL = R("rail_economics.csv"), R("rail_proximity.csv"), R("typology_summary.csv"), R("validation.csv")
+CAUSE, TOT, HOT, GROW = R("travel_time_causes.csv"), R("travel_time_totals.csv"), R("hotspots_mapped.csv"), R("growth_summary.csv")
+STAB, GAP, MIX, FUEL = R("rank_stability.csv"), R("transit_gap.csv"), R("transit_stop_mix.csv"), R("fuel_co2.csv")
+BS, BSM, FLD = R("black_spots_test.csv"), R("black_spots_matched.csv"), R("flood_events_check.csv")
+CORR = list(C.CORRIDORS)
+CLAB = [f"{C.CORRIDORS[c]['short']} ({C.CORRIDORS[c]['ref']})" for c in CORR]
+N = len(CORR)
+NW = ["no", "one", "two", "three", "four", "five", "six", "seven"][N]
+KM = TYP.groupby("corridor").km.sum()
+BUILDINGS_M = 1.54   # data/buildings.parquet: 1,542,424 footprints within 1 km (03_download_buildings.py)
 
 DARK = RGBColor(0x17, 0x25, 0x2A)
 LAT = RGBColor(0xC4, 0x53, 0x2D)      # laterite red: delay / growth
@@ -57,7 +60,16 @@ MUTED = RGBColor(0x5B, 0x67, 0x70)
 TINT = RGBColor(0xEE, 0xF2, 0xF0)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 PALE = RGBColor(0xB8, 0xC7, 0xC4)
+CCOL = {"kampala_malaba": RGBColor(0x2A, 0x78, 0xD6), "kampala_elegu": RGBColor(0xE8, 0x64, 0x3A),
+        "kampala_katuna": RGBColor(0x1A, 0xA8, 0x78), "kampala_hoima": RGBColor(0xE8, 0x9C, 0x10),
+        "kampala_bwera": RGBColor(0x8A, 0x5C, 0xC7)}
 HEAD, BODY = "Cambria", "Calibri"
+
+
+def rng(vals, fmt="{:.0f}", suffix=""):
+    lo, hi = min(vals), max(vals)
+    return f"{fmt.format(lo)}{suffix}" if round(lo) == round(hi) else f"{fmt.format(lo)}–{fmt.format(hi)}{suffix}"
+
 
 prs = Presentation()
 prs.slide_width, prs.slide_height = Inches(13.333), Inches(7.5)
@@ -157,49 +169,55 @@ def style_chart(chart, colors, legend=True, size=12):
     ca.tick_labels.font.size = Pt(size)
 
 
+share = TYP.pivot(index="corridor", columns="road_type", values="share").reindex(CORR)
+gall = GROW[GROW.road_type == "all"].set_index("corridor").reindex(CORR)
+
 # ---------------------------------------------------------------- 1 title
 s = prs.slides.add_slide(BLANK); bg(s, DARK)
-picture(s, f"{S}/m01_title.png", 6.45, 0.45, h=6.6)
+picture(s, f"{S}/m01_title.png", 6.35, 0.5, h=6.5)
 text(s, 0.7, 1.7, 5.4, 0.4, "UGANDA TRADE CORRIDORS · OPEN-DATA STUDY", size=13, color=SAND, bold=True)
 text(s, 0.7, 2.2, 5.4, 2.4, "Highways that became high streets", size=48, font=HEAD, bold=True, color=WHITE)
 text(s, 0.7, 4.7, 5.4, 1.2,
-     "What slows Uganda's main trade corridors, what each cause costs in travel time, "
+     "What slows Uganda's main trade corridors, what each cause costs in time, fuel and safety, "
      "and how fast the roadside is filling in", size=18, color=PALE)
 text(s, 0.7, 6.3, 7.4, 0.4, "Charles Gava", size=16, color=WHITE, bold=True)
 s.notes_slide.notes_text_frame.text = (
-    "This study looks at the four main roads out of Kampala. They were built to carry freight to the borders, "
+    f"This study looks at the {NW} main roads out of Kampala. They were built to carry freight to the borders, "
     "but along much of their length they now also serve as the main street of villages and towns.")
 
 # ---------------------------------------------------------------- 2 background: corridors
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Four roads carry Uganda's trade", "A landlocked economy depends on a few paved routes to the sea and to its neighbours")
-rows = [
-    ("A1", "Kampala → Jinja → Malaba", "216 km", "Kenya border; Northern Corridor to Mombasa", RGBColor(0x2A, 0x78, 0xD6)),
-    ("A6", "Kampala → Gulu → Elegu", "431 km", "South Sudan border; Juba and the Gulu logistics hub", RGBColor(0xE8, 0x64, 0x3A)),
-    ("A2", "Kampala → Masaka → Mbarara → Katuna", "426 km", "Rwanda border; Kigali and the Central Corridor", RGBColor(0x1A, 0xA8, 0x78)),
-    ("A9", "Kampala → Hoima", "194 km", "Albertine oil region", RGBColor(0xE8, 0x9C, 0x10)),
-]
-y = 2.0
-for code, route, km, to, col in rows:
-    box(s, 0.6, y, 7.2, 1.05, TINT)
-    circle_num(s, 0.85, y + 0.2, 0.65, code, fill=col, size=15)
-    text(s, 1.75, y + 0.16, 4.6, 0.4, route, size=17, bold=True)
-    text(s, 1.75, y + 0.55, 5.9, 0.4, to, size=14, color=MUTED)
-    text(s, 6.3, y + 0.16, 1.3, 0.4, km, size=17, bold=True, color=INK, align=PP_ALIGN.RIGHT)
-    y += 1.2
+title(s, f"{NW.capitalize()} roads carry Uganda's trade",
+      "A landlocked economy depends on a few paved routes to the sea and to its neighbours")
+LEADS = {"kampala_malaba": "Kenya border; Northern Corridor to Mombasa",
+         "kampala_elegu": "South Sudan border; Juba and the Gulu logistics hub",
+         "kampala_katuna": "Rwanda border; Kigali and the Central Corridor",
+         "kampala_hoima": "Albertine oil region",
+         "kampala_bwera": "DR Congo border at Mpondwe; Kasese and North Kivu"}
+rh = 5.0 / N
+y = 1.95
+for c in CORR:
+    cfg = C.CORRIDORS[c]
+    route = cfg["label"].split(",")[0].split(" (")[0]
+    box(s, 0.6, y, 7.2, rh - 0.12, TINT)
+    circle_num(s, 0.8, y + (rh - 0.12 - 0.6) / 2, 0.6, cfg["ref"], fill=CCOL[c], size=14)
+    text(s, 1.65, y + 0.1, 4.9, 0.4, route, size=15, bold=True)
+    text(s, 1.65, y + 0.45, 5.9, 0.4, LEADS.get(c, ""), size=12.5, color=MUTED)
+    text(s, 6.3, y + 0.1, 1.3, 0.4, f"{KM[c]:.0f} km", size=15, bold=True, align=PP_ALIGN.RIGHT)
+    y += rh
 picture(s, f"{S}/m01.png", 8.3, 1.8, h=5.1)
 source(s, "Map: corridor centrelines built from OpenStreetMap routes; squares are weighbridges, bars are border crossings.")
 s.notes_slide.notes_text_frame.text = (
-    "Together the four corridors cover about 1,270 km. Three reach a border; the Hoima road serves the oil region. "
-    "Almost all of Uganda's imports and exports, and transit freight to South Sudan, Rwanda and DR Congo, use them.")
+    f"Together the {NW} corridors cover about {KM.sum():,.0f} km. Four reach a border; the Hoima road serves the oil region. "
+    "The Bwera road (A5) was added after the regional search found it as Kampala's fifth national route out of the city.")
 
 # ---------------------------------------------------------------- 3 background: high streets
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "The same roads are now village high streets",
       "Markets, shops, schools, taxi stops and junctions have gathered along the tarmac")
-stats = [("58–76%", "of each corridor's length is\nroadside settlement", SAND),
-         ("17–34%", "is still open road", GRN),
-         ("1.25 M", "building footprints within\n1 km of the four roads", LAT)]
+stats = [(rng(share["roadside settlement"] * 100, suffix="%"), "of each corridor's length is\nroadside settlement", SAND),
+         (rng(share["open road"] * 100, suffix="%"), "is still open road", GRN),
+         (f"{BUILDINGS_M:.2f} M", f"building footprints within\n1 km of the {NW} roads", LAT)]
 x = 0.6
 for big, lab, col in stats:
     box(s, x, 2.1, 3.85, 2.3, TINT)
@@ -214,8 +232,8 @@ text(s, 0.6, 4.85, 12.1, 1.8, [
       {"color": LAT, "bold": True})],
 ], size=18, space_after=10)
 s.notes_slide.notes_text_frame.text = (
-    "Shares come from clustering 500 m pieces of road into three types. Most of each corridor is now roadside settlement; "
-    "towns are 8–22% of length. Building counts are Google Open Buildings v3.")
+    "Shares come from clustering 500 m pieces of road into three types. Towns are "
+    f"{rng(share['town'] * 100, suffix='%')} of length. Building counts are Google Open Buildings v3.")
 
 # ---------------------------------------------------------------- 4 research problem
 s = prs.slides.add_slide(BLANK); bg(s, DARK)
@@ -228,7 +246,7 @@ text(s, 0.6, 1.45, 6.0, 3.6, [
 ], size=17, color=PALE, space_after=14)
 qs = [("1", "Where on each road is travel slowed, and by which causes?"),
       ("2", "How much has the roadside been built up since 2000?"),
-      ("3", "Which stretches, and which fixes, would save the most time?")]
+      ("3", "Which stretches, and which fixes, would save the most time, fuel and risk?")]
 y = 1.6
 for n, q in qs:
     box(s, 7.1, y, 5.6, 1.35, RGBColor(0x22, 0x36, 0x3C))
@@ -237,23 +255,20 @@ for n, q in qs:
     y += 1.6
 text(s, 0.6, 5.6, 6.0, 1.0,
      [[("Approach: ", {"bold": True, "color": SAND}),
-       ("don't watch the traffic; measure the causes of delay from open data, cost them in minutes, "
-        "and check the result against published trip times.", {})]],
+       ("measure the causes of delay from open data, cost them in minutes, fuel and exposure, "
+        "and check the result against published trip, transit and crash records.", {})]],
      size=16, color=PALE)
-s.notes_slide.notes_text_frame.text = (
-    "The framing is deliberate: without usable traffic data, the study measures causes rather than observing speeds. "
-    "This matches the approach of the companion accessibility study.")
 
 # ---------------------------------------------------------------- 5 data
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Data: open sources only", "Every cause is measured from public data; nothing comes from traffic feeds, project records or surveys")
+title(s, "Data: open sources only", "Every cause is measured from public data; published records are used only to check the model")
 cards = [
     ("Roads & controls", "OpenStreetMap", "Routes, joining roads, signals, crossings, humps, police posts, weighbridges, water"),
-    ("Buildings", "Google Open Buildings v3", "1.25 M footprints within 1 km; roadside activity within 100 m and 300 m"),
-    ("Growth", "GHSL built-up surface", "2000–2020 observed, 2025–2030 projected, within 300 m of the road"),
-    ("Terrain", "Copernicus GLO-30 DEM", "Climb in each direction and average grade, per 500 m"),
-    ("Rain", "CHIRPS 2006–2025", "Days a year with ≥ 10 mm of rain"),
-    ("Validation", "Routing estimates, bus timetables", "Independent trip times to check the model against"),
+    ("Buildings & growth", "Open Buildings v3 · GHSL", f"{BUILDINGS_M:.2f} M footprints within 1 km; built-up surface 2000–2020"),
+    ("Terrain & rain", "Copernicus GLO-30 · CHIRPS", "Climb and grade per 500 m; daily rain 2006–2025"),
+    ("Trip times", "Rome2rio, bus timetables", "Independent car trip times to check the model"),
+    ("Trucks", "NCTTCA Observatory 2025–26", "GPS and RECTS transit times, stop reasons, border times, station truck counts"),
+    ("Crashes", "Uganda Police traffic officers", "About 60 named crash black spots on the corridors (2018)"),
 ]
 for i, (h, src, d) in enumerate(cards):
     cx = 0.6 + (i % 3) * 4.1
@@ -262,18 +277,18 @@ for i, (h, src, d) in enumerate(cards):
     text(s, cx + 0.3, cy + 0.25, 3.3, 0.4, h, size=20, bold=True, font=HEAD)
     text(s, cx + 0.3, cy + 0.72, 3.3, 0.35, src, size=14, bold=True, color=LAT)
     text(s, cx + 0.3, cy + 1.1, 3.3, 1.0, d, size=14, color=MUTED)
-source(s, "Also: Sentinel-2 imagery for an experimental moving-truck index (not used in the model); NCTTCA Transport Observatory 2022 roughness data as context.")
+source(s, "Also: Sentinel-2 imagery for an experimental moving-truck index (not used in the model); NCTTCA GHG Emissions Baseline 2025 for truck counts.")
 
 # ---------------------------------------------------------------- 6 method flow
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Methodology", "From road geometry to minutes lost, with uncertainty carried through every step")
+title(s, "Methodology", "From road geometry to minutes, litres and exposure, with uncertainty carried through every step")
 steps = [
     ("Cut", "Each corridor into 500 m pieces, every measurable cause attached"),
     ("Classify", "K-means on roadside measures: open road, roadside settlement, town"),
     ("Model", "Car and loaded-truck speed per piece, reduced by each cause; fixed stops added"),
-    ("Attribute", "Switch one cause off at a time to get the minutes it adds"),
+    ("Attribute", "Switch one cause off at a time to get the minutes and litres it adds"),
     ("Simulate", "1,000 Monte Carlo draws over every assumption for 5–95% ranges"),
-    ("Validate", "Check against trip times; map the 10 worst 2 km on each road"),
+    ("Check", "Trip times, truck transit records, weighbridge stops, crash black spots, floods"),
 ]
 w, gap = 1.9, 0.14
 for i, (h, d) in enumerate(steps):
@@ -289,45 +304,52 @@ text(s, 0.95, 5.85, 11.4, 0.8, [
       "speed humps · police posts · weighbridges · rain (wet-day scenario)", {})]],
     size=15, color=WHITE, anchor=MSO_ANCHOR.MIDDLE)
 s.notes_slide.notes_text_frame.text = (
-    "Each piece starts at an open-road speed, reduced by roadside activity, joining roads, a town limit, curves, and for "
-    "trucks, hills. Fixed delays are added for signals, crossings, assumed humps in towns, police posts and weighbridges. "
-    "All assumptions and their ranges are at the top of 10_travel_time.py. Congestion is not modelled: results describe light traffic.")
+    "All assumptions and their ranges are at the top of scripts/travel_model.py. Congestion is not modelled: results "
+    "describe light traffic. Fuel uses a physical model on the same speed profile (scripts/26_fuel_co2.py).")
 
 # ---------------------------------------------------------------- 7 validation
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "The model reproduces independent trip times", "Car travel time in light traffic, minutes: model vs Rome2rio routing estimate")
+est = VAL[VAL.kind == "estimate"].copy()
+est["o"] = est.corridor.map(CORR.index)
+est = est.sort_values("o")
+est["route"] = [src.split("estimate, ")[1] if "estimate, " in src else f"Kampala–{C.CORRIDORS[c]['short']}"
+                for src, c in zip(est.source, est.corridor)]
+est["diff"] = (est.model_min - est.reported_min) / est.reported_min
 cd = CategoryChartData()
-cd.categories = ["Kampala–Gulu", "Kampala–Kabale", "Kampala–Hoima", "Kampala–Njeru"]
-cd.add_series("Model", (266, 344, 164, 87))
-cd.add_series("Routing estimate", (286, 345, 172, 66))
+cd.categories = list(est.route)
+cd.add_series("Model", [float(v) for v in est.model_min])
+cd.add_series("Routing estimate", [float(v) for v in est.reported_min])
 gf = s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, Inches(0.5), Inches(1.9), Inches(7.6), Inches(5.0), cd)
 ch = gf.chart
-style_chart(ch, [LAT, PALE])
+style_chart(ch, [LAT, PALE], size=11)
 pl = ch.plots[0]; pl.gap_width = 60; pl.overlap = -5
 pl.has_data_labels = True
-pl.data_labels.font.size = Pt(13); pl.data_labels.font.color.rgb = INK
+pl.data_labels.font.size = Pt(12); pl.data_labels.font.color.rgb = INK
 pl.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
 ch.value_axis.maximum_scale = 400
+good = est[est.corridor.isin(["kampala_elegu", "kampala_katuna", "kampala_hoima"])]
+bw = est[est.corridor == "kampala_bwera"]
 box(s, 8.6, 2.0, 4.1, 2.3, TINT)
 text(s, 8.9, 2.2, 3.6, 2.0, [
-    [("Within 1–7%", {"bold": True, "size": 26, "color": GRN, "font": HEAD})],
-    "on the Gulu, Kabale and Hoima roads. The model runs below scheduled buses, as expected without stops.",
+    [(f"Within {rng(abs(good['diff']) * 100, suffix='%')}", {"bold": True, "size": 26, "color": GRN, "font": HEAD})],
+    "on the Gulu, Kabale and Hoima roads." + (f" To Fort Portal the model runs {abs(bw['diff'].iloc[0]):.0%} fast."
+                                              if len(bw) else ""),
 ], size=14, color=INK, space_after=6)
 box(s, 8.6, 4.5, 4.1, 2.3, TINT)
 text(s, 8.9, 4.7, 3.6, 2.0, [
     [("2–3 h vs ~1.5 h", {"bold": True, "size": 26, "color": LAT, "font": HEAD})],
     "Observed Kampala–Jinja trips far exceed the model. That gap is congestion at the Kampala end.",
 ], size=14, color=INK, space_after=6)
-source(s, "Source: outputs/validation.csv. The Njeru estimate covers a shorter segment than the model's 73.5 km, so it is the least like-for-like.")
+source(s, "Source: outputs/validation.csv. The Njeru estimate covers a shorter segment than the model's, so it is the least like-for-like.")
 
 # ---------------------------------------------------------------- 8 road types
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "Result 1 · Most of each corridor is settlement", "Share of corridor length by road type (500 m pieces, k-means)")
 cd = CategoryChartData()
-cd.categories = ["Malaba (A1)", "Elegu (A6)", "Katuna (A2)", "Hoima (A9)"]
-cd.add_series("Open road", (0.199, 0.342, 0.250, 0.165))
-cd.add_series("Roadside settlement", (0.581, 0.582, 0.637, 0.756))
-cd.add_series("Town", (0.220, 0.075, 0.113, 0.080))
+cd.categories = CLAB
+for t in ("open road", "roadside settlement", "town"):
+    cd.add_series(t.capitalize(), [round(float(v), 3) for v in share[t]])
 gf = s.shapes.add_chart(XL_CHART_TYPE.BAR_STACKED_100, Inches(0.5), Inches(1.9), Inches(8.2), Inches(5.0), cd)
 ch = gf.chart
 style_chart(ch, [GRN, SAND, LAT], size=13)
@@ -335,34 +357,36 @@ pl = ch.plots[0]; pl.gap_width = 45; pl.overlap = 100
 pl.has_data_labels = True
 pl.data_labels.number_format = '0%'; pl.data_labels.number_format_is_linked = False
 pl.data_labels.position = XL_LABEL_POSITION.CENTER
-pl.data_labels.font.size = Pt(13); pl.data_labels.font.bold = True; pl.data_labels.font.color.rgb = WHITE
+pl.data_labels.font.size = Pt(12); pl.data_labels.font.bold = True; pl.data_labels.font.color.rgb = WHITE
 ch.category_axis.reverse_order = True
 ch.value_axis.tick_labels.number_format = '0%'; ch.value_axis.tick_labels.number_format_is_linked = False
+tb = lambda t, col: TYP[TYP.road_type == t][col]  # noqa: E731
 text(s, 9.1, 2.1, 3.6, 4.6, [
     [("What the types look like", {"bold": True, "font": HEAD, "size": 19})],
-    [("Open road: ", {"bold": True, "color": GRN}), ("~4–9 buildings within 100 m per piece", {})],
-    [("Settlement: ", {"bold": True, "color": RGBColor(0xA8, 0x74, 0x10)}), ("~87–154 buildings, ~1.8 joining roads", {})],
-    [("Town: ", {"bold": True, "color": LAT}), ("~340–416 buildings, 6–7 joining roads", {})],
-    [("Even the \"open\" A9 to Hoima has only 32 km of truly open road.", {"italic": True, "color": MUTED})],
+    [("Open road: ", {"bold": True, "color": GRN}), (f"~{rng(tb('open road', 'buildings_100m'))} buildings within 100 m per piece", {})],
+    [("Settlement: ", {"bold": True, "color": RGBColor(0xA8, 0x74, 0x10)}),
+     (f"~{rng(tb('roadside settlement', 'buildings_100m'))} buildings, ~{rng(tb('roadside settlement', 'joining_roads'), '{:.1f}')} joining roads", {})],
+    [("Town: ", {"bold": True, "color": LAT}),
+     (f"~{rng(tb('town', 'buildings_100m'))} buildings, {rng(tb('town', 'joining_roads'))} joining roads", {})],
+    [(f"The A9 to Hoima has only {TYP[(TYP.corridor == 'kampala_hoima') & (TYP.road_type == 'open road')].km.iloc[0]:.0f} km "
+      "of truly open road.", {"italic": True, "color": MUTED})],
 ], size=15, space_after=12)
-source(s, "Source: outputs/typology_summary.csv. Three types chosen by silhouette score.")
+source(s, "Source: outputs/typology_summary.csv. Three types chosen by silhouette score, clustered jointly across the corridors.")
 
 # ---------------------------------------------------------------- 9 causes
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Result 2 · Roadside activity is the biggest steady drag", "Minutes a loaded truck loses leaving Kampala, by cause (central estimate, dry day, light traffic)")
+title(s, "Result 2 · Roadside activity is the biggest steady drag",
+      "Minutes a loaded truck loses leaving Kampala, by cause (central estimate, dry day, light traffic)")
+tc = CAUSE[(CAUSE.vehicle == "truck") & (CAUSE.direction == "outbound")].pivot(index="corridor", columns="cause",
+                                                                                values="minutes").reindex(CORR)
+causes = [("roadside activity", "Roadside activity", LAT), ("hills (trucks)", "Hills", RGBColor(0x8A, 0x6B, 0x4E)),
+          ("weighbridge", "Weighbridges", DARK), ("speed humps (assumed)", "Speed humps (assumed)", SAND),
+          ("police posts", "Police posts", RGBColor(0x4E, 0x7C, 0x8A)), ("joining roads", "Joining roads", GRN),
+          ("signals and crossings", "Signals & crossings", PALE)]
 cd = CategoryChartData()
-cd.categories = ["Malaba (A1)", "Elegu (A6)", "Katuna (A2)", "Hoima (A9)"]
-causes = [
-    ("Roadside activity", (25.1, 29.2, 34.6, 18.5), LAT),
-    ("Hills", (8.6, 13.0, 38.1, 13.7), RGBColor(0x8A, 0x6B, 0x4E)),
-    ("Weighbridges", (20.0, 10.0, 20.0, 0.0), DARK),
-    ("Speed humps (assumed)", (19.0, 13.0, 19.2, 6.2), SAND),
-    ("Police posts", (10.0, 15.0, 9.0, 4.0), RGBColor(0x4E, 0x7C, 0x8A)),
-    ("Joining roads", (7.1, 10.2, 11.2, 4.9), GRN),
-    ("Signals & crossings", (10.5, 3.6, 2.9, 0.5), PALE),
-]
-for n, v, _ in causes:
-    cd.add_series(n, v)
+cd.categories = CLAB
+for key, lab, _ in causes:
+    cd.add_series(lab, [round(float(v), 1) for v in tc[key]])
 gf = s.shapes.add_chart(XL_CHART_TYPE.BAR_STACKED, Inches(0.5), Inches(1.9), Inches(8.4), Inches(5.0), cd)
 ch = gf.chart
 style_chart(ch, [c for _, _, c in causes], size=12)
@@ -371,24 +395,26 @@ ch.category_axis.reverse_order = True
 ch.value_axis.has_title = True
 ch.value_axis.axis_title.text_frame.text = "minutes added"
 ch.value_axis.axis_title.text_frame.paragraphs[0].runs[0].font.size = Pt(12)
+car_first = STAB[(STAB.vehicle == "car") & (STAB.cause == "roadside activity")].share_first
+wet = CAUSE[(CAUSE.vehicle == "truck") & (CAUSE.direction == "outbound") & (CAUSE.cause == "rain (wet day)")].minutes
 text(s, 9.3, 2.0, 3.4, 4.8, [
     [("Cars: ", {"bold": True, "color": LAT}),
-     ("roadside activity is the largest cause on the Gulu, Katuna and Hoima roads (17–28 min).", {})],
+     (f"roadside activity is the largest cause in {rng(car_first * 100, suffix='%')} of draws on every road.", {})],
     [("Trucks: ", {"bold": True, "color": LAT}),
-     ("the five weighbridges are the largest single delays, ~10 min each if every truck stops.", {})],
-    [("Jinja road: ", {"bold": True, "color": LAT}),
-     ("signals, crossings and humps compete with roadside activity; the ranking depends on assumptions.", {})],
-    [("A wet day adds a further 24–53 truck minutes.", {"italic": True, "color": MUTED})],
+     ("weighbridges lead on the Malaba road, police posts on the Elegu road, hills on the Bwera and Katuna roads; "
+      "rankings shift across draws.", {})],
+    [(f"A wet day adds a further {rng(wet)} truck minutes.", {"italic": True, "color": MUTED})],
 ], size=15, space_after=12)
-source(s, "Source: outputs/travel_time_causes.csv. Town speed limits and curves (< 3 min) omitted. 5–95% ranges are wide: see speaker notes.")
+source(s, "Source: outputs/travel_time_causes.csv, outputs/rank_stability.csv. Town speed limits and curves (< 3 min) omitted.")
+tt = TOT[(TOT.vehicle == "truck") & (TOT.direction == "outbound")].set_index("corridor").reindex(CORR)
 s.notes_slide.notes_text_frame.text = (
-    "Totals for a truck (model vs open-road-only): Malaba 304 vs 185 min, Elegu 476 vs 369, Katuna 527 vs 365, Hoima 226 vs 167. "
-    "Monte Carlo ranges: roadside activity for trucks spans roughly 10–74 min; police posts 1–71 min; humps 1–45 min. "
-    "Report rankings with their Monte Carlo shares, not as single numbers.")
+    "Totals for a truck (model vs open-road-only): " +
+    "; ".join(f"{C.CORRIDORS[c]['short']} {r.minutes:.0f} vs {r.open_road_minutes:.0f} min" for c, r in tt.iterrows()) +
+    ". Report rankings with their Monte Carlo shares, not as single numbers.")
 
 # ---------------------------------------------------------------- 9b race animation
 s = prs.slides.add_slide(BLANK); bg(s, DARK)
-text(s, 0.6, 0.5, 5.2, 1.4, "The same truck, five roads", size=32, font=HEAD, bold=True, color=WHITE)
+text(s, 0.6, 0.5, 5.2, 1.4, "The same truck, every road", size=32, font=HEAD, bold=True, color=WHITE)
 text(s, 0.6, 2.0, 5.0, 3.2, [
     "A loaded truck leaves Kampala on each corridor at the same moment, next to a truck on open road.",
     "Each road colours in with the delay it causes: towns, weighbridges, humps and hills.",
@@ -403,17 +429,16 @@ picture(s, f"{S}/m02.png", 0.4, 0.35, h=6.8)
 x0 = 7.75
 text(s, x0, 0.45, 5.1, 1.4, "Result 3 · Delay concentrates at a few points", size=28, font=HEAD, bold=True)
 text(s, x0, 1.95, 5.1, 0.6, "Truck minutes lost per km vs open road; numbered: the worst 2 km stretches", size=14, color=MUTED)
-hs = [("1", "Nakawa, Kampala end of A1", "+8.5 truck / +7.6 car min · signals and crossings"),
-      ("6", "Lukaya, A2", "+11.9 truck min · weighbridge"),
-      ("2", "Magamaga, A1", "+12.3 truck min · weighbridge, police post"),
-      ("5", "Elegu border", "+4.0 truck min · police posts")]
+top = HOT.sort_values("truck_excess_min", ascending=False).head(4)
 y = 2.75
-for n, place, d in hs:
-    circle_num(s, x0, y + 0.05, 0.5, n, fill=DARK, size=15)
-    text(s, x0 + 0.7, y, 4.4, 0.35, place, size=16, bold=True)
-    text(s, x0 + 0.7, y + 0.36, 4.4, 0.4, d, size=13, color=MUTED)
+for r in top.itertuples():
+    circle_num(s, x0, y + 0.05, 0.5, str(r.n), fill=DARK, size=15)
+    text(s, x0 + 0.7, y, 4.4, 0.35, f"{r.place}, {C.CORRIDORS[r.corridor]['short']} road km {r.km_from:.0f}", size=16, bold=True)
+    text(s, x0 + 0.7, y + 0.36, 4.4, 0.4, f"+{r.truck_excess_min:.1f} truck min · {r.main_causes.split(' ')[0]} "
+         f"{' '.join(r.main_causes.split(';')[0].split(' ')[1:-1])}".strip(), size=13, color=MUTED)
     y += 0.9
-text(s, x0, 6.4, 5.1, 0.7, "Eight of the ten worst stretches are led by weighbridges, police posts or signals; the other two are in Hoima town.",
+led = HOT.main_causes.str.split(";").str[0].str.contains("weighbridge|police|signals").sum()
+text(s, x0, 6.4, 5.1, 0.7, f"{led} of the {len(HOT)} worst stretches are led by weighbridges, police posts or signals.",
      size=14, italic=True, color=LAT)
 s.notes_slide.notes_text_frame.text = (
     "Numbers come from outputs/hotspots_mapped.csv. Close-ups of each hotspot are in figures/m03_hotspots.png and figures/hotspots/, "
@@ -422,32 +447,22 @@ s.notes_slide.notes_text_frame.text = (
 # ---------------------------------------------------------------- 11 growth
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "Result 4 · The roadside filled in fast, between towns", "Built-up land within 300 m of the road, 2000–2020 (GHSL)")
-cd = CategoryChartData()
-cd.categories = ["Elegu (A6)", "Hoima (A9)", "Katuna (A2)", "Malaba (A1)"]
-cd.add_series("Roadside settlement", (103, 92, 68, 45))
-cd.add_series("Town", (20, 17, 16, 13))
-cd.add_series("Whole corridor", (68, 57, 43, 27))
-gf = s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, Inches(0.5), Inches(1.85), Inches(4.5), Inches(5.0), cd)
-ch = gf.chart
-style_chart(ch, [SAND, LAT, DARK], size=12)
-pl = ch.plots[0]; pl.gap_width = 45; pl.overlap = -5
-pl.has_data_labels = True
-pl.data_labels.number_format = '"+"0"%"'; pl.data_labels.number_format_is_linked = False
-pl.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
-pl.data_labels.font.size = Pt(11); pl.data_labels.font.color.rgb = INK
-ch.value_axis.visible = False
-ch.value_axis.has_major_gridlines = False
-picture(s, f"{S}/m04_grid.png", 5.25, 1.85, h=5.0)
-text(s, 9.95, 1.95, 2.8, 4.9, [
-    [("+27% to +68%", {"bold": True, "size": 30, "color": LAT, "font": HEAD})],
-    "roadside built-up land in 20 years, fastest on the Elegu and Hoima roads.",
-    [("Settlements between towns roughly doubled on the A6 and A9; towns grew only 13–20%.", {"color": MUTED})],
-    [("New friction is appearing on what used to be open road.", {"color": MUTED})],
-], size=15, space_after=10)
-source(s, "Maps: each corridor's fastest-growing 5 km; grey built by 2000, orange built 2000–2020. Open-road growth (150–225%) is from a very small base and not charted.")
+gw = gall.sort_values("growth_2000_2020_pct", ascending=False)
+bw_ = 12.1 / N
+for i, (c, r) in enumerate(gw.iterrows()):
+    x = 0.6 + i * bw_
+    box(s, x, 1.85, bw_ - 0.12, 0.75, TINT)
+    text(s, x + 0.15, 1.9, bw_ - 0.3, 0.4, f"+{r.growth_2000_2020_pct:.0f}%", size=22, bold=True, color=LAT, font=HEAD)
+    text(s, x + 1.3, 2.0, bw_ - 1.45, 0.5, f"{C.CORRIDORS[c]['short']} ({C.CORRIDORS[c]['ref']})", size=13, color=INK)
+picture(s, f"{S}/m04.png", 0.6, 2.75, w=12.1)
+gset = GROW[GROW.road_type == "roadside settlement"].growth_pct
+gtown = GROW[GROW.road_type == "town"].growth_pct
+source(s, f"Roadside settlements grew {rng(gset, suffix='%')}, towns {rng(gtown, suffix='%')}. Maps: each corridor's "
+       "fastest-growing 5 km; grey built by 2000, orange 2000–2020.")
 s.notes_slide.notes_text_frame.text = (
-    "Hectares within 300 m, 2000 to 2020: Elegu 855 to 1,437; Hoima 477 to 748; Katuna 1,188 to 1,704; Malaba 1,078 to 1,370. "
-    "GHSL's projection gives only +5–9% for 2020–2026, far slower than the observed trend, so it probably understates recent building.")
+    "Hectares within 300 m, 2000 to 2020: " +
+    "; ".join(f"{C.CORRIDORS[c]['short']} {r.built_ha_2000:,.0f} to {r.built_ha_2020:,.0f}" for c, r in gall.iterrows()) +
+    ". GHSL's projection gives only +5–10% for 2020–2026, far slower than the observed trend.")
 
 # ---------------------------------------------------------------- 11b growth animation
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
@@ -461,9 +476,32 @@ title(s, "When distance becomes time", "The corridors redrawn so that length is 
 picture(s, os.path.join(S, "g04.png"), 0.9, 1.85, h=5.0)
 source(s, "figures/g04_time_map.png. Grey: the roads as mapped. Towns, controls and hills stretch the lines.")
 
+# ---------------------------------------------------------------- NEW transit gap
+s = prs.slides.add_slide(BLANK); bg(s, WHITE)
+title(s, "Result 5 · Trucks spend most of the trip standing still",
+      "Observed truck transit, Kampala ↔ border (NCTTCA Observatory 2025–26), against the model's driving time")
+picture(s, os.path.join(FIG, "f14_transit_gap.png"), 0.4, 1.85, w=8.4)
+wb = MIX[MIX.item == "Weighbridge"].median_hours.iloc[0] * 60
+rest = MIX[MIX.item == "Rest/meals"].stopped_time_share_pct.iloc[0]
+bord = MIX[MIX.item == "Border post procedures"].stopped_time_share_pct.iloc[0]
+items = [(f"{rng(GAP.observed_h)} h", f"observed between Kampala and the borders; the model drives it in {rng(GAP.model_driving_h)} h."),
+         (f"{rng(GAP.friction_share_pct)}%", "of the real truck trip is roadside and control friction; the rest is stopped time."),
+         (f"{rest + bord:.0f}%", "of stopped time is rest, meals and border procedures (approx.)."),
+         (f"{wb:.0f} min", "median weighbridge stop: the model's 10 min (5–30) assumption holds.")]
+y = 1.95
+for big, t in items:
+    text(s, 9.1, y, 3.6, 0.5, big, size=24, bold=True, color=LAT, font=HEAD)
+    text(s, 9.1, y + 0.5, 3.6, 0.8, t, size=12.5, color=INK)
+    y += 1.25
+source(s, "outputs/transit_gap.csv, transit_stop_mix.csv (scripts/24_transit_gap.py). GPS: fleet sample; RECTS: bonded transit cargo. Kampala–Hoima not reported.")
+s.notes_slide.notes_text_frame.text = (
+    "The Malaba border crossing averaged 48 min in 2025 (Busia 2.55 h), against about 2 h lost to friction on the "
+    "Kampala–Malaba road. Fixing roadside friction matters for reliability and safety, but truck transit time is "
+    "dominated by stops: rest, border procedures, insecurity and administrative checks.")
+
 # ---------------------------------------------------------------- 12a fixes
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Result 5 · Controls are the quickest wins", "Truck minutes saved per trip leaving Kampala, by fix (central estimate)")
+title(s, "Result 6 · Controls are the quickest wins", "Truck minutes saved per trip leaving Kampala, by fix (central estimate)")
 cd = CategoryChartData()
 cd.categories = CLAB
 fixes = [("wim", "Weigh-in-motion", GRN), ("no_police", "No police stops", RGBColor(0x4E, 0x7C, 0x8A)),
@@ -473,24 +511,35 @@ for key, lab, _ in fixes:
     cd.add_series(lab, [round(float(v), 1) for v in d.minutes_saved])
 gf = s.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED, Inches(0.5), Inches(1.9), Inches(8.2), Inches(5.0), cd)
 ch = gf.chart
-style_chart(ch, [c for _, _, c in fixes], size=12)
+style_chart(ch, [c for _, _, c in fixes], size=11)
 pl = ch.plots[0]; pl.gap_width = 60; pl.overlap = -5
 pl.has_data_labels = True
 pl.data_labels.number_format = '0'; pl.data_labels.number_format_is_linked = False
 pl.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
-pl.data_labels.font.size = Pt(11); pl.data_labels.font.color.rgb = INK
-tc = COST[COST.vehicle == "truck"].cost_per_year_usd_m.sum()
+pl.data_labels.font.size = Pt(10); pl.data_labels.font.color.rgb = INK
+tcost = COST[COST.vehicle == "truck"].cost_per_year_usd_m.sum()
+fy = FUEL.groupby("corridor").friction_fuel_usd_year_m.first().sum()
 text(s, 9.1, 2.05, 3.6, 4.8, [
-    [(f"US${tc:.0f} M a year", {"bold": True, "size": 28, "color": LAT, "font": HEAD})],
-    "is what delay costs heavy trucks on the four roads at central values (range several times wider: truck counts are assumed off the A1).",
+    [(f"US${tcost:.0f} M a year", {"bold": True, "size": 28, "color": LAT, "font": HEAD})],
+    "in truck time lost to delay on the five roads at central values, plus about "
+    f"US${fy:.0f} M in extra diesel burnt slowing and re-accelerating.",
     [("Weigh-in-motion and ending police stops save more per trip than bypasses in light traffic. "
-      "Service roads help everywhere but need 125–270 km each.", {"color": MUTED})],
+      "Truck counts are surveyed on the Malaba, Katuna and Bwera roads, assumed on the others.", {"color": MUTED})],
 ], size=14, space_after=10)
-source(s, "outputs/scenarios.csv, outputs/costs.csv (scripts 16, 17). Congestion relief from bypasses is not captured by the light-traffic model.")
+source(s, "outputs/scenarios.csv, costs.csv, fuel_co2.csv (scripts 16, 17, 26). Congestion relief from bypasses is not captured by the light-traffic model.")
+
+# ---------------------------------------------------------------- NEW fuel and CO2
+s = prs.slides.add_slide(BLANK); bg(s, WHITE)
+title(s, "Result 7 · Stop-go costs fuel and carbon", "Extra diesel per loaded truck trip from friction, and CO₂ a year (physical fuel model, 1,000 draws)")
+picture(s, os.path.join(FIG, "f16_fuel_co2.png"), 0.6, 1.8, w=12.1)
+fo = FUEL[FUEL.direction == "outbound"]
+co2 = FUEL.groupby("corridor").friction_co2_kt_year.first().sum()
+source(s, f"{rng(fo.friction_litres_trip)} L extra per trip ({rng(fo.friction_pct_of_trip_fuel)}% of trip fuel); about {co2:.0f} kt CO₂ "
+       "a year. Humps are assumed (one per town piece), so the Malaba figure has a wide range. outputs/fuel_co2.csv.")
 
 # ---------------------------------------------------------------- 12b safety and reliability
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
-title(s, "Result 6 · Settlements carry most of the risk", "Roadside settlements: share of people within 300 m vs share of exposure (people × trucks × speed⁴)")
+title(s, "Result 8 · Settlements carry most of the risk", "Roadside settlements: share of people within 300 m vs share of exposure (people × trucks × speed⁴)")
 cd = CategoryChartData()
 cd.categories = CLAB
 st = SB[SB.road_type == "roadside settlement"].set_index("corridor").reindex(CORR)
@@ -514,11 +563,36 @@ text(s, 8.8, 2.2, 3.7, 2.0, [
     "through settlements that are not classed as towns, so risk concentrates where people live between towns.",
 ], size=13, space_after=6)
 box(s, 8.5, 4.5, 4.2, 2.3, TINT)
+fl = FLD.iloc[0] if len(FLD) else None
 text(s, 8.8, 4.7, 3.7, 2.0, [
     [(f"{tr.buffer_index.min():.0%}–{tr.buffer_index.max():.0%} slower", {"bold": True, "size": 22, "color": DARK, "font": HEAD})],
-    "on a bad-rain day (95th percentile, 2006–2025) than on a typical day. The Malaba road is slowed on about 87 days a year.",
+    "on a bad-rain day (95th percentile, 2006–2025) than on a typical day." +
+    (f" The May 2020 Mpondwe flood stretch ranks at the {fl.percentile:.0f}th percentile of flood exposure." if fl is not None else ""),
 ], size=13, space_after=6)
-source(s, "outputs/safety_by_type.csv, outputs/reliability.csv (scripts 18, 19). Exposure is not a crash rate; floods that close roads are not modelled.")
+source(s, "outputs/safety_by_type.csv, reliability.csv, flood_events_check.csv (scripts 18, 19). Exposure is not a crash rate.")
+
+# ---------------------------------------------------------------- NEW black spots
+s = prs.slides.add_slide(BLANK); bg(s, WHITE)
+title(s, "Result 9 · Police crash black spots sit in busy settlements",
+      "Stretches holding a named black spot, against random stretches near a named place (5,000 permutations)")
+picture(s, os.path.join(FIG, "f15_black_spots.png"), 0.4, 1.85, w=8.3)
+bn = BS[BS.null == "stretches near a named place"].set_index("measure")
+g_ = lambda m, k: bn.loc[m, k]  # noqa: E731
+pfmt = lambda p: "p < 0.001" if p < 0.001 else f"p = {p:.3f}"  # noqa: E731
+items = [(f"{int(BSM.matched.sum())} / {len(BSM)}", "police-named black spots located by name in OSM."),
+         (f"{g_('buildings within 300 m', 'black_spot_mean_pct'):.0f}th pct", f"on roadside buildings "
+          f"({pfmt(g_('buildings within 300 m', 'p_value'))}); joining roads {g_('joining roads', 'black_spot_mean_pct'):.0f}th."),
+         (f"{g_('truck speed', 'black_spot_mean_pct'):.0f}th pct", f"on truck speed ({pfmt(g_('truck speed', 'p_value'))}): "
+          "black spots are slower, busier places, not fast bends."),
+         (f"{g_('safety exposure index', 'black_spot_mean_pct'):.0f}th pct", "on the exposure index "
+          f"({pfmt(g_('safety exposure index', 'p_value'))}): its speed⁴ term under-weights busy, slower places.")]
+y = 1.95
+for big, t in items:
+    text(s, 9.0, y, 3.7, 0.5, big, size=22, bold=True, color=LAT, font=HEAD)
+    text(s, 9.0, y + 0.48, 3.7, 0.8, t, size=12.5, color=INK)
+    y += 1.22
+source(s, "Daily Monitor (23 Dec 2018), black spots named by Uganda Police traffic officers; outputs/black_spots_*.csv (script 25). "
+       "Name matching misses forest and swamp spots.")
 
 # ---------------------------------------------------------------- 12c rail
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
@@ -527,16 +601,18 @@ x0 = 7.0
 text(s, x0, 0.45, 5.8, 1.3, "Rail along the bottlenecks", size=30, font=HEAD, bold=True)
 text(s, x0, 1.35, 5.8, 0.6, "Least-cost screening alignments and the existing metre-gauge railway", size=14, color=MUTED)
 near = RP[(RP.corridor == "kampala_malaba") & (RP.railway == "in use")].share_of_truck_delay.iloc[0]
+others = RP[(RP.corridor != "kampala_malaba") & (RP.railway == "in use")].share_of_truck_delay.max()
 g = lambda line, var, m: RE[(RE.line == line) & (RE.variant == var) & (RE.measure == m)].iloc[0]  # noqa: E731
 be = g("Eastern", "through from Mombasa", "freight needed to break even")
 bc = g("Eastern", "through from Mombasa", "benefit / cost")
 rt = g("Eastern", "domestic", "door-to-door time by rail")
-items = [(f"{near:.0%}", "of the Malaba road's truck delay lies within 10 km of the railway the SGR follows; "
-                         "on the other roads, 16% or less."),
+dom = RE[(RE.variant == "domestic") & (RE.measure == "benefit / cost")]
+items = [(f"{near:.0%}", f"of the Malaba road's truck delay lies within 10 km of the railway the SGR follows; "
+                         f"on the other roads, {others:.0%} or less."),
          (f"{rt.central:.0f} h", "door to door by rail for domestic freight on the eastern line, against about 5 h by truck: "
                                  "terminals, not line-haul, set the time."),
-         (f"{bc.central:.2f}", f"benefit/cost for the eastern SGR even with through traffic from Mombasa (up to {bc.p95:.2f}); "
-                               f"about {be.central:.0f} Mt a year needed to break even."),
+         (f"≤ {dom.p95.max():.2f}", f"benefit/cost for any of the {len(dom)} lines on Ugandan freight alone; through traffic from "
+                                    f"Mombasa needs about {be.central:.0f} Mt a year to break even."),
          ]
 y = 2.2
 for big, t in items:
@@ -548,23 +624,24 @@ text(s, x0, 6.45, 5.8, 0.6, "Counting only freight costs and CO2 from today's Ug
 s.notes_slide.notes_text_frame.text = (
     "scripts/23_rail.py. Alignments minimise length x grade above 1.5% x built-up share inside 25 km of each road; screening only. "
     "Capital cost from the eastern SGR contract (EUR 2.7 bn for 273 km). 30% of each road's truck freight moved (15-50%). "
-    "Kenya's Naivasha-Malaba SGR link is not built, which the through-traffic case needs.")
+    f"Eastern line with through traffic: benefit/cost {bc.central:.2f} (up to {bc.p95:.2f}).")
 
-# ---------------------------------------------------------------- 12 discussion
+# ---------------------------------------------------------------- discussion
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "Discussion", "What the results suggest for corridor policy")
 pts = [
     ("Settlement is the chronic problem", LAT,
-     "Roadside activity costs the most time on three of four roads and is growing fastest where it is newest. "
-     "Access management, service roads and planned trading centres off the carriageway address the cause, not the symptom."),
+     "Roadside activity costs the most time for cars on every road, is growing fastest where it is newest, and is where "
+     "police place their crash black spots. Access management and service roads address the cause."),
     ("Controls are the cheap wins", DARK,
-     "Weighbridges and police posts produce the worst single stretches. Weigh-in-motion screening saves 8–16 truck "
-     "minutes per trip and ending police stops 4–15; bypasses save 2–5 in light traffic."),
-    ("Kampala's problem is congestion", GRN,
-     "The gap between modelled and observed Kampala–Jinja trips is congestion. The expressway and urban traffic "
-     "management matter there more than roadside fixes."),
+     "Weighbridges and police posts produce the worst single stretches. Weigh-in-motion and ending police stops save "
+     "more per trip than bypasses in light traffic, and cut stop-go fuel."),
+    ("Stopped time dwarfs driving time", GRN,
+     "Trucks take 17–93 h between Kampala and the borders, of which friction is a small share. Rest, border and "
+     "administrative stops need their own reforms alongside the road."),
     ("Growth outpaces the road", SAND,
-     "At 27–68% in 20 years, today's open road is tomorrow's settlement. Land-use control along the corridors is time-critical."),
+     f"At {rng(gall.growth_2000_2020_pct, suffix='%')} in 20 years, today's open road is tomorrow's settlement. "
+     "Land-use control along the corridors is time-critical."),
 ]
 for i, (h, col, d) in enumerate(pts):
     cx = 0.6 + (i % 2) * 6.15
@@ -574,17 +651,17 @@ for i, (h, col, d) in enumerate(pts):
     text(s, cx + 1.0, cy + 0.33, 4.7, 0.45, h, size=19, bold=True, font=HEAD)
     text(s, cx + 1.0, cy + 0.85, 4.7, 1.4, d, size=14, color=MUTED)
 s.notes_slide.notes_text_frame.text = (
-    "These are implications from a light-traffic model, not project appraisals. The weighbridge saving assumes about ten minutes per stop, "
-    "which is itself an assumption with a wide range.")
+    "These are implications from a light-traffic model, not project appraisals. The weighbridge stop assumption is now "
+    "supported by the Observatory's measured median of 12 minutes.")
 
-# ---------------------------------------------------------------- 13 limits
+# ---------------------------------------------------------------- limits
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "Limitations and next steps")
 lims = [
     ("Congestion is not modelled", "Results describe light traffic; peak-hour delay near Kampala is larger."),
-    ("Speed humps are under-mapped", "OSM holds < 60 on all four roads; one per town piece is assumed (range 0–2)."),
-    ("Stop times are assumptions", "Police posts 0–5 min, weighbridges ~10 min; rankings on the A1 depend on them."),
-    ("Growth data end in 2020", "GHSL's projection to 2026 is slower than the observed trend; Open Buildings Temporal would extend it."),
+    ("Speed humps are under-mapped", "One per town piece is assumed (range 0–2); they drive the Malaba fuel figure."),
+    ("Truck counts are partly assumed", "Surveyed on the Malaba, Katuna and Bwera roads; assumed on the Elegu and Hoima roads."),
+    ("Growth data end in 2020", "GHSL's projection to 2026 is slower than the observed trend."),
 ]
 y = 1.55
 for h, d in lims:
@@ -595,28 +672,28 @@ for h, d in lims:
 box(s, 8.3, 1.55, 4.4, 5.05, DARK)
 text(s, 8.65, 1.85, 3.8, 4.6, [
     [("Next steps", {"bold": True, "size": 22, "color": WHITE, "font": HEAD})],
-    "Report cause rankings with their Monte Carlo shares",
+    "Count speed humps from Mapillary street-level detections",
+    "Observe 2016–2023 growth with Open Buildings 2.5D Temporal",
     "Swap GLO-30 for FABDEM terrain",
-    "Observe post-2020 growth with Open Buildings 2.5D Temporal",
-    "Replace assumed truck counts with UNRA counts",
+    "Apply the method to eleven capitals (regional paper)",
     "Write up the paper",
 ], size=15, color=PALE, space_after=12)
 
-# ---------------------------------------------------------------- 14 close
+# ---------------------------------------------------------------- close
 s = prs.slides.add_slide(BLANK); bg(s, DARK)
 text(s, 0.7, 1.2, 11.9, 0.5, "CONCLUSION", size=13, bold=True, color=SAND)
 text(s, 0.7, 1.75, 11.9, 1.5, "Uganda's corridors are becoming high streets faster than they are being managed as highways.",
      size=34, font=HEAD, bold=True, color=WHITE)
 cl = [("1", "Open data alone reproduce trip times within a few percent, outside Kampala."),
       ("2", "Roadside activity is the largest steady delay; weighbridges are the worst single points."),
-      ("3", "Roadside building grew 27–68% in 2000–2020, mostly between towns."),
-      ("4", "Cheap fixes at controls beat bypasses; rail pays only with far more freight than today.")]
+      ("3", f"Roadside building grew {rng(gall.growth_2000_2020_pct, suffix='%')} in 2000–2020, mostly between towns."),
+      ("4", "Friction is a small part of truck transit, but it costs fuel and sits where crashes happen.")]
 y = 3.55
 for n, t in cl:
     circle_num(s, 0.7, y, 0.55, n, fill=LAT, size=16)
     text(s, 1.55, y + 0.02, 11.0, 0.55, t, size=19, color=PALE, anchor=MSO_ANCHOR.MIDDLE)
     y += 0.72
-text(s, 0.7, 6.55, 11.9, 0.4, "Code, outputs, maps and animations: uganda-trade-corridors repository", size=13, color=PALE)
+text(s, 0.7, 6.55, 11.9, 0.4, "Code, outputs, maps and animations: github.com/gavacharles/uganda-trade-corridors", size=13, color=PALE)
 
 prs.save(OUT)
-print("saved", OUT)
+print("saved", OUT, f"({len(prs.slides)} slides)")

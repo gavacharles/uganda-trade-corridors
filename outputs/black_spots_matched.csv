@@ -1,0 +1,59 @@
+corridor,name,feature,matched,osm_name,distance_m,km,stretch,road_type
+kampala_katuna,Budo junction,blind corner at junction,True,Buddo Workshop,97.0,10.75,5.0,town
+kampala_katuna,Nakati,"climbing lane, sharp corner",False,,,,,
+kampala_katuna,Katende,"valley, poor visibility",True,Katende,254.0,25.75,12.0,roadside settlement
+kampala_katuna,Mpigi junction,junction,True,MPIGI GENERAL HARDWARE,117.0,33.75,16.0,roadside settlement
+kampala_katuna,Kampiringisa,sharp corner,False,,,,,
+kampala_katuna,Kalagala,trading centre junction,True,Kalagala,80.0,34.75,17.0,roadside settlement
+kampala_katuna,Kadduggala (Basudde corner),bend,True,Bajja Community Primary School,109.0,102.75,51.0,roadside settlement
+kampala_katuna,Nyendo,roundabout,True,NYENDO,429.0,123.75,61.0,town
+kampala_katuna,Kyabakuza,humps through trading centres,True,Kyabakuza Police Station,62.0,131.25,65.0,town
+kampala_katuna,Kyabogo,"large bend, speeding",False,,,,,
+kampala_katuna,Mbarara expressway meeting point,junction,True,Mbarara City Health Centre IV,88.0,263.75,131.0,town
+kampala_katuna,Bushenyi junction,junction,True,Kakyeka,906.0,265.75,132.0,roadside settlement
+kampala_katuna,Ntungamo-Rukungiri junction,junction,True,Ntungamo Municiple Council Headquaters,128.0,325.75,162.0,town
+kampala_katuna,Kabale,"multiple junctions, hills",True,Kabale,237.0,109.25,54.0,roadside settlement
+kampala_bwera,Kiwawu,"hill, limited visibility",True,Kiwawu Nulu Hidaya Primary School,198.0,36.25,18.0,roadside settlement
+kampala_bwera,Kyengeza,blind corner,True,Kyengeza,185.0,41.25,20.0,roadside settlement
+kampala_bwera,Zigoti,pedestrians,True,Zigoti Community Library,44.0,43.25,21.0,roadside settlement
+kampala_bwera,Kagavu,guard rail,False,,,,,
+kampala_bwera,Nakitooro,"valley, overtaking",False,,,,,
+kampala_bwera,Ndibulungi,corner,True,Ndibulungi,503.0,53.75,26.0,roadside settlement
+kampala_bwera,Wabigalo,"boda boda, market day",True,Wabigalo,147.0,56.75,28.0,roadside settlement
+kampala_bwera,Buswabulongo,stretch needing humps,False,,,,,
+kampala_bwera,Kikumbi,school junction,True,Kikumbi,432.0,60.25,30.0,roadside settlement
+kampala_bwera,Naama,blind corner,True,Naama Millenium Primary School,21.0,65.25,32.0,roadside settlement
+kampala_bwera,Kamajungo swamp,swamp stretch,False,,,,,
+kampala_elegu,"Kakerenge (19 miles, Nanywa)",sharp corner,True,Kakerenge,458.0,23.75,11.0,roadside settlement
+kampala_elegu,Sanamu valley,junction to Bombo,False,,,,,
+kampala_elegu,Sinalya,"steep hill, narrow",False,,,,,
+kampala_elegu,Nkondo,"narrow, overtaking",False,,,,,
+kampala_elegu,Kibisi-Kaswa,black spot,True,Kaswa,1387.0,38.25,19.0,roadside settlement
+kampala_elegu,Kikoma,sharp corner,True,Kikoma Parents Primary School,85.0,43.25,21.0,town
+kampala_elegu,Kiwumpa-Naluvule,no speed controls,False,,,,,
+kampala_elegu,Kasana-Luweero,"township, no signs",True,Luweero,47.0,58.75,29.0,town
+kampala_elegu,Nakazzi-Kyevunze,bridge,True,Kyevunze,198.0,62.25,31.0,roadside settlement
+kampala_elegu,Kakoge,trading centre,True,Kakooge Cross,67.0,83.75,41.0,roadside settlement
+kampala_elegu,Kyabutayika,black spot,True,Kyabutayika,106.0,86.75,43.0,roadside settlement
+kampala_elegu,Katugo trading centre,trading centre,True,Katuugo Seventh-day Adventist Primary School,79.0,94.25,47.0,roadside settlement
+kampala_elegu,Kyankonwa,black spot,True,Kyankonwa,333.0,97.75,48.0,roadside settlement
+kampala_elegu,Migyera,trading centre,True,Migyera,135.0,135.75,67.0,roadside settlement
+kampala_elegu,Kapa-Buruli,black spot,False,,,,,
+kampala_elegu,Kyamukonda,black spot,True,Kyamukonda,169.0,142.75,71.0,roadside settlement
+kampala_elegu,Kyamukama,black spot,True,Kyamukama,234.0,147.75,73.0,open road
+kampala_elegu,Bujabe,black spot,True,Bujaabe,139.0,164.25,82.0,open road
+kampala_elegu,Kafu,black spot,True,Kafu,65.0,165.75,82.0,roadside settlement
+kampala_elegu,Nnalongo (Ndibulungi blind corner),blind corner,True,Nalongo,61.0,72.25,36.0,roadside settlement
+kampala_elegu,Ngaju,corner,False,,,,,
+kampala_malaba,Kitegga,corner near Lugazi,True,Kitega,192.0,41.75,20.0,town
+kampala_malaba,Kisagazi,no road signs,False,,,,,
+kampala_malaba,Kitigoma (Mabira),forest stretch,False,,,,,
+kampala_malaba,Nakibizzi (Mabira),forest stretch,False,,,,,
+kampala_malaba,Mbiko (Mabira),forest stretch,False,,,,,
+kampala_malaba,Najjembe,heavy pedestrian traffic,True,NAJJEMBE,32.0,52.75,26.0,town
+kampala_malaba,Namawojjolo,heavy pedestrian traffic,True,Namawojjolo Islamic Centre,56.0,31.75,15.0,roadside settlement
+kampala_malaba,Namasoga,"sharp, blind corners",True,Namasoga,206.0,106.25,53.0,town
+kampala_malaba,Nakavule,pedestrian crossing,True,Nakavule Main,167.0,115.75,57.0,town
+kampala_malaba,Busoba swamp,"swamp, trailer overturns",False,,,,,
+kampala_malaba,Kibimba bridge,"straight road, speeding trailers",True,Kibimba,134.0,164.25,82.0,roadside settlement
+kampala_malaba,Idudi hump,hump,True,Idudi A,48.0,132.25,66.0,town
