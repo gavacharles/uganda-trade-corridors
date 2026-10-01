@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Corridor Post Drafts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@600;800&family=Overpass+Mono:wght@500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: one reading column; each platform is a desk card with its media beside or above its text. */
+:root {
+  --paper: #f3f4ef; --plate: #fdfdfb; --ink: #18211e; --muted: #5a6762; --rule: #d8ddd8;
+  --murram: #b5481c; --murram-soft: #f6e3d9; --ok: #2f7a55; --warn: #a3401a;
+  --display: "Overpass", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "Overpass Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #121815; --plate: #1a221f; --ink: #e7ece9; --muted: #9eaba6; --rule: #2c3833;
+  --murram: #ec8a5c; --murram-soft: #3a2519; --ok: #6cc597; --warn: #f09a6c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #121815; --plate: #1a221f; --ink: #e7ece9; --muted: #9eaba6; --rule: #2c3833;
+  --murram: #ec8a5c; --murram-soft: #3a2519; --ok: #6cc597; --warn: #f09a6c; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 17px/1.6 var(--body); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 64px; display: grid; gap: 28px; }
+header { display: grid; gap: 8px; }
+.eyebrow { font: 800 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--murram); }
+h1 { font: 800 clamp(30px, 5vw, 46px)/1.05 var(--display); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+.lede { color: var(--muted); max-width: 62ch; margin: 0; }
+.todo { font: 15px/1.5 var(--display); background: var(--murram-soft); border-radius: 8px; padding: 12px 14px; max-width: 70ch; }
+.todo b { color: var(--warn); }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a { font: 600 14px/1 var(--display); color: var(--ink); text-decoration: none; border: 1px solid var(--rule);
+  border-radius: 999px; padding: 8px 12px; background: var(--plate); }
+nav a:hover, nav a:focus-visible { border-color: var(--murram); outline: none; }
+section { background: var(--plate); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+h2 { font: 800 22px/1.2 var(--display); margin: 0; }
+.meta { font: 500 13px/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.meta .fit { color: var(--ok); }
+button.copy { font: 600 14px/1 var(--display); border: 0; border-radius: 6px; padding: 10px 14px; cursor: pointer;
+  background: var(--ink); color: var(--paper); }
+button.copy:focus-visible { outline: 2px solid var(--murram); outline-offset: 2px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 20px; align-items: start; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+.post { min-width: 0; font-size: 16px; }
+.post p { margin: 0 0 .8em; white-space: pre-line; }
+.tweet { font: 16px/1.5 var(--display); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; background: var(--paper); }
+.tweet p { margin: 0 0 .7em; }
+figure { margin: 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--rule); background: #fdfdfb; }
+figcaption, .file { font: 13px/1.45 var(--display); color: var(--muted); margin-top: 6px; }
+.file code { font-family: var(--mono); color: var(--ink); }
+.article { max-width: 68ch; }
+.article h3.art-title { font: 800 28px/1.15 var(--display); margin: 0 0 .3em; text-wrap: balance; }
+.article h4 { font: 800 19px/1.25 var(--display); margin: 1.4em 0 .4em; text-wrap: balance; }
+.article p, .article li { margin: 0 0 .9em; }
+.article ul { padding-left: 1.2em; margin: 0 0 1em; }
+.article hr { border: 0; border-top: 1px solid var(--rule); margin: 1em 0; }
+.article figure { margin: 1em 0 1.3em; }
+details > summary { font: 600 15px/1.4 var(--display); cursor: pointer; color: var(--murram); }
+.toast { font: 600 13px/1 var(--display); color: var(--ok); min-height: 1em; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Highways that became high streets · launch posts</div>
+    <h1>Corridor Post Drafts</h1>
+    <p class="lede">Six drafts from the Uganda trade-corridor study, each with its animation. Copy a draft, attach the file named under its media, and post.</p>
+    <div class="todo"><b>Before posting:</b> replace <b>[Substack link]</b> in X post 4 and the LinkedIn post once the article is live. The interactive map (gavacharles.github.io/uganda-trade-corridors) and the GitHub repository are public and already linked.</div>
+    <nav aria-label="Drafts"><a href="#x1">X · fuel and carbon</a><a href="#x2">X · road safety</a><a href="#x3">X · interactive map</a><a href="#x4">X · Substack link</a><a href="#linkedin">LinkedIn</a><a href="#substack">Substack article</a></nav>
+  </header>
+
+  <section id="x1">
+    <div class="head"><h2>X post 1 · fuel and carbon</h2><span class="meta"><span class="fit">265 / 280</span> characters</span></div>
+    <div class="split">
+      <figure><img src="media/a6_fuel_meter.gif" width="960" height="540" alt="Chart animation: diesel burnt on one Kampala to Malaba truck trip, as modelled and on an open road, with counters for extra litres, CO2 and cost"><p class="file">Attach <code>social/media/a6_fuel_meter.gif</code> (1.7 MB) or the MP4.</p></figure>
+      <div class="post"><div class="tweet"><p>Every hump, junction and village crossing makes a 40-tonne truck brake, then burn diesel to get back up to speed.</p><p>One loaded trip, Kampala to Malaba: 60 extra litres, +161 kg of CO₂.</p><p>Across Uganda&#x27;s five trade roads: ~138,000 t of CO₂ and US$70M of diesel a year.</p></div><button class="copy" data-key="x1">Copy post</button><div class="toast" aria-live="polite"></div></div>
+    </div>
+  </section>
+
+  <section id="x2">
+    <div class="head"><h2>X post 2 · road safety</h2><span class="meta"><span class="fit">270 / 280</span> characters</span></div>
+    <div class="split">
+      <figure><img src="media/s1_safety_card.png" width="1600" height="900" alt="Card: for each road, the share of roadside residents and the larger share of road-safety exposure in settlements between towns"><p class="file">Attach <code>social/media/s1_safety_card.png</code>.</p></figure>
+      <div class="post"><div class="tweet"><p>Towns slow trucks down. The villages between them don&#x27;t.</p><p>On Uganda&#x27;s trade roads, trucks pass homes and schools at 55–60 km/h. Those settlements hold 49–76% of roadside residents but 65–79% of the safety risk.</p><p>688 half-km stretches: a school, fast trucks, no crossing.</p></div><button class="copy" data-key="x2">Copy post</button><div class="toast" aria-live="polite"></div></div>
+    </div>
+  </section>
+
+  <section id="x3">
+    <div class="head"><h2>X post 3 · the interactive map</h2><span class="meta"><span class="fit">239 / 280</span> characters, link counted as 23</span></div>
+    <div class="split">
+      <figure><img src="media/a5_bottleneck_pins.gif" width="960" height="540" alt="Map animation: the worst 2 km stretches on Uganda's five trade roads pinned one by one with minutes lost and causes"><p class="file">Attach <code>social/media/a5_bottleneck_pins.gif</code> (1.6 MB) or the MP4.</p></figure>
+      <div class="post"><div class="tweet"><p>Where do Uganda&#x27;s trade roads lose the most time?</p><p>Five weighbridges top the list, each costing a loaded truck 10–12 minutes. Then Kampala&#x27;s Nakawa signals.</p><p>Explore every 500 m of the five corridors, free and open:
+https://gavacharles.github.io/uganda-trade-corridors/</p></div><button class="copy" data-key="x3">Copy post</button><div class="toast" aria-live="polite"></div></div>
+    </div>
+  </section>
+
+  <section id="x4">
+    <div class="head"><h2>X post 4 · share the Substack article</h2><span class="meta"><span class="fit">279 / 280</span> characters, link counted as 23</span></div>
+    <div class="split">
+      <figure><img src="media/x1_truck_race.gif" width="810" height="864" alt="Map of Uganda: a loaded truck leaves Kampala on each of five roads beside a truck on open road; roads colour in with minutes lost"><p class="file">Attach <code>social/media/x1_truck_race.gif</code> (1.5 MB), the animation the article opens its truck section with. Replace <b>[Substack link]</b> with the article's address; X shows its preview card below the post.</p></figure>
+      <div class="post"><div class="tweet"><p>New on Substack: Highways that became high streets.</p><p>Uganda&#x27;s five trade roads out of Kampala now run mostly through villages. I measured what that costs in time, diesel and safety, every 500 m, from open data.</p><p>And the road isn&#x27;t even the biggest delay.</p><p>[Substack link]</p></div><button class="copy" data-key="x4">Copy post</button><div class="toast" aria-live="polite"></div></div>
+    </div>
+  </section>
+
+  <section id="linkedin">
+    <div class="head"><h2>LinkedIn</h2><span class="meta">306 words</span></div>
+    <div class="split">
+      <figure><img src="media/a5_bottleneck_pins.gif" width="960" height="540" alt="The bottleneck map animation"><p class="file">Attach <code>social/media/a5_bottleneck_pins.mp4</code>: LinkedIn plays MP4 video, not GIFs.</p></figure>
+      <div class="post"><p>A 40-tonne truck leaves Kampala for the Kenyan border at Malaba. On an open road it would burn 86 litres of diesel. On the real A1 it burns 147.</p><p>The difference is the road&#x27;s second life. Uganda&#x27;s trade corridors were built as highways, but along most of their length they are now village high streets: trading centres, boda boda stages, markets, schools, junctions every few hundred metres.</p><p>I mapped every 500 m of the five main roads out of Kampala, about 1,700 km, using only open data. What I found:</p><p>🛣️ 56–74% of each corridor now runs through roadside settlement. Open road is down to 18–36%, and buildings within 300 m of the road grew another 22–48% between 2016 and 2023.</p><p>⏱️ A loaded truck loses 59–161 minutes per trip to that friction. The five worst stretches are all weighbridges, at 10–12 minutes each.</p><p>⛽ Stop-and-go driving burns about US$70 M of extra diesel a year across the five roads: roughly 138,000 tonnes of CO₂.</p><p>🚸 65–79% of the road-safety risk sits in the villages between towns, where trucks still run at 55–60 km/h. That is also where police place their crash black spots.</p><p>🧭 The bigger delay is off the road. Tracked trucks take 17–93 hours from Kampala to a border; road friction is only 2–14% of that. Borders, rest stops and checks take the rest.</p><p>The cheapest wins are at controls: weigh-in-motion screening (8–16 minutes saved per truck trip) and ending routine police-post stops (4–15). Service roads through the busiest settlement belts cut delay, fuel and risk together. And the stretches that are still open need building control now, before they become the next trading centre.</p><p>You can explore every 500 m yourself, free, on the interactive map:
+https://gavacharles.github.io/uganda-trade-corridors/</p><p>Full write-up: [Substack link]
+Code and data: https://github.com/gavacharles/uganda-trade-corridors</p><p>#Uganda #Transport #TradeCorridors #RoadSafety #ClimateAction #OpenData #EastAfrica</p><button class="copy" data-key="linkedin">Copy post</button><div class="toast" aria-live="polite"></div></div>
+    </div>
+  </section>
+
+  <section id="substack">
+    <div class="head"><h2>Substack article</h2><span class="meta">1158 words · about 6 min read</span></div>
+    <figure><img src="media/cover_substack.png" width="1456" height="1048" alt="Cover: Uganda at night, with every building within 1 km of the five trade corridors glowing so the roads read as strings of light, beside the title Highways that became high streets"><p class="file">Cover image: set <code>social/media/cover_substack.png</code> as the post's cover in Substack (1456 × 1048, Substack's header and preview size).</p></figure>
+    <p class="file">Copy the text, then drop in the six files it names (GIFs and PNGs) from <code>social/media/</code> where the article shows them.</p>
+    <div><button class="copy" data-key="substack">Copy article text</button><div class="toast" aria-live="polite"></div></div>
+    <details open><summary>Read the article</summary><div class="article"><h3 class='art-title'>Highways that became high streets</h3>
+<p><em>Uganda&#x27;s five trade roads out of Kampala now run mostly through villages. Here is what that costs, where, and what would help, measured from open data.</em></p>
+<hr>
+<p>Drive out of Kampala on any of the main roads and you know the pattern. Open road, then a trading centre: boda bodas waiting at the junction, a market on both shoulders, a speed hump, children crossing to school. Then open road again, but shorter each year.</p>
+<p>These are Uganda&#x27;s trade corridors: the A1 to Malaba and the Kenyan border, the A6 north to Elegu and South Sudan, the A2 to Katuna and Rwanda, the A9 to Hoima and the oil region, and the A5 west through Fort Portal and Kasese to Mpondwe and the DR Congo border. Almost everything the country imports and exports moves along them. They were built as highways. Along most of their length, they now also serve as village high streets.</p>
+<p>I wanted to know how much that costs, where, and whether it is getting worse. There is no corridor-wide traffic data to watch, so I measured the causes instead, every 500 metres along about 1,700 km of road, using only open data: OpenStreetMap, 1.5 million Google building footprints, satellite records of built-up land, elevation and rainfall. A transparent travel-time model then turns what is on the ground into minutes for a car and a loaded truck, with a thousand random draws over every assumption.</p>
+<h4>Most of the road is now a street</h4>
+<p>Grouping every 500 m piece by what sits beside it — buildings, shops, junctions, schools, taxi stops — gives three kinds of road: open road, roadside settlement and town. Open road is now only 18–36% of each corridor&#x27;s length. <strong>Between 56% and 74% runs through roadside settlement</strong>, the long belts of trading centres between towns.</p>
+<figure><img src="media/five_roads_growth.gif" width="2000" height="560" alt="the fastest-growing 5 km on each road filling in, 2000–2020" loading="lazy"><figcaption>the fastest-growing 5 km on each road filling in, 2000–2020</figcaption></figure>
+<p>And it is filling in fast. Built-up land within 300 m of the road grew 27–68% between 2000 and 2020. Yearly satellite building counts show no slowdown since: <strong>22–48% more buildings within 300 m of the roads between 2016 and 2023</strong>. Land a kilometre or two back is filling in too, but the roadside gains roughly twice as many new buildings per square kilometre. Today&#x27;s open road is tomorrow&#x27;s trading centre.</p>
+<h4>What it costs a truck</h4>
+<figure><img src="media/x1_truck_race.gif" width="810" height="864" alt="a loaded truck leaving Kampala on every corridor at once, next to the same truck on open road" loading="lazy"><figcaption>a loaded truck leaving Kampala on every corridor at once, next to the same truck on open road</figcaption></figure>
+<p>In light traffic on a dry day, the model puts a loaded truck&#x27;s trip from Kampala to the border (or to Hoima) at <strong>59 to 161 minutes longer than on open road</strong> — 29–64% extra. Malaba loses about two hours, Katuna nearly three, where hills add to the drag.</p>
+<figure><img src="media/a5_bottleneck_pins.gif" width="960" height="540" alt="the worst 2 km stretches for a loaded truck, pinned one by one" loading="lazy"><figcaption>the worst 2 km stretches for a loaded truck, pinned one by one</figcaption></figure>
+<p>The causes differ by road. For cars, roadside activity — the slowing, stopping and turning that comes with a trading centre — is the largest single cause on every corridor. For trucks, the worst single points are the weighbridges. The model assumes about ten minutes per stop; the Northern Corridor Transport Observatory&#x27;s tracking data put the median weighbridge stop at twelve. You can find every one of these stretches, and every 500 m in between, on the interactive map: https://gavacharles.github.io/uganda-trade-corridors/.</p>
+<p>The model checks out against independent trip times: Kampala to Gulu 266 minutes modelled against 286 in routing estimates, Kampala to Kabale 343 against 345. It does not include congestion, which is why Kampala–Jinja trips that really take two to three hours come out at about one and a half.</p>
+<h4>The road is not the biggest delay</h4>
+<p>Here is the finding that surprised me most. Trucks fitted with GPS and electronic cargo seals take <strong>17 to 93 hours</strong> between Kampala and a border, according to the Observatory&#x27;s 2025–26 reports. The model drives the same distances in five to nine hours. Roadside and control friction is only 2–14% of the real trip. The rest is time standing still: rest and meals, border procedures, security and company checks, breakdowns.</p>
+<figure><img src="media/transit_gap.png" width="1970" height="1059" alt="transit_gap.png" loading="lazy"></figure>
+<p>So fixing the road matters — for reliability, fuel and safety — but freight time is won mostly at borders and stops. Crossing at Malaba averaged 48 minutes in 2025. Busia, a few kilometres away, took over two and a half hours.</p>
+<h4>Fuel, carbon and money</h4>
+<figure><img src="media/a6_fuel_meter.gif" width="960" height="540" alt="the diesel meter on one Kampala–Malaba trip, against the same truck on an open road" loading="lazy"><figcaption>the diesel meter on one Kampala–Malaba trip, against the same truck on an open road</figcaption></figure>
+<p>Every hump, junction and village crossing makes a forty-tonne truck brake and accelerate again. A physical fuel model on the same speed profile puts that at <strong>29–75 extra litres of diesel per loaded trip</strong>, a quarter to two fifths of the trip&#x27;s fuel. Across the five roads that is roughly US$70 million of diesel and 140,000 tonnes of CO₂ a year, on top of about US$41 million a year in truck time. (Truck counts come from 2025 station surveys on three of the five roads and are assumed on the other two, so treat these totals as orders of magnitude.)</p>
+<h4>Where people are at risk</h4>
+<figure><img src="media/s1_safety_card.png" width="1600" height="900" alt="where the road-safety risk sits" loading="lazy"><figcaption>where the road-safety risk sits</figcaption></figure>
+<p>Towns have speed limits, so trucks slow down there. In the settlements between towns they still run at 55–60 km/h, past homes, schools and stalls. About 1.2 million people live within 300 m of these roads. Weighting each stretch by the people beside it, the trucks passing and the speed they pass at, <strong>65–79% of the exposure falls in the settlement belts</strong> — and 688 half-kilometre stretches have a school, fast trucks and no mapped crossing.</p>
+<p>The crash black spots that Uganda Police traffic officers have named on these highways tell the same story. They sit in busy trading centres, with dense roadside building and many joining roads, not on fast open bends.</p>
+<h4>What would help</h4>
+<p>The same model can run fixes and report the minutes they save:</p>
+<ul><li><strong>Weigh-in-motion screening</strong> at the weighbridges, so only suspected overloads stop: 8–16 minutes per truck trip.</li><li><strong>Ending routine truck stops at roadside police posts:</strong> 4–15 minutes.</li><li><strong>Service roads and consolidated access through the settlement belts:</strong> 10–23 minutes, and fewer conflicts with people — but 124–281 km of new road per corridor, so start with the worst 20 km.</li><li><strong>Bypassing the worst towns</strong> saves little in light traffic (2–4 minutes); its case is congestion and safety.</li></ul>
+<p>Beyond the road: cutting stopped time at borders and on the way, and controlling building in the road reserve on stretches that are still open, before they become the next trading centre. And rail? Moving freight off these roads does not pay back on today&#x27;s Ugandan traffic alone; its case rests on regional transit growth.</p>
+<h4>How this was done</h4>
+<p>Everything comes from open sources: OpenStreetMap, Google Open Buildings (and its 2016–2023 yearly series), the EU&#x27;s GHSL built-up record, WorldPop, Copernicus elevation and CHIRPS rainfall. Published records — routing estimates, bus timetables, the Northern Corridor Transport Observatory and Uganda Police — are used only to check and scale the results. Congestion, the true number of speed humps and the truck counts on two roads are the main gaps.</p>
+<p>The interactive map lets you inspect every 500 m of the five roads: https://gavacharles.github.io/uganda-trade-corridors/. Code and data: https://github.com/gavacharles/uganda-trade-corridors</p>
+<p><em>Charles Gava is a PhD researcher at the University of Johannesburg.</em></p></div></details>
+  </section>
+</div>
+
+<script>
+const COPY = {"substack": "# Highways that became high streets\n\n*Uganda's five trade roads out of Kampala now run mostly through villages. Here is what that costs, where, and what would help, measured from open data.*\n\n---\n\nDrive out of Kampala on any of the main roads and you know the pattern. Open road, then a trading centre: boda bodas waiting at the junction, a market on both shoulders, a speed hump, children crossing to school. Then open road again, but shorter each year.\n\nThese are Uganda's trade corridors: the A1 to Malaba and the Kenyan border, the A6 north to Elegu and South Sudan, the A2 to Katuna and Rwanda, the A9 to Hoima and the oil region, and the A5 west through Fort Portal and Kasese to Mpondwe and the DR Congo border. Almost everything the country imports and exports moves along them. They were built as highways. Along most of their length, they now also serve as village high streets.\n\nI wanted to know how much that costs, where, and whether it is getting worse. There is no corridor-wide traffic data to watch, so I measured the causes instead, every 500 metres along about 1,700 km of road, using only open data: OpenStreetMap, 1.5 million Google building footprints, satellite records of built-up land, elevation and rainfall. A transparent travel-time model then turns what is on the ground into minutes for a car and a loaded truck, with a thousand random draws over every assumption.\n\n## Most of the road is now a street\n\nGrouping every 500 m piece by what sits beside it \u2014 buildings, shops, junctions, schools, taxi stops \u2014 gives three kinds of road: open road, roadside settlement and town. Open road is now only 18\u201336% of each corridor's length. **Between 56% and 74% runs through roadside settlement**, the long belts of trading centres between towns.\n\n\nAnd it is filling in fast. Built-up land within 300 m of the road grew 27\u201368% between 2000 and 2020. Yearly satellite building counts show no slowdown since: **22\u201348% more buildings within 300 m of the roads between 2016 and 2023**. Land a kilometre or two back is filling in too, but the roadside gains roughly twice as many new buildings per square kilometre. Today's open road is tomorrow's trading centre.\n\n## What it costs a truck\n\n\nIn light traffic on a dry day, the model puts a loaded truck's trip from Kampala to the border (or to Hoima) at **59 to 161 minutes longer than on open road** \u2014 29\u201364% extra. Malaba loses about two hours, Katuna nearly three, where hills add to the drag.\n\n\nThe causes differ by road. For cars, roadside activity \u2014 the slowing, stopping and turning that comes with a trading centre \u2014 is the largest single cause on every corridor. For trucks, the worst single points are the weighbridges. The model assumes about ten minutes per stop; the Northern Corridor Transport Observatory's tracking data put the median weighbridge stop at twelve. You can find every one of these stretches, and every 500 m in between, on the interactive map: https://gavacharles.github.io/uganda-trade-corridors/.\n\nThe model checks out against independent trip times: Kampala to Gulu 266 minutes modelled against 286 in routing estimates, Kampala to Kabale 343 against 345. It does not include congestion, which is why Kampala\u2013Jinja trips that really take two to three hours come out at about one and a half.\n\n## The road is not the biggest delay\n\nHere is the finding that surprised me most. Trucks fitted with GPS and electronic cargo seals take **17 to 93 hours** between Kampala and a border, according to the Observatory's 2025\u201326 reports. The model drives the same distances in five to nine hours. Roadside and control friction is only 2\u201314% of the real trip. The rest is time standing still: rest and meals, border procedures, security and company checks, breakdowns.\n\n\nSo fixing the road matters \u2014 for reliability, fuel and safety \u2014 but freight time is won mostly at borders and stops. Crossing at Malaba averaged 48 minutes in 2025. Busia, a few kilometres away, took over two and a half hours.\n\n## Fuel, carbon and money\n\n\nEvery hump, junction and village crossing makes a forty-tonne truck brake and accelerate again. A physical fuel model on the same speed profile puts that at **29\u201375 extra litres of diesel per loaded trip**, a quarter to two fifths of the trip's fuel. Across the five roads that is roughly US$70 million of diesel and 140,000 tonnes of CO\u2082 a year, on top of about US$41 million a year in truck time. (Truck counts come from 2025 station surveys on three of the five roads and are assumed on the other two, so treat these totals as orders of magnitude.)\n\n## Where people are at risk\n\n\nTowns have speed limits, so trucks slow down there. In the settlements between towns they still run at 55\u201360 km/h, past homes, schools and stalls. About 1.2 million people live within 300 m of these roads. Weighting each stretch by the people beside it, the trucks passing and the speed they pass at, **65\u201379% of the exposure falls in the settlement belts** \u2014 and 688 half-kilometre stretches have a school, fast trucks and no mapped crossing.\n\nThe crash black spots that Uganda Police traffic officers have named on these highways tell the same story. They sit in busy trading centres, with dense roadside building and many joining roads, not on fast open bends.\n\n## What would help\n\nThe same model can run fixes and report the minutes they save:\n\n- **Weigh-in-motion screening** at the weighbridges, so only suspected overloads stop: 8\u201316 minutes per truck trip.\n- **Ending routine truck stops at roadside police posts:** 4\u201315 minutes.\n- **Service roads and consolidated access through the settlement belts:** 10\u201323 minutes, and fewer conflicts with people \u2014 but 124\u2013281 km of new road per corridor, so start with the worst 20 km.\n- **Bypassing the worst towns** saves little in light traffic (2\u20134 minutes); its case is congestion and safety.\n\nBeyond the road: cutting stopped time at borders and on the way, and controlling building in the road reserve on stretches that are still open, before they become the next trading centre. And rail? Moving freight off these roads does not pay back on today's Ugandan traffic alone; its case rests on regional transit growth.\n\n## How this was done\n\nEverything comes from open sources: OpenStreetMap, Google Open Buildings (and its 2016\u20132023 yearly series), the EU's GHSL built-up record, WorldPop, Copernicus elevation and CHIRPS rainfall. Published records \u2014 routing estimates, bus timetables, the Northern Corridor Transport Observatory and Uganda Police \u2014 are used only to check and scale the results. Congestion, the true number of speed humps and the truck counts on two roads are the main gaps.\n\nThe interactive map lets you inspect every 500 m of the five roads: https://gavacharles.github.io/uganda-trade-corridors/. Code and data: https://github.com/gavacharles/uganda-trade-corridors\n\n*Charles Gava is a PhD researcher at the University of Johannesburg.*", "linkedin": "A 40-tonne truck leaves Kampala for the Kenyan border at Malaba. On an open road it would burn 86 litres of diesel. On the real A1 it burns 147.\n\nThe difference is the road's second life. Uganda's trade corridors were built as highways, but along most of their length they are now village high streets: trading centres, boda boda stages, markets, schools, junctions every few hundred metres.\n\nI mapped every 500 m of the five main roads out of Kampala, about 1,700 km, using only open data. What I found:\n\n\ud83d\udee3\ufe0f 56\u201374% of each corridor now runs through roadside settlement. Open road is down to 18\u201336%, and buildings within 300 m of the road grew another 22\u201348% between 2016 and 2023.\n\n\u23f1\ufe0f A loaded truck loses 59\u2013161 minutes per trip to that friction. The five worst stretches are all weighbridges, at 10\u201312 minutes each.\n\n\u26fd Stop-and-go driving burns about US$70 M of extra diesel a year across the five roads: roughly 138,000 tonnes of CO\u2082.\n\n\ud83d\udeb8 65\u201379% of the road-safety risk sits in the villages between towns, where trucks still run at 55\u201360 km/h. That is also where police place their crash black spots.\n\n\ud83e\udded The bigger delay is off the road. Tracked trucks take 17\u201393 hours from Kampala to a border; road friction is only 2\u201314% of that. Borders, rest stops and checks take the rest.\n\nThe cheapest wins are at controls: weigh-in-motion screening (8\u201316 minutes saved per truck trip) and ending routine police-post stops (4\u201315). Service roads through the busiest settlement belts cut delay, fuel and risk together. And the stretches that are still open need building control now, before they become the next trading centre.\n\nYou can explore every 500 m yourself, free, on the interactive map:\nhttps://gavacharles.github.io/uganda-trade-corridors/\n\nFull write-up: [Substack link]\nCode and data: https://github.com/gavacharles/uganda-trade-corridors\n\n#Uganda #Transport #TradeCorridors #RoadSafety #ClimateAction #OpenData #EastAfrica", "x1": "Every hump, junction and village crossing makes a 40-tonne truck brake, then burn diesel to get back up to speed.\n\nOne loaded trip, Kampala to Malaba: 60 extra litres, +161 kg of CO\u2082.\n\nAcross Uganda's five trade roads: ~138,000 t of CO\u2082 and US$70M of diesel a year.", "x2": "Towns slow trucks down. The villages between them don't.\n\nOn Uganda's trade roads, trucks pass homes and schools at 55\u201360 km/h. Those settlements hold 49\u201376% of roadside residents but 65\u201379% of the safety risk.\n\n688 half-km stretches: a school, fast trucks, no crossing.", "x3": "Where do Uganda's trade roads lose the most time?\n\nFive weighbridges top the list, each costing a loaded truck 10\u201312 minutes. Then Kampala's Nakawa signals.\n\nExplore every 500 m of the five corridors, free and open:\nhttps://gavacharles.github.io/uganda-trade-corridors/", "x4": "New on Substack: Highways that became high streets.\n\nUganda's five trade roads out of Kampala now run mostly through villages. I measured what that costs in time, diesel and safety, every 500 m, from open data.\n\nAnd the road isn't even the biggest delay.\n\n[Substack link]"};
+document.querySelectorAll("button.copy").forEach(b => b.addEventListener("click", () => {
+  const t = COPY[b.dataset.key], toast = b.parentElement.querySelector(".toast");
+  const done = msg => { if (toast) { toast.textContent = msg; setTimeout(() => toast.textContent = "", 2500); } };
+  const fallback = () => {
+    const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("aria-label", "Draft text");
+    ta.style.cssText = "width:100%;min-height:8em;margin-top:8px;font:14px/1.5 monospace";
+    b.after(ta); ta.focus(); ta.select(); done("Copy blocked here: the text is selected below, press Cmd+C.");
+  };
+  try { navigator.clipboard.writeText(t).then(() => done("Copied"), fallback); } catch (e) { fallback(); }
+}));
+</script>
+
+</body></html>
