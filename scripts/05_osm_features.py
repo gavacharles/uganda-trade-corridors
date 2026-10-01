@@ -11,6 +11,7 @@ import os, re
 import geopandas as gpd
 import pandas as pd
 import pyogrio
+import shapely
 
 import config as C
 
@@ -68,10 +69,15 @@ zone = gpd.GeoSeries([zone_utm], crs=C.UTM).to_crs(4326)
 MASK = gpd.GeoSeries([zone_utm.buffer(100)], crs=C.UTM).to_crs(4326).iloc[0].simplify(0.0005)
 
 
-def clip(df):
+ZONE = zone.iloc[0]
+shapely.prepare(ZONE)   # one prepared shape: fast tests even when the zone runs to 15,000 km of road
+
+
+def clip(df, repair=False):
     df = df.set_crs(4326, allow_override=True)
-    df["geometry"] = df.geometry.make_valid()  # a few OSM multipolygons are malformed
-    return df[df.intersects(zone.iloc[0])].copy()
+    if repair:   # a few OSM multipolygons are malformed
+        df["geometry"] = df.geometry.make_valid()
+    return df[shapely.intersects(ZONE, df.geometry.values)].copy()
 
 
 # Points
@@ -93,12 +99,12 @@ water = clip(read_osm("lines", where="waterway IS NOT NULL"))
 water = water[["osm_id", "name", "waterway", "geometry"]]
 
 # Areas
-areas = clip(read_osm("multipolygons",
+areas = clip(repair=True, df=read_osm("multipolygons",
     where="amenity = 'marketplace' OR landuse IN ('retail','commercial') OR natural = 'wetland'"))
 areas["kind"] = areas.apply(lambda r: "wetland" if r.natural == "wetland" else
                             ("market" if r.amenity == "marketplace" else "commercial"), axis=1)
 areas = areas[["osm_id", "osm_way_id", "name", "kind", "geometry"]]
-wb = clip(read_osm("multipolygons", where="name IS NOT NULL"))
+wb = clip(read_osm("multipolygons", where="name IS NOT NULL"), repair=True)
 wb = wb[wb.name.str.contains(WEIGH)]
 wb = gpd.GeoDataFrame(dict(osm_id=wb.osm_way_id.fillna(wb.osm_id), name=wb.name, kind="weighbridge", place=None),
                       geometry=wb.geometry.representative_point(), crs=4326)
