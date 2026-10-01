@@ -22,3 +22,13 @@ Five weighbridges top the list, each costing a loaded truck 10–12 minutes. The
 
 Explore every 500 m of the five corridors, free and open:
 https://gavacharles.github.io/uganda-trade-corridors/
+
+## Post 4 · the Substack article — media: x1_truck_race.gif
+
+New on Substack: Highways that became high streets.
+
+Uganda's five trade roads out of Kampala now run mostly through villages. I measured what that costs in time, diesel and safety, every 500 m, from open data.
+
+And the road isn't even the biggest delay.
+
+[Substack link]
