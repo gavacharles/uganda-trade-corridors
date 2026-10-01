@@ -203,7 +203,8 @@ save(fig, "g03_strip_maps.png")
 # all start points within 12 km of each other
 _st = np.array([c["start"] for c in C.CORRIDORS.values()])
 if np.hypot((_st[:, 0, None] - _st[:, 0]) * 111.3, (_st[:, 1, None] - _st[:, 1]) * 110.6).max() > 12:
-    raise SystemExit("corridors start in different places: g04 skipped")
+    print("corridors start in different places: g04 skipped")
+    raise SystemExit(0)   # an intended skip, not a failure
 d = P.merge(tt[["corridor", "piece", "truck_outbound_min"]])
 g = gpd.GeoDataFrame(d, geometry=gpd.points_from_xy(d.lon, d.lat), crs=4326).to_crs(C.UTM)
 d["x"], d["y"] = g.geometry.x / 1000, g.geometry.y / 1000
