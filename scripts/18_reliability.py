@@ -93,7 +93,8 @@ print(top.groupby("corridor").head(3).to_string(index=False))
 
 # Check against documented road floods (inputs/documented_road_floods.csv): where does the
 # stretch holding each event rank on the exposure score within its corridor?
-ev = pd.read_csv(os.path.join(C.ROOT, "inputs", "documented_road_floods.csv"))
+EV_CSV = os.path.join(C.ROOT, "inputs", "documented_road_floods.csv")   # the Uganda study has one; others may not
+ev = pd.read_csv(EV_CSV) if os.path.exists(EV_CSV) else pd.DataFrame(columns=["corridor", "date", "place", "lon", "lat"])
 ev = ev[ev.corridor.isin(C.CORRIDORS)]
 W["pct_rank"] = W.groupby("corridor").fragility.rank(pct=True) * 100
 chk = []
