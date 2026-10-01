@@ -44,6 +44,7 @@ RE, RP, TYP, VAL = R("rail_economics.csv"), R("rail_proximity.csv"), R("typology
 CAUSE, TOT, HOT, GROW = R("travel_time_causes.csv"), R("travel_time_totals.csv"), R("hotspots_mapped.csv"), R("growth_summary.csv")
 STAB, GAP, MIX, FUEL = R("rank_stability.csv"), R("transit_gap.csv"), R("transit_stop_mix.csv"), R("fuel_co2.csv")
 BS, BSM, FLD = R("black_spots_test.csv"), R("black_spots_matched.csv"), R("flood_events_check.csv")
+GT = R("growth_temporal_summary.csv")
 CORR = list(C.CORRIDORS)
 CLAB = [f"{C.CORRIDORS[c]['short']} ({C.CORRIDORS[c]['ref']})" for c in CORR]
 N = len(CORR)
@@ -470,6 +471,30 @@ title(s, "Twenty years of roadside building", "Each corridor's fastest-growing s
 picture(s, os.path.join(FIG, "a1_roadside_growth.gif"), 0.6, 1.95, w=12.1)
 source(s, "figures/a1_roadside_growth.gif. Plays in slide-show mode. A version continued to 2026 on GHSL's projection is in figures/.")
 
+# ---------------------------------------------------------------- NEW growth to 2023
+s = prs.slides.add_slide(BLANK); bg(s, WHITE)
+title(s, "The roadside kept filling in after 2020",
+      "Buildings within 300 m of each road, 2016–2023 (Google Open Buildings 2.5D Temporal, Earth Engine)")
+picture(s, os.path.join(FIG, "f17_growth_temporal.png"), 0.4, 1.85, w=8.6)
+ga = GT[GT.road_type == "all"].set_index("corridor").reindex(CORR)
+gs = GT[GT.road_type == "roadside settlement"].set_index("corridor").reindex(CORR)
+gtw = GT[GT.road_type == "town"].set_index("corridor").reindex(CORR)
+items = [(f"+{rng(ga.buildings_trend_growth_pct)}%", "more buildings within 300 m of the road in 2016–2023 (trend), "
+          f"{rng(ga.buildings_trend_pct_a_year, '{:.1f}')}% a year."),
+         (f"{rng(ga.ghsl_2015_2020_pct_a_year, '{:.1f}')}% a year", "was GHSL's observed rate for 2015–2020: "
+          "its projection to 2026 understates recent building."),
+         (f"{rng(ga.added_ratio_road_to_control, '{:.1f}')}×", "as many new buildings per km² as land 1–2 km back, "
+          "which grows faster in percent only from a lower base."),
+         (f"{int((gs.buildings_trend_growth_pct > gtw.buildings_trend_growth_pct).sum())} of {N}",
+          "roads where settlements between towns grew faster than the towns.")]
+y = 1.95
+for big, t in items:
+    text(s, 9.3, y, 3.5, 0.5, big, size=22, bold=True, color=LAT, font=HEAD)
+    text(s, 9.3, y + 0.48, 3.5, 0.8, t, size=12.5, color=INK)
+    y += 1.22
+source(s, "outputs/growth_temporal_summary.csv (scripts/27_growth_temporal.py). Counts from building_fractional_count; "
+       "trend = straight-line fit over 2016–2023, which damps year-to-year model noise.")
+
 # ---------------------------------------------------------------- 11c time map
 s = prs.slides.add_slide(BLANK); bg(s, WHITE)
 title(s, "When distance becomes time", "The corridors redrawn so that length is loaded-truck travel time; dots mark each hour")
@@ -661,7 +686,7 @@ lims = [
     ("Congestion is not modelled", "Results describe light traffic; peak-hour delay near Kampala is larger."),
     ("Speed humps are under-mapped", "One per town piece is assumed (range 0–2); they drive the Malaba fuel figure."),
     ("Truck counts are partly assumed", "Surveyed on the Malaba, Katuna and Bwera roads; assumed on the Elegu and Hoima roads."),
-    ("Growth data end in 2020", "GHSL's projection to 2026 is slower than the observed trend."),
+    ("Growth after 2020 is modelled", "Open Buildings Temporal is a Sentinel-2 model, noisy year to year; trends are fitted."),
 ]
 y = 1.55
 for h, d in lims:
@@ -672,8 +697,7 @@ for h, d in lims:
 box(s, 8.3, 1.55, 4.4, 5.05, DARK)
 text(s, 8.65, 1.85, 3.8, 4.6, [
     [("Next steps", {"bold": True, "size": 22, "color": WHITE, "font": HEAD})],
-    "Count speed humps from Mapillary street-level detections",
-    "Observe 2016–2023 growth with Open Buildings 2.5D Temporal",
+    "Count speed humps (UNRA asset inventory or street-level imagery)",
     "Swap GLO-30 for FABDEM terrain",
     "Apply the method to eleven capitals (regional paper)",
     "Write up the paper",
