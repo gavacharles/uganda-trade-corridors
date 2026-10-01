@@ -4,3 +4,5 @@ data/
 __pycache__/
 .DS_Store
 regional-corridors/data/
+/data
+regional-corridors/data

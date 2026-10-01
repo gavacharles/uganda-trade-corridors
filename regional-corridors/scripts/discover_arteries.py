@@ -18,6 +18,10 @@ For each hub city:
      to data/corridors.gpkg, one layer per artery, with an empty _fill layer, which is what
      02_segments.py reads; data/arteries.json lists start, end, route number and length.
 
+Large countries make one run slow, so hubs can be run one at a time and then merged:
+    python scripts/discover_arteries.py --hubs=pretoria      # writes data/arteries/pretoria.json/.gpkg
+    python scripts/discover_arteries.py --merge              # all hubs -> data/arteries.json, corridors.gpkg
+
 config.py builds CORRIDORS from data/arteries.json, so the rest of the pipeline runs as usual:
     python scripts/discover_arteries.py && python run.py 02 03 04 05 06 08 09 10 ...
 """
@@ -68,9 +72,37 @@ PINNED = [
     ("maputo", "EN4", "Ressano Garcia", (31.9900, -25.4400)), ("gaborone", "A1", "Ramokgwebana", (27.6000, -20.6000)),
 ]
 LIST_ONLY = "--list" in sys.argv   # print the arteries, write nothing
+MERGE = "--merge" in sys.argv      # combine the per-hub results in data/arteries/ into the final files
 ONLY = next((a.split("=", 1)[1].split(",") for a in sys.argv if a.startswith("--hubs=")), None)
 if ONLY:
     HUBS = {k: v for k, v in HUBS.items() if k in ONLY}
+
+HUB_DIR = os.path.join(DATA, "arteries")
+
+
+def write(out_json, layers, json_path, gpkg):
+    json.dump(out_json, open(json_path, "w"), indent=1)
+    if os.path.exists(gpkg):
+        os.remove(gpkg)
+    for name, ways in layers.items():
+        cols = ["osm_id", "name", "highway", "ref", "lanes", "maxspeed", "surface", "oneway", "geometry"]
+        ways[cols].to_file(gpkg, layer=name, driver="GPKG")
+        ways[cols].iloc[:0].to_file(gpkg, layer=name + "_fill", driver="GPKG")
+
+
+if MERGE:   # every hub must have been run with --hubs=<hub>
+    out_json, layers = [], {}
+    for hub in HUBS:
+        js = os.path.join(HUB_DIR, f"{hub}.json")
+        if not os.path.exists(js):
+            raise SystemExit(f"{hub}: not discovered yet (run --hubs={hub})")
+        part = json.load(open(js))
+        out_json += part
+        for a in part:
+            layers[a["name"]] = gpd.read_file(os.path.join(HUB_DIR, f"{hub}.gpkg"), layer=a["name"])
+    write(out_json, layers, os.path.join(DATA, "arteries.json"), os.path.join(DATA, "corridors.gpkg"))
+    print(f"merged {len(out_json)} arteries from {len(HUBS)} hubs ({sum(a['km'] for a in out_json):,.0f} km)")
+    raise SystemExit
 
 countries = gpd.read_file(os.path.join(DATA, "ne_admin0", "ne_10m_admin_0_countries.shp"))
 out_json, layers = [], {}
@@ -207,13 +239,14 @@ for hub, (region, admin, extract, lon, lat) in HUBS.items():
 
 if LIST_ONLY:
     raise SystemExit
-json.dump(out_json, open(os.path.join(DATA, "arteries.json"), "w"), indent=1)
-gpkg = os.path.join(DATA, "corridors.gpkg")
-if os.path.exists(gpkg):
-    os.remove(gpkg)
-for name, ways in layers.items():
-    cols = ["osm_id", "name", "highway", "ref", "lanes", "maxspeed", "surface", "oneway", "geometry"]
-    ways[cols].to_file(gpkg, layer=name, driver="GPKG")
-    ways[cols].iloc[:0].to_file(gpkg, layer=name + "_fill", driver="GPKG")
+if ONLY:   # one run per hub keeps each run short; --merge combines them
+    os.makedirs(HUB_DIR, exist_ok=True)
+    for hub in HUBS:
+        part = [a for a in out_json if a["hub"] == hub]
+        write(part, {a["name"]: layers[a["name"]] for a in part},
+              os.path.join(HUB_DIR, f"{hub}.json"), os.path.join(HUB_DIR, f"{hub}.gpkg"))
+        print(f"wrote {len(part)} arteries for {hub} to data/arteries/{hub}.json")
+    raise SystemExit
+write(out_json, layers, os.path.join(DATA, "arteries.json"), os.path.join(DATA, "corridors.gpkg"))
 print(f"wrote {len(out_json)} arteries to data/arteries.json and data/corridors.gpkg "
       f"({sum(a['km'] for a in out_json):,.0f} km)")
