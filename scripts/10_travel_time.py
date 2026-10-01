@@ -36,21 +36,31 @@ N_DRAWS = 1000
 RNG = np.random.default_rng(42)
 
 
+CORR_ORDER = P.corridor.unique()
+CORR_CODE = pd.Categorical(P.corridor, categories=CORR_ORDER).codes
+
+
+def by_corridor(x):
+    """Sum a per-piece array within each corridor (in CORR_ORDER)."""
+    return np.bincount(CORR_CODE, weights=x, minlength=len(CORR_ORDER))
+
+
 def totals(p):
-    """Corridor minutes for every vehicle/direction, all causes on, each cause off, and wet."""
+    """Corridor minutes for every vehicle/direction, all causes on, each cause off, and wet.
+    Each cause is evaluated once over all pieces and then summed by corridor, so the cost grows
+    with the number of pieces, not pieces x corridors (54 corridors in the regional study)."""
     rows = []
     for veh in ("car", "truck"):
         for direction in ("outbound", "inbound"):
-            base = piece_minutes(p, veh, direction)
-            ideal = piece_minutes(p, veh, direction, off=CAUSES)
-            wet = piece_minutes(p, veh, direction, wet=True)
-            for corridor in P.corridor.unique():
-                m = (P.corridor == corridor).to_numpy()
+            base = by_corridor(piece_minutes(p, veh, direction))
+            ideal = by_corridor(piece_minutes(p, veh, direction, off=CAUSES))
+            wet = by_corridor(piece_minutes(p, veh, direction, wet=True))
+            off = {c: by_corridor(piece_minutes(p, veh, direction, off=(c,))) for c in CAUSES}
+            for j, corridor in enumerate(CORR_ORDER):
                 r = dict(corridor=corridor, vehicle=veh, direction=direction,
-                         minutes=base[m].sum(), open_road_minutes=ideal[m].sum(),
-                         wet_extra=wet[m].sum() - base[m].sum())
+                         minutes=base[j], open_road_minutes=ideal[j], wet_extra=wet[j] - base[j])
                 for c in CAUSES:
-                    r[c] = base[m].sum() - piece_minutes(p, veh, direction, off=(c,))[m].sum()
+                    r[c] = base[j] - off[c][j]
                 rows.append(r)
     return pd.DataFrame(rows)
 
