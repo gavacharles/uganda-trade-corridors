@@ -15,7 +15,7 @@ Dar es Salaam is included next to Dodoma because most Tanzanian trade roads leav
 
 **How far.**
 - *Headline comparison*: the first 200 km of every artery, the same length everywhere.
-- *Trade corridors*: the main freight routes run their full length inside the country. They are pinned by hub, route number and end point (the `PINNED` list in `scripts/discover_arteries.py`). Examples are Nairobi–Mombasa and Nairobi–Malaba, Dar es Salaam–Tunduma, Johannesburg–Durban, Pretoria–Beitbridge, Lusaka–Nakonde and Windhoek–Walvis Bay. Kampala's four are the Uganda study's corridors.
+- *Trade corridors*: the main freight routes run their full length inside the country. They are pinned by hub, route number and end point (the `PINNED` list in `scripts/discover_arteries.py`). Examples are Nairobi–Mombasa and Nairobi–Malaba, Dar es Salaam–Tunduma, Johannesburg–Durban, Pretoria–Beitbridge, Lusaka–Nakonde and Windhoek–Walvis Bay. Kampala's five are the Uganda study's corridors.
 
 **Method.** Same pieces, causes, travel-time model, Monte Carlo, scenarios, reliability and safety exposure as the Uganda study. The difference is that road types are clustered jointly across all hubs, so "roadside settlement" means the same thing everywhere.
 
