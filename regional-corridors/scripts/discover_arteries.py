@@ -61,6 +61,7 @@ HUBS = {
 PINNED = [
     ("kampala", "A1", "Malaba", (34.2790, 0.6380)), ("kampala", "A6", "Elegu", (32.0800, 3.5750)),
     ("kampala", "A2", "Katuna", (30.0000, -1.4200)), ("kampala", "A9", "Hoima", (31.3520, 1.4320)),
+    ("kampala", "A5", "Bwera", (29.7202, 0.0413)),
     ("nairobi", "A8", "Mombasa", (39.6726, -4.0584)), ("nairobi", "A8", "Malaba", (34.2706, 0.6360)),
     ("kigali", "NR3", "Gatuna", (30.0117, -1.4248)), ("kigali", "", "Rusumo", (30.7830, -2.3800)),
     ("dar_es_salaam", "T1", "Tunduma", (32.7700, -9.3000)), ("dar_es_salaam", "", "Dodoma", (35.7516, -6.1630)),
