@@ -53,5 +53,11 @@ Made by `scripts/figures.py` (after `run.py ... 26` and `scripts/compare.py`); e
 | `figures/r06_trade_corridors.png` | The main freight routes side by side: minutes, diesel and exposure per km |
 | `figures/r10_country_<iso>.png` | One sheet per country: roads coloured by delay, bottlenecks pinned, causes per road |
 | `figures/c01`–`c04` | The East–Southern comparison from `compare.py` |
+| `figures/countries/<iso>/01`–`12` | The paper-1 figure families one country at a time (`figures_by_country.py`): typology, growth, causes, hotspots map, scenarios, costs, reliability, safety, fuel and CO₂, waterfall, rank stability, strip maps |
+| `figures/compare/k01`–`k09` | Country against country, one dot per road with the country median: delay, roadside, growth and controls, safety, fuel and CO₂, cost and reliability, fixes, cause mix, road types |
+| `figures/by_hub/<hub>_1`–`_4` | Every road in its own panel (`figures_by_hub.py`): km-by-km profile, causes, safety and fuel along the road, rain by month and fixes |
+| `figures/closeups/c_<iso>.png`, `closeups/<iso>/` | 4 km close-ups of the worst stretches per country, as paper 1's m03 (`closeups.py`): buildings at footprint size, joining roads, water, controls; at most two weighbridges per country |
+
+The shared scripts' all-roads figures (`f02`–`f16`, `g01`–`g03`) are kept but are unreadable with 54 roads; use the country and hub sheets instead.
 
 Caveats that the figures carry: signals, crossings, humps, police posts and weighbridges come from OSM, mapped far more densely in South Africa (and schools in Uganda); speed humps and stop times are assumptions; trucks per day are one assumed figure for every artery; population is GHS-POP 2025.
