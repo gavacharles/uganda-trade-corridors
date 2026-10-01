@@ -120,11 +120,13 @@ towns["truck_excess_central"] = [(truck0[P.index.get_indexer(ix)] - truck_open[P
                                  for ix in towns.idx]
 top2 = towns.sort_values("truck_excess_central", ascending=False).groupby("corridor").head(2)
 top2_idx = np.concatenate(top2.idx.to_list())
-cmask = {c: (P.corridor == c).to_numpy() for c in CORR}
+CODE = pd.Categorical(P.corridor, categories=list(CORR)).codes
 
 
 def corridor_sums(t):
-    return {c: t[cmask[c]].sum() for c in CORR}
+    """Sum a per-piece array within each corridor, in one pass over the pieces."""
+    v = np.bincount(CODE, weights=t, minlength=len(CORR))
+    return {c: v[j] for j, c in enumerate(CORR)}
 
 
 def scenario_times(p, veh):
@@ -189,14 +191,15 @@ print(out[out.vehicle == "truck"].to_string(index=False))
 
 # ---- Each town bypassed on its own (central case plus interval)
 bt = []
+PC = {c: P[P.corridor == c] for c in CORR}   # each town is costed on its own corridor's pieces only
 for t in towns.itertuples():
     for veh in ("car", "truck"):
         vals = []
         for i in range(101):
             p = with_scen(CENTRAL) if i == 0 else with_scen(draw(RNG), RNG)
-            m = cmask[t.corridor]
-            before = piece_minutes(p, veh, "outbound")[m].sum()
-            after = piece_minutes(p, veh, "outbound", d=bypassed(P, t.idx, p))[m].sum() + 2 * p["bypass_junction_s"] / 60
+            pc = PC[t.corridor]
+            before = piece_minutes(p, veh, "outbound", d=pc).sum()
+            after = piece_minutes(p, veh, "outbound", d=bypassed(pc, t.idx, p)).sum() + 2 * p["bypass_junction_s"] / 60
             vals.append(before - after)
         bt.append(dict(corridor=t.corridor, town=t.town, km_from=t.km_from, km_to=t.km_to, town_km=t.km,
                        vehicle=veh, minutes_saved=round(vals[0], 2), p5=round(np.quantile(vals[1:], 0.05), 2),
