@@ -1,0 +1,2161 @@
+corridor,vehicle,direction,cause,minutes,p5,p95
+dar_es_salaam_road_dodoma,car,outbound,town speed limit,25.4,9.2,48.4
+dar_es_salaam_road_dodoma,car,outbound,roadside activity,11.1,5.8,23.9
+dar_es_salaam_road_dodoma,car,outbound,joining roads,6.3,2.5,12.9
+dar_es_salaam_road_dodoma,car,outbound,signals and crossings,14.4,9.6,21.8
+dar_es_salaam_road_dodoma,car,outbound,speed humps (assumed),21.9,2.1,51.4
+dar_es_salaam_road_dodoma,car,outbound,police posts,0.3,0.1,0.9
+dar_es_salaam_road_dodoma,car,outbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_road_dodoma,car,outbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_road_dodoma,car,outbound,curves,0.2,0.1,0.5
+dar_es_salaam_road_dodoma,car,outbound,rain (wet day),40.3,21.0,62.7
+dar_es_salaam_t1_tunduma,car,outbound,town speed limit,32.5,10.3,67.0
+dar_es_salaam_t1_tunduma,car,outbound,roadside activity,36.0,18.6,72.9
+dar_es_salaam_t1_tunduma,car,outbound,joining roads,12.6,5.0,27.3
+dar_es_salaam_t1_tunduma,car,outbound,signals and crossings,25.1,18.2,35.1
+dar_es_salaam_t1_tunduma,car,outbound,speed humps (assumed),31.3,3.0,73.7
+dar_es_salaam_t1_tunduma,car,outbound,police posts,0.3,0.1,0.9
+dar_es_salaam_t1_tunduma,car,outbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t1_tunduma,car,outbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_t1_tunduma,car,outbound,curves,4.8,1.9,8.9
+dar_es_salaam_t1_tunduma,car,outbound,rain (wet day),81.7,42.1,126.8
+dar_es_salaam_t7_lindi,car,outbound,town speed limit,6.2,1.2,14.1
+dar_es_salaam_t7_lindi,car,outbound,roadside activity,5.4,2.8,11.8
+dar_es_salaam_t7_lindi,car,outbound,joining roads,2.4,1.0,5.9
+dar_es_salaam_t7_lindi,car,outbound,signals and crossings,3.6,1.9,6.7
+dar_es_salaam_t7_lindi,car,outbound,speed humps (assumed),7.2,0.7,16.9
+dar_es_salaam_t7_lindi,car,outbound,police posts,0.2,0.0,0.5
+dar_es_salaam_t7_lindi,car,outbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t7_lindi,car,outbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_t7_lindi,car,outbound,curves,0.3,0.0,1.3
+dar_es_salaam_t7_lindi,car,outbound,rain (wet day),17.6,9.1,27.3
+dodoma_t3_morogoro,car,outbound,town speed limit,6.1,2.3,11.2
+dodoma_t3_morogoro,car,outbound,roadside activity,6.3,3.3,12.5
+dodoma_t3_morogoro,car,outbound,joining roads,2.7,1.1,4.9
+dodoma_t3_morogoro,car,outbound,signals and crossings,0.3,0.2,0.6
+dodoma_t3_morogoro,car,outbound,speed humps (assumed),4.8,0.5,11.3
+dodoma_t3_morogoro,car,outbound,police posts,0.0,0.0,0.0
+dodoma_t3_morogoro,car,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_morogoro,car,outbound,hills (trucks),0.0,0.0,0.0
+dodoma_t3_morogoro,car,outbound,curves,0.0,0.0,0.0
+dodoma_t3_morogoro,car,outbound,rain (wet day),17.0,8.8,26.5
+dodoma_t3_rusomo,car,outbound,town speed limit,6.3,2.3,11.4
+dodoma_t3_rusomo,car,outbound,roadside activity,2.5,1.4,4.9
+dodoma_t3_rusomo,car,outbound,joining roads,1.2,0.5,2.2
+dodoma_t3_rusomo,car,outbound,signals and crossings,1.4,0.9,2.5
+dodoma_t3_rusomo,car,outbound,speed humps (assumed),4.9,0.5,11.6
+dodoma_t3_rusomo,car,outbound,police posts,0.0,0.0,0.0
+dodoma_t3_rusomo,car,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_rusomo,car,outbound,hills (trucks),0.0,0.0,0.0
+dodoma_t3_rusomo,car,outbound,curves,0.0,0.0,0.1
+dodoma_t3_rusomo,car,outbound,rain (wet day),16.4,8.5,25.4
+dodoma_t5_arusha,car,outbound,town speed limit,3.8,1.2,7.9
+dodoma_t5_arusha,car,outbound,roadside activity,3.5,1.8,7.4
+dodoma_t5_arusha,car,outbound,joining roads,1.1,0.4,2.7
+dodoma_t5_arusha,car,outbound,signals and crossings,0.0,0.0,0.0
+dodoma_t5_arusha,car,outbound,speed humps (assumed),3.7,0.4,8.8
+dodoma_t5_arusha,car,outbound,police posts,0.0,0.0,0.0
+dodoma_t5_arusha,car,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_arusha,car,outbound,hills (trucks),0.0,0.0,0.0
+dodoma_t5_arusha,car,outbound,curves,5.2,2.0,8.9
+dodoma_t5_arusha,car,outbound,rain (wet day),16.9,8.7,26.2
+dodoma_t5_iringa,car,outbound,town speed limit,4.9,1.6,8.9
+dodoma_t5_iringa,car,outbound,roadside activity,3.2,1.7,6.5
+dodoma_t5_iringa,car,outbound,joining roads,1.6,0.7,3.0
+dodoma_t5_iringa,car,outbound,signals and crossings,0.7,0.4,1.2
+dodoma_t5_iringa,car,outbound,speed humps (assumed),4.0,0.4,9.4
+dodoma_t5_iringa,car,outbound,police posts,0.0,0.0,0.0
+dodoma_t5_iringa,car,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_iringa,car,outbound,hills (trucks),0.0,0.0,0.0
+dodoma_t5_iringa,car,outbound,curves,4.7,2.3,7.4
+dodoma_t5_iringa,car,outbound,rain (wet day),16.9,8.7,26.3
+gaborone_a12_326_km,car,outbound,town speed limit,5.1,2.0,9.2
+gaborone_a12_326_km,car,outbound,roadside activity,1.7,0.9,3.4
+gaborone_a12_326_km,car,outbound,joining roads,1.6,0.6,3.0
+gaborone_a12_326_km,car,outbound,signals and crossings,22.6,13.3,32.4
+gaborone_a12_326_km,car,outbound,speed humps (assumed),4.0,0.4,9.4
+gaborone_a12_326_km,car,outbound,police posts,0.0,0.0,0.0
+gaborone_a12_326_km,car,outbound,weighbridge,0.0,0.0,0.0
+gaborone_a12_326_km,car,outbound,hills (trucks),0.0,0.0,0.0
+gaborone_a12_326_km,car,outbound,curves,0.2,0.1,0.6
+gaborone_a12_326_km,car,outbound,rain (wet day),16.1,8.3,24.9
+gaborone_a1_121_km,car,outbound,town speed limit,3.4,1.7,5.6
+gaborone_a1_121_km,car,outbound,roadside activity,1.5,0.8,2.8
+gaborone_a1_121_km,car,outbound,joining roads,1.1,0.4,1.9
+gaborone_a1_121_km,car,outbound,signals and crossings,12.9,8.2,18.5
+gaborone_a1_121_km,car,outbound,speed humps (assumed),2.3,0.2,5.3
+gaborone_a1_121_km,car,outbound,police posts,0.0,0.0,0.0
+gaborone_a1_121_km,car,outbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_121_km,car,outbound,hills (trucks),0.0,0.0,0.0
+gaborone_a1_121_km,car,outbound,curves,0.3,0.2,0.6
+gaborone_a1_121_km,car,outbound,rain (wet day),9.9,5.1,15.3
+gaborone_a1_ramokgwebana,car,outbound,town speed limit,6.4,3.1,10.2
+gaborone_a1_ramokgwebana,car,outbound,roadside activity,2.0,1.1,3.5
+gaborone_a1_ramokgwebana,car,outbound,joining roads,2.5,1.0,4.1
+gaborone_a1_ramokgwebana,car,outbound,signals and crossings,13.7,8.7,19.5
+gaborone_a1_ramokgwebana,car,outbound,speed humps (assumed),4.0,0.4,9.4
+gaborone_a1_ramokgwebana,car,outbound,police posts,0.5,0.1,1.4
+gaborone_a1_ramokgwebana,car,outbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,outbound,hills (trucks),0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,outbound,curves,0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,outbound,rain (wet day),37.9,19.6,58.7
+harare_a1_chirundu,car,outbound,town speed limit,3.8,1.6,6.7
+harare_a1_chirundu,car,outbound,roadside activity,2.1,1.1,4.1
+harare_a1_chirundu,car,outbound,joining roads,2.4,0.9,4.1
+harare_a1_chirundu,car,outbound,signals and crossings,6.5,4.0,9.4
+harare_a1_chirundu,car,outbound,speed humps (assumed),2.8,0.3,6.6
+harare_a1_chirundu,car,outbound,police posts,0.3,0.1,0.9
+harare_a1_chirundu,car,outbound,weighbridge,0.0,0.0,0.0
+harare_a1_chirundu,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_a1_chirundu,car,outbound,curves,3.4,1.6,6.8
+harare_a1_chirundu,car,outbound,rain (wet day),27.2,13.9,42.6
+harare_a4_beitbridge,car,outbound,town speed limit,4.7,2.2,7.6
+harare_a4_beitbridge,car,outbound,roadside activity,2.7,1.5,5.0
+harare_a4_beitbridge,car,outbound,joining roads,3.2,1.3,5.4
+harare_a4_beitbridge,car,outbound,signals and crossings,1.0,0.4,1.9
+harare_a4_beitbridge,car,outbound,speed humps (assumed),3.1,0.3,7.2
+harare_a4_beitbridge,car,outbound,police posts,1.2,0.2,3.3
+harare_a4_beitbridge,car,outbound,weighbridge,0.0,0.0,0.0
+harare_a4_beitbridge,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_a4_beitbridge,car,outbound,curves,0.4,0.2,0.7
+harare_a4_beitbridge,car,outbound,rain (wet day),43.6,22.4,67.7
+harare_p1_mucumbura,car,outbound,town speed limit,1.0,0.3,1.8
+harare_p1_mucumbura,car,outbound,roadside activity,2.4,1.3,4.3
+harare_p1_mucumbura,car,outbound,joining roads,1.6,0.6,2.7
+harare_p1_mucumbura,car,outbound,signals and crossings,0.5,0.3,0.7
+harare_p1_mucumbura,car,outbound,speed humps (assumed),0.8,0.1,1.9
+harare_p1_mucumbura,car,outbound,police posts,0.5,0.1,1.4
+harare_p1_mucumbura,car,outbound,weighbridge,0.0,0.0,0.0
+harare_p1_mucumbura,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_p1_mucumbura,car,outbound,curves,0.4,0.1,1.2
+harare_p1_mucumbura,car,outbound,rain (wet day),15.4,7.9,24.0
+harare_r2_plumtree,car,outbound,town speed limit,2.3,0.9,4.1
+harare_r2_plumtree,car,outbound,roadside activity,1.8,1.0,3.5
+harare_r2_plumtree,car,outbound,joining roads,1.5,0.6,2.6
+harare_r2_plumtree,car,outbound,signals and crossings,1.1,0.7,1.9
+harare_r2_plumtree,car,outbound,speed humps (assumed),1.7,0.2,4.1
+harare_r2_plumtree,car,outbound,police posts,0.3,0.1,0.9
+harare_r2_plumtree,car,outbound,weighbridge,0.0,0.0,0.0
+harare_r2_plumtree,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_r2_plumtree,car,outbound,curves,0.3,0.2,0.6
+harare_r2_plumtree,car,outbound,rain (wet day),15.2,7.9,23.5
+harare_r4_nyamapanda,car,outbound,town speed limit,1.2,0.2,2.5
+harare_r4_nyamapanda,car,outbound,roadside activity,2.4,1.3,4.5
+harare_r4_nyamapanda,car,outbound,joining roads,1.9,0.8,3.3
+harare_r4_nyamapanda,car,outbound,signals and crossings,1.7,1.1,2.8
+harare_r4_nyamapanda,car,outbound,speed humps (assumed),1.2,0.1,2.8
+harare_r4_nyamapanda,car,outbound,police posts,0.5,0.1,1.4
+harare_r4_nyamapanda,car,outbound,weighbridge,0.0,0.0,0.0
+harare_r4_nyamapanda,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_r4_nyamapanda,car,outbound,curves,0.1,0.0,0.2
+harare_r4_nyamapanda,car,outbound,rain (wet day),15.6,8.0,24.4
+harare_r5_mutare,car,outbound,town speed limit,2.7,1.1,4.8
+harare_r5_mutare,car,outbound,roadside activity,1.9,1.0,3.6
+harare_r5_mutare,car,outbound,joining roads,1.8,0.7,3.0
+harare_r5_mutare,car,outbound,signals and crossings,1.0,0.4,1.9
+harare_r5_mutare,car,outbound,speed humps (assumed),2.0,0.2,4.7
+harare_r5_mutare,car,outbound,police posts,0.3,0.1,0.9
+harare_r5_mutare,car,outbound,weighbridge,0.0,0.0,0.0
+harare_r5_mutare,car,outbound,hills (trucks),0.0,0.0,0.0
+harare_r5_mutare,car,outbound,curves,0.0,0.0,0.2
+harare_r5_mutare,car,outbound,rain (wet day),15.5,8.0,24.0
+johannesburg_n12_de_rust,car,outbound,town speed limit,7.1,3.7,11.0
+johannesburg_n12_de_rust,car,outbound,roadside activity,2.4,1.3,4.3
+johannesburg_n12_de_rust,car,outbound,joining roads,1.6,0.6,2.7
+johannesburg_n12_de_rust,car,outbound,signals and crossings,48.6,30.6,69.4
+johannesburg_n12_de_rust,car,outbound,speed humps (assumed),4.0,0.4,9.4
+johannesburg_n12_de_rust,car,outbound,police posts,0.0,0.0,0.0
+johannesburg_n12_de_rust,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_de_rust,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n12_de_rust,car,outbound,curves,0.5,0.2,0.7
+johannesburg_n12_de_rust,car,outbound,rain (wet day),15.6,8.1,23.8
+johannesburg_n12_emalahleni,car,outbound,town speed limit,2.4,1.1,4.3
+johannesburg_n12_emalahleni,car,outbound,roadside activity,2.9,1.5,5.8
+johannesburg_n12_emalahleni,car,outbound,joining roads,0.4,0.2,1.1
+johannesburg_n12_emalahleni,car,outbound,signals and crossings,11.8,7.0,16.9
+johannesburg_n12_emalahleni,car,outbound,speed humps (assumed),1.9,0.2,4.4
+johannesburg_n12_emalahleni,car,outbound,police posts,0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,outbound,curves,0.2,0.1,0.3
+johannesburg_n12_emalahleni,car,outbound,rain (wet day),9.7,5.1,15.1
+johannesburg_n17_msauli,car,outbound,town speed limit,0.8,0.2,1.6
+johannesburg_n17_msauli,car,outbound,roadside activity,1.8,1.0,3.6
+johannesburg_n17_msauli,car,outbound,joining roads,1.3,0.5,2.4
+johannesburg_n17_msauli,car,outbound,signals and crossings,3.0,1.7,4.4
+johannesburg_n17_msauli,car,outbound,speed humps (assumed),0.8,0.1,1.9
+johannesburg_n17_msauli,car,outbound,police posts,1.8,0.3,5.2
+johannesburg_n17_msauli,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n17_msauli,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n17_msauli,car,outbound,curves,0.5,0.2,1.1
+johannesburg_n17_msauli,car,outbound,rain (wet day),15.6,8.1,24.2
+johannesburg_n3_durban,car,outbound,town speed limit,5.6,2.8,9.2
+johannesburg_n3_durban,car,outbound,roadside activity,5.0,2.6,9.2
+johannesburg_n3_durban,car,outbound,joining roads,2.5,1.0,4.2
+johannesburg_n3_durban,car,outbound,signals and crossings,58.0,36.3,82.8
+johannesburg_n3_durban,car,outbound,speed humps (assumed),3.6,0.3,8.5
+johannesburg_n3_durban,car,outbound,police posts,3.0,0.5,8.4
+johannesburg_n3_durban,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n3_durban,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n3_durban,car,outbound,curves,0.8,0.4,3.3
+johannesburg_n3_durban,car,outbound,rain (wet day),41.4,21.5,63.6
+johannesburg_r24_rustenburg,car,outbound,town speed limit,6.5,1.8,14.3
+johannesburg_r24_rustenburg,car,outbound,roadside activity,4.5,2.4,10.5
+johannesburg_r24_rustenburg,car,outbound,joining roads,2.0,0.8,5.8
+johannesburg_r24_rustenburg,car,outbound,signals and crossings,73.1,46.6,104.4
+johannesburg_r24_rustenburg,car,outbound,speed humps (assumed),7.2,0.7,16.9
+johannesburg_r24_rustenburg,car,outbound,police posts,0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,outbound,curves,1.6,0.6,3.1
+johannesburg_r24_rustenburg,car,outbound,rain (wet day),11.3,5.9,17.7
+johannesburg_r25_groblersdal,car,outbound,town speed limit,5.1,2.0,10.1
+johannesburg_r25_groblersdal,car,outbound,roadside activity,2.9,1.5,6.6
+johannesburg_r25_groblersdal,car,outbound,joining roads,2.2,0.9,4.9
+johannesburg_r25_groblersdal,car,outbound,signals and crossings,47.9,30.7,68.9
+johannesburg_r25_groblersdal,car,outbound,speed humps (assumed),4.8,0.5,11.3
+johannesburg_r25_groblersdal,car,outbound,police posts,0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,outbound,curves,0.4,0.2,0.9
+johannesburg_r25_groblersdal,car,outbound,rain (wet day),15.8,8.2,24.6
+johannesburg_r29_evander,car,outbound,town speed limit,6.0,1.0,13.9
+johannesburg_r29_evander,car,outbound,roadside activity,4.2,2.2,9.6
+johannesburg_r29_evander,car,outbound,joining roads,1.7,0.7,5.0
+johannesburg_r29_evander,car,outbound,signals and crossings,42.0,27.0,60.0
+johannesburg_r29_evander,car,outbound,speed humps (assumed),7.1,0.7,16.6
+johannesburg_r29_evander,car,outbound,police posts,0.0,0.0,0.0
+johannesburg_r29_evander,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r29_evander,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r29_evander,car,outbound,curves,0.3,0.1,0.8
+johannesburg_r29_evander,car,outbound,rain (wet day),11.6,6.0,18.1
+johannesburg_r59_dealesville,car,outbound,town speed limit,2.4,0.9,4.4
+johannesburg_r59_dealesville,car,outbound,roadside activity,1.7,0.9,3.4
+johannesburg_r59_dealesville,car,outbound,joining roads,1.2,0.5,2.1
+johannesburg_r59_dealesville,car,outbound,signals and crossings,14.9,9.6,21.5
+johannesburg_r59_dealesville,car,outbound,speed humps (assumed),2.0,0.2,4.7
+johannesburg_r59_dealesville,car,outbound,police posts,0.2,0.0,0.5
+johannesburg_r59_dealesville,car,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r59_dealesville,car,outbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r59_dealesville,car,outbound,curves,0.4,0.2,0.9
+johannesburg_r59_dealesville,car,outbound,rain (wet day),15.3,7.9,23.5
+kampala_a1_malaba,car,outbound,town speed limit,11.3,2.6,30.1
+kampala_a1_malaba,car,outbound,roadside activity,14.5,7.6,33.2
+kampala_a1_malaba,car,outbound,joining roads,2.6,1.1,9.8
+kampala_a1_malaba,car,outbound,signals and crossings,10.3,7.5,14.5
+kampala_a1_malaba,car,outbound,speed humps (assumed),15.9,1.5,37.3
+kampala_a1_malaba,car,outbound,police posts,1.3,0.2,3.8
+kampala_a1_malaba,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_a1_malaba,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_a1_malaba,car,outbound,curves,0.2,0.1,0.4
+kampala_a1_malaba,car,outbound,rain (wet day),21.1,11.1,33.1
+kampala_a2_katuna,car,outbound,town speed limit,8.7,1.8,26.5
+kampala_a2_katuna,car,outbound,roadside activity,25.7,13.2,55.1
+kampala_a2_katuna,car,outbound,joining roads,6.1,2.4,17.2
+kampala_a2_katuna,car,outbound,signals and crossings,2.9,2.2,4.3
+kampala_a2_katuna,car,outbound,speed humps (assumed),14.5,1.4,34.2
+kampala_a2_katuna,car,outbound,police posts,1.8,0.3,5.2
+kampala_a2_katuna,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_a2_katuna,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_a2_katuna,car,outbound,curves,3.4,1.0,6.6
+kampala_a2_katuna,car,outbound,rain (wet day),38.5,20.0,60.2
+kampala_a5_bwera,car,outbound,town speed limit,2.4,0.4,10.7
+kampala_a5_bwera,car,outbound,roadside activity,31.7,16.3,63.8
+kampala_a5_bwera,car,outbound,joining roads,9.4,3.7,20.6
+kampala_a5_bwera,car,outbound,signals and crossings,2.4,1.3,4.5
+kampala_a5_bwera,car,outbound,speed humps (assumed),6.5,0.6,15.4
+kampala_a5_bwera,car,outbound,police posts,1.0,0.2,2.8
+kampala_a5_bwera,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_a5_bwera,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_a5_bwera,car,outbound,curves,4.0,0.9,9.8
+kampala_a5_bwera,car,outbound,rain (wet day),37.9,19.6,59.2
+kampala_a6_elegu,car,outbound,town speed limit,11.8,3.4,29.1
+kampala_a6_elegu,car,outbound,roadside activity,18.4,9.6,40.2
+kampala_a6_elegu,car,outbound,joining roads,5.3,2.2,14.0
+kampala_a6_elegu,car,outbound,signals and crossings,2.6,1.7,4.4
+kampala_a6_elegu,car,outbound,speed humps (assumed),14.8,1.4,34.8
+kampala_a6_elegu,car,outbound,police posts,1.5,0.2,4.2
+kampala_a6_elegu,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_a6_elegu,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_a6_elegu,car,outbound,curves,0.4,0.1,0.7
+kampala_a6_elegu,car,outbound,rain (wet day),37.8,19.5,58.9
+kampala_a9_hoima,car,outbound,town speed limit,2.8,0.4,9.8
+kampala_a9_hoima,car,outbound,roadside activity,15.0,7.9,30.9
+kampala_a9_hoima,car,outbound,joining roads,2.8,1.1,7.8
+kampala_a9_hoima,car,outbound,signals and crossings,0.7,0.5,1.0
+kampala_a9_hoima,car,outbound,speed humps (assumed),5.6,0.5,13.2
+kampala_a9_hoima,car,outbound,police posts,0.5,0.1,1.4
+kampala_a9_hoima,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_a9_hoima,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_a9_hoima,car,outbound,curves,1.3,0.1,3.0
+kampala_a9_hoima,car,outbound,rain (wet day),17.8,9.3,28.0
+kigali_nr1_huye,car,outbound,town speed limit,3.4,0.6,7.9
+kigali_nr1_huye,car,outbound,roadside activity,10.9,5.5,23.6
+kigali_nr1_huye,car,outbound,joining roads,2.0,0.9,5.0
+kigali_nr1_huye,car,outbound,signals and crossings,4.9,3.2,7.1
+kigali_nr1_huye,car,outbound,speed humps (assumed),4.3,0.4,10.0
+kigali_nr1_huye,car,outbound,police posts,0.2,0.0,0.5
+kigali_nr1_huye,car,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr1_huye,car,outbound,hills (trucks),0.0,0.0,0.0
+kigali_nr1_huye,car,outbound,curves,13.0,4.4,24.2
+kigali_nr1_huye,car,outbound,rain (wet day),16.0,8.2,25.2
+kigali_nr2_gisenyi,car,outbound,town speed limit,4.4,0.9,11.5
+kigali_nr2_gisenyi,car,outbound,roadside activity,10.3,5.1,22.8
+kigali_nr2_gisenyi,car,outbound,joining roads,1.7,0.7,4.8
+kigali_nr2_gisenyi,car,outbound,signals and crossings,0.4,0.3,0.7
+kigali_nr2_gisenyi,car,outbound,speed humps (assumed),6.3,0.6,14.7
+kigali_nr2_gisenyi,car,outbound,police posts,0.2,0.0,0.5
+kigali_nr2_gisenyi,car,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr2_gisenyi,car,outbound,hills (trucks),0.0,0.0,0.0
+kigali_nr2_gisenyi,car,outbound,curves,16.4,6.3,27.8
+kigali_nr2_gisenyi,car,outbound,rain (wet day),16.2,8.3,25.4
+kigali_nr3_gatuna,car,outbound,town speed limit,0.8,0.1,2.1
+kigali_nr3_gatuna,car,outbound,roadside activity,1.7,0.9,4.2
+kigali_nr3_gatuna,car,outbound,joining roads,0.3,0.1,0.9
+kigali_nr3_gatuna,car,outbound,signals and crossings,0.0,0.0,0.0
+kigali_nr3_gatuna,car,outbound,speed humps (assumed),1.1,0.1,2.5
+kigali_nr3_gatuna,car,outbound,police posts,0.0,0.0,0.0
+kigali_nr3_gatuna,car,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr3_gatuna,car,outbound,hills (trucks),0.0,0.0,0.0
+kigali_nr3_gatuna,car,outbound,curves,9.6,3.6,16.0
+kigali_nr3_gatuna,car,outbound,rain (wet day),7.3,3.7,11.5
+kigali_road_rusumo,car,outbound,town speed limit,7.5,1.7,16.9
+kigali_road_rusumo,car,outbound,roadside activity,16.5,8.4,34.2
+kigali_road_rusumo,car,outbound,joining roads,2.9,1.1,6.7
+kigali_road_rusumo,car,outbound,signals and crossings,1.2,0.8,1.9
+kigali_road_rusumo,car,outbound,speed humps (assumed),8.3,0.8,19.4
+kigali_road_rusumo,car,outbound,police posts,0.0,0.0,0.0
+kigali_road_rusumo,car,outbound,weighbridge,0.0,0.0,0.0
+kigali_road_rusumo,car,outbound,hills (trucks),0.0,0.0,0.0
+kigali_road_rusumo,car,outbound,curves,4.7,1.7,8.5
+kigali_road_rusumo,car,outbound,rain (wet day),16.4,8.6,25.7
+lusaka_m9_mongu,car,outbound,town speed limit,2.0,0.4,4.6
+lusaka_m9_mongu,car,outbound,roadside activity,2.6,1.4,5.3
+lusaka_m9_mongu,car,outbound,joining roads,2.4,1.0,4.6
+lusaka_m9_mongu,car,outbound,signals and crossings,5.8,4.2,8.0
+lusaka_m9_mongu,car,outbound,speed humps (assumed),2.3,0.2,5.3
+lusaka_m9_mongu,car,outbound,police posts,0.7,0.1,1.9
+lusaka_m9_mongu,car,outbound,weighbridge,0.0,0.0,0.0
+lusaka_m9_mongu,car,outbound,hills (trucks),0.0,0.0,0.0
+lusaka_m9_mongu,car,outbound,curves,0.0,0.0,0.0
+lusaka_m9_mongu,car,outbound,rain (wet day),15.9,8.1,24.9
+lusaka_t1_livingstone,car,outbound,town speed limit,10.5,4.6,17.9
+lusaka_t1_livingstone,car,outbound,roadside activity,5.8,3.1,11.2
+lusaka_t1_livingstone,car,outbound,joining roads,5.2,2.0,9.0
+lusaka_t1_livingstone,car,outbound,signals and crossings,14.4,11.3,19.3
+lusaka_t1_livingstone,car,outbound,speed humps (assumed),7.6,0.7,17.9
+lusaka_t1_livingstone,car,outbound,police posts,1.0,0.2,2.8
+lusaka_t1_livingstone,car,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t1_livingstone,car,outbound,hills (trucks),0.0,0.0,0.0
+lusaka_t1_livingstone,car,outbound,curves,0.0,0.0,0.3
+lusaka_t1_livingstone,car,outbound,rain (wet day),37.7,19.4,58.7
+lusaka_t2_chirundu,car,outbound,town speed limit,9.0,4.3,14.8
+lusaka_t2_chirundu,car,outbound,roadside activity,2.5,1.3,4.7
+lusaka_t2_chirundu,car,outbound,joining roads,1.9,0.7,3.3
+lusaka_t2_chirundu,car,outbound,signals and crossings,8.9,6.7,12.2
+lusaka_t2_chirundu,car,outbound,speed humps (assumed),6.0,0.6,14.1
+lusaka_t2_chirundu,car,outbound,police posts,1.3,0.2,3.8
+lusaka_t2_chirundu,car,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_chirundu,car,outbound,hills (trucks),0.0,0.0,0.0
+lusaka_t2_chirundu,car,outbound,curves,2.3,1.0,5.3
+lusaka_t2_chirundu,car,outbound,rain (wet day),12.1,6.3,18.8
+lusaka_t2_nakonde,car,outbound,town speed limit,10.3,3.9,18.2
+lusaka_t2_nakonde,car,outbound,roadside activity,13.3,7.3,24.7
+lusaka_t2_nakonde,car,outbound,joining roads,13.0,5.1,22.4
+lusaka_t2_nakonde,car,outbound,signals and crossings,10.1,6.8,14.3
+lusaka_t2_nakonde,car,outbound,speed humps (assumed),7.9,0.7,18.5
+lusaka_t2_nakonde,car,outbound,police posts,1.8,0.3,5.2
+lusaka_t2_nakonde,car,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_nakonde,car,outbound,hills (trucks),0.0,0.0,0.0
+lusaka_t2_nakonde,car,outbound,curves,0.9,0.4,2.0
+lusaka_t2_nakonde,car,outbound,rain (wet day),79.7,41.0,124.4
+lusaka_t4_234_km,car,outbound,town speed limit,5.9,2.3,10.4
+lusaka_t4_234_km,car,outbound,roadside activity,3.1,1.7,5.9
+lusaka_t4_234_km,car,outbound,joining roads,1.9,0.8,3.5
+lusaka_t4_234_km,car,outbound,signals and crossings,7.0,4.6,10.1
+lusaka_t4_234_km,car,outbound,speed humps (assumed),4.5,0.4,10.7
+lusaka_t4_234_km,car,outbound,police posts,0.3,0.1,0.9
+lusaka_t4_234_km,car,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t4_234_km,car,outbound,hills (trucks),0.0,0.0,0.0
+lusaka_t4_234_km,car,outbound,curves,0.6,0.3,1.9
+lusaka_t4_234_km,car,outbound,rain (wet day),16.5,8.5,25.5
+maputo_en4_ressano_garcia,car,outbound,town speed limit,7.3,2.6,13.4
+maputo_en4_ressano_garcia,car,outbound,roadside activity,0.9,0.5,2.4
+maputo_en4_ressano_garcia,car,outbound,joining roads,0.9,0.3,1.9
+maputo_en4_ressano_garcia,car,outbound,signals and crossings,13.6,9.1,20.0
+maputo_en4_ressano_garcia,car,outbound,speed humps (assumed),5.9,0.6,13.8
+maputo_en4_ressano_garcia,car,outbound,police posts,0.5,0.1,1.4
+maputo_en4_ressano_garcia,car,outbound,weighbridge,0.0,0.0,0.0
+maputo_en4_ressano_garcia,car,outbound,hills (trucks),0.0,0.0,0.0
+maputo_en4_ressano_garcia,car,outbound,curves,0.2,0.1,0.5
+maputo_en4_ressano_garcia,car,outbound,rain (wet day),8.4,4.4,13.1
+maputo_n1_pemba,car,outbound,town speed limit,20.1,7.8,38.3
+maputo_n1_pemba,car,outbound,roadside activity,7.1,3.7,17.2
+maputo_n1_pemba,car,outbound,joining roads,3.5,1.4,9.4
+maputo_n1_pemba,car,outbound,signals and crossings,4.8,2.3,9.2
+maputo_n1_pemba,car,outbound,speed humps (assumed),17.2,1.6,40.5
+maputo_n1_pemba,car,outbound,police posts,0.3,0.1,0.9
+maputo_n1_pemba,car,outbound,weighbridge,0.0,0.0,0.0
+maputo_n1_pemba,car,outbound,hills (trucks),0.0,0.0,0.0
+maputo_n1_pemba,car,outbound,curves,0.0,0.0,0.0
+maputo_n1_pemba,car,outbound,rain (wet day),19.8,10.4,31.0
+nairobi_a2_moyale,car,outbound,town speed limit,13.8,6.4,22.8
+nairobi_a2_moyale,car,outbound,roadside activity,6.9,3.7,13.6
+nairobi_a2_moyale,car,outbound,joining roads,3.2,1.3,5.6
+nairobi_a2_moyale,car,outbound,signals and crossings,2.1,1.4,3.7
+nairobi_a2_moyale,car,outbound,speed humps (assumed),9.1,0.9,21.3
+nairobi_a2_moyale,car,outbound,police posts,0.3,0.1,0.9
+nairobi_a2_moyale,car,outbound,weighbridge,0.0,0.0,0.0
+nairobi_a2_moyale,car,outbound,hills (trucks),0.0,0.0,0.0
+nairobi_a2_moyale,car,outbound,curves,1.6,0.3,2.7
+nairobi_a2_moyale,car,outbound,rain (wet day),17.6,9.1,27.1
+nairobi_a2_namanga,car,outbound,town speed limit,8.9,4.3,15.2
+nairobi_a2_namanga,car,outbound,roadside activity,2.4,1.3,5.0
+nairobi_a2_namanga,car,outbound,joining roads,1.9,0.8,3.5
+nairobi_a2_namanga,car,outbound,signals and crossings,0.8,0.4,1.5
+nairobi_a2_namanga,car,outbound,speed humps (assumed),6.3,0.6,14.7
+nairobi_a2_namanga,car,outbound,police posts,2.5,0.4,7.0
+nairobi_a2_namanga,car,outbound,weighbridge,0.0,0.0,0.0
+nairobi_a2_namanga,car,outbound,hills (trucks),0.0,0.0,0.0
+nairobi_a2_namanga,car,outbound,curves,0.4,0.1,0.9
+nairobi_a2_namanga,car,outbound,rain (wet day),13.6,7.1,21.1
+nairobi_a8_malaba,car,outbound,town speed limit,23.8,8.1,47.5
+nairobi_a8_malaba,car,outbound,roadside activity,18.7,9.9,40.2
+nairobi_a8_malaba,car,outbound,joining roads,7.6,3.1,16.7
+nairobi_a8_malaba,car,outbound,signals and crossings,20.5,15.5,27.8
+nairobi_a8_malaba,car,outbound,speed humps (assumed),22.4,2.1,52.7
+nairobi_a8_malaba,car,outbound,police posts,1.5,0.2,4.2
+nairobi_a8_malaba,car,outbound,weighbridge,0.0,0.0,0.0
+nairobi_a8_malaba,car,outbound,hills (trucks),0.0,0.0,0.0
+nairobi_a8_malaba,car,outbound,curves,0.8,0.0,2.2
+nairobi_a8_malaba,car,outbound,rain (wet day),40.4,21.0,62.9
+nairobi_a8_mombasa,car,outbound,town speed limit,12.6,6.0,21.4
+nairobi_a8_mombasa,car,outbound,roadside activity,9.7,5.1,18.9
+nairobi_a8_mombasa,car,outbound,joining roads,4.0,1.6,7.2
+nairobi_a8_mombasa,car,outbound,signals and crossings,0.2,0.1,0.3
+nairobi_a8_mombasa,car,outbound,speed humps (assumed),8.8,0.8,20.7
+nairobi_a8_mombasa,car,outbound,police posts,2.5,0.4,7.0
+nairobi_a8_mombasa,car,outbound,weighbridge,0.0,0.0,0.0
+nairobi_a8_mombasa,car,outbound,hills (trucks),0.0,0.0,0.0
+nairobi_a8_mombasa,car,outbound,curves,1.1,0.2,2.0
+nairobi_a8_mombasa,car,outbound,rain (wet day),38.8,20.1,60.1
+pretoria_n14_springbok,car,outbound,town speed limit,2.6,1.4,4.2
+pretoria_n14_springbok,car,outbound,roadside activity,3.3,1.8,6.0
+pretoria_n14_springbok,car,outbound,joining roads,1.4,0.5,2.3
+pretoria_n14_springbok,car,outbound,signals and crossings,10.3,6.5,14.8
+pretoria_n14_springbok,car,outbound,speed humps (assumed),1.6,0.2,3.8
+pretoria_n14_springbok,car,outbound,police posts,0.0,0.0,0.0
+pretoria_n14_springbok,car,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n14_springbok,car,outbound,hills (trucks),0.0,0.0,0.0
+pretoria_n14_springbok,car,outbound,curves,0.3,0.2,0.6
+pretoria_n14_springbok,car,outbound,rain (wet day),15.5,8.0,24.0
+pretoria_n1_beitbridge,car,outbound,town speed limit,2.7,1.2,4.6
+pretoria_n1_beitbridge,car,outbound,roadside activity,4.1,2.1,7.6
+pretoria_n1_beitbridge,car,outbound,joining roads,2.4,0.9,4.1
+pretoria_n1_beitbridge,car,outbound,signals and crossings,7.8,5.3,11.5
+pretoria_n1_beitbridge,car,outbound,speed humps (assumed),1.9,0.2,4.4
+pretoria_n1_beitbridge,car,outbound,police posts,2.3,0.4,6.6
+pretoria_n1_beitbridge,car,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_beitbridge,car,outbound,hills (trucks),0.0,0.0,0.0
+pretoria_n1_beitbridge,car,outbound,curves,0.8,0.3,2.3
+pretoria_n1_beitbridge,car,outbound,rain (wet day),36.6,18.8,57.4
+pretoria_n1_cape_town,car,outbound,town speed limit,2.3,1.2,3.6
+pretoria_n1_cape_town,car,outbound,roadside activity,5.6,2.9,10.5
+pretoria_n1_cape_town,car,outbound,joining roads,0.6,0.3,1.1
+pretoria_n1_cape_town,car,outbound,signals and crossings,4.7,2.9,6.7
+pretoria_n1_cape_town,car,outbound,speed humps (assumed),1.3,0.1,3.1
+pretoria_n1_cape_town,car,outbound,police posts,0.8,0.1,2.3
+pretoria_n1_cape_town,car,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_cape_town,car,outbound,hills (trucks),0.0,0.0,0.0
+pretoria_n1_cape_town,car,outbound,curves,0.6,0.1,0.8
+pretoria_n1_cape_town,car,outbound,rain (wet day),14.9,7.7,22.9
+pretoria_n4_lebombo,car,outbound,town speed limit,2.8,1.3,4.6
+pretoria_n4_lebombo,car,outbound,roadside activity,3.6,1.9,6.8
+pretoria_n4_lebombo,car,outbound,joining roads,3.2,1.2,5.4
+pretoria_n4_lebombo,car,outbound,signals and crossings,6.8,4.2,9.6
+pretoria_n4_lebombo,car,outbound,speed humps (assumed),1.9,0.2,4.4
+pretoria_n4_lebombo,car,outbound,police posts,1.2,0.2,3.3
+pretoria_n4_lebombo,car,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lebombo,car,outbound,hills (trucks),0.0,0.0,0.0
+pretoria_n4_lebombo,car,outbound,curves,0.3,0.0,1.1
+pretoria_n4_lebombo,car,outbound,rain (wet day),32.3,16.6,50.7
+pretoria_n4_lekubu,car,outbound,town speed limit,1.6,0.9,2.5
+pretoria_n4_lekubu,car,outbound,roadside activity,2.7,1.4,5.0
+pretoria_n4_lekubu,car,outbound,joining roads,1.1,0.4,1.8
+pretoria_n4_lekubu,car,outbound,signals and crossings,1.8,1.1,3.1
+pretoria_n4_lekubu,car,outbound,speed humps (assumed),0.9,0.1,2.2
+pretoria_n4_lekubu,car,outbound,police posts,0.8,0.1,2.3
+pretoria_n4_lekubu,car,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lekubu,car,outbound,hills (trucks),0.0,0.0,0.0
+pretoria_n4_lekubu,car,outbound,curves,0.4,0.2,0.7
+pretoria_n4_lekubu,car,outbound,rain (wet day),14.8,7.7,22.7
+windhoek_b1_797_km,car,outbound,town speed limit,3.9,2.0,6.2
+windhoek_b1_797_km,car,outbound,roadside activity,0.5,0.3,0.9
+windhoek_b1_797_km,car,outbound,joining roads,0.9,0.3,1.5
+windhoek_b1_797_km,car,outbound,signals and crossings,16.5,9.1,23.9
+windhoek_b1_797_km,car,outbound,speed humps (assumed),2.4,0.2,5.6
+windhoek_b1_797_km,car,outbound,police posts,0.2,0.0,0.5
+windhoek_b1_797_km,car,outbound,weighbridge,0.0,0.0,0.0
+windhoek_b1_797_km,car,outbound,hills (trucks),0.0,0.0,0.0
+windhoek_b1_797_km,car,outbound,curves,0.0,0.0,0.0
+windhoek_b1_797_km,car,outbound,rain (wet day),15.8,8.1,24.5
+windhoek_b2_walvis_bay,car,outbound,town speed limit,1.6,0.7,3.1
+windhoek_b2_walvis_bay,car,outbound,roadside activity,1.0,0.5,2.1
+windhoek_b2_walvis_bay,car,outbound,joining roads,1.2,0.5,2.1
+windhoek_b2_walvis_bay,car,outbound,signals and crossings,3.6,2.0,5.2
+windhoek_b2_walvis_bay,car,outbound,speed humps (assumed),1.5,0.1,3.4
+windhoek_b2_walvis_bay,car,outbound,police posts,0.3,0.1,0.9
+windhoek_b2_walvis_bay,car,outbound,weighbridge,0.0,0.0,0.0
+windhoek_b2_walvis_bay,car,outbound,hills (trucks),0.0,0.0,0.0
+windhoek_b2_walvis_bay,car,outbound,curves,0.5,0.3,0.8
+windhoek_b2_walvis_bay,car,outbound,rain (wet day),29.5,15.2,45.5
+windhoek_b6_buitepos,car,outbound,town speed limit,2.1,0.8,3.6
+windhoek_b6_buitepos,car,outbound,roadside activity,0.5,0.2,1.1
+windhoek_b6_buitepos,car,outbound,joining roads,1.2,0.5,2.0
+windhoek_b6_buitepos,car,outbound,signals and crossings,7.6,4.6,10.8
+windhoek_b6_buitepos,car,outbound,speed humps (assumed),1.6,0.2,3.8
+windhoek_b6_buitepos,car,outbound,police posts,0.2,0.0,0.5
+windhoek_b6_buitepos,car,outbound,weighbridge,0.0,0.0,0.0
+windhoek_b6_buitepos,car,outbound,hills (trucks),0.0,0.0,0.0
+windhoek_b6_buitepos,car,outbound,curves,0.4,0.1,0.8
+windhoek_b6_buitepos,car,outbound,rain (wet day),24.1,12.4,37.7
+windhoek_c26_194_km,car,outbound,town speed limit,2.1,0.5,3.8
+windhoek_c26_194_km,car,outbound,roadside activity,0.1,0.1,0.4
+windhoek_c26_194_km,car,outbound,joining roads,0.8,0.3,1.4
+windhoek_c26_194_km,car,outbound,signals and crossings,25.9,14.6,37.5
+windhoek_c26_194_km,car,outbound,speed humps (assumed),1.7,0.2,4.1
+windhoek_c26_194_km,car,outbound,police posts,0.2,0.0,0.5
+windhoek_c26_194_km,car,outbound,weighbridge,0.0,0.0,0.0
+windhoek_c26_194_km,car,outbound,hills (trucks),0.0,0.0,0.0
+windhoek_c26_194_km,car,outbound,curves,3.9,1.7,6.1
+windhoek_c26_194_km,car,outbound,rain (wet day),15.6,8.0,24.4
+windhoek_c28_swakopmund,car,outbound,town speed limit,0.3,0.0,0.8
+windhoek_c28_swakopmund,car,outbound,roadside activity,0.6,0.3,1.2
+windhoek_c28_swakopmund,car,outbound,joining roads,0.7,0.3,1.3
+windhoek_c28_swakopmund,car,outbound,signals and crossings,3.5,1.9,5.1
+windhoek_c28_swakopmund,car,outbound,speed humps (assumed),0.4,0.0,0.9
+windhoek_c28_swakopmund,car,outbound,police posts,0.0,0.0,0.0
+windhoek_c28_swakopmund,car,outbound,weighbridge,0.0,0.0,0.0
+windhoek_c28_swakopmund,car,outbound,hills (trucks),0.0,0.0,0.0
+windhoek_c28_swakopmund,car,outbound,curves,5.9,1.7,10.7
+windhoek_c28_swakopmund,car,outbound,rain (wet day),16.0,8.2,25.0
+dar_es_salaam_road_dodoma,car,inbound,town speed limit,25.4,9.2,48.4
+dar_es_salaam_road_dodoma,car,inbound,roadside activity,11.1,5.8,23.9
+dar_es_salaam_road_dodoma,car,inbound,joining roads,6.3,2.5,12.9
+dar_es_salaam_road_dodoma,car,inbound,signals and crossings,14.4,9.6,21.8
+dar_es_salaam_road_dodoma,car,inbound,speed humps (assumed),21.9,2.1,51.4
+dar_es_salaam_road_dodoma,car,inbound,police posts,0.3,0.1,0.9
+dar_es_salaam_road_dodoma,car,inbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_road_dodoma,car,inbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_road_dodoma,car,inbound,curves,0.2,0.1,0.5
+dar_es_salaam_road_dodoma,car,inbound,rain (wet day),40.3,21.0,62.7
+dar_es_salaam_t1_tunduma,car,inbound,town speed limit,32.5,10.3,67.0
+dar_es_salaam_t1_tunduma,car,inbound,roadside activity,36.0,18.6,72.9
+dar_es_salaam_t1_tunduma,car,inbound,joining roads,12.6,5.0,27.3
+dar_es_salaam_t1_tunduma,car,inbound,signals and crossings,25.1,18.2,35.1
+dar_es_salaam_t1_tunduma,car,inbound,speed humps (assumed),31.3,3.0,73.7
+dar_es_salaam_t1_tunduma,car,inbound,police posts,0.3,0.1,0.9
+dar_es_salaam_t1_tunduma,car,inbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t1_tunduma,car,inbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_t1_tunduma,car,inbound,curves,4.8,1.9,8.9
+dar_es_salaam_t1_tunduma,car,inbound,rain (wet day),81.7,42.1,126.8
+dar_es_salaam_t7_lindi,car,inbound,town speed limit,6.2,1.2,14.1
+dar_es_salaam_t7_lindi,car,inbound,roadside activity,5.4,2.8,11.8
+dar_es_salaam_t7_lindi,car,inbound,joining roads,2.4,1.0,5.9
+dar_es_salaam_t7_lindi,car,inbound,signals and crossings,3.6,1.9,6.7
+dar_es_salaam_t7_lindi,car,inbound,speed humps (assumed),7.2,0.7,16.9
+dar_es_salaam_t7_lindi,car,inbound,police posts,0.2,0.0,0.5
+dar_es_salaam_t7_lindi,car,inbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t7_lindi,car,inbound,hills (trucks),0.0,0.0,0.0
+dar_es_salaam_t7_lindi,car,inbound,curves,0.3,0.0,1.3
+dar_es_salaam_t7_lindi,car,inbound,rain (wet day),17.6,9.1,27.3
+dodoma_t3_morogoro,car,inbound,town speed limit,6.1,2.3,11.2
+dodoma_t3_morogoro,car,inbound,roadside activity,6.3,3.3,12.5
+dodoma_t3_morogoro,car,inbound,joining roads,2.7,1.1,4.9
+dodoma_t3_morogoro,car,inbound,signals and crossings,0.3,0.2,0.6
+dodoma_t3_morogoro,car,inbound,speed humps (assumed),4.8,0.5,11.3
+dodoma_t3_morogoro,car,inbound,police posts,0.0,0.0,0.0
+dodoma_t3_morogoro,car,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_morogoro,car,inbound,hills (trucks),0.0,0.0,0.0
+dodoma_t3_morogoro,car,inbound,curves,0.0,0.0,0.0
+dodoma_t3_morogoro,car,inbound,rain (wet day),17.0,8.8,26.5
+dodoma_t3_rusomo,car,inbound,town speed limit,6.3,2.3,11.4
+dodoma_t3_rusomo,car,inbound,roadside activity,2.5,1.4,4.9
+dodoma_t3_rusomo,car,inbound,joining roads,1.2,0.5,2.2
+dodoma_t3_rusomo,car,inbound,signals and crossings,1.4,0.9,2.5
+dodoma_t3_rusomo,car,inbound,speed humps (assumed),4.9,0.5,11.6
+dodoma_t3_rusomo,car,inbound,police posts,0.0,0.0,0.0
+dodoma_t3_rusomo,car,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_rusomo,car,inbound,hills (trucks),0.0,0.0,0.0
+dodoma_t3_rusomo,car,inbound,curves,0.0,0.0,0.1
+dodoma_t3_rusomo,car,inbound,rain (wet day),16.4,8.5,25.4
+dodoma_t5_arusha,car,inbound,town speed limit,3.8,1.2,7.9
+dodoma_t5_arusha,car,inbound,roadside activity,3.5,1.8,7.4
+dodoma_t5_arusha,car,inbound,joining roads,1.1,0.4,2.7
+dodoma_t5_arusha,car,inbound,signals and crossings,0.0,0.0,0.0
+dodoma_t5_arusha,car,inbound,speed humps (assumed),3.7,0.4,8.8
+dodoma_t5_arusha,car,inbound,police posts,0.0,0.0,0.0
+dodoma_t5_arusha,car,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_arusha,car,inbound,hills (trucks),0.0,0.0,0.0
+dodoma_t5_arusha,car,inbound,curves,5.2,2.0,8.9
+dodoma_t5_arusha,car,inbound,rain (wet day),16.9,8.7,26.2
+dodoma_t5_iringa,car,inbound,town speed limit,4.9,1.6,8.9
+dodoma_t5_iringa,car,inbound,roadside activity,3.2,1.7,6.5
+dodoma_t5_iringa,car,inbound,joining roads,1.6,0.7,3.0
+dodoma_t5_iringa,car,inbound,signals and crossings,0.7,0.4,1.2
+dodoma_t5_iringa,car,inbound,speed humps (assumed),4.0,0.4,9.4
+dodoma_t5_iringa,car,inbound,police posts,0.0,0.0,0.0
+dodoma_t5_iringa,car,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_iringa,car,inbound,hills (trucks),0.0,0.0,0.0
+dodoma_t5_iringa,car,inbound,curves,4.7,2.3,7.4
+dodoma_t5_iringa,car,inbound,rain (wet day),16.9,8.7,26.3
+gaborone_a12_326_km,car,inbound,town speed limit,5.1,2.0,9.2
+gaborone_a12_326_km,car,inbound,roadside activity,1.7,0.9,3.4
+gaborone_a12_326_km,car,inbound,joining roads,1.6,0.6,3.0
+gaborone_a12_326_km,car,inbound,signals and crossings,22.6,13.3,32.4
+gaborone_a12_326_km,car,inbound,speed humps (assumed),4.0,0.4,9.4
+gaborone_a12_326_km,car,inbound,police posts,0.0,0.0,0.0
+gaborone_a12_326_km,car,inbound,weighbridge,0.0,0.0,0.0
+gaborone_a12_326_km,car,inbound,hills (trucks),0.0,0.0,0.0
+gaborone_a12_326_km,car,inbound,curves,0.2,0.1,0.6
+gaborone_a12_326_km,car,inbound,rain (wet day),16.1,8.3,24.9
+gaborone_a1_121_km,car,inbound,town speed limit,3.4,1.7,5.6
+gaborone_a1_121_km,car,inbound,roadside activity,1.5,0.8,2.8
+gaborone_a1_121_km,car,inbound,joining roads,1.1,0.4,1.9
+gaborone_a1_121_km,car,inbound,signals and crossings,12.9,8.2,18.5
+gaborone_a1_121_km,car,inbound,speed humps (assumed),2.3,0.2,5.3
+gaborone_a1_121_km,car,inbound,police posts,0.0,0.0,0.0
+gaborone_a1_121_km,car,inbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_121_km,car,inbound,hills (trucks),0.0,0.0,0.0
+gaborone_a1_121_km,car,inbound,curves,0.3,0.2,0.6
+gaborone_a1_121_km,car,inbound,rain (wet day),9.9,5.1,15.3
+gaborone_a1_ramokgwebana,car,inbound,town speed limit,6.4,3.1,10.2
+gaborone_a1_ramokgwebana,car,inbound,roadside activity,2.0,1.1,3.5
+gaborone_a1_ramokgwebana,car,inbound,joining roads,2.5,1.0,4.1
+gaborone_a1_ramokgwebana,car,inbound,signals and crossings,13.7,8.7,19.5
+gaborone_a1_ramokgwebana,car,inbound,speed humps (assumed),4.0,0.4,9.4
+gaborone_a1_ramokgwebana,car,inbound,police posts,0.5,0.1,1.4
+gaborone_a1_ramokgwebana,car,inbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,inbound,hills (trucks),0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,inbound,curves,0.0,0.0,0.0
+gaborone_a1_ramokgwebana,car,inbound,rain (wet day),37.9,19.6,58.7
+harare_a1_chirundu,car,inbound,town speed limit,3.8,1.6,6.7
+harare_a1_chirundu,car,inbound,roadside activity,2.1,1.1,4.1
+harare_a1_chirundu,car,inbound,joining roads,2.4,0.9,4.1
+harare_a1_chirundu,car,inbound,signals and crossings,6.5,4.0,9.4
+harare_a1_chirundu,car,inbound,speed humps (assumed),2.8,0.3,6.6
+harare_a1_chirundu,car,inbound,police posts,0.3,0.1,0.9
+harare_a1_chirundu,car,inbound,weighbridge,0.0,0.0,0.0
+harare_a1_chirundu,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_a1_chirundu,car,inbound,curves,3.4,1.6,6.8
+harare_a1_chirundu,car,inbound,rain (wet day),27.2,13.9,42.6
+harare_a4_beitbridge,car,inbound,town speed limit,4.7,2.2,7.6
+harare_a4_beitbridge,car,inbound,roadside activity,2.7,1.5,5.0
+harare_a4_beitbridge,car,inbound,joining roads,3.2,1.3,5.4
+harare_a4_beitbridge,car,inbound,signals and crossings,1.0,0.4,1.9
+harare_a4_beitbridge,car,inbound,speed humps (assumed),3.1,0.3,7.2
+harare_a4_beitbridge,car,inbound,police posts,1.2,0.2,3.3
+harare_a4_beitbridge,car,inbound,weighbridge,0.0,0.0,0.0
+harare_a4_beitbridge,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_a4_beitbridge,car,inbound,curves,0.4,0.2,0.7
+harare_a4_beitbridge,car,inbound,rain (wet day),43.6,22.4,67.7
+harare_p1_mucumbura,car,inbound,town speed limit,1.0,0.3,1.8
+harare_p1_mucumbura,car,inbound,roadside activity,2.4,1.3,4.3
+harare_p1_mucumbura,car,inbound,joining roads,1.6,0.6,2.7
+harare_p1_mucumbura,car,inbound,signals and crossings,0.5,0.3,0.7
+harare_p1_mucumbura,car,inbound,speed humps (assumed),0.8,0.1,1.9
+harare_p1_mucumbura,car,inbound,police posts,0.5,0.1,1.4
+harare_p1_mucumbura,car,inbound,weighbridge,0.0,0.0,0.0
+harare_p1_mucumbura,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_p1_mucumbura,car,inbound,curves,0.4,0.1,1.2
+harare_p1_mucumbura,car,inbound,rain (wet day),15.4,7.9,24.0
+harare_r2_plumtree,car,inbound,town speed limit,2.3,0.9,4.1
+harare_r2_plumtree,car,inbound,roadside activity,1.8,1.0,3.5
+harare_r2_plumtree,car,inbound,joining roads,1.5,0.6,2.6
+harare_r2_plumtree,car,inbound,signals and crossings,1.1,0.7,1.9
+harare_r2_plumtree,car,inbound,speed humps (assumed),1.7,0.2,4.1
+harare_r2_plumtree,car,inbound,police posts,0.3,0.1,0.9
+harare_r2_plumtree,car,inbound,weighbridge,0.0,0.0,0.0
+harare_r2_plumtree,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_r2_plumtree,car,inbound,curves,0.3,0.2,0.6
+harare_r2_plumtree,car,inbound,rain (wet day),15.2,7.9,23.5
+harare_r4_nyamapanda,car,inbound,town speed limit,1.2,0.2,2.5
+harare_r4_nyamapanda,car,inbound,roadside activity,2.4,1.3,4.5
+harare_r4_nyamapanda,car,inbound,joining roads,1.9,0.8,3.3
+harare_r4_nyamapanda,car,inbound,signals and crossings,1.7,1.1,2.8
+harare_r4_nyamapanda,car,inbound,speed humps (assumed),1.2,0.1,2.8
+harare_r4_nyamapanda,car,inbound,police posts,0.5,0.1,1.4
+harare_r4_nyamapanda,car,inbound,weighbridge,0.0,0.0,0.0
+harare_r4_nyamapanda,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_r4_nyamapanda,car,inbound,curves,0.1,0.0,0.2
+harare_r4_nyamapanda,car,inbound,rain (wet day),15.6,8.0,24.4
+harare_r5_mutare,car,inbound,town speed limit,2.7,1.1,4.8
+harare_r5_mutare,car,inbound,roadside activity,1.9,1.0,3.6
+harare_r5_mutare,car,inbound,joining roads,1.8,0.7,3.0
+harare_r5_mutare,car,inbound,signals and crossings,1.0,0.4,1.9
+harare_r5_mutare,car,inbound,speed humps (assumed),2.0,0.2,4.7
+harare_r5_mutare,car,inbound,police posts,0.3,0.1,0.9
+harare_r5_mutare,car,inbound,weighbridge,0.0,0.0,0.0
+harare_r5_mutare,car,inbound,hills (trucks),0.0,0.0,0.0
+harare_r5_mutare,car,inbound,curves,0.0,0.0,0.2
+harare_r5_mutare,car,inbound,rain (wet day),15.5,8.0,24.0
+johannesburg_n12_de_rust,car,inbound,town speed limit,7.1,3.7,11.0
+johannesburg_n12_de_rust,car,inbound,roadside activity,2.4,1.3,4.3
+johannesburg_n12_de_rust,car,inbound,joining roads,1.6,0.6,2.7
+johannesburg_n12_de_rust,car,inbound,signals and crossings,48.6,30.6,69.4
+johannesburg_n12_de_rust,car,inbound,speed humps (assumed),4.0,0.4,9.4
+johannesburg_n12_de_rust,car,inbound,police posts,0.0,0.0,0.0
+johannesburg_n12_de_rust,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_de_rust,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n12_de_rust,car,inbound,curves,0.5,0.2,0.7
+johannesburg_n12_de_rust,car,inbound,rain (wet day),15.6,8.1,23.8
+johannesburg_n12_emalahleni,car,inbound,town speed limit,2.4,1.1,4.3
+johannesburg_n12_emalahleni,car,inbound,roadside activity,2.9,1.5,5.8
+johannesburg_n12_emalahleni,car,inbound,joining roads,0.4,0.2,1.1
+johannesburg_n12_emalahleni,car,inbound,signals and crossings,11.8,7.0,16.9
+johannesburg_n12_emalahleni,car,inbound,speed humps (assumed),1.9,0.2,4.4
+johannesburg_n12_emalahleni,car,inbound,police posts,0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n12_emalahleni,car,inbound,curves,0.2,0.1,0.3
+johannesburg_n12_emalahleni,car,inbound,rain (wet day),9.7,5.1,15.1
+johannesburg_n17_msauli,car,inbound,town speed limit,0.8,0.2,1.6
+johannesburg_n17_msauli,car,inbound,roadside activity,1.8,1.0,3.6
+johannesburg_n17_msauli,car,inbound,joining roads,1.3,0.5,2.4
+johannesburg_n17_msauli,car,inbound,signals and crossings,3.0,1.7,4.4
+johannesburg_n17_msauli,car,inbound,speed humps (assumed),0.8,0.1,1.9
+johannesburg_n17_msauli,car,inbound,police posts,1.8,0.3,5.2
+johannesburg_n17_msauli,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n17_msauli,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n17_msauli,car,inbound,curves,0.5,0.2,1.1
+johannesburg_n17_msauli,car,inbound,rain (wet day),15.6,8.1,24.2
+johannesburg_n3_durban,car,inbound,town speed limit,5.6,2.8,9.2
+johannesburg_n3_durban,car,inbound,roadside activity,5.0,2.6,9.2
+johannesburg_n3_durban,car,inbound,joining roads,2.5,1.0,4.2
+johannesburg_n3_durban,car,inbound,signals and crossings,58.0,36.3,82.8
+johannesburg_n3_durban,car,inbound,speed humps (assumed),3.6,0.3,8.5
+johannesburg_n3_durban,car,inbound,police posts,3.0,0.5,8.4
+johannesburg_n3_durban,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n3_durban,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_n3_durban,car,inbound,curves,0.8,0.4,3.3
+johannesburg_n3_durban,car,inbound,rain (wet day),41.4,21.5,63.6
+johannesburg_r24_rustenburg,car,inbound,town speed limit,6.5,1.8,14.3
+johannesburg_r24_rustenburg,car,inbound,roadside activity,4.5,2.4,10.5
+johannesburg_r24_rustenburg,car,inbound,joining roads,2.0,0.8,5.8
+johannesburg_r24_rustenburg,car,inbound,signals and crossings,73.1,46.6,104.4
+johannesburg_r24_rustenburg,car,inbound,speed humps (assumed),7.2,0.7,16.9
+johannesburg_r24_rustenburg,car,inbound,police posts,0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r24_rustenburg,car,inbound,curves,1.6,0.6,3.1
+johannesburg_r24_rustenburg,car,inbound,rain (wet day),11.3,5.9,17.7
+johannesburg_r25_groblersdal,car,inbound,town speed limit,5.1,2.0,10.1
+johannesburg_r25_groblersdal,car,inbound,roadside activity,2.9,1.5,6.6
+johannesburg_r25_groblersdal,car,inbound,joining roads,2.2,0.9,4.9
+johannesburg_r25_groblersdal,car,inbound,signals and crossings,47.9,30.7,68.9
+johannesburg_r25_groblersdal,car,inbound,speed humps (assumed),4.8,0.5,11.3
+johannesburg_r25_groblersdal,car,inbound,police posts,0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r25_groblersdal,car,inbound,curves,0.4,0.2,0.9
+johannesburg_r25_groblersdal,car,inbound,rain (wet day),15.8,8.2,24.6
+johannesburg_r29_evander,car,inbound,town speed limit,6.0,1.0,13.9
+johannesburg_r29_evander,car,inbound,roadside activity,4.2,2.2,9.6
+johannesburg_r29_evander,car,inbound,joining roads,1.7,0.7,5.0
+johannesburg_r29_evander,car,inbound,signals and crossings,42.0,27.0,60.0
+johannesburg_r29_evander,car,inbound,speed humps (assumed),7.1,0.7,16.6
+johannesburg_r29_evander,car,inbound,police posts,0.0,0.0,0.0
+johannesburg_r29_evander,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r29_evander,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r29_evander,car,inbound,curves,0.3,0.1,0.8
+johannesburg_r29_evander,car,inbound,rain (wet day),11.6,6.0,18.1
+johannesburg_r59_dealesville,car,inbound,town speed limit,2.4,0.9,4.4
+johannesburg_r59_dealesville,car,inbound,roadside activity,1.7,0.9,3.4
+johannesburg_r59_dealesville,car,inbound,joining roads,1.2,0.5,2.1
+johannesburg_r59_dealesville,car,inbound,signals and crossings,14.9,9.6,21.5
+johannesburg_r59_dealesville,car,inbound,speed humps (assumed),2.0,0.2,4.7
+johannesburg_r59_dealesville,car,inbound,police posts,0.2,0.0,0.5
+johannesburg_r59_dealesville,car,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r59_dealesville,car,inbound,hills (trucks),0.0,0.0,0.0
+johannesburg_r59_dealesville,car,inbound,curves,0.4,0.2,0.9
+johannesburg_r59_dealesville,car,inbound,rain (wet day),15.3,7.9,23.5
+kampala_a1_malaba,car,inbound,town speed limit,11.3,2.6,30.1
+kampala_a1_malaba,car,inbound,roadside activity,14.5,7.6,33.2
+kampala_a1_malaba,car,inbound,joining roads,2.6,1.1,9.8
+kampala_a1_malaba,car,inbound,signals and crossings,10.3,7.5,14.5
+kampala_a1_malaba,car,inbound,speed humps (assumed),15.9,1.5,37.3
+kampala_a1_malaba,car,inbound,police posts,1.3,0.2,3.8
+kampala_a1_malaba,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_a1_malaba,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_a1_malaba,car,inbound,curves,0.2,0.1,0.4
+kampala_a1_malaba,car,inbound,rain (wet day),21.1,11.1,33.1
+kampala_a2_katuna,car,inbound,town speed limit,8.7,1.8,26.5
+kampala_a2_katuna,car,inbound,roadside activity,25.7,13.2,55.1
+kampala_a2_katuna,car,inbound,joining roads,6.1,2.4,17.2
+kampala_a2_katuna,car,inbound,signals and crossings,2.9,2.2,4.3
+kampala_a2_katuna,car,inbound,speed humps (assumed),14.5,1.4,34.2
+kampala_a2_katuna,car,inbound,police posts,1.8,0.3,5.2
+kampala_a2_katuna,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_a2_katuna,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_a2_katuna,car,inbound,curves,3.4,1.0,6.6
+kampala_a2_katuna,car,inbound,rain (wet day),38.5,20.0,60.2
+kampala_a5_bwera,car,inbound,town speed limit,2.4,0.4,10.7
+kampala_a5_bwera,car,inbound,roadside activity,31.7,16.3,63.8
+kampala_a5_bwera,car,inbound,joining roads,9.4,3.7,20.6
+kampala_a5_bwera,car,inbound,signals and crossings,2.4,1.3,4.5
+kampala_a5_bwera,car,inbound,speed humps (assumed),6.5,0.6,15.4
+kampala_a5_bwera,car,inbound,police posts,1.0,0.2,2.8
+kampala_a5_bwera,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_a5_bwera,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_a5_bwera,car,inbound,curves,4.0,0.9,9.8
+kampala_a5_bwera,car,inbound,rain (wet day),37.9,19.6,59.2
+kampala_a6_elegu,car,inbound,town speed limit,11.8,3.4,29.1
+kampala_a6_elegu,car,inbound,roadside activity,18.4,9.6,40.2
+kampala_a6_elegu,car,inbound,joining roads,5.3,2.2,14.0
+kampala_a6_elegu,car,inbound,signals and crossings,2.6,1.7,4.4
+kampala_a6_elegu,car,inbound,speed humps (assumed),14.8,1.4,34.8
+kampala_a6_elegu,car,inbound,police posts,1.5,0.2,4.2
+kampala_a6_elegu,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_a6_elegu,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_a6_elegu,car,inbound,curves,0.4,0.1,0.7
+kampala_a6_elegu,car,inbound,rain (wet day),37.8,19.5,58.9
+kampala_a9_hoima,car,inbound,town speed limit,2.8,0.4,9.8
+kampala_a9_hoima,car,inbound,roadside activity,15.0,7.9,30.9
+kampala_a9_hoima,car,inbound,joining roads,2.8,1.1,7.8
+kampala_a9_hoima,car,inbound,signals and crossings,0.7,0.5,1.0
+kampala_a9_hoima,car,inbound,speed humps (assumed),5.6,0.5,13.2
+kampala_a9_hoima,car,inbound,police posts,0.5,0.1,1.4
+kampala_a9_hoima,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_a9_hoima,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_a9_hoima,car,inbound,curves,1.3,0.1,3.0
+kampala_a9_hoima,car,inbound,rain (wet day),17.8,9.3,28.0
+kigali_nr1_huye,car,inbound,town speed limit,3.4,0.6,7.9
+kigali_nr1_huye,car,inbound,roadside activity,10.9,5.5,23.6
+kigali_nr1_huye,car,inbound,joining roads,2.0,0.9,5.0
+kigali_nr1_huye,car,inbound,signals and crossings,4.9,3.2,7.1
+kigali_nr1_huye,car,inbound,speed humps (assumed),4.3,0.4,10.0
+kigali_nr1_huye,car,inbound,police posts,0.2,0.0,0.5
+kigali_nr1_huye,car,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr1_huye,car,inbound,hills (trucks),0.0,0.0,0.0
+kigali_nr1_huye,car,inbound,curves,13.0,4.4,24.2
+kigali_nr1_huye,car,inbound,rain (wet day),16.0,8.2,25.2
+kigali_nr2_gisenyi,car,inbound,town speed limit,4.4,0.9,11.5
+kigali_nr2_gisenyi,car,inbound,roadside activity,10.3,5.1,22.8
+kigali_nr2_gisenyi,car,inbound,joining roads,1.7,0.7,4.8
+kigali_nr2_gisenyi,car,inbound,signals and crossings,0.4,0.3,0.7
+kigali_nr2_gisenyi,car,inbound,speed humps (assumed),6.3,0.6,14.7
+kigali_nr2_gisenyi,car,inbound,police posts,0.2,0.0,0.5
+kigali_nr2_gisenyi,car,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr2_gisenyi,car,inbound,hills (trucks),0.0,0.0,0.0
+kigali_nr2_gisenyi,car,inbound,curves,16.4,6.3,27.8
+kigali_nr2_gisenyi,car,inbound,rain (wet day),16.2,8.3,25.4
+kigali_nr3_gatuna,car,inbound,town speed limit,0.8,0.1,2.1
+kigali_nr3_gatuna,car,inbound,roadside activity,1.7,0.9,4.2
+kigali_nr3_gatuna,car,inbound,joining roads,0.3,0.1,0.9
+kigali_nr3_gatuna,car,inbound,signals and crossings,0.0,0.0,0.0
+kigali_nr3_gatuna,car,inbound,speed humps (assumed),1.1,0.1,2.5
+kigali_nr3_gatuna,car,inbound,police posts,0.0,0.0,0.0
+kigali_nr3_gatuna,car,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr3_gatuna,car,inbound,hills (trucks),0.0,0.0,0.0
+kigali_nr3_gatuna,car,inbound,curves,9.6,3.6,16.0
+kigali_nr3_gatuna,car,inbound,rain (wet day),7.3,3.7,11.5
+kigali_road_rusumo,car,inbound,town speed limit,7.5,1.7,16.9
+kigali_road_rusumo,car,inbound,roadside activity,16.5,8.4,34.2
+kigali_road_rusumo,car,inbound,joining roads,2.9,1.1,6.7
+kigali_road_rusumo,car,inbound,signals and crossings,1.2,0.8,1.9
+kigali_road_rusumo,car,inbound,speed humps (assumed),8.3,0.8,19.4
+kigali_road_rusumo,car,inbound,police posts,0.0,0.0,0.0
+kigali_road_rusumo,car,inbound,weighbridge,0.0,0.0,0.0
+kigali_road_rusumo,car,inbound,hills (trucks),0.0,0.0,0.0
+kigali_road_rusumo,car,inbound,curves,4.7,1.7,8.5
+kigali_road_rusumo,car,inbound,rain (wet day),16.4,8.6,25.7
+lusaka_m9_mongu,car,inbound,town speed limit,2.0,0.4,4.6
+lusaka_m9_mongu,car,inbound,roadside activity,2.6,1.4,5.3
+lusaka_m9_mongu,car,inbound,joining roads,2.4,1.0,4.6
+lusaka_m9_mongu,car,inbound,signals and crossings,5.8,4.2,8.0
+lusaka_m9_mongu,car,inbound,speed humps (assumed),2.3,0.2,5.3
+lusaka_m9_mongu,car,inbound,police posts,0.7,0.1,1.9
+lusaka_m9_mongu,car,inbound,weighbridge,0.0,0.0,0.0
+lusaka_m9_mongu,car,inbound,hills (trucks),0.0,0.0,0.0
+lusaka_m9_mongu,car,inbound,curves,0.0,0.0,0.0
+lusaka_m9_mongu,car,inbound,rain (wet day),15.9,8.1,24.9
+lusaka_t1_livingstone,car,inbound,town speed limit,10.5,4.6,17.9
+lusaka_t1_livingstone,car,inbound,roadside activity,5.8,3.1,11.2
+lusaka_t1_livingstone,car,inbound,joining roads,5.2,2.0,9.0
+lusaka_t1_livingstone,car,inbound,signals and crossings,14.4,11.3,19.3
+lusaka_t1_livingstone,car,inbound,speed humps (assumed),7.6,0.7,17.9
+lusaka_t1_livingstone,car,inbound,police posts,1.0,0.2,2.8
+lusaka_t1_livingstone,car,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t1_livingstone,car,inbound,hills (trucks),0.0,0.0,0.0
+lusaka_t1_livingstone,car,inbound,curves,0.0,0.0,0.3
+lusaka_t1_livingstone,car,inbound,rain (wet day),37.7,19.4,58.7
+lusaka_t2_chirundu,car,inbound,town speed limit,9.0,4.3,14.8
+lusaka_t2_chirundu,car,inbound,roadside activity,2.5,1.3,4.7
+lusaka_t2_chirundu,car,inbound,joining roads,1.9,0.7,3.3
+lusaka_t2_chirundu,car,inbound,signals and crossings,8.9,6.7,12.2
+lusaka_t2_chirundu,car,inbound,speed humps (assumed),6.0,0.6,14.1
+lusaka_t2_chirundu,car,inbound,police posts,1.3,0.2,3.8
+lusaka_t2_chirundu,car,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_chirundu,car,inbound,hills (trucks),0.0,0.0,0.0
+lusaka_t2_chirundu,car,inbound,curves,2.3,1.0,5.3
+lusaka_t2_chirundu,car,inbound,rain (wet day),12.1,6.3,18.8
+lusaka_t2_nakonde,car,inbound,town speed limit,10.3,3.9,18.2
+lusaka_t2_nakonde,car,inbound,roadside activity,13.3,7.3,24.7
+lusaka_t2_nakonde,car,inbound,joining roads,13.0,5.1,22.4
+lusaka_t2_nakonde,car,inbound,signals and crossings,10.1,6.8,14.3
+lusaka_t2_nakonde,car,inbound,speed humps (assumed),7.9,0.7,18.5
+lusaka_t2_nakonde,car,inbound,police posts,1.8,0.3,5.2
+lusaka_t2_nakonde,car,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_nakonde,car,inbound,hills (trucks),0.0,0.0,0.0
+lusaka_t2_nakonde,car,inbound,curves,0.9,0.4,2.0
+lusaka_t2_nakonde,car,inbound,rain (wet day),79.7,41.0,124.4
+lusaka_t4_234_km,car,inbound,town speed limit,5.9,2.3,10.4
+lusaka_t4_234_km,car,inbound,roadside activity,3.1,1.7,5.9
+lusaka_t4_234_km,car,inbound,joining roads,1.9,0.8,3.5
+lusaka_t4_234_km,car,inbound,signals and crossings,7.0,4.6,10.1
+lusaka_t4_234_km,car,inbound,speed humps (assumed),4.5,0.4,10.7
+lusaka_t4_234_km,car,inbound,police posts,0.3,0.1,0.9
+lusaka_t4_234_km,car,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t4_234_km,car,inbound,hills (trucks),0.0,0.0,0.0
+lusaka_t4_234_km,car,inbound,curves,0.6,0.3,1.9
+lusaka_t4_234_km,car,inbound,rain (wet day),16.5,8.5,25.5
+maputo_en4_ressano_garcia,car,inbound,town speed limit,7.3,2.6,13.4
+maputo_en4_ressano_garcia,car,inbound,roadside activity,0.9,0.5,2.4
+maputo_en4_ressano_garcia,car,inbound,joining roads,0.9,0.3,1.9
+maputo_en4_ressano_garcia,car,inbound,signals and crossings,13.6,9.1,20.0
+maputo_en4_ressano_garcia,car,inbound,speed humps (assumed),5.9,0.6,13.8
+maputo_en4_ressano_garcia,car,inbound,police posts,0.5,0.1,1.4
+maputo_en4_ressano_garcia,car,inbound,weighbridge,0.0,0.0,0.0
+maputo_en4_ressano_garcia,car,inbound,hills (trucks),0.0,0.0,0.0
+maputo_en4_ressano_garcia,car,inbound,curves,0.2,0.1,0.5
+maputo_en4_ressano_garcia,car,inbound,rain (wet day),8.4,4.4,13.1
+maputo_n1_pemba,car,inbound,town speed limit,20.1,7.8,38.3
+maputo_n1_pemba,car,inbound,roadside activity,7.1,3.7,17.2
+maputo_n1_pemba,car,inbound,joining roads,3.5,1.4,9.4
+maputo_n1_pemba,car,inbound,signals and crossings,4.8,2.3,9.2
+maputo_n1_pemba,car,inbound,speed humps (assumed),17.2,1.6,40.5
+maputo_n1_pemba,car,inbound,police posts,0.3,0.1,0.9
+maputo_n1_pemba,car,inbound,weighbridge,0.0,0.0,0.0
+maputo_n1_pemba,car,inbound,hills (trucks),0.0,0.0,0.0
+maputo_n1_pemba,car,inbound,curves,0.0,0.0,0.0
+maputo_n1_pemba,car,inbound,rain (wet day),19.8,10.4,31.0
+nairobi_a2_moyale,car,inbound,town speed limit,13.8,6.4,22.8
+nairobi_a2_moyale,car,inbound,roadside activity,6.9,3.7,13.6
+nairobi_a2_moyale,car,inbound,joining roads,3.2,1.3,5.6
+nairobi_a2_moyale,car,inbound,signals and crossings,2.1,1.4,3.7
+nairobi_a2_moyale,car,inbound,speed humps (assumed),9.1,0.9,21.3
+nairobi_a2_moyale,car,inbound,police posts,0.3,0.1,0.9
+nairobi_a2_moyale,car,inbound,weighbridge,0.0,0.0,0.0
+nairobi_a2_moyale,car,inbound,hills (trucks),0.0,0.0,0.0
+nairobi_a2_moyale,car,inbound,curves,1.6,0.3,2.7
+nairobi_a2_moyale,car,inbound,rain (wet day),17.6,9.1,27.1
+nairobi_a2_namanga,car,inbound,town speed limit,8.9,4.3,15.2
+nairobi_a2_namanga,car,inbound,roadside activity,2.4,1.3,5.0
+nairobi_a2_namanga,car,inbound,joining roads,1.9,0.8,3.5
+nairobi_a2_namanga,car,inbound,signals and crossings,0.8,0.4,1.5
+nairobi_a2_namanga,car,inbound,speed humps (assumed),6.3,0.6,14.7
+nairobi_a2_namanga,car,inbound,police posts,2.5,0.4,7.0
+nairobi_a2_namanga,car,inbound,weighbridge,0.0,0.0,0.0
+nairobi_a2_namanga,car,inbound,hills (trucks),0.0,0.0,0.0
+nairobi_a2_namanga,car,inbound,curves,0.4,0.1,0.9
+nairobi_a2_namanga,car,inbound,rain (wet day),13.6,7.1,21.1
+nairobi_a8_malaba,car,inbound,town speed limit,23.8,8.1,47.5
+nairobi_a8_malaba,car,inbound,roadside activity,18.7,9.9,40.2
+nairobi_a8_malaba,car,inbound,joining roads,7.6,3.1,16.7
+nairobi_a8_malaba,car,inbound,signals and crossings,20.5,15.5,27.8
+nairobi_a8_malaba,car,inbound,speed humps (assumed),22.4,2.1,52.7
+nairobi_a8_malaba,car,inbound,police posts,1.5,0.2,4.2
+nairobi_a8_malaba,car,inbound,weighbridge,0.0,0.0,0.0
+nairobi_a8_malaba,car,inbound,hills (trucks),0.0,0.0,0.0
+nairobi_a8_malaba,car,inbound,curves,0.8,0.0,2.2
+nairobi_a8_malaba,car,inbound,rain (wet day),40.4,21.0,62.9
+nairobi_a8_mombasa,car,inbound,town speed limit,12.6,6.0,21.4
+nairobi_a8_mombasa,car,inbound,roadside activity,9.7,5.1,18.9
+nairobi_a8_mombasa,car,inbound,joining roads,4.0,1.6,7.2
+nairobi_a8_mombasa,car,inbound,signals and crossings,0.2,0.1,0.3
+nairobi_a8_mombasa,car,inbound,speed humps (assumed),8.8,0.8,20.7
+nairobi_a8_mombasa,car,inbound,police posts,2.5,0.4,7.0
+nairobi_a8_mombasa,car,inbound,weighbridge,0.0,0.0,0.0
+nairobi_a8_mombasa,car,inbound,hills (trucks),0.0,0.0,0.0
+nairobi_a8_mombasa,car,inbound,curves,1.1,0.2,2.0
+nairobi_a8_mombasa,car,inbound,rain (wet day),38.8,20.1,60.1
+pretoria_n14_springbok,car,inbound,town speed limit,2.6,1.4,4.2
+pretoria_n14_springbok,car,inbound,roadside activity,3.3,1.8,6.0
+pretoria_n14_springbok,car,inbound,joining roads,1.4,0.5,2.3
+pretoria_n14_springbok,car,inbound,signals and crossings,10.3,6.5,14.8
+pretoria_n14_springbok,car,inbound,speed humps (assumed),1.6,0.2,3.8
+pretoria_n14_springbok,car,inbound,police posts,0.0,0.0,0.0
+pretoria_n14_springbok,car,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n14_springbok,car,inbound,hills (trucks),0.0,0.0,0.0
+pretoria_n14_springbok,car,inbound,curves,0.3,0.2,0.6
+pretoria_n14_springbok,car,inbound,rain (wet day),15.5,8.0,24.0
+pretoria_n1_beitbridge,car,inbound,town speed limit,2.7,1.2,4.6
+pretoria_n1_beitbridge,car,inbound,roadside activity,4.1,2.1,7.6
+pretoria_n1_beitbridge,car,inbound,joining roads,2.4,0.9,4.1
+pretoria_n1_beitbridge,car,inbound,signals and crossings,7.8,5.3,11.5
+pretoria_n1_beitbridge,car,inbound,speed humps (assumed),1.9,0.2,4.4
+pretoria_n1_beitbridge,car,inbound,police posts,2.3,0.4,6.6
+pretoria_n1_beitbridge,car,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_beitbridge,car,inbound,hills (trucks),0.0,0.0,0.0
+pretoria_n1_beitbridge,car,inbound,curves,0.8,0.3,2.3
+pretoria_n1_beitbridge,car,inbound,rain (wet day),36.6,18.8,57.4
+pretoria_n1_cape_town,car,inbound,town speed limit,2.3,1.2,3.6
+pretoria_n1_cape_town,car,inbound,roadside activity,5.6,2.9,10.5
+pretoria_n1_cape_town,car,inbound,joining roads,0.6,0.3,1.1
+pretoria_n1_cape_town,car,inbound,signals and crossings,4.7,2.9,6.7
+pretoria_n1_cape_town,car,inbound,speed humps (assumed),1.3,0.1,3.1
+pretoria_n1_cape_town,car,inbound,police posts,0.8,0.1,2.3
+pretoria_n1_cape_town,car,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_cape_town,car,inbound,hills (trucks),0.0,0.0,0.0
+pretoria_n1_cape_town,car,inbound,curves,0.6,0.1,0.8
+pretoria_n1_cape_town,car,inbound,rain (wet day),14.9,7.7,22.9
+pretoria_n4_lebombo,car,inbound,town speed limit,2.8,1.3,4.6
+pretoria_n4_lebombo,car,inbound,roadside activity,3.6,1.9,6.8
+pretoria_n4_lebombo,car,inbound,joining roads,3.2,1.2,5.4
+pretoria_n4_lebombo,car,inbound,signals and crossings,6.8,4.2,9.6
+pretoria_n4_lebombo,car,inbound,speed humps (assumed),1.9,0.2,4.4
+pretoria_n4_lebombo,car,inbound,police posts,1.2,0.2,3.3
+pretoria_n4_lebombo,car,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lebombo,car,inbound,hills (trucks),0.0,0.0,0.0
+pretoria_n4_lebombo,car,inbound,curves,0.3,0.0,1.1
+pretoria_n4_lebombo,car,inbound,rain (wet day),32.3,16.6,50.7
+pretoria_n4_lekubu,car,inbound,town speed limit,1.6,0.9,2.5
+pretoria_n4_lekubu,car,inbound,roadside activity,2.7,1.4,5.0
+pretoria_n4_lekubu,car,inbound,joining roads,1.1,0.4,1.8
+pretoria_n4_lekubu,car,inbound,signals and crossings,1.8,1.1,3.1
+pretoria_n4_lekubu,car,inbound,speed humps (assumed),0.9,0.1,2.2
+pretoria_n4_lekubu,car,inbound,police posts,0.8,0.1,2.3
+pretoria_n4_lekubu,car,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lekubu,car,inbound,hills (trucks),0.0,0.0,0.0
+pretoria_n4_lekubu,car,inbound,curves,0.4,0.2,0.7
+pretoria_n4_lekubu,car,inbound,rain (wet day),14.8,7.7,22.7
+windhoek_b1_797_km,car,inbound,town speed limit,3.9,2.0,6.2
+windhoek_b1_797_km,car,inbound,roadside activity,0.5,0.3,0.9
+windhoek_b1_797_km,car,inbound,joining roads,0.9,0.3,1.5
+windhoek_b1_797_km,car,inbound,signals and crossings,16.5,9.1,23.9
+windhoek_b1_797_km,car,inbound,speed humps (assumed),2.4,0.2,5.6
+windhoek_b1_797_km,car,inbound,police posts,0.2,0.0,0.5
+windhoek_b1_797_km,car,inbound,weighbridge,0.0,0.0,0.0
+windhoek_b1_797_km,car,inbound,hills (trucks),0.0,0.0,0.0
+windhoek_b1_797_km,car,inbound,curves,0.0,0.0,0.0
+windhoek_b1_797_km,car,inbound,rain (wet day),15.8,8.1,24.5
+windhoek_b2_walvis_bay,car,inbound,town speed limit,1.6,0.7,3.1
+windhoek_b2_walvis_bay,car,inbound,roadside activity,1.0,0.5,2.1
+windhoek_b2_walvis_bay,car,inbound,joining roads,1.2,0.5,2.1
+windhoek_b2_walvis_bay,car,inbound,signals and crossings,3.6,2.0,5.2
+windhoek_b2_walvis_bay,car,inbound,speed humps (assumed),1.5,0.1,3.4
+windhoek_b2_walvis_bay,car,inbound,police posts,0.3,0.1,0.9
+windhoek_b2_walvis_bay,car,inbound,weighbridge,0.0,0.0,0.0
+windhoek_b2_walvis_bay,car,inbound,hills (trucks),0.0,0.0,0.0
+windhoek_b2_walvis_bay,car,inbound,curves,0.5,0.3,0.8
+windhoek_b2_walvis_bay,car,inbound,rain (wet day),29.5,15.2,45.5
+windhoek_b6_buitepos,car,inbound,town speed limit,2.1,0.8,3.6
+windhoek_b6_buitepos,car,inbound,roadside activity,0.5,0.2,1.1
+windhoek_b6_buitepos,car,inbound,joining roads,1.2,0.5,2.0
+windhoek_b6_buitepos,car,inbound,signals and crossings,7.6,4.6,10.8
+windhoek_b6_buitepos,car,inbound,speed humps (assumed),1.6,0.2,3.8
+windhoek_b6_buitepos,car,inbound,police posts,0.2,0.0,0.5
+windhoek_b6_buitepos,car,inbound,weighbridge,0.0,0.0,0.0
+windhoek_b6_buitepos,car,inbound,hills (trucks),0.0,0.0,0.0
+windhoek_b6_buitepos,car,inbound,curves,0.4,0.1,0.8
+windhoek_b6_buitepos,car,inbound,rain (wet day),24.1,12.4,37.7
+windhoek_c26_194_km,car,inbound,town speed limit,2.1,0.5,3.8
+windhoek_c26_194_km,car,inbound,roadside activity,0.1,0.1,0.4
+windhoek_c26_194_km,car,inbound,joining roads,0.8,0.3,1.4
+windhoek_c26_194_km,car,inbound,signals and crossings,25.9,14.6,37.5
+windhoek_c26_194_km,car,inbound,speed humps (assumed),1.7,0.2,4.1
+windhoek_c26_194_km,car,inbound,police posts,0.2,0.0,0.5
+windhoek_c26_194_km,car,inbound,weighbridge,0.0,0.0,0.0
+windhoek_c26_194_km,car,inbound,hills (trucks),0.0,0.0,0.0
+windhoek_c26_194_km,car,inbound,curves,3.9,1.7,6.1
+windhoek_c26_194_km,car,inbound,rain (wet day),15.6,8.0,24.4
+windhoek_c28_swakopmund,car,inbound,town speed limit,0.3,0.0,0.8
+windhoek_c28_swakopmund,car,inbound,roadside activity,0.6,0.3,1.2
+windhoek_c28_swakopmund,car,inbound,joining roads,0.7,0.3,1.3
+windhoek_c28_swakopmund,car,inbound,signals and crossings,3.5,1.9,5.1
+windhoek_c28_swakopmund,car,inbound,speed humps (assumed),0.4,0.0,0.9
+windhoek_c28_swakopmund,car,inbound,police posts,0.0,0.0,0.0
+windhoek_c28_swakopmund,car,inbound,weighbridge,0.0,0.0,0.0
+windhoek_c28_swakopmund,car,inbound,hills (trucks),0.0,0.0,0.0
+windhoek_c28_swakopmund,car,inbound,curves,5.9,1.7,10.7
+windhoek_c28_swakopmund,car,inbound,rain (wet day),16.0,8.2,25.0
+dar_es_salaam_road_dodoma,truck,outbound,town speed limit,7.2,0.2,27.7
+dar_es_salaam_road_dodoma,truck,outbound,roadside activity,15.6,5.7,39.8
+dar_es_salaam_road_dodoma,truck,outbound,joining roads,9.5,3.2,21.2
+dar_es_salaam_road_dodoma,truck,outbound,signals and crossings,14.4,9.6,21.8
+dar_es_salaam_road_dodoma,truck,outbound,speed humps (assumed),32.8,3.1,77.2
+dar_es_salaam_road_dodoma,truck,outbound,police posts,2.0,0.5,9.5
+dar_es_salaam_road_dodoma,truck,outbound,weighbridge,30.0,18.6,85.2
+dar_es_salaam_road_dodoma,truck,outbound,hills (trucks),23.9,13.6,35.5
+dar_es_salaam_road_dodoma,truck,outbound,curves,0.1,0.0,1.1
+dar_es_salaam_road_dodoma,truck,outbound,rain (wet day),52.1,27.5,81.7
+dar_es_salaam_t1_tunduma,truck,outbound,town speed limit,8.0,0.2,36.3
+dar_es_salaam_t1_tunduma,truck,outbound,roadside activity,44.0,18.4,101.6
+dar_es_salaam_t1_tunduma,truck,outbound,joining roads,17.9,6.1,40.6
+dar_es_salaam_t1_tunduma,truck,outbound,signals and crossings,25.1,18.2,35.1
+dar_es_salaam_t1_tunduma,truck,outbound,speed humps (assumed),47.0,4.4,110.6
+dar_es_salaam_t1_tunduma,truck,outbound,police posts,2.0,0.5,9.5
+dar_es_salaam_t1_tunduma,truck,outbound,weighbridge,40.0,24.8,113.6
+dar_es_salaam_t1_tunduma,truck,outbound,hills (trucks),73.8,42.1,110.2
+dar_es_salaam_t1_tunduma,truck,outbound,curves,2.2,0.3,6.2
+dar_es_salaam_t1_tunduma,truck,outbound,rain (wet day),109.9,58.1,173.2
+dar_es_salaam_t7_lindi,truck,outbound,town speed limit,0.6,0.0,6.6
+dar_es_salaam_t7_lindi,truck,outbound,roadside activity,9.3,3.3,22.1
+dar_es_salaam_t7_lindi,truck,outbound,joining roads,4.6,1.5,9.8
+dar_es_salaam_t7_lindi,truck,outbound,signals and crossings,3.6,1.9,6.7
+dar_es_salaam_t7_lindi,truck,outbound,speed humps (assumed),10.8,1.0,25.4
+dar_es_salaam_t7_lindi,truck,outbound,police posts,1.0,0.2,4.7
+dar_es_salaam_t7_lindi,truck,outbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t7_lindi,truck,outbound,hills (trucks),9.0,5.3,13.0
+dar_es_salaam_t7_lindi,truck,outbound,curves,0.3,0.0,1.5
+dar_es_salaam_t7_lindi,truck,outbound,rain (wet day),22.9,12.0,36.1
+dodoma_t3_morogoro,truck,outbound,town speed limit,2.2,0.1,7.0
+dodoma_t3_morogoro,truck,outbound,roadside activity,7.5,3.5,16.0
+dodoma_t3_morogoro,truck,outbound,joining roads,3.4,1.4,7.0
+dodoma_t3_morogoro,truck,outbound,signals and crossings,0.3,0.2,0.6
+dodoma_t3_morogoro,truck,outbound,speed humps (assumed),7.2,0.7,16.9
+dodoma_t3_morogoro,truck,outbound,police posts,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,outbound,hills (trucks),7.1,4.2,10.5
+dodoma_t3_morogoro,truck,outbound,curves,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,outbound,rain (wet day),22.1,11.5,34.6
+dodoma_t3_rusomo,truck,outbound,town speed limit,2.1,0.0,7.1
+dodoma_t3_rusomo,truck,outbound,roadside activity,3.5,1.6,8.5
+dodoma_t3_rusomo,truck,outbound,joining roads,1.7,0.6,4.1
+dodoma_t3_rusomo,truck,outbound,signals and crossings,1.4,0.9,2.5
+dodoma_t3_rusomo,truck,outbound,speed humps (assumed),7.4,0.7,17.4
+dodoma_t3_rusomo,truck,outbound,police posts,0.0,0.0,0.0
+dodoma_t3_rusomo,truck,outbound,weighbridge,10.0,6.2,28.4
+dodoma_t3_rusomo,truck,outbound,hills (trucks),9.5,5.9,13.5
+dodoma_t3_rusomo,truck,outbound,curves,0.0,0.0,0.3
+dodoma_t3_rusomo,truck,outbound,rain (wet day),21.5,11.3,34.1
+dodoma_t5_arusha,truck,outbound,town speed limit,1.1,0.0,4.5
+dodoma_t5_arusha,truck,outbound,roadside activity,4.9,2.1,10.7
+dodoma_t5_arusha,truck,outbound,joining roads,2.0,0.6,4.5
+dodoma_t5_arusha,truck,outbound,signals and crossings,0.0,0.0,0.0
+dodoma_t5_arusha,truck,outbound,speed humps (assumed),5.6,0.5,13.2
+dodoma_t5_arusha,truck,outbound,police posts,0.0,0.0,0.0
+dodoma_t5_arusha,truck,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_arusha,truck,outbound,hills (trucks),18.7,10.8,27.9
+dodoma_t5_arusha,truck,outbound,curves,3.0,0.5,6.9
+dodoma_t5_arusha,truck,outbound,rain (wet day),23.2,12.2,36.3
+dodoma_t5_iringa,truck,outbound,town speed limit,1.4,0.0,5.5
+dodoma_t5_iringa,truck,outbound,roadside activity,4.3,2.1,9.5
+dodoma_t5_iringa,truck,outbound,joining roads,2.3,0.9,5.3
+dodoma_t5_iringa,truck,outbound,signals and crossings,0.7,0.4,1.2
+dodoma_t5_iringa,truck,outbound,speed humps (assumed),6.0,0.6,14.1
+dodoma_t5_iringa,truck,outbound,police posts,0.0,0.0,0.0
+dodoma_t5_iringa,truck,outbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_iringa,truck,outbound,hills (trucks),5.9,3.0,11.0
+dodoma_t5_iringa,truck,outbound,curves,1.3,0.2,5.0
+dodoma_t5_iringa,truck,outbound,rain (wet day),21.7,11.4,34.3
+gaborone_a12_326_km,truck,outbound,town speed limit,1.2,0.0,5.6
+gaborone_a12_326_km,truck,outbound,roadside activity,2.4,1.1,6.8
+gaborone_a12_326_km,truck,outbound,joining roads,2.2,0.8,5.5
+gaborone_a12_326_km,truck,outbound,signals and crossings,22.6,13.3,32.4
+gaborone_a12_326_km,truck,outbound,speed humps (assumed),6.0,0.6,14.1
+gaborone_a12_326_km,truck,outbound,police posts,0.0,0.0,0.0
+gaborone_a12_326_km,truck,outbound,weighbridge,0.0,0.0,0.0
+gaborone_a12_326_km,truck,outbound,hills (trucks),1.6,0.9,2.4
+gaborone_a12_326_km,truck,outbound,curves,0.2,0.0,0.7
+gaborone_a12_326_km,truck,outbound,rain (wet day),20.4,10.7,32.1
+gaborone_a1_121_km,truck,outbound,town speed limit,1.1,0.0,3.4
+gaborone_a1_121_km,truck,outbound,roadside activity,1.9,1.0,4.0
+gaborone_a1_121_km,truck,outbound,joining roads,1.3,0.5,2.9
+gaborone_a1_121_km,truck,outbound,signals and crossings,12.9,8.2,18.5
+gaborone_a1_121_km,truck,outbound,speed humps (assumed),3.4,0.3,8.0
+gaborone_a1_121_km,truck,outbound,police posts,0.0,0.0,0.0
+gaborone_a1_121_km,truck,outbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_121_km,truck,outbound,hills (trucks),3.5,2.1,5.0
+gaborone_a1_121_km,truck,outbound,curves,0.3,0.0,1.0
+gaborone_a1_121_km,truck,outbound,rain (wet day),13.1,6.8,20.7
+gaborone_a1_ramokgwebana,truck,outbound,town speed limit,2.0,0.0,6.4
+gaborone_a1_ramokgwebana,truck,outbound,roadside activity,2.6,1.4,5.6
+gaborone_a1_ramokgwebana,truck,outbound,joining roads,3.3,1.3,6.9
+gaborone_a1_ramokgwebana,truck,outbound,signals and crossings,13.7,8.7,19.5
+gaborone_a1_ramokgwebana,truck,outbound,speed humps (assumed),6.0,0.6,14.1
+gaborone_a1_ramokgwebana,truck,outbound,police posts,3.0,0.7,14.2
+gaborone_a1_ramokgwebana,truck,outbound,weighbridge,10.0,6.2,28.4
+gaborone_a1_ramokgwebana,truck,outbound,hills (trucks),2.2,1.3,3.2
+gaborone_a1_ramokgwebana,truck,outbound,curves,0.0,0.0,0.2
+gaborone_a1_ramokgwebana,truck,outbound,rain (wet day),49.1,25.5,77.6
+harare_a1_chirundu,truck,outbound,town speed limit,1.2,0.1,4.1
+harare_a1_chirundu,truck,outbound,roadside activity,2.5,1.2,5.6
+harare_a1_chirundu,truck,outbound,joining roads,2.7,1.1,5.1
+harare_a1_chirundu,truck,outbound,signals and crossings,6.5,4.0,9.4
+harare_a1_chirundu,truck,outbound,speed humps (assumed),4.2,0.4,9.9
+harare_a1_chirundu,truck,outbound,police posts,2.0,0.5,9.5
+harare_a1_chirundu,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_a1_chirundu,truck,outbound,hills (trucks),18.8,11.2,27.0
+harare_a1_chirundu,truck,outbound,curves,2.9,0.8,6.9
+harare_a1_chirundu,truck,outbound,rain (wet day),36.6,19.1,57.9
+harare_a4_beitbridge,truck,outbound,town speed limit,1.5,0.0,4.6
+harare_a4_beitbridge,truck,outbound,roadside activity,3.5,1.8,7.3
+harare_a4_beitbridge,truck,outbound,joining roads,3.8,1.6,7.4
+harare_a4_beitbridge,truck,outbound,signals and crossings,1.0,0.4,1.9
+harare_a4_beitbridge,truck,outbound,speed humps (assumed),4.6,0.4,10.8
+harare_a4_beitbridge,truck,outbound,police posts,7.0,1.7,33.2
+harare_a4_beitbridge,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_a4_beitbridge,truck,outbound,hills (trucks),8.8,5.3,12.6
+harare_a4_beitbridge,truck,outbound,curves,0.3,0.0,0.9
+harare_a4_beitbridge,truck,outbound,rain (wet day),57.1,29.6,90.1
+harare_p1_mucumbura,truck,outbound,town speed limit,0.2,0.0,1.0
+harare_p1_mucumbura,truck,outbound,roadside activity,2.4,1.3,4.6
+harare_p1_mucumbura,truck,outbound,joining roads,1.6,0.7,3.3
+harare_p1_mucumbura,truck,outbound,signals and crossings,0.5,0.3,0.7
+harare_p1_mucumbura,truck,outbound,speed humps (assumed),1.2,0.1,2.8
+harare_p1_mucumbura,truck,outbound,police posts,3.0,0.7,14.2
+harare_p1_mucumbura,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_p1_mucumbura,truck,outbound,hills (trucks),14.0,8.4,20.0
+harare_p1_mucumbura,truck,outbound,curves,0.3,0.0,1.1
+harare_p1_mucumbura,truck,outbound,rain (wet day),21.4,11.2,33.8
+harare_r2_plumtree,truck,outbound,town speed limit,0.6,0.0,2.5
+harare_r2_plumtree,truck,outbound,roadside activity,2.4,1.2,5.4
+harare_r2_plumtree,truck,outbound,joining roads,2.0,0.8,4.1
+harare_r2_plumtree,truck,outbound,signals and crossings,1.1,0.7,1.9
+harare_r2_plumtree,truck,outbound,speed humps (assumed),2.6,0.2,6.1
+harare_r2_plumtree,truck,outbound,police posts,2.0,0.5,9.5
+harare_r2_plumtree,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_r2_plumtree,truck,outbound,hills (trucks),2.3,1.3,3.3
+harare_r2_plumtree,truck,outbound,curves,0.2,0.0,0.6
+harare_r2_plumtree,truck,outbound,rain (wet day),20.2,10.5,31.9
+harare_r4_nyamapanda,truck,outbound,town speed limit,0.2,0.0,1.5
+harare_r4_nyamapanda,truck,outbound,roadside activity,2.6,1.4,5.4
+harare_r4_nyamapanda,truck,outbound,joining roads,2.1,0.9,4.3
+harare_r4_nyamapanda,truck,outbound,signals and crossings,1.7,1.1,2.8
+harare_r4_nyamapanda,truck,outbound,speed humps (assumed),1.8,0.2,4.2
+harare_r4_nyamapanda,truck,outbound,police posts,3.0,0.7,14.2
+harare_r4_nyamapanda,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_r4_nyamapanda,truck,outbound,hills (trucks),11.2,6.8,15.9
+harare_r4_nyamapanda,truck,outbound,curves,0.1,0.0,0.4
+harare_r4_nyamapanda,truck,outbound,rain (wet day),21.1,11.0,33.4
+harare_r5_mutare,truck,outbound,town speed limit,0.6,0.0,2.6
+harare_r5_mutare,truck,outbound,roadside activity,2.4,1.0,5.3
+harare_r5_mutare,truck,outbound,joining roads,2.0,0.8,3.8
+harare_r5_mutare,truck,outbound,signals and crossings,1.0,0.4,1.9
+harare_r5_mutare,truck,outbound,speed humps (assumed),3.0,0.3,7.1
+harare_r5_mutare,truck,outbound,police posts,2.0,0.5,9.5
+harare_r5_mutare,truck,outbound,weighbridge,0.0,0.0,0.0
+harare_r5_mutare,truck,outbound,hills (trucks),9.2,5.5,13.2
+harare_r5_mutare,truck,outbound,curves,0.0,0.0,0.3
+harare_r5_mutare,truck,outbound,rain (wet day),21.1,11.0,33.3
+johannesburg_n12_de_rust,truck,outbound,town speed limit,2.2,0.0,6.4
+johannesburg_n12_de_rust,truck,outbound,roadside activity,3.1,1.6,6.3
+johannesburg_n12_de_rust,truck,outbound,joining roads,1.9,0.8,4.2
+johannesburg_n12_de_rust,truck,outbound,signals and crossings,48.6,30.6,69.4
+johannesburg_n12_de_rust,truck,outbound,speed humps (assumed),6.0,0.6,14.1
+johannesburg_n12_de_rust,truck,outbound,police posts,0.0,0.0,0.0
+johannesburg_n12_de_rust,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_de_rust,truck,outbound,hills (trucks),4.8,2.7,7.0
+johannesburg_n12_de_rust,truck,outbound,curves,0.4,0.0,0.8
+johannesburg_n12_de_rust,truck,outbound,rain (wet day),21.0,11.0,33.1
+johannesburg_n12_emalahleni,truck,outbound,town speed limit,0.7,0.0,2.4
+johannesburg_n12_emalahleni,truck,outbound,roadside activity,3.7,1.7,7.8
+johannesburg_n12_emalahleni,truck,outbound,joining roads,0.8,0.3,1.8
+johannesburg_n12_emalahleni,truck,outbound,signals and crossings,11.8,7.0,16.9
+johannesburg_n12_emalahleni,truck,outbound,speed humps (assumed),2.8,0.3,6.6
+johannesburg_n12_emalahleni,truck,outbound,police posts,0.0,0.0,0.0
+johannesburg_n12_emalahleni,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_emalahleni,truck,outbound,hills (trucks),7.5,4.5,10.7
+johannesburg_n12_emalahleni,truck,outbound,curves,0.1,0.0,0.3
+johannesburg_n12_emalahleni,truck,outbound,rain (wet day),14.3,7.5,22.5
+johannesburg_n17_msauli,truck,outbound,town speed limit,0.1,0.0,0.7
+johannesburg_n17_msauli,truck,outbound,roadside activity,2.6,1.2,5.0
+johannesburg_n17_msauli,truck,outbound,joining roads,1.7,0.7,3.2
+johannesburg_n17_msauli,truck,outbound,signals and crossings,3.0,1.7,4.4
+johannesburg_n17_msauli,truck,outbound,speed humps (assumed),1.2,0.1,2.8
+johannesburg_n17_msauli,truck,outbound,police posts,11.0,2.6,52.2
+johannesburg_n17_msauli,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_n17_msauli,truck,outbound,hills (trucks),10.7,6.6,15.1
+johannesburg_n17_msauli,truck,outbound,curves,0.4,0.1,1.1
+johannesburg_n17_msauli,truck,outbound,rain (wet day),21.6,11.3,34.0
+johannesburg_n3_durban,truck,outbound,town speed limit,1.6,0.1,5.2
+johannesburg_n3_durban,truck,outbound,roadside activity,5.6,2.8,11.2
+johannesburg_n3_durban,truck,outbound,joining roads,2.6,1.1,5.3
+johannesburg_n3_durban,truck,outbound,signals and crossings,58.0,36.3,82.8
+johannesburg_n3_durban,truck,outbound,speed humps (assumed),5.4,0.5,12.7
+johannesburg_n3_durban,truck,outbound,police posts,18.0,4.3,85.4
+johannesburg_n3_durban,truck,outbound,weighbridge,10.0,6.2,28.4
+johannesburg_n3_durban,truck,outbound,hills (trucks),49.5,30.6,70.2
+johannesburg_n3_durban,truck,outbound,curves,0.6,0.1,2.8
+johannesburg_n3_durban,truck,outbound,rain (wet day),61.7,32.3,97.2
+johannesburg_r24_rustenburg,truck,outbound,town speed limit,1.0,0.0,6.9
+johannesburg_r24_rustenburg,truck,outbound,roadside activity,8.3,2.7,19.8
+johannesburg_r24_rustenburg,truck,outbound,joining roads,4.6,1.3,10.8
+johannesburg_r24_rustenburg,truck,outbound,signals and crossings,73.1,46.6,104.4
+johannesburg_r24_rustenburg,truck,outbound,speed humps (assumed),10.8,1.0,25.4
+johannesburg_r24_rustenburg,truck,outbound,police posts,0.0,0.0,0.0
+johannesburg_r24_rustenburg,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r24_rustenburg,truck,outbound,hills (trucks),3.7,2.0,6.0
+johannesburg_r24_rustenburg,truck,outbound,curves,0.9,0.1,3.1
+johannesburg_r24_rustenburg,truck,outbound,rain (wet day),14.3,7.6,22.5
+johannesburg_r25_groblersdal,truck,outbound,town speed limit,0.8,0.0,4.7
+johannesburg_r25_groblersdal,truck,outbound,roadside activity,4.7,1.8,11.1
+johannesburg_r25_groblersdal,truck,outbound,joining roads,3.4,1.1,7.3
+johannesburg_r25_groblersdal,truck,outbound,signals and crossings,47.9,30.7,68.9
+johannesburg_r25_groblersdal,truck,outbound,speed humps (assumed),7.2,0.7,16.9
+johannesburg_r25_groblersdal,truck,outbound,police posts,0.0,0.0,0.0
+johannesburg_r25_groblersdal,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r25_groblersdal,truck,outbound,hills (trucks),10.7,6.3,15.6
+johannesburg_r25_groblersdal,truck,outbound,curves,0.3,0.0,1.3
+johannesburg_r25_groblersdal,truck,outbound,rain (wet day),21.1,11.1,33.3
+johannesburg_r29_evander,truck,outbound,town speed limit,0.9,0.0,7.5
+johannesburg_r29_evander,truck,outbound,roadside activity,6.8,2.5,17.7
+johannesburg_r29_evander,truck,outbound,joining roads,3.5,1.0,9.1
+johannesburg_r29_evander,truck,outbound,signals and crossings,42.0,27.0,60.0
+johannesburg_r29_evander,truck,outbound,speed humps (assumed),10.6,1.0,24.9
+johannesburg_r29_evander,truck,outbound,police posts,0.0,0.0,0.0
+johannesburg_r29_evander,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r29_evander,truck,outbound,hills (trucks),3.0,1.8,4.5
+johannesburg_r29_evander,truck,outbound,curves,0.3,0.0,1.5
+johannesburg_r29_evander,truck,outbound,rain (wet day),14.4,7.6,22.6
+johannesburg_r59_dealesville,truck,outbound,town speed limit,0.5,0.0,2.5
+johannesburg_r59_dealesville,truck,outbound,roadside activity,2.4,1.1,5.5
+johannesburg_r59_dealesville,truck,outbound,joining roads,1.5,0.5,3.5
+johannesburg_r59_dealesville,truck,outbound,signals and crossings,14.9,9.6,21.5
+johannesburg_r59_dealesville,truck,outbound,speed humps (assumed),3.0,0.3,7.1
+johannesburg_r59_dealesville,truck,outbound,police posts,1.0,0.2,4.7
+johannesburg_r59_dealesville,truck,outbound,weighbridge,0.0,0.0,0.0
+johannesburg_r59_dealesville,truck,outbound,hills (trucks),4.8,2.9,6.9
+johannesburg_r59_dealesville,truck,outbound,curves,0.3,0.0,1.0
+johannesburg_r59_dealesville,truck,outbound,rain (wet day),20.6,10.8,32.6
+kampala_a1_malaba,truck,outbound,town speed limit,1.6,0.0,13.7
+kampala_a1_malaba,truck,outbound,roadside activity,22.9,7.8,53.9
+kampala_a1_malaba,truck,outbound,joining roads,7.1,1.6,14.4
+kampala_a1_malaba,truck,outbound,signals and crossings,10.4,7.5,14.5
+kampala_a1_malaba,truck,outbound,speed humps (assumed),23.8,2.2,56.0
+kampala_a1_malaba,truck,outbound,police posts,8.0,1.9,38.0
+kampala_a1_malaba,truck,outbound,weighbridge,20.0,12.4,56.8
+kampala_a1_malaba,truck,outbound,hills (trucks),9.2,4.0,15.6
+kampala_a1_malaba,truck,outbound,curves,0.1,0.0,1.0
+kampala_a1_malaba,truck,outbound,rain (wet day),26.9,14.3,42.6
+kampala_a2_katuna,truck,outbound,town speed limit,1.4,0.0,11.4
+kampala_a2_katuna,truck,outbound,roadside activity,33.0,12.8,72.3
+kampala_a2_katuna,truck,outbound,joining roads,11.1,3.3,21.7
+kampala_a2_katuna,truck,outbound,signals and crossings,2.9,2.2,4.3
+kampala_a2_katuna,truck,outbound,speed humps (assumed),21.8,2.1,51.3
+kampala_a2_katuna,truck,outbound,police posts,11.0,2.6,52.2
+kampala_a2_katuna,truck,outbound,weighbridge,20.0,12.4,56.8
+kampala_a2_katuna,truck,outbound,hills (trucks),36.8,19.7,56.3
+kampala_a2_katuna,truck,outbound,curves,1.9,0.2,5.6
+kampala_a2_katuna,truck,outbound,rain (wet day),52.4,27.7,82.0
+kampala_a5_bwera,truck,outbound,town speed limit,0.2,0.0,4.0
+kampala_a5_bwera,truck,outbound,roadside activity,38.3,17.1,76.2
+kampala_a5_bwera,truck,outbound,joining roads,13.5,4.8,25.5
+kampala_a5_bwera,truck,outbound,signals and crossings,2.4,1.3,4.5
+kampala_a5_bwera,truck,outbound,speed humps (assumed),9.8,0.9,23.1
+kampala_a5_bwera,truck,outbound,police posts,6.0,1.4,28.5
+kampala_a5_bwera,truck,outbound,weighbridge,0.0,0.0,0.0
+kampala_a5_bwera,truck,outbound,hills (trucks),42.8,24.0,63.5
+kampala_a5_bwera,truck,outbound,curves,2.8,0.2,9.2
+kampala_a5_bwera,truck,outbound,rain (wet day),53.0,27.8,82.8
+kampala_a6_elegu,truck,outbound,town speed limit,3.0,0.1,15.2
+kampala_a6_elegu,truck,outbound,roadside activity,27.3,10.9,58.4
+kampala_a6_elegu,truck,outbound,joining roads,9.9,3.3,19.3
+kampala_a6_elegu,truck,outbound,signals and crossings,2.6,1.7,4.4
+kampala_a6_elegu,truck,outbound,speed humps (assumed),22.2,2.1,52.2
+kampala_a6_elegu,truck,outbound,police posts,9.0,2.2,42.7
+kampala_a6_elegu,truck,outbound,weighbridge,10.0,6.2,28.4
+kampala_a6_elegu,truck,outbound,hills (trucks),12.3,6.6,18.9
+kampala_a6_elegu,truck,outbound,curves,0.3,0.1,0.9
+kampala_a6_elegu,truck,outbound,rain (wet day),48.6,25.5,76.2
+kampala_a9_hoima,truck,outbound,town speed limit,0.3,0.0,3.9
+kampala_a9_hoima,truck,outbound,roadside activity,17.7,7.4,38.2
+kampala_a9_hoima,truck,outbound,joining roads,4.8,1.5,9.8
+kampala_a9_hoima,truck,outbound,signals and crossings,0.7,0.5,1.0
+kampala_a9_hoima,truck,outbound,speed humps (assumed),8.4,0.8,19.8
+kampala_a9_hoima,truck,outbound,police posts,3.0,0.7,14.2
+kampala_a9_hoima,truck,outbound,weighbridge,0.0,0.0,0.0
+kampala_a9_hoima,truck,outbound,hills (trucks),12.8,6.4,20.7
+kampala_a9_hoima,truck,outbound,curves,0.8,0.1,2.8
+kampala_a9_hoima,truck,outbound,rain (wet day),24.0,12.6,37.6
+kigali_nr1_huye,truck,outbound,town speed limit,0.3,0.0,3.1
+kigali_nr1_huye,truck,outbound,roadside activity,11.9,5.2,28.9
+kigali_nr1_huye,truck,outbound,joining roads,3.0,1.0,6.9
+kigali_nr1_huye,truck,outbound,signals and crossings,4.9,3.2,7.1
+kigali_nr1_huye,truck,outbound,speed humps (assumed),6.4,0.6,15.1
+kigali_nr1_huye,truck,outbound,police posts,1.0,0.2,4.7
+kigali_nr1_huye,truck,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr1_huye,truck,outbound,hills (trucks),23.9,10.6,38.7
+kigali_nr1_huye,truck,outbound,curves,8.0,1.0,20.8
+kigali_nr1_huye,truck,outbound,rain (wet day),22.3,11.7,35.0
+kigali_nr2_gisenyi,truck,outbound,town speed limit,0.5,0.0,5.1
+kigali_nr2_gisenyi,truck,outbound,roadside activity,13.4,5.3,29.9
+kigali_nr2_gisenyi,truck,outbound,joining roads,3.2,1.0,6.7
+kigali_nr2_gisenyi,truck,outbound,signals and crossings,0.4,0.3,0.7
+kigali_nr2_gisenyi,truck,outbound,speed humps (assumed),9.4,0.9,22.1
+kigali_nr2_gisenyi,truck,outbound,police posts,1.0,0.2,4.7
+kigali_nr2_gisenyi,truck,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr2_gisenyi,truck,outbound,hills (trucks),24.2,9.5,40.4
+kigali_nr2_gisenyi,truck,outbound,curves,10.0,1.6,22.8
+kigali_nr2_gisenyi,truck,outbound,rain (wet day),22.3,11.7,35.0
+kigali_nr3_gatuna,truck,outbound,town speed limit,0.1,0.0,1.1
+kigali_nr3_gatuna,truck,outbound,roadside activity,2.2,1.0,5.7
+kigali_nr3_gatuna,truck,outbound,joining roads,0.5,0.2,1.4
+kigali_nr3_gatuna,truck,outbound,signals and crossings,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,outbound,speed humps (assumed),1.6,0.2,3.8
+kigali_nr3_gatuna,truck,outbound,police posts,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,outbound,weighbridge,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,outbound,hills (trucks),7.0,3.2,12.5
+kigali_nr3_gatuna,truck,outbound,curves,6.4,1.0,14.8
+kigali_nr3_gatuna,truck,outbound,rain (wet day),9.8,5.1,15.3
+kigali_road_rusumo,truck,outbound,town speed limit,1.4,0.0,8.5
+kigali_road_rusumo,truck,outbound,roadside activity,20.1,8.6,43.7
+kigali_road_rusumo,truck,outbound,joining roads,4.8,1.5,9.8
+kigali_road_rusumo,truck,outbound,signals and crossings,1.2,0.8,1.9
+kigali_road_rusumo,truck,outbound,speed humps (assumed),12.4,1.2,29.2
+kigali_road_rusumo,truck,outbound,police posts,0.0,0.0,0.0
+kigali_road_rusumo,truck,outbound,weighbridge,0.0,0.0,0.0
+kigali_road_rusumo,truck,outbound,hills (trucks),13.7,6.0,22.2
+kigali_road_rusumo,truck,outbound,curves,3.2,0.5,7.2
+kigali_road_rusumo,truck,outbound,rain (wet day),21.5,11.4,33.9
+lusaka_m9_mongu,truck,outbound,town speed limit,0.4,0.0,2.5
+lusaka_m9_mongu,truck,outbound,roadside activity,3.9,1.7,8.3
+lusaka_m9_mongu,truck,outbound,joining roads,3.6,1.4,6.8
+lusaka_m9_mongu,truck,outbound,signals and crossings,5.8,4.2,8.0
+lusaka_m9_mongu,truck,outbound,speed humps (assumed),3.4,0.3,8.0
+lusaka_m9_mongu,truck,outbound,police posts,4.0,1.0,19.0
+lusaka_m9_mongu,truck,outbound,weighbridge,0.0,0.0,0.0
+lusaka_m9_mongu,truck,outbound,hills (trucks),3.6,2.1,5.1
+lusaka_m9_mongu,truck,outbound,curves,0.0,0.0,0.0
+lusaka_m9_mongu,truck,outbound,rain (wet day),20.6,10.7,32.4
+lusaka_t1_livingstone,truck,outbound,town speed limit,3.4,0.1,11.1
+lusaka_t1_livingstone,truck,outbound,roadside activity,7.7,3.7,16.5
+lusaka_t1_livingstone,truck,outbound,joining roads,6.6,2.7,13.4
+lusaka_t1_livingstone,truck,outbound,signals and crossings,14.4,11.3,19.3
+lusaka_t1_livingstone,truck,outbound,speed humps (assumed),11.4,1.1,26.8
+lusaka_t1_livingstone,truck,outbound,police posts,6.0,1.4,28.5
+lusaka_t1_livingstone,truck,outbound,weighbridge,10.0,6.2,28.4
+lusaka_t1_livingstone,truck,outbound,hills (trucks),11.2,6.9,16.0
+lusaka_t1_livingstone,truck,outbound,curves,0.0,0.0,0.9
+lusaka_t1_livingstone,truck,outbound,rain (wet day),48.7,25.5,76.9
+lusaka_t2_chirundu,truck,outbound,town speed limit,3.0,0.1,9.4
+lusaka_t2_chirundu,truck,outbound,roadside activity,3.1,1.5,7.4
+lusaka_t2_chirundu,truck,outbound,joining roads,2.5,1.0,6.1
+lusaka_t2_chirundu,truck,outbound,signals and crossings,8.9,6.7,12.2
+lusaka_t2_chirundu,truck,outbound,speed humps (assumed),9.0,0.9,21.2
+lusaka_t2_chirundu,truck,outbound,police posts,8.0,1.9,38.0
+lusaka_t2_chirundu,truck,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_chirundu,truck,outbound,hills (trucks),4.3,2.5,6.5
+lusaka_t2_chirundu,truck,outbound,curves,2.0,0.5,5.9
+lusaka_t2_chirundu,truck,outbound,rain (wet day),15.2,8.0,23.9
+lusaka_t2_nakonde,truck,outbound,town speed limit,2.4,0.0,10.2
+lusaka_t2_nakonde,truck,outbound,roadside activity,15.9,7.9,32.0
+lusaka_t2_nakonde,truck,outbound,joining roads,15.3,6.0,28.8
+lusaka_t2_nakonde,truck,outbound,signals and crossings,10.1,6.8,14.3
+lusaka_t2_nakonde,truck,outbound,speed humps (assumed),11.8,1.1,27.8
+lusaka_t2_nakonde,truck,outbound,police posts,11.0,2.6,52.2
+lusaka_t2_nakonde,truck,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_nakonde,truck,outbound,hills (trucks),33.8,19.9,49.0
+lusaka_t2_nakonde,truck,outbound,curves,0.8,0.1,2.6
+lusaka_t2_nakonde,truck,outbound,rain (wet day),106.0,55.2,166.8
+lusaka_t4_234_km,truck,outbound,town speed limit,1.5,0.0,6.2
+lusaka_t4_234_km,truck,outbound,roadside activity,3.9,1.9,9.3
+lusaka_t4_234_km,truck,outbound,joining roads,2.6,1.0,6.3
+lusaka_t4_234_km,truck,outbound,signals and crossings,7.0,4.6,10.1
+lusaka_t4_234_km,truck,outbound,speed humps (assumed),6.8,0.6,16.0
+lusaka_t4_234_km,truck,outbound,police posts,2.0,0.5,9.5
+lusaka_t4_234_km,truck,outbound,weighbridge,0.0,0.0,0.0
+lusaka_t4_234_km,truck,outbound,hills (trucks),15.9,9.7,22.7
+lusaka_t4_234_km,truck,outbound,curves,0.2,0.0,1.5
+lusaka_t4_234_km,truck,outbound,rain (wet day),22.3,11.7,35.3
+maputo_en4_ressano_garcia,truck,outbound,town speed limit,1.5,0.0,7.1
+maputo_en4_ressano_garcia,truck,outbound,roadside activity,2.6,0.5,9.0
+maputo_en4_ressano_garcia,truck,outbound,joining roads,1.8,0.5,4.4
+maputo_en4_ressano_garcia,truck,outbound,signals and crossings,13.6,9.1,20.0
+maputo_en4_ressano_garcia,truck,outbound,speed humps (assumed),8.8,0.8,20.7
+maputo_en4_ressano_garcia,truck,outbound,police posts,3.0,0.7,14.2
+maputo_en4_ressano_garcia,truck,outbound,weighbridge,0.0,0.0,0.0
+maputo_en4_ressano_garcia,truck,outbound,hills (trucks),3.0,1.9,4.5
+maputo_en4_ressano_garcia,truck,outbound,curves,0.2,0.0,0.7
+maputo_en4_ressano_garcia,truck,outbound,rain (wet day),10.6,5.6,16.6
+maputo_n1_pemba,truck,outbound,town speed limit,7.6,0.4,23.8
+maputo_n1_pemba,truck,outbound,roadside activity,13.0,4.9,30.8
+maputo_n1_pemba,truck,outbound,joining roads,7.2,2.3,16.7
+maputo_n1_pemba,truck,outbound,signals and crossings,4.8,2.3,9.2
+maputo_n1_pemba,truck,outbound,speed humps (assumed),25.8,2.4,60.7
+maputo_n1_pemba,truck,outbound,police posts,2.0,0.5,9.5
+maputo_n1_pemba,truck,outbound,weighbridge,10.0,6.2,28.4
+maputo_n1_pemba,truck,outbound,hills (trucks),1.6,0.9,2.5
+maputo_n1_pemba,truck,outbound,curves,0.0,0.0,0.2
+maputo_n1_pemba,truck,outbound,rain (wet day),23.6,12.5,37.0
+nairobi_a2_moyale,truck,outbound,town speed limit,3.8,0.1,13.3
+nairobi_a2_moyale,truck,outbound,roadside activity,7.4,3.6,18.7
+nairobi_a2_moyale,truck,outbound,joining roads,3.5,1.4,8.2
+nairobi_a2_moyale,truck,outbound,signals and crossings,2.1,1.4,3.7
+nairobi_a2_moyale,truck,outbound,speed humps (assumed),13.6,1.3,32.0
+nairobi_a2_moyale,truck,outbound,police posts,2.0,0.5,9.5
+nairobi_a2_moyale,truck,outbound,weighbridge,10.0,6.2,28.4
+nairobi_a2_moyale,truck,outbound,hills (trucks),16.4,8.9,24.7
+nairobi_a2_moyale,truck,outbound,curves,0.8,0.0,1.9
+nairobi_a2_moyale,truck,outbound,rain (wet day),24.2,12.7,38.1
+nairobi_a2_namanga,truck,outbound,town speed limit,2.9,0.1,9.1
+nairobi_a2_namanga,truck,outbound,roadside activity,3.3,1.4,8.8
+nairobi_a2_namanga,truck,outbound,joining roads,2.5,0.9,5.8
+nairobi_a2_namanga,truck,outbound,signals and crossings,0.8,0.4,1.5
+nairobi_a2_namanga,truck,outbound,speed humps (assumed),9.4,0.9,22.1
+nairobi_a2_namanga,truck,outbound,police posts,15.0,3.6,71.2
+nairobi_a2_namanga,truck,outbound,weighbridge,20.0,12.4,56.8
+nairobi_a2_namanga,truck,outbound,hills (trucks),4.3,2.5,6.5
+nairobi_a2_namanga,truck,outbound,curves,0.3,0.0,1.2
+nairobi_a2_namanga,truck,outbound,rain (wet day),17.2,9.1,27.1
+nairobi_a8_malaba,truck,outbound,town speed limit,4.8,0.1,24.6
+nairobi_a8_malaba,truck,outbound,roadside activity,25.2,9.9,59.3
+nairobi_a8_malaba,truck,outbound,joining roads,12.1,4.0,25.9
+nairobi_a8_malaba,truck,outbound,signals and crossings,20.5,15.5,27.8
+nairobi_a8_malaba,truck,outbound,speed humps (assumed),33.6,3.2,79.0
+nairobi_a8_malaba,truck,outbound,police posts,9.0,2.2,42.7
+nairobi_a8_malaba,truck,outbound,weighbridge,30.0,18.6,85.2
+nairobi_a8_malaba,truck,outbound,hills (trucks),34.3,18.9,51.9
+nairobi_a8_malaba,truck,outbound,curves,0.2,0.0,2.2
+nairobi_a8_malaba,truck,outbound,rain (wet day),53.5,28.3,84.0
+nairobi_a8_mombasa,truck,outbound,town speed limit,3.9,0.1,12.8
+nairobi_a8_mombasa,truck,outbound,roadside activity,12.8,6.0,27.0
+nairobi_a8_mombasa,truck,outbound,joining roads,5.3,2.1,10.7
+nairobi_a8_mombasa,truck,outbound,signals and crossings,0.2,0.1,0.3
+nairobi_a8_mombasa,truck,outbound,speed humps (assumed),13.2,1.2,31.0
+nairobi_a8_mombasa,truck,outbound,police posts,15.0,3.6,71.2
+nairobi_a8_mombasa,truck,outbound,weighbridge,20.0,12.4,56.8
+nairobi_a8_mombasa,truck,outbound,hills (trucks),9.7,5.6,14.2
+nairobi_a8_mombasa,truck,outbound,curves,0.9,0.1,2.1
+nairobi_a8_mombasa,truck,outbound,rain (wet day),50.4,26.2,79.1
+pretoria_n14_springbok,truck,outbound,town speed limit,0.7,0.0,2.3
+pretoria_n14_springbok,truck,outbound,roadside activity,3.4,1.8,6.2
+pretoria_n14_springbok,truck,outbound,joining roads,1.4,0.6,2.7
+pretoria_n14_springbok,truck,outbound,signals and crossings,10.3,6.5,14.8
+pretoria_n14_springbok,truck,outbound,speed humps (assumed),2.4,0.2,5.6
+pretoria_n14_springbok,truck,outbound,police posts,0.0,0.0,0.0
+pretoria_n14_springbok,truck,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n14_springbok,truck,outbound,hills (trucks),12.3,7.2,17.7
+pretoria_n14_springbok,truck,outbound,curves,0.3,0.0,0.9
+pretoria_n14_springbok,truck,outbound,rain (wet day),21.6,11.3,34.1
+pretoria_n1_beitbridge,truck,outbound,town speed limit,1.1,0.1,3.1
+pretoria_n1_beitbridge,truck,outbound,roadside activity,4.9,2.4,9.3
+pretoria_n1_beitbridge,truck,outbound,joining roads,2.7,1.1,5.0
+pretoria_n1_beitbridge,truck,outbound,signals and crossings,7.8,5.3,11.5
+pretoria_n1_beitbridge,truck,outbound,speed humps (assumed),2.8,0.3,6.6
+pretoria_n1_beitbridge,truck,outbound,police posts,14.0,3.4,66.4
+pretoria_n1_beitbridge,truck,outbound,weighbridge,40.0,24.8,113.6
+pretoria_n1_beitbridge,truck,outbound,hills (trucks),22.4,13.8,31.7
+pretoria_n1_beitbridge,truck,outbound,curves,0.5,0.1,1.8
+pretoria_n1_beitbridge,truck,outbound,rain (wet day),49.3,25.7,77.6
+pretoria_n1_cape_town,truck,outbound,town speed limit,0.7,0.0,1.8
+pretoria_n1_cape_town,truck,outbound,roadside activity,5.4,2.6,10.7
+pretoria_n1_cape_town,truck,outbound,joining roads,0.6,0.3,1.2
+pretoria_n1_cape_town,truck,outbound,signals and crossings,4.7,2.9,6.7
+pretoria_n1_cape_town,truck,outbound,speed humps (assumed),2.0,0.2,4.7
+pretoria_n1_cape_town,truck,outbound,police posts,5.0,1.2,23.7
+pretoria_n1_cape_town,truck,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_cape_town,truck,outbound,hills (trucks),12.8,7.0,19.2
+pretoria_n1_cape_town,truck,outbound,curves,0.0,0.0,0.2
+pretoria_n1_cape_town,truck,outbound,rain (wet day),21.8,11.4,34.4
+pretoria_n4_lebombo,truck,outbound,town speed limit,1.3,0.1,3.2
+pretoria_n4_lebombo,truck,outbound,roadside activity,3.8,1.9,7.3
+pretoria_n4_lebombo,truck,outbound,joining roads,3.2,1.3,5.9
+pretoria_n4_lebombo,truck,outbound,signals and crossings,6.8,4.2,9.6
+pretoria_n4_lebombo,truck,outbound,speed humps (assumed),2.8,0.3,6.6
+pretoria_n4_lebombo,truck,outbound,police posts,7.0,1.7,33.2
+pretoria_n4_lebombo,truck,outbound,weighbridge,10.0,6.2,28.4
+pretoria_n4_lebombo,truck,outbound,hills (trucks),33.0,20.3,46.6
+pretoria_n4_lebombo,truck,outbound,curves,0.3,0.0,1.2
+pretoria_n4_lebombo,truck,outbound,rain (wet day),45.0,23.5,70.8
+pretoria_n4_lekubu,truck,outbound,town speed limit,0.8,0.1,1.8
+pretoria_n4_lekubu,truck,outbound,roadside activity,3.0,1.5,5.7
+pretoria_n4_lekubu,truck,outbound,joining roads,1.1,0.4,2.0
+pretoria_n4_lekubu,truck,outbound,signals and crossings,1.8,1.1,3.1
+pretoria_n4_lekubu,truck,outbound,speed humps (assumed),1.4,0.1,3.3
+pretoria_n4_lekubu,truck,outbound,police posts,5.0,1.2,23.7
+pretoria_n4_lekubu,truck,outbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lekubu,truck,outbound,hills (trucks),12.2,7.4,17.4
+pretoria_n4_lekubu,truck,outbound,curves,0.2,0.0,0.6
+pretoria_n4_lekubu,truck,outbound,rain (wet day),21.0,11.0,33.2
+windhoek_b1_797_km,truck,outbound,town speed limit,1.4,0.0,4.0
+windhoek_b1_797_km,truck,outbound,roadside activity,0.6,0.3,1.7
+windhoek_b1_797_km,truck,outbound,joining roads,1.0,0.4,2.3
+windhoek_b1_797_km,truck,outbound,signals and crossings,16.5,9.1,23.9
+windhoek_b1_797_km,truck,outbound,speed humps (assumed),3.6,0.3,8.5
+windhoek_b1_797_km,truck,outbound,police posts,1.0,0.2,4.7
+windhoek_b1_797_km,truck,outbound,weighbridge,0.0,0.0,0.0
+windhoek_b1_797_km,truck,outbound,hills (trucks),4.2,2.6,5.9
+windhoek_b1_797_km,truck,outbound,curves,0.0,0.0,0.1
+windhoek_b1_797_km,truck,outbound,rain (wet day),20.4,10.7,32.2
+windhoek_b2_walvis_bay,truck,outbound,town speed limit,0.5,0.0,1.8
+windhoek_b2_walvis_bay,truck,outbound,roadside activity,1.6,0.7,3.4
+windhoek_b2_walvis_bay,truck,outbound,joining roads,1.7,0.6,3.2
+windhoek_b2_walvis_bay,truck,outbound,signals and crossings,3.6,2.0,5.2
+windhoek_b2_walvis_bay,truck,outbound,speed humps (assumed),2.2,0.2,5.2
+windhoek_b2_walvis_bay,truck,outbound,police posts,2.0,0.5,9.5
+windhoek_b2_walvis_bay,truck,outbound,weighbridge,10.0,6.2,28.4
+windhoek_b2_walvis_bay,truck,outbound,hills (trucks),6.1,3.8,8.6
+windhoek_b2_walvis_bay,truck,outbound,curves,0.4,0.0,1.1
+windhoek_b2_walvis_bay,truck,outbound,rain (wet day),39.1,20.3,61.7
+windhoek_b6_buitepos,truck,outbound,town speed limit,0.5,0.0,1.9
+windhoek_b6_buitepos,truck,outbound,roadside activity,0.8,0.3,2.3
+windhoek_b6_buitepos,truck,outbound,joining roads,1.6,0.6,3.0
+windhoek_b6_buitepos,truck,outbound,signals and crossings,7.6,4.6,10.8
+windhoek_b6_buitepos,truck,outbound,speed humps (assumed),2.4,0.2,5.6
+windhoek_b6_buitepos,truck,outbound,police posts,1.0,0.2,4.7
+windhoek_b6_buitepos,truck,outbound,weighbridge,10.0,6.2,28.4
+windhoek_b6_buitepos,truck,outbound,hills (trucks),5.2,3.1,7.4
+windhoek_b6_buitepos,truck,outbound,curves,0.3,0.0,0.9
+windhoek_b6_buitepos,truck,outbound,rain (wet day),31.4,16.3,49.5
+windhoek_c26_194_km,truck,outbound,town speed limit,0.2,0.0,1.8
+windhoek_c26_194_km,truck,outbound,roadside activity,0.5,0.1,2.2
+windhoek_c26_194_km,truck,outbound,joining roads,1.1,0.4,2.7
+windhoek_c26_194_km,truck,outbound,signals and crossings,25.9,14.6,37.5
+windhoek_c26_194_km,truck,outbound,speed humps (assumed),2.6,0.2,6.1
+windhoek_c26_194_km,truck,outbound,police posts,1.0,0.2,4.7
+windhoek_c26_194_km,truck,outbound,weighbridge,10.0,6.2,28.4
+windhoek_c26_194_km,truck,outbound,hills (trucks),15.8,9.9,22.3
+windhoek_c26_194_km,truck,outbound,curves,3.9,0.9,7.1
+windhoek_c26_194_km,truck,outbound,rain (wet day),21.5,11.2,33.8
+windhoek_c28_swakopmund,truck,outbound,town speed limit,0.0,0.0,0.5
+windhoek_c28_swakopmund,truck,outbound,roadside activity,0.8,0.3,1.8
+windhoek_c28_swakopmund,truck,outbound,joining roads,0.8,0.3,1.5
+windhoek_c28_swakopmund,truck,outbound,signals and crossings,3.5,1.9,5.1
+windhoek_c28_swakopmund,truck,outbound,speed humps (assumed),0.6,0.1,1.4
+windhoek_c28_swakopmund,truck,outbound,police posts,0.0,0.0,0.0
+windhoek_c28_swakopmund,truck,outbound,weighbridge,0.0,0.0,0.0
+windhoek_c28_swakopmund,truck,outbound,hills (trucks),27.0,16.5,39.0
+windhoek_c28_swakopmund,truck,outbound,curves,4.6,0.8,9.9
+windhoek_c28_swakopmund,truck,outbound,rain (wet day),23.4,12.2,36.6
+dar_es_salaam_road_dodoma,truck,inbound,town speed limit,7.3,0.2,28.1
+dar_es_salaam_road_dodoma,truck,inbound,roadside activity,17.2,6.5,42.6
+dar_es_salaam_road_dodoma,truck,inbound,joining roads,9.9,3.4,21.7
+dar_es_salaam_road_dodoma,truck,inbound,signals and crossings,14.4,9.6,21.8
+dar_es_salaam_road_dodoma,truck,inbound,speed humps (assumed),32.8,3.1,77.2
+dar_es_salaam_road_dodoma,truck,inbound,police posts,2.0,0.5,9.5
+dar_es_salaam_road_dodoma,truck,inbound,weighbridge,30.0,18.6,85.2
+dar_es_salaam_road_dodoma,truck,inbound,hills (trucks),14.3,8.3,21.4
+dar_es_salaam_road_dodoma,truck,inbound,curves,0.1,0.0,1.1
+dar_es_salaam_road_dodoma,truck,inbound,rain (wet day),51.1,27.0,79.9
+dar_es_salaam_t1_tunduma,truck,inbound,town speed limit,7.5,0.2,35.1
+dar_es_salaam_t1_tunduma,truck,inbound,roadside activity,48.4,20.9,106.4
+dar_es_salaam_t1_tunduma,truck,inbound,joining roads,18.9,6.5,42.1
+dar_es_salaam_t1_tunduma,truck,inbound,signals and crossings,25.1,18.2,35.1
+dar_es_salaam_t1_tunduma,truck,inbound,speed humps (assumed),47.0,4.4,110.6
+dar_es_salaam_t1_tunduma,truck,inbound,police posts,2.0,0.5,9.5
+dar_es_salaam_t1_tunduma,truck,inbound,weighbridge,40.0,24.8,113.6
+dar_es_salaam_t1_tunduma,truck,inbound,hills (trucks),55.9,32.5,82.1
+dar_es_salaam_t1_tunduma,truck,inbound,curves,4.5,1.1,9.8
+dar_es_salaam_t1_tunduma,truck,inbound,rain (wet day),107.9,56.7,169.3
+dar_es_salaam_t7_lindi,truck,inbound,town speed limit,0.6,0.0,6.5
+dar_es_salaam_t7_lindi,truck,inbound,roadside activity,9.4,3.5,22.0
+dar_es_salaam_t7_lindi,truck,inbound,joining roads,4.6,1.5,9.9
+dar_es_salaam_t7_lindi,truck,inbound,signals and crossings,3.6,1.9,6.7
+dar_es_salaam_t7_lindi,truck,inbound,speed humps (assumed),10.8,1.0,25.4
+dar_es_salaam_t7_lindi,truck,inbound,police posts,1.0,0.2,4.7
+dar_es_salaam_t7_lindi,truck,inbound,weighbridge,0.0,0.0,0.0
+dar_es_salaam_t7_lindi,truck,inbound,hills (trucks),8.8,5.0,12.7
+dar_es_salaam_t7_lindi,truck,inbound,curves,0.3,0.0,1.3
+dar_es_salaam_t7_lindi,truck,inbound,rain (wet day),22.9,12.0,36.0
+dodoma_t3_morogoro,truck,inbound,town speed limit,2.2,0.1,7.1
+dodoma_t3_morogoro,truck,inbound,roadside activity,6.5,2.9,14.4
+dodoma_t3_morogoro,truck,inbound,joining roads,3.3,1.3,6.8
+dodoma_t3_morogoro,truck,inbound,signals and crossings,0.3,0.2,0.6
+dodoma_t3_morogoro,truck,inbound,speed humps (assumed),7.2,0.7,16.9
+dodoma_t3_morogoro,truck,inbound,police posts,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,inbound,hills (trucks),15.2,8.8,22.1
+dodoma_t3_morogoro,truck,inbound,curves,0.0,0.0,0.0
+dodoma_t3_morogoro,truck,inbound,rain (wet day),23.0,12.1,36.1
+dodoma_t3_rusomo,truck,inbound,town speed limit,2.0,0.0,6.9
+dodoma_t3_rusomo,truck,inbound,roadside activity,3.3,1.5,8.2
+dodoma_t3_rusomo,truck,inbound,joining roads,1.8,0.6,4.1
+dodoma_t3_rusomo,truck,inbound,signals and crossings,1.4,0.9,2.5
+dodoma_t3_rusomo,truck,inbound,speed humps (assumed),7.4,0.7,17.4
+dodoma_t3_rusomo,truck,inbound,police posts,0.0,0.0,0.0
+dodoma_t3_rusomo,truck,inbound,weighbridge,10.0,6.2,28.4
+dodoma_t3_rusomo,truck,inbound,hills (trucks),5.8,3.5,8.4
+dodoma_t3_rusomo,truck,inbound,curves,0.0,0.0,0.3
+dodoma_t3_rusomo,truck,inbound,rain (wet day),21.1,11.0,33.4
+dodoma_t5_arusha,truck,inbound,town speed limit,1.2,0.0,4.7
+dodoma_t5_arusha,truck,inbound,roadside activity,5.1,2.2,11.0
+dodoma_t5_arusha,truck,inbound,joining roads,1.9,0.6,4.3
+dodoma_t5_arusha,truck,inbound,signals and crossings,0.0,0.0,0.0
+dodoma_t5_arusha,truck,inbound,speed humps (assumed),5.6,0.5,13.2
+dodoma_t5_arusha,truck,inbound,police posts,0.0,0.0,0.0
+dodoma_t5_arusha,truck,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_arusha,truck,inbound,hills (trucks),14.1,8.2,20.8
+dodoma_t5_arusha,truck,inbound,curves,3.9,0.8,7.9
+dodoma_t5_arusha,truck,inbound,rain (wet day),22.7,11.8,35.5
+dodoma_t5_iringa,truck,inbound,town speed limit,1.3,0.0,5.5
+dodoma_t5_iringa,truck,inbound,roadside activity,4.2,2.1,9.6
+dodoma_t5_iringa,truck,inbound,joining roads,2.1,0.8,5.2
+dodoma_t5_iringa,truck,inbound,signals and crossings,0.7,0.4,1.2
+dodoma_t5_iringa,truck,inbound,speed humps (assumed),6.0,0.6,14.1
+dodoma_t5_iringa,truck,inbound,police posts,0.0,0.0,0.0
+dodoma_t5_iringa,truck,inbound,weighbridge,0.0,0.0,0.0
+dodoma_t5_iringa,truck,inbound,hills (trucks),7.2,4.2,10.3
+dodoma_t5_iringa,truck,inbound,curves,4.6,1.2,8.7
+dodoma_t5_iringa,truck,inbound,rain (wet day),21.9,11.4,34.4
+gaborone_a12_326_km,truck,inbound,town speed limit,1.2,0.0,5.5
+gaborone_a12_326_km,truck,inbound,roadside activity,2.3,1.1,6.8
+gaborone_a12_326_km,truck,inbound,joining roads,2.2,0.9,5.6
+gaborone_a12_326_km,truck,inbound,signals and crossings,22.6,13.3,32.4
+gaborone_a12_326_km,truck,inbound,speed humps (assumed),6.0,0.6,14.1
+gaborone_a12_326_km,truck,inbound,police posts,0.0,0.0,0.0
+gaborone_a12_326_km,truck,inbound,weighbridge,0.0,0.0,0.0
+gaborone_a12_326_km,truck,inbound,hills (trucks),0.7,0.3,1.2
+gaborone_a12_326_km,truck,inbound,curves,0.2,0.0,0.7
+gaborone_a12_326_km,truck,inbound,rain (wet day),20.3,10.6,32.0
+gaborone_a1_121_km,truck,inbound,town speed limit,1.1,0.0,3.4
+gaborone_a1_121_km,truck,inbound,roadside activity,2.1,1.1,4.2
+gaborone_a1_121_km,truck,inbound,joining roads,1.4,0.6,3.0
+gaborone_a1_121_km,truck,inbound,signals and crossings,12.9,8.2,18.5
+gaborone_a1_121_km,truck,inbound,speed humps (assumed),3.4,0.3,8.0
+gaborone_a1_121_km,truck,inbound,police posts,0.0,0.0,0.0
+gaborone_a1_121_km,truck,inbound,weighbridge,0.0,0.0,0.0
+gaborone_a1_121_km,truck,inbound,hills (trucks),1.2,0.7,1.7
+gaborone_a1_121_km,truck,inbound,curves,0.3,0.0,1.0
+gaborone_a1_121_km,truck,inbound,rain (wet day),12.8,6.7,20.2
+gaborone_a1_ramokgwebana,truck,inbound,town speed limit,2.0,0.0,6.4
+gaborone_a1_ramokgwebana,truck,inbound,roadside activity,2.6,1.4,5.7
+gaborone_a1_ramokgwebana,truck,inbound,joining roads,3.3,1.3,7.0
+gaborone_a1_ramokgwebana,truck,inbound,signals and crossings,13.7,8.7,19.5
+gaborone_a1_ramokgwebana,truck,inbound,speed humps (assumed),6.0,0.6,14.1
+gaborone_a1_ramokgwebana,truck,inbound,police posts,3.0,0.7,14.2
+gaborone_a1_ramokgwebana,truck,inbound,weighbridge,10.0,6.2,28.4
+gaborone_a1_ramokgwebana,truck,inbound,hills (trucks),1.8,1.1,2.5
+gaborone_a1_ramokgwebana,truck,inbound,curves,0.0,0.0,0.2
+gaborone_a1_ramokgwebana,truck,inbound,rain (wet day),49.1,25.5,77.5
+harare_a1_chirundu,truck,inbound,town speed limit,1.5,0.1,4.4
+harare_a1_chirundu,truck,inbound,roadside activity,2.6,1.3,5.8
+harare_a1_chirundu,truck,inbound,joining roads,2.5,1.0,5.0
+harare_a1_chirundu,truck,inbound,signals and crossings,6.5,4.0,9.4
+harare_a1_chirundu,truck,inbound,speed humps (assumed),4.2,0.4,9.9
+harare_a1_chirundu,truck,inbound,police posts,2.0,0.5,9.5
+harare_a1_chirundu,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_a1_chirundu,truck,inbound,hills (trucks),28.5,16.5,41.4
+harare_a1_chirundu,truck,inbound,curves,1.2,0.2,3.8
+harare_a1_chirundu,truck,inbound,rain (wet day),37.7,19.7,59.3
+harare_a4_beitbridge,truck,inbound,town speed limit,1.5,0.0,4.6
+harare_a4_beitbridge,truck,inbound,roadside activity,3.1,1.5,6.8
+harare_a4_beitbridge,truck,inbound,joining roads,3.6,1.5,7.1
+harare_a4_beitbridge,truck,inbound,signals and crossings,1.0,0.4,1.9
+harare_a4_beitbridge,truck,inbound,speed humps (assumed),4.6,0.4,10.8
+harare_a4_beitbridge,truck,inbound,police posts,7.0,1.7,33.2
+harare_a4_beitbridge,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_a4_beitbridge,truck,inbound,hills (trucks),15.0,9.1,21.4
+harare_a4_beitbridge,truck,inbound,curves,0.3,0.0,0.9
+harare_a4_beitbridge,truck,inbound,rain (wet day),57.8,30.1,91.0
+harare_p1_mucumbura,truck,inbound,town speed limit,0.2,0.0,1.0
+harare_p1_mucumbura,truck,inbound,roadside activity,2.2,1.2,4.4
+harare_p1_mucumbura,truck,inbound,joining roads,1.5,0.6,3.1
+harare_p1_mucumbura,truck,inbound,signals and crossings,0.5,0.3,0.7
+harare_p1_mucumbura,truck,inbound,speed humps (assumed),1.2,0.1,2.8
+harare_p1_mucumbura,truck,inbound,police posts,3.0,0.7,14.2
+harare_p1_mucumbura,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_p1_mucumbura,truck,inbound,hills (trucks),19.0,11.5,27.0
+harare_p1_mucumbura,truck,inbound,curves,0.2,0.0,0.8
+harare_p1_mucumbura,truck,inbound,rain (wet day),22.0,11.5,34.6
+harare_r2_plumtree,truck,inbound,town speed limit,0.6,0.0,2.4
+harare_r2_plumtree,truck,inbound,roadside activity,2.2,1.0,5.1
+harare_r2_plumtree,truck,inbound,joining roads,2.0,0.8,3.9
+harare_r2_plumtree,truck,inbound,signals and crossings,1.1,0.7,1.9
+harare_r2_plumtree,truck,inbound,speed humps (assumed),2.6,0.2,6.1
+harare_r2_plumtree,truck,inbound,police posts,2.0,0.5,9.5
+harare_r2_plumtree,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_r2_plumtree,truck,inbound,hills (trucks),3.4,2.0,5.0
+harare_r2_plumtree,truck,inbound,curves,0.2,0.0,0.6
+harare_r2_plumtree,truck,inbound,rain (wet day),20.3,10.6,32.0
+harare_r4_nyamapanda,truck,inbound,town speed limit,0.2,0.0,1.4
+harare_r4_nyamapanda,truck,inbound,roadside activity,2.2,1.1,4.7
+harare_r4_nyamapanda,truck,inbound,joining roads,1.7,0.7,3.6
+harare_r4_nyamapanda,truck,inbound,signals and crossings,1.7,1.1,2.8
+harare_r4_nyamapanda,truck,inbound,speed humps (assumed),1.8,0.2,4.2
+harare_r4_nyamapanda,truck,inbound,police posts,3.0,0.7,14.2
+harare_r4_nyamapanda,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_r4_nyamapanda,truck,inbound,hills (trucks),16.2,9.7,23.2
+harare_r4_nyamapanda,truck,inbound,curves,0.1,0.0,0.4
+harare_r4_nyamapanda,truck,inbound,rain (wet day),21.7,11.3,34.3
+harare_r5_mutare,truck,inbound,town speed limit,0.7,0.0,2.7
+harare_r5_mutare,truck,inbound,roadside activity,2.7,1.3,5.7
+harare_r5_mutare,truck,inbound,joining roads,2.0,0.8,3.9
+harare_r5_mutare,truck,inbound,signals and crossings,1.0,0.4,1.9
+harare_r5_mutare,truck,inbound,speed humps (assumed),3.0,0.3,7.1
+harare_r5_mutare,truck,inbound,police posts,2.0,0.5,9.5
+harare_r5_mutare,truck,inbound,weighbridge,0.0,0.0,0.0
+harare_r5_mutare,truck,inbound,hills (trucks),14.0,8.6,19.8
+harare_r5_mutare,truck,inbound,curves,0.0,0.0,0.3
+harare_r5_mutare,truck,inbound,rain (wet day),21.6,11.3,34.2
+johannesburg_n12_de_rust,truck,inbound,town speed limit,2.4,0.0,6.7
+johannesburg_n12_de_rust,truck,inbound,roadside activity,3.0,1.5,6.3
+johannesburg_n12_de_rust,truck,inbound,joining roads,1.9,0.8,4.3
+johannesburg_n12_de_rust,truck,inbound,signals and crossings,48.6,30.6,69.4
+johannesburg_n12_de_rust,truck,inbound,speed humps (assumed),6.0,0.6,14.1
+johannesburg_n12_de_rust,truck,inbound,police posts,0.0,0.0,0.0
+johannesburg_n12_de_rust,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_de_rust,truck,inbound,hills (trucks),9.6,5.9,13.7
+johannesburg_n12_de_rust,truck,inbound,curves,0.3,0.0,0.8
+johannesburg_n12_de_rust,truck,inbound,rain (wet day),21.5,11.2,34.0
+johannesburg_n12_emalahleni,truck,inbound,town speed limit,0.6,0.0,2.1
+johannesburg_n12_emalahleni,truck,inbound,roadside activity,3.8,1.8,7.8
+johannesburg_n12_emalahleni,truck,inbound,joining roads,0.8,0.3,1.7
+johannesburg_n12_emalahleni,truck,inbound,signals and crossings,11.8,7.0,16.9
+johannesburg_n12_emalahleni,truck,inbound,speed humps (assumed),2.8,0.3,6.6
+johannesburg_n12_emalahleni,truck,inbound,police posts,0.0,0.0,0.0
+johannesburg_n12_emalahleni,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n12_emalahleni,truck,inbound,hills (trucks),6.0,3.6,9.0
+johannesburg_n12_emalahleni,truck,inbound,curves,0.0,0.0,0.2
+johannesburg_n12_emalahleni,truck,inbound,rain (wet day),14.1,7.4,22.3
+johannesburg_n17_msauli,truck,inbound,town speed limit,0.1,0.0,0.7
+johannesburg_n17_msauli,truck,inbound,roadside activity,2.3,1.0,4.6
+johannesburg_n17_msauli,truck,inbound,joining roads,1.6,0.6,3.2
+johannesburg_n17_msauli,truck,inbound,signals and crossings,3.0,1.7,4.4
+johannesburg_n17_msauli,truck,inbound,speed humps (assumed),1.2,0.1,2.8
+johannesburg_n17_msauli,truck,inbound,police posts,11.0,2.6,52.2
+johannesburg_n17_msauli,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_n17_msauli,truck,inbound,hills (trucks),10.7,6.5,15.2
+johannesburg_n17_msauli,truck,inbound,curves,0.4,0.1,1.1
+johannesburg_n17_msauli,truck,inbound,rain (wet day),21.6,11.3,34.0
+johannesburg_n3_durban,truck,inbound,town speed limit,1.6,0.1,5.0
+johannesburg_n3_durban,truck,inbound,roadside activity,4.2,2.1,8.8
+johannesburg_n3_durban,truck,inbound,joining roads,2.3,0.9,4.8
+johannesburg_n3_durban,truck,inbound,signals and crossings,58.0,36.3,82.8
+johannesburg_n3_durban,truck,inbound,speed humps (assumed),5.4,0.5,12.7
+johannesburg_n3_durban,truck,inbound,police posts,18.0,4.3,85.4
+johannesburg_n3_durban,truck,inbound,weighbridge,10.0,6.2,28.4
+johannesburg_n3_durban,truck,inbound,hills (trucks),79.0,48.4,112.0
+johannesburg_n3_durban,truck,inbound,curves,0.5,0.0,2.4
+johannesburg_n3_durban,truck,inbound,rain (wet day),65.0,33.8,102.0
+johannesburg_r24_rustenburg,truck,inbound,town speed limit,1.0,0.0,6.7
+johannesburg_r24_rustenburg,truck,inbound,roadside activity,7.9,2.6,19.1
+johannesburg_r24_rustenburg,truck,inbound,joining roads,4.1,1.1,9.9
+johannesburg_r24_rustenburg,truck,inbound,signals and crossings,73.1,46.6,104.4
+johannesburg_r24_rustenburg,truck,inbound,speed humps (assumed),10.8,1.0,25.4
+johannesburg_r24_rustenburg,truck,inbound,police posts,0.0,0.0,0.0
+johannesburg_r24_rustenburg,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r24_rustenburg,truck,inbound,hills (trucks),9.7,5.6,14.2
+johannesburg_r24_rustenburg,truck,inbound,curves,1.4,0.2,3.6
+johannesburg_r24_rustenburg,truck,inbound,rain (wet day),15.0,7.9,23.4
+johannesburg_r25_groblersdal,truck,inbound,town speed limit,1.0,0.0,4.6
+johannesburg_r25_groblersdal,truck,inbound,roadside activity,3.6,1.4,9.2
+johannesburg_r25_groblersdal,truck,inbound,joining roads,2.9,1.0,6.4
+johannesburg_r25_groblersdal,truck,inbound,signals and crossings,47.9,30.7,68.9
+johannesburg_r25_groblersdal,truck,inbound,speed humps (assumed),7.2,0.7,16.9
+johannesburg_r25_groblersdal,truck,inbound,police posts,0.0,0.0,0.0
+johannesburg_r25_groblersdal,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r25_groblersdal,truck,inbound,hills (trucks),18.9,11.1,27.7
+johannesburg_r25_groblersdal,truck,inbound,curves,0.3,0.0,1.2
+johannesburg_r25_groblersdal,truck,inbound,rain (wet day),22.0,11.6,34.6
+johannesburg_r29_evander,truck,inbound,town speed limit,0.9,0.0,7.5
+johannesburg_r29_evander,truck,inbound,roadside activity,6.8,2.6,17.5
+johannesburg_r29_evander,truck,inbound,joining roads,3.5,1.0,9.2
+johannesburg_r29_evander,truck,inbound,signals and crossings,42.0,27.0,60.0
+johannesburg_r29_evander,truck,inbound,speed humps (assumed),10.6,1.0,24.9
+johannesburg_r29_evander,truck,inbound,police posts,0.0,0.0,0.0
+johannesburg_r29_evander,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r29_evander,truck,inbound,hills (trucks),2.5,1.4,3.8
+johannesburg_r29_evander,truck,inbound,curves,0.3,0.0,1.5
+johannesburg_r29_evander,truck,inbound,rain (wet day),14.3,7.6,22.5
+johannesburg_r59_dealesville,truck,inbound,town speed limit,0.3,0.0,2.1
+johannesburg_r59_dealesville,truck,inbound,roadside activity,2.3,1.1,5.5
+johannesburg_r59_dealesville,truck,inbound,joining roads,1.4,0.5,3.3
+johannesburg_r59_dealesville,truck,inbound,signals and crossings,14.9,9.6,21.5
+johannesburg_r59_dealesville,truck,inbound,speed humps (assumed),3.0,0.3,7.1
+johannesburg_r59_dealesville,truck,inbound,police posts,1.0,0.2,4.7
+johannesburg_r59_dealesville,truck,inbound,weighbridge,0.0,0.0,0.0
+johannesburg_r59_dealesville,truck,inbound,hills (trucks),8.2,4.9,11.8
+johannesburg_r59_dealesville,truck,inbound,curves,0.3,0.0,1.0
+johannesburg_r59_dealesville,truck,inbound,rain (wet day),21.0,11.0,33.2
+kampala_a1_malaba,truck,inbound,town speed limit,1.4,0.0,13.4
+kampala_a1_malaba,truck,inbound,roadside activity,23.3,7.8,54.7
+kampala_a1_malaba,truck,inbound,joining roads,7.5,1.7,14.9
+kampala_a1_malaba,truck,inbound,signals and crossings,10.3,7.5,14.5
+kampala_a1_malaba,truck,inbound,speed humps (assumed),23.8,2.2,56.0
+kampala_a1_malaba,truck,inbound,police posts,8.0,1.9,38.0
+kampala_a1_malaba,truck,inbound,weighbridge,20.0,12.4,56.8
+kampala_a1_malaba,truck,inbound,hills (trucks),10.4,5.5,16.9
+kampala_a1_malaba,truck,inbound,curves,0.1,0.0,1.0
+kampala_a1_malaba,truck,inbound,rain (wet day),27.1,14.4,42.8
+kampala_a2_katuna,truck,inbound,town speed limit,1.3,0.0,11.9
+kampala_a2_katuna,truck,inbound,roadside activity,33.9,13.3,73.8
+kampala_a2_katuna,truck,inbound,joining roads,11.3,3.5,22.1
+kampala_a2_katuna,truck,inbound,signals and crossings,2.9,2.2,4.3
+kampala_a2_katuna,truck,inbound,speed humps (assumed),21.8,2.1,51.3
+kampala_a2_katuna,truck,inbound,police posts,11.0,2.6,52.2
+kampala_a2_katuna,truck,inbound,weighbridge,20.0,12.4,56.8
+kampala_a2_katuna,truck,inbound,hills (trucks),31.3,16.2,47.9
+kampala_a2_katuna,truck,inbound,curves,2.2,0.3,5.9
+kampala_a2_katuna,truck,inbound,rain (wet day),51.8,27.3,81.1
+kampala_a5_bwera,truck,inbound,town speed limit,0.3,0.0,4.2
+kampala_a5_bwera,truck,inbound,roadside activity,35.2,15.8,71.8
+kampala_a5_bwera,truck,inbound,joining roads,12.4,4.3,23.8
+kampala_a5_bwera,truck,inbound,signals and crossings,2.4,1.3,4.5
+kampala_a5_bwera,truck,inbound,speed humps (assumed),9.8,0.9,23.1
+kampala_a5_bwera,truck,inbound,police posts,6.0,1.4,28.5
+kampala_a5_bwera,truck,inbound,weighbridge,0.0,0.0,0.0
+kampala_a5_bwera,truck,inbound,hills (trucks),41.0,22.0,63.1
+kampala_a5_bwera,truck,inbound,curves,2.5,0.2,8.7
+kampala_a5_bwera,truck,inbound,rain (wet day),52.8,27.7,82.5
+kampala_a6_elegu,truck,inbound,town speed limit,2.9,0.1,14.9
+kampala_a6_elegu,truck,inbound,roadside activity,25.6,10.2,56.3
+kampala_a6_elegu,truck,inbound,joining roads,9.5,3.2,18.7
+kampala_a6_elegu,truck,inbound,signals and crossings,2.6,1.7,4.4
+kampala_a6_elegu,truck,inbound,speed humps (assumed),22.2,2.1,52.2
+kampala_a6_elegu,truck,inbound,police posts,9.0,2.2,42.7
+kampala_a6_elegu,truck,inbound,weighbridge,10.0,6.2,28.4
+kampala_a6_elegu,truck,inbound,hills (trucks),15.6,8.1,24.7
+kampala_a6_elegu,truck,inbound,curves,0.2,0.0,0.6
+kampala_a6_elegu,truck,inbound,rain (wet day),49.0,25.8,76.8
+kampala_a9_hoima,truck,inbound,town speed limit,0.4,0.0,4.1
+kampala_a9_hoima,truck,inbound,roadside activity,18.1,7.8,38.4
+kampala_a9_hoima,truck,inbound,joining roads,5.0,1.6,9.9
+kampala_a9_hoima,truck,inbound,signals and crossings,0.7,0.5,1.0
+kampala_a9_hoima,truck,inbound,speed humps (assumed),8.4,0.8,19.8
+kampala_a9_hoima,truck,inbound,police posts,3.0,0.7,14.2
+kampala_a9_hoima,truck,inbound,weighbridge,0.0,0.0,0.0
+kampala_a9_hoima,truck,inbound,hills (trucks),14.3,7.5,22.4
+kampala_a9_hoima,truck,inbound,curves,0.9,0.1,2.9
+kampala_a9_hoima,truck,inbound,rain (wet day),24.1,12.7,37.8
+kigali_nr1_huye,truck,inbound,town speed limit,0.4,0.0,3.5
+kigali_nr1_huye,truck,inbound,roadside activity,10.6,4.8,26.1
+kigali_nr1_huye,truck,inbound,joining roads,2.5,0.9,6.3
+kigali_nr1_huye,truck,inbound,signals and crossings,4.9,3.2,7.1
+kigali_nr1_huye,truck,inbound,speed humps (assumed),6.4,0.6,15.1
+kigali_nr1_huye,truck,inbound,police posts,1.0,0.2,4.7
+kigali_nr1_huye,truck,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr1_huye,truck,inbound,hills (trucks),22.0,8.8,36.8
+kigali_nr1_huye,truck,inbound,curves,7.8,0.9,20.4
+kigali_nr1_huye,truck,inbound,rain (wet day),22.1,11.6,34.8
+kigali_nr2_gisenyi,truck,inbound,town speed limit,0.6,0.0,5.4
+kigali_nr2_gisenyi,truck,inbound,roadside activity,11.4,4.7,28.5
+kigali_nr2_gisenyi,truck,inbound,joining roads,2.8,0.9,6.3
+kigali_nr2_gisenyi,truck,inbound,signals and crossings,0.4,0.3,0.7
+kigali_nr2_gisenyi,truck,inbound,speed humps (assumed),9.4,0.9,22.1
+kigali_nr2_gisenyi,truck,inbound,police posts,1.0,0.2,4.7
+kigali_nr2_gisenyi,truck,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr2_gisenyi,truck,inbound,hills (trucks),21.4,8.3,36.6
+kigali_nr2_gisenyi,truck,inbound,curves,10.2,1.5,23.8
+kigali_nr2_gisenyi,truck,inbound,rain (wet day),22.0,11.6,34.6
+kigali_nr3_gatuna,truck,inbound,town speed limit,0.1,0.0,1.1
+kigali_nr3_gatuna,truck,inbound,roadside activity,2.4,1.1,6.2
+kigali_nr3_gatuna,truck,inbound,joining roads,0.6,0.2,1.5
+kigali_nr3_gatuna,truck,inbound,signals and crossings,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,inbound,speed humps (assumed),1.6,0.2,3.8
+kigali_nr3_gatuna,truck,inbound,police posts,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,inbound,weighbridge,0.0,0.0,0.0
+kigali_nr3_gatuna,truck,inbound,hills (trucks),2.2,1.0,4.4
+kigali_nr3_gatuna,truck,inbound,curves,7.8,1.2,16.9
+kigali_nr3_gatuna,truck,inbound,rain (wet day),9.2,4.8,14.3
+kigali_road_rusumo,truck,inbound,town speed limit,1.2,0.0,8.3
+kigali_road_rusumo,truck,inbound,roadside activity,18.5,8.0,41.9
+kigali_road_rusumo,truck,inbound,joining roads,4.5,1.5,9.6
+kigali_road_rusumo,truck,inbound,signals and crossings,1.2,0.8,1.9
+kigali_road_rusumo,truck,inbound,speed humps (assumed),12.4,1.2,29.2
+kigali_road_rusumo,truck,inbound,police posts,0.0,0.0,0.0
+kigali_road_rusumo,truck,inbound,weighbridge,0.0,0.0,0.0
+kigali_road_rusumo,truck,inbound,hills (trucks),12.9,5.1,22.5
+kigali_road_rusumo,truck,inbound,curves,2.0,0.1,6.2
+kigali_road_rusumo,truck,inbound,rain (wet day),21.5,11.3,33.8
+lusaka_m9_mongu,truck,inbound,town speed limit,0.4,0.0,2.5
+lusaka_m9_mongu,truck,inbound,roadside activity,3.9,1.7,8.4
+lusaka_m9_mongu,truck,inbound,joining roads,3.6,1.3,6.7
+lusaka_m9_mongu,truck,inbound,signals and crossings,5.8,4.2,8.0
+lusaka_m9_mongu,truck,inbound,speed humps (assumed),3.4,0.3,8.0
+lusaka_m9_mongu,truck,inbound,police posts,4.0,1.0,19.0
+lusaka_m9_mongu,truck,inbound,weighbridge,0.0,0.0,0.0
+lusaka_m9_mongu,truck,inbound,hills (trucks),3.9,2.3,5.7
+lusaka_m9_mongu,truck,inbound,curves,0.0,0.0,0.0
+lusaka_m9_mongu,truck,inbound,rain (wet day),20.6,10.7,32.5
+lusaka_t1_livingstone,truck,inbound,town speed limit,3.1,0.1,10.5
+lusaka_t1_livingstone,truck,inbound,roadside activity,7.2,3.4,15.6
+lusaka_t1_livingstone,truck,inbound,joining roads,6.1,2.4,12.4
+lusaka_t1_livingstone,truck,inbound,signals and crossings,14.4,11.3,19.3
+lusaka_t1_livingstone,truck,inbound,speed humps (assumed),11.4,1.1,26.8
+lusaka_t1_livingstone,truck,inbound,police posts,6.0,1.4,28.5
+lusaka_t1_livingstone,truck,inbound,weighbridge,10.0,6.2,28.4
+lusaka_t1_livingstone,truck,inbound,hills (trucks),11.1,6.3,16.3
+lusaka_t1_livingstone,truck,inbound,curves,0.0,0.0,0.9
+lusaka_t1_livingstone,truck,inbound,rain (wet day),48.7,25.5,76.9
+lusaka_t2_chirundu,truck,inbound,town speed limit,2.9,0.1,9.2
+lusaka_t2_chirundu,truck,inbound,roadside activity,2.6,1.2,6.6
+lusaka_t2_chirundu,truck,inbound,joining roads,2.2,0.8,5.5
+lusaka_t2_chirundu,truck,inbound,signals and crossings,8.9,6.7,12.2
+lusaka_t2_chirundu,truck,inbound,speed humps (assumed),9.0,0.9,21.2
+lusaka_t2_chirundu,truck,inbound,police posts,8.0,1.9,38.0
+lusaka_t2_chirundu,truck,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_chirundu,truck,inbound,hills (trucks),13.6,7.1,20.6
+lusaka_t2_chirundu,truck,inbound,curves,0.7,0.1,2.7
+lusaka_t2_chirundu,truck,inbound,rain (wet day),16.2,8.5,25.5
+lusaka_t2_nakonde,truck,inbound,town speed limit,2.6,0.0,10.3
+lusaka_t2_nakonde,truck,inbound,roadside activity,16.1,8.0,32.5
+lusaka_t2_nakonde,truck,inbound,joining roads,15.4,6.0,29.3
+lusaka_t2_nakonde,truck,inbound,signals and crossings,10.1,6.8,14.3
+lusaka_t2_nakonde,truck,inbound,speed humps (assumed),11.8,1.1,27.8
+lusaka_t2_nakonde,truck,inbound,police posts,11.0,2.6,52.2
+lusaka_t2_nakonde,truck,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t2_nakonde,truck,inbound,hills (trucks),29.7,17.6,43.1
+lusaka_t2_nakonde,truck,inbound,curves,0.7,0.1,2.4
+lusaka_t2_nakonde,truck,inbound,rain (wet day),105.5,54.9,165.8
+lusaka_t4_234_km,truck,inbound,town speed limit,1.2,0.0,5.8
+lusaka_t4_234_km,truck,inbound,roadside activity,3.7,1.8,8.9
+lusaka_t4_234_km,truck,inbound,joining roads,2.4,0.9,5.9
+lusaka_t4_234_km,truck,inbound,signals and crossings,7.0,4.6,10.1
+lusaka_t4_234_km,truck,inbound,speed humps (assumed),6.8,0.6,16.0
+lusaka_t4_234_km,truck,inbound,police posts,2.0,0.5,9.5
+lusaka_t4_234_km,truck,inbound,weighbridge,0.0,0.0,0.0
+lusaka_t4_234_km,truck,inbound,hills (trucks),17.7,10.7,25.3
+lusaka_t4_234_km,truck,inbound,curves,0.5,0.2,1.5
+lusaka_t4_234_km,truck,inbound,rain (wet day),22.5,11.8,35.6
+maputo_en4_ressano_garcia,truck,inbound,town speed limit,1.4,0.0,7.0
+maputo_en4_ressano_garcia,truck,inbound,roadside activity,2.8,0.7,9.2
+maputo_en4_ressano_garcia,truck,inbound,joining roads,1.9,0.6,4.4
+maputo_en4_ressano_garcia,truck,inbound,signals and crossings,13.6,9.1,20.0
+maputo_en4_ressano_garcia,truck,inbound,speed humps (assumed),8.8,0.8,20.7
+maputo_en4_ressano_garcia,truck,inbound,police posts,3.0,0.7,14.2
+maputo_en4_ressano_garcia,truck,inbound,weighbridge,0.0,0.0,0.0
+maputo_en4_ressano_garcia,truck,inbound,hills (trucks),2.3,1.4,3.4
+maputo_en4_ressano_garcia,truck,inbound,curves,0.2,0.0,0.7
+maputo_en4_ressano_garcia,truck,inbound,rain (wet day),10.5,5.5,16.5
+maputo_n1_pemba,truck,inbound,town speed limit,7.7,0.4,23.9
+maputo_n1_pemba,truck,inbound,roadside activity,12.6,4.7,30.2
+maputo_n1_pemba,truck,inbound,joining roads,7.1,2.2,16.4
+maputo_n1_pemba,truck,inbound,signals and crossings,4.8,2.3,9.2
+maputo_n1_pemba,truck,inbound,speed humps (assumed),25.8,2.4,60.7
+maputo_n1_pemba,truck,inbound,police posts,2.0,0.5,9.5
+maputo_n1_pemba,truck,inbound,weighbridge,10.0,6.2,28.4
+maputo_n1_pemba,truck,inbound,hills (trucks),1.4,0.6,2.5
+maputo_n1_pemba,truck,inbound,curves,0.0,0.0,0.2
+maputo_n1_pemba,truck,inbound,rain (wet day),23.6,12.5,37.0
+nairobi_a2_moyale,truck,inbound,town speed limit,3.8,0.1,13.3
+nairobi_a2_moyale,truck,inbound,roadside activity,7.8,3.7,18.9
+nairobi_a2_moyale,truck,inbound,joining roads,3.9,1.6,8.8
+nairobi_a2_moyale,truck,inbound,signals and crossings,2.1,1.4,3.7
+nairobi_a2_moyale,truck,inbound,speed humps (assumed),13.6,1.3,32.0
+nairobi_a2_moyale,truck,inbound,police posts,2.0,0.5,9.5
+nairobi_a2_moyale,truck,inbound,weighbridge,10.0,6.2,28.4
+nairobi_a2_moyale,truck,inbound,hills (trucks),13.3,7.5,20.4
+nairobi_a2_moyale,truck,inbound,curves,0.7,0.0,2.0
+nairobi_a2_moyale,truck,inbound,rain (wet day),23.8,12.5,37.5
+nairobi_a2_namanga,truck,inbound,town speed limit,3.0,0.1,9.4
+nairobi_a2_namanga,truck,inbound,roadside activity,3.2,1.4,8.5
+nairobi_a2_namanga,truck,inbound,joining roads,2.4,0.9,5.7
+nairobi_a2_namanga,truck,inbound,signals and crossings,0.8,0.4,1.5
+nairobi_a2_namanga,truck,inbound,speed humps (assumed),9.4,0.9,22.1
+nairobi_a2_namanga,truck,inbound,police posts,15.0,3.6,71.2
+nairobi_a2_namanga,truck,inbound,weighbridge,20.0,12.4,56.8
+nairobi_a2_namanga,truck,inbound,hills (trucks),10.3,6.2,14.7
+nairobi_a2_namanga,truck,inbound,curves,0.3,0.0,1.2
+nairobi_a2_namanga,truck,inbound,rain (wet day),17.9,9.4,28.1
+nairobi_a8_malaba,truck,inbound,town speed limit,4.8,0.1,25.0
+nairobi_a8_malaba,truck,inbound,roadside activity,24.0,8.9,58.7
+nairobi_a8_malaba,truck,inbound,joining roads,11.3,3.6,24.8
+nairobi_a8_malaba,truck,inbound,signals and crossings,20.5,15.5,27.8
+nairobi_a8_malaba,truck,inbound,speed humps (assumed),33.6,3.2,79.0
+nairobi_a8_malaba,truck,inbound,police posts,9.0,2.2,42.7
+nairobi_a8_malaba,truck,inbound,weighbridge,30.0,18.6,85.2
+nairobi_a8_malaba,truck,inbound,hills (trucks),37.4,20.5,56.0
+nairobi_a8_malaba,truck,inbound,curves,0.8,0.0,2.9
+nairobi_a8_malaba,truck,inbound,rain (wet day),53.9,28.4,84.6
+nairobi_a8_mombasa,truck,inbound,town speed limit,3.9,0.1,12.8
+nairobi_a8_mombasa,truck,inbound,roadside activity,11.8,5.5,25.3
+nairobi_a8_mombasa,truck,inbound,joining roads,4.9,1.9,10.1
+nairobi_a8_mombasa,truck,inbound,signals and crossings,0.2,0.1,0.3
+nairobi_a8_mombasa,truck,inbound,speed humps (assumed),13.2,1.2,31.0
+nairobi_a8_mombasa,truck,inbound,police posts,15.0,3.6,71.2
+nairobi_a8_mombasa,truck,inbound,weighbridge,20.0,12.4,56.8
+nairobi_a8_mombasa,truck,inbound,hills (trucks),21.3,12.5,31.4
+nairobi_a8_mombasa,truck,inbound,curves,0.3,0.0,1.1
+nairobi_a8_mombasa,truck,inbound,rain (wet day),51.7,27.0,81.4
+pretoria_n14_springbok,truck,inbound,town speed limit,0.6,0.1,2.0
+pretoria_n14_springbok,truck,inbound,roadside activity,3.3,1.6,6.7
+pretoria_n14_springbok,truck,inbound,joining roads,1.5,0.6,2.8
+pretoria_n14_springbok,truck,inbound,signals and crossings,10.3,6.5,14.8
+pretoria_n14_springbok,truck,inbound,speed humps (assumed),2.4,0.2,5.6
+pretoria_n14_springbok,truck,inbound,police posts,0.0,0.0,0.0
+pretoria_n14_springbok,truck,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n14_springbok,truck,inbound,hills (trucks),10.3,6.1,15.1
+pretoria_n14_springbok,truck,inbound,curves,0.3,0.0,0.8
+pretoria_n14_springbok,truck,inbound,rain (wet day),21.4,11.2,33.8
+pretoria_n1_beitbridge,truck,inbound,town speed limit,1.2,0.1,3.1
+pretoria_n1_beitbridge,truck,inbound,roadside activity,4.2,2.0,8.3
+pretoria_n1_beitbridge,truck,inbound,joining roads,2.4,0.9,4.6
+pretoria_n1_beitbridge,truck,inbound,signals and crossings,7.8,5.3,11.5
+pretoria_n1_beitbridge,truck,inbound,speed humps (assumed),2.8,0.3,6.6
+pretoria_n1_beitbridge,truck,inbound,police posts,14.0,3.4,66.4
+pretoria_n1_beitbridge,truck,inbound,weighbridge,40.0,24.8,113.6
+pretoria_n1_beitbridge,truck,inbound,hills (trucks),28.3,17.2,40.2
+pretoria_n1_beitbridge,truck,inbound,curves,0.4,0.0,1.4
+pretoria_n1_beitbridge,truck,inbound,rain (wet day),50.0,26.0,79.0
+pretoria_n1_cape_town,truck,inbound,town speed limit,0.6,0.0,2.0
+pretoria_n1_cape_town,truck,inbound,roadside activity,5.6,2.7,11.0
+pretoria_n1_cape_town,truck,inbound,joining roads,0.6,0.3,1.3
+pretoria_n1_cape_town,truck,inbound,signals and crossings,4.7,2.9,6.7
+pretoria_n1_cape_town,truck,inbound,speed humps (assumed),2.0,0.2,4.7
+pretoria_n1_cape_town,truck,inbound,police posts,5.0,1.2,23.7
+pretoria_n1_cape_town,truck,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n1_cape_town,truck,inbound,hills (trucks),12.9,7.2,18.8
+pretoria_n1_cape_town,truck,inbound,curves,0.4,0.1,0.9
+pretoria_n1_cape_town,truck,inbound,rain (wet day),21.8,11.4,34.4
+pretoria_n4_lebombo,truck,inbound,town speed limit,0.9,0.1,2.5
+pretoria_n4_lebombo,truck,inbound,roadside activity,3.3,1.6,6.5
+pretoria_n4_lebombo,truck,inbound,joining roads,2.7,1.1,5.0
+pretoria_n4_lebombo,truck,inbound,signals and crossings,6.8,4.2,9.6
+pretoria_n4_lebombo,truck,inbound,speed humps (assumed),2.8,0.3,6.6
+pretoria_n4_lebombo,truck,inbound,police posts,7.0,1.7,33.2
+pretoria_n4_lebombo,truck,inbound,weighbridge,10.0,6.2,28.4
+pretoria_n4_lebombo,truck,inbound,hills (trucks),46.2,28.2,65.7
+pretoria_n4_lebombo,truck,inbound,curves,0.2,0.0,0.6
+pretoria_n4_lebombo,truck,inbound,rain (wet day),46.5,24.3,73.3
+pretoria_n4_lekubu,truck,inbound,town speed limit,0.6,0.1,1.6
+pretoria_n4_lekubu,truck,inbound,roadside activity,3.1,1.6,5.9
+pretoria_n4_lekubu,truck,inbound,joining roads,1.0,0.4,1.9
+pretoria_n4_lekubu,truck,inbound,signals and crossings,1.8,1.1,3.1
+pretoria_n4_lekubu,truck,inbound,speed humps (assumed),1.4,0.1,3.3
+pretoria_n4_lekubu,truck,inbound,police posts,5.0,1.2,23.7
+pretoria_n4_lekubu,truck,inbound,weighbridge,0.0,0.0,0.0
+pretoria_n4_lekubu,truck,inbound,hills (trucks),12.1,7.4,17.3
+pretoria_n4_lekubu,truck,inbound,curves,0.3,0.1,0.8
+pretoria_n4_lekubu,truck,inbound,rain (wet day),21.0,11.0,33.2
+windhoek_b1_797_km,truck,inbound,town speed limit,1.5,0.0,4.1
+windhoek_b1_797_km,truck,inbound,roadside activity,0.5,0.3,1.6
+windhoek_b1_797_km,truck,inbound,joining roads,1.0,0.4,2.3
+windhoek_b1_797_km,truck,inbound,signals and crossings,16.5,9.1,23.9
+windhoek_b1_797_km,truck,inbound,speed humps (assumed),3.6,0.3,8.5
+windhoek_b1_797_km,truck,inbound,police posts,1.0,0.2,4.7
+windhoek_b1_797_km,truck,inbound,weighbridge,0.0,0.0,0.0
+windhoek_b1_797_km,truck,inbound,hills (trucks),5.7,3.5,8.0
+windhoek_b1_797_km,truck,inbound,curves,0.0,0.0,0.1
+windhoek_b1_797_km,truck,inbound,rain (wet day),20.6,10.7,32.6
+windhoek_b2_walvis_bay,truck,inbound,town speed limit,0.4,0.0,1.7
+windhoek_b2_walvis_bay,truck,inbound,roadside activity,1.5,0.6,3.2
+windhoek_b2_walvis_bay,truck,inbound,joining roads,1.5,0.5,2.8
+windhoek_b2_walvis_bay,truck,inbound,signals and crossings,3.6,2.0,5.2
+windhoek_b2_walvis_bay,truck,inbound,speed humps (assumed),2.2,0.2,5.2
+windhoek_b2_walvis_bay,truck,inbound,police posts,2.0,0.5,9.5
+windhoek_b2_walvis_bay,truck,inbound,weighbridge,10.0,6.2,28.4
+windhoek_b2_walvis_bay,truck,inbound,hills (trucks),10.0,6.2,14.2
+windhoek_b2_walvis_bay,truck,inbound,curves,0.4,0.0,1.1
+windhoek_b2_walvis_bay,truck,inbound,rain (wet day),39.5,20.6,62.3
+windhoek_b6_buitepos,truck,inbound,town speed limit,0.6,0.0,2.1
+windhoek_b6_buitepos,truck,inbound,roadside activity,0.8,0.3,2.3
+windhoek_b6_buitepos,truck,inbound,joining roads,1.5,0.6,3.0
+windhoek_b6_buitepos,truck,inbound,signals and crossings,7.6,4.6,10.8
+windhoek_b6_buitepos,truck,inbound,speed humps (assumed),2.4,0.2,5.6
+windhoek_b6_buitepos,truck,inbound,police posts,1.0,0.2,4.7
+windhoek_b6_buitepos,truck,inbound,weighbridge,10.0,6.2,28.4
+windhoek_b6_buitepos,truck,inbound,hills (trucks),5.4,3.3,7.7
+windhoek_b6_buitepos,truck,inbound,curves,0.3,0.1,1.1
+windhoek_b6_buitepos,truck,inbound,rain (wet day),31.4,16.3,49.6
+windhoek_c26_194_km,truck,inbound,town speed limit,0.2,0.0,1.9
+windhoek_c26_194_km,truck,inbound,roadside activity,0.5,0.1,2.3
+windhoek_c26_194_km,truck,inbound,joining roads,1.0,0.4,2.6
+windhoek_c26_194_km,truck,inbound,signals and crossings,25.9,14.6,37.5
+windhoek_c26_194_km,truck,inbound,speed humps (assumed),2.6,0.2,6.1
+windhoek_c26_194_km,truck,inbound,police posts,1.0,0.2,4.7
+windhoek_c26_194_km,truck,inbound,weighbridge,10.0,6.2,28.4
+windhoek_c26_194_km,truck,inbound,hills (trucks),21.7,12.1,32.4
+windhoek_c26_194_km,truck,inbound,curves,1.1,0.2,2.5
+windhoek_c26_194_km,truck,inbound,rain (wet day),22.2,11.6,34.8
+windhoek_c28_swakopmund,truck,inbound,town speed limit,0.0,0.0,0.3
+windhoek_c28_swakopmund,truck,inbound,roadside activity,0.5,0.1,1.4
+windhoek_c28_swakopmund,truck,inbound,joining roads,0.8,0.3,1.3
+windhoek_c28_swakopmund,truck,inbound,signals and crossings,3.5,1.9,5.1
+windhoek_c28_swakopmund,truck,inbound,speed humps (assumed),0.6,0.1,1.4
+windhoek_c28_swakopmund,truck,inbound,police posts,0.0,0.0,0.0
+windhoek_c28_swakopmund,truck,inbound,weighbridge,0.0,0.0,0.0
+windhoek_c28_swakopmund,truck,inbound,hills (trucks),33.1,20.1,47.8
+windhoek_c28_swakopmund,truck,inbound,curves,4.0,0.6,8.8
+windhoek_c28_swakopmund,truck,inbound,rain (wet day),24.1,12.5,37.6

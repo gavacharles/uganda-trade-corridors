@@ -1,0 +1,1226 @@
+corridor,km_start,place,road_type,schools_300m,people_300m,truck_kmh
+dar_es_salaam_road_dodoma,17.5,,roadside settlement,1,915.0,51.6
+dar_es_salaam_road_dodoma,18.0,,roadside settlement,1,2167.0,65.4
+dar_es_salaam_road_dodoma,68.5,Kwalaza,roadside settlement,1,288.0,66.1
+dar_es_salaam_road_dodoma,69.0,Kwalaza,open road,1,178.0,65.8
+dar_es_salaam_road_dodoma,69.5,Kwalaza,open road,1,31.0,67.8
+dar_es_salaam_road_dodoma,70.0,Kwalaza,open road,1,1.0,67.9
+dar_es_salaam_road_dodoma,76.0,Vigwaza,roadside settlement,1,407.0,65.8
+dar_es_salaam_road_dodoma,84.0,,roadside settlement,2,227.0,64.4
+dar_es_salaam_road_dodoma,84.5,,roadside settlement,2,49.0,68.0
+dar_es_salaam_road_dodoma,94.0,,roadside settlement,2,164.0,68.4
+dar_es_salaam_road_dodoma,94.5,,roadside settlement,2,206.0,65.8
+dar_es_salaam_road_dodoma,99.0,Pingo,roadside settlement,1,337.0,60.2
+dar_es_salaam_road_dodoma,101.0,,roadside settlement,1,418.0,67.3
+dar_es_salaam_road_dodoma,101.5,Pera,roadside settlement,1,159.0,57.1
+dar_es_salaam_road_dodoma,120.5,Majengo,roadside settlement,2,286.0,59.9
+dar_es_salaam_road_dodoma,121.0,Majengo,roadside settlement,2,212.0,50.7
+dar_es_salaam_road_dodoma,127.0,Ubena Zomozi,roadside settlement,1,1110.0,56.1
+dar_es_salaam_road_dodoma,140.0,,roadside settlement,1,87.0,67.4
+dar_es_salaam_road_dodoma,140.5,,roadside settlement,2,635.0,66.6
+dar_es_salaam_road_dodoma,141.0,Bwawani,roadside settlement,1,835.0,59.0
+dar_es_salaam_road_dodoma,143.0,Bwawani,roadside settlement,1,506.0,53.1
+dar_es_salaam_road_dodoma,143.5,Bwawani,roadside settlement,1,258.0,57.6
+dar_es_salaam_road_dodoma,150.0,Maseyu,roadside settlement,2,368.0,57.7
+dar_es_salaam_road_dodoma,158.5,,roadside settlement,1,236.0,52.7
+dar_es_salaam_road_dodoma,159.0,,roadside settlement,1,182.0,62.4
+dar_es_salaam_road_dodoma,165.0,Mikese,roadside settlement,1,268.0,62.2
+dar_es_salaam_road_dodoma,180.0,Zahanati,roadside settlement,1,549.0,57.8
+dar_es_salaam_road_dodoma,183.5,,roadside settlement,2,70.0,60.6
+dar_es_salaam_road_dodoma,184.0,,roadside settlement,1,52.0,65.9
+dar_es_salaam_road_dodoma,186.5,,roadside settlement,2,196.0,66.1
+dar_es_salaam_road_dodoma,194.5,,roadside settlement,1,88.0,66.1
+dar_es_salaam_road_dodoma,196.5,Magereza,roadside settlement,1,650.0,61.3
+dar_es_salaam_road_dodoma,197.0,Kihonda Kaskazini,roadside settlement,1,423.0,57.4
+dar_es_salaam_road_dodoma,197.5,Kihonda Kaskazini,roadside settlement,1,70.0,64.1
+dar_es_salaam_road_dodoma,198.0,Kihonda Kaskazini,roadside settlement,1,84.0,63.5
+dar_es_salaam_road_dodoma,206.5,Mkundi,roadside settlement,1,43.0,66.7
+dar_es_salaam_road_dodoma,207.0,,roadside settlement,1,56.0,65.1
+dar_es_salaam_road_dodoma,223.0,Dakawa,roadside settlement,1,292.0,56.9
+dar_es_salaam_road_dodoma,223.5,Dakawa,roadside settlement,1,195.0,58.9
+dar_es_salaam_road_dodoma,228.5,Wami Sokoine,open road,1,80.0,68.8
+dar_es_salaam_road_dodoma,229.0,Wami Sokoine,open road,1,17.0,67.8
+dar_es_salaam_road_dodoma,267.0,Kwambe,roadside settlement,2,105.0,65.7
+dar_es_salaam_road_dodoma,283.5,Magubike,roadside settlement,1,841.0,53.9
+dar_es_salaam_road_dodoma,318.0,Ibuti,roadside settlement,1,117.0,68.9
+dar_es_salaam_road_dodoma,318.5,Ibuti,roadside settlement,1,892.0,60.8
+dar_es_salaam_road_dodoma,324.0,Ukwamani,roadside settlement,1,45.0,62.1
+dar_es_salaam_road_dodoma,334.0,,roadside settlement,1,37.0,65.9
+dar_es_salaam_road_dodoma,347.5,Kibaigwa,roadside settlement,1,847.0,55.9
+dar_es_salaam_road_dodoma,348.0,Kibaigwa,roadside settlement,1,716.0,52.3
+dar_es_salaam_road_dodoma,356.0,Mtanana B,roadside settlement,1,407.0,56.2
+dar_es_salaam_road_dodoma,356.5,Mtanana B,roadside settlement,1,143.0,61.4
+dar_es_salaam_road_dodoma,385.0,Mbande,roadside settlement,1,87.0,65.5
+dar_es_salaam_road_dodoma,396.0,Wilunze,roadside settlement,1,274.0,59.1
+dar_es_salaam_road_dodoma,396.5,Wilunze,roadside settlement,1,450.0,56.0
+dar_es_salaam_road_dodoma,404.0,Manchali A,roadside settlement,1,260.0,64.6
+dar_es_salaam_road_dodoma,404.5,Manchali A,roadside settlement,1,15.0,68.2
+dar_es_salaam_road_dodoma,414.5,Chinangali II,roadside settlement,1,58.0,66.1
+dar_es_salaam_road_dodoma,415.0,,open road,1,1.0,69.0
+dar_es_salaam_road_dodoma,417.5,,roadside settlement,1,54.0,63.3
+dar_es_salaam_road_dodoma,419.0,,roadside settlement,1,360.0,51.8
+dar_es_salaam_road_dodoma,435.0,,roadside settlement,1,411.0,55.7
+dar_es_salaam_road_dodoma,437.0,,roadside settlement,2,5.0,67.9
+dar_es_salaam_road_dodoma,437.5,,roadside settlement,4,24.0,59.6
+dar_es_salaam_road_dodoma,438.0,,roadside settlement,3,20.0,67.9
+dar_es_salaam_t1_tunduma,23.0,,roadside settlement,1,1788.0,65.4
+dar_es_salaam_t1_tunduma,45.0,Kwa Mathias,roadside settlement,1,969.0,56.1
+dar_es_salaam_t1_tunduma,73.5,Kwalaza,roadside settlement,1,364.0,63.5
+dar_es_salaam_t1_tunduma,74.5,Kwalaza,open road,1,60.0,67.8
+dar_es_salaam_t1_tunduma,75.0,Kwalaza,open road,1,1.0,66.8
+dar_es_salaam_t1_tunduma,81.0,Vigwaza,roadside settlement,1,428.0,63.2
+dar_es_salaam_t1_tunduma,89.0,,roadside settlement,1,180.0,64.6
+dar_es_salaam_t1_tunduma,89.5,,roadside settlement,2,90.0,67.9
+dar_es_salaam_t1_tunduma,99.0,,roadside settlement,2,164.0,68.9
+dar_es_salaam_t1_tunduma,99.5,,roadside settlement,2,240.0,64.7
+dar_es_salaam_t1_tunduma,103.5,Pingo,roadside settlement,1,56.0,52.1
+dar_es_salaam_t1_tunduma,104.0,Pingo,roadside settlement,1,293.0,60.8
+dar_es_salaam_t1_tunduma,106.0,,roadside settlement,1,430.0,67.7
+dar_es_salaam_t1_tunduma,106.5,Pera,roadside settlement,1,166.0,57.6
+dar_es_salaam_t1_tunduma,125.5,Majengo,roadside settlement,1,286.0,62.3
+dar_es_salaam_t1_tunduma,145.0,,roadside settlement,1,165.0,65.2
+dar_es_salaam_t1_tunduma,145.5,,roadside settlement,2,446.0,68.2
+dar_es_salaam_t1_tunduma,146.0,Bwawani,roadside settlement,2,749.0,62.4
+dar_es_salaam_t1_tunduma,148.0,Bwawani,roadside settlement,1,478.0,54.6
+dar_es_salaam_t1_tunduma,148.5,Bwawani,roadside settlement,1,339.0,50.8
+dar_es_salaam_t1_tunduma,155.0,Maseyu,roadside settlement,2,415.0,56.3
+dar_es_salaam_t1_tunduma,164.0,,roadside settlement,1,245.0,61.4
+dar_es_salaam_t1_tunduma,170.5,Mikese,roadside settlement,1,191.0,63.9
+dar_es_salaam_t1_tunduma,188.5,,roadside settlement,2,61.0,61.5
+dar_es_salaam_t1_tunduma,190.5,,roadside settlement,1,155.0,65.2
+dar_es_salaam_t1_tunduma,207.0,Mindu,roadside settlement,1,93.0,61.8
+dar_es_salaam_t1_tunduma,225.5,Kibaoni,roadside settlement,1,301.0,67.9
+dar_es_salaam_t1_tunduma,226.0,Kibaoni,roadside settlement,1,353.0,67.4
+dar_es_salaam_t1_tunduma,232.0,Melela Mlandizi,roadside settlement,1,260.0,54.8
+dar_es_salaam_t1_tunduma,232.5,Melela Mlandizi,roadside settlement,1,664.0,52.7
+dar_es_salaam_t1_tunduma,233.0,Melela Mlandizi,roadside settlement,1,288.0,63.2
+dar_es_salaam_t1_tunduma,233.5,Melela Mlandizi,roadside settlement,1,204.0,67.2
+dar_es_salaam_t1_tunduma,313.5,Kikwaraza,roadside settlement,1,1017.0,58.5
+dar_es_salaam_t1_tunduma,314.5,Tambuka Reli,roadside settlement,1,497.0,62.8
+dar_es_salaam_t1_tunduma,315.0,Mikumi,roadside settlement,1,351.0,60.7
+dar_es_salaam_t1_tunduma,323.0,Msimba,roadside settlement,1,172.0,65.2
+dar_es_salaam_t1_tunduma,323.5,,roadside settlement,1,323.0,67.0
+dar_es_salaam_t1_tunduma,389.0,Ruaha Darajani,roadside settlement,1,457.0,59.0
+dar_es_salaam_t1_tunduma,389.5,Ruaha Darajani,roadside settlement,1,498.0,57.8
+dar_es_salaam_t1_tunduma,392.0,Ruaha Mbuyumi,roadside settlement,1,300.0,57.1
+dar_es_salaam_t1_tunduma,392.5,,roadside settlement,1,334.0,61.2
+dar_es_salaam_t1_tunduma,418.0,,roadside settlement,1,163.0,67.7
+dar_es_salaam_t1_tunduma,453.0,Masukanzi,roadside settlement,1,306.0,52.0
+dar_es_salaam_t1_tunduma,457.0,Ilula Mtua,roadside settlement,2,1982.0,50.3
+dar_es_salaam_t1_tunduma,465.0,Mazombe,roadside settlement,1,242.0,58.7
+dar_es_salaam_t1_tunduma,465.5,Mazombe,roadside settlement,1,844.0,52.3
+dar_es_salaam_t1_tunduma,478.5,Lugalo,roadside settlement,1,357.0,58.6
+dar_es_salaam_t1_tunduma,479.0,Lugalo,roadside settlement,1,323.0,56.9
+dar_es_salaam_t1_tunduma,485.0,Viwenge,roadside settlement,1,268.0,56.3
+dar_es_salaam_t1_tunduma,485.5,Viwenge,roadside settlement,1,243.0,57.4
+dar_es_salaam_t1_tunduma,506.5,,roadside settlement,1,205.0,58.6
+dar_es_salaam_t1_tunduma,507.0,,roadside settlement,1,68.0,62.8
+dar_es_salaam_t1_tunduma,523.0,Tanangozi,roadside settlement,1,382.0,56.2
+dar_es_salaam_t1_tunduma,528.5,,roadside settlement,1,127.0,64.7
+dar_es_salaam_t1_tunduma,537.0,,roadside settlement,1,122.0,68.4
+dar_es_salaam_t1_tunduma,537.5,,roadside settlement,1,26.0,67.1
+dar_es_salaam_t1_tunduma,547.0,Muwimbi,roadside settlement,1,141.0,64.1
+dar_es_salaam_t1_tunduma,547.5,Muwimbi,open road,1,0.0,70.0
+dar_es_salaam_t1_tunduma,557.5,Rungemba,roadside settlement,1,35.0,57.1
+dar_es_salaam_t1_tunduma,558.0,,roadside settlement,1,82.0,57.5
+dar_es_salaam_t1_tunduma,627.5,Njanjembe,roadside settlement,1,148.0,58.3
+dar_es_salaam_t1_tunduma,628.0,Njanjembe,roadside settlement,1,90.0,58.2
+dar_es_salaam_t1_tunduma,628.5,Njanjembe,roadside settlement,1,100.0,61.5
+dar_es_salaam_t1_tunduma,640.5,Iramba,roadside settlement,1,217.0,56.3
+dar_es_salaam_t1_tunduma,641.0,Iramba,roadside settlement,1,144.0,51.9
+dar_es_salaam_t1_tunduma,669.5,Mng'Elenge,roadside settlement,1,433.0,55.5
+dar_es_salaam_t1_tunduma,670.0,Mng'Elenge,roadside settlement,1,271.0,54.6
+dar_es_salaam_t1_tunduma,733.5,Mabadaga,roadside settlement,1,628.0,59.5
+dar_es_salaam_t1_tunduma,734.0,Mabadaga,roadside settlement,1,284.0,64.7
+dar_es_salaam_t1_tunduma,737.0,Mbuyuni,roadside settlement,1,168.0,65.0
+dar_es_salaam_t1_tunduma,737.5,Mbuyuni,roadside settlement,1,296.0,56.6
+dar_es_salaam_t1_tunduma,748.0,Mfumbi,roadside settlement,1,683.0,51.3
+dar_es_salaam_t1_tunduma,748.5,Mfumbi,roadside settlement,1,311.0,57.0
+dar_es_salaam_t1_tunduma,759.5,Mangere,open road,1,29.0,69.8
+dar_es_salaam_t1_tunduma,760.0,Mangere,open road,1,5.0,67.0
+dar_es_salaam_t1_tunduma,767.0,,roadside settlement,1,135.0,61.0
+dar_es_salaam_t1_tunduma,767.5,,roadside settlement,1,385.0,55.8
+dar_es_salaam_t1_tunduma,781.5,Mambi,roadside settlement,1,183.0,67.2
+dar_es_salaam_t1_tunduma,790.0,Mswiswi,roadside settlement,1,308.0,60.5
+dar_es_salaam_t1_tunduma,790.5,Mswiswi,roadside settlement,1,317.0,56.7
+dar_es_salaam_t1_tunduma,812.5,Itewe,roadside settlement,1,285.0,63.5
+dar_es_salaam_t1_tunduma,839.5,Iwambi,roadside settlement,2,434.0,61.8
+dar_es_salaam_t1_tunduma,847.0,Mwashiwawala,roadside settlement,1,575.0,50.9
+dar_es_salaam_t1_tunduma,892.0,,roadside settlement,1,837.0,55.3
+dar_es_salaam_t1_tunduma,892.5,,roadside settlement,1,478.0,62.0
+dar_es_salaam_t1_tunduma,902.0,Vwawa,roadside settlement,1,938.0,59.3
+dar_es_salaam_t7_lindi,16.0,Kipala Mpakani,roadside settlement,1,448.0,55.9
+dar_es_salaam_t7_lindi,35.0,Dundani,roadside settlement,1,203.0,64.6
+dar_es_salaam_t7_lindi,35.5,Dundani,roadside settlement,1,12.0,68.7
+dar_es_salaam_t7_lindi,47.0,Kiparang'Anda A,roadside settlement,1,687.0,58.7
+dar_es_salaam_t7_lindi,60.5,Mwalusembe,roadside settlement,1,222.0,66.2
+dar_es_salaam_t7_lindi,61.0,Mwalusembe,roadside settlement,1,221.0,63.9
+dar_es_salaam_t7_lindi,62.5,Mwarusembe,roadside settlement,1,1007.0,55.8
+dar_es_salaam_t7_lindi,63.0,Mwarusembe,roadside settlement,1,146.0,67.2
+dar_es_salaam_t7_lindi,64.0,Mwarusembe,roadside settlement,1,179.0,64.7
+dar_es_salaam_t7_lindi,64.5,,roadside settlement,1,142.0,63.7
+dar_es_salaam_t7_lindi,71.5,Kiimbwanindi,roadside settlement,1,167.0,66.3
+dar_es_salaam_t7_lindi,72.0,Kiimbwanindi,roadside settlement,1,216.0,66.5
+dar_es_salaam_t7_lindi,75.0,Kimanzichana Kaskazini,roadside settlement,1,714.0,55.4
+dar_es_salaam_t7_lindi,75.5,Mazomora,roadside settlement,1,1338.0,57.8
+dar_es_salaam_t7_lindi,81.0,Kilimahewa Kusini,roadside settlement,1,362.0,55.3
+dar_es_salaam_t7_lindi,81.5,Kilimahewa Kusini,roadside settlement,1,215.0,68.0
+dar_es_salaam_t7_lindi,96.5,Njopeka,roadside settlement,1,317.0,60.2
+dar_es_salaam_t7_lindi,97.0,Njopeka,roadside settlement,1,806.0,58.4
+dar_es_salaam_t7_lindi,115.5,Bungu,roadside settlement,1,810.0,60.0
+dar_es_salaam_t7_lindi,116.0,Bungu,roadside settlement,2,278.0,66.2
+dar_es_salaam_t7_lindi,116.5,Bungu,roadside settlement,1,233.0,66.5
+dar_es_salaam_t7_lindi,120.0,Pagae,roadside settlement,1,120.0,67.7
+dar_es_salaam_t7_lindi,120.5,Pagae,roadside settlement,1,112.0,65.9
+dar_es_salaam_t7_lindi,130.5,Kinyanya,roadside settlement,1,323.0,62.4
+dar_es_salaam_t7_lindi,131.0,Kinyanya,roadside settlement,1,316.0,64.4
+dar_es_salaam_t7_lindi,133.0,Kibiti,roadside settlement,1,127.0,64.1
+dar_es_salaam_t7_lindi,133.5,Kibiti,roadside settlement,1,411.0,58.8
+dar_es_salaam_t7_lindi,144.0,Kitembo,roadside settlement,1,210.0,68.3
+dar_es_salaam_t7_lindi,144.5,Kitembo,roadside settlement,1,183.0,66.8
+dar_es_salaam_t7_lindi,161.0,Ikwiriri,roadside settlement,1,213.0,62.1
+dar_es_salaam_t7_lindi,161.5,Ikwiriri,roadside settlement,1,972.0,58.3
+dar_es_salaam_t7_lindi,177.5,,open road,1,78.0,69.7
+dar_es_salaam_t7_lindi,178.0,,roadside settlement,2,384.0,68.8
+dar_es_salaam_t7_lindi,178.5,,open road,1,9.0,69.8
+dodoma_t3_morogoro,12.0,,roadside settlement,4,19.0,68.9
+dodoma_t3_morogoro,12.5,,roadside settlement,4,25.0,67.5
+dodoma_t3_morogoro,30.5,,roadside settlement,1,296.0,55.0
+dodoma_t3_morogoro,31.0,,roadside settlement,1,561.0,52.6
+dodoma_t3_morogoro,32.0,,roadside settlement,1,224.0,64.6
+dodoma_t3_morogoro,32.5,,roadside settlement,1,54.0,65.3
+dodoma_t3_morogoro,34.5,,open road,1,1.0,67.9
+dodoma_t3_morogoro,35.0,,open road,1,5.0,69.0
+dodoma_t3_morogoro,45.5,Manchali A,roadside settlement,1,116.0,67.7
+dodoma_t3_morogoro,46.0,Manchali A,roadside settlement,1,343.0,57.9
+dodoma_t3_morogoro,53.5,Wilunze,roadside settlement,1,373.0,59.7
+dodoma_t3_morogoro,64.5,Mbande,roadside settlement,1,215.0,64.2
+dodoma_t3_morogoro,93.5,Mtanana B,roadside settlement,1,216.0,65.2
+dodoma_t3_morogoro,94.0,Mtanana B,roadside settlement,1,800.0,53.7
+dodoma_t3_morogoro,115.5,,roadside settlement,1,11.0,67.3
+dodoma_t3_morogoro,116.0,,roadside settlement,1,60.0,64.1
+dodoma_t3_morogoro,126.0,Ukwamani,roadside settlement,1,166.0,61.7
+dodoma_t3_morogoro,131.0,Ibuti,roadside settlement,1,760.0,61.5
+dodoma_t3_morogoro,131.5,Ibuti,roadside settlement,1,703.0,63.4
+dodoma_t3_morogoro,133.5,,roadside settlement,1,1060.0,53.8
+dodoma_t3_morogoro,134.0,,roadside settlement,1,180.0,68.4
+dodoma_t3_morogoro,134.5,Tabu Hotel,open road,1,0.0,70.0
+dodoma_t3_morogoro,165.0,Magubike,roadside settlement,2,375.0,61.4
+dodoma_t3_morogoro,165.5,Magubike,roadside settlement,2,587.0,54.9
+dodoma_t3_morogoro,166.0,Magubike,roadside settlement,1,518.0,59.3
+dodoma_t3_morogoro,182.5,Kwambe,roadside settlement,2,216.0,64.1
+dodoma_t3_morogoro,183.0,Kwambe,roadside settlement,2,28.0,69.4
+dodoma_t3_rusomo,33.0,Msembeta,roadside settlement,1,262.0,67.8
+dodoma_t3_rusomo,33.5,Msembeta,roadside settlement,1,367.0,64.9
+dodoma_t3_rusomo,68.0,,roadside settlement,2,280.0,66.9
+dodoma_t3_rusomo,78.0,Maweni,open road,1,49.0,69.7
+dodoma_t3_rusomo,78.5,Maweni,roadside settlement,1,417.0,64.9
+dodoma_t3_rusomo,105.5,Solya,roadside settlement,1,233.0,64.5
+dodoma_t3_rusomo,106.5,Solya,roadside settlement,1,643.0,61.0
+dodoma_t3_rusomo,134.0,Kamenyanga,roadside settlement,1,140.0,62.5
+dodoma_t3_rusomo,134.5,Kamenyanga,roadside settlement,1,89.0,63.4
+dodoma_t3_rusomo,142.5,Njirii,roadside settlement,1,201.0,50.9
+dodoma_t3_rusomo,143.0,Njirii,roadside settlement,1,256.0,66.4
+dodoma_t3_rusomo,151.5,,open road,1,23.0,69.8
+dodoma_t3_rusomo,152.0,,roadside settlement,1,104.0,69.5
+dodoma_t3_rusomo,157.0,Unyambwa,roadside settlement,2,123.0,68.7
+dodoma_t3_rusomo,157.5,Mkiwa,roadside settlement,2,187.0,60.9
+dodoma_t3_rusomo,183.5,Nkuhi,roadside settlement,1,112.0,66.1
+dodoma_t3_rusomo,184.0,Nkuhi,roadside settlement,1,295.0,58.5
+dodoma_t3_rusomo,198.5,Ulyampiti,roadside settlement,1,44.0,69.6
+dodoma_t3_rusomo,199.0,Ulyampiti,roadside settlement,1,158.0,60.9
+dodoma_t5_arusha,16.5,,open road,1,38.0,66.5
+dodoma_t5_arusha,17.0,,roadside settlement,1,179.0,63.8
+dodoma_t5_arusha,35.0,Zanka,roadside settlement,1,131.0,64.6
+dodoma_t5_arusha,35.5,Zanka,roadside settlement,1,350.0,60.3
+dodoma_t5_arusha,43.0,Meia Meia,roadside settlement,1,125.0,61.0
+dodoma_t5_arusha,43.5,,roadside settlement,1,93.0,67.4
+dodoma_t5_arusha,73.0,Chenene,roadside settlement,1,151.0,67.3
+dodoma_t5_arusha,73.5,Chenene,roadside settlement,1,1012.0,60.6
+dodoma_t5_arusha,83.5,Haneti,roadside settlement,1,256.0,63.1
+dodoma_t5_arusha,84.0,Haneti,open road,1,45.0,70.0
+dodoma_t5_arusha,91.5,Kidoka,roadside settlement,1,426.0,64.1
+dodoma_t5_arusha,112.0,Chemba,roadside settlement,1,198.0,58.7
+dodoma_t5_arusha,112.5,Chemba,roadside settlement,1,232.0,57.2
+dodoma_t5_arusha,157.5,Kwantisi,roadside settlement,1,41.0,59.8
+dodoma_t5_arusha,158.0,Kwantisi,roadside settlement,1,120.0,61.3
+dodoma_t5_arusha,158.5,Kwantisi,roadside settlement,1,11.0,63.1
+dodoma_t5_arusha,167.5,Choka,roadside settlement,1,235.0,62.0
+dodoma_t5_arusha,201.0,Masawi,roadside settlement,1,278.0,61.1
+dodoma_t5_iringa,65.0,Manzase,roadside settlement,1,433.0,55.4
+dodoma_t5_iringa,94.0,Seluka,roadside settlement,1,76.0,67.0
+dodoma_t5_iringa,94.5,Seluka,roadside settlement,1,109.0,66.7
+dodoma_t5_iringa,102.0,Chipogoro,roadside settlement,1,603.0,61.3
+dodoma_t5_iringa,122.0,Kisima,roadside settlement,1,642.0,63.8
+dodoma_t5_iringa,122.5,Kisima,roadside settlement,1,479.0,60.8
+dodoma_t5_iringa,151.0,Mbweleli,roadside settlement,1,172.0,63.9
+dodoma_t5_iringa,151.5,Mbweleli,roadside settlement,1,126.0,64.8
+dodoma_t5_iringa,156.0,Makatapola,open road,1,0.0,70.0
+dodoma_t5_iringa,165.0,Mtera,roadside settlement,1,84.0,69.2
+dodoma_t5_iringa,165.5,Mtera,roadside settlement,1,301.0,62.8
+dodoma_t5_iringa,168.0,Migori,roadside settlement,1,61.0,68.2
+dodoma_t5_iringa,168.5,Migori,open road,1,9.0,70.0
+gaborone_a1_121_km,73.5,Lobatse,roadside settlement,1,1025.0,55.5
+gaborone_a1_121_km,77.0,,roadside settlement,1,838.0,50.4
+gaborone_a1_121_km,77.5,,roadside settlement,1,2039.0,56.2
+harare_a1_chirundu,0.5,Avondale,roadside settlement,1,1762.0,53.5
+harare_a1_chirundu,1.5,Avondale,roadside settlement,1,1328.0,57.4
+harare_a1_chirundu,65.5,Mpinga,open road,1,33.0,69.0
+harare_a1_chirundu,66.0,Mpinga,open road,1,48.0,70.0
+harare_a1_chirundu,67.0,,open road,2,26.0,68.9
+harare_a1_chirundu,75.0,,open road,1,41.0,69.8
+harare_a1_chirundu,75.5,,roadside settlement,1,135.0,65.4
+harare_a1_chirundu,187.0,Madadzi,roadside settlement,2,59.0,68.1
+harare_a1_chirundu,187.5,Madadzi,roadside settlement,2,215.0,68.0
+harare_a4_beitbridge,256.0,,roadside settlement,1,122.0,66.9
+harare_a4_beitbridge,256.5,,roadside settlement,1,171.0,66.8
+harare_a4_beitbridge,257.0,,roadside settlement,1,176.0,67.6
+harare_a4_beitbridge,257.5,,roadside settlement,1,32.0,66.7
+harare_p1_mucumbura,0.5,Avondale,roadside settlement,1,1762.0,53.5
+harare_p1_mucumbura,85.0,Bindura,roadside settlement,1,816.0,66.5
+harare_p1_mucumbura,85.5,Bindura,roadside settlement,1,257.0,63.8
+harare_p1_mucumbura,133.0,,roadside settlement,1,267.0,60.6
+harare_p1_mucumbura,133.5,,roadside settlement,1,275.0,62.3
+harare_p1_mucumbura,172.5,,roadside settlement,1,150.0,65.2
+harare_p1_mucumbura,173.0,,roadside settlement,1,143.0,67.4
+harare_r2_plumtree,1.0,Harare,roadside settlement,1,1295.0,59.0
+harare_r2_plumtree,3.0,Belvedere,roadside settlement,1,1496.0,53.8
+harare_r2_plumtree,31.0,,open road,1,43.0,68.6
+harare_r2_plumtree,31.5,,open road,1,44.0,68.8
+harare_r2_plumtree,138.5,,roadside settlement,1,264.0,67.5
+harare_r2_plumtree,139.0,,open road,1,12.0,69.7
+johannesburg_n12_de_rust,151.5,Stilfontein,roadside settlement,1,345.0,64.4
+johannesburg_n12_emalahleni,13.0,Ravensklip,roadside settlement,1,380.0,63.0
+johannesburg_n12_emalahleni,13.5,Ravensklip,roadside settlement,1,1279.0,50.1
+johannesburg_n17_msauli,29.5,Parkrand,roadside settlement,1,369.0,66.0
+johannesburg_n17_msauli,47.0,Selection Park,roadside settlement,1,602.0,62.4
+johannesburg_n17_msauli,47.5,Selection Park,roadside settlement,1,236.0,67.5
+johannesburg_n3_durban,222.5,,open road,1,1.0,68.8
+johannesburg_n3_durban,545.0,Ashley,roadside settlement,1,298.0,66.8
+johannesburg_n3_durban,545.5,Caversham Glen,roadside settlement,1,600.0,60.1
+johannesburg_n3_durban,552.5,Dawncliffe,roadside settlement,1,351.0,60.0
+johannesburg_n3_durban,553.0,Dawncliffe,roadside settlement,1,301.0,64.4
+johannesburg_r25_groblersdal,78.5,,open road,1,3.0,66.8
+kampala_a1_malaba,13.5,Kiwanga Lwanda,roadside settlement,2,587.0,55.0
+kampala_a1_malaba,16.5,Kigunga,roadside settlement,3,1125.0,54.6
+kampala_a1_malaba,26.5,Kasenge B,roadside settlement,1,46.0,65.3
+kampala_a1_malaba,27.0,Kasenge B,roadside settlement,1,106.0,63.0
+kampala_a1_malaba,30.0,Namawojjolo West,roadside settlement,1,329.0,62.2
+kampala_a1_malaba,30.5,Namawojjolo West,roadside settlement,3,492.0,58.9
+kampala_a1_malaba,37.0,Namagunga A,roadside settlement,2,507.0,55.1
+kampala_a1_malaba,37.5,Namagunga A,roadside settlement,1,676.0,52.6
+kampala_a1_malaba,41.5,Lugazi,roadside settlement,2,765.0,51.8
+kampala_a1_malaba,45.0,Cable,roadside settlement,1,1590.0,56.8
+kampala_a1_malaba,65.0,Kiryante,roadside settlement,1,427.0,51.8
+kampala_a1_malaba,65.5,Kiryante,roadside settlement,1,222.0,61.3
+kampala_a1_malaba,68.0,Lugazi,roadside settlement,1,393.0,54.8
+kampala_a1_malaba,73.5,Triangle,roadside settlement,2,553.0,61.2
+kampala_a1_malaba,76.0,Nalufenya B,roadside settlement,1,1109.0,52.9
+kampala_a1_malaba,77.5,Mvule,roadside settlement,1,540.0,55.0
+kampala_a1_malaba,78.0,Mvule,roadside settlement,1,769.0,57.7
+kampala_a1_malaba,79.5,Railways,roadside settlement,6,450.0,57.8
+kampala_a1_malaba,87.5,Mwiri Primary LC I,roadside settlement,3,506.0,61.7
+kampala_a1_malaba,88.0,Namaziba,roadside settlement,3,108.0,65.0
+kampala_a1_malaba,97.5,Buwanga B,roadside settlement,1,162.0,62.5
+kampala_a1_malaba,99.5,Magamaga,roadside settlement,1,286.0,51.6
+kampala_a1_malaba,100.0,Magamaga,roadside settlement,2,380.0,60.3
+kampala_a1_malaba,107.0,Namasoga,roadside settlement,1,478.0,56.8
+kampala_a1_malaba,110.5,Namakunyu,roadside settlement,1,252.0,60.5
+kampala_a1_malaba,111.0,Namakunyu,roadside settlement,2,306.0,59.3
+kampala_a1_malaba,111.5,Iwawu,roadside settlement,2,461.0,58.1
+kampala_a1_malaba,113.5,Bukoyo,roadside settlement,5,522.0,57.3
+kampala_a1_malaba,119.0,Nakalama North,roadside settlement,2,585.0,58.4
+kampala_a1_malaba,119.5,Nakalama North,roadside settlement,1,123.0,68.8
+kampala_a1_malaba,120.0,Nakalama South,roadside settlement,3,106.0,52.1
+kampala_a1_malaba,126.0,Butende,roadside settlement,1,396.0,60.7
+kampala_a1_malaba,127.5,Butende,roadside settlement,1,210.0,64.8
+kampala_a1_malaba,130.5,Ibaako,roadside settlement,6,520.0,59.7
+kampala_a1_malaba,131.0,Ibaako,roadside settlement,3,530.0,56.0
+kampala_a1_malaba,133.5,Idudi B,roadside settlement,2,499.0,54.1
+kampala_a1_malaba,136.0,Butaba,roadside settlement,1,210.0,54.6
+kampala_a1_malaba,139.0,Nakawa,roadside settlement,1,301.0,63.5
+kampala_a1_malaba,139.5,Nakawa,roadside settlement,2,369.0,58.6
+kampala_a1_malaba,141.5,Busowa Central,roadside settlement,2,295.0,63.3
+kampala_a1_malaba,142.0,Namalenha,roadside settlement,2,363.0,67.7
+kampala_a1_malaba,142.5,Namalenha,roadside settlement,1,200.0,64.2
+kampala_a1_malaba,143.0,Namalenha,roadside settlement,1,352.0,64.0
+kampala_a1_malaba,145.5,Ndifakulya,roadside settlement,2,321.0,55.6
+kampala_a1_malaba,146.0,Ndifakulya,roadside settlement,3,520.0,57.7
+kampala_a1_malaba,146.5,Ndeeba,roadside settlement,4,759.0,51.8
+kampala_a1_malaba,151.5,Kiyinikibi East,roadside settlement,1,39.0,69.1
+kampala_a1_malaba,155.5,Namayemba East B,roadside settlement,1,406.0,58.9
+kampala_a1_malaba,157.0,Namayemba Central A,roadside settlement,2,413.0,51.1
+kampala_a1_malaba,157.5,Namayemba Central A,roadside settlement,1,245.0,60.4
+kampala_a1_malaba,158.0,Namayemba East A,roadside settlement,1,291.0,60.3
+kampala_a1_malaba,160.5,Nakonkolo,roadside settlement,2,346.0,50.8
+kampala_a1_malaba,161.0,Nankongolo,roadside settlement,2,197.0,57.5
+kampala_a1_malaba,165.0,Kibimba,roadside settlement,1,574.0,59.9
+kampala_a1_malaba,168.0,Butema,roadside settlement,1,114.0,67.3
+kampala_a1_malaba,168.5,Butema,roadside settlement,3,289.0,66.2
+kampala_a1_malaba,169.0,Butema,roadside settlement,2,241.0,63.4
+kampala_a1_malaba,170.5,Buwayo,roadside settlement,2,269.0,59.7
+kampala_a1_malaba,171.0,Muwayo,roadside settlement,2,506.0,54.0
+kampala_a1_malaba,186.0,Ndaiga,roadside settlement,1,400.0,55.5
+kampala_a1_malaba,186.5,Ndaiga,roadside settlement,1,297.0,56.3
+kampala_a1_malaba,193.0,Pakamalung 'a',open road,2,53.0,66.5
+kampala_a1_malaba,193.5,Podut A 'b',open road,2,90.0,69.8
+kampala_a1_malaba,195.0,Podoti,roadside settlement,1,379.0,59.7
+kampala_a1_malaba,196.0,Asinge,roadside settlement,1,259.0,67.6
+kampala_a1_malaba,196.5,Asinge,roadside settlement,1,267.0,55.0
+kampala_a1_malaba,200.0,Magoro 'b',roadside settlement,1,198.0,65.8
+kampala_a1_malaba,201.0,Sukulu,roadside settlement,2,237.0,52.7
+kampala_a1_malaba,201.5,Sukulu,roadside settlement,3,405.0,54.6
+kampala_a1_malaba,202.5,Sukulu,roadside settlement,1,1891.0,55.0
+kampala_a1_malaba,205.0,Amagoro B Central 'b',roadside settlement,1,944.0,55.2
+kampala_a1_malaba,207.0,Amagoro A South,roadside settlement,2,509.0,51.8
+kampala_a1_malaba,207.5,Amagoro A South,roadside settlement,2,222.0,66.8
+kampala_a1_malaba,208.0,Asinge 'a',roadside settlement,1,234.0,64.7
+kampala_a1_malaba,208.5,Asinge 'a',open road,1,9.0,69.9
+kampala_a1_malaba,210.0,Oriyoyi,roadside settlement,2,551.0,54.5
+kampala_a1_malaba,210.5,Oriyoyi,roadside settlement,2,337.0,65.3
+kampala_a2_katuna,7.0,Nkokonjeru A,roadside settlement,1,56.0,66.5
+kampala_a2_katuna,17.5,Buwaali,roadside settlement,1,394.0,62.4
+kampala_a2_katuna,24.0,Kataba,roadside settlement,1,16.0,64.6
+kampala_a2_katuna,26.0,Katende,roadside settlement,2,756.0,51.7
+kampala_a2_katuna,29.5,Lungala,roadside settlement,2,404.0,55.1
+kampala_a2_katuna,30.0,Lungala,roadside settlement,2,179.0,60.9
+kampala_a2_katuna,32.5,Police Centre,roadside settlement,2,1125.0,55.9
+kampala_a2_katuna,35.0,Kalagala,roadside settlement,1,485.0,58.0
+kampala_a2_katuna,37.0,Mpambire,roadside settlement,1,142.0,62.5
+kampala_a2_katuna,38.0,Mpambire,roadside settlement,1,250.0,59.6
+kampala_a2_katuna,44.0,Butenga,roadside settlement,1,38.0,60.7
+kampala_a2_katuna,45.0,Butenga,roadside settlement,1,166.0,65.4
+kampala_a2_katuna,48.0,Kamengo B,roadside settlement,1,540.0,53.1
+kampala_a2_katuna,50.0,Nabbuzi,roadside settlement,1,271.0,60.8
+kampala_a2_katuna,50.5,Nabbuzi,roadside settlement,1,80.0,65.0
+kampala_a2_katuna,54.5,Kabuye - Bbumbu,roadside settlement,1,261.0,59.7
+kampala_a2_katuna,55.0,Kabuye - Ntaayi,roadside settlement,1,127.0,64.7
+kampala_a2_katuna,61.5,Mitala Maria,roadside settlement,2,252.0,59.8
+kampala_a2_katuna,62.0,Mitala Maria,roadside settlement,2,615.0,50.7
+kampala_a2_katuna,66.5,Mbiizinya,roadside settlement,1,288.0,55.9
+kampala_a2_katuna,67.0,Mbiizinya,roadside settlement,1,34.0,67.3
+kampala_a2_katuna,70.5,Kwabba,roadside settlement,1,264.0,60.5
+kampala_a2_katuna,71.0,Kwabba,roadside settlement,1,356.0,61.0
+kampala_a2_katuna,71.5,Nabusanke B,roadside settlement,1,156.0,61.8
+kampala_a2_katuna,74.0,Kalagala Kikutuzi,roadside settlement,1,262.0,57.1
+kampala_a2_katuna,81.0,Lbanda A,roadside settlement,1,144.0,54.6
+kampala_a2_katuna,82.5,Kayunga,roadside settlement,1,309.0,52.5
+kampala_a2_katuna,85.0,Mugge,roadside settlement,2,147.0,59.4
+kampala_a2_katuna,85.5,Mugge,roadside settlement,3,213.0,60.5
+kampala_a2_katuna,86.0,Lubanga,roadside settlement,2,481.0,52.1
+kampala_a2_katuna,87.0,Lubanga,roadside settlement,1,177.0,58.9
+kampala_a2_katuna,102.0,Bajja,roadside settlement,1,498.0,50.9
+kampala_a2_katuna,102.5,Kayunga,roadside settlement,3,292.0,56.7
+kampala_a2_katuna,103.0,Kayunga,roadside settlement,2,151.0,63.5
+kampala_a2_katuna,104.5,Bukullula,roadside settlement,1,326.0,53.5
+kampala_a2_katuna,105.0,Mukono North,roadside settlement,1,285.0,64.1
+kampala_a2_katuna,106.0,Mukono South,roadside settlement,3,449.0,50.9
+kampala_a2_katuna,108.0,Busanso,roadside settlement,1,211.0,65.3
+kampala_a2_katuna,108.5,Busanso,roadside settlement,1,124.0,52.0
+kampala_a2_katuna,110.0,Kabaale Ii,roadside settlement,1,196.0,58.3
+kampala_a2_katuna,111.5,Kamutuuza,roadside settlement,2,222.0,61.8
+kampala_a2_katuna,113.5,Butende,roadside settlement,1,75.0,61.6
+kampala_a2_katuna,115.5,Mpugwe,roadside settlement,1,290.0,55.8
+kampala_a2_katuna,116.0,Nsangamu,roadside settlement,1,183.0,59.1
+kampala_a2_katuna,117.0,Kadugala,roadside settlement,2,197.0,56.6
+kampala_a2_katuna,117.5,Kadugala,open road,2,32.0,69.0
+kampala_a2_katuna,118.0,Kyalusowe,roadside settlement,1,110.0,67.2
+kampala_a2_katuna,134.5,Kyabbogo,roadside settlement,1,87.0,61.2
+kampala_a2_katuna,135.0,Kyabbogo,roadside settlement,1,53.0,65.6
+kampala_a2_katuna,138.5,Nkoni,roadside settlement,1,92.0,64.9
+kampala_a2_katuna,141.0,Nkarwe,roadside settlement,1,122.0,63.2
+kampala_a2_katuna,141.5,Nkarwe,roadside settlement,1,176.0,56.7
+kampala_a2_katuna,142.0,Mirembe (Kagganda),roadside settlement,1,314.0,55.1
+kampala_a2_katuna,144.0,Kyoko,roadside settlement,1,95.0,58.8
+kampala_a2_katuna,144.5,KYOKO,open road,1,60.0,69.7
+kampala_a2_katuna,153.5,Degeya,roadside settlement,1,264.0,50.9
+kampala_a2_katuna,154.0,Degeya,roadside settlement,1,189.0,57.4
+kampala_a2_katuna,159.0,Industry,roadside settlement,1,262.0,64.6
+kampala_a2_katuna,165.0,Kitakomaga,roadside settlement,2,162.0,66.1
+kampala_a2_katuna,165.5,Kyetume,roadside settlement,3,62.0,50.3
+kampala_a2_katuna,166.5,Kyetume,roadside settlement,5,321.0,55.4
+kampala_a2_katuna,168.5,Kyegera B,roadside settlement,2,126.0,64.7
+kampala_a2_katuna,169.5,Pida,roadside settlement,1,302.0,51.3
+kampala_a2_katuna,171.0,Kirumba,roadside settlement,1,67.0,59.2
+kampala_a2_katuna,171.5,Kirumba,roadside settlement,1,69.0,68.0
+kampala_a2_katuna,173.5,Mpumudde (Lwakibirizi),roadside settlement,1,226.0,53.6
+kampala_a2_katuna,181.5,Malongo,roadside settlement,1,88.0,61.5
+kampala_a2_katuna,184.0,Gyenda,roadside settlement,1,183.0,63.8
+kampala_a2_katuna,185.5,Katovu Trc,roadside settlement,1,217.0,59.4
+kampala_a2_katuna,187.0,Katovu Central,roadside settlement,1,215.0,63.5
+kampala_a2_katuna,188.0,Katovu Central,roadside settlement,2,56.0,68.1
+kampala_a2_katuna,192.5,Ngango,roadside settlement,1,163.0,60.5
+kampala_a2_katuna,193.0,Ngango,roadside settlement,4,204.0,53.2
+kampala_a2_katuna,193.5,Kasambya (Katovu),roadside settlement,3,192.0,53.3
+kampala_a2_katuna,196.0,Kalagala B,roadside settlement,1,435.0,58.7
+kampala_a2_katuna,198.0,Kaliro A,roadside settlement,3,224.0,66.9
+kampala_a2_katuna,198.5,Kyabazala,roadside settlement,2,277.0,65.9
+kampala_a2_katuna,206.0,,roadside settlement,2,205.0,66.7
+kampala_a2_katuna,211.0,Karengo,roadside settlement,1,241.0,64.3
+kampala_a2_katuna,217.5,,open road,1,96.0,67.9
+kampala_a2_katuna,218.5,Bumaranjara,roadside settlement,1,95.0,66.3
+kampala_a2_katuna,219.0,Bumaranjara,roadside settlement,1,198.0,63.8
+kampala_a2_katuna,235.5,Kibega,roadside settlement,1,50.0,68.2
+kampala_a2_katuna,236.0,Kibega,roadside settlement,1,47.0,67.3
+kampala_a2_katuna,251.0,Kibwera,roadside settlement,1,518.0,61.1
+kampala_a2_katuna,251.5,Kibwera,roadside settlement,1,489.0,64.3
+kampala_a2_katuna,253.5,Kibwera,roadside settlement,1,326.0,65.8
+kampala_a2_katuna,254.0,Migamba,roadside settlement,1,451.0,65.0
+kampala_a2_katuna,255.0,Migamba,roadside settlement,1,156.0,66.2
+kampala_a2_katuna,255.5,Rwebihuro,roadside settlement,1,927.0,54.0
+kampala_a2_katuna,265.0,Kakyeka,roadside settlement,3,525.0,63.5
+kampala_a2_katuna,267.0,Ruti,roadside settlement,1,162.0,66.1
+kampala_a2_katuna,267.5,Ruti,roadside settlement,3,513.0,56.7
+kampala_a2_katuna,269.5,Nakiojo,roadside settlement,4,978.0,55.7
+kampala_a2_katuna,270.0,Nakiojo,roadside settlement,2,305.0,64.7
+kampala_a2_katuna,273.5,,open road,1,21.0,70.0
+kampala_a2_katuna,274.0,,open road,1,73.0,68.9
+kampala_a2_katuna,274.5,,roadside settlement,1,91.0,67.5
+kampala_a2_katuna,275.0,,roadside settlement,1,117.0,64.7
+kampala_a2_katuna,275.5,,roadside settlement,1,308.0,66.0
+kampala_a2_katuna,280.0,Rugando,roadside settlement,2,203.0,61.4
+kampala_a2_katuna,280.5,Rugando,roadside settlement,2,218.0,57.6
+kampala_a2_katuna,281.0,Rugando,roadside settlement,1,207.0,65.8
+kampala_a2_katuna,281.5,Rugando,roadside settlement,2,112.0,66.9
+kampala_a2_katuna,282.0,Rugando,roadside settlement,3,214.0,58.3
+kampala_a2_katuna,282.5,,roadside settlement,3,196.0,58.6
+kampala_a2_katuna,283.0,,roadside settlement,2,184.0,63.3
+kampala_a2_katuna,283.5,,roadside settlement,1,44.0,68.5
+kampala_a2_katuna,287.0,Kihonzi,roadside settlement,3,331.0,62.9
+kampala_a2_katuna,287.5,Kihonzi,roadside settlement,4,275.0,59.2
+kampala_a2_katuna,288.0,Kihonzi,roadside settlement,2,233.0,59.1
+kampala_a2_katuna,288.5,Kihonzi,roadside settlement,1,147.0,62.0
+kampala_a2_katuna,289.0,Nyakagando,roadside settlement,1,79.0,68.3
+kampala_a2_katuna,290.0,Nyakagando,roadside settlement,1,63.0,68.3
+kampala_a2_katuna,290.5,Nyakagando,roadside settlement,2,158.0,65.6
+kampala_a2_katuna,291.0,Nyakagando,roadside settlement,2,128.0,62.4
+kampala_a2_katuna,293.5,Biti,roadside settlement,1,194.0,62.4
+kampala_a2_katuna,294.0,Biti,roadside settlement,1,236.0,63.6
+kampala_a2_katuna,296.5,Biti,roadside settlement,1,71.0,66.7
+kampala_a2_katuna,301.0,,roadside settlement,1,219.0,63.7
+kampala_a2_katuna,304.0,Kyempisi,roadside settlement,1,119.0,62.5
+kampala_a2_katuna,304.5,Kyempisi,roadside settlement,1,90.0,66.5
+kampala_a2_katuna,307.0,Kashenyi,roadside settlement,1,154.0,64.4
+kampala_a2_katuna,309.0,Nyakakiri,roadside settlement,1,89.0,67.8
+kampala_a2_katuna,309.5,Nyakakiri,roadside settlement,1,112.0,65.5
+kampala_a2_katuna,314.0,Kashasha,roadside settlement,1,184.0,54.7
+kampala_a2_katuna,314.5,Kashasha,roadside settlement,2,284.0,52.4
+kampala_a2_katuna,315.0,Itojo Trading Centre,roadside settlement,2,228.0,51.8
+kampala_a2_katuna,317.0,Ruhanga,roadside settlement,1,66.0,67.7
+kampala_a2_katuna,317.5,Ruhanga,roadside settlement,2,192.0,59.1
+kampala_a2_katuna,318.0,Migorora,roadside settlement,2,156.0,57.3
+kampala_a2_katuna,318.5,Nyamuhani,roadside settlement,2,195.0,65.8
+kampala_a2_katuna,320.5,Kahunga Trc,roadside settlement,1,275.0,56.6
+kampala_a2_katuna,321.0,Kahunga Trc,roadside settlement,1,150.0,64.6
+kampala_a2_katuna,321.5,Nyakihanga,roadside settlement,1,293.0,61.9
+kampala_a2_katuna,322.0,Nyakihanga,roadside settlement,1,105.0,65.1
+kampala_a2_katuna,324.0,Nyabubare,roadside settlement,1,181.0,66.2
+kampala_a2_katuna,327.0,Kyamate,roadside settlement,1,270.0,67.6
+kampala_a2_katuna,327.5,Orubaare,roadside settlement,1,106.0,53.8
+kampala_a2_katuna,334.5,Kyamugashe Ii,roadside settlement,1,63.0,61.3
+kampala_a2_katuna,335.0,Kyamugashe Ii,roadside settlement,1,98.0,61.1
+kampala_a2_katuna,337.0,Kyamugashe I,roadside settlement,1,143.0,66.6
+kampala_a2_katuna,338.5,Omungyenyi,roadside settlement,1,28.0,66.2
+kampala_a2_katuna,339.5,Omungyenyi,roadside settlement,2,313.0,60.4
+kampala_a2_katuna,357.0,Rwentobo,roadside settlement,1,281.0,54.8
+kampala_a2_katuna,357.5,Rwentobo,roadside settlement,1,131.0,69.2
+kampala_a2_katuna,358.0,Rwentobo,roadside settlement,1,218.0,65.3
+kampala_a2_katuna,359.0,Nyabugando Ii,roadside settlement,1,78.0,67.7
+kampala_a2_katuna,359.5,Nyabugando Ii,roadside settlement,1,286.0,56.2
+kampala_a2_katuna,360.0,Nyabugando Ii,roadside settlement,1,160.0,59.3
+kampala_a2_katuna,367.0,Kafuka,roadside settlement,1,96.0,65.9
+kampala_a2_katuna,367.5,Rwabahazi,roadside settlement,1,85.0,65.4
+kampala_a2_katuna,368.0,Rwabahazi,roadside settlement,1,144.0,60.1
+kampala_a2_katuna,368.5,Muhanga,roadside settlement,3,395.0,53.8
+kampala_a2_katuna,371.0,Nyakanengo,roadside settlement,1,241.0,61.1
+kampala_a2_katuna,371.5,Nyakanengo,roadside settlement,1,388.0,61.8
+kampala_a2_katuna,373.5,Kabaare,roadside settlement,1,327.0,60.9
+kampala_a2_katuna,374.0,Bukinda,roadside settlement,2,687.0,55.5
+kampala_a2_katuna,378.5,Kyobugombe,roadside settlement,1,301.0,60.2
+kampala_a2_katuna,380.5,Nkumbura,roadside settlement,1,282.0,57.4
+kampala_a2_katuna,381.0,Ahamumba,roadside settlement,1,278.0,62.6
+kampala_a2_katuna,383.5,Ahakatooma,roadside settlement,1,190.0,63.7
+kampala_a2_katuna,397.5,Nyakahita (Katookye),roadside settlement,1,377.0,59.3
+kampala_a2_katuna,398.0,Rugarama Ii,roadside settlement,2,613.0,51.3
+kampala_a2_katuna,406.5,Rwabirundo,roadside settlement,1,474.0,58.3
+kampala_a2_katuna,407.0,Rwabirundo,roadside settlement,2,243.0,65.1
+kampala_a2_katuna,407.5,Butare,roadside settlement,1,114.0,63.6
+kampala_a2_katuna,410.0,Nyakateete B,roadside settlement,2,359.0,52.0
+kampala_a2_katuna,410.5,Nyakateete B,roadside settlement,1,209.0,58.9
+kampala_a2_katuna,421.5,,roadside settlement,4,297.0,64.6
+kampala_a2_katuna,422.0,,roadside settlement,4,713.0,50.9
+kampala_a5_bwera,32.0,Muduuma,roadside settlement,1,147.0,54.9
+kampala_a5_bwera,32.5,Muduuma,roadside settlement,1,232.0,51.5
+kampala_a5_bwera,37.0,St. Josephs,roadside settlement,2,61.0,59.4
+kampala_a5_bwera,39.0,Buwalula A,roadside settlement,1,146.0,63.7
+kampala_a5_bwera,40.0,Kasiba,roadside settlement,1,176.0,66.1
+kampala_a5_bwera,41.0,Kiwawu,roadside settlement,1,307.0,62.7
+kampala_a5_bwera,49.5,Nakaseta,roadside settlement,2,276.0,57.0
+kampala_a5_bwera,50.0,Zigoti,roadside settlement,2,258.0,55.7
+kampala_a5_bwera,50.5,Zigoti,roadside settlement,1,63.0,62.3
+kampala_a5_bwera,52.0,Ttanda,roadside settlement,1,94.0,64.4
+kampala_a5_bwera,53.0,Nakanyenya,roadside settlement,1,192.0,57.6
+kampala_a5_bwera,53.5,Nakanyenya,roadside settlement,1,113.0,58.2
+kampala_a5_bwera,56.0,Ttamu A,roadside settlement,2,318.0,53.7
+kampala_a5_bwera,56.5,Tamu,roadside settlement,2,179.0,60.0
+kampala_a5_bwera,64.5,Mizigo B,roadside settlement,1,904.0,59.8
+kampala_a5_bwera,65.0,Kikumbi,roadside settlement,3,184.0,59.3
+kampala_a5_bwera,66.0,Bamunanika-kyetume,roadside settlement,1,331.0,53.8
+kampala_a5_bwera,69.0,Naama A,roadside settlement,3,364.0,50.2
+kampala_a5_bwera,70.0,Mujjumbula,roadside settlement,2,262.0,51.4
+kampala_a5_bwera,71.0,Lusundo,roadside settlement,1,295.0,53.9
+kampala_a5_bwera,72.5,Busundo-mpanga,roadside settlement,2,242.0,61.2
+kampala_a5_bwera,75.0,Kyengeza (kigalama),roadside settlement,1,401.0,51.9
+kampala_a5_bwera,76.0,Kyengeza (kigalama),roadside settlement,1,173.0,66.5
+kampala_a5_bwera,80.0,Kiswera,roadside settlement,2,198.0,63.7
+kampala_a5_bwera,80.5,Kiswera,roadside settlement,2,264.0,59.3
+kampala_a5_bwera,82.0,Kalama (Myanzi),roadside settlement,1,32.0,67.2
+kampala_a5_bwera,83.0,Kalama (Myanzi),roadside settlement,1,377.0,56.6
+kampala_a5_bwera,83.5,,roadside settlement,1,187.0,63.9
+kampala_a5_bwera,90.5,,roadside settlement,1,202.0,60.7
+kampala_a5_bwera,91.0,,open road,1,47.0,68.8
+kampala_a5_bwera,94.5,Kyakatebe,roadside settlement,1,252.0,54.9
+kampala_a5_bwera,100.0,Kasambya,roadside settlement,1,253.0,60.3
+kampala_a5_bwera,102.0,Kisolooza A,roadside settlement,1,276.0,64.9
+kampala_a5_bwera,102.5,Kasambya (kinoni),roadside settlement,1,296.0,56.7
+kampala_a5_bwera,104.5,Nakiduduma,roadside settlement,1,284.0,56.6
+kampala_a5_bwera,106.0,Nasulu,roadside settlement,4,288.0,61.0
+kampala_a5_bwera,108.0,Kawungera,roadside settlement,2,422.0,50.2
+kampala_a5_bwera,108.5,Kyamusota,roadside settlement,2,324.0,58.3
+kampala_a5_bwera,109.0,Kyamusota,roadside settlement,2,224.0,64.7
+kampala_a5_bwera,139.5,Bakijulula,roadside settlement,3,478.0,55.7
+kampala_a5_bwera,140.0,Bakijulula,roadside settlement,3,625.0,51.0
+kampala_a5_bwera,144.0,Kasenyi,roadside settlement,1,488.0,57.5
+kampala_a5_bwera,144.5,Kasenyi,roadside settlement,1,337.0,59.1
+kampala_a5_bwera,148.0,Delphi,roadside settlement,1,222.0,57.8
+kampala_a5_bwera,148.5,Delphi,roadside settlement,1,287.0,56.2
+kampala_a5_bwera,149.0,Delphi,roadside settlement,1,129.0,62.6
+kampala_a5_bwera,149.5,Buwanga,roadside settlement,1,177.0,59.7
+kampala_a5_bwera,157.5,Lusalira,roadside settlement,4,341.0,51.0
+kampala_a5_bwera,164.5,Gwanika,roadside settlement,1,229.0,54.5
+kampala_a5_bwera,167.5,Lwemivubo (Nabingoola),roadside settlement,1,144.0,65.2
+kampala_a5_bwera,171.5,Lwamazzi,roadside settlement,1,194.0,66.9
+kampala_a5_bwera,172.0,Lwamazzi,open road,1,75.0,68.6
+kampala_a5_bwera,176.5,Butooke,roadside settlement,1,183.0,62.9
+kampala_a5_bwera,177.0,Lunyongoli,roadside settlement,2,54.0,69.1
+kampala_a5_bwera,184.0,Haisaza,roadside settlement,1,380.0,65.9
+kampala_a5_bwera,184.5,Haisaza,roadside settlement,2,337.0,52.8
+kampala_a5_bwera,186.0,Humura,roadside settlement,2,128.0,65.6
+kampala_a5_bwera,186.5,Humura,roadside settlement,1,84.0,65.2
+kampala_a5_bwera,187.5,Rwera,roadside settlement,1,150.0,60.7
+kampala_a5_bwera,188.0,Rwera,open road,1,18.0,70.0
+kampala_a5_bwera,193.5,Kyatega,roadside settlement,1,311.0,60.9
+kampala_a5_bwera,194.0,Kyatega,open road,1,80.0,69.6
+kampala_a5_bwera,199.0,Misenyi,roadside settlement,1,261.0,65.1
+kampala_a5_bwera,200.5,Kikyedo,roadside settlement,1,211.0,55.0
+kampala_a5_bwera,201.0,Kikyedo,roadside settlement,1,233.0,65.9
+kampala_a5_bwera,204.0,Kyeema,roadside settlement,1,129.0,65.6
+kampala_a5_bwera,204.5,Kakongorano,roadside settlement,1,284.0,59.7
+kampala_a5_bwera,205.0,Kakongorano,roadside settlement,1,156.0,57.1
+kampala_a5_bwera,229.5,Kicwamba,roadside settlement,1,102.0,66.2
+kampala_a5_bwera,230.0,Kicwamba,roadside settlement,1,190.0,67.7
+kampala_a5_bwera,237.5,Kyenjojo,roadside settlement,1,355.0,55.4
+kampala_a5_bwera,239.0,Kyenjojo,roadside settlement,2,440.0,51.7
+kampala_a5_bwera,239.5,Kyenjojo,roadside settlement,1,255.0,56.7
+kampala_a5_bwera,240.0,Kyenjojo,roadside settlement,1,74.0,66.1
+kampala_a5_bwera,246.5,Kaihura Central,roadside settlement,1,239.0,62.6
+kampala_a5_bwera,247.5,Kaihura Central,roadside settlement,1,180.0,60.4
+kampala_a5_bwera,250.0,Miranga,roadside settlement,1,207.0,52.8
+kampala_a5_bwera,250.5,Miranga,roadside settlement,1,273.0,62.1
+kampala_a5_bwera,251.0,Miranga,roadside settlement,1,148.0,56.2
+kampala_a5_bwera,257.5,Rugombe Nyamasobya,roadside settlement,1,141.0,56.4
+kampala_a5_bwera,258.0,Rugombe Nyamasobya,roadside settlement,1,294.0,62.1
+kampala_a5_bwera,260.0,Nyanjaetagera,roadside settlement,1,234.0,60.6
+kampala_a5_bwera,260.5,Kyabagonza,roadside settlement,2,183.0,64.2
+kampala_a5_bwera,261.0,Bukoiko,roadside settlement,1,234.0,61.7
+kampala_a5_bwera,262.0,Kagorogoro,roadside settlement,1,267.0,56.0
+kampala_a5_bwera,262.5,Kagorogoro,roadside settlement,1,169.0,63.7
+kampala_a5_bwera,263.5,Kyeragira,roadside settlement,1,181.0,64.3
+kampala_a5_bwera,264.0,Kyeragira,roadside settlement,2,251.0,63.1
+kampala_a5_bwera,264.5,Ntoroko Road,roadside settlement,2,333.0,61.4
+kampala_a5_bwera,266.5,Kyakiroro,roadside settlement,1,76.0,61.8
+kampala_a5_bwera,276.0,Kiamara C,roadside settlement,1,86.0,64.1
+kampala_a5_bwera,276.5,Kiamara C,roadside settlement,1,38.0,66.0
+kampala_a5_bwera,281.5,Kabegira,roadside settlement,1,329.0,55.9
+kampala_a5_bwera,282.0,Kabegira,roadside settlement,1,230.0,51.2
+kampala_a5_bwera,283.0,Nyabinamba,roadside settlement,2,422.0,55.4
+kampala_a5_bwera,283.5,Kaihokwa,roadside settlement,2,390.0,52.8
+kampala_a5_bwera,286.0,Njara C,roadside settlement,2,801.0,58.1
+kampala_a5_bwera,289.5,Maguru C,roadside settlement,3,777.0,50.8
+kampala_a5_bwera,290.5,Virika,roadside settlement,5,446.0,56.2
+kampala_a5_bwera,292.5,Kasusu C,roadside settlement,1,229.0,53.5
+kampala_a5_bwera,294.0,Karambi I,roadside settlement,2,296.0,53.5
+kampala_a5_bwera,294.5,Karambi Ii,roadside settlement,2,309.0,52.9
+kampala_a5_bwera,295.0,Karambi Ii,roadside settlement,1,392.0,56.9
+kampala_a5_bwera,303.5,Nyakagongo,roadside settlement,2,370.0,53.8
+kampala_a5_bwera,313.5,Busiita,roadside settlement,1,208.0,61.3
+kampala_a5_bwera,314.0,Busiita,roadside settlement,1,169.0,66.3
+kampala_a5_bwera,318.0,Kasaali B,roadside settlement,3,276.0,52.4
+kampala_a5_bwera,319.5,Kibiito,roadside settlement,1,638.0,52.6
+kampala_a5_bwera,322.0,Maligo,roadside settlement,1,274.0,61.1
+kampala_a5_bwera,323.0,Kabale,roadside settlement,1,147.0,61.3
+kampala_a5_bwera,327.5,Kasunganyanja,roadside settlement,2,409.0,59.9
+kampala_a5_bwera,329.5,Kaburaisoke North,roadside settlement,1,306.0,59.3
+kampala_a5_bwera,330.0,Kaburaisoke,roadside settlement,1,273.0,55.9
+kampala_a5_bwera,330.5,Kaburaisoke,roadside settlement,1,189.0,62.6
+kampala_a5_bwera,331.0,Rwimi Centre A,roadside settlement,1,482.0,54.3
+kampala_a5_bwera,337.5,,roadside settlement,1,21.0,68.5
+kampala_a5_bwera,338.0,,roadside settlement,1,40.0,54.1
+kampala_a5_bwera,338.5,,roadside settlement,1,166.0,62.2
+kampala_a5_bwera,353.0,Kabukelo West,roadside settlement,1,242.0,56.8
+kampala_a5_bwera,353.5,Kabukelo West,roadside settlement,2,296.0,57.8
+kampala_a5_bwera,354.0,Kabukelo West,roadside settlement,1,183.0,61.9
+kampala_a5_bwera,359.5,Nyakasanga Lower,roadside settlement,1,287.0,60.3
+kampala_a5_bwera,360.0,Nyakasanga Lower,roadside settlement,4,1122.0,57.0
+kampala_a5_bwera,361.0,Nyakasanga Lower,roadside settlement,3,3193.0,54.0
+kampala_a5_bwera,363.5,Kamaiba Central,roadside settlement,2,1259.0,61.2
+kampala_a5_bwera,364.0,Industrial Zone,roadside settlement,1,893.0,59.0
+kampala_a5_bwera,364.5,Kamaiba Main,roadside settlement,1,77.0,64.7
+kampala_a5_bwera,392.5,,open road,1,1.0,69.8
+kampala_a5_bwera,393.0,,open road,1,66.0,68.7
+kampala_a5_bwera,398.5,Kiburara,roadside settlement,1,281.0,66.2
+kampala_a5_bwera,399.0,,roadside settlement,1,151.0,64.0
+kampala_a5_bwera,406.5,,roadside settlement,1,110.0,58.9
+kampala_a5_bwera,407.0,,roadside settlement,1,34.0,64.0
+kampala_a5_bwera,408.0,,roadside settlement,1,33.0,68.1
+kampala_a5_bwera,408.5,,roadside settlement,1,24.0,68.1
+kampala_a5_bwera,409.0,Katojo,roadside settlement,1,69.0,63.2
+kampala_a5_bwera,415.0,Kyempara I,roadside settlement,1,670.0,54.9
+kampala_a5_bwera,416.5,Kyanduli II,roadside settlement,4,940.0,55.1
+kampala_a5_bwera,418.0,Bwera,roadside settlement,3,2104.0,53.7
+kampala_a5_bwera,418.5,Karughe,roadside settlement,1,1640.0,57.3
+kampala_a6_elegu,10.0,Kaayi,roadside settlement,1,524.0,60.3
+kampala_a6_elegu,27.0,Bombo,roadside settlement,1,136.0,64.3
+kampala_a6_elegu,27.5,Bombo,roadside settlement,1,553.0,61.4
+kampala_a6_elegu,28.0,Bombo,roadside settlement,1,565.0,55.5
+kampala_a6_elegu,38.0,,roadside settlement,3,330.0,62.5
+kampala_a6_elegu,42.5,Kikoma,roadside settlement,1,435.0,56.1
+kampala_a6_elegu,43.0,Kikoma,roadside settlement,2,737.0,55.7
+kampala_a6_elegu,62.0,Kyevunze,roadside settlement,1,74.0,63.9
+kampala_a6_elegu,62.5,Kyevunze,roadside settlement,1,73.0,55.7
+kampala_a6_elegu,63.0,Kyevunze,roadside settlement,2,239.0,57.5
+kampala_a6_elegu,65.5,Kasaala,roadside settlement,1,132.0,60.3
+kampala_a6_elegu,68.0,Kakinzi,roadside settlement,2,358.0,55.1
+kampala_a6_elegu,68.5,Kakinzi,roadside settlement,2,206.0,63.3
+kampala_a6_elegu,75.0,,roadside settlement,1,151.0,60.1
+kampala_a6_elegu,75.5,,roadside settlement,2,134.0,60.3
+kampala_a6_elegu,76.0,,roadside settlement,1,194.0,64.2
+kampala_a6_elegu,82.0,Kakooge,roadside settlement,3,212.0,57.0
+kampala_a6_elegu,82.5,Kakooge,roadside settlement,3,609.0,54.1
+kampala_a6_elegu,87.0,Kyabutayika,roadside settlement,1,229.0,62.3
+kampala_a6_elegu,87.5,Kyabutayika,roadside settlement,1,75.0,67.3
+kampala_a6_elegu,91.0,Bamusuuta,roadside settlement,1,177.0,64.3
+kampala_a6_elegu,95.5,Kaleire,roadside settlement,1,275.0,68.1
+kampala_a6_elegu,102.0,Kyaluweza,open road,1,14.0,69.8
+kampala_a6_elegu,102.5,Kyaluweza,open road,1,111.0,69.3
+kampala_a6_elegu,109.5,Kirembo,roadside settlement,1,157.0,68.4
+kampala_a6_elegu,110.0,Kiwongoire,roadside settlement,1,134.0,68.4
+kampala_a6_elegu,122.0,Namansa,roadside settlement,2,337.0,60.3
+kampala_a6_elegu,122.5,Namansa,roadside settlement,1,170.0,65.0
+kampala_a6_elegu,137.0,Migyera,roadside settlement,1,18.0,66.6
+kampala_a6_elegu,148.0,Lwambogo,roadside settlement,1,62.0,53.0
+kampala_a6_elegu,148.5,Lwambogo,roadside settlement,1,15.0,65.9
+kampala_a6_elegu,163.5,Bujabe,roadside settlement,1,105.0,67.9
+kampala_a6_elegu,164.0,Bujaabe,roadside settlement,1,19.0,69.1
+kampala_a6_elegu,166.0,Kafu,roadside settlement,1,320.0,60.4
+kampala_a6_elegu,167.0,Kyani-Kafu,roadside settlement,2,69.0,63.3
+kampala_a6_elegu,168.5,Kyani-Kafu,roadside settlement,1,422.0,53.2
+kampala_a6_elegu,169.0,,open road,1,15.0,70.0
+kampala_a6_elegu,178.5,,roadside settlement,1,21.0,67.2
+kampala_a6_elegu,179.0,,roadside settlement,1,308.0,60.7
+kampala_a6_elegu,185.5,Rwekunye,roadside settlement,1,31.0,68.5
+kampala_a6_elegu,186.0,Rwekunye,roadside settlement,1,478.0,57.4
+kampala_a6_elegu,192.0,,roadside settlement,2,199.0,60.3
+kampala_a6_elegu,192.5,,roadside settlement,2,260.0,63.8
+kampala_a6_elegu,193.5,,roadside settlement,1,241.0,65.8
+kampala_a6_elegu,194.0,,open road,1,8.0,70.0
+kampala_a6_elegu,194.5,,roadside settlement,2,231.0,61.4
+kampala_a6_elegu,195.0,,roadside settlement,2,194.0,60.4
+kampala_a6_elegu,198.5,Kigumba,roadside settlement,3,337.0,59.0
+kampala_a6_elegu,205.0,Kikubi,roadside settlement,1,266.0,63.9
+kampala_a6_elegu,205.5,Kikubi,roadside settlement,1,224.0,67.2
+kampala_a6_elegu,207.0,Kiryandongo,roadside settlement,3,654.0,64.7
+kampala_a6_elegu,207.5,Kiryandongo,roadside settlement,2,218.0,65.3
+kampala_a6_elegu,215.5,Buyale,roadside settlement,1,332.0,54.1
+kampala_a6_elegu,216.0,Buyale,roadside settlement,1,382.0,63.3
+kampala_a6_elegu,220.5,Kichwabugingo,roadside settlement,1,868.0,59.1
+kampala_a6_elegu,221.0,Kichwabugingo,roadside settlement,1,638.0,59.7
+kampala_a6_elegu,222.0,Kichwabugingo,roadside settlement,1,238.0,68.2
+kampala_a6_elegu,222.5,Kichwabugingo,roadside settlement,1,148.0,67.6
+kampala_a6_elegu,223.0,,roadside settlement,1,152.0,57.9
+kampala_a6_elegu,223.5,,roadside settlement,2,373.0,66.2
+kampala_a6_elegu,224.0,,roadside settlement,1,535.0,51.5
+kampala_a6_elegu,227.5,,roadside settlement,1,435.0,51.3
+kampala_a6_elegu,228.0,,roadside settlement,1,271.0,58.8
+kampala_a6_elegu,231.5,,roadside settlement,1,147.0,66.6
+kampala_a6_elegu,232.0,,roadside settlement,1,160.0,60.9
+kampala_a6_elegu,238.5,,roadside settlement,1,178.0,59.2
+kampala_a6_elegu,239.0,,roadside settlement,1,139.0,66.3
+kampala_a6_elegu,243.5,Kiryandongo,roadside settlement,1,40.0,69.3
+kampala_a6_elegu,244.0,Kiryandongo,roadside settlement,1,167.0,68.4
+kampala_a6_elegu,249.5,,roadside settlement,1,114.0,59.1
+kampala_a6_elegu,250.0,,roadside settlement,1,213.0,65.3
+kampala_a6_elegu,261.0,Nora,roadside settlement,1,386.0,63.0
+kampala_a6_elegu,261.5,Bedmot,roadside settlement,2,295.0,62.8
+kampala_a6_elegu,262.0,Bedmot,roadside settlement,1,336.0,55.9
+kampala_a6_elegu,269.5,Kamdini,roadside settlement,1,244.0,55.7
+kampala_a6_elegu,270.0,Kamdini,roadside settlement,2,260.0,60.4
+kampala_a6_elegu,270.5,Boroboro B,roadside settlement,1,318.0,56.9
+kampala_a6_elegu,274.0,Arukolong,roadside settlement,1,77.0,66.4
+kampala_a6_elegu,274.5,Abang Trc,roadside settlement,1,114.0,53.5
+kampala_a6_elegu,275.0,Abang East,roadside settlement,1,227.0,64.4
+kampala_a6_elegu,276.5,Amwa Trc,roadside settlement,2,231.0,54.4
+kampala_a6_elegu,277.0,Amwa,roadside settlement,2,240.0,58.0
+kampala_a6_elegu,284.5,Alati A,roadside settlement,1,150.0,60.5
+kampala_a6_elegu,285.0,Alati A,roadside settlement,1,222.0,64.3
+kampala_a6_elegu,285.5,Arak East,roadside settlement,1,146.0,64.3
+kampala_a6_elegu,290.0,Minakulu,roadside settlement,2,93.0,55.1
+kampala_a6_elegu,290.5,Minakulu Trc B,roadside settlement,3,347.0,55.4
+kampala_a6_elegu,291.0,Minakulu Trc B,roadside settlement,1,190.0,57.7
+kampala_a6_elegu,293.0,Mti,roadside settlement,1,198.0,58.8
+kampala_a6_elegu,293.5,Mti,roadside settlement,1,186.0,65.1
+kampala_a6_elegu,296.0,Obalowat,roadside settlement,2,156.0,62.2
+kampala_a6_elegu,296.5,Minakulu,roadside settlement,2,218.0,58.1
+kampala_a6_elegu,300.5,,roadside settlement,1,215.0,60.1
+kampala_a6_elegu,301.0,Pato,roadside settlement,1,259.0,58.3
+kampala_a6_elegu,302.5,Pato,roadside settlement,1,220.0,59.4
+kampala_a6_elegu,303.0,Bobi,roadside settlement,1,316.0,53.0
+kampala_a6_elegu,303.5,Bobi,roadside settlement,1,143.0,56.0
+kampala_a6_elegu,304.0,Bobi,roadside settlement,1,103.0,69.3
+kampala_a6_elegu,304.5,Omoro,roadside settlement,1,241.0,64.0
+kampala_a6_elegu,305.0,Omoro,roadside settlement,1,102.0,66.1
+kampala_a6_elegu,305.5,Omoro,roadside settlement,2,299.0,54.6
+kampala_a6_elegu,306.0,Kalamomia,roadside settlement,1,299.0,64.4
+kampala_a6_elegu,309.5,Odyak,roadside settlement,1,151.0,67.6
+kampala_a6_elegu,310.0,Palenga,roadside settlement,1,249.0,53.9
+kampala_a6_elegu,315.0,Barogal,roadside settlement,1,83.0,65.7
+kampala_a6_elegu,315.5,Barogal,roadside settlement,1,115.0,66.5
+kampala_a6_elegu,319.5,Koro Abili,roadside settlement,2,214.0,51.7
+kampala_a6_elegu,320.0,Koro Abili,roadside settlement,2,138.0,57.7
+kampala_a6_elegu,320.5,Koro Abili,roadside settlement,2,146.0,52.8
+kampala_a6_elegu,321.0,Lajwatek,roadside settlement,1,168.0,59.5
+kampala_a6_elegu,321.5,Lajwatek,roadside settlement,1,98.0,61.4
+kampala_a6_elegu,322.5,Koro,roadside settlement,2,192.0,61.2
+kampala_a6_elegu,323.0,Koro,roadside settlement,2,169.0,60.3
+kampala_a6_elegu,325.5,Kal,roadside settlement,3,843.0,58.1
+kampala_a6_elegu,330.0,Green Valley,roadside settlement,5,1510.0,57.4
+kampala_a6_elegu,330.5,Kanyagoga B,roadside settlement,5,2183.0,51.0
+kampala_a6_elegu,331.0,Kanyagoga C,roadside settlement,2,2255.0,52.1
+kampala_a6_elegu,332.0,Kanyagoga C,roadside settlement,3,487.0,52.8
+kampala_a6_elegu,333.0,St Joe,roadside settlement,4,808.0,52.3
+kampala_a6_elegu,333.5,St Joe,roadside settlement,6,1386.0,57.6
+kampala_a6_elegu,334.0,Katikati,roadside settlement,2,1483.0,57.8
+kampala_a6_elegu,336.5,Pukure,roadside settlement,7,411.0,55.9
+kampala_a6_elegu,337.0,Pukure,roadside settlement,6,147.0,62.6
+kampala_a6_elegu,338.0,Awer,roadside settlement,4,372.0,52.0
+kampala_a6_elegu,338.5,Awer,roadside settlement,6,241.0,57.8
+kampala_a6_elegu,339.0,Lwalakwar,roadside settlement,2,167.0,60.1
+kampala_a6_elegu,341.5,Pukure Lc1,roadside settlement,2,204.0,65.0
+kampala_a6_elegu,342.0,,roadside settlement,2,266.0,61.5
+kampala_a6_elegu,343.0,Keyo,roadside settlement,2,205.0,63.0
+kampala_a6_elegu,344.5,Pakiri,roadside settlement,8,231.0,67.3
+kampala_a6_elegu,345.0,Amilobo Lc1,roadside settlement,3,103.0,68.4
+kampala_a6_elegu,353.0,Yilo,roadside settlement,2,120.0,62.8
+kampala_a6_elegu,353.5,Yilo,roadside settlement,2,109.0,63.9
+kampala_a6_elegu,354.5,Oduu Lc1,roadside settlement,2,197.0,58.9
+kampala_a6_elegu,355.0,Oduu Lc1,roadside settlement,2,242.0,59.6
+kampala_a6_elegu,357.5,Oduu,roadside settlement,1,76.0,62.2
+kampala_a6_elegu,358.0,Oduu,roadside settlement,1,100.0,66.1
+kampala_a6_elegu,360.5,Patiko,roadside settlement,2,231.0,64.4
+kampala_a6_elegu,364.0,Agole,roadside settlement,1,249.0,65.2
+kampala_a6_elegu,364.5,Agole,roadside settlement,2,360.0,63.1
+kampala_a6_elegu,365.0,Agole,roadside settlement,3,234.0,63.1
+kampala_a6_elegu,365.5,Agole,roadside settlement,4,443.0,57.7
+kampala_a6_elegu,366.0,Kal Centre,roadside settlement,2,311.0,50.5
+kampala_a6_elegu,367.5,Pabo,roadside settlement,6,146.0,63.0
+kampala_a6_elegu,368.0,Pabo,roadside settlement,3,378.0,58.8
+kampala_a6_elegu,374.0,Pawel Pukumu,roadside settlement,1,2.0,62.4
+kampala_a6_elegu,375.0,Pawel Pukumu,roadside settlement,2,97.0,62.4
+kampala_a6_elegu,378.0,Pawel,roadside settlement,2,374.0,61.6
+kampala_a6_elegu,388.5,Palukere West,roadside settlement,1,87.0,68.6
+kampala_a6_elegu,389.0,Palukere West,roadside settlement,1,289.0,64.8
+kampala_a6_elegu,393.5,Pawiro,roadside settlement,2,222.0,66.9
+kampala_a6_elegu,394.0,Pawiro,roadside settlement,2,226.0,67.0
+kampala_a6_elegu,397.0,Atiak,roadside settlement,2,159.0,61.8
+kampala_a6_elegu,404.5,Pacilo,roadside settlement,1,13.0,69.6
+kampala_a6_elegu,405.0,Pacilo,roadside settlement,1,236.0,66.7
+kampala_a6_elegu,423.5,Bibia West,roadside settlement,2,948.0,56.5
+kampala_a6_elegu,425.5,,open road,2,5.0,68.7
+kampala_a6_elegu,426.0,,roadside settlement,2,66.0,60.7
+kampala_a6_elegu,426.5,,roadside settlement,1,6.0,69.7
+kampala_a6_elegu,427.0,,roadside settlement,1,197.0,63.6
+kampala_a6_elegu,427.5,,roadside settlement,1,338.0,60.0
+kampala_a9_hoima,9.5,Kayunga,roadside settlement,1,330.0,56.2
+kampala_a9_hoima,34.0,Gobero,roadside settlement,1,296.0,65.8
+kampala_a9_hoima,34.5,Gobero,roadside settlement,1,291.0,54.9
+kampala_a9_hoima,49.5,Kibubula C,roadside settlement,3,434.0,52.9
+kampala_a9_hoima,51.5,Busunju A,roadside settlement,1,187.0,62.4
+kampala_a9_hoima,52.0,Mbalala,roadside settlement,1,230.0,63.4
+kampala_a9_hoima,52.5,Mbalala,roadside settlement,1,341.0,51.9
+kampala_a9_hoima,57.0,Kibisi,roadside settlement,1,117.0,60.8
+kampala_a9_hoima,57.5,Kibisi,roadside settlement,1,161.0,60.1
+kampala_a9_hoima,62.5,Nana,roadside settlement,1,46.0,68.3
+kampala_a9_hoima,67.0,Bombo (nakwaya),roadside settlement,1,219.0,62.3
+kampala_a9_hoima,67.5,Nakwaya B,roadside settlement,1,271.0,58.1
+kampala_a9_hoima,73.5,Mataagi,roadside settlement,1,240.0,62.0
+kampala_a9_hoima,74.5,Bukomero B,roadside settlement,4,355.0,60.1
+kampala_a9_hoima,75.0,Bukomero B,roadside settlement,5,385.0,55.1
+kampala_a9_hoima,77.0,Kakunyu A,roadside settlement,2,481.0,51.7
+kampala_a9_hoima,78.5,Kateera,roadside settlement,3,246.0,58.7
+kampala_a9_hoima,79.5,Kalagala,roadside settlement,2,228.0,63.7
+kampala_a9_hoima,80.0,Kalagala,roadside settlement,1,217.0,64.3
+kampala_a9_hoima,84.0,Kayunga,roadside settlement,1,224.0,51.3
+kampala_a9_hoima,85.0,Mpangala East,roadside settlement,2,128.0,60.8
+kampala_a9_hoima,85.5,Mpangala West,roadside settlement,2,134.0,65.8
+kampala_a9_hoima,86.0,Kiyamba,roadside settlement,2,56.0,65.2
+kampala_a9_hoima,86.5,Kiyamba,roadside settlement,2,285.0,65.1
+kampala_a9_hoima,87.0,Kiyamba,roadside settlement,2,50.0,67.6
+kampala_a9_hoima,91.5,Ssinde,roadside settlement,1,141.0,66.0
+kampala_a9_hoima,92.0,Ssinde,roadside settlement,2,216.0,65.7
+kampala_a9_hoima,92.5,Ssinde,roadside settlement,1,105.0,67.1
+kampala_a9_hoima,94.0,Lunya,roadside settlement,1,207.0,61.3
+kampala_a9_hoima,95.0,Lunya,roadside settlement,1,432.0,60.7
+kampala_a9_hoima,95.5,Lunya,roadside settlement,1,266.0,63.5
+kampala_a9_hoima,96.5,Lunya,roadside settlement,1,231.0,66.3
+kampala_a9_hoima,97.0,Lunya,roadside settlement,1,134.0,66.2
+kampala_a9_hoima,98.5,Kawaawa,roadside settlement,2,254.0,66.7
+kampala_a9_hoima,99.0,Kawaawa,roadside settlement,3,328.0,62.9
+kampala_a9_hoima,99.5,Kattanzige,roadside settlement,4,309.0,56.0
+kampala_a9_hoima,101.5,Lwamata,roadside settlement,1,301.0,61.5
+kampala_a9_hoima,104.0,Busabulongo,roadside settlement,1,186.0,59.8
+kampala_a9_hoima,104.5,Busabulongo,roadside settlement,1,135.0,65.4
+kampala_a9_hoima,105.0,Kyekumbya (kyekumbya),roadside settlement,1,189.0,64.4
+kampala_a9_hoima,105.5,Kyekumbya (kyekumbya),roadside settlement,1,150.0,65.2
+kampala_a9_hoima,107.5,,roadside settlement,1,86.0,63.2
+kampala_a9_hoima,108.0,,roadside settlement,2,106.0,65.6
+kampala_a9_hoima,108.5,,roadside settlement,1,306.0,65.4
+kampala_a9_hoima,111.5,Kirinda,roadside settlement,1,337.0,57.6
+kampala_a9_hoima,113.0,Kyetume A,roadside settlement,1,519.0,53.0
+kampala_a9_hoima,113.5,Kagobe,roadside settlement,1,222.0,66.3
+kampala_a9_hoima,121.0,Kalagi A,roadside settlement,1,327.0,65.2
+kampala_a9_hoima,122.0,Kalagi B,roadside settlement,1,533.0,51.6
+kampala_a9_hoima,123.0,Masodde,roadside settlement,3,471.0,57.0
+kampala_a9_hoima,123.5,Masodde,roadside settlement,2,469.0,57.4
+kampala_a9_hoima,124.0,Kikweyengo,roadside settlement,1,216.0,58.9
+kampala_a9_hoima,125.5,Kikweyengo,roadside settlement,1,358.0,63.4
+kampala_a9_hoima,126.0,Kyakayingo,roadside settlement,1,233.0,66.7
+kampala_a9_hoima,128.0,Lwansama,roadside settlement,1,312.0,65.0
+kampala_a9_hoima,130.5,Kikolimbo,roadside settlement,1,252.0,68.3
+kampala_a9_hoima,131.0,Kikolimbo,roadside settlement,1,182.0,65.4
+kampala_a9_hoima,132.0,Kiyombya A,roadside settlement,1,176.0,64.1
+kampala_a9_hoima,132.5,Kiyombya A,roadside settlement,1,278.0,66.3
+kampala_a9_hoima,134.5,Wattuba East,roadside settlement,2,510.0,57.5
+kampala_a9_hoima,135.0,Mutuba,roadside settlement,2,615.0,51.8
+kampala_a9_hoima,143.0,Kyanawaalu,roadside settlement,2,261.0,61.9
+kampala_a9_hoima,143.5,Kyanawaalu,roadside settlement,2,409.0,60.7
+kampala_a9_hoima,147.0,Kamirambazzi,roadside settlement,1,540.0,64.4
+kampala_a9_hoima,147.5,Kamirambazzi,roadside settlement,1,507.0,66.3
+kampala_a9_hoima,148.5,Bukwiri Trading Centre,roadside settlement,1,733.0,63.0
+kampala_a9_hoima,149.5,Bukwiri,roadside settlement,2,337.0,65.0
+kampala_a9_hoima,150.0,Kayunga,roadside settlement,1,120.0,52.1
+kampala_a9_hoima,150.5,Kayunga,roadside settlement,1,125.0,62.6
+kampala_a9_hoima,152.5,Lwebisiriza,roadside settlement,1,569.0,63.7
+kampala_a9_hoima,153.0,Lwebisiriza,roadside settlement,1,565.0,61.4
+kampala_a9_hoima,154.0,Katanabirwa,roadside settlement,1,254.0,59.8
+kampala_a9_hoima,155.0,Katanabirwa,roadside settlement,1,562.0,53.7
+kampala_a9_hoima,163.5,Kyakabuga,roadside settlement,1,445.0,57.4
+kampala_a9_hoima,164.0,Kyakabuga,roadside settlement,1,172.0,65.9
+kampala_a9_hoima,165.0,Munsambya,roadside settlement,1,518.0,54.3
+kampala_a9_hoima,165.5,Munsambya,roadside settlement,1,253.0,64.2
+kampala_a9_hoima,170.5,Kikonda A,roadside settlement,2,279.0,62.8
+kampala_a9_hoima,177.5,Katereiga I,roadside settlement,2,200.0,53.6
+kampala_a9_hoima,178.0,Katereiga I,roadside settlement,1,191.0,67.1
+kampala_a9_hoima,180.0,Kihuura Ii,roadside settlement,1,130.0,52.6
+kampala_a9_hoima,180.5,Butema,roadside settlement,1,306.0,57.3
+kampala_a9_hoima,181.5,Kihenda,roadside settlement,1,161.0,67.8
+kampala_a9_hoima,184.0,Kinogozi East,roadside settlement,1,106.0,68.8
+kampala_a9_hoima,184.5,Kinogozi East,roadside settlement,1,137.0,66.5
+kigali_nr1_huye,50.5,Kabgayi,roadside settlement,2,182.0,63.6
+kigali_nr2_gisenyi,92.0,Kimonyi,roadside settlement,1,360.0,60.2
+kigali_nr2_gisenyi,98.0,Mugataraga,roadside settlement,1,731.0,56.6
+kigali_nr2_gisenyi,103.0,Byangabo,roadside settlement,1,556.0,53.4
+kigali_road_rusumo,5.0,Kanombe,roadside settlement,2,2082.0,60.0
+kigali_road_rusumo,6.0,Kanombe,roadside settlement,2,1039.0,62.0
+kigali_road_rusumo,29.5,Nyagasambu,roadside settlement,1,1267.0,58.9
+kigali_road_rusumo,30.0,Nyagasambu,roadside settlement,1,1122.0,52.6
+kigali_road_rusumo,60.5,Muhazi,roadside settlement,1,460.0,54.6
+kigali_road_rusumo,61.0,Muhazi,roadside settlement,1,381.0,56.1
+kigali_road_rusumo,62.5,Muhazi,roadside settlement,1,463.0,54.8
+kigali_road_rusumo,74.0,Nyamirama,roadside settlement,1,816.0,53.1
+kigali_road_rusumo,74.5,Nyamirama,roadside settlement,1,630.0,56.9
+lusaka_m9_mongu,89.5,,roadside settlement,1,98.0,65.6
+lusaka_m9_mongu,92.0,,roadside settlement,1,124.0,65.7
+lusaka_m9_mongu,103.0,,roadside settlement,1,75.0,68.3
+lusaka_m9_mongu,103.5,,roadside settlement,1,92.0,68.5
+lusaka_m9_mongu,105.0,Kasalu,roadside settlement,1,269.0,65.4
+lusaka_m9_mongu,105.5,Kasalu,roadside settlement,1,249.0,64.0
+lusaka_m9_mongu,106.5,Kasalu,roadside settlement,1,354.0,62.7
+lusaka_m9_mongu,107.0,Kasalu,roadside settlement,2,347.0,61.0
+lusaka_m9_mongu,163.5,,roadside settlement,1,57.0,69.1
+lusaka_m9_mongu,164.0,,roadside settlement,1,228.0,63.5
+lusaka_m9_mongu,173.0,,open road,1,45.0,53.3
+lusaka_m9_mongu,185.0,,roadside settlement,1,289.0,60.7
+lusaka_m9_mongu,185.5,,roadside settlement,1,124.0,64.1
+lusaka_t1_livingstone,61.5,,roadside settlement,1,144.0,63.6
+lusaka_t1_livingstone,124.5,,roadside settlement,1,1547.0,50.8
+lusaka_t1_livingstone,131.5,Kaleya,roadside settlement,1,738.0,53.9
+lusaka_t1_livingstone,182.0,Monze,roadside settlement,2,1500.0,55.8
+lusaka_t1_livingstone,201.5,Chisekesi,roadside settlement,1,241.0,61.0
+lusaka_t1_livingstone,202.0,Chisekesi,roadside settlement,1,458.0,59.9
+lusaka_t1_livingstone,215.0,,roadside settlement,1,50.0,68.5
+lusaka_t1_livingstone,215.5,Pemba,roadside settlement,1,87.0,67.2
+lusaka_t1_livingstone,216.0,Pemba,roadside settlement,1,295.0,55.9
+lusaka_t1_livingstone,216.5,Pemba,roadside settlement,1,419.0,59.5
+lusaka_t1_livingstone,217.0,Pemba,roadside settlement,1,496.0,52.4
+lusaka_t1_livingstone,232.0,,open road,1,8.0,70.0
+lusaka_t1_livingstone,249.5,Batoka,roadside settlement,1,636.0,63.0
+lusaka_t1_livingstone,250.0,Batoka,roadside settlement,1,1099.0,59.5
+lusaka_t1_livingstone,256.0,,open road,1,1.0,66.6
+lusaka_t1_livingstone,256.5,,roadside settlement,1,86.0,67.7
+lusaka_t1_livingstone,268.0,,roadside settlement,1,114.0,62.9
+lusaka_t1_livingstone,268.5,,roadside settlement,2,201.0,59.7
+lusaka_t1_livingstone,269.0,,roadside settlement,1,63.0,65.3
+lusaka_t1_livingstone,283.0,Choma,roadside settlement,1,806.0,66.2
+lusaka_t1_livingstone,283.5,Choma,roadside settlement,2,1129.0,62.3
+lusaka_t1_livingstone,284.0,Choma,roadside settlement,1,395.0,62.7
+lusaka_t1_livingstone,339.0,,roadside settlement,1,29.0,67.5
+lusaka_t1_livingstone,339.5,,roadside settlement,1,61.0,68.1
+lusaka_t1_livingstone,345.0,Kalomo,roadside settlement,1,808.0,65.0
+lusaka_t1_livingstone,413.0,,roadside settlement,1,71.0,69.2
+lusaka_t1_livingstone,413.5,,open road,1,22.0,68.5
+lusaka_t2_chirundu,60.5,Naduga,roadside settlement,1,325.0,54.3
+lusaka_t2_chirundu,61.0,Naduga,roadside settlement,1,165.0,61.6
+lusaka_t2_chirundu,72.0,,roadside settlement,1,76.0,67.4
+lusaka_t2_chirundu,72.5,,roadside settlement,1,37.0,66.8
+lusaka_t2_chirundu,79.0,,roadside settlement,1,77.0,62.4
+lusaka_t2_chirundu,79.5,,roadside settlement,1,39.0,66.6
+lusaka_t2_nakonde,14.0,,roadside settlement,1,163.0,63.9
+lusaka_t2_nakonde,25.5,,roadside settlement,1,113.0,61.9
+lusaka_t2_nakonde,28.5,Katuba,roadside settlement,1,98.0,61.8
+lusaka_t2_nakonde,29.5,Katuba,roadside settlement,1,130.0,62.3
+lusaka_t2_nakonde,53.0,Mwaiyasunka,roadside settlement,1,703.0,52.5
+lusaka_t2_nakonde,71.5,,roadside settlement,1,31.0,69.0
+lusaka_t2_nakonde,72.0,,roadside settlement,1,51.0,65.9
+lusaka_t2_nakonde,74.0,,roadside settlement,1,173.0,64.4
+lusaka_t2_nakonde,87.5,Kasukwe,roadside settlement,1,143.0,61.7
+lusaka_t2_nakonde,90.5,,roadside settlement,1,312.0,62.1
+lusaka_t2_nakonde,91.0,,roadside settlement,1,1059.0,58.4
+lusaka_t2_nakonde,100.0,John Chinena,roadside settlement,1,686.0,52.6
+lusaka_t2_nakonde,123.5,,roadside settlement,1,195.0,63.5
+lusaka_t2_nakonde,124.0,,roadside settlement,1,124.0,63.7
+lusaka_t2_nakonde,200.5,,roadside settlement,1,670.0,67.7
+lusaka_t2_nakonde,201.5,,roadside settlement,1,1521.0,60.3
+lusaka_t2_nakonde,202.0,Kapiri Mposhi,roadside settlement,2,1618.0,59.8
+lusaka_t2_nakonde,202.5,Kapiri Mposhi,roadside settlement,1,1180.0,61.5
+lusaka_t2_nakonde,203.0,Kapiri Mposhi,roadside settlement,1,2508.0,54.3
+lusaka_t2_nakonde,203.5,Kapiri Mposhi,roadside settlement,4,2117.0,50.8
+lusaka_t2_nakonde,206.5,,roadside settlement,1,238.0,62.5
+lusaka_t2_nakonde,210.5,,roadside settlement,1,302.0,62.1
+lusaka_t2_nakonde,236.0,Mpulo,roadside settlement,5,249.0,55.6
+lusaka_t2_nakonde,236.5,Mpulo,roadside settlement,5,219.0,61.7
+lusaka_t2_nakonde,248.5,,roadside settlement,2,214.0,58.8
+lusaka_t2_nakonde,249.0,,roadside settlement,2,80.0,66.3
+lusaka_t2_nakonde,275.5,,roadside settlement,1,250.0,59.9
+lusaka_t2_nakonde,276.0,,roadside settlement,1,89.0,55.9
+lusaka_t2_nakonde,299.0,,roadside settlement,1,131.0,67.7
+lusaka_t2_nakonde,299.5,,roadside settlement,1,73.0,68.6
+lusaka_t2_nakonde,357.0,,roadside settlement,1,30.0,68.9
+lusaka_t2_nakonde,357.5,,roadside settlement,1,158.0,63.6
+lusaka_t2_nakonde,358.0,,open road,1,13.0,69.7
+lusaka_t2_nakonde,379.0,,roadside settlement,1,59.0,67.3
+lusaka_t2_nakonde,379.5,,roadside settlement,1,55.0,67.6
+lusaka_t2_nakonde,389.5,,roadside settlement,1,166.0,66.3
+lusaka_t2_nakonde,390.0,,roadside settlement,1,97.0,66.6
+lusaka_t2_nakonde,510.0,Lukulu,roadside settlement,1,262.0,54.8
+lusaka_t2_nakonde,534.5,Lavushimanda,roadside settlement,1,236.0,67.0
+lusaka_t2_nakonde,549.0,,roadside settlement,1,108.0,65.7
+lusaka_t2_nakonde,549.5,,roadside settlement,1,135.0,66.2
+lusaka_t2_nakonde,559.0,Salamo,roadside settlement,1,240.0,62.2
+lusaka_t2_nakonde,559.5,Salamo,roadside settlement,1,91.0,66.5
+lusaka_t2_nakonde,583.0,,roadside settlement,1,74.0,66.9
+lusaka_t2_nakonde,583.5,,open road,1,8.0,68.9
+lusaka_t2_nakonde,597.0,Mwelalo,roadside settlement,1,214.0,62.7
+lusaka_t2_nakonde,597.5,Mwelalo,roadside settlement,1,219.0,65.4
+lusaka_t2_nakonde,615.0,,roadside settlement,1,415.0,63.1
+lusaka_t2_nakonde,615.5,,roadside settlement,1,365.0,63.5
+lusaka_t2_nakonde,618.5,Chilonga,roadside settlement,1,134.0,65.0
+lusaka_t2_nakonde,619.0,Chilonga,roadside settlement,2,579.0,61.2
+lusaka_t2_nakonde,619.5,Chilonga,roadside settlement,2,1317.0,50.2
+lusaka_t2_nakonde,620.0,Chilonga,roadside settlement,2,877.0,57.5
+lusaka_t2_nakonde,621.0,Chilonga,roadside settlement,1,624.0,61.4
+lusaka_t2_nakonde,621.5,Chilonga,roadside settlement,1,320.0,60.1
+lusaka_t2_nakonde,631.0,Kaole,roadside settlement,1,84.0,51.7
+lusaka_t2_nakonde,639.5,,roadside settlement,1,137.0,63.7
+lusaka_t2_nakonde,640.0,,roadside settlement,1,149.0,67.1
+lusaka_t2_nakonde,645.0,,roadside settlement,1,1464.0,55.4
+lusaka_t2_nakonde,647.5,,roadside settlement,2,87.0,66.9
+lusaka_t2_nakonde,648.0,,roadside settlement,2,56.0,66.2
+lusaka_t2_nakonde,649.0,,roadside settlement,1,150.0,64.0
+lusaka_t2_nakonde,649.5,,roadside settlement,1,146.0,63.9
+lusaka_t2_nakonde,658.0,,roadside settlement,1,803.0,61.3
+lusaka_t2_nakonde,659.0,,open road,1,16.0,52.5
+lusaka_t2_nakonde,659.5,,roadside settlement,1,84.0,59.7
+lusaka_t2_nakonde,704.5,Lwanya,roadside settlement,1,205.0,50.5
+lusaka_t2_nakonde,705.0,Lwanya,roadside settlement,1,135.0,65.3
+lusaka_t2_nakonde,746.0,,roadside settlement,1,264.0,63.7
+lusaka_t2_nakonde,746.5,,roadside settlement,1,196.0,64.2
+lusaka_t2_nakonde,772.0,,open road,1,326.0,67.9
+lusaka_t2_nakonde,791.5,,roadside settlement,1,142.0,64.7
+lusaka_t2_nakonde,792.0,,roadside settlement,1,36.0,53.5
+lusaka_t2_nakonde,811.5,Chinsali Junction,roadside settlement,1,166.0,61.4
+lusaka_t2_nakonde,812.0,Chinsali Junction,roadside settlement,1,173.0,63.2
+lusaka_t2_nakonde,836.5,,roadside settlement,1,50.0,67.8
+lusaka_t2_nakonde,837.0,,roadside settlement,1,108.0,64.8
+lusaka_t2_nakonde,878.0,,roadside settlement,1,152.0,64.8
+lusaka_t2_nakonde,878.5,,roadside settlement,1,12.0,68.3
+lusaka_t2_nakonde,897.5,,roadside settlement,1,288.0,59.2
+lusaka_t2_nakonde,915.0,,roadside settlement,1,8.0,66.3
+lusaka_t2_nakonde,915.5,,roadside settlement,1,63.0,66.3
+lusaka_t2_nakonde,916.5,,open road,1,27.0,67.7
+lusaka_t2_nakonde,917.0,,roadside settlement,1,106.0,65.2
+lusaka_t2_nakonde,919.0,,roadside settlement,1,85.0,66.4
+lusaka_t2_nakonde,919.5,,roadside settlement,1,119.0,64.5
+lusaka_t2_nakonde,927.0,,roadside settlement,1,177.0,59.3
+lusaka_t2_nakonde,961.5,,roadside settlement,1,40.0,62.1
+lusaka_t2_nakonde,962.0,,roadside settlement,1,98.0,63.6
+lusaka_t2_nakonde,968.5,Kalungu,roadside settlement,1,395.0,57.2
+lusaka_t2_nakonde,969.0,Kalungu,roadside settlement,1,457.0,52.2
+lusaka_t2_nakonde,994.5,,roadside settlement,1,183.0,61.6
+lusaka_t2_nakonde,995.0,,roadside settlement,1,238.0,58.8
+lusaka_t2_nakonde,1006.0,,roadside settlement,1,175.0,53.2
+lusaka_t2_nakonde,1017.0,,roadside settlement,1,133.0,63.2
+lusaka_t4_234_km,8.0,Kaunda Square,roadside settlement,1,2772.0,60.6
+lusaka_t4_234_km,57.0,,roadside settlement,1,59.0,66.8
+lusaka_t4_234_km,57.5,,roadside settlement,1,95.0,68.4
+lusaka_t4_234_km,63.0,,roadside settlement,1,123.0,65.5
+lusaka_t4_234_km,63.5,,roadside settlement,1,251.0,64.8
+lusaka_t4_234_km,102.0,Shingela,roadside settlement,1,288.0,62.2
+lusaka_t4_234_km,124.0,,roadside settlement,1,223.0,56.8
+lusaka_t4_234_km,124.5,,roadside settlement,1,220.0,65.2
+lusaka_t4_234_km,155.0,,roadside settlement,1,358.0,59.1
+lusaka_t4_234_km,155.5,,roadside settlement,1,312.0,54.1
+lusaka_t4_234_km,192.5,,roadside settlement,1,359.0,61.8
+lusaka_t4_234_km,193.0,,roadside settlement,1,202.0,65.1
+nairobi_a2_moyale,2.0,Kyamutisya village,roadside settlement,2,13512.0,61.0
+nairobi_a2_moyale,2.5,Kyamutisya village,roadside settlement,1,12420.0,63.5
+nairobi_a2_moyale,3.0,Mathare,roadside settlement,4,8562.0,65.4
+nairobi_a2_moyale,3.5,Mashimoni,roadside settlement,5,7902.0,64.1
+nairobi_a2_moyale,4.0,Mashimoni,roadside settlement,4,6042.0,60.8
+nairobi_a2_moyale,10.5,Zimmerman,roadside settlement,2,2513.0,60.1
+nairobi_a2_moyale,11.0,Clay City,roadside settlement,1,2148.0,62.0
+nairobi_a2_moyale,14.5,Kahawa Wendani,roadside settlement,2,4983.0,62.0
+nairobi_a2_moyale,16.0,Kahawa Wendani,roadside settlement,3,199.0,62.4
+nairobi_a2_moyale,34.0,,roadside settlement,1,33.0,65.2
+nairobi_a2_moyale,34.5,,roadside settlement,1,64.0,69.1
+nairobi_a2_moyale,36.0,,roadside settlement,1,59.0,66.1
+nairobi_a2_moyale,36.5,,open road,1,141.0,54.6
+nairobi_a2_moyale,61.5,,roadside settlement,1,142.0,57.6
+nairobi_a2_moyale,62.0,,roadside settlement,1,30.0,68.8
+nairobi_a2_moyale,62.5,,roadside settlement,1,37.0,68.4
+nairobi_a2_moyale,63.0,,roadside settlement,1,5.0,67.7
+nairobi_a2_moyale,63.5,,roadside settlement,1,89.0,65.0
+nairobi_a2_moyale,85.0,,roadside settlement,1,111.0,61.7
+nairobi_a2_moyale,85.5,,roadside settlement,1,76.0,67.3
+nairobi_a2_moyale,99.5,Sagana,roadside settlement,2,261.0,62.9
+nairobi_a2_moyale,100.0,Sagana,roadside settlement,1,73.0,66.0
+nairobi_a2_moyale,115.5,Kibirigwi,roadside settlement,1,206.0,62.8
+nairobi_a2_moyale,116.0,Kibirigwi,roadside settlement,1,434.0,50.5
+nairobi_a2_moyale,126.0,Karatina,roadside settlement,2,187.0,61.9
+nairobi_a2_moyale,126.5,,roadside settlement,1,119.0,56.5
+nairobi_a2_moyale,127.0,,roadside settlement,1,182.0,62.0
+nairobi_a2_moyale,127.5,,roadside settlement,1,158.0,68.8
+nairobi_a2_moyale,129.0,,roadside settlement,1,295.0,58.9
+nairobi_a2_moyale,131.5,,roadside settlement,1,222.0,60.0
+nairobi_a2_moyale,136.0,Marua,roadside settlement,1,103.0,62.5
+nairobi_a2_moyale,136.5,Marua,roadside settlement,1,265.0,60.1
+nairobi_a2_moyale,144.0,Kĩganjo,roadside settlement,2,234.0,55.2
+nairobi_a2_moyale,144.5,Kĩganjo,roadside settlement,2,417.0,54.3
+nairobi_a2_moyale,157.0,,roadside settlement,2,60.0,60.2
+nairobi_a2_moyale,157.5,,roadside settlement,2,63.0,63.1
+nairobi_a2_moyale,158.5,,roadside settlement,1,57.0,61.3
+nairobi_a2_moyale,175.0,,roadside settlement,1,125.0,57.9
+nairobi_a2_moyale,175.5,,roadside settlement,1,141.0,61.4
+nairobi_a2_moyale,194.0,Nanyuki,roadside settlement,1,1796.0,53.3
+nairobi_a2_moyale,194.5,Nanyuki,roadside settlement,1,545.0,55.9
+nairobi_a2_moyale,199.0,,roadside settlement,2,168.0,59.7
+nairobi_a2_moyale,200.0,,roadside settlement,1,189.0,54.9
+nairobi_a2_moyale,200.5,,roadside settlement,1,196.0,55.2
+nairobi_a2_namanga,14.5,Mlolongo Face Two,roadside settlement,2,319.0,68.8
+nairobi_a2_namanga,17.0,Mlolongo,roadside settlement,1,357.0,64.0
+nairobi_a2_namanga,19.5,,roadside settlement,1,28.0,62.4
+nairobi_a2_namanga,22.0,Athi River,roadside settlement,1,1024.0,60.5
+nairobi_a2_namanga,31.0,,roadside settlement,1,327.0,50.6
+nairobi_a2_namanga,43.5,,roadside settlement,1,57.0,62.6
+nairobi_a2_namanga,44.0,,roadside settlement,1,37.0,66.0
+nairobi_a2_namanga,52.0,Isinya,roadside settlement,2,36.0,66.8
+nairobi_a2_namanga,52.5,Isinya,roadside settlement,3,51.0,63.1
+nairobi_a2_namanga,53.0,Isinya,roadside settlement,1,33.0,66.5
+nairobi_a2_namanga,54.0,Isinya,roadside settlement,1,225.0,62.2
+nairobi_a2_namanga,69.5,,roadside settlement,1,19.0,50.6
+nairobi_a2_namanga,70.0,,roadside settlement,2,239.0,61.8
+nairobi_a2_namanga,70.5,,roadside settlement,1,74.0,68.1
+nairobi_a2_namanga,73.0,Kajiado,roadside settlement,4,321.0,65.3
+nairobi_a2_namanga,73.5,Kajiado,roadside settlement,1,234.0,64.2
+nairobi_a2_namanga,74.0,Kajiado,roadside settlement,1,251.0,63.6
+nairobi_a2_namanga,74.5,Kajiado,roadside settlement,1,146.0,62.9
+nairobi_a2_namanga,103.5,Bisil,roadside settlement,1,381.0,65.1
+nairobi_a2_namanga,153.0,,roadside settlement,1,249.0,64.1
+nairobi_a2_namanga,153.5,,roadside settlement,1,135.0,67.6
+nairobi_a8_malaba,4.5,St. Mark,roadside settlement,2,2139.0,55.0
+nairobi_a8_malaba,25.5,Kiambaa,roadside settlement,1,684.0,64.5
+nairobi_a8_malaba,30.5,Rironi,roadside settlement,5,808.0,51.4
+nairobi_a8_malaba,31.0,Rironi,roadside settlement,1,304.0,52.7
+nairobi_a8_malaba,32.5,Limuru,roadside settlement,3,210.0,57.9
+nairobi_a8_malaba,33.0,Limuru,roadside settlement,3,194.0,56.9
+nairobi_a8_malaba,34.0,Limuru,roadside settlement,1,1244.0,53.5
+nairobi_a8_malaba,119.0,Gg 4,roadside settlement,1,451.0,60.0
+nairobi_a8_malaba,119.5,Gg 4,roadside settlement,1,129.0,65.8
+nairobi_a8_malaba,120.0,Gg 4,roadside settlement,1,110.0,68.7
+nairobi_a8_malaba,141.5,Kahuho A,roadside settlement,1,203.0,59.3
+nairobi_a8_malaba,142.0,Greensteads,roadside settlement,1,176.0,64.4
+nairobi_a8_malaba,153.5,Naka B,roadside settlement,1,2576.0,64.0
+nairobi_a8_malaba,156.0,Kabachia,roadside settlement,1,2487.0,66.8
+nairobi_a8_malaba,174.0,Sobea Highway,roadside settlement,1,198.0,65.0
+nairobi_a8_malaba,204.5,Tabain,roadside settlement,2,87.0,50.2
+nairobi_a8_malaba,205.0,Rironi A,roadside settlement,1,382.0,59.5
+nairobi_a8_malaba,241.5,,roadside settlement,1,177.0,62.4
+nairobi_a8_malaba,242.0,,roadside settlement,1,143.0,62.7
+nairobi_a8_malaba,291.0,,roadside settlement,1,283.0,55.0
+nairobi_a8_malaba,299.5,Cheplaskei,roadside settlement,1,97.0,65.2
+nairobi_a8_malaba,306.0,Annex,roadside settlement,1,747.0,52.9
+nairobi_a8_malaba,328.5,,roadside settlement,1,87.0,67.7
+nairobi_a8_malaba,329.0,,roadside settlement,1,203.0,64.9
+nairobi_a8_malaba,331.0,Leseru,roadside settlement,1,699.0,50.4
+nairobi_a8_malaba,408.0,Kanduyi,roadside settlement,1,482.0,54.3
+nairobi_a8_malaba,408.5,Kanduyi,roadside settlement,1,361.0,58.4
+nairobi_a8_malaba,411.0,,roadside settlement,1,229.0,56.7
+nairobi_a8_malaba,411.5,,roadside settlement,1,218.0,57.7
+nairobi_a8_malaba,425.5,,roadside settlement,1,401.0,57.1
+nairobi_a8_malaba,426.0,,roadside settlement,1,300.0,64.9
+nairobi_a8_mombasa,17.5,Mlolongo Face Two,roadside settlement,2,141.0,67.3
+nairobi_a8_mombasa,18.0,Mlolongo Face Two,roadside settlement,2,787.0,65.8
+nairobi_a8_mombasa,20.0,Mlolongo,roadside settlement,1,401.0,60.8
+nairobi_a8_mombasa,22.5,,roadside settlement,1,43.0,59.4
+nairobi_a8_mombasa,43.0,,roadside settlement,1,57.0,65.5
+nairobi_a8_mombasa,43.5,,roadside settlement,1,30.0,63.2
+nairobi_a8_mombasa,106.5,,roadside settlement,1,48.0,69.4
+nairobi_a8_mombasa,107.0,,open road,1,47.0,69.8
+nairobi_a8_mombasa,110.5,Sultan Hamud,roadside settlement,1,349.0,58.9
+nairobi_a8_mombasa,111.0,Sultan Hamud,roadside settlement,1,44.0,68.4
+nairobi_a8_mombasa,124.0,Emali,roadside settlement,1,271.0,62.4
+nairobi_a8_mombasa,404.0,,roadside settlement,1,143.0,58.9
+nairobi_a8_mombasa,404.5,,roadside settlement,1,95.0,66.7
+nairobi_a8_mombasa,408.5,,roadside settlement,1,322.0,63.7
+nairobi_a8_mombasa,409.0,,roadside settlement,1,553.0,56.7
+nairobi_a8_mombasa,415.0,,roadside settlement,1,128.0,68.7
+nairobi_a8_mombasa,415.5,,roadside settlement,1,3.0,68.4
+nairobi_a8_mombasa,440.0,,roadside settlement,1,195.0,64.0
+nairobi_a8_mombasa,468.0,Mazeras,roadside settlement,1,600.0,62.8
+pretoria_n1_beitbridge,267.5,,roadside settlement,1,41.0,66.4
+pretoria_n1_beitbridge,268.0,,roadside settlement,1,34.0,66.0
+pretoria_n4_lebombo,95.0,Vosman,roadside settlement,1,1635.0,60.1
+pretoria_n4_lebombo,95.5,Vosman,roadside settlement,1,51.0,69.5
+pretoria_n4_lebombo,266.5,,roadside settlement,1,46.0,68.8
+pretoria_n4_lebombo,267.0,,open road,1,4.0,58.6
+windhoek_b6_buitepos,207.5,Gobabis,roadside settlement,1,121.0,63.5
+windhoek_c28_swakopmund,34.0,Neuheusis,roadside settlement,1,75.0,63.6

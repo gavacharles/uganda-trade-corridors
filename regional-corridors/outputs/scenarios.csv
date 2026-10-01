@@ -1,0 +1,649 @@
+corridor,vehicle,scenario,label,minutes_saved,p5,p95,share_of_excess,km_treated,min_saved_per_km
+dar_es_salaam_road_dodoma,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dar_es_salaam_road_dodoma,car,no_police,No stops at police posts,0.3,0.1,0.9,0.003,,
+dar_es_salaam_road_dodoma,car,bypass_2,Bypass the 2 worst towns,9.4,2.5,16.4,0.096,21.5,0.44
+dar_es_salaam_road_dodoma,car,service_all,"Service roads, all settlements",8.4,4.7,15.3,0.085,220.0,0.04
+dar_es_salaam_road_dodoma,car,service_20km,"Service roads, worst 20 km",2.6,1.3,5.5,0.026,20.0,0.13
+dar_es_salaam_road_dodoma,car,all,All four (with worst 20 km),12.0,5.0,19.4,0.122,,
+dar_es_salaam_road_dodoma,truck,wim,Weigh-in-motion screening,24.0,14.9,68.0,0.152,,
+dar_es_salaam_road_dodoma,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.013,,
+dar_es_salaam_road_dodoma,truck,bypass_2,Bypass the 2 worst towns,7.8,1.2,19.5,0.049,21.5,0.36
+dar_es_salaam_road_dodoma,truck,service_all,"Service roads, all settlements",8.4,4.4,16.2,0.053,220.0,0.04
+dar_es_salaam_road_dodoma,truck,service_20km,"Service roads, worst 20 km",2.8,1.3,6.4,0.018,20.0,0.14
+dar_es_salaam_road_dodoma,truck,all,All four (with worst 20 km),35.5,26.6,84.4,0.224,,
+dar_es_salaam_t1_tunduma,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dar_es_salaam_t1_tunduma,car,no_police,No stops at police posts,0.3,0.1,0.9,0.002,,
+dar_es_salaam_t1_tunduma,car,bypass_2,Bypass the 2 worst towns,12.0,4.8,20.3,0.069,21.5,0.56
+dar_es_salaam_t1_tunduma,car,service_all,"Service roads, all settlements",24.1,13.0,45.4,0.14,456.0,0.05
+dar_es_salaam_t1_tunduma,car,service_20km,"Service roads, worst 20 km",4.0,1.1,8.1,0.023,20.0,0.2
+dar_es_salaam_t1_tunduma,car,all,All four (with worst 20 km),16.3,8.3,25.4,0.094,,
+dar_es_salaam_t1_tunduma,truck,wim,Weigh-in-motion screening,32.0,19.8,90.7,0.106,,
+dar_es_salaam_t1_tunduma,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.007,,
+dar_es_salaam_t1_tunduma,truck,bypass_2,Bypass the 2 worst towns,12.2,3.5,23.5,0.04,21.5,0.57
+dar_es_salaam_t1_tunduma,truck,service_all,"Service roads, all settlements",24.1,12.1,49.5,0.08,456.0,0.05
+dar_es_salaam_t1_tunduma,truck,service_20km,"Service roads, worst 20 km",4.5,1.2,9.6,0.015,20.0,0.23
+dar_es_salaam_t1_tunduma,truck,all,All four (with worst 20 km),50.7,38.7,114.6,0.167,,
+dar_es_salaam_t7_lindi,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dar_es_salaam_t7_lindi,car,no_police,No stops at police posts,0.2,0.0,0.5,0.005,,
+dar_es_salaam_t7_lindi,car,bypass_2,Bypass the 2 worst towns,4.0,0.4,7.5,0.118,10.5,0.38
+dar_es_salaam_t7_lindi,car,service_all,"Service roads, all settlements",3.8,2.1,6.8,0.11,112.0,0.03
+dar_es_salaam_t7_lindi,car,service_20km,"Service roads, worst 20 km",2.1,1.1,4.1,0.062,20.0,0.11
+dar_es_salaam_t7_lindi,car,all,All four (with worst 20 km),6.1,2.1,10.4,0.178,,
+dar_es_salaam_t7_lindi,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dar_es_salaam_t7_lindi,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.021,,
+dar_es_salaam_t7_lindi,truck,bypass_2,Bypass the 2 worst towns,4.1,-0.1,9.1,0.086,10.5,0.39
+dar_es_salaam_t7_lindi,truck,service_all,"Service roads, all settlements",4.5,2.3,8.3,0.096,112.0,0.04
+dar_es_salaam_t7_lindi,truck,service_20km,"Service roads, worst 20 km",2.7,1.3,5.3,0.057,20.0,0.14
+dar_es_salaam_t7_lindi,truck,all,All four (with worst 20 km),7.5,3.6,15.9,0.159,,
+dodoma_t3_morogoro,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t3_morogoro,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t3_morogoro,car,bypass_2,Bypass the 2 worst towns,-0.3,-2.4,1.2,-0.012,3.0,-0.09
+dodoma_t3_morogoro,car,service_all,"Service roads, all settlements",4.4,2.4,8.5,0.188,96.0,0.05
+dodoma_t3_morogoro,car,service_20km,"Service roads, worst 20 km",2.3,1.2,4.8,0.098,20.0,0.12
+dodoma_t3_morogoro,car,all,All four (with worst 20 km),2.0,-0.5,4.9,0.086,,
+dodoma_t3_morogoro,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t3_morogoro,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t3_morogoro,truck,bypass_2,Bypass the 2 worst towns,-0.6,-2.7,1.2,-0.017,3.0,-0.19
+dodoma_t3_morogoro,truck,service_all,"Service roads, all settlements",5.0,2.5,10.0,0.152,96.0,0.05
+dodoma_t3_morogoro,truck,service_20km,"Service roads, worst 20 km",2.6,1.2,5.8,0.08,20.0,0.13
+dodoma_t3_morogoro,truck,all,All four (with worst 20 km),2.1,-0.7,5.8,0.063,,
+dodoma_t3_rusomo,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t3_rusomo,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t3_rusomo,car,bypass_2,Bypass the 2 worst towns,0.6,-1.7,2.4,0.03,4.5,0.13
+dodoma_t3_rusomo,car,service_all,"Service roads, all settlements",1.7,1.0,3.1,0.083,79.5,0.02
+dodoma_t3_rusomo,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.9,0.046,20.0,0.05
+dodoma_t3_rusomo,car,all,All four (with worst 20 km),1.4,-0.9,3.5,0.072,,
+dodoma_t3_rusomo,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.2,,
+dodoma_t3_rusomo,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t3_rusomo,truck,bypass_2,Bypass the 2 worst towns,0.3,-2.2,2.5,0.008,4.5,0.07
+dodoma_t3_rusomo,truck,service_all,"Service roads, all settlements",1.9,1.1,3.7,0.048,79.5,0.02
+dodoma_t3_rusomo,truck,service_20km,"Service roads, worst 20 km",1.1,0.6,2.2,0.027,20.0,0.05
+dodoma_t3_rusomo,truck,all,All four (with worst 20 km),9.3,5.6,24.5,0.233,,
+dodoma_t5_arusha,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t5_arusha,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t5_arusha,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+dodoma_t5_arusha,car,service_all,"Service roads, all settlements",2.2,1.2,4.2,0.104,77.0,0.03
+dodoma_t5_arusha,car,service_20km,"Service roads, worst 20 km",1.4,0.7,3.0,0.069,20.0,0.07
+dodoma_t5_arusha,car,all,All four (with worst 20 km),1.4,0.7,3.0,0.069,,
+dodoma_t5_arusha,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t5_arusha,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t5_arusha,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+dodoma_t5_arusha,truck,service_all,"Service roads, all settlements",2.5,1.3,4.9,0.06,77.0,0.03
+dodoma_t5_arusha,truck,service_20km,"Service roads, worst 20 km",1.7,0.8,3.5,0.041,20.0,0.08
+dodoma_t5_arusha,truck,all,All four (with worst 20 km),1.7,0.8,3.5,0.041,,
+dodoma_t5_iringa,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t5_iringa,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t5_iringa,car,bypass_2,Bypass the 2 worst towns,-0.0,-1.2,0.7,-0.002,2.0,-0.02
+dodoma_t5_iringa,car,service_all,"Service roads, all settlements",2.3,1.3,4.5,0.104,66.0,0.04
+dodoma_t5_iringa,car,service_20km,"Service roads, worst 20 km",1.5,0.8,3.1,0.065,20.0,0.07
+dodoma_t5_iringa,car,all,All four (with worst 20 km),1.4,0.1,3.1,0.063,,
+dodoma_t5_iringa,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+dodoma_t5_iringa,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+dodoma_t5_iringa,truck,bypass_2,Bypass the 2 worst towns,-0.2,-1.5,0.7,-0.007,2.0,-0.1
+dodoma_t5_iringa,truck,service_all,"Service roads, all settlements",2.9,1.5,5.7,0.099,66.0,0.04
+dodoma_t5_iringa,truck,service_20km,"Service roads, worst 20 km",1.8,0.9,4.0,0.063,20.0,0.09
+dodoma_t5_iringa,truck,all,All four (with worst 20 km),1.6,0.1,3.8,0.057,,
+gaborone_a12_326_km,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+gaborone_a12_326_km,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+gaborone_a12_326_km,car,bypass_2,Bypass the 2 worst towns,3.7,0.0,6.9,0.096,10.0,0.37
+gaborone_a12_326_km,car,service_all,"Service roads, all settlements",1.5,0.8,2.5,0.038,50.0,0.03
+gaborone_a12_326_km,car,service_20km,"Service roads, worst 20 km",1.0,0.6,1.9,0.027,20.0,0.05
+gaborone_a12_326_km,car,all,All four (with worst 20 km),4.5,0.7,8.0,0.117,,
+gaborone_a12_326_km,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+gaborone_a12_326_km,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+gaborone_a12_326_km,truck,bypass_2,Bypass the 2 worst towns,2.5,-1.4,7.4,0.063,10.0,0.25
+gaborone_a12_326_km,truck,service_all,"Service roads, all settlements",1.8,0.9,3.2,0.044,50.0,0.04
+gaborone_a12_326_km,truck,service_20km,"Service roads, worst 20 km",1.3,0.7,2.4,0.032,20.0,0.06
+gaborone_a12_326_km,truck,all,All four (with worst 20 km),3.5,-0.4,8.9,0.088,,
+gaborone_a1_121_km,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+gaborone_a1_121_km,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+gaborone_a1_121_km,car,bypass_2,Bypass the 2 worst towns,0.7,-0.6,1.8,0.031,3.0,0.24
+gaborone_a1_121_km,car,service_all,"Service roads, all settlements",1.2,0.7,2.1,0.051,37.5,0.03
+gaborone_a1_121_km,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.8,0.041,20.0,0.05
+gaborone_a1_121_km,car,all,All four (with worst 20 km),1.6,0.2,3.0,0.07,,
+gaborone_a1_121_km,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+gaborone_a1_121_km,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+gaborone_a1_121_km,truck,bypass_2,Bypass the 2 worst towns,0.3,-1.0,1.9,0.012,3.0,0.11
+gaborone_a1_121_km,truck,service_all,"Service roads, all settlements",1.4,0.8,2.7,0.054,37.5,0.04
+gaborone_a1_121_km,truck,service_20km,"Service roads, worst 20 km",1.2,0.6,2.4,0.044,20.0,0.06
+gaborone_a1_121_km,truck,all,All four (with worst 20 km),1.5,0.0,3.5,0.057,,
+gaborone_a1_ramokgwebana,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+gaborone_a1_ramokgwebana,car,no_police,No stops at police posts,0.5,0.1,1.4,0.016,,
+gaborone_a1_ramokgwebana,car,bypass_2,Bypass the 2 worst towns,7.2,2.9,10.6,0.23,8.5,0.85
+gaborone_a1_ramokgwebana,car,service_all,"Service roads, all settlements",1.6,0.9,2.7,0.051,94.0,0.02
+gaborone_a1_ramokgwebana,car,service_20km,"Service roads, worst 20 km",0.6,0.4,1.2,0.021,20.0,0.03
+gaborone_a1_ramokgwebana,car,all,All four (with worst 20 km),8.4,4.2,12.2,0.267,,
+gaborone_a1_ramokgwebana,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.174,,
+gaborone_a1_ramokgwebana,truck,no_police,No stops at police posts,3.0,0.7,14.3,0.065,,
+gaborone_a1_ramokgwebana,truck,bypass_2,Bypass the 2 worst towns,5.7,0.9,10.3,0.124,8.5,0.67
+gaborone_a1_ramokgwebana,truck,service_all,"Service roads, all settlements",2.1,1.1,3.5,0.045,94.0,0.02
+gaborone_a1_ramokgwebana,truck,service_20km,"Service roads, worst 20 km",0.9,0.5,1.6,0.019,20.0,0.04
+gaborone_a1_ramokgwebana,truck,all,All four (with worst 20 km),17.6,14.7,39.1,0.382,,
+harare_a1_chirundu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_a1_chirundu,car,no_police,No stops at police posts,0.3,0.1,0.9,0.014,,
+harare_a1_chirundu,car,bypass_2,Bypass the 2 worst towns,5.7,2.8,8.1,0.244,2.5,2.27
+harare_a1_chirundu,car,service_all,"Service roads, all settlements",1.6,0.9,2.9,0.07,71.5,0.02
+harare_a1_chirundu,car,service_20km,"Service roads, worst 20 km",1.0,0.6,1.9,0.045,20.0,0.05
+harare_a1_chirundu,car,all,All four (with worst 20 km),7.0,4.3,9.7,0.303,,
+harare_a1_chirundu,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_a1_chirundu,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.045,,
+harare_a1_chirundu,truck,bypass_2,Bypass the 2 worst towns,5.1,2.3,7.7,0.114,2.5,2.03
+harare_a1_chirundu,truck,service_all,"Service roads, all settlements",1.8,1.0,3.4,0.041,71.5,0.03
+harare_a1_chirundu,truck,service_20km,"Service roads, worst 20 km",1.2,0.6,2.4,0.027,20.0,0.06
+harare_a1_chirundu,truck,all,All four (with worst 20 km),8.3,5.5,17.0,0.186,,
+harare_a4_beitbridge,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_a4_beitbridge,car,no_police,No stops at police posts,1.2,0.2,3.3,0.063,,
+harare_a4_beitbridge,car,bypass_2,Bypass the 2 worst towns,1.7,-0.8,3.8,0.095,6.5,0.27
+harare_a4_beitbridge,car,service_all,"Service roads, all settlements",2.1,1.2,3.6,0.115,122.5,0.02
+harare_a4_beitbridge,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.7,0.049,20.0,0.05
+harare_a4_beitbridge,car,all,All four (with worst 20 km),3.6,1.0,6.9,0.196,,
+harare_a4_beitbridge,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_a4_beitbridge,truck,no_police,No stops at police posts,7.0,1.6,33.3,0.207,,
+harare_a4_beitbridge,truck,bypass_2,Bypass the 2 worst towns,1.8,-0.3,6.9,0.054,6.5,0.28
+harare_a4_beitbridge,truck,service_all,"Service roads, all settlements",2.5,1.4,4.7,0.074,122.5,0.02
+harare_a4_beitbridge,truck,service_20km,"Service roads, worst 20 km",1.2,0.6,2.5,0.034,20.0,0.06
+harare_a4_beitbridge,truck,all,All four (with worst 20 km),9.0,3.6,35.5,0.264,,
+harare_p1_mucumbura,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_p1_mucumbura,car,no_police,No stops at police posts,0.5,0.1,1.4,0.062,,
+harare_p1_mucumbura,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+harare_p1_mucumbura,car,service_all,"Service roads, all settlements",1.8,1.1,3.2,0.227,95.5,0.02
+harare_p1_mucumbura,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.6,0.106,20.0,0.04
+harare_p1_mucumbura,car,all,All four (with worst 20 km),1.4,0.9,2.6,0.169,,
+harare_p1_mucumbura,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_p1_mucumbura,truck,no_police,No stops at police posts,3.0,0.7,14.3,0.118,,
+harare_p1_mucumbura,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+harare_p1_mucumbura,truck,service_all,"Service roads, all settlements",1.8,1.0,3.3,0.07,95.5,0.02
+harare_p1_mucumbura,truck,service_20km,"Service roads, worst 20 km",0.9,0.5,1.9,0.036,20.0,0.05
+harare_p1_mucumbura,truck,all,All four (with worst 20 km),3.9,1.9,15.4,0.155,,
+harare_r2_plumtree,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r2_plumtree,car,no_police,No stops at police posts,0.3,0.1,0.9,0.032,,
+harare_r2_plumtree,car,bypass_2,Bypass the 2 worst towns,-0.0,-2.2,1.5,-0.0,3.0,-0.0
+harare_r2_plumtree,car,service_all,"Service roads, all settlements",1.4,0.8,2.4,0.13,63.5,0.02
+harare_r2_plumtree,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.7,0.085,20.0,0.04
+harare_r2_plumtree,car,all,All four (with worst 20 km),1.2,-1.1,3.3,0.117,,
+harare_r2_plumtree,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r2_plumtree,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.132,,
+harare_r2_plumtree,truck,bypass_2,Bypass the 2 worst towns,-0.2,-2.5,1.8,-0.013,3.0,-0.07
+harare_r2_plumtree,truck,service_all,"Service roads, all settlements",1.7,0.9,3.2,0.113,63.5,0.03
+harare_r2_plumtree,truck,service_20km,"Service roads, worst 20 km",1.1,0.6,2.3,0.076,20.0,0.06
+harare_r2_plumtree,truck,all,All four (with worst 20 km),2.9,0.7,11.1,0.194,,
+harare_r4_nyamapanda,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r4_nyamapanda,car,no_police,No stops at police posts,0.5,0.1,1.4,0.049,,
+harare_r4_nyamapanda,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+harare_r4_nyamapanda,car,service_all,"Service roads, all settlements",1.9,1.1,3.3,0.19,115.0,0.02
+harare_r4_nyamapanda,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.7,0.087,20.0,0.04
+harare_r4_nyamapanda,car,all,All four (with worst 20 km),1.4,0.9,2.7,0.136,,
+harare_r4_nyamapanda,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r4_nyamapanda,truck,no_police,No stops at police posts,3.0,0.7,14.3,0.12,,
+harare_r4_nyamapanda,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+harare_r4_nyamapanda,truck,service_all,"Service roads, all settlements",2.1,1.1,3.7,0.083,115.0,0.02
+harare_r4_nyamapanda,truck,service_20km,"Service roads, worst 20 km",1.0,0.5,1.9,0.039,20.0,0.05
+harare_r4_nyamapanda,truck,all,All four (with worst 20 km),4.0,1.9,15.5,0.159,,
+harare_r5_mutare,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r5_mutare,car,no_police,No stops at police posts,0.3,0.1,0.9,0.03,,
+harare_r5_mutare,car,bypass_2,Bypass the 2 worst towns,0.0,-1.1,0.8,0.0,1.5,0.0
+harare_r5_mutare,car,service_all,"Service roads, all settlements",1.6,0.9,2.8,0.138,60.5,0.03
+harare_r5_mutare,car,service_20km,"Service roads, worst 20 km",1.1,0.6,2.0,0.095,20.0,0.05
+harare_r5_mutare,car,all,All four (with worst 20 km),1.4,0.2,2.9,0.124,,
+harare_r5_mutare,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+harare_r5_mutare,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.087,,
+harare_r5_mutare,truck,bypass_2,Bypass the 2 worst towns,-0.3,-1.5,0.6,-0.013,1.5,-0.2
+harare_r5_mutare,truck,service_all,"Service roads, all settlements",1.7,0.9,3.4,0.074,60.5,0.03
+harare_r5_mutare,truck,service_20km,"Service roads, worst 20 km",1.2,0.6,2.6,0.054,20.0,0.06
+harare_r5_mutare,truck,all,All four (with worst 20 km),2.9,1.2,10.7,0.128,,
+johannesburg_n12_de_rust,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n12_de_rust,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_n12_de_rust,car,bypass_2,Bypass the 2 worst towns,47.1,30.4,64.5,0.713,13.0,3.62
+johannesburg_n12_de_rust,car,service_all,"Service roads, all settlements",1.8,1.0,3.1,0.027,71.0,0.02
+johannesburg_n12_de_rust,car,service_20km,"Service roads, worst 20 km",1.0,0.5,1.9,0.015,20.0,0.05
+johannesburg_n12_de_rust,car,all,All four (with worst 20 km),48.0,31.4,65.5,0.726,,
+johannesburg_n12_de_rust,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n12_de_rust,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_n12_de_rust,truck,bypass_2,Bypass the 2 worst towns,44.7,27.9,63.0,0.634,13.0,3.44
+johannesburg_n12_de_rust,truck,service_all,"Service roads, all settlements",2.2,1.2,4.1,0.032,71.0,0.03
+johannesburg_n12_de_rust,truck,service_20km,"Service roads, worst 20 km",1.3,0.6,2.7,0.019,20.0,0.07
+johannesburg_n12_de_rust,truck,all,All four (with worst 20 km),45.9,29.2,64.6,0.65,,
+johannesburg_n12_emalahleni,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n12_emalahleni,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_n12_emalahleni,car,bypass_2,Bypass the 2 worst towns,0.6,-0.6,1.4,0.029,1.5,0.41
+johannesburg_n12_emalahleni,car,service_all,"Service roads, all settlements",1.7,0.8,3.4,0.078,44.5,0.04
+johannesburg_n12_emalahleni,car,service_20km,"Service roads, worst 20 km",1.3,0.6,2.8,0.061,20.0,0.06
+johannesburg_n12_emalahleni,car,all,All four (with worst 20 km),1.9,0.5,3.6,0.09,,
+johannesburg_n12_emalahleni,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n12_emalahleni,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_n12_emalahleni,truck,bypass_2,Bypass the 2 worst towns,0.4,-0.9,1.4,0.012,1.5,0.24
+johannesburg_n12_emalahleni,truck,service_all,"Service roads, all settlements",1.8,0.9,4.1,0.062,44.5,0.04
+johannesburg_n12_emalahleni,truck,service_20km,"Service roads, worst 20 km",1.4,0.7,3.4,0.048,20.0,0.07
+johannesburg_n12_emalahleni,truck,all,All four (with worst 20 km),1.8,0.3,4.1,0.06,,
+johannesburg_n17_msauli,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n17_msauli,car,no_police,No stops at police posts,1.8,0.3,5.1,0.165,,
+johannesburg_n17_msauli,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+johannesburg_n17_msauli,car,service_all,"Service roads, all settlements",1.2,0.7,2.3,0.112,50.5,0.02
+johannesburg_n17_msauli,car,service_20km,"Service roads, worst 20 km",0.9,0.4,1.8,0.078,20.0,0.04
+johannesburg_n17_msauli,car,all,All four (with worst 20 km),2.7,1.2,6.3,0.243,,
+johannesburg_n17_msauli,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n17_msauli,truck,no_police,No stops at police posts,11.0,2.5,52.4,0.343,,
+johannesburg_n17_msauli,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+johannesburg_n17_msauli,truck,service_all,"Service roads, all settlements",1.6,0.8,3.0,0.049,50.5,0.03
+johannesburg_n17_msauli,truck,service_20km,"Service roads, worst 20 km",1.1,0.5,2.3,0.035,20.0,0.06
+johannesburg_n17_msauli,truck,all,All four (with worst 20 km),12.1,4.1,53.7,0.378,,
+johannesburg_n3_durban,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_n3_durban,car,no_police,No stops at police posts,3.0,0.5,8.4,0.037,,
+johannesburg_n3_durban,car,bypass_2,Bypass the 2 worst towns,1.2,0.0,2.2,0.015,1.5,0.81
+johannesburg_n3_durban,car,service_all,"Service roads, all settlements",3.2,1.7,6.1,0.039,141.0,0.02
+johannesburg_n3_durban,car,service_20km,"Service roads, worst 20 km",1.5,0.7,3.2,0.018,20.0,0.07
+johannesburg_n3_durban,car,all,All four (with worst 20 km),5.7,3.2,11.6,0.07,,
+johannesburg_n3_durban,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.051,,
+johannesburg_n3_durban,truck,no_police,No stops at police posts,18.0,4.1,85.7,0.115,,
+johannesburg_n3_durban,truck,bypass_2,Bypass the 2 worst towns,0.7,-0.5,1.8,0.005,1.5,0.48
+johannesburg_n3_durban,truck,service_all,"Service roads, all settlements",3.6,1.9,7.5,0.023,141.0,0.03
+johannesburg_n3_durban,truck,service_20km,"Service roads, worst 20 km",1.7,0.8,4.2,0.011,20.0,0.09
+johannesburg_n3_durban,truck,all,All four (with worst 20 km),28.4,19.9,101.8,0.181,,
+johannesburg_r24_rustenburg,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r24_rustenburg,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r24_rustenburg,car,bypass_2,Bypass the 2 worst towns,35.4,24.6,48.5,0.341,14.0,2.53
+johannesburg_r24_rustenburg,car,service_all,"Service roads, all settlements",3.0,1.6,5.8,0.029,53.0,0.06
+johannesburg_r24_rustenburg,car,service_20km,"Service roads, worst 20 km",2.4,1.2,4.8,0.023,20.0,0.12
+johannesburg_r24_rustenburg,car,all,All four (with worst 20 km),37.2,26.0,50.5,0.359,,
+johannesburg_r24_rustenburg,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r24_rustenburg,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r24_rustenburg,truck,bypass_2,Bypass the 2 worst towns,35.3,23.9,49.5,0.321,14.0,2.52
+johannesburg_r24_rustenburg,truck,service_all,"Service roads, all settlements",3.9,1.8,7.4,0.035,53.0,0.07
+johannesburg_r24_rustenburg,truck,service_20km,"Service roads, worst 20 km",3.1,1.3,6.3,0.028,20.0,0.16
+johannesburg_r24_rustenburg,truck,all,All four (with worst 20 km),37.7,26.0,52.4,0.342,,
+johannesburg_r25_groblersdal,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r25_groblersdal,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r25_groblersdal,car,bypass_2,Bypass the 2 worst towns,8.0,4.8,11.3,0.117,3.5,2.29
+johannesburg_r25_groblersdal,car,service_all,"Service roads, all settlements",2.3,1.3,4.2,0.033,68.0,0.03
+johannesburg_r25_groblersdal,car,service_20km,"Service roads, worst 20 km",1.4,0.7,2.8,0.02,20.0,0.07
+johannesburg_r25_groblersdal,car,all,All four (with worst 20 km),9.1,5.8,12.8,0.133,,
+johannesburg_r25_groblersdal,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r25_groblersdal,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r25_groblersdal,truck,bypass_2,Bypass the 2 worst towns,7.9,4.8,11.6,0.098,3.5,2.26
+johannesburg_r25_groblersdal,truck,service_all,"Service roads, all settlements",2.4,1.3,4.7,0.03,68.0,0.04
+johannesburg_r25_groblersdal,truck,service_20km,"Service roads, worst 20 km",1.5,0.8,3.4,0.019,20.0,0.08
+johannesburg_r25_groblersdal,truck,all,All four (with worst 20 km),9.1,5.9,13.5,0.113,,
+johannesburg_r29_evander,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r29_evander,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r29_evander,car,bypass_2,Bypass the 2 worst towns,32.3,21.3,44.0,0.466,19.0,1.7
+johannesburg_r29_evander,car,service_all,"Service roads, all settlements",2.7,1.5,5.1,0.039,51.0,0.05
+johannesburg_r29_evander,car,service_20km,"Service roads, worst 20 km",2.0,1.0,3.9,0.028,20.0,0.1
+johannesburg_r29_evander,car,all,All four (with worst 20 km),34.1,22.8,46.7,0.491,,
+johannesburg_r29_evander,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r29_evander,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+johannesburg_r29_evander,truck,bypass_2,Bypass the 2 worst towns,31.6,20.3,45.3,0.423,19.0,1.66
+johannesburg_r29_evander,truck,service_all,"Service roads, all settlements",3.1,1.6,6.3,0.042,51.0,0.06
+johannesburg_r29_evander,truck,service_20km,"Service roads, worst 20 km",2.3,1.2,4.8,0.031,20.0,0.12
+johannesburg_r29_evander,truck,all,All four (with worst 20 km),33.7,22.3,49.0,0.452,,
+johannesburg_r59_dealesville,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r59_dealesville,car,no_police,No stops at police posts,0.2,0.0,0.5,0.007,,
+johannesburg_r59_dealesville,car,bypass_2,Bypass the 2 worst towns,2.2,0.5,3.6,0.087,3.0,0.72
+johannesburg_r59_dealesville,car,service_all,"Service roads, all settlements",1.1,0.6,2.0,0.043,57.0,0.02
+johannesburg_r59_dealesville,car,service_20km,"Service roads, worst 20 km",0.8,0.4,1.5,0.03,20.0,0.04
+johannesburg_r59_dealesville,car,all,All four (with worst 20 km),2.9,1.2,4.7,0.118,,
+johannesburg_r59_dealesville,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+johannesburg_r59_dealesville,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.032,,
+johannesburg_r59_dealesville,truck,bypass_2,Bypass the 2 worst towns,3.0,1.6,7.6,0.096,3.0,1.0
+johannesburg_r59_dealesville,truck,service_all,"Service roads, all settlements",1.3,0.7,2.8,0.043,57.0,0.02
+johannesburg_r59_dealesville,truck,service_20km,"Service roads, worst 20 km",0.9,0.5,2.1,0.029,20.0,0.05
+johannesburg_r59_dealesville,truck,all,All four (with worst 20 km),3.9,2.4,9.0,0.126,,
+kampala_a1_malaba,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a1_malaba,car,no_police,No stops at police posts,1.3,0.2,3.7,0.017,,
+kampala_a1_malaba,car,bypass_2,Bypass the 2 worst towns,8.7,3.5,14.1,0.112,17.0,0.51
+kampala_a1_malaba,car,service_all,"Service roads, all settlements",8.3,4.1,16.3,0.108,121.0,0.07
+kampala_a1_malaba,car,service_20km,"Service roads, worst 20 km",3.5,1.1,7.6,0.045,20.0,0.17
+kampala_a1_malaba,car,all,All four (with worst 20 km),13.3,7.7,20.8,0.173,,
+kampala_a1_malaba,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.131,,
+kampala_a1_malaba,truck,no_police,No stops at police posts,8.0,1.8,38.1,0.065,,
+kampala_a1_malaba,truck,bypass_2,Bypass the 2 worst towns,7.0,0.7,14.8,0.057,17.0,0.41
+kampala_a1_malaba,truck,service_all,"Service roads, all settlements",8.6,4.0,17.5,0.07,121.0,0.07
+kampala_a1_malaba,truck,service_20km,"Service roads, worst 20 km",3.8,1.0,8.6,0.031,20.0,0.19
+kampala_a1_malaba,truck,all,All four (with worst 20 km),34.6,30.0,83.8,0.282,,
+kampala_a2_katuna,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a2_katuna,car,no_police,No stops at police posts,1.8,0.3,5.1,0.022,,
+kampala_a2_katuna,car,bypass_2,Bypass the 2 worst towns,3.8,0.2,7.2,0.046,9.0,0.43
+kampala_a2_katuna,car,service_all,"Service roads, all settlements",16.5,8.6,32.8,0.197,290.5,0.06
+kampala_a2_katuna,car,service_20km,"Service roads, worst 20 km",4.1,1.6,7.8,0.049,20.0,0.2
+kampala_a2_katuna,car,all,All four (with worst 20 km),9.8,5.1,16.1,0.117,,
+kampala_a2_katuna,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.097,,
+kampala_a2_katuna,truck,no_police,No stops at police posts,11.0,2.5,52.4,0.067,,
+kampala_a2_katuna,truck,bypass_2,Bypass the 2 worst towns,2.9,-1.3,7.6,0.018,9.0,0.32
+kampala_a2_katuna,truck,service_all,"Service roads, all settlements",15.9,7.5,34.8,0.097,290.5,0.05
+kampala_a2_katuna,truck,service_20km,"Service roads, worst 20 km",3.8,1.4,7.7,0.023,20.0,0.19
+kampala_a2_katuna,truck,all,All four (with worst 20 km),33.7,29.6,90.9,0.205,,
+kampala_a5_bwera,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a5_bwera,car,no_police,No stops at police posts,1.0,0.2,2.8,0.015,,
+kampala_a5_bwera,car,bypass_2,Bypass the 2 worst towns,1.3,-1.2,3.4,0.019,4.5,0.3
+kampala_a5_bwera,car,service_all,"Service roads, all settlements",20.9,11.1,40.9,0.305,323.5,0.06
+kampala_a5_bwera,car,service_20km,"Service roads, worst 20 km",3.9,1.1,8.2,0.056,20.0,0.19
+kampala_a5_bwera,car,all,All four (with worst 20 km),6.2,2.6,11.4,0.09,,
+kampala_a5_bwera,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a5_bwera,truck,no_police,No stops at police posts,6.0,1.4,28.6,0.045,,
+kampala_a5_bwera,truck,bypass_2,Bypass the 2 worst towns,0.5,-2.1,3.4,0.004,4.5,0.11
+kampala_a5_bwera,truck,service_all,"Service roads, all settlements",22.4,10.9,45.7,0.17,323.5,0.07
+kampala_a5_bwera,truck,service_20km,"Service roads, worst 20 km",4.7,1.3,10.0,0.035,20.0,0.23
+kampala_a5_bwera,truck,all,All four (with worst 20 km),11.2,5.8,35.4,0.084,,
+kampala_a6_elegu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a6_elegu,car,no_police,No stops at police posts,1.5,0.3,4.2,0.021,,
+kampala_a6_elegu,car,bypass_2,Bypass the 2 worst towns,3.8,0.7,7.2,0.053,8.0,0.48
+kampala_a6_elegu,car,service_all,"Service roads, all settlements",12.3,6.5,24.0,0.17,276.5,0.04
+kampala_a6_elegu,car,service_20km,"Service roads, worst 20 km",3.4,1.6,7.0,0.047,20.0,0.17
+kampala_a6_elegu,car,all,All four (with worst 20 km),8.7,4.7,15.0,0.121,,
+kampala_a6_elegu,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.071,,
+kampala_a6_elegu,truck,no_police,No stops at police posts,9.0,2.1,42.9,0.08,,
+kampala_a6_elegu,truck,bypass_2,Bypass the 2 worst towns,4.2,0.3,9.0,0.037,8.0,0.52
+kampala_a6_elegu,truck,service_all,"Service roads, all settlements",13.8,6.9,28.5,0.123,276.5,0.05
+kampala_a6_elegu,truck,service_20km,"Service roads, worst 20 km",4.1,1.7,8.9,0.036,20.0,0.2
+kampala_a6_elegu,truck,all,All four (with worst 20 km),25.2,20.7,66.4,0.224,,
+kampala_a9_hoima,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a9_hoima,car,no_police,No stops at police posts,0.5,0.1,1.4,0.013,,
+kampala_a9_hoima,car,bypass_2,Bypass the 2 worst towns,0.0,-1.1,0.8,0.0,1.5,0.0
+kampala_a9_hoima,car,service_all,"Service roads, all settlements",9.0,4.5,17.8,0.243,162.0,0.06
+kampala_a9_hoima,car,service_20km,"Service roads, worst 20 km",3.6,1.4,7.3,0.098,20.0,0.18
+kampala_a9_hoima,car,all,All four (with worst 20 km),4.1,1.7,8.5,0.111,,
+kampala_a9_hoima,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kampala_a9_hoima,truck,no_police,No stops at police posts,3.0,0.7,14.3,0.05,,
+kampala_a9_hoima,truck,bypass_2,Bypass the 2 worst towns,-0.2,-1.3,0.8,-0.004,1.5,-0.16
+kampala_a9_hoima,truck,service_all,"Service roads, all settlements",8.9,4.1,18.8,0.148,162.0,0.06
+kampala_a9_hoima,truck,service_20km,"Service roads, worst 20 km",3.9,1.4,8.2,0.065,20.0,0.19
+kampala_a9_hoima,truck,all,All four (with worst 20 km),6.6,3.7,19.9,0.11,,
+kigali_nr1_huye,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr1_huye,car,no_police,No stops at police posts,0.2,0.0,0.5,0.003,,
+kigali_nr1_huye,car,bypass_2,Bypass the 2 worst towns,1.1,-1.4,3.1,0.022,5.5,0.2
+kigali_nr1_huye,car,service_all,"Service roads, all settlements",7.0,3.5,15.7,0.144,130.0,0.05
+kigali_nr1_huye,car,service_20km,"Service roads, worst 20 km",3.0,1.3,6.8,0.062,20.0,0.15
+kigali_nr1_huye,car,all,All four (with worst 20 km),4.2,0.8,8.9,0.086,,
+kigali_nr1_huye,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr1_huye,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.013,,
+kigali_nr1_huye,truck,bypass_2,Bypass the 2 worst towns,-0.2,-3.1,2.7,-0.002,5.5,-0.03
+kigali_nr1_huye,truck,service_all,"Service roads, all settlements",6.9,3.1,18.0,0.089,130.0,0.05
+kigali_nr1_huye,truck,service_20km,"Service roads, worst 20 km",3.3,1.3,8.2,0.042,20.0,0.16
+kigali_nr1_huye,truck,all,All four (with worst 20 km),4.1,1.2,12.3,0.053,,
+kigali_nr2_gisenyi,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr2_gisenyi,car,no_police,No stops at police posts,0.2,0.0,0.5,0.003,,
+kigali_nr2_gisenyi,car,bypass_2,Bypass the 2 worst towns,6.5,2.0,11.3,0.126,14.5,0.45
+kigali_nr2_gisenyi,car,service_all,"Service roads, all settlements",6.3,3.0,13.6,0.121,121.0,0.05
+kigali_nr2_gisenyi,car,service_20km,"Service roads, worst 20 km",3.4,1.2,7.1,0.065,20.0,0.17
+kigali_nr2_gisenyi,car,all,All four (with worst 20 km),9.9,4.3,16.4,0.191,,
+kigali_nr2_gisenyi,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr2_gisenyi,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.012,,
+kigali_nr2_gisenyi,truck,bypass_2,Bypass the 2 worst towns,4.6,-1.3,10.8,0.055,14.5,0.31
+kigali_nr2_gisenyi,truck,service_all,"Service roads, all settlements",6.9,2.9,15.5,0.084,121.0,0.06
+kigali_nr2_gisenyi,truck,service_20km,"Service roads, worst 20 km",4.0,1.4,8.1,0.049,20.0,0.2
+kigali_nr2_gisenyi,truck,all,All four (with worst 20 km),9.4,3.4,20.0,0.114,,
+kigali_nr3_gatuna,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr3_gatuna,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+kigali_nr3_gatuna,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+kigali_nr3_gatuna,car,service_all,"Service roads, all settlements",1.0,0.5,2.6,0.064,59.5,0.02
+kigali_nr3_gatuna,car,service_20km,"Service roads, worst 20 km",0.7,0.4,2.1,0.045,20.0,0.04
+kigali_nr3_gatuna,car,all,All four (with worst 20 km),0.7,0.4,2.1,0.045,,
+kigali_nr3_gatuna,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_nr3_gatuna,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+kigali_nr3_gatuna,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+kigali_nr3_gatuna,truck,service_all,"Service roads, all settlements",1.1,0.5,3.1,0.046,59.5,0.02
+kigali_nr3_gatuna,truck,service_20km,"Service roads, worst 20 km",0.8,0.4,2.6,0.034,20.0,0.04
+kigali_nr3_gatuna,truck,all,All four (with worst 20 km),0.8,0.4,2.6,0.034,,
+kigali_road_rusumo,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_road_rusumo,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+kigali_road_rusumo,car,bypass_2,Bypass the 2 worst towns,1.7,-1.0,4.3,0.034,8.0,0.22
+kigali_road_rusumo,car,service_all,"Service roads, all settlements",10.4,5.3,21.8,0.204,122.5,0.08
+kigali_road_rusumo,car,service_20km,"Service roads, worst 20 km",3.9,1.6,7.8,0.077,20.0,0.2
+kigali_road_rusumo,car,all,All four (with worst 20 km),5.3,1.1,10.4,0.104,,
+kigali_road_rusumo,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+kigali_road_rusumo,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+kigali_road_rusumo,truck,bypass_2,Bypass the 2 worst towns,1.3,-2.1,4.6,0.018,8.0,0.16
+kigali_road_rusumo,truck,service_all,"Service roads, all settlements",11.3,5.3,24.5,0.158,122.5,0.09
+kigali_road_rusumo,truck,service_20km,"Service roads, worst 20 km",4.9,2.0,9.5,0.068,20.0,0.24
+kigali_road_rusumo,truck,all,All four (with worst 20 km),5.7,0.3,12.3,0.08,,
+lusaka_m9_mongu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_m9_mongu,car,no_police,No stops at police posts,0.7,0.1,1.9,0.036,,
+lusaka_m9_mongu,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+lusaka_m9_mongu,car,service_all,"Service roads, all settlements",2.3,1.3,3.9,0.126,105.5,0.02
+lusaka_m9_mongu,car,service_20km,"Service roads, worst 20 km",0.9,0.5,1.7,0.05,20.0,0.05
+lusaka_m9_mongu,car,all,All four (with worst 20 km),1.6,1.0,3.1,0.086,,
+lusaka_m9_mongu,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_m9_mongu,truck,no_police,No stops at police posts,4.0,0.9,19.0,0.148,,
+lusaka_m9_mongu,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+lusaka_m9_mongu,truck,service_all,"Service roads, all settlements",2.7,1.5,4.7,0.102,105.5,0.03
+lusaka_m9_mongu,truck,service_20km,"Service roads, worst 20 km",1.1,0.6,2.0,0.041,20.0,0.06
+lusaka_m9_mongu,truck,all,All four (with worst 20 km),5.1,2.4,20.4,0.189,,
+lusaka_t1_livingstone,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t1_livingstone,car,no_police,No stops at police posts,1.0,0.2,2.8,0.02,,
+lusaka_t1_livingstone,car,bypass_2,Bypass the 2 worst towns,4.3,1.0,6.8,0.086,6.0,0.71
+lusaka_t1_livingstone,car,service_all,"Service roads, all settlements",4.8,2.7,8.5,0.096,139.5,0.03
+lusaka_t1_livingstone,car,service_20km,"Service roads, worst 20 km",2.1,1.1,4.3,0.042,20.0,0.11
+lusaka_t1_livingstone,car,all,All four (with worst 20 km),7.2,4.0,11.0,0.145,,
+lusaka_t1_livingstone,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.104,,
+lusaka_t1_livingstone,truck,no_police,No stops at police posts,6.0,1.4,28.6,0.078,,
+lusaka_t1_livingstone,truck,bypass_2,Bypass the 2 worst towns,4.7,2.3,10.3,0.061,6.0,0.79
+lusaka_t1_livingstone,truck,service_all,"Service roads, all settlements",5.8,3.1,10.5,0.076,139.5,0.04
+lusaka_t1_livingstone,truck,service_20km,"Service roads, worst 20 km",2.6,1.3,5.4,0.034,20.0,0.13
+lusaka_t1_livingstone,truck,all,All four (with worst 20 km),20.4,17.7,51.1,0.264,,
+lusaka_t2_chirundu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t2_chirundu,car,no_police,No stops at police posts,1.3,0.2,3.7,0.037,,
+lusaka_t2_chirundu,car,bypass_2,Bypass the 2 worst towns,1.2,-1.4,3.0,0.033,4.5,0.26
+lusaka_t2_chirundu,car,service_all,"Service roads, all settlements",2.2,1.2,3.8,0.06,68.5,0.03
+lusaka_t2_chirundu,car,service_20km,"Service roads, worst 20 km",1.2,0.7,2.4,0.035,20.0,0.06
+lusaka_t2_chirundu,car,all,All four (with worst 20 km),3.7,1.0,7.2,0.104,,
+lusaka_t2_chirundu,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t2_chirundu,truck,no_police,No stops at police posts,8.0,1.8,38.1,0.173,,
+lusaka_t2_chirundu,truck,bypass_2,Bypass the 2 worst towns,0.7,-2.1,3.1,0.015,4.5,0.15
+lusaka_t2_chirundu,truck,service_all,"Service roads, all settlements",2.5,1.3,4.6,0.054,68.5,0.04
+lusaka_t2_chirundu,truck,service_20km,"Service roads, worst 20 km",1.5,0.8,2.9,0.031,20.0,0.07
+lusaka_t2_chirundu,truck,all,All four (with worst 20 km),10.1,4.0,40.2,0.218,,
+lusaka_t2_nakonde,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t2_nakonde,car,no_police,No stops at police posts,1.8,0.3,5.1,0.029,,
+lusaka_t2_nakonde,car,bypass_2,Bypass the 2 worst towns,0.2,-2.0,1.8,0.004,4.0,0.06
+lusaka_t2_nakonde,car,service_all,"Service roads, all settlements",11.7,6.6,20.0,0.183,435.0,0.03
+lusaka_t2_nakonde,car,service_20km,"Service roads, worst 20 km",2.1,1.1,4.3,0.034,20.0,0.11
+lusaka_t2_nakonde,car,all,All four (with worst 20 km),4.1,1.4,8.5,0.065,,
+lusaka_t2_nakonde,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t2_nakonde,truck,no_police,No stops at police posts,11.0,2.5,52.4,0.098,,
+lusaka_t2_nakonde,truck,bypass_2,Bypass the 2 worst towns,-0.2,-2.5,1.8,-0.001,4.0,-0.04
+lusaka_t2_nakonde,truck,service_all,"Service roads, all settlements",13.1,7.1,23.1,0.116,435.0,0.03
+lusaka_t2_nakonde,truck,service_20km,"Service roads, worst 20 km",2.5,1.3,5.4,0.022,20.0,0.13
+lusaka_t2_nakonde,truck,all,All four (with worst 20 km),13.2,5.4,55.0,0.117,,
+lusaka_t4_234_km,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t4_234_km,car,no_police,No stops at police posts,0.3,0.1,0.9,0.012,,
+lusaka_t4_234_km,car,bypass_2,Bypass the 2 worst towns,1.6,-1.2,3.9,0.061,6.0,0.27
+lusaka_t4_234_km,car,service_all,"Service roads, all settlements",2.4,1.4,4.2,0.087,111.0,0.02
+lusaka_t4_234_km,car,service_20km,"Service roads, worst 20 km",1.1,0.6,2.1,0.04,20.0,0.05
+lusaka_t4_234_km,car,all,All four (with worst 20 km),3.1,0.2,5.8,0.113,,
+lusaka_t4_234_km,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+lusaka_t4_234_km,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.045,,
+lusaka_t4_234_km,truck,bypass_2,Bypass the 2 worst towns,1.4,-1.7,4.6,0.03,6.0,0.23
+lusaka_t4_234_km,truck,service_all,"Service roads, all settlements",2.7,1.5,4.9,0.061,111.0,0.02
+lusaka_t4_234_km,truck,service_20km,"Service roads, worst 20 km",1.4,0.7,2.7,0.031,20.0,0.07
+lusaka_t4_234_km,truck,all,All four (with worst 20 km),4.7,1.9,13.9,0.106,,
+maputo_en4_ressano_garcia,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+maputo_en4_ressano_garcia,car,no_police,No stops at police posts,0.5,0.1,1.4,0.014,,
+maputo_en4_ressano_garcia,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+maputo_en4_ressano_garcia,car,service_all,"Service roads, all settlements",0.7,0.4,1.3,0.021,31.0,0.02
+maputo_en4_ressano_garcia,car,service_20km,"Service roads, worst 20 km",0.6,0.4,1.1,0.018,20.0,0.03
+maputo_en4_ressano_garcia,car,all,All four (with worst 20 km),1.1,0.7,2.2,0.032,,
+maputo_en4_ressano_garcia,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+maputo_en4_ressano_garcia,truck,no_police,No stops at police posts,3.0,0.7,14.3,0.074,,
+maputo_en4_ressano_garcia,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+maputo_en4_ressano_garcia,truck,service_all,"Service roads, all settlements",0.8,0.4,1.6,0.019,31.0,0.03
+maputo_en4_ressano_garcia,truck,service_20km,"Service roads, worst 20 km",0.7,0.3,1.4,0.017,20.0,0.03
+maputo_en4_ressano_garcia,truck,all,All four (with worst 20 km),3.7,1.6,15.1,0.091,,
+maputo_n1_pemba,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+maputo_n1_pemba,car,no_police,No stops at police posts,0.3,0.1,0.9,0.005,,
+maputo_n1_pemba,car,bypass_2,Bypass the 2 worst towns,4.8,0.3,8.8,0.072,15.5,0.31
+maputo_n1_pemba,car,service_all,"Service roads, all settlements",5.4,3.0,10.2,0.081,106.5,0.05
+maputo_n1_pemba,car,service_20km,"Service roads, worst 20 km",2.8,1.5,5.5,0.042,20.0,0.14
+maputo_n1_pemba,car,all,All four (with worst 20 km),7.5,2.7,12.6,0.112,,
+maputo_n1_pemba,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.096,,
+maputo_n1_pemba,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.024,,
+maputo_n1_pemba,truck,bypass_2,Bypass the 2 worst towns,4.8,0.2,12.3,0.058,15.5,0.31
+maputo_n1_pemba,truck,service_all,"Service roads, all settlements",6.9,3.6,12.7,0.082,106.5,0.06
+maputo_n1_pemba,truck,service_20km,"Service roads, worst 20 km",3.6,1.8,7.0,0.043,20.0,0.18
+maputo_n1_pemba,truck,all,All four (with worst 20 km),17.1,13.2,37.6,0.205,,
+nairobi_a2_moyale,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+nairobi_a2_moyale,car,no_police,No stops at police posts,0.3,0.1,0.9,0.008,,
+nairobi_a2_moyale,car,bypass_2,Bypass the 2 worst towns,8.4,3.2,13.6,0.194,16.5,0.51
+nairobi_a2_moyale,car,service_all,"Service roads, all settlements",5.2,3.0,9.6,0.12,151.5,0.03
+nairobi_a2_moyale,car,service_20km,"Service roads, worst 20 km",1.8,1.0,3.8,0.041,20.0,0.09
+nairobi_a2_moyale,car,all,All four (with worst 20 km),10.0,4.8,16.1,0.232,,
+nairobi_a2_moyale,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.112,,
+nairobi_a2_moyale,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.028,,
+nairobi_a2_moyale,truck,bypass_2,Bypass the 2 worst towns,7.7,3.2,19.7,0.108,16.5,0.47
+nairobi_a2_moyale,truck,service_all,"Service roads, all settlements",5.2,2.8,10.8,0.073,151.5,0.03
+nairobi_a2_moyale,truck,service_20km,"Service roads, worst 20 km",1.8,0.9,4.4,0.025,20.0,0.09
+nairobi_a2_moyale,truck,all,All four (with worst 20 km),17.3,13.6,38.4,0.242,,
+nairobi_a2_namanga,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+nairobi_a2_namanga,car,no_police,No stops at police posts,2.5,0.4,7.0,0.09,,
+nairobi_a2_namanga,car,bypass_2,Bypass the 2 worst towns,2.6,-0.2,5.3,0.094,7.0,0.37
+nairobi_a2_namanga,car,service_all,"Service roads, all settlements",2.0,1.1,3.6,0.071,59.5,0.03
+nairobi_a2_namanga,car,service_20km,"Service roads, worst 20 km",1.2,0.7,2.4,0.044,20.0,0.06
+nairobi_a2_namanga,car,all,All four (with worst 20 km),5.9,2.4,11.5,0.213,,
+nairobi_a2_namanga,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.25,,
+nairobi_a2_namanga,truck,no_police,No stops at police posts,15.0,3.5,71.4,0.234,,
+nairobi_a2_namanga,truck,bypass_2,Bypass the 2 worst towns,3.4,0.7,12.5,0.054,7.0,0.49
+nairobi_a2_namanga,truck,service_all,"Service roads, all settlements",2.3,1.2,4.4,0.036,59.5,0.04
+nairobi_a2_namanga,truck,service_20km,"Service roads, worst 20 km",1.5,0.7,3.1,0.023,20.0,0.07
+nairobi_a2_namanga,truck,all,All four (with worst 20 km),33.8,29.0,104.0,0.528,,
+nairobi_a8_malaba,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+nairobi_a8_malaba,car,no_police,No stops at police posts,1.5,0.3,4.2,0.013,,
+nairobi_a8_malaba,car,bypass_2,Bypass the 2 worst towns,25.9,17.1,36.8,0.22,27.5,0.94
+nairobi_a8_malaba,car,service_all,"Service roads, all settlements",13.5,7.4,26.0,0.114,282.0,0.05
+nairobi_a8_malaba,car,service_20km,"Service roads, worst 20 km",3.0,1.5,6.5,0.026,20.0,0.15
+nairobi_a8_malaba,car,all,All four (with worst 20 km),30.3,22.1,42.9,0.256,,
+nairobi_a8_malaba,truck,wim,Weigh-in-motion screening,24.0,14.9,68.0,0.122,,
+nairobi_a8_malaba,truck,no_police,No stops at police posts,9.0,2.1,42.9,0.046,,
+nairobi_a8_malaba,truck,bypass_2,Bypass the 2 worst towns,23.9,14.1,38.7,0.121,27.5,0.87
+nairobi_a8_malaba,truck,service_all,"Service roads, all settlements",13.5,7.0,27.8,0.068,282.0,0.05
+nairobi_a8_malaba,truck,service_20km,"Service roads, worst 20 km",3.0,1.4,7.4,0.015,20.0,0.15
+nairobi_a8_malaba,truck,all,All four (with worst 20 km),59.6,55.2,125.0,0.302,,
+nairobi_a8_mombasa,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+nairobi_a8_mombasa,car,no_police,No stops at police posts,2.5,0.4,7.0,0.055,,
+nairobi_a8_mombasa,car,bypass_2,Bypass the 2 worst towns,1.9,-0.8,4.3,0.042,7.0,0.27
+nairobi_a8_mombasa,car,service_all,"Service roads, all settlements",6.7,3.7,12.4,0.147,229.0,0.03
+nairobi_a8_mombasa,car,service_20km,"Service roads, worst 20 km",2.7,1.3,5.6,0.06,20.0,0.13
+nairobi_a8_mombasa,car,all,All four (with worst 20 km),6.8,3.1,12.8,0.15,,
+nairobi_a8_mombasa,truck,wim,Weigh-in-motion screening,16.0,9.9,45.3,0.179,,
+nairobi_a8_mombasa,truck,no_police,No stops at police posts,15.0,3.5,71.4,0.168,,
+nairobi_a8_mombasa,truck,bypass_2,Bypass the 2 worst towns,2.4,-0.3,11.0,0.027,7.0,0.35
+nairobi_a8_mombasa,truck,service_all,"Service roads, all settlements",7.9,4.2,15.5,0.089,229.0,0.03
+nairobi_a8_mombasa,truck,service_20km,"Service roads, worst 20 km",3.4,1.6,7.3,0.038,20.0,0.17
+nairobi_a8_mombasa,truck,all,All four (with worst 20 km),34.8,29.6,104.4,0.39,,
+pretoria_n14_springbok,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n14_springbok,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+pretoria_n14_springbok,car,bypass_2,Bypass the 2 worst towns,0.1,-1.0,0.9,0.006,1.5,0.08
+pretoria_n14_springbok,car,service_all,"Service roads, all settlements",1.8,1.0,3.4,0.086,66.5,0.03
+pretoria_n14_springbok,car,service_20km,"Service roads, worst 20 km",1.1,0.6,2.4,0.055,20.0,0.06
+pretoria_n14_springbok,car,all,All four (with worst 20 km),1.3,-0.0,2.8,0.061,,
+pretoria_n14_springbok,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n14_springbok,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+pretoria_n14_springbok,truck,bypass_2,Bypass the 2 worst towns,-0.3,-1.4,0.7,-0.007,1.5,-0.17
+pretoria_n14_springbok,truck,service_all,"Service roads, all settlements",1.7,0.9,3.5,0.05,66.5,0.03
+pretoria_n14_springbok,truck,service_20km,"Service roads, worst 20 km",1.1,0.6,2.6,0.033,20.0,0.06
+pretoria_n14_springbok,truck,all,All four (with worst 20 km),0.9,-0.4,2.7,0.026,,
+pretoria_n1_beitbridge,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n1_beitbridge,car,no_police,No stops at police posts,2.3,0.4,6.5,0.102,,
+pretoria_n1_beitbridge,car,bypass_2,Bypass the 2 worst towns,0.3,-1.0,1.2,0.013,2.5,0.12
+pretoria_n1_beitbridge,car,service_all,"Service roads, all settlements",2.6,1.4,5.0,0.113,95.0,0.03
+pretoria_n1_beitbridge,car,service_20km,"Service roads, worst 20 km",1.6,0.8,3.5,0.071,20.0,0.08
+pretoria_n1_beitbridge,car,all,All four (with worst 20 km),4.2,2.1,9.1,0.185,,
+pretoria_n1_beitbridge,truck,wim,Weigh-in-motion screening,32.0,19.8,90.7,0.324,,
+pretoria_n1_beitbridge,truck,no_police,No stops at police posts,14.0,3.2,66.7,0.142,,
+pretoria_n1_beitbridge,truck,bypass_2,Bypass the 2 worst towns,-0.2,-1.6,1.0,-0.002,2.5,-0.06
+pretoria_n1_beitbridge,truck,service_all,"Service roads, all settlements",3.1,1.6,6.0,0.031,95.0,0.03
+pretoria_n1_beitbridge,truck,service_20km,"Service roads, worst 20 km",2.1,1.0,4.4,0.021,20.0,0.1
+pretoria_n1_beitbridge,truck,all,All four (with worst 20 km),47.9,42.8,139.8,0.486,,
+pretoria_n1_cape_town,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n1_cape_town,car,no_police,No stops at police posts,0.8,0.1,2.3,0.05,,
+pretoria_n1_cape_town,car,bypass_2,Bypass the 2 worst towns,-0.3,-1.3,0.4,-0.016,1.5,-0.17
+pretoria_n1_cape_town,car,service_all,"Service roads, all settlements",3.2,1.5,6.7,0.193,85.0,0.04
+pretoria_n1_cape_town,car,service_20km,"Service roads, worst 20 km",1.8,0.8,4.0,0.109,20.0,0.09
+pretoria_n1_cape_town,car,all,All four (with worst 20 km),2.4,1.0,5.2,0.143,,
+pretoria_n1_cape_town,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n1_cape_town,truck,no_police,No stops at police posts,5.0,1.2,23.8,0.141,,
+pretoria_n1_cape_town,truck,bypass_2,Bypass the 2 worst towns,-0.7,-1.8,0.0,-0.02,1.5,-0.47
+pretoria_n1_cape_town,truck,service_all,"Service roads, all settlements",3.2,1.5,7.4,0.091,85.0,0.04
+pretoria_n1_cape_town,truck,service_20km,"Service roads, worst 20 km",1.8,0.7,4.5,0.05,20.0,0.09
+pretoria_n1_cape_town,truck,all,All four (with worst 20 km),6.1,2.5,24.9,0.171,,
+pretoria_n4_lebombo,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n4_lebombo,car,no_police,No stops at police posts,1.2,0.2,3.3,0.057,,
+pretoria_n4_lebombo,car,bypass_2,Bypass the 2 worst towns,3.5,1.3,5.1,0.17,1.5,2.33
+pretoria_n4_lebombo,car,service_all,"Service roads, all settlements",2.5,1.4,4.7,0.124,103.5,0.02
+pretoria_n4_lebombo,car,service_20km,"Service roads, worst 20 km",1.3,0.7,2.9,0.066,20.0,0.07
+pretoria_n4_lebombo,car,all,All four (with worst 20 km),6.0,3.8,9.3,0.292,,
+pretoria_n4_lebombo,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.113,,
+pretoria_n4_lebombo,truck,no_police,No stops at police posts,7.0,1.6,33.3,0.099,,
+pretoria_n4_lebombo,truck,bypass_2,Bypass the 2 worst towns,3.4,1.1,5.0,0.047,1.5,2.24
+pretoria_n4_lebombo,truck,service_all,"Service roads, all settlements",2.5,1.3,4.8,0.036,103.5,0.02
+pretoria_n4_lebombo,truck,service_20km,"Service roads, worst 20 km",1.4,0.7,3.0,0.02,20.0,0.07
+pretoria_n4_lebombo,truck,all,All four (with worst 20 km),19.8,17.1,53.3,0.278,,
+pretoria_n4_lekubu,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n4_lekubu,car,no_police,No stops at police posts,0.8,0.1,2.3,0.086,,
+pretoria_n4_lekubu,car,bypass_2,Bypass the 2 worst towns,0.1,-1.0,0.8,0.009,1.5,0.06
+pretoria_n4_lekubu,car,service_all,"Service roads, all settlements",1.6,0.9,3.3,0.167,57.5,0.03
+pretoria_n4_lekubu,car,service_20km,"Service roads, worst 20 km",1.2,0.6,2.6,0.121,20.0,0.06
+pretoria_n4_lekubu,car,all,All four (with worst 20 km),2.1,0.8,4.3,0.216,,
+pretoria_n4_lekubu,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+pretoria_n4_lekubu,truck,no_police,No stops at police posts,5.0,1.2,23.8,0.185,,
+pretoria_n4_lekubu,truck,bypass_2,Bypass the 2 worst towns,-0.1,-1.2,0.9,-0.002,1.5,-0.04
+pretoria_n4_lekubu,truck,service_all,"Service roads, all settlements",1.9,0.9,3.8,0.069,57.5,0.03
+pretoria_n4_lekubu,truck,service_20km,"Service roads, worst 20 km",1.4,0.6,3.1,0.052,20.0,0.07
+pretoria_n4_lekubu,truck,all,All four (with worst 20 km),6.3,2.7,25.3,0.235,,
+windhoek_b1_797_km,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_b1_797_km,car,no_police,No stops at police posts,0.2,0.0,0.5,0.007,,
+windhoek_b1_797_km,car,bypass_2,Bypass the 2 worst towns,1.0,-0.6,2.3,0.039,4.0,0.25
+windhoek_b1_797_km,car,service_all,"Service roads, all settlements",0.4,0.2,0.7,0.016,15.0,0.03
+windhoek_b1_797_km,car,service_20km,"Service roads, worst 20 km",0.4,0.2,0.7,0.016,15.0,0.03
+windhoek_b1_797_km,car,all,All four (with worst 20 km),1.5,-0.0,2.9,0.059,,
+windhoek_b1_797_km,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_b1_797_km,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.033,,
+windhoek_b1_797_km,truck,bypass_2,Bypass the 2 worst towns,0.7,-1.1,2.3,0.024,4.0,0.18
+windhoek_b1_797_km,truck,service_all,"Service roads, all settlements",0.5,0.3,0.8,0.016,15.0,0.03
+windhoek_b1_797_km,truck,service_20km,"Service roads, worst 20 km",0.5,0.3,0.8,0.016,15.0,0.03
+windhoek_b1_797_km,truck,all,All four (with worst 20 km),2.1,0.6,6.5,0.069,,
+windhoek_b2_walvis_bay,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_b2_walvis_bay,car,no_police,No stops at police posts,0.3,0.1,0.9,0.03,,
+windhoek_b2_walvis_bay,car,bypass_2,Bypass the 2 worst towns,3.1,0.2,5.1,0.275,4.5,0.68
+windhoek_b2_walvis_bay,car,service_all,"Service roads, all settlements",0.6,0.4,1.2,0.056,35.0,0.02
+windhoek_b2_walvis_bay,car,service_20km,"Service roads, worst 20 km",0.6,0.3,1.1,0.05,20.0,0.03
+windhoek_b2_walvis_bay,car,all,All four (with worst 20 km),3.8,1.1,6.1,0.344,,
+windhoek_b2_walvis_bay,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.272,,
+windhoek_b2_walvis_bay,truck,no_police,No stops at police posts,2.0,0.5,9.5,0.068,,
+windhoek_b2_walvis_bay,truck,bypass_2,Bypass the 2 worst towns,3.1,0.0,5.6,0.104,4.5,0.68
+windhoek_b2_walvis_bay,truck,service_all,"Service roads, all settlements",0.8,0.4,1.5,0.027,35.0,0.02
+windhoek_b2_walvis_bay,truck,service_20km,"Service roads, worst 20 km",0.7,0.4,1.4,0.024,20.0,0.04
+windhoek_b2_walvis_bay,truck,all,All four (with worst 20 km),13.6,11.7,32.2,0.462,,
+windhoek_b6_buitepos,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_b6_buitepos,car,no_police,No stops at police posts,0.2,0.0,0.5,0.011,,
+windhoek_b6_buitepos,car,bypass_2,Bypass the 2 worst towns,0.8,-0.4,1.8,0.053,2.0,0.39
+windhoek_b6_buitepos,car,service_all,"Service roads, all settlements",0.4,0.2,0.9,0.028,16.0,0.03
+windhoek_b6_buitepos,car,service_20km,"Service roads, worst 20 km",0.4,0.2,0.9,0.028,16.0,0.03
+windhoek_b6_buitepos,car,all,All four (with worst 20 km),1.4,0.3,2.6,0.091,,
+windhoek_b6_buitepos,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.257,,
+windhoek_b6_buitepos,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.032,,
+windhoek_b6_buitepos,truck,bypass_2,Bypass the 2 worst towns,0.5,-0.8,1.8,0.015,2.0,0.23
+windhoek_b6_buitepos,truck,service_all,"Service roads, all settlements",0.5,0.2,1.1,0.017,16.0,0.03
+windhoek_b6_buitepos,truck,service_20km,"Service roads, worst 20 km",0.5,0.2,1.1,0.017,16.0,0.03
+windhoek_b6_buitepos,truck,all,All four (with worst 20 km),10.0,8.2,26.5,0.321,,
+windhoek_c26_194_km,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_c26_194_km,car,no_police,No stops at police posts,0.2,0.0,0.5,0.005,,
+windhoek_c26_194_km,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+windhoek_c26_194_km,car,service_all,"Service roads, all settlements",0.1,0.1,0.2,0.003,2.0,0.05
+windhoek_c26_194_km,car,service_20km,"Service roads, worst 20 km",0.1,0.1,0.2,0.003,2.0,0.05
+windhoek_c26_194_km,car,all,All four (with worst 20 km),0.3,0.1,0.6,0.007,,
+windhoek_c26_194_km,truck,wim,Weigh-in-motion screening,8.0,5.0,22.7,0.127,,
+windhoek_c26_194_km,truck,no_police,No stops at police posts,1.0,0.2,4.8,0.016,,
+windhoek_c26_194_km,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+windhoek_c26_194_km,truck,service_all,"Service roads, all settlements",0.1,0.1,0.3,0.002,2.0,0.07
+windhoek_c26_194_km,truck,service_20km,"Service roads, worst 20 km",0.1,0.1,0.3,0.002,2.0,0.07
+windhoek_c26_194_km,truck,all,All four (with worst 20 km),9.1,7.2,25.9,0.144,,
+windhoek_c28_swakopmund,car,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_c28_swakopmund,car,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+windhoek_c28_swakopmund,car,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+windhoek_c28_swakopmund,car,service_all,"Service roads, all settlements",0.4,0.2,0.7,0.037,7.0,0.06
+windhoek_c28_swakopmund,car,service_20km,"Service roads, worst 20 km",0.4,0.2,0.7,0.037,7.0,0.06
+windhoek_c28_swakopmund,car,all,All four (with worst 20 km),0.4,0.2,0.7,0.037,,
+windhoek_c28_swakopmund,truck,wim,Weigh-in-motion screening,0.0,0.0,0.0,0.0,,
+windhoek_c28_swakopmund,truck,no_police,No stops at police posts,0.0,0.0,0.0,0.0,,
+windhoek_c28_swakopmund,truck,bypass_2,Bypass the 2 worst towns,0.0,0.0,0.0,0.0,0.0,
+windhoek_c28_swakopmund,truck,service_all,"Service roads, all settlements",0.5,0.2,0.9,0.012,7.0,0.07
+windhoek_c28_swakopmund,truck,service_20km,"Service roads, worst 20 km",0.5,0.2,0.9,0.012,7.0,0.07
+windhoek_c28_swakopmund,truck,all,All four (with worst 20 km),0.5,0.2,0.9,0.012,,
