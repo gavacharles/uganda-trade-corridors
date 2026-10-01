@@ -17,8 +17,11 @@ import config as C
 
 
 def read_osm(layer, **kw):
-    """One layer from every extract in config.PBFS, concatenated."""
-    return pd.concat([pyogrio.read_dataframe(pbf, layer=layer, **kw) for pbf in C.PBFS], ignore_index=True)
+    """One layer from every extract in config.PBFS, concatenated. Only features meeting the 1 km
+    zone are kept as they are read (a spatial mask), so memory holds the corridors' features,
+    not whole countries' (the regional study's bounding box covers most of the subcontinent)."""
+    return pd.concat([pyogrio.read_dataframe(pbf, layer=layer, mask=MASK, **kw) for pbf in C.PBFS],
+                     ignore_index=True)
 
 OUT = os.path.join(C.DATA, "osm_features.gpkg")
 BUFFER_M = 1000
@@ -60,7 +63,9 @@ def classify_point(r):
 cl = gpd.read_file(C.PROBES_GPKG, layer="centrelines")
 zone_utm = cl.to_crs(C.UTM).buffer(BUFFER_M).union_all()
 zone = gpd.GeoSeries([zone_utm], crs=C.UTM).to_crs(4326)
-bbox = tuple(zone.total_bounds)
+# Read filter: the zone grown 100 m then simplified by about 50 m, so it always covers the zone;
+# clip() then keeps exactly what meets the zone
+MASK = gpd.GeoSeries([zone_utm.buffer(100)], crs=C.UTM).to_crs(4326).iloc[0].simplify(0.0005)
 
 
 def clip(df):
@@ -70,7 +75,7 @@ def clip(df):
 
 
 # Points
-pts = clip(read_osm("points", bbox=bbox))
+pts = clip(read_osm("points"))
 for k in ("traffic_calming", "railway", "amenity", "shop", "public_transport"):
     pts[k] = tag(pts, k)
 pts["kind"] = pts.apply(classify_point, axis=1)
@@ -80,20 +85,20 @@ pts.loc[pts.name.fillna("").str.contains(WEIGH), "kind"] = "weighbridge"
 pts = pts[pts.kind.notna()][["osm_id", "name", "kind", "place", "geometry"]]
 
 # Roads (all classes) for junctions
-roads = clip(read_osm("lines", bbox=bbox, where="highway IS NOT NULL"))
+roads = clip(read_osm("lines", where="highway IS NOT NULL"))
 roads = roads[["osm_id", "name", "highway", "geometry"]]
 
 # Waterways
-water = clip(read_osm("lines", bbox=bbox, where="waterway IS NOT NULL"))
+water = clip(read_osm("lines", where="waterway IS NOT NULL"))
 water = water[["osm_id", "name", "waterway", "geometry"]]
 
 # Areas
-areas = clip(read_osm("multipolygons", bbox=bbox,
+areas = clip(read_osm("multipolygons",
     where="amenity = 'marketplace' OR landuse IN ('retail','commercial') OR natural = 'wetland'"))
 areas["kind"] = areas.apply(lambda r: "wetland" if r.natural == "wetland" else
                             ("market" if r.amenity == "marketplace" else "commercial"), axis=1)
 areas = areas[["osm_id", "osm_way_id", "name", "kind", "geometry"]]
-wb = clip(read_osm("multipolygons", bbox=bbox, where="name IS NOT NULL"))
+wb = clip(read_osm("multipolygons", where="name IS NOT NULL"))
 wb = wb[wb.name.str.contains(WEIGH)]
 wb = gpd.GeoDataFrame(dict(osm_id=wb.osm_way_id.fillna(wb.osm_id), name=wb.name, kind="weighbridge", place=None),
                       geometry=wb.geometry.representative_point(), crs=4326)

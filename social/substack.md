@@ -1,6 +1,6 @@
 # Highways that became high streets
 
-*[Cover image: cover_substack.png — set as the post's cover in Substack (1456 × 1048)]*
+*[Cover image: cover_substack.png — set as the post's cover in Substack (1200 × 630)]*
 
 *Uganda's five trade roads out of Kampala now run mostly through villages. Here is what that costs, where, and what would help, measured from open data.*
 
