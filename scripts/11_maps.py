@@ -45,9 +45,11 @@ M.border_marks(ax)
 K.furniture(ax, km=100)
 ax.legend(handles=handles, loc="upper left", frameon=True, facecolor="white", edgecolor="#d8d5ce", framealpha=0.95,
           fontsize=8, labelcolor=INK)
-fig.text(0.07, 0.94, "Study area: four trade corridors out of Kampala", fontsize=16, color=INK)
-fig.text(0.07, 0.918, "Centrelines built from OpenStreetMap routes A1, A6, A2 and A9, Kampala to the border "
-         "(or to Hoima)", fontsize=10, color=INK2)
+_n = ["no", "one", "two", "three", "four", "five", "six", "seven"][len(C.CORRIDORS)]
+_refs = [c["ref"] for c in C.CORRIDORS.values()]
+fig.text(0.07, 0.94, f"Study area: {_n} trade corridors out of Kampala", fontsize=16, color=INK)
+fig.text(0.07, 0.918, f"Centrelines built from OpenStreetMap routes {', '.join(_refs[:-1])} and {_refs[-1]}, "
+         "Kampala to the border (or to Hoima)", fontsize=10, color=INK2)
 fig.text(0.07, 0.06, SOURCES, fontsize=8, color=INK2)
 fig.savefig(os.path.join(C.FIGURES, "m01_study_area.png"), dpi=170, facecolor=SURF, bbox_inches="tight")
 plt.close(fig)

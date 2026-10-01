@@ -1,9 +1,11 @@
 corridor,vehicle,source,kind,reported_min,reported_max,model_km,model_min
 kampala_malaba,car,"Rome2rio routing estimate, Kampala–Njeru",estimate,66,66,73.5,87.0
-kampala_malaba,car,"Reported typical trip Kampala–Jinja, press and project sources",observed,120,180,78.0,92.0
+kampala_malaba,car,"Reported typical trip Kampala–Jinja, press and project sources",observed,120,180,78.0,91.0
 kampala_elegu,car,"Rome2rio routing estimate, Kampala–Gulu",estimate,286,286,328.0,266.0
 kampala_elegu,car,"Scheduled buses Kampala–Gulu incl. stops (Bookaway, Friends Coach)",observed,300,495,328.0,266.0
-kampala_katuna,car,"Rome2rio routing estimate, Kampala–Kabale",estimate,345,345,402.0,344.0
-kampala_katuna,car,"Scheduled bus, Kampala–Kabale (Rome2rio)",observed,480,480,402.0,344.0
+kampala_katuna,car,"Rome2rio routing estimate, Kampala–Kabale",estimate,345,345,402.0,343.0
+kampala_katuna,car,"Scheduled bus, Kampala–Kabale (Rome2rio)",observed,480,480,402.0,343.0
 kampala_hoima,car,Rome2rio routing estimate,estimate,172,172,194.5,164.0
 kampala_hoima,car,Scheduled bus (Rome2rio),observed,206,206,194.5,164.0
+kampala_bwera,car,"Rome2rio routing estimate, Kampala–Fort Portal",estimate,269,269,283.0,228.0
+kampala_bwera,car,"Scheduled bus, Kampala–Fort Portal (Link Bus, Rome2rio)",observed,271,271,283.0,228.0

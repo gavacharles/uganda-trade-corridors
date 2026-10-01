@@ -1,6 +1,16 @@
 corridor,vehicle,direction,cause,minutes,p5,p95
-kampala_elegu,car,outbound,town speed limit,4.6,0.7,15.6
-kampala_elegu,car,outbound,roadside activity,21.3,11.1,44.2
+kampala_bwera,car,outbound,town speed limit,1.7,0.1,6.7
+kampala_bwera,car,outbound,roadside activity,32.8,16.7,63.9
+kampala_bwera,car,outbound,joining roads,9.7,3.8,19.1
+kampala_bwera,car,outbound,signals and crossings,2.3,1.2,4.3
+kampala_bwera,car,outbound,speed humps (assumed),4.1,0.4,9.7
+kampala_bwera,car,outbound,police posts,0.8,0.1,2.3
+kampala_bwera,car,outbound,weighbridge,0.0,0.0,0.0
+kampala_bwera,car,outbound,hills (trucks),0.0,0.0,0.0
+kampala_bwera,car,outbound,curves,4.1,0.8,10.1
+kampala_bwera,car,outbound,rain (wet day),37.1,19.2,58.1
+kampala_elegu,car,outbound,town speed limit,4.7,0.8,15.7
+kampala_elegu,car,outbound,roadside activity,21.4,11.2,44.4
 kampala_elegu,car,outbound,joining roads,6.1,2.5,14.3
 kampala_elegu,car,outbound,signals and crossings,3.6,2.3,6.1
 kampala_elegu,car,outbound,speed humps (assumed),8.7,0.8,20.4
@@ -8,7 +18,7 @@ kampala_elegu,car,outbound,police posts,2.5,0.4,7.0
 kampala_elegu,car,outbound,weighbridge,0.0,0.0,0.0
 kampala_elegu,car,outbound,hills (trucks),0.0,0.0,0.0
 kampala_elegu,car,outbound,curves,0.3,0.1,0.9
-kampala_elegu,car,outbound,rain (wet day),36.8,19.0,57.4
+kampala_elegu,car,outbound,rain (wet day),36.9,19.0,57.4
 kampala_hoima,car,outbound,town speed limit,1.9,0.4,7.0
 kampala_hoima,car,outbound,roadside activity,16.5,8.6,32.9
 kampala_hoima,car,outbound,joining roads,3.1,1.2,7.7
@@ -19,18 +29,18 @@ kampala_hoima,car,outbound,weighbridge,0.0,0.0,0.0
 kampala_hoima,car,outbound,hills (trucks),0.0,0.0,0.0
 kampala_hoima,car,outbound,curves,1.1,0.3,2.6
 kampala_hoima,car,outbound,rain (wet day),17.6,9.2,27.6
-kampala_katuna,car,outbound,town speed limit,6.8,1.0,22.6
-kampala_katuna,car,outbound,roadside activity,27.5,14.2,57.8
-kampala_katuna,car,outbound,joining roads,6.5,2.6,17.4
+kampala_katuna,car,outbound,town speed limit,6.6,1.0,21.9
+kampala_katuna,car,outbound,roadside activity,27.9,14.4,58.3
+kampala_katuna,car,outbound,joining roads,6.7,2.7,17.5
 kampala_katuna,car,outbound,signals and crossings,2.9,2.2,4.2
-kampala_katuna,car,outbound,speed humps (assumed),12.8,1.2,30.1
+kampala_katuna,car,outbound,speed humps (assumed),12.4,1.2,29.2
 kampala_katuna,car,outbound,police posts,1.5,0.2,4.2
 kampala_katuna,car,outbound,weighbridge,0.0,0.0,0.0
 kampala_katuna,car,outbound,hills (trucks),0.0,0.0,0.0
 kampala_katuna,car,outbound,curves,3.3,1.0,7.2
 kampala_katuna,car,outbound,rain (wet day),38.5,20.1,60.3
-kampala_malaba,car,outbound,town speed limit,8.7,1.8,23.4
-kampala_malaba,car,outbound,roadside activity,18.2,9.5,38.6
+kampala_malaba,car,outbound,town speed limit,8.9,1.8,23.5
+kampala_malaba,car,outbound,roadside activity,18.3,9.5,38.8
 kampala_malaba,car,outbound,joining roads,3.3,1.3,10.1
 kampala_malaba,car,outbound,signals and crossings,10.5,7.6,14.7
 kampala_malaba,car,outbound,speed humps (assumed),12.7,1.2,29.8
@@ -38,9 +48,19 @@ kampala_malaba,car,outbound,police posts,1.7,0.3,4.7
 kampala_malaba,car,outbound,weighbridge,0.0,0.0,0.0
 kampala_malaba,car,outbound,hills (trucks),0.0,0.0,0.0
 kampala_malaba,car,outbound,curves,0.2,0.1,0.5
-kampala_malaba,car,outbound,rain (wet day),21.1,11.1,33.1
-kampala_elegu,car,inbound,town speed limit,4.6,0.7,15.6
-kampala_elegu,car,inbound,roadside activity,21.3,11.1,44.2
+kampala_malaba,car,outbound,rain (wet day),21.1,11.2,33.1
+kampala_bwera,car,inbound,town speed limit,1.7,0.1,6.7
+kampala_bwera,car,inbound,roadside activity,32.8,16.7,63.9
+kampala_bwera,car,inbound,joining roads,9.7,3.8,19.1
+kampala_bwera,car,inbound,signals and crossings,2.3,1.2,4.3
+kampala_bwera,car,inbound,speed humps (assumed),4.1,0.4,9.7
+kampala_bwera,car,inbound,police posts,0.8,0.1,2.3
+kampala_bwera,car,inbound,weighbridge,0.0,0.0,0.0
+kampala_bwera,car,inbound,hills (trucks),0.0,0.0,0.0
+kampala_bwera,car,inbound,curves,4.1,0.8,10.1
+kampala_bwera,car,inbound,rain (wet day),37.1,19.2,58.1
+kampala_elegu,car,inbound,town speed limit,4.7,0.8,15.7
+kampala_elegu,car,inbound,roadside activity,21.4,11.2,44.4
 kampala_elegu,car,inbound,joining roads,6.1,2.5,14.3
 kampala_elegu,car,inbound,signals and crossings,3.6,2.3,6.1
 kampala_elegu,car,inbound,speed humps (assumed),8.7,0.8,20.4
@@ -48,7 +68,7 @@ kampala_elegu,car,inbound,police posts,2.5,0.4,7.0
 kampala_elegu,car,inbound,weighbridge,0.0,0.0,0.0
 kampala_elegu,car,inbound,hills (trucks),0.0,0.0,0.0
 kampala_elegu,car,inbound,curves,0.3,0.1,0.9
-kampala_elegu,car,inbound,rain (wet day),36.8,19.0,57.4
+kampala_elegu,car,inbound,rain (wet day),36.9,19.0,57.4
 kampala_hoima,car,inbound,town speed limit,1.9,0.4,7.0
 kampala_hoima,car,inbound,roadside activity,16.5,8.6,32.9
 kampala_hoima,car,inbound,joining roads,3.1,1.2,7.7
@@ -59,18 +79,18 @@ kampala_hoima,car,inbound,weighbridge,0.0,0.0,0.0
 kampala_hoima,car,inbound,hills (trucks),0.0,0.0,0.0
 kampala_hoima,car,inbound,curves,1.1,0.3,2.6
 kampala_hoima,car,inbound,rain (wet day),17.6,9.2,27.6
-kampala_katuna,car,inbound,town speed limit,6.8,1.0,22.6
-kampala_katuna,car,inbound,roadside activity,27.5,14.2,57.8
-kampala_katuna,car,inbound,joining roads,6.5,2.6,17.4
+kampala_katuna,car,inbound,town speed limit,6.6,1.0,21.9
+kampala_katuna,car,inbound,roadside activity,27.9,14.4,58.3
+kampala_katuna,car,inbound,joining roads,6.7,2.7,17.5
 kampala_katuna,car,inbound,signals and crossings,2.9,2.2,4.2
-kampala_katuna,car,inbound,speed humps (assumed),12.8,1.2,30.1
+kampala_katuna,car,inbound,speed humps (assumed),12.4,1.2,29.2
 kampala_katuna,car,inbound,police posts,1.5,0.2,4.2
 kampala_katuna,car,inbound,weighbridge,0.0,0.0,0.0
 kampala_katuna,car,inbound,hills (trucks),0.0,0.0,0.0
 kampala_katuna,car,inbound,curves,3.3,1.0,7.2
 kampala_katuna,car,inbound,rain (wet day),38.5,20.1,60.3
-kampala_malaba,car,inbound,town speed limit,8.7,1.8,23.4
-kampala_malaba,car,inbound,roadside activity,18.2,9.5,38.6
+kampala_malaba,car,inbound,town speed limit,8.9,1.8,23.5
+kampala_malaba,car,inbound,roadside activity,18.3,9.5,38.8
 kampala_malaba,car,inbound,joining roads,3.3,1.3,10.1
 kampala_malaba,car,inbound,signals and crossings,10.5,7.6,14.7
 kampala_malaba,car,inbound,speed humps (assumed),12.7,1.2,29.8
@@ -78,9 +98,19 @@ kampala_malaba,car,inbound,police posts,1.7,0.3,4.7
 kampala_malaba,car,inbound,weighbridge,0.0,0.0,0.0
 kampala_malaba,car,inbound,hills (trucks),0.0,0.0,0.0
 kampala_malaba,car,inbound,curves,0.2,0.1,0.5
-kampala_malaba,car,inbound,rain (wet day),21.1,11.1,33.1
-kampala_elegu,truck,outbound,town speed limit,0.6,0.0,7.1
-kampala_elegu,truck,outbound,roadside activity,29.2,12.4,59.5
+kampala_malaba,car,inbound,rain (wet day),21.1,11.2,33.1
+kampala_bwera,truck,outbound,town speed limit,0.0,0.0,2.3
+kampala_bwera,truck,outbound,roadside activity,36.9,17.0,73.5
+kampala_bwera,truck,outbound,joining roads,12.4,4.5,23.1
+kampala_bwera,truck,outbound,signals and crossings,2.3,1.2,4.3
+kampala_bwera,truck,outbound,speed humps (assumed),6.2,0.6,14.6
+kampala_bwera,truck,outbound,police posts,5.0,1.2,23.7
+kampala_bwera,truck,outbound,weighbridge,0.0,0.0,0.0
+kampala_bwera,truck,outbound,hills (trucks),42.7,23.9,63.6
+kampala_bwera,truck,outbound,curves,2.8,0.2,9.2
+kampala_bwera,truck,outbound,rain (wet day),52.1,27.3,81.5
+kampala_elegu,truck,outbound,town speed limit,0.7,0.0,7.2
+kampala_elegu,truck,outbound,roadside activity,29.1,12.3,59.6
 kampala_elegu,truck,outbound,joining roads,10.2,3.5,19.1
 kampala_elegu,truck,outbound,signals and crossings,3.6,2.3,6.1
 kampala_elegu,truck,outbound,speed humps (assumed),13.0,1.2,30.6
@@ -88,7 +118,7 @@ kampala_elegu,truck,outbound,police posts,15.0,3.6,71.2
 kampala_elegu,truck,outbound,weighbridge,10.0,6.2,28.4
 kampala_elegu,truck,outbound,hills (trucks),13.0,7.0,19.8
 kampala_elegu,truck,outbound,curves,0.2,0.1,0.8
-kampala_elegu,truck,outbound,rain (wet day),48.3,25.3,75.8
+kampala_elegu,truck,outbound,rain (wet day),48.3,25.4,75.8
 kampala_hoima,truck,outbound,town speed limit,0.2,0.0,2.7
 kampala_hoima,truck,outbound,roadside activity,18.5,8.1,38.4
 kampala_hoima,truck,outbound,joining roads,4.9,1.6,9.5
@@ -99,17 +129,17 @@ kampala_hoima,truck,outbound,weighbridge,0.0,0.0,0.0
 kampala_hoima,truck,outbound,hills (trucks),13.7,6.8,21.5
 kampala_hoima,truck,outbound,curves,0.7,0.1,2.6
 kampala_hoima,truck,outbound,rain (wet day),23.9,12.6,37.4
-kampala_katuna,truck,outbound,town speed limit,0.7,0.0,9.0
-kampala_katuna,truck,outbound,roadside activity,34.6,14.2,74.3
-kampala_katuna,truck,outbound,joining roads,11.2,3.5,21.7
+kampala_katuna,truck,outbound,town speed limit,0.7,0.0,8.7
+kampala_katuna,truck,outbound,roadside activity,34.8,14.4,74.6
+kampala_katuna,truck,outbound,joining roads,11.2,3.6,21.8
 kampala_katuna,truck,outbound,signals and crossings,2.9,2.2,4.2
-kampala_katuna,truck,outbound,speed humps (assumed),19.2,1.8,45.2
+kampala_katuna,truck,outbound,speed humps (assumed),18.6,1.8,43.8
 kampala_katuna,truck,outbound,police posts,9.0,2.2,42.7
 kampala_katuna,truck,outbound,weighbridge,20.0,12.4,56.8
-kampala_katuna,truck,outbound,hills (trucks),38.1,20.2,58.1
+kampala_katuna,truck,outbound,hills (trucks),38.2,20.2,58.1
 kampala_katuna,truck,outbound,curves,2.0,0.2,6.5
 kampala_katuna,truck,outbound,rain (wet day),52.8,27.8,82.7
-kampala_malaba,truck,outbound,town speed limit,0.9,0.0,10.2
+kampala_malaba,truck,outbound,town speed limit,1.0,0.0,10.3
 kampala_malaba,truck,outbound,roadside activity,25.1,9.8,56.2
 kampala_malaba,truck,outbound,joining roads,7.1,2.0,14.8
 kampala_malaba,truck,outbound,signals and crossings,10.5,7.6,14.7
@@ -118,10 +148,20 @@ kampala_malaba,truck,outbound,police posts,10.0,2.4,47.4
 kampala_malaba,truck,outbound,weighbridge,20.0,12.4,56.8
 kampala_malaba,truck,outbound,hills (trucks),8.6,4.1,15.3
 kampala_malaba,truck,outbound,curves,0.1,0.0,1.3
-kampala_malaba,truck,outbound,rain (wet day),27.2,14.4,43.0
-kampala_elegu,truck,inbound,town speed limit,0.5,0.0,6.7
-kampala_elegu,truck,inbound,roadside activity,28.1,11.7,58.2
-kampala_elegu,truck,inbound,joining roads,10.1,3.5,18.8
+kampala_malaba,truck,outbound,rain (wet day),27.2,14.5,43.0
+kampala_bwera,truck,inbound,town speed limit,0.1,0.0,2.6
+kampala_bwera,truck,inbound,roadside activity,33.8,15.4,68.0
+kampala_bwera,truck,inbound,joining roads,11.4,4.1,21.8
+kampala_bwera,truck,inbound,signals and crossings,2.3,1.2,4.3
+kampala_bwera,truck,inbound,speed humps (assumed),6.2,0.6,14.6
+kampala_bwera,truck,inbound,police posts,5.0,1.2,23.7
+kampala_bwera,truck,inbound,weighbridge,0.0,0.0,0.0
+kampala_bwera,truck,inbound,hills (trucks),40.9,21.5,62.9
+kampala_bwera,truck,inbound,curves,2.7,0.1,9.1
+kampala_bwera,truck,inbound,rain (wet day),51.9,27.3,81.2
+kampala_elegu,truck,inbound,town speed limit,0.6,0.0,6.9
+kampala_elegu,truck,inbound,roadside activity,28.2,11.8,58.3
+kampala_elegu,truck,inbound,joining roads,10.0,3.5,18.7
 kampala_elegu,truck,inbound,signals and crossings,3.6,2.3,6.1
 kampala_elegu,truck,inbound,speed humps (assumed),13.0,1.2,30.6
 kampala_elegu,truck,inbound,police posts,15.0,3.6,71.2
@@ -139,18 +179,18 @@ kampala_hoima,truck,inbound,weighbridge,0.0,0.0,0.0
 kampala_hoima,truck,inbound,hills (trucks),13.5,7.0,21.3
 kampala_hoima,truck,inbound,curves,0.8,0.1,2.8
 kampala_hoima,truck,inbound,rain (wet day),23.9,12.6,37.4
-kampala_katuna,truck,inbound,town speed limit,0.6,0.0,9.3
-kampala_katuna,truck,inbound,roadside activity,35.6,14.7,75.8
+kampala_katuna,truck,inbound,town speed limit,0.6,0.0,9.1
+kampala_katuna,truck,inbound,roadside activity,35.8,14.9,76.1
 kampala_katuna,truck,inbound,joining roads,11.6,3.7,22.6
 kampala_katuna,truck,inbound,signals and crossings,2.9,2.2,4.2
-kampala_katuna,truck,inbound,speed humps (assumed),19.2,1.8,45.2
+kampala_katuna,truck,inbound,speed humps (assumed),18.6,1.8,43.8
 kampala_katuna,truck,inbound,police posts,9.0,2.2,42.7
 kampala_katuna,truck,inbound,weighbridge,20.0,12.4,56.8
-kampala_katuna,truck,inbound,hills (trucks),30.3,16.0,46.8
+kampala_katuna,truck,inbound,hills (trucks),30.3,16.0,46.9
 kampala_katuna,truck,inbound,curves,2.0,0.2,6.5
-kampala_katuna,truck,inbound,rain (wet day),52.0,27.4,81.5
-kampala_malaba,truck,inbound,town speed limit,1.0,0.0,10.3
-kampala_malaba,truck,inbound,roadside activity,25.7,10.0,56.7
+kampala_katuna,truck,inbound,rain (wet day),51.9,27.3,81.5
+kampala_malaba,truck,inbound,town speed limit,1.0,0.0,10.4
+kampala_malaba,truck,inbound,roadside activity,25.7,10.0,56.6
 kampala_malaba,truck,inbound,joining roads,7.4,2.1,15.1
 kampala_malaba,truck,inbound,signals and crossings,10.5,7.6,14.7
 kampala_malaba,truck,inbound,speed humps (assumed),19.0,1.8,44.7

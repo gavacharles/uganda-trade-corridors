@@ -1,13 +1,16 @@
 corridor,road_type,people,exposure,km,exposure_share,people_share
-kampala_elegu,open road,14541.0,27.857,147.5,0.137,0.062
-kampala_elegu,roadside settlement,132812.0,149.164,251.0,0.734,0.567
-kampala_elegu,town,86869.0,26.064,32.5,0.128,0.371
-kampala_hoima,open road,5173.0,5.568,32.0,0.067,0.029
-kampala_hoima,roadside settlement,118881.0,66.978,147.0,0.81,0.655
+kampala_bwera,open road,18885.0,20.298,121.5,0.154,0.076
+kampala_bwera,roadside settlement,190308.0,103.699,281.0,0.785,0.764
+kampala_bwera,town,39827.0,8.097,15.5,0.061,0.16
+kampala_elegu,open road,16366.0,31.247,155.5,0.154,0.07
+kampala_elegu,roadside settlement,131538.0,145.849,243.0,0.718,0.562
+kampala_elegu,town,86318.0,25.916,32.5,0.128,0.369
+kampala_hoima,open road,6477.0,7.146,35.5,0.086,0.036
+kampala_hoima,roadside settlement,117577.0,65.4,143.5,0.791,0.648
 kampala_hoima,town,57316.0,10.163,15.5,0.123,0.316
-kampala_katuna,open road,8572.0,20.859,106.5,0.089,0.032
-kampala_katuna,roadside settlement,134354.0,163.61,271.5,0.701,0.505
-kampala_katuna,town,123256.0,48.919,48.0,0.21,0.463
-kampala_malaba,open road,4132.0,20.058,43.0,0.051,0.017
-kampala_malaba,roadside settlement,120505.0,261.446,125.5,0.661,0.49
-kampala_malaba,town,121367.0,114.22,47.5,0.289,0.493
+kampala_katuna,open road,9480.0,12.48,111.5,0.099,0.036
+kampala_katuna,roadside settlement,136418.0,87.56,268.0,0.698,0.512
+kampala_katuna,town,120284.0,25.406,46.5,0.203,0.452
+kampala_malaba,open road,4686.0,22.655,44.5,0.056,0.019
+kampala_malaba,roadside settlement,119623.0,264.641,124.0,0.652,0.486
+kampala_malaba,town,121695.0,118.319,47.5,0.292,0.495

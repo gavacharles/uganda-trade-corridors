@@ -6,11 +6,10 @@ minutes each fix would save. They are valued with a time cost per vehicle-hour a
 scaled to a year with a truck count per corridor. Every money assumption has a range and is
 drawn alongside the model's own draws, so costs carry intervals.
 
-The truck counts are the weakest input. The one sourced anchor: 8.684 million tonnes of cargo
-moved between Malaba and Kampala in 2017, about 4% of it by rail (Jinja-Kampala-Mpigi Corridor
-Physical Development Plan, 2023, ch. 6). At about 25 t per loaded truck that is some 900 loaded
-trucks a day plus empty returns. No public counts were found for the other roads, so their
-ranges are wide and should be replaced with UNRA traffic counts. The time costs are also
+The truck counts are the weakest input. The Malaba, Katuna and Bwera roads use station counts
+from the NCTTCA GHG Emissions Baseline Report 2025 (see config.TRUCKS_PER_DAY); the Elegu and
+Hoima roads have no station on them, so their ranges are assumptions and should be replaced with
+UNRA traffic counts. The time costs are also
 assumptions, to be replaced with UNRA's HDM-4 (RED) road-user cost values. Car costs are given
 per trip only: car volumes vary too much along each road to scale to a year.
 
@@ -132,7 +131,8 @@ ax.set_xlabel("US$ million a year, heavy trucks only", fontsize=9, color=INK2)
 ax.set_xlim(0, tr.cost_per_year_usd_m_p95.max() * 1.35)
 ax.legend(loc="lower right", frameon=False, fontsize=8.5, ncol=2, labelcolor=INK2)
 fig.text(0.01, 1.03, "What delay costs truck operators each year", fontsize=15, color=INK)
-fig.text(0.01, 0.975, "Time lost to all measured causes vs open road, light traffic, dry day. Truck counts and hourly "
-         "costs are assumptions with wide ranges; whiskers 5th–95th percentile.", fontsize=9, color=INK2)
+fig.text(0.01, 0.975, "Time lost to all measured causes vs open road, light traffic, dry day. Truck counts surveyed on the "
+         "Malaba, Katuna and Bwera roads (NCTTCA 2025), assumed elsewhere; hourly costs assumed. Whiskers 5th–95th "
+         "percentile.", fontsize=9, color=INK2)
 fig.savefig(os.path.join(C.FIGURES, "f08_costs.png"), dpi=150, facecolor=SURF, bbox_inches="tight")
 print("wrote outputs/costs*.csv, figures/f08_costs.png")

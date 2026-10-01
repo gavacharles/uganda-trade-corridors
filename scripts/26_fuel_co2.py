@@ -188,7 +188,7 @@ for yi, r in zip(y, ob.itertuples()):
             va="center", fontsize=8.5, color=INK)
 ax.set_xlim(0, left.max() * 1.45)
 ax.set_xlabel("extra litres of diesel per loaded truck trip, outbound", fontsize=9, color=INK2)
-ax.legend(loc="lower right", frameon=False, fontsize=8, labelcolor=INK2)
+ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, frameon=False, fontsize=8, labelcolor=INK2)
 yr = Y[Y.draw == 0].set_index("corridor").reindex(order)
 lo, hi = Y.groupby("corridor").friction_co2_kt_year.quantile(0.05).reindex(order), \
     Y.groupby("corridor").friction_co2_kt_year.quantile(0.95).reindex(order)
@@ -196,7 +196,7 @@ ax2.barh(y, yr.friction_co2_kt_year, color="#4e7c8a", height=0.6, linewidth=0)
 ax2.errorbar(yr.friction_co2_kt_year, y, xerr=[yr.friction_co2_kt_year - lo, hi - yr.friction_co2_kt_year],
              fmt="none", ecolor=INK2, elinewidth=0.9, capsize=3)
 for yi, (c, r) in zip(y, yr.iterrows()):
-    ax2.text(hi[c] + 0.3, yi, f"{r.friction_co2_kt_year:.1f} kt  (${r.friction_fuel_usd_year_m:.1f} M fuel)",
+    ax2.text(hi[c] + hi.max() * 0.03, yi, f"{r.friction_co2_kt_year:.1f} kt  (${r.friction_fuel_usd_year_m:.1f} M fuel)",
              va="center", fontsize=8.5, color=INK)
 ax2.set_xlim(0, hi.max() * 1.6)
 ax2.set_xlabel("kt CO2 a year from friction, heavy trucks, both directions", fontsize=9, color=INK2)
@@ -211,8 +211,9 @@ for a in (ax, ax2):
     a.grid(axis="x", color="#e4e3df", linewidth=0.6)
     a.set_axisbelow(True)
     a.tick_params(colors=INK2, length=0)
-fig.text(0.01, 1.04, "The fuel burnt slowing down and speeding up again", fontsize=15, color=INK)
-fig.text(0.01, 0.99, "Loaded truck, light traffic, dry day, against an open road. Truck counts are assumptions "
-         "(Malaba road sourced); whiskers 5th–95th percentile of 1,000 draws.", fontsize=9, color=INK2)
+fig.text(0.01, 1.10, "The fuel burnt slowing down and speeding up again", fontsize=15, color=INK)
+fig.text(0.01, 1.05, "Loaded truck, light traffic, dry day, against an open road. Truck counts surveyed on the Malaba, "
+         "Katuna and Bwera roads (NCTTCA 2025), assumed on the Elegu and Hoima roads; whiskers 5th–95th percentile "
+         "of 1,000 draws.", fontsize=9, color=INK2)
 fig.savefig(os.path.join(C.FIGURES, "f16_fuel_co2.png"), dpi=150, facecolor=SURF, bbox_inches="tight")
 print("wrote outputs/fuel_co2*.csv, figures/f16_fuel_co2.png")

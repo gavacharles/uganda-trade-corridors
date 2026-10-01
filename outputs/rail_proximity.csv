@@ -1,9 +1,11 @@
 corridor,railway,road_km_within_10km,share_of_road,share_of_truck_delay,share_of_exposure
+kampala_bwera,in use,15.5,0.037,0.083,0.062
+kampala_bwera,in use or disused,108.5,0.26,0.303,0.291
 kampala_elegu,in use,41.0,0.095,0.16,0.144
 kampala_elegu,in use or disused,41.0,0.095,0.16,0.144
 kampala_hoima,in use,6.0,0.031,0.126,0.061
 kampala_hoima,in use or disused,6.0,0.031,0.126,0.061
-kampala_katuna,in use,16.0,0.038,0.106,0.126
-kampala_katuna,in use or disused,16.0,0.038,0.106,0.126
-kampala_malaba,in use,154.5,0.715,0.809,0.781
-kampala_malaba,in use or disused,154.5,0.715,0.809,0.781
+kampala_katuna,in use,16.0,0.038,0.105,0.126
+kampala_katuna,in use or disused,16.0,0.038,0.105,0.126
+kampala_malaba,in use,154.5,0.715,0.809,0.78
+kampala_malaba,in use or disused,154.5,0.715,0.809,0.78

@@ -122,21 +122,21 @@ ax.hlines(y, R.null_p5, R.null_p95, color="#d8d6d0", linewidth=9, label="90% ran
 ax.axvline(50, color=INK2, linewidth=0.8, linestyle=":")
 ax.scatter(R.black_spot_mean_pct, y, s=60, zorder=3, color=["#c4532d" if p < 0.05 else "#9fb3b0" for p in R.p_value])
 for yi, r in zip(y, R.itertuples()):
-    ax.text(max(r.black_spot_mean_pct, r.null_p95) + 1.5, yi, f"{r.black_spot_mean_pct:.0f}  (p = {r.p_value:.3f})",
+    ax.text(max(r.black_spot_mean_pct, r.null_p95) + 1.5, yi, f"{r.black_spot_mean_pct:.0f}  (p {'< 0.001' if r.p_value < 0.001 else f'= {r.p_value:.3f}'})",
             va="center", fontsize=8.5, color=INK)
 ax.set_yticks(y)
 ax.set_yticklabels(R.measure, fontsize=9.5, color=INK)
 ax.set_xlim(20, 90)
 ax.set_xlabel("mean within-corridor percentile of the 2 km stretches holding a police black spot", fontsize=9, color=INK2)
-ax.legend(loc="lower right", frameon=False, fontsize=8.5, labelcolor=INK2)
+ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), frameon=False, fontsize=8.5, labelcolor=INK2)
 ax.set_facecolor(SURF)
 for s_ in ("top", "right", "left"):
     ax.spines[s_].set_visible(False)
 ax.spines["bottom"].set_color("#e4e3df")
 ax.tick_params(colors=INK2, length=0)
 n = int(M.matched.sum())
-fig.text(0.01, 1.05, "What police crash black spots have in common", fontsize=15, color=INK)
-fig.text(0.01, 0.995, f"{n} black spots named by Uganda Police traffic officers (2018), located by name in OSM. "
+fig.text(0.01, 1.12, "What police crash black spots have in common", fontsize=15, color=INK)
+fig.text(0.01, 1.065, f"{n} black spots named by Uganda Police traffic officers (2018), located by name in OSM. "
          "Orange: outside the chance range (p < 0.05).", fontsize=9, color=INK2)
 fig.savefig(os.path.join(C.FIGURES, "f15_black_spots.png"), dpi=150, facecolor=SURF, bbox_inches="tight")
 print("wrote outputs/black_spots_*.csv, figures/f15_black_spots.png")

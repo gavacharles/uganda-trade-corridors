@@ -1,12 +1,12 @@
 # Highways that became high streets
 
-What slows Uganda's main trade corridors, how much each cause costs in travel time, how fast the roadside has been built up, and where fixes would save the most time. Open data only.
+What slows Uganda's main trade corridors, how much each cause costs in travel time and fuel, where the risk to people lies, how fast the roadside has been built up, and where fixes would save the most. Open data for the causes; published records only to check the results.
 
 ## Paper summary
 
 **Question.** Uganda's trade corridors double as village and town high streets. Which features of the roadside and the road (trading centres, joining roads, controls, hills, water crossings, rain) slow traffic, by how much, where, and how quickly are they spreading?
 
-**Corridors.**
+**Corridors.** Every national route leaving Kampala that is longer than 100 km (found by the regional paper's search, `regional-corridors/scripts/discover_arteries.py`).
 
 | Corridor | OSM route | Length | Leads to |
 |---|---|---|---|
@@ -14,31 +14,34 @@ What slows Uganda's main trade corridors, how much each cause costs in travel ti
 | Kampala → Gulu → Elegu (South Sudan border) | A6 | 431 km | Juba; Gulu logistics hub |
 | Kampala → Masaka → Mbarara → Katuna (Rwanda border) | A2 | 426 km | Kigali, Central Corridor |
 | Kampala → Hoima | A9 | 194 km | Albertine oil region |
+| Kampala → Mubende → Fort Portal → Kasese → Bwera (DR Congo border) | A5 | 418 km | Mpondwe border, North Kivu |
 
-**Data.** OpenStreetMap (routes, junctions, controls, water), 1.25 million Google Open Buildings footprints within 1 km of the roads, GHSL built-up surface 2000–2020 (with its 2025–2030 projection), Copernicus 30 m elevation, CHIRPS rainfall, Sentinel-2 imagery for an experimental truck index, and public trip times for validation. No traffic feeds, project records or surveys.
+**Data.** OpenStreetMap (routes, junctions, controls, water), 1.54 million Google Open Buildings footprints within 1 km of the roads, GHSL built-up surface 2000–2020 (with its 2025–2030 projection), Copernicus 30 m elevation, CHIRPS rainfall, WorldPop 2025, and Sentinel-2 imagery for an experimental truck index. To check and scale the results: Rome2rio trip times and bus timetables; the Northern Corridor Transport Observatory (truck transit times by GPS and RECTS for 2025 and January–June 2026, driver stop reasons, border and weighbridge crossing times); its GHG Emissions Baseline 2025 (truck counts by station); Uganda Police black spots named by traffic officers (2018); and a documented flood on the A5. These sourced tables are in `inputs/`.
 
-**Approach.** Each corridor is cut into 500 m pieces with every measurable cause attached. Pieces are grouped into road types (open road, roadside settlement, town) by clustering. A transparent travel-time model for a car and a loaded truck turns causes into minutes, with 1,000 Monte Carlo draws over every assumption; switching one cause off at a time gives the minutes it adds. The model is checked against routing estimates and bus timetables, and the ten worst 2 km stretches on each road are mapped with their causes.
+**Approach.** Each corridor is cut into 500 m pieces with every measurable cause attached. Pieces are grouped into road types (open road, roadside settlement, town) by clustering. A transparent travel-time model for a car and a loaded truck turns causes into minutes, with 1,000 Monte Carlo draws over every assumption; switching one cause off at a time gives the minutes it adds. The model is checked against routing estimates and bus timetables, and the worst 2 km stretches on each road are mapped with their causes.
 
 **Main findings (light traffic; congestion not modelled).**
-- The model reproduces independent routing estimates of trip time (Kampala to Gulu 266 vs 286 min, to Kabale 344 vs 345, to Hoima 164 vs 172). Observed Kampala–Jinja trips (2–3 h) far exceed the model (about 1.5 h): that gap is congestion at the Kampala end.
-- Roadside activity is the largest steady cause of delay for cars on the Gulu, Katuna and Hoima roads. On the Jinja road, signals, crossings and assumed speed humps compete with it, and the ranking depends on assumptions.
-- For trucks, the five weighbridges (Magamaga, Busitema/Namutere, Luwero, Lukaya, Mbarara) are the largest single delays, if each stop takes around ten minutes.
-- Built-up land within 300 m of the road grew 27–68% between 2000 and 2020 (Elegu road +68%, Hoima +57%, Katuna +43%, Malaba +27%), mostly in roadside settlements between towns, where new friction is appearing.
-- Most of each corridor is now roadside settlement (58–76% of its length); open road is only 17–34%, and towns 8–22%.
-- Rankings are uncertain for trucks: across 1,000 draws, police posts are the largest truck delay on the Elegu road in 56% of draws and weighbridges on the Malaba road in 47% (`outputs/rank_stability.csv`). For cars, roadside activity comes first in 56–98% of draws.
+- The model reproduces independent routing estimates of trip time (Kampala to Gulu 266 vs 286 min, to Kabale 343 vs 345, to Hoima 164 vs 172). To Fort Portal it runs 15% fast (228 vs 269 min). Observed Kampala–Jinja trips (2–3 h) far exceed the model (about 1.5 h): that gap is congestion at the Kampala end.
+- Roadside activity is the largest steady cause of delay for cars on every road (first in 56–100% of draws). For trucks, the largest cause depends on the road and the draw: weighbridges on the Malaba road, police posts on the Elegu road, hills on the Bwera and Katuna roads.
+- The five weighbridges (Magamaga, Busitema/Namutere, Luwero, Lukaya, Mbarara) are the largest single delays, if each stop takes around ten minutes. The Observatory's measured median weighbridge stop is 12 minutes.
+- Built-up land within 300 m of the road grew 27–68% between 2000 and 2020 (Elegu road +68%, Hoima +57%, Bwera +57%, Katuna +44%, Malaba +27%), mostly in roadside settlements between towns.
+- Most of each corridor is now roadside settlement (56–74% of its length); open road is 18–36%, and towns 4–22%.
+- Rankings are uncertain for trucks: across 1,000 draws, police posts are the largest truck delay on the Elegu road in 56% of draws and weighbridges on the Malaba road in 47% (`outputs/rank_stability.csv`).
 
-**Extensions (scripts 16–22).**
-- *Fixes* (`16`): per truck trip, weigh-in-motion screening saves 8–16 min where there are weighbridges, and ending police-post stops saves 4–15 min. Service roads through every roadside settlement save 10–17 min, but need 125–270 km each. Bypassing the two worst towns saves only 2–5 min in light traffic (congestion relief is not captured). All four together save 29–34 min on the Malaba, Elegu and Katuna roads.
-- *Money* (`17`): delay costs heavy trucks about US$42 M a year across the four roads at central values: $19 M on the Malaba road, $14 M Katuna, $7 M Elegu, $2.5 M Hoima. Ranges are wide, because truck counts are sourced only for the Malaba road and time costs are assumed.
-- *Reliability* (`18`): from where rain actually fell on each day in 2006–2025, the 95th-percentile day is 5–9% slower than a typical day (buffer index). The Malaba road is slowed on about 87 days a year. The flood-exposure ranking puts the Busitema–Busabi wetland stretch (A1) and Lukaya–Kyoko (A2) first.
-- *Safety exposure* (`19`): roadside settlements hold 50–66% of the ~930,000 people living within 300 m of the roads, but 66–81% of the exposure (people × trucks × (speed/50)⁴), because trucks still run at 55–60 km/h there. 545 half-km pieces have a school, trucks above 50 km/h and no mapped crossing within 500 m (an upper bound, since OSM under-maps crossings).
-- *Trucks from space* (`21`, `22`): a classifier trained on 321 hand-labelled Sentinel-2 chips reaches 72% precision and 76% recall (cross-validated, AUC 0.92). The fixed threshold reaches 38% precision at the same recall. Density ranks Malaba > Katuna > Elegu > Hoima, matching the traffic ordering, but the candidate step still misses most trucks, so it remains a relative index. Parked-truck clusters cannot be resolved at 10 m.
+**Extensions (scripts 16–26).**
+- *Fixes* (`16`): per truck trip, weigh-in-motion screening saves 8–16 min where there are weighbridges, and ending police-post stops saves 4–15 min. Service roads through every roadside settlement save 10–23 min, but need 124–281 km each. Bypassing the two worst towns saves 0–4 min in light traffic (congestion relief is not captured).
+- *Money* (`17`): delay costs heavy trucks about US$41 M a year across the five roads at central values: $19 M on the Malaba road, $7 M each on the Katuna and Elegu roads, $5 M Bwera, $2.5 M Hoima. Truck counts are surveyed on the Malaba, Katuna and Bwera roads and assumed on the other two; hourly costs are assumed.
+- *Reliability* (`18`): from where rain actually fell on each day in 2006–2025, the 95th-percentile day is 5–9% slower than a typical day. The flood-exposure ranking puts the Busitema–Busabi wetland stretch (A1) and Lukaya–Kyoko (A2) first. The stretch at Mpondwe where the May 2020 flood destroyed the Uganda–DR Congo bridge ranks at the 92nd percentile on the A5, though outside its top ten.
+- *Safety exposure* (`19`): roadside settlements hold 49–76% of the ~1.18 million people living within 300 m of the roads, but 65–79% of the exposure (people × trucks × (speed/50)⁴), because trucks still run at 55–60 km/h there. 688 half-km pieces have a school, trucks above 50 km/h and no mapped crossing within 500 m (an upper bound).
+- *Trucks from space* (`21`, `22`): a classifier trained on 321 hand-labelled Sentinel-2 chips reaches 72% precision and 76% recall (cross-validated, AUC 0.92). It covers the original four roads; it remains a relative index.
+- *Rail* (`23`): 81% of the Malaba road's truck delay lies within 10 km of the metre-gauge railway the SGR follows; on the other roads it is 16% or less. Screening alignments are drawn for the other four roads, including a Western line along the A5 (the metre gauge to Kasese is disused). Moving 30% of each road's truck freight to rail does not pay back on Uganda's own freight (benefit/cost at most 0.09 at the 95th percentile). Even with transit freight from Mombasa, the eastern line needs about 93 Mt a year to break even.
+- *Transit gap* (`24`): trucks take 17–93 h between Kampala and a border (Observatory GPS and RECTS, 2025–26), against 5–9 h of modelled driving. Roadside and control friction is 2–14% of the real trip; the rest is stopped time, mostly rest and meals and border procedures. The Malaba border crossing averaged 48 min in 2025, against about 2 h of friction on the Kampala–Malaba road.
+- *Crash black spots* (`25`): 40 of 58 black spots named by police traffic officers can be located on the roads. Against random stretches near a named place, their stretches rank high on roadside buildings (71st percentile, p < 0.001) and joining roads (65th, p = 0.003), and low on truck speed (32nd, p < 0.001): busy, slower trading centres, not fast bends. The exposure index points at them only weakly (59th, p = 0.08), because its speed⁴ term favours fast stretches.
+- *Fuel and CO₂* (`26`): a physical fuel model on the same speed profile gives 29–75 extra litres of diesel per loaded truck trip from friction (25–41% of trip fuel), about 140 kt of CO₂ and $70 M of diesel a year across the five roads. Assumed speed humps drive the Malaba road's figure, so it carries a wide range.
 
-- *Rail* (`23`): 81% of the Malaba road's truck delay and 78% of its safety exposure lie within 10 km of the metre-gauge railway, whose corridor the contracted SGR follows. On the other roads it's 16% or less. The script draws least-cost screening alignments for the other roads: Kampala–Masaka–Mbarara–Katuna (516 km), Kampala–Luwero–Karuma–Gulu–Elegu (427 km) and Kampala–Hoima (250 km). Moving 30% of each road's truck freight to rail does not pay back on Uganda's own freight: benefit/cost is at most 0.15, and rail takes about 17 h door to door against 5 h by truck. Even carrying transit freight through from Mombasa, the eastern line needs about 93 Mt a year to break even, roughly 11 times the Malaba road's freight today.
+**Formats.** The slide deck (`presentation/`, rebuilt by `presentation/build_deck.py`, which reads every number from `outputs/`) has 23 slides. The web pages are in `web/`. The interactive corridor explorer (`explorer.html`, data from `build_web_data.py`) is at https://claude.ai/artifact/XN16h4dSE1NWx4JQiKBxkh. The plain-language story (`story.html`) is at https://claude.ai/artifact/H9P23nQSbxic3we5ZyRFzw. A two-page policy brief (four-corridor version) is at https://claude.ai/code/artifact/bc8d3184-ea02-4582-bfe1-cda7aeb2e288. All three links are private until shared.
 
-**Formats.** The slide deck (`presentation/`, rebuilt by `presentation/build_deck.py`) has 20 slides, including the animations and the new results. The web pages are in `web/`. The interactive corridor explorer (`explorer.html`, data from `build_web_data.py`) is at https://claude.ai/artifact/XN16h4dSE1NWx4JQiKBxkh. The plain-language story (`story.html`) is at https://claude.ai/artifact/H9P23nQSbxic3we5ZyRFzw. A two-page policy brief is at https://claude.ai/code/artifact/bc8d3184-ea02-4582-bfe1-cda7aeb2e288. All three links are private until shared.
-
-**Status.** Analysis, extensions, maps and animations complete; write-up not started. A second paper, comparing the roads out of East and Southern African capitals, is in `regional-corridors/`.
+**Status.** Five corridors; analysis, extensions, maps, animations, deck and web pages complete; write-up not started. Waiting on an Earth Engine project (Open Buildings 2.5D Temporal, growth to 2023) and a Mapillary token (speed-hump detections). A second paper, comparing the roads out of East and Southern African capitals, is in `regional-corridors/`.
 
 **Related repositories.** Companion papers by the same author: `uganda-seasons-construction-delay` (rain and construction delay) and `uganda-rainy-season-access-study` (seasonal access to health care, schools and markets).
 
@@ -50,7 +53,7 @@ There is no live or historical traffic data we can use: commercial feeds need ca
 
 1. Where on each road is travel slowed, and by which causes?
 2. How much has the roadside been built up since 2000?
-3. Which stretches and which fixes would save the most time?
+3. Which stretches and which fixes would save the most time, fuel and risk?
 
 ## Causes measured per 500 m piece
 
@@ -82,7 +85,7 @@ Not measurable from open data, and reported as limits: congestion, crashes, brea
 
 | File | Shows |
 |---|---|
-| `figures/m01_study_area.png` | Study area: the four corridors on Uganda, towns, border crossings, weighbridges |
+| `figures/m01_study_area.png` | Study area: the five corridors on Uganda, towns, border crossings, weighbridges |
 | `figures/m02_bottlenecks.png` | Truck minutes lost per km on every corridor; numbered national hotspots |
 | `figures/m03_hotspots.png`, `figures/hotspots/` | 4 km close-ups of each national hotspot: buildings, all OSM roads, water, controls |
 | `figures/m04_growth.png` | Fastest-growing 5 km on each road: built up by 2000, and since |
@@ -103,10 +106,13 @@ Not measurable from open data, and reported as limits: congestion, crashes, brea
 | `figures/g04_time_map.png` | The corridors redrawn with length proportional to truck travel time |
 | `presentation/highways_high_streets.pptx` | Slide deck: background, problem, method, results, discussion |
 | `figures/f12_rail_map.png`, `f13_rail_economics.png` | Existing railway and screening rail alignments over road delay; what a shift of freight to rail would pay back |
+| `figures/f14_transit_gap.png` | Observed truck transit (NCTTCA) against modelled driving time; why trucks stop |
+| `figures/f15_black_spots.png` | Where police crash black spots rank on exposure, buildings, junctions, speed and design |
+| `figures/f16_fuel_co2.png` | Extra diesel per truck trip by cause, and CO₂ a year |
 
 ## Pipeline
 
-Install the packages in `requirements.txt` (Python 3.9) and run each script from `scripts/` (locally, `../.venv/bin/python`). Start with `00_download_base.sh` (OSM extract, district boundaries, CHIRPS 2006–2025, Natural Earth lakes). Corridors are defined once in `scripts/config.py`; every script loops over them.
+Install the packages in `requirements.txt` (Python 3.9) and run each script from `scripts/`. The project lives in OneDrive, so the environment is kept outside it, at `~/.venvs/uganda-trade-corridors` (the `.venv` file holds the path). Start with `00_download_base.sh` (OSM extract, district boundaries, CHIRPS 2006–2025, Natural Earth lakes). Corridors are defined once in `scripts/config.py`; every script loops over them.
 
 | Script | Does |
 |---|---|
@@ -133,17 +139,20 @@ Install the packages in `requirements.txt` (Python 3.9) and run each script from
 | `20_story_figures.py` | Waterfall, rank stability, strip maps, time map |
 | `21_truck_candidates.py`, `22_truck_classifier.py`, `s2lib.py` | Truck candidates with image patches; labelling sheets, classifier and calibrated index (labels in `outputs/truck_labels.csv`) |
 | `23_rail.py` | Rail near the bottlenecks, least-cost screening alignments (250 m grid: grade, built-up land, lakes), freight-shift economics |
+| `24_transit_gap.py` | Observed truck transit (inputs/nc_observatory_*.csv) against the model; weighbridge-stop check |
+| `25_black_spots.py` | Police black spots (inputs/police_black_spots_2018.csv) located by name; permutation tests against exposure and design |
+| `26_fuel_co2.py` | Physical fuel model on the model's speed profile: extra litres and CO₂ by cause, Monte Carlo |
 | `14_trucks.py` | Moving-truck index from Sentinel-2 L2A (Earth Search), 2023–2025, < 10% cloud (experimental; `debug_trucks.py` tests one chunk) |
 
 `poll.py` (live TomTom/HERE collection) is kept but is not part of the plan.
 
 ## Known limits
 
-- Annual costs rest on assumed truck counts and time costs (sourced anchor: 8.7 Mt of cargo on Malaba–Kampala in 2017). Replace them with UNRA counts and HDM-4 values before quoting absolute figures. Per-trip minutes do not depend on them.
+- Annual costs rest on truck counts surveyed at stations on the Malaba, Katuna and Bwera roads (NCTTCA GHG Baseline 2025) but assumed on the Elegu and Hoima roads, and on assumed time costs. Replace them with UNRA counts and HDM-4 values before quoting absolute figures. Per-trip minutes do not depend on them.
 - Congestion is not modelled. Results describe light traffic; peak-hour delay near Kampala is larger.
-- OSM records few speed humps (under 60 within 1 km of all four roads), far below reality; one hump per town piece is assumed, with a 0–2 range.
+- OSM records few speed humps (under 60 within 1 km of the original four roads), far below reality; one hump per town piece is assumed, with a 0–2 range.
 - Police posts are OSM police stations within 30 m of the road; whether and how long they stop trucks is an assumption (0–5 min).
-- Weighbridges are found by name in OSM and each counted once, in the nearest piece: Magamaga and Busitema/Namutere (A1), Luwero (A6), Lukaya and Mbarara (A2). None is mapped on the A9. The Malaba border weighbridge is not named in OSM.
+- Weighbridges are found by name in OSM and each counted once, in the nearest piece: Magamaga and Busitema/Namutere (A1), Luwero (A6), Lukaya and Mbarara (A2). None is mapped on the A9 or the A5. The Malaba border weighbridge is not named in OSM.
 - Lakes are Natural Earth 1:10m; place names on close-ups are OSM place nodes.
 - The classified truck index (`22`) rests on 321 chips labelled by one person at 10 m resolution, so the labels are noisy. It still undercounts, because candidates come from a loose threshold that misses most trucks. The original index, described next, is kept for comparison. The original truck index is unsupervised and unvalidated: a simplified version of the band-offset idea in Fisser et al. (2022), with a threshold set on one test chunk (counts at looser and stricter thresholds are kept as a range). Earth Search COGs read without the documented −1000 reflectance offset, although their metadata says it is not applied; the script checks the data. The index is not used in the travel-time model. First results (2023–2025, about six clear scenes per 5 km): 0.01–0.06 candidates per km on average (0.07–0.21 at the looser threshold), well below the roughly 0.7 trucks per km a busy corridor should hold, so it undercounts. A visual check of the strongest candidates (`figures/trucks_check/`) shows plausible moving trucks on open road but false positives from roofs and clutter in towns. Use it, if at all, as a relative index on open-road stretches (`22` now does this with labelled chips).
 - OSM has no A6 route tag between roughly Kafu and Kigumba; the centreline follows the untagged main road there. On the A1 near Malaba, one-way tags are ignored because they leave no directed route.
@@ -151,3 +160,7 @@ Install the packages in `requirements.txt` (Python 3.9) and run each script from
 - Open Buildings v3 reflects imagery from about 2020–2022; change over time comes from GHSL.
 - GHSL's observed epochs end in 2020. Its 2025 and 2030 layers are JRC projections from the past trend, and end-2026 is interpolated between them. The projection is much slower than the observed record (+5–9% for 2020–2026 on each road, against, for example, +13.5% in 2015–2020 alone on the Elegu road), so it probably understates recent roadside building. Treat the projected animations as illustrative. Google's Open Buildings 2.5D Temporal (annual to 2023, via Earth Engine) would be the way to observe beyond 2020.
 - The ranking of causes is not stable everywhere: on the Kampala end of the A1 it depends on assumed humps and signal delays. The paper should report rankings with their Monte Carlo shares.
+- The transit-gap comparison sets observed door-to-door truck times (bonded RECTS cargo and a GPS fleet sample) against modelled moving time; the Observatory's route distances differ slightly from the centrelines. Kampala–Hoima is not reported.
+- Black spots are a 2018 list based on officers' judgement, located by place name; forest and swamp spots (Mabira, Busoba, Kamajungo) are not matched, which biases the test towards settlements (the stricter null controls for this).
+- The fuel model counts rolling, air and re-acceleration energy at a fixed tank-to-wheel efficiency; roadside slow-downs are an assumed count per piece, and humps are assumed, so the fuel totals are indicative.
+- The model runs 15% fast to Fort Portal (228 against 269 min); pavement condition on the A5 is not in the model.

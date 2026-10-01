@@ -1,0 +1,15 @@
+null,measure,black_spot_mean_pct,null_mean,null_p5,null_p95,p_value,top_quintile_share_pct,n_black_spot_stretches,n_pool
+all stretches,safety exposure index,59.0,50.4,43.0,57.7,0.0482,28,39,844
+all stretches,truck speed,32.2,50.2,43.0,57.9,0.0002,3,39,844
+all stretches,curvature,55.9,50.2,42.8,57.6,0.2094,28,39,844
+all stretches,grade,59.8,50.3,42.9,57.8,0.0366,26,39,844
+all stretches,wetland share,49.9,50.3,47.3,53.9,0.8836,8,39,844
+all stretches,joining roads,64.7,50.4,42.8,57.9,0.0014,36,39,844
+all stretches,buildings within 300 m,70.6,50.2,42.7,57.7,0.0002,44,39,844
+stretches near a named place,safety exposure index,59.0,51.3,44.0,58.7,0.0812,28,39,824
+stretches near a named place,truck speed,32.2,49.5,41.9,56.9,0.0002,3,39,824
+stretches near a named place,curvature,55.9,50.6,43.3,58.1,0.2338,28,39,824
+stretches near a named place,grade,59.8,50.5,43.2,57.9,0.0416,26,39,824
+stretches near a named place,wetland share,49.9,50.3,47.3,54.0,0.8812,8,39,824
+stretches near a named place,joining roads,64.7,51.0,43.5,58.3,0.003,36,39,824
+stretches near a named place,buildings within 300 m,70.6,51.0,43.7,58.2,0.0002,44,39,824
