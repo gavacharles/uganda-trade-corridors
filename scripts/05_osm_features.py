@@ -20,9 +20,33 @@ import config as C
 def read_osm(layer, **kw):
     """One layer from every extract in config.PBFS, concatenated. Only features meeting the 1 km
     zone are kept as they are read (a spatial mask), so memory holds the corridors' features,
-    not whole countries' (the regional study's bounding box covers most of the subcontinent)."""
-    return pd.concat([pyogrio.read_dataframe(pbf, layer=layer, mask=MASK, **kw) for pbf in C.PBFS],
-                     ignore_index=True)
+    not whole countries' (the regional study's bounding box covers most of the subcontinent).
+    If a malformed OSM geometry makes the mask test fail (e.g. a 2-point ring), that extract is
+    read again within the mask's bounds, skipping geometries that cannot be decoded."""
+    parts = []
+    for pbf in C.PBFS:
+        try:
+            parts.append(pyogrio.read_dataframe(pbf, layer=layer, mask=MASK, **kw))
+        except pyogrio.errors.DataLayerError as e:
+            print(f"  {os.path.basename(pbf)} {layer}: mask failed ({e}); reading within bounds instead", flush=True)
+            meta, _, geom, fields = pyogrio.raw.read(pbf, layer=layer, bbox=tuple(MASK.bounds), **kw)
+            g = shapely.from_wkb(geom, on_invalid="ignore")
+            df = gpd.GeoDataFrame(dict(zip(meta["fields"], fields)), geometry=g, crs=4326)
+            parts.append(df[df.geometry.notna()])
+    return pd.concat(parts, ignore_index=True)
+
+
+def cached(name, make):
+    """A finished layer is kept in data/_osm_cache_<name>.parquet, so a re-run after a failure
+    resumes instead of re-reading every extract; the caches are removed once all layers are written."""
+    path = os.path.join(C.DATA, f"_osm_cache_{name}.parquet")
+    if os.path.exists(path):
+        print(f"{name}: from cache", flush=True)
+        return gpd.read_parquet(path)
+    df = make()
+    df.to_parquet(path)
+    print(f"{name}: {len(df):,} features", flush=True)
+    return df
 
 OUT = os.path.join(C.DATA, "osm_features.gpkg")
 BUFFER_M = 1000
@@ -81,7 +105,7 @@ def clip(df, repair=False):
 
 
 # Points
-pts = clip(read_osm("points"))
+pts = cached("points_raw", lambda: clip(read_osm("points")))
 for k in ("traffic_calming", "railway", "amenity", "shop", "public_transport"):
     pts[k] = tag(pts, k)
 pts["kind"] = pts.apply(classify_point, axis=1)
@@ -91,20 +115,21 @@ pts.loc[pts.name.fillna("").str.contains(WEIGH), "kind"] = "weighbridge"
 pts = pts[pts.kind.notna()][["osm_id", "name", "kind", "place", "geometry"]]
 
 # Roads (all classes) for junctions
-roads = clip(read_osm("lines", where="highway IS NOT NULL"))
+roads = cached("roads", lambda: clip(read_osm("lines", where="highway IS NOT NULL")))
 roads = roads[["osm_id", "name", "highway", "geometry"]]
 
 # Waterways
-water = clip(read_osm("lines", where="waterway IS NOT NULL"))
+water = cached("water", lambda: clip(read_osm("lines", where="waterway IS NOT NULL")))
 water = water[["osm_id", "name", "waterway", "geometry"]]
 
 # Areas
-areas = clip(repair=True, df=read_osm("multipolygons",
-    where="amenity = 'marketplace' OR landuse IN ('retail','commercial') OR natural = 'wetland'"))
+areas = cached("areas", lambda: clip(repair=True, df=read_osm("multipolygons",
+    where="amenity = 'marketplace' OR landuse IN ('retail','commercial') OR natural = 'wetland'")))
 areas["kind"] = areas.apply(lambda r: "wetland" if r.natural == "wetland" else
                             ("market" if r.amenity == "marketplace" else "commercial"), axis=1)
 areas = areas[["osm_id", "osm_way_id", "name", "kind", "geometry"]]
-wb = clip(read_osm("multipolygons", where="name IS NOT NULL"), repair=True)
+# named "weigh..." areas only (OGR SQL LIKE ignores case); the regex below then matches exactly
+wb = cached("weigh_areas", lambda: clip(read_osm("multipolygons", where="name LIKE '%weigh%'"), repair=True))
 wb = wb[wb.name.str.contains(WEIGH)]
 wb = gpd.GeoDataFrame(dict(osm_id=wb.osm_way_id.fillna(wb.osm_id), name=wb.name, kind="weighbridge", place=None),
                       geometry=wb.geometry.representative_point(), crs=4326)
@@ -116,4 +141,7 @@ for name, df in (("points", pts), ("roads", roads), ("waterways", water), ("area
     df.to_file(OUT, layer=name, driver="GPKG")
 print(pts.kind.value_counts().to_string())
 print(f"roads {len(roads):,}; waterways {len(water):,}; areas", areas.kind.value_counts().to_dict())
+for f in os.listdir(C.DATA):
+    if f.startswith("_osm_cache_"):
+        os.remove(os.path.join(C.DATA, f))
 print("wrote", OUT)
