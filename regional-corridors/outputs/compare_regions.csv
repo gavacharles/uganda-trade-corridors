@@ -1,0 +1,3 @@
+region,truck_min_per_100km,car_min_per_100km,settlement_share,town_share,open_share,buildings_100m_per_km,dual_share,controls_per_100km,growth_2000_2020,people_per_km,exposure_per_km,arteries
+East,35.108,21.143,0.539,0.141,0.23,155.038,0.017,1.517,0.539,1225.49,1.085,20
+Southern,17.784,9.728,0.31,0.04,0.644,34.344,0.142,7.5,0.347,271.087,0.435,34

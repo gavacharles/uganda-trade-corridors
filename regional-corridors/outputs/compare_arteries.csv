@@ -1,0 +1,55 @@
+corridor,hub,region,country,ref,toward,trade,km,truck_min_per_100km,car_min_per_100km,settlement_share,town_share,open_share,buildings_100m_per_km,dual_share,controls_per_100km,growth_2000_2020,people_per_km,exposure_per_km
+dar_es_salaam_road_dodoma,dar_es_salaam,East,United Republic of Tanzania,,Dodoma,True,200.0,53.875,32.554,0.485,0.275,0.24,153.53,0.162,11.0,0.371,1902.045,1.927
+dar_es_salaam_t1_tunduma,dar_es_salaam,East,United Republic of Tanzania,T1,Tunduma,True,200.0,54.615,39.044,0.458,0.308,0.235,156.545,0.19,18.5,0.208,2295.935,2.166
+dar_es_salaam_t7_lindi,dar_es_salaam,East,United Republic of Tanzania,T7,Lindi,False,200.0,23.551,17.058,0.558,0.135,0.308,135.025,0.06,0.5,0.63,1433.185,1.337
+dodoma_t3_morogoro,dodoma,East,United Republic of Tanzania,T3,Morogoro,False,200.0,16.448,11.794,0.48,0.09,0.43,91.685,0.002,0.0,1.192,404.29,0.606
+dodoma_t3_rusomo,dodoma,East,United Republic of Tanzania,T3,Rusomo,False,200.0,19.99,10.025,0.395,0.092,0.512,53.64,0.015,0.5,0.538,260.925,0.494
+dodoma_t5_arusha,dodoma,East,United Republic of Tanzania,T5,Arusha,False,200.0,20.606,10.478,0.378,0.07,0.552,60.995,0.002,0.0,0.701,228.44,0.366
+dodoma_t5_iringa,dodoma,East,United Republic of Tanzania,T5,Iringa,False,200.0,14.299,10.909,0.33,0.075,0.595,54.535,0.005,0.0,0.787,292.22,0.463
+gaborone_a12_326_km,gaborone,Southern,Botswana,A12,326 km,False,200.0,20.09,19.284,0.25,0.075,0.675,39.63,0.065,21.5,0.136,238.015,0.413
+gaborone_a1_121_km,gaborone,Southern,Botswana,A1,121 km,False,125.5,21.195,18.406,0.299,0.068,0.633,42.319,0.251,17.53,0.295,304.159,0.522
+gaborone_a1_ramokgwebana,gaborone,Southern,Botswana,A1,Ramokgwebana,True,200.0,15.438,9.142,0.178,0.042,0.78,14.47,0.228,9.5,0.348,74.79,0.15
+harare_a1_chirundu,harare,Southern,Zimbabwe,A1,Chirundu,True,200.0,15.533,9.192,0.262,0.048,0.69,30.745,0.012,6.0,0.396,229.65,0.368
+harare_a4_beitbridge,harare,Southern,Zimbabwe,A4,Beitbridge,True,200.0,7.048,4.33,0.15,0.032,0.818,21.7,0.17,1.0,0.399,145.15,0.246
+harare_p1_mucumbura,harare,Southern,Zimbabwe,P1,Mucumbura,False,200.0,12.657,3.995,0.475,0.015,0.51,32.745,0.105,2.0,1.183,207.095,0.434
+harare_r2_plumtree,harare,Southern,Zimbabwe,R2,Plumtree,False,200.0,7.61,5.212,0.318,0.032,0.65,31.03,0.288,1.0,0.482,319.91,0.55
+harare_r4_nyamapanda,harare,Southern,Zimbabwe,R4,Nyamapanda,False,200.0,12.49,5.088,0.572,0.022,0.405,34.905,0.0,2.0,0.904,208.47,0.428
+harare_r5_mutare,harare,Southern,Zimbabwe,R5,Mutare,False,200.0,11.456,5.625,0.302,0.038,0.66,32.875,0.222,1.0,0.378,338.755,0.549
+johannesburg_n12_de_rust,johannesburg,Southern,South Africa,N12,De Rust,False,200.0,35.27,33.002,0.355,0.075,0.57,41.68,0.592,42.5,0.311,371.54,0.758
+johannesburg_n12_emalahleni,johannesburg,Southern,South Africa,N12,eMalahleni,False,132.0,22.668,16.045,0.337,0.053,0.61,75.477,0.985,16.667,0.124,423.121,0.62
+johannesburg_n17_msauli,johannesburg,Southern,South Africa,N17,Msauli,False,200.0,14.756,5.366,0.252,0.015,0.732,28.275,0.258,7.5,0.108,203.67,0.437
+johannesburg_n3_durban,johannesburg,Southern,South Africa,N3,Durban,True,200.0,17.833,2.708,0.16,0.005,0.835,21.28,0.58,6.0,0.29,189.415,0.324
+johannesburg_r24_rustenburg,johannesburg,Southern,South Africa,R24,Rustenburg,False,119.5,92.137,86.874,0.444,0.226,0.331,177.64,0.192,103.766,0.128,896.552,0.732
+johannesburg_r25_groblersdal,johannesburg,Southern,South Africa,R25,Groblersdal,False,192.0,41.954,35.612,0.354,0.094,0.552,66.536,0.104,42.188,0.22,326.177,0.4
+johannesburg_r29_evander,johannesburg,Southern,South Africa,R29,Evander,False,125.5,59.447,55.281,0.406,0.211,0.382,157.211,0.0,56.574,0.112,999.992,0.948
+johannesburg_r59_dealesville,johannesburg,Southern,South Africa,R59,Dealesville,False,200.0,15.499,12.393,0.285,0.038,0.678,32.085,0.36,13.0,0.165,166.275,0.427
+kampala_a1_malaba,kampala,East,Uganda,A1,Malaba,True,200.0,59.491,37.42,0.552,0.292,0.155,337.885,0.102,12.0,0.25,1800.08,1.386
+kampala_a2_katuna,kampala,East,Uganda,A2,Katuna,True,200.0,46.736,25.522,0.675,0.198,0.128,294.675,0.005,2.5,0.318,1209.28,0.852
+kampala_a5_bwera,kampala,East,Uganda,A5,Bwera,True,200.0,34.726,18.284,0.832,0.09,0.078,246.7,0.005,1.0,0.643,1024.525,0.844
+kampala_a6_elegu,kampala,East,Uganda,A6,Elegu,True,200.0,33.839,20.803,0.488,0.188,0.325,182.795,0.0,3.0,0.39,997.67,0.852
+kampala_a9_hoima,kampala,East,Uganda,A9,Hoima,True,195.5,30.763,18.945,0.829,0.107,0.064,253.069,0.0,1.535,0.54,1307.673,1.18
+kigali_nr1_huye,kigali,East,Rwanda,NR1,Huye,False,157.5,49.382,30.756,0.825,0.102,0.073,234.781,0.019,5.714,0.316,1361.733,1.292
+kigali_nr2_gisenyi,kigali,East,Rwanda,NR2,Gisenyi,False,150.5,54.767,34.619,0.804,0.156,0.04,273.548,0.0,0.664,0.425,1561.688,1.269
+kigali_nr3_gatuna,kigali,East,Rwanda,NR3,Gatuna,True,76.0,32.011,21.55,0.783,0.053,0.164,124.013,0.0,0.0,1.007,813.605,0.989
+kigali_road_rusumo,kigali,East,Rwanda,,Rusumo,True,159.0,44.709,32.112,0.77,0.195,0.035,305.006,0.028,0.629,0.712,1557.899,1.474
+lusaka_m9_mongu,lusaka,Southern,Zambia,M9,Mongu,False,200.0,13.487,9.144,0.528,0.042,0.43,47.25,0.005,4.0,0.536,414.91,0.576
+lusaka_t1_livingstone,lusaka,Southern,Zambia,T1,Livingstone,True,200.0,22.203,18.034,0.432,0.102,0.465,63.86,0.06,6.0,0.366,574.495,0.784
+lusaka_t2_chirundu,lusaka,Southern,Zambia,T2,Chirundu,True,136.0,33.916,26.279,0.504,0.165,0.331,70.691,0.114,12.5,0.346,860.096,1.039
+lusaka_t2_nakonde,lusaka,Southern,Zambia,T2,Nakonde,True,200.0,20.756,17.033,0.422,0.1,0.478,64.14,0.422,10.5,0.346,654.565,0.642
+lusaka_t4_234_km,lusaka,Southern,Zambia,T4,234 km,False,200.0,22.462,13.527,0.555,0.085,0.36,56.45,0.06,6.5,0.612,485.28,0.764
+maputo_en4_ressano_garcia,maputo,Southern,Mozambique,EN4,Ressano Garcia,True,93.5,43.124,37.437,0.332,0.235,0.433,139.508,0.23,23.529,0.465,1168.118,1.001
+maputo_n1_pemba,maputo,Southern,Mozambique,N1,Pemba,False,200.0,41.671,33.414,0.532,0.322,0.145,178.74,0.0,1.5,0.492,922.175,0.89
+nairobi_a2_moyale,nairobi,East,Kenya,A2,Moyale,False,200.0,35.492,21.484,0.748,0.17,0.082,130.6,0.642,1.5,0.445,1241.7,1.961
+nairobi_a2_namanga,nairobi,East,Kenya,A2,Namanga,False,159.0,40.318,17.414,0.374,0.148,0.478,69.881,0.148,10.692,0.927,605.113,0.818
+nairobi_a8_malaba,nairobi,East,Kenya,A8,Malaba,True,200.0,49.048,31.307,0.525,0.25,0.225,160.32,0.245,9.0,0.358,1602.765,1.839
+nairobi_a8_mombasa,nairobi,East,Kenya,A8,Mombasa,True,200.0,27.38,13.599,0.445,0.115,0.44,65.7,0.228,8.0,0.763,543.7,0.726
+pretoria_n14_springbok,pretoria,Southern,South Africa,N14,Springbok,False,200.0,16.904,10.264,0.332,0.03,0.638,49.005,0.298,9.0,0.632,335.91,0.44
+pretoria_n1_beitbridge,pretoria,Southern,South Africa,N1,Beitbridge,True,200.0,17.314,6.888,0.168,0.012,0.82,29.135,0.0,9.5,0.232,178.54,0.303
+pretoria_n1_cape_town,pretoria,Southern,South Africa,N1,Cape Town,False,200.0,17.734,8.279,0.425,0.025,0.55,70.7,0.728,6.5,0.201,517.135,1.03
+pretoria_n4_lebombo,pretoria,Southern,South Africa,N4,Lebombo,True,200.0,21.96,4.312,0.26,0.01,0.73,30.295,0.0,5.0,0.37,223.305,0.409
+pretoria_n4_lekubu,pretoria,Southern,South Africa,N4,Lekubu,False,199.0,13.603,4.845,0.289,0.018,0.693,33.784,0.44,3.015,0.511,182.879,0.366
+windhoek_b1_797_km,windhoek,Southern,Namibia,B1,797 km,False,200.0,15.058,12.734,0.075,0.045,0.88,13.2,0.035,17.0,0.278,52.08,0.08
+windhoek_b2_walvis_bay,windhoek,Southern,Namibia,B2,Walvis Bay,True,200.0,8.354,1.269,0.095,0.008,0.898,5.495,0.355,1.5,0.542,19.175,0.046
+windhoek_b6_buitepos,windhoek,Southern,Namibia,B6,Buitepos,True,200.0,8.93,6.201,0.062,0.02,0.918,11.32,0.025,7.5,0.33,19.21,0.02
+windhoek_c26_194_km,windhoek,Southern,Namibia,C26,194 km,False,198.5,31.86,18.459,0.01,0.033,0.957,11.703,0.038,26.7,0.093,25.683,0.022
+windhoek_c28_swakopmund,windhoek,Southern,Namibia,C28,Swakopmund,False,200.0,19.742,5.985,0.035,0.008,0.958,9.24,0.0,3.5,0.438,40.505,0.043

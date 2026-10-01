@@ -1,0 +1,163 @@
+corridor,type_rank,road_type,km,buildings_100m,joining_roads,activity,share
+dar_es_salaam_road_dodoma,0,open road,153.0,1.0,0.7,0.1,0.336
+dar_es_salaam_road_dodoma,1,roadside settlement,220.0,53.9,2.0,0.3,0.484
+dar_es_salaam_road_dodoma,2,town,82.0,174.1,5.5,23.5,0.18
+dar_es_salaam_t1_tunduma,0,open road,359.5,0.9,0.4,0.0,0.385
+dar_es_salaam_t1_tunduma,1,roadside settlement,456.0,81.4,2.0,0.1,0.489
+dar_es_salaam_t1_tunduma,2,town,117.5,208.0,6.5,24.2,0.126
+dar_es_salaam_t7_lindi,0,open road,64.5,1.9,0.2,0.0,0.317
+dar_es_salaam_t7_lindi,1,roadside settlement,112.0,52.1,1.8,0.1,0.55
+dar_es_salaam_t7_lindi,2,town,27.0,279.8,6.2,25.2,0.133
+dodoma_t3_morogoro,0,open road,88.0,1.1,0.6,0.0,0.436
+dodoma_t3_morogoro,1,roadside settlement,96.0,68.4,1.9,0.3,0.475
+dodoma_t3_morogoro,2,town,18.0,139.2,5.0,4.0,0.089
+dodoma_t3_rusomo,0,open road,103.5,1.4,0.3,0.0,0.514
+dodoma_t3_rusomo,1,roadside settlement,79.5,34.8,1.0,0.3,0.395
+dodoma_t3_rusomo,2,town,18.5,132.9,5.4,3.3,0.092
+dodoma_t5_arusha,0,open road,110.5,1.0,0.3,0.0,0.548
+dodoma_t5_arusha,1,roadside settlement,77.0,50.0,0.9,0.0,0.382
+dodoma_t5_arusha,2,town,14.0,160.7,6.9,3.3,0.069
+dodoma_t5_iringa,0,open road,121.0,0.8,0.3,0.0,0.599
+dodoma_t5_iringa,1,roadside settlement,66.0,53.3,1.7,0.1,0.327
+dodoma_t5_iringa,2,town,15.0,122.3,6.6,2.8,0.074
+gaborone_a12_326_km,0,open road,135.5,0.8,0.3,0.0,0.676
+gaborone_a12_326_km,1,roadside settlement,50.0,37.8,2.2,0.1,0.249
+gaborone_a12_326_km,2,town,15.0,130.7,7.0,2.7,0.075
+gaborone_a1_121_km,0,open road,79.5,1.3,0.4,0.0,0.633
+gaborone_a1_121_km,1,roadside settlement,37.5,45.8,1.9,0.1,0.299
+gaborone_a1_121_km,2,town,8.5,97.9,5.9,3.5,0.068
+gaborone_a1_ramokgwebana,0,open road,391.5,0.8,0.3,0.0,0.782
+gaborone_a1_ramokgwebana,1,roadside settlement,94.0,23.2,1.4,0.1,0.188
+gaborone_a1_ramokgwebana,2,town,15.0,81.2,7.5,4.5,0.03
+harare_a1_chirundu,0,open road,265.5,0.6,0.5,0.1,0.764
+harare_a1_chirundu,1,roadside settlement,71.5,32.2,1.5,0.3,0.206
+harare_a1_chirundu,2,town,10.5,98.0,5.2,17.5,0.03
+harare_a4_beitbridge,0,open road,440.5,0.7,0.3,0.0,0.767
+harare_a4_beitbridge,1,roadside settlement,122.5,25.4,1.4,0.1,0.213
+harare_a4_beitbridge,2,town,11.5,101.3,6.3,2.7,0.02
+harare_p1_mucumbura,0,open road,102.0,1.2,0.4,0.0,0.509
+harare_p1_mucumbura,1,roadside settlement,95.5,29.7,1.2,0.1,0.476
+harare_p1_mucumbura,2,town,3.0,106.8,12.7,0.8,0.015
+harare_r2_plumtree,0,open road,130.5,0.9,0.4,0.0,0.651
+harare_r2_plumtree,1,roadside settlement,63.5,34.0,1.4,0.2,0.317
+harare_r2_plumtree,2,town,6.5,128.3,6.8,4.6,0.032
+harare_r4_nyamapanda,0,open road,81.0,1.7,0.5,0.0,0.404
+harare_r4_nyamapanda,1,roadside settlement,115.0,23.9,1.2,0.0,0.574
+harare_r4_nyamapanda,2,town,4.5,135.1,9.4,0.9,0.022
+harare_r5_mutare,0,open road,133.5,0.8,0.4,0.0,0.663
+harare_r5_mutare,1,roadside settlement,60.5,33.8,1.8,0.1,0.3
+harare_r5_mutare,2,town,7.5,150.5,5.3,2.6,0.037
+johannesburg_n12_de_rust,0,open road,116.0,0.6,0.5,0.0,0.574
+johannesburg_n12_de_rust,1,roadside settlement,71.0,41.3,1.5,0.1,0.351
+johannesburg_n12_de_rust,2,town,15.0,77.3,6.6,4.7,0.074
+johannesburg_n12_emalahleni,0,open road,80.5,0.7,0.2,0.0,0.61
+johannesburg_n12_emalahleni,1,roadside settlement,44.5,77.2,0.6,0.2,0.337
+johannesburg_n12_emalahleni,2,town,7.0,212.3,5.1,3.0,0.053
+johannesburg_n17_msauli,0,open road,153.5,0.6,0.5,0.0,0.742
+johannesburg_n17_msauli,1,roadside settlement,50.5,42.8,1.3,0.0,0.244
+johannesburg_n17_msauli,2,town,3.0,194.5,10.3,1.5,0.014
+johannesburg_n3_durban,0,open road,417.0,0.6,0.3,0.0,0.73
+johannesburg_n3_durban,1,roadside settlement,141.0,42.1,0.9,0.2,0.247
+johannesburg_n3_durban,2,town,13.5,86.1,7.4,7.1,0.024
+johannesburg_r24_rustenburg,0,open road,39.5,1.2,0.7,0.0,0.331
+johannesburg_r24_rustenburg,1,roadside settlement,53.0,96.4,3.0,0.1,0.444
+johannesburg_r24_rustenburg,2,town,27.0,202.1,10.8,3.2,0.226
+johannesburg_r25_groblersdal,0,open road,106.0,0.9,0.6,0.0,0.552
+johannesburg_r25_groblersdal,1,roadside settlement,68.0,46.0,2.1,0.1,0.354
+johannesburg_r25_groblersdal,2,town,18.0,176.1,9.4,2.7,0.094
+johannesburg_r29_evander,0,open road,48.0,0.8,0.5,0.0,0.382
+johannesburg_r29_evander,1,roadside settlement,51.0,90.9,2.4,0.1,0.406
+johannesburg_r29_evander,2,town,26.5,195.9,8.2,2.5,0.211
+johannesburg_r59_dealesville,0,open road,138.0,0.5,0.5,0.0,0.681
+johannesburg_r59_dealesville,1,roadside settlement,57.0,38.0,0.8,0.2,0.281
+johannesburg_r59_dealesville,2,town,7.5,129.3,10.1,2.1,0.037
+kampala_a1_malaba,0,open road,32.0,0.8,0.6,0.1,0.151
+kampala_a1_malaba,1,roadside settlement,121.0,127.9,1.6,0.2,0.569
+kampala_a1_malaba,2,town,59.5,329.3,5.7,10.4,0.28
+kampala_a2_katuna,0,open road,78.5,1.5,0.5,0.0,0.185
+kampala_a2_katuna,1,roadside settlement,290.5,91.9,1.6,0.1,0.686
+kampala_a2_katuna,2,town,54.5,328.1,6.8,9.3,0.129
+kampala_a5_bwera,0,open road,75.0,1.6,0.8,0.0,0.177
+kampala_a5_bwera,1,roadside settlement,323.5,103.6,2.2,0.0,0.765
+kampala_a5_bwera,2,town,24.5,339.2,9.7,16.1,0.058
+kampala_a6_elegu,0,open road,98.5,1.8,0.4,0.0,0.229
+kampala_a6_elegu,1,roadside settlement,276.5,69.6,1.5,0.2,0.642
+kampala_a6_elegu,2,town,55.5,281.8,5.5,7.7,0.129
+kampala_a9_hoima,0,open road,12.5,3.1,0.2,0.0,0.064
+kampala_a9_hoima,1,roadside settlement,162.0,98.9,1.4,0.1,0.829
+kampala_a9_hoima,2,town,21.0,413.2,6.9,9.2,0.107
+kigali_nr1_huye,0,open road,11.5,0.7,0.5,0.0,0.073
+kigali_nr1_huye,1,roadside settlement,130.0,114.3,1.8,0.1,0.825
+kigali_nr1_huye,2,town,16.0,226.6,6.4,4.9,0.102
+kigali_nr2_gisenyi,0,open road,6.0,1.1,0.2,0.0,0.04
+kigali_nr2_gisenyi,1,roadside settlement,121.0,119.6,1.5,0.2,0.804
+kigali_nr2_gisenyi,2,town,23.5,259.9,4.6,2.8,0.156
+kigali_nr3_gatuna,0,open road,12.5,1.5,0.2,0.0,0.164
+kigali_nr3_gatuna,1,roadside settlement,59.5,57.0,0.8,0.1,0.783
+kigali_nr3_gatuna,2,town,4.0,325.9,5.1,2.5,0.053
+kigali_road_rusumo,0,open road,5.5,0.3,0.1,0.0,0.035
+kigali_road_rusumo,1,roadside settlement,122.5,141.2,1.9,0.2,0.77
+kigali_road_rusumo,2,town,31.0,224.3,4.6,3.6,0.195
+lusaka_m9_mongu,0,open road,86.0,1.5,0.5,0.0,0.43
+lusaka_m9_mongu,1,roadside settlement,105.5,27.5,1.8,0.0,0.528
+lusaka_m9_mongu,2,town,8.5,199.2,8.4,13.0,0.042
+lusaka_t1_livingstone,0,open road,302.0,0.9,0.5,0.0,0.643
+lusaka_t1_livingstone,1,roadside settlement,139.5,42.8,2.3,0.1,0.297
+lusaka_t1_livingstone,2,town,28.5,111.5,6.4,5.4,0.061
+lusaka_t2_chirundu,0,open road,45.0,1.2,0.3,0.0,0.331
+lusaka_t2_chirundu,1,roadside settlement,68.5,38.9,2.3,0.1,0.504
+lusaka_t2_chirundu,2,town,22.5,92.6,7.1,5.8,0.165
+lusaka_t2_nakonde,0,open road,555.0,1.6,0.5,0.0,0.544
+lusaka_t2_nakonde,1,roadside settlement,435.0,33.5,2.1,0.0,0.427
+lusaka_t2_nakonde,2,town,29.5,140.6,7.4,2.1,0.029
+lusaka_t4_234_km,0,open road,72.5,2.7,0.3,0.0,0.362
+lusaka_t4_234_km,1,roadside settlement,111.0,30.6,1.4,0.1,0.554
+lusaka_t4_234_km,2,town,17.0,120.9,8.6,2.7,0.085
+maputo_en4_ressano_garcia,0,open road,40.5,2.0,0.5,0.0,0.433
+maputo_en4_ressano_garcia,1,roadside settlement,31.0,36.6,2.0,0.2,0.332
+maputo_en4_ressano_garcia,2,town,22.0,241.3,5.1,7.6,0.235
+maputo_n1_pemba,0,open road,29.5,0.8,0.5,0.0,0.147
+maputo_n1_pemba,1,roadside settlement,106.5,68.1,2.5,0.2,0.531
+maputo_n1_pemba,2,town,64.5,164.3,6.2,7.0,0.322
+nairobi_a2_moyale,0,open road,17.0,0.9,0.5,0.2,0.084
+nairobi_a2_moyale,1,roadside settlement,151.5,56.3,1.9,0.3,0.748
+nairobi_a2_moyale,2,town,34.0,138.1,3.9,3.8,0.168
+nairobi_a2_namanga,0,open road,76.0,1.2,0.5,0.0,0.478
+nairobi_a2_namanga,1,roadside settlement,59.5,44.9,2.3,0.2,0.374
+nairobi_a2_namanga,2,town,23.5,118.9,4.8,3.7,0.148
+nairobi_a8_malaba,0,open road,74.5,0.8,0.6,0.0,0.169
+nairobi_a8_malaba,1,roadside settlement,282.0,71.3,2.2,0.2,0.64
+nairobi_a8_malaba,2,town,84.0,195.5,6.1,3.3,0.191
+nairobi_a8_mombasa,0,open road,219.0,1.0,0.4,0.0,0.455
+nairobi_a8_mombasa,1,roadside settlement,229.0,46.1,1.3,0.2,0.476
+nairobi_a8_mombasa,2,town,33.0,141.5,4.6,4.0,0.069
+pretoria_n14_springbok,0,open road,130.0,0.6,0.5,0.0,0.642
+pretoria_n14_springbok,1,roadside settlement,66.5,67.6,1.1,0.1,0.328
+pretoria_n14_springbok,2,town,6.0,55.3,6.6,3.5,0.03
+pretoria_n1_beitbridge,0,open road,376.0,0.7,0.4,0.0,0.787
+pretoria_n1_beitbridge,1,roadside settlement,95.0,43.6,1.0,0.1,0.199
+pretoria_n1_beitbridge,2,town,7.0,67.5,7.1,4.2,0.015
+pretoria_n1_cape_town,0,open road,111.0,0.7,0.2,0.0,0.552
+pretoria_n1_cape_town,1,roadside settlement,85.0,77.4,0.5,0.2,0.423
+pretoria_n1_cape_town,2,town,5.0,83.1,5.8,4.4,0.025
+pretoria_n4_lebombo,0,open road,310.0,1.0,0.5,0.0,0.737
+pretoria_n4_lebombo,1,roadside settlement,103.5,36.2,1.3,0.2,0.246
+pretoria_n4_lebombo,2,town,7.0,73.0,5.7,4.4,0.017
+pretoria_n4_lekubu,0,open road,138.0,1.1,0.4,0.0,0.693
+pretoria_n4_lekubu,1,roadside settlement,57.5,52.5,0.8,0.1,0.289
+pretoria_n4_lekubu,2,town,3.5,54.6,4.1,3.3,0.018
+windhoek_b1_797_km,0,open road,180.0,0.1,0.3,0.0,0.882
+windhoek_b1_797_km,1,roadside settlement,15.0,34.1,2.2,0.3,0.074
+windhoek_b1_797_km,2,town,9.0,87.1,5.7,8.3,0.044
+windhoek_b2_walvis_bay,0,open road,356.5,0.3,0.2,0.0,0.898
+windhoek_b2_walvis_bay,1,roadside settlement,35.0,29.5,0.9,0.2,0.088
+windhoek_b2_walvis_bay,2,town,5.5,125.6,8.1,7.7,0.014
+windhoek_b6_buitepos,0,open road,295.5,0.1,0.3,0.0,0.931
+windhoek_b6_buitepos,1,roadside settlement,16.0,36.3,2.1,0.3,0.05
+windhoek_b6_buitepos,2,town,6.0,135.9,7.2,7.8,0.019
+windhoek_c26_194_km,0,open road,190.0,0.1,0.4,0.0,0.957
+windhoek_c26_194_km,1,roadside settlement,2.0,62.8,2.5,0.0,0.01
+windhoek_c26_194_km,2,town,6.5,156.5,9.9,20.8,0.033
+windhoek_c28_swakopmund,0,open road,196.0,0.1,0.3,0.0,0.958
+windhoek_c28_swakopmund,1,roadside settlement,7.0,83.5,2.8,0.0,0.034
+windhoek_c28_swakopmund,2,town,1.5,214.7,5.0,2.7,0.007

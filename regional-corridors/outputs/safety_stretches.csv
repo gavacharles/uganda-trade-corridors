@@ -1,0 +1,541 @@
+corridor,km_from,km_to,place,road_type,people_300m,truck_kmh,crossings,schools,markets,exposure,exposure_share_of_corridor
+nairobi_a2_moyale,2.0,4.0,Kyamutisya village,roadside settlement,42396.0,63.5,0,12,0,108.65,0.28
+nairobi_a2_moyale,4.0,6.0,Allsops,roadside settlement,18769.0,59.25,1,6,0,44.07,0.11
+dar_es_salaam_t1_tunduma,6.0,8.0,Kagera,town,80681.0,42.08,7,52,5,41.36,0.05
+dar_es_salaam_road_dodoma,2.0,4.0,Kagera,town,73979.0,42.58,0,17,6,39.93,0.08
+nairobi_a8_malaba,152.0,154.0,Naka B,roadside settlement,14094.0,63.75,0,1,1,36.97,0.06
+dar_es_salaam_t7_lindi,4.0,6.0,Azimio,town,59595.0,42.28,0,20,2,32.25,0.12
+dar_es_salaam_road_dodoma,0.0,2.0,Mzimuni,town,63459.0,41.8,10,66,3,30.76,0.06
+nairobi_a8_malaba,88.0,90.0,Lower Mithuri,roadside settlement,23507.0,52.68,0,0,0,29.37,0.05
+johannesburg_n12_de_rust,14.0,16.0,,roadside settlement,8565.0,66.7,0,0,0,27.5,0.18
+nairobi_a2_moyale,12.0,14.0,Githurai,roadside settlement,33966.0,50.3,0,0,3,26.58,0.07
+dar_es_salaam_t1_tunduma,8.0,10.0,Tandale,town,43542.0,45.38,0,6,7,24.56,0.03
+nairobi_a2_moyale,14.0,16.0,Kahawa Wendani,town,16439.0,53.0,0,10,0,23.24,0.06
+dar_es_salaam_t7_lindi,6.0,8.0,Mbagala,town,40254.0,43.42,14,5,0,22.94,0.09
+nairobi_a8_malaba,312.0,314.0,Eldoret,town,26359.0,48.15,16,3,2,22.87,0.04
+dar_es_salaam_t1_tunduma,4.0,6.0,Mzimuni,town,38885.0,43.97,6,96,22,22.83,0.03
+dar_es_salaam_t1_tunduma,20.0,22.0,,roadside settlement,6879.0,67.12,5,2,0,22.45,0.02
+dar_es_salaam_road_dodoma,18.0,20.0,,roadside settlement,7029.0,66.82,0,1,0,22.2,0.04
+johannesburg_n3_durban,566.0,568.0,South Beach,town,21961.0,50.0,42,0,0,21.96,0.1
+dar_es_salaam_t1_tunduma,2.0,4.0,Dar es Salaam,town,33877.0,45.62,7,32,9,21.51,0.02
+lusaka_t2_chirundu,2.0,4.0,Misisi,town,21462.0,50.0,0,0,0,21.46,0.15
+lusaka_t4_234_km,10.0,12.0,Chelston,roadside settlement,11894.0,56.6,0,0,0,21.46,0.14
+lusaka_t4_234_km,12.0,14.0,Chelston,roadside settlement,9833.0,56.9,3,0,0,21.17,0.14
+nairobi_a2_moyale,10.0,12.0,Clay City,roadside settlement,12566.0,57.65,0,5,0,20.47,0.05
+dar_es_salaam_t1_tunduma,16.0,18.0,Saranga,roadside settlement,9703.0,59.25,0,0,0,20.03,0.02
+lusaka_t2_nakonde,4.0,6.0,Chaisa,town,29779.0,45.25,2,0,4,20.02,0.05
+johannesburg_r24_rustenburg,0.0,2.0,Johannesburg,town,22024.0,48.48,12,8,2,19.86,0.23
+dar_es_salaam_t1_tunduma,0.0,2.0,Dar es Salaam,town,23776.0,47.95,7,25,6,19.79,0.02
+pretoria_n1_cape_town,66.0,68.0,Aeroton,roadside settlement,7607.0,63.98,0,0,0,19.65,0.1
+nairobi_a8_malaba,8.0,10.0,Kaptagat,town,28130.0,46.98,0,58,1,19.62,0.03
+nairobi_a8_malaba,150.0,152.0,Cool Rivers,roadside settlement,7747.0,63.32,0,0,1,19.12,0.03
+nairobi_a8_malaba,90.0,92.0,Ebenezer,roadside settlement,6252.0,62.47,0,0,0,19.04,0.03
+nairobi_a2_moyale,0.0,2.0,Pangani,town,18936.0,50.0,0,4,0,18.94,0.05
+johannesburg_n3_durban,568.0,570.0,Durban,town,18881.0,50.0,26,0,0,18.88,0.08
+nairobi_a8_malaba,10.0,12.0,Mau Mau,town,37107.0,41.78,0,88,1,18.8,0.03
+maputo_n1_pemba,0.0,2.0,Aeroporto B,town,35094.0,42.18,0,0,8,18.69,0.1
+pretoria_n1_cape_town,74.0,76.0,,open road,6176.0,67.5,0,0,0,18.26,0.09
+lusaka_t1_livingstone,0.0,2.0,Misisi,town,17426.0,50.0,0,0,0,17.43,0.07
+dar_es_salaam_road_dodoma,14.0,16.0,Saranga,roadside settlement,5785.0,63.6,3,2,0,17.2,0.03
+dar_es_salaam_road_dodoma,4.0,6.0,Ubungo,town,17392.0,49.72,0,12,4,17.13,0.03
+dar_es_salaam_t1_tunduma,22.0,24.0,,roadside settlement,7242.0,59.45,0,2,0,16.74,0.02
+kampala_a2_katuna,262.0,264.0,Boma A,town,21097.0,46.82,2,9,2,16.62,0.05
+dar_es_salaam_t7_lindi,2.0,4.0,Kurasini,town,16647.0,49.98,8,6,0,16.61,0.06
+dar_es_salaam_road_dodoma,12.0,14.0,Saranga,roadside settlement,8128.0,56.08,0,0,0,16.45,0.03
+dar_es_salaam_t1_tunduma,200.0,202.0,Kasanga,roadside settlement,5194.0,66.42,0,0,0,16.45,0.02
+lusaka_t2_chirundu,0.0,2.0,Misisi,town,17101.0,49.28,12,0,2,16.43,0.12
+pretoria_n14_springbok,32.0,34.0,Diepsloot,roadside settlement,23804.0,45.5,0,0,0,16.32,0.19
+dar_es_salaam_t7_lindi,8.0,10.0,Mbagala,town,25230.0,46.05,6,10,4,15.92,0.06
+gaborone_a12_326_km,10.0,12.0,Metsimotlhabe,roadside settlement,7828.0,59.3,0,0,0,15.77,0.19
+harare_r2_plumtree,0.0,2.0,Harare,roadside settlement,16528.0,53.28,0,4,0,15.73,0.14
+nairobi_a2_moyale,6.0,8.0,Ruaraka,town,13435.0,51.28,0,3,0,15.5,0.04
+nairobi_a8_mombasa,2.0,4.0,South B,town,15671.0,49.62,0,8,0,15.37,0.05
+dar_es_salaam_road_dodoma,16.0,18.0,,roadside settlement,6957.0,59.35,2,2,0,15.34,0.03
+lusaka_m9_mongu,0.0,2.0,Lusaka,town,19110.0,47.02,2,0,2,14.76,0.13
+nairobi_a8_mombasa,8.0,10.0,Villa Franca Estate,roadside settlement,9293.0,57.7,0,0,0,14.64,0.05
+johannesburg_n12_de_rust,4.0,6.0,Crown Gardens,roadside settlement,6232.0,61.25,0,0,0,14.05,0.09
+nairobi_a8_mombasa,478.0,480.0,Mabatini,roadside settlement,7767.0,57.18,0,0,0,13.95,0.05
+dar_es_salaam_t1_tunduma,24.0,26.0,,roadside settlement,5070.0,63.2,6,0,0,13.93,0.02
+pretoria_n1_cape_town,96.0,98.0,Drieziek,roadside settlement,6715.0,59.92,0,0,0,13.63,0.07
+nairobi_a8_mombasa,4.0,6.0,South B,town,13659.0,49.92,0,1,0,13.55,0.05
+nairobi_a8_malaba,86.0,88.0,Guestinn,roadside settlement,6212.0,55.82,0,0,0,13.38,0.02
+kampala_a5_bwera,360.0,362.0,Nyakasanga Lower,roadside settlement,11755.0,52.28,0,16,0,13.11,0.04
+maputo_en4_ressano_garcia,8.0,10.0,Quarteirão 55,town,12186.0,51.45,13,2,0,13.0,0.14
+kigali_nr3_gatuna,0.0,2.0,,town,23871.0,43.55,0,0,0,12.99,0.17
+kigali_nr3_gatuna,2.0,4.0,,roadside settlement,9102.0,52.42,0,0,0,12.95,0.17
+nairobi_a8_malaba,158.0,160.0,Kenyatta Avenue,town,13523.0,49.45,2,5,1,12.84,0.02
+lusaka_t4_234_km,8.0,10.0,Kaunda Square,town,9421.0,52.65,0,2,0,12.63,0.08
+johannesburg_r29_evander,0.0,2.0,Maboneng Precinct,town,15382.0,45.78,4,2,6,12.57,0.11
+johannesburg_r29_evander,2.0,4.0,Jeppestown,town,11909.0,51.85,5,0,0,12.54,0.11
+pretoria_n1_cape_town,84.0,86.0,Zakariyya Park,roadside settlement,3928.0,66.23,0,0,0,12.27,0.06
+harare_a4_beitbridge,572.0,574.0,Beitbridge,roadside settlement,4273.0,65.42,0,0,0,12.23,0.08
+kigali_nr3_gatuna,4.0,6.0,,roadside settlement,6335.0,57.62,0,0,0,12.19,0.16
+dar_es_salaam_t7_lindi,0.0,2.0,Kurasini,town,14501.0,47.98,9,0,0,12.18,0.05
+nairobi_a8_mombasa,474.0,476.0,Mamlai,roadside settlement,10856.0,51.9,0,0,0,12.17,0.04
+harare_r5_mutare,0.0,2.0,Harare,town,16283.0,43.65,0,2,0,12.06,0.11
+lusaka_t1_livingstone,468.0,470.0,Maramba,town,15029.0,47.4,0,1,2,12.03,0.05
+lusaka_t2_nakonde,8.0,10.0,Kabangwe,roadside settlement,21126.0,43.15,0,0,0,11.78,0.03
+lusaka_t2_nakonde,202.0,204.0,Kapiri Mposhi,roadside settlement,7423.0,56.6,0,8,0,11.76,0.03
+johannesburg_n12_de_rust,18.0,20.0,Eldoradopark,roadside settlement,8265.0,58.08,0,0,0,11.7,0.08
+harare_a4_beitbridge,284.0,286.0,,roadside settlement,4564.0,63.28,0,0,0,11.59,0.08
+lusaka_t4_234_km,2.0,4.0,Rhodes Park,town,11068.0,49.78,8,0,1,11.54,0.08
+maputo_en4_ressano_garcia,6.0,8.0,Quarteirão 51,town,13439.0,49.42,0,0,1,11.53,0.13
+kigali_road_rusumo,0.0,2.0,Kigali,town,17916.0,44.8,6,0,2,11.52,0.05
+lusaka_t1_livingstone,466.0,468.0,Highlands,roadside settlement,6854.0,58.92,0,0,0,11.52,0.04
+dar_es_salaam_road_dodoma,6.0,8.0,Ubungo,town,22844.0,43.35,3,29,0,11.48,0.02
+nairobi_a8_malaba,156.0,158.0,Kabachia,town,6031.0,54.2,0,2,3,11.47,0.02
+pretoria_n4_lebombo,94.0,96.0,Vosman,roadside settlement,5659.0,62.05,0,2,0,11.38,0.11
+johannesburg_r59_dealesville,42.0,44.0,Noldick,roadside settlement,3266.0,66.9,0,0,0,11.29,0.13
+lusaka_t2_chirundu,4.0,6.0,,town,11207.0,50.0,0,0,0,11.21,0.08
+lusaka_t2_nakonde,2.0,4.0,Emmasdale,town,13725.0,48.02,4,0,0,11.18,0.03
+kampala_a9_hoima,6.0,8.0,Ocheng A,town,26937.0,40.05,2,3,0,11.17,0.05
+nairobi_a2_namanga,4.0,6.0,Daima springs,town,8063.0,54.1,0,0,0,11.17,0.09
+dar_es_salaam_t7_lindi,10.0,12.0,Mbagala,town,20064.0,43.25,0,4,0,11.1,0.04
+johannesburg_n3_durban,26.0,28.0,,roadside settlement,5051.0,61.25,0,0,0,10.97,0.05
+lusaka_t2_nakonde,6.0,8.0,Mutambe,town,16829.0,46.22,4,0,0,10.95,0.03
+nairobi_a2_namanga,0.0,2.0,South B,town,10915.0,50.0,0,2,0,10.92,0.09
+lusaka_m9_mongu,2.0,4.0,Chibolya,town,13746.0,46.85,0,5,0,10.91,0.09
+dar_es_salaam_road_dodoma,10.0,12.0,Kimara,roadside settlement,8946.0,50.88,0,2,0,10.89,0.02
+johannesburg_n17_msauli,8.0,10.0,Roseacre,roadside settlement,3179.0,67.78,0,0,2,10.86,0.12
+johannesburg_n12_de_rust,16.0,18.0,Nancefield,roadside settlement,5217.0,57.98,0,0,0,10.78,0.07
+lusaka_t4_234_km,4.0,6.0,Kalundu,town,10757.0,50.0,4,0,1,10.76,0.07
+gaborone_a12_326_km,42.0,44.0,,roadside settlement,6748.0,56.18,0,0,0,10.71,0.13
+johannesburg_n3_durban,22.0,24.0,Spruitview,roadside settlement,8102.0,53.32,0,0,0,10.7,0.05
+dar_es_salaam_t7_lindi,102.0,104.0,Jaribu Mpakani,roadside settlement,4096.0,62.15,0,0,0,10.66,0.04
+maputo_en4_ressano_garcia,18.0,20.0,,town,12541.0,48.0,0,0,0,10.43,0.11
+nairobi_a2_namanga,2.0,4.0,Daima springs,town,10317.0,50.0,0,0,0,10.32,0.08
+johannesburg_n12_de_rust,12.0,14.0,Armadale,roadside settlement,3550.0,66.93,0,0,0,10.27,0.07
+pretoria_n1_beitbridge,462.0,464.0,Harper,roadside settlement,3690.0,57.15,0,0,0,10.2,0.09
+gaborone_a12_326_km,8.0,10.0,Metsimotlhabe,roadside settlement,3882.0,63.77,0,0,0,10.16,0.12
+dar_es_salaam_t7_lindi,12.0,14.0,Kipala Mpakani,roadside settlement,15831.0,45.88,0,6,0,10.1,0.04
+kigali_road_rusumo,68.0,70.0,Kayonza,town,15269.0,45.18,0,0,0,9.94,0.04
+johannesburg_n12_emalahleni,124.0,126.0,Tasbet Park,roadside settlement,5712.0,57.38,0,0,0,9.93,0.12
+nairobi_a2_namanga,6.0,8.0,AA Estate,town,7822.0,52.8,0,0,0,9.91,0.08
+nairobi_a8_mombasa,476.0,478.0,Mataa ya Ndege,town,9035.0,54.42,0,0,0,9.85,0.03
+kigali_road_rusumo,4.0,6.0,Kanombe,roadside settlement,7221.0,52.78,1,5,0,9.81,0.04
+lusaka_t2_chirundu,134.0,136.0,Chirundu,town,9437.0,53.65,0,0,0,9.69,0.07
+harare_p1_mucumbura,84.0,86.0,Bindura,roadside settlement,3856.0,63.72,0,2,0,9.67,0.11
+lusaka_t2_chirundu,16.0,18.0,Chilanga,roadside settlement,6210.0,56.75,1,3,1,9.65,0.07
+pretoria_n4_lekubu,58.0,60.0,,roadside settlement,3941.0,62.62,0,0,0,9.6,0.13
+kampala_a1_malaba,70.0,72.0,Njeru,town,18708.0,42.27,0,19,0,9.59,0.03
+kigali_nr2_gisenyi,136.0,138.0,Mahoko,town,19299.0,42.12,0,0,2,9.52,0.05
+pretoria_n1_cape_town,94.0,96.0,Drieziek,roadside settlement,4274.0,62.72,0,0,0,9.47,0.05
+kampala_a2_katuna,260.0,262.0,Forest Reserve,roadside settlement,15016.0,43.5,0,20,1,9.46,0.03
+kigali_nr1_huye,0.0,2.0,Nyarugenge,town,19911.0,41.15,16,0,1,9.44,0.05
+johannesburg_n3_durban,564.0,566.0,Durban,town,9378.0,50.0,47,2,0,9.38,0.04
+maputo_en4_ressano_garcia,14.0,16.0,Quarteirão A1,town,10255.0,49.15,0,0,0,9.33,0.1
+nairobi_a2_moyale,8.0,10.0,Kasarani,town,7623.0,53.6,5,3,0,9.29,0.02
+kampala_a9_hoima,4.0,6.0,Nansana West II B,town,24265.0,39.03,0,0,0,9.06,0.04
+johannesburg_n3_durban,0.0,2.0,Denver,roadside settlement,8189.0,55.95,0,0,0,9.06,0.04
+pretoria_n1_cape_town,72.0,74.0,Armadale,roadside settlement,3106.0,66.58,0,0,0,8.93,0.04
+lusaka_t2_nakonde,0.0,2.0,Lusaka,town,9703.0,48.78,18,0,2,8.91,0.02
+maputo_en4_ressano_garcia,10.0,12.0,Quarteirão 2,town,14097.0,45.42,17,0,0,8.88,0.1
+dar_es_salaam_road_dodoma,22.0,24.0,,roadside settlement,3907.0,59.85,8,0,0,8.83,0.02
+lusaka_t4_234_km,6.0,8.0,Mwambula,town,8778.0,50.0,6,2,0,8.78,0.06
+kampala_a6_elegu,330.0,332.0,Kanyagoga C,roadside settlement,6996.0,52.62,0,13,0,8.69,0.02
+pretoria_n1_beitbridge,44.0,46.0,Marokolong,roadside settlement,5524.0,55.85,0,0,0,8.66,0.07
+lusaka_t1_livingstone,344.0,346.0,Kalomo,roadside settlement,5510.0,56.78,0,5,0,8.57,0.03
+johannesburg_r29_evander,4.0,6.0,Denver,roadside settlement,12865.0,45.22,3,0,0,8.53,0.07
+gaborone_a1_121_km,76.0,78.0,,roadside settlement,7303.0,51.62,0,2,0,8.53,0.13
+johannesburg_n3_durban,20.0,22.0,Rondebult,roadside settlement,4449.0,59.28,0,0,0,8.49,0.04
+pretoria_n1_cape_town,102.0,104.0,,roadside settlement,4171.0,59.88,0,0,0,8.48,0.04
+maputo_en4_ressano_garcia,12.0,14.0,Quarteirão A1,town,17268.0,41.85,0,1,0,8.47,0.09
+kampala_a5_bwera,142.0,144.0,Kabasojjo,town,16775.0,41.98,0,10,0,8.45,0.02
+harare_a4_beitbridge,286.0,288.0,Masvingo,roadside settlement,5037.0,56.78,0,0,0,8.43,0.06
+lusaka_t1_livingstone,282.0,284.0,Choma,roadside settlement,5566.0,56.18,0,3,0,8.32,0.03
+dodoma_t5_iringa,0.0,2.0,Dodoma city center,town,9543.0,48.32,3,7,6,8.28,0.09
+kampala_a5_bwera,362.0,364.0,Nyakatonzi,town,7002.0,52.38,1,16,0,8.22,0.02
+kampala_a5_bwera,402.0,404.0,Omunkunyu,roadside settlement,3013.0,64.82,0,0,0,8.2,0.02
+nairobi_a8_mombasa,0.0,2.0,Nairobi West,town,9544.0,48.78,0,2,0,8.18,0.03
+lusaka_t2_nakonde,646.0,648.0,,roadside settlement,7375.0,55.7,0,2,0,8.14,0.02
+lusaka_t1_livingstone,12.0,14.0,Chilanga,roadside settlement,4043.0,57.65,1,4,0,8.14,0.03
+johannesburg_r59_dealesville,180.0,182.0,,roadside settlement,2174.0,69.22,0,0,0,8.07,0.09
+nairobi_a8_mombasa,452.0,454.0,Mariakani,roadside settlement,9479.0,48.5,0,0,0,7.98,0.03
+lusaka_t1_livingstone,122.0,124.0,Mazabuka,roadside settlement,6488.0,52.62,2,2,0,7.86,0.03
+kampala_a9_hoima,22.0,24.0,Kakiri,roadside settlement,13756.0,47.08,0,0,0,7.86,0.04
+kampala_a9_hoima,0.0,2.0,Namungoona,town,21114.0,39.05,0,23,2,7.85,0.04
+lusaka_t2_nakonde,10.0,12.0,Kabangwe,town,8276.0,49.92,0,0,0,7.83,0.02
+nairobi_a2_moyale,192.0,194.0,Nanyuki,town,8641.0,48.92,0,2,0,7.79,0.02
+kigali_nr2_gisenyi,146.0,148.0,Gisenyi,roadside settlement,13985.0,43.3,0,0,0,7.77,0.04
+dodoma_t5_iringa,102.0,104.0,Chipogoro,roadside settlement,3827.0,59.7,0,1,0,7.7,0.08
+johannesburg_r29_evander,98.0,100.0,Leandra,roadside settlement,3265.0,56.98,0,0,0,7.69,0.06
+harare_a1_chirundu,0.0,2.0,Avondale,roadside settlement,6142.0,52.72,0,3,0,7.67,0.09
+nairobi_a8_mombasa,6.0,8.0,Daima springs,town,7658.0,50.0,0,0,0,7.66,0.03
+lusaka_t1_livingstone,4.0,6.0,,town,4982.0,54.68,6,2,0,7.62,0.03
+johannesburg_r25_groblersdal,0.0,2.0,Bellevue,town,9528.0,46.0,23,0,0,7.6,0.1
+pretoria_n1_beitbridge,464.0,466.0,Nancefield,roadside settlement,4278.0,63.38,0,0,0,7.6,0.07
+harare_r5_mutare,18.0,20.0,,roadside settlement,2409.0,66.0,0,0,0,7.6,0.07
+kampala_a5_bwera,418.0,420.0,Karughe,roadside settlement,6250.0,50.88,0,4,0,7.58,0.02
+lusaka_t1_livingstone,182.0,184.0,Monze,roadside settlement,6727.0,51.6,1,6,0,7.52,0.03
+lusaka_t1_livingstone,2.0,4.0,,town,7508.0,50.0,2,0,0,7.51,0.03
+johannesburg_r25_groblersdal,12.0,14.0,Antwerp,roadside settlement,2500.0,64.92,12,0,0,7.5,0.1
+kampala_a2_katuna,0.0,2.0,Nsiike I (zone),town,20858.0,38.7,0,26,1,7.49,0.02
+lusaka_t2_nakonde,200.0,202.0,,roadside settlement,3945.0,61.35,0,3,0,7.48,0.02
+pretoria_n14_springbok,34.0,36.0,Diepsloot,roadside settlement,4174.0,58.7,0,0,0,7.47,0.08
+kampala_a1_malaba,148.0,150.0,Nkusi A,town,12585.0,44.58,0,17,0,7.43,0.03
+gaborone_a12_326_km,44.0,46.0,,roadside settlement,4317.0,57.68,0,0,0,7.42,0.09
+nairobi_a8_mombasa,12.0,14.0,,roadside settlement,2551.0,65.9,0,0,0,7.4,0.03
+kampala_a6_elegu,334.0,336.0,Katikati,roadside settlement,6857.0,50.12,0,4,0,7.4,0.02
+maputo_n1_pemba,14.0,16.0,,town,6091.0,52.8,6,0,0,7.38,0.04
+kampala_a6_elegu,328.0,330.0,Green Valley,town,9753.0,46.65,0,16,1,7.37,0.02
+pretoria_n4_lebombo,92.0,94.0,Vosman,roadside settlement,3863.0,57.65,0,0,0,7.37,0.07
+kampala_a1_malaba,6.0,8.0,Kireka,town,16404.0,40.22,0,1,6,7.33,0.02
+harare_a4_beitbridge,0.0,2.0,Mbare,town,7067.0,50.65,0,0,0,7.33,0.05
+johannesburg_n12_de_rust,172.0,174.0,Alabama,roadside settlement,3782.0,59.85,0,0,0,7.31,0.05
+kampala_a1_malaba,82.0,84.0,Katamba Cell,town,12864.0,44.42,0,21,4,7.25,0.02
+kampala_a2_katuna,342.0,344.0,Rwemiriro I,roadside settlement,2840.0,60.78,0,0,0,7.21,0.02
+kampala_a1_malaba,132.0,134.0,Idudi B,roadside settlement,12103.0,46.12,0,5,0,7.2,0.02
+johannesburg_n3_durban,422.0,424.0,Mooirivier,roadside settlement,3583.0,59.38,0,0,0,7.17,0.03
+maputo_en4_ressano_garcia,16.0,18.0,,town,6638.0,51.08,17,0,0,7.14,0.08
+kampala_a6_elegu,6.0,8.0,Kagoma,town,16341.0,40.72,0,1,0,7.14,0.02
+lusaka_m9_mongu,4.0,6.0,,town,15175.0,41.38,0,1,0,7.1,0.06
+kampala_a1_malaba,8.0,10.0,Kireka Central,town,16290.0,40.57,0,0,2,7.08,0.02
+johannesburg_n3_durban,486.0,488.0,Manor,roadside settlement,3130.0,62.8,0,0,0,7.06,0.03
+harare_r2_plumtree,106.0,108.0,Chegutu,roadside settlement,5555.0,56.28,0,0,0,7.0,0.06
+pretoria_n1_cape_town,60.0,62.0,Bosmont,roadside settlement,2213.0,66.92,0,0,0,6.97,0.03
+kampala_a1_malaba,116.0,118.0,Mutukula,town,14611.0,41.98,0,22,0,6.97,0.02
+johannesburg_r29_evander,28.0,30.0,Benoni,town,8971.0,48.05,0,0,0,6.96,0.06
+pretoria_n4_lekubu,12.0,14.0,Akasia,roadside settlement,3610.0,58.52,0,0,0,6.92,0.1
+maputo_n1_pemba,2.0,4.0,Msalene,town,14358.0,41.55,0,0,3,6.9,0.04
+pretoria_n4_lebombo,12.0,14.0,,roadside settlement,2381.0,67.15,0,0,0,6.87,0.07
+johannesburg_n12_de_rust,20.0,22.0,Eldoradopark,roadside settlement,4901.0,55.95,0,0,0,6.87,0.05
+kampala_a1_malaba,4.0,6.0,Central,town,7320.0,49.08,2,3,0,6.87,0.02
+kigali_nr1_huye,44.0,46.0,Cyeza,roadside settlement,8583.0,47.1,0,0,0,6.86,0.03
+pretoria_n4_lekubu,60.0,62.0,,roadside settlement,2543.0,64.45,0,0,0,6.86,0.09
+harare_a1_chirundu,6.0,8.0,Bluff Hill,roadside settlement,4182.0,56.88,0,0,0,6.84,0.08
+lusaka_m9_mongu,6.0,8.0,,town,7306.0,49.42,1,0,0,6.83,0.06
+pretoria_n4_lekubu,2.0,4.0,Daspoort,roadside settlement,3446.0,59.9,0,0,0,6.81,0.09
+pretoria_n1_beitbridge,154.0,156.0,,roadside settlement,5425.0,56.9,0,0,0,6.8,0.06
+kigali_nr1_huye,2.0,4.0,Nyarugenge,town,11351.0,43.95,1,0,1,6.79,0.03
+johannesburg_r24_rustenburg,4.0,6.0,Homestead Park,roadside settlement,10105.0,45.65,6,0,0,6.77,0.08
+kampala_a5_bwera,0.0,2.0,Ben Kiwanuka,town,16493.0,40.3,0,1,0,6.74,0.02
+kigali_nr1_huye,4.0,6.0,,roadside settlement,4055.0,53.28,0,0,0,6.72,0.03
+harare_r5_mutare,170.0,172.0,Rusape,roadside settlement,3715.0,57.8,0,0,0,6.7,0.06
+kampala_a1_malaba,44.0,46.0,Cable,roadside settlement,9100.0,52.95,0,13,0,6.67,0.02
+johannesburg_n17_msauli,18.0,20.0,Castleview,roadside settlement,2446.0,64.38,0,0,0,6.67,0.08
+kampala_a6_elegu,14.0,16.0,Matugga,town,14803.0,40.7,0,0,6,6.65,0.02
+harare_a4_beitbridge,288.0,290.0,Masvingo,town,8235.0,52.22,0,0,0,6.61,0.05
+johannesburg_n17_msauli,40.0,42.0,Tornado,roadside settlement,2543.0,64.68,0,0,0,6.6,0.08
+nairobi_a2_moyale,20.0,22.0,Ruiru,roadside settlement,5159.0,52.62,0,1,0,6.6,0.02
+gaborone_a1_121_km,72.0,74.0,Lobatse,roadside settlement,3499.0,59.6,0,1,0,6.6,0.1
+gaborone_a1_121_km,52.0,54.0,,roadside settlement,3758.0,58.78,0,0,0,6.56,0.1
+harare_r5_mutare,8.0,10.0,,town,5762.0,52.08,0,0,0,6.53,0.06
+harare_p1_mucumbura,0.0,2.0,Avondale,town,6070.0,50.68,0,2,0,6.53,0.08
+gaborone_a1_ramokgwebana,426.0,428.0,,roadside settlement,3336.0,59.08,0,0,0,6.52,0.09
+harare_a1_chirundu,114.0,116.0,Trust,roadside settlement,3035.0,55.95,0,0,0,6.48,0.07
+kampala_a5_bwera,342.0,344.0,Market Square,roadside settlement,7139.0,49.55,7,5,0,6.48,0.02
+kigali_road_rusumo,10.0,12.0,Murindi,roadside settlement,3183.0,62.12,0,0,0,6.47,0.03
+kampala_a5_bwera,420.0,422.0,Mpondwe,roadside settlement,9212.0,49.0,0,1,0,6.47,0.02
+kampala_a2_katuna,12.0,14.0,Nabbingo,town,13412.0,42.25,0,2,0,6.46,0.02
+kigali_nr1_huye,72.0,74.0,Ruhango,roadside settlement,8896.0,46.38,0,0,0,6.46,0.03
+kigali_nr2_gisenyi,144.0,146.0,Kabinzi,roadside settlement,9216.0,46.45,0,2,0,6.44,0.03
+lusaka_t2_chirundu,8.0,10.0,,town,4096.0,54.68,4,1,0,6.43,0.05
+harare_r2_plumtree,2.0,4.0,Belvedere,roadside settlement,5525.0,51.68,0,2,0,6.41,0.06
+gaborone_a12_326_km,6.0,8.0,,town,4228.0,54.45,14,0,0,6.41,0.08
+kampala_a5_bwera,286.0,288.0,Buhinga,roadside settlement,4931.0,54.95,0,11,4,6.4,0.02
+dodoma_t3_rusomo,54.0,56.0,Bahi Soko,roadside settlement,3262.0,59.45,0,0,0,6.39,0.06
+lusaka_t2_chirundu,44.0,46.0,,roadside settlement,5179.0,52.92,1,0,0,6.38,0.05
+kampala_a1_malaba,84.0,86.0,Wanyange Central LC I,roadside settlement,11249.0,43.4,0,29,0,6.36,0.02
+kampala_a6_elegu,44.0,46.0,Wobulenzi,town,9846.0,47.38,0,11,5,6.32,0.02
+harare_r5_mutare,6.0,8.0,,town,5484.0,52.85,0,0,0,6.29,0.06
+harare_r2_plumtree,4.0,6.0,Belvedere,roadside settlement,3878.0,58.97,0,0,0,6.29,0.06
+pretoria_n14_springbok,172.0,174.0,,roadside settlement,2211.0,65.55,0,0,0,6.28,0.07
+pretoria_n1_cape_town,46.0,48.0,Strydom Park,roadside settlement,3691.0,55.45,0,0,0,6.28,0.03
+nairobi_a2_namanga,26.0,28.0,Kitengela,town,7721.0,47.45,1,0,1,6.26,0.05
+johannesburg_n12_de_rust,126.0,128.0,,roadside settlement,2395.0,63.38,0,0,0,6.22,0.04
+gaborone_a1_ramokgwebana,428.0,430.0,Francistown,town,6197.0,50.25,3,0,0,6.21,0.09
+kigali_nr2_gisenyi,100.0,102.0,Busogo,roadside settlement,3794.0,47.85,0,0,0,6.2,0.03
+harare_r4_nyamapanda,0.0,2.0,Eastlea,roadside settlement,6621.0,49.75,4,1,0,6.19,0.07
+kampala_a6_elegu,0.0,2.0,Katale,town,17197.0,38.7,1,52,6,6.17,0.02
+kigali_road_rusumo,6.0,8.0,Kanombe,town,4743.0,53.0,0,3,0,6.16,0.03
+kampala_a6_elegu,4.0,6.0,Kawempe B,town,16035.0,39.2,0,28,14,6.14,0.02
+kampala_a2_katuna,2.0,4.0,Ben Kiwanuka,town,16001.0,39.53,0,1,0,6.11,0.02
+pretoria_n1_cape_town,54.0,56.0,Fairland,roadside settlement,3942.0,50.15,0,0,0,6.09,0.03
+johannesburg_n3_durban,560.0,562.0,Musgrave,roadside settlement,6267.0,48.05,8,0,0,6.08,0.03
+dar_es_salaam_t7_lindi,162.0,164.0,Ikwiriri,town,7994.0,46.2,0,1,0,6.07,0.02
+kigali_nr2_gisenyi,142.0,144.0,Rugerero,roadside settlement,12326.0,41.75,0,0,0,6.06,0.03
+gaborone_a1_ramokgwebana,0.0,2.0,,roadside settlement,3738.0,56.12,0,1,2,6.03,0.08
+johannesburg_n17_msauli,30.0,32.0,Van Dykpark,roadside settlement,2467.0,64.5,0,0,0,6.02,0.07
+kampala_a5_bwera,8.0,10.0,Nakabugo,town,15433.0,39.38,0,2,0,6.01,0.02
+kigali_nr2_gisenyi,138.0,140.0,Mahoko,town,9454.0,44.9,0,3,0,6.0,0.03
+maputo_n1_pemba,108.0,110.0,,roadside settlement,3699.0,56.92,0,0,0,5.96,0.03
+pretoria_n1_beitbridge,42.0,44.0,Mandela Village,roadside settlement,4977.0,55.6,0,0,0,5.9,0.05
+kampala_a6_elegu,326.0,328.0,Gulu,town,14335.0,40.05,0,11,0,5.89,0.02
+gaborone_a1_121_km,54.0,56.0,,roadside settlement,1865.0,67.5,0,0,0,5.88,0.09
+kampala_a6_elegu,218.0,220.0,Bweyale,roadside settlement,9829.0,43.97,0,10,0,5.87,0.02
+pretoria_n14_springbok,20.0,22.0,Amberfield,roadside settlement,2798.0,61.53,0,0,0,5.81,0.07
+kigali_nr2_gisenyi,128.0,130.0,Kabare,roadside settlement,8720.0,46.05,0,0,0,5.81,0.03
+harare_r5_mutare,72.0,74.0,Marondera,roadside settlement,3934.0,55.58,0,0,2,5.77,0.05
+nairobi_a2_namanga,10.0,12.0,Syokimau,roadside settlement,2092.0,63.97,0,0,0,5.75,0.04
+harare_a1_chirundu,4.0,6.0,Bluff Hill,town,5255.0,50.78,0,0,0,5.74,0.06
+kigali_road_rusumo,98.0,100.0,Kibungo,roadside settlement,7938.0,47.45,0,0,0,5.72,0.02
+pretoria_n1_beitbridge,6.0,8.0,Kilner Park,roadside settlement,2939.0,59.6,0,0,0,5.71,0.05
+dodoma_t5_iringa,166.0,168.0,Migori,roadside settlement,3719.0,56.25,0,0,0,5.71,0.06
+lusaka_t2_chirundu,6.0,8.0,,town,5701.0,50.0,4,1,0,5.7,0.04
+johannesburg_r59_dealesville,10.0,12.0,Randhart,roadside settlement,2763.0,59.95,5,0,0,5.7,0.07
+kigali_nr2_gisenyi,56.0,58.0,Nemba,roadside settlement,5498.0,52.38,0,2,0,5.7,0.03
+nairobi_a2_namanga,72.0,74.0,Kajiado,roadside settlement,4647.0,57.38,0,10,0,5.66,0.04
+gaborone_a12_326_km,4.0,6.0,,roadside settlement,2189.0,61.45,5,0,0,5.65,0.07
+dar_es_salaam_t7_lindi,114.0,116.0,Bungu,roadside settlement,3271.0,57.25,0,1,0,5.62,0.02
+johannesburg_n12_emalahleni,128.0,130.0,Del Judor,roadside settlement,2715.0,63.85,0,0,0,5.58,0.07
+kampala_a9_hoima,10.0,12.0,Kasangobe,roadside settlement,9947.0,43.15,0,6,0,5.53,0.02
+dodoma_t5_iringa,2.0,4.0,Mlezi,town,5515.0,50.0,0,2,0,5.52,0.06
+johannesburg_n12_emalahleni,30.0,32.0,Morehill,roadside settlement,2434.0,64.75,0,0,0,5.51,0.07
+harare_p1_mucumbura,2.0,4.0,Avondale,roadside settlement,4800.0,52.85,0,0,0,5.5,0.06
+kampala_a2_katuna,8.0,10.0,Central(kyengera),town,13612.0,39.7,0,1,0,5.5,0.02
+harare_r2_plumtree,108.0,110.0,Chegutu,roadside settlement,3434.0,63.12,0,0,0,5.49,0.05
+pretoria_n4_lebombo,104.0,106.0,Del Judor,roadside settlement,3375.0,56.47,0,0,0,5.48,0.05
+dodoma_t3_rusomo,40.0,42.0,Ibihwa,roadside settlement,2351.0,63.0,0,0,0,5.47,0.06
+kampala_a9_hoima,146.0,148.0,Kamirambazzi,roadside settlement,1894.0,65.12,0,2,0,5.44,0.02
+kigali_nr2_gisenyi,140.0,142.0,Nyamyumba,roadside settlement,8443.0,45.18,0,2,0,5.43,0.03
+kigali_nr1_huye,120.0,122.0,Rwabuye,roadside settlement,4201.0,50.95,0,0,0,5.42,0.03
+nairobi_a2_namanga,8.0,10.0,,roadside settlement,1932.0,65.15,0,0,0,5.42,0.04
+johannesburg_r29_evander,12.0,14.0,Knights,roadside settlement,12326.0,44.32,1,0,0,5.41,0.05
+kigali_road_rusumo,2.0,4.0,Kabeza,town,11075.0,41.12,2,0,2,5.4,0.02
+dodoma_t3_morogoro,130.0,132.0,Ibuti,roadside settlement,2275.0,60.9,0,2,0,5.4,0.04
+johannesburg_n17_msauli,28.0,30.0,Parkrand,roadside settlement,2189.0,62.75,0,1,0,5.37,0.06
+kampala_a2_katuna,264.0,266.0,Kashanyarazi,town,4528.0,53.38,0,12,0,5.37,0.02
+harare_a1_chirundu,8.0,10.0,Westgate,roadside settlement,3055.0,56.78,0,0,0,5.36,0.06
+pretoria_n14_springbok,18.0,20.0,Amberfield,roadside settlement,2546.0,60.18,0,0,0,5.35,0.06
+kigali_nr2_gisenyi,116.0,118.0,Cyamabuye,roadside settlement,6895.0,46.58,0,0,2,5.3,0.03
+johannesburg_r59_dealesville,16.0,18.0,Albertsdal,roadside settlement,2162.0,62.8,0,0,0,5.27,0.06
+johannesburg_n12_emalahleni,36.0,38.0,Modderbee,roadside settlement,2272.0,61.05,0,0,0,5.25,0.06
+pretoria_n4_lekubu,104.0,106.0,Safari Gardens,roadside settlement,2914.0,58.08,1,0,0,5.24,0.07
+johannesburg_n12_de_rust,124.0,126.0,,roadside settlement,1883.0,64.47,0,0,0,5.2,0.03
+johannesburg_r59_dealesville,18.0,20.0,Albertsdal,roadside settlement,2247.0,62.5,0,0,0,5.19,0.06
+kampala_a2_katuna,4.0,6.0,Kajumbi Zone,town,14028.0,38.88,0,2,1,5.14,0.01
+lusaka_t2_nakonde,644.0,646.0,,roadside settlement,3738.0,58.5,0,2,0,5.12,0.01
+harare_r4_nyamapanda,140.0,142.0,Mutoko,roadside settlement,2548.0,58.6,0,0,0,5.09,0.06
+kigali_nr1_huye,46.0,48.0,Cyeza,roadside settlement,4994.0,50.08,0,0,0,5.03,0.02
+kigali_road_rusumo,16.0,18.0,Kabuga,roadside settlement,9041.0,44.7,0,0,0,4.99,0.02
+harare_r2_plumtree,6.0,8.0,Westlea,roadside settlement,2142.0,59.18,4,0,0,4.97,0.05
+kampala_a2_katuna,258.0,260.0,Nyamityobora Fr,roadside settlement,2448.0,58.22,0,0,0,4.91,0.01
+johannesburg_r59_dealesville,14.0,16.0,Brackenhurst,roadside settlement,1626.0,66.1,0,0,0,4.91,0.06
+gaborone_a1_ramokgwebana,430.0,432.0,Francistown,town,4928.0,53.08,3,2,0,4.91,0.07
+kampala_a9_hoima,12.0,14.0,Kisimbiri Central,roadside settlement,9446.0,44.4,0,2,0,4.9,0.02
+kigali_road_rusumo,8.0,10.0,Murindi,town,5311.0,49.28,0,0,0,4.89,0.02
+harare_r4_nyamapanda,6.0,8.0,Chisipite,roadside settlement,3610.0,53.95,9,0,0,4.89,0.06
+gaborone_a1_121_km,74.0,76.0,Lobatse,town,4364.0,51.6,0,2,0,4.89,0.07
+gaborone_a12_326_km,40.0,42.0,,roadside settlement,2210.0,60.82,0,0,0,4.86,0.06
+johannesburg_r25_groblersdal,20.0,22.0,Houtkapper Park,roadside settlement,4974.0,49.55,16,0,0,4.8,0.06
+harare_a4_beitbridge,436.0,438.0,Rutenga,roadside settlement,1662.0,66.53,0,0,0,4.8,0.03
+harare_a4_beitbridge,4.0,6.0,,roadside settlement,3077.0,54.92,0,0,0,4.78,0.03
+pretoria_n1_beitbridge,46.0,48.0,Ramotse,roadside settlement,2469.0,60.75,0,0,0,4.78,0.04
+nairobi_a2_namanga,102.0,104.0,Bisil,roadside settlement,4581.0,54.92,0,2,0,4.77,0.04
+kigali_nr1_huye,126.0,128.0,Mukina,roadside settlement,4009.0,55.58,0,0,0,4.77,0.02
+dodoma_t3_morogoro,190.0,192.0,Dumila Juu,roadside settlement,3132.0,54.92,0,0,0,4.69,0.04
+johannesburg_r25_groblersdal,18.0,20.0,Edleen,roadside settlement,3586.0,53.5,17,0,0,4.69,0.06
+gaborone_a1_121_km,106.0,108.0,,roadside settlement,1726.0,65.03,0,0,0,4.66,0.07
+harare_r5_mutare,4.0,6.0,Eastlea,roadside settlement,4500.0,50.3,0,0,0,4.65,0.04
+johannesburg_n17_msauli,10.0,12.0,Electron,roadside settlement,1820.0,64.65,0,0,0,4.65,0.05
+kigali_road_rusumo,52.0,54.0,Rwamagana,roadside settlement,2390.0,54.95,0,0,0,4.63,0.02
+pretoria_n4_lekubu,10.0,12.0,Fir Grove,roadside settlement,2016.0,61.2,0,0,0,4.62,0.06
+pretoria_n1_beitbridge,4.0,6.0,Weavind Park,roadside settlement,2653.0,59.28,0,0,0,4.59,0.04
+kampala_a9_hoima,8.0,10.0,Naluvule,town,8123.0,45.08,0,5,0,4.57,0.02
+johannesburg_n12_de_rust,170.0,172.0,Alabama,roadside settlement,3059.0,55.68,5,0,0,4.55,0.03
+johannesburg_r59_dealesville,12.0,14.0,Randhart,roadside settlement,1914.0,66.0,0,0,0,4.54,0.05
+harare_r5_mutare,2.0,4.0,Eastlea,roadside settlement,3712.0,52.65,0,0,0,4.5,0.04
+pretoria_n1_beitbridge,262.0,264.0,,roadside settlement,2181.0,59.95,0,0,0,4.49,0.04
+pretoria_n4_lebombo,10.0,12.0,La Montagne,roadside settlement,2968.0,53.45,0,1,0,4.48,0.04
+harare_p1_mucumbura,4.0,6.0,,roadside settlement,2237.0,59.15,0,0,0,4.46,0.05
+harare_a4_beitbridge,2.0,4.0,Mbare,roadside settlement,4055.0,51.08,0,0,0,4.45,0.03
+dodoma_t5_arusha,82.0,84.0,Haneti,roadside settlement,3010.0,58.65,0,1,0,4.45,0.06
+pretoria_n4_lebombo,6.0,8.0,Val-de-Grâce,roadside settlement,2167.0,59.5,0,0,0,4.44,0.04
+harare_a1_chirundu,2.0,4.0,Avondale,roadside settlement,6298.0,45.78,0,1,0,4.43,0.05
+nairobi_a2_namanga,142.0,144.0,Maili Tisa,roadside settlement,4276.0,57.38,0,0,0,4.41,0.03
+kigali_nr1_huye,94.0,96.0,Kinazi,roadside settlement,5162.0,49.8,0,0,0,4.36,0.02
+dodoma_t3_rusomo,0.0,2.0,Hazina,town,5456.0,44.85,2,3,2,4.35,0.04
+johannesburg_r29_evander,10.0,12.0,Primrose Hill,roadside settlement,5205.0,52.1,6,0,0,4.35,0.04
+maputo_n1_pemba,78.0,80.0,,roadside settlement,4929.0,48.15,0,0,2,4.33,0.02
+harare_r4_nyamapanda,4.0,6.0,Highlands,town,4442.0,49.72,1,0,0,4.33,0.05
+kampala_a9_hoima,118.0,120.0,Buzzibwera .a.,roadside settlement,6171.0,52.12,0,11,0,4.33,0.02
+harare_r2_plumtree,142.0,144.0,Waverly,roadside settlement,2163.0,57.52,0,0,0,4.29,0.04
+lusaka_t4_234_km,44.0,46.0,Chongwe,town,5161.0,47.55,0,0,2,4.27,0.03
+kampala_a9_hoima,116.0,118.0,Luwunga.b,town,5717.0,44.22,0,15,0,4.27,0.02
+johannesburg_r25_groblersdal,16.0,18.0,Kempton Park West,roadside settlement,2918.0,48.28,0,0,0,4.25,0.06
+lusaka_t2_chirundu,18.0,20.0,Chilanga,roadside settlement,3927.0,52.48,0,0,1,4.25,0.03
+kigali_nr3_gatuna,8.0,10.0,Nyacyonga,roadside settlement,2404.0,58.12,0,0,0,4.24,0.06
+johannesburg_n17_msauli,124.0,126.0,,open road,1133.0,68.85,0,0,0,4.24,0.05
+dodoma_t3_morogoro,0.0,2.0,Medeli,town,4486.0,49.55,1,2,0,4.22,0.03
+lusaka_m9_mongu,10.0,12.0,,roadside settlement,1763.0,62.72,0,0,0,4.21,0.04
+johannesburg_n17_msauli,2.0,4.0,La Rochelle,town,7413.0,44.35,0,0,0,4.2,0.05
+johannesburg_r24_rustenburg,24.0,26.0,Princess,roadside settlement,7607.0,45.08,12,0,0,4.19,0.05
+dodoma_t5_iringa,136.0,138.0,Mtera,roadside settlement,3710.0,53.6,0,0,0,4.18,0.05
+maputo_n1_pemba,176.0,178.0,Chissano,roadside settlement,4077.0,50.45,0,0,0,4.18,0.02
+johannesburg_n12_emalahleni,34.0,36.0,Modderbee,roadside settlement,1891.0,61.38,0,0,0,4.17,0.05
+pretoria_n14_springbok,76.0,78.0,,roadside settlement,1220.0,65.75,0,0,0,4.16,0.05
+johannesburg_n12_emalahleni,2.0,4.0,Bruma,town,4244.0,49.8,20,0,0,4.16,0.05
+pretoria_n4_lebombo,98.0,100.0,Schoongezicht,roadside settlement,6255.0,48.08,0,0,0,4.14,0.04
+maputo_en4_ressano_garcia,2.0,4.0,Luís Cabral,town,7386.0,43.22,3,0,0,4.11,0.04
+kigali_nr1_huye,100.0,102.0,Rusatira,roadside settlement,3687.0,52.0,0,0,0,4.11,0.02
+dodoma_t3_rusomo,122.0,124.0,Manyoni,town,2821.0,53.0,2,3,0,4.08,0.04
+pretoria_n14_springbok,30.0,32.0,Diepsloot,roadside settlement,3926.0,58.6,0,0,0,4.08,0.05
+johannesburg_n12_emalahleni,12.0,14.0,Ravensklip,roadside settlement,2391.0,60.15,0,2,0,4.05,0.05
+johannesburg_r29_evander,114.0,116.0,,roadside settlement,3161.0,53.8,0,0,0,4.04,0.03
+johannesburg_r25_groblersdal,134.0,136.0,Verena-D,roadside settlement,2114.0,57.72,0,0,0,4.04,0.05
+maputo_n1_pemba,138.0,140.0,Magul,roadside settlement,1931.0,60.35,0,0,0,4.04,0.02
+pretoria_n1_beitbridge,10.0,12.0,Montanapark,roadside settlement,1259.0,66.82,0,0,0,4.03,0.03
+lusaka_t2_chirundu,40.0,42.0,Kafue,roadside settlement,2998.0,56.7,0,0,0,4.02,0.03
+johannesburg_n12_emalahleni,14.0,16.0,Hughes Exts,roadside settlement,2711.0,57.65,0,0,0,4.02,0.05
+harare_a1_chirundu,112.0,114.0,Chinhoyi,town,3311.0,53.72,10,0,0,4.02,0.05
+johannesburg_r29_evander,6.0,8.0,Malvern East,town,4805.0,49.9,4,0,0,3.96,0.03
+harare_r5_mutare,22.0,24.0,Ruwa,roadside settlement,1774.0,60.18,0,0,0,3.95,0.04
+johannesburg_r24_rustenburg,2.0,4.0,Fordsburg,town,6025.0,45.3,11,0,0,3.94,0.05
+dodoma_t3_morogoro,110.0,112.0,Pandambili,town,4304.0,49.88,0,0,0,3.94,0.03
+harare_p1_mucumbura,82.0,84.0,Bindura,roadside settlement,2582.0,55.68,1,0,0,3.93,0.05
+pretoria_n4_lebombo,50.0,52.0,Versterpark,roadside settlement,1290.0,66.65,0,0,0,3.92,0.04
+dodoma_t5_arusha,92.0,94.0,Kidoka,roadside settlement,1965.0,61.85,0,0,0,3.9,0.05
+lusaka_t4_234_km,0.0,2.0,Northmead,town,4859.0,47.08,6,0,2,3.87,0.03
+pretoria_n4_lebombo,102.0,104.0,Del Judor,roadside settlement,2257.0,54.28,0,0,0,3.87,0.04
+maputo_n1_pemba,196.0,198.0,Chicumbane,roadside settlement,3755.0,50.4,0,0,0,3.85,0.02
+harare_a4_beitbridge,8.0,10.0,,roadside settlement,1711.0,61.58,0,0,2,3.82,0.03
+johannesburg_r24_rustenburg,6.0,8.0,Paarlshoop,roadside settlement,3166.0,51.18,2,0,0,3.82,0.04
+maputo_en4_ressano_garcia,4.0,6.0,Quarteirão 49,roadside settlement,3493.0,52.38,0,0,0,3.82,0.04
+pretoria_n4_lekubu,56.0,58.0,,roadside settlement,2666.0,62.13,0,0,0,3.8,0.05
+dodoma_t5_arusha,72.0,74.0,Chenene,roadside settlement,1550.0,64.35,0,2,0,3.8,0.05
+windhoek_c28_swakopmund,2.0,4.0,Rocky Crest,roadside settlement,2965.0,54.92,2,0,0,3.79,0.44
+harare_a1_chirundu,200.0,202.0,Karoi,roadside settlement,1481.0,60.32,0,0,0,3.75,0.04
+windhoek_b2_walvis_bay,394.0,396.0,Otweya,roadside settlement,2120.0,56.32,0,0,0,3.75,0.18
+johannesburg_r29_evander,16.0,18.0,Berton Park,roadside settlement,2180.0,57.12,2,0,0,3.74,0.03
+harare_r2_plumtree,140.0,142.0,Kadoma,town,3886.0,50.48,0,0,0,3.7,0.03
+kigali_nr3_gatuna,6.0,8.0,Nyacyonga,roadside settlement,1810.0,62.05,0,0,0,3.68,0.05
+dodoma_t5_iringa,48.0,50.0,Mlowa,roadside settlement,2902.0,54.35,0,0,0,3.66,0.04
+pretoria_n4_lebombo,14.0,16.0,,roadside settlement,1037.0,68.45,0,0,0,3.65,0.04
+johannesburg_n17_msauli,12.0,14.0,Elandshaven,roadside settlement,1295.0,65.07,0,0,0,3.65,0.04
+johannesburg_n17_msauli,26.0,28.0,Libradene,roadside settlement,1790.0,55.05,0,0,0,3.64,0.04
+gaborone_a1_121_km,8.0,10.0,,roadside settlement,2070.0,55.82,5,0,0,3.63,0.06
+johannesburg_n12_emalahleni,0.0,2.0,Bezuidenhoutsvallei,town,8872.0,40.05,8,0,0,3.63,0.04
+maputo_en4_ressano_garcia,0.0,2.0,Malanga,town,3683.0,49.52,18,0,0,3.63,0.04
+gaborone_a1_ramokgwebana,8.0,10.0,Phakalane,roadside settlement,1042.0,67.9,2,0,0,3.6,0.05
+johannesburg_n12_emalahleni,4.0,6.0,Morninghill,roadside settlement,2231.0,57.82,0,0,0,3.6,0.04
+harare_r5_mutare,10.0,12.0,,roadside settlement,2029.0,52.6,0,0,0,3.59,0.03
+johannesburg_r25_groblersdal,4.0,6.0,Sandringham,town,5064.0,44.22,12,0,0,3.57,0.05
+pretoria_n14_springbok,0.0,2.0,Salvokop,town,4056.0,48.6,21,0,0,3.57,0.04
+maputo_n1_pemba,4.0,6.0,Bagamoyo,town,8097.0,40.8,0,4,1,3.56,0.02
+johannesburg_r25_groblersdal,22.0,24.0,Birchleigh,roadside settlement,3935.0,48.95,13,1,0,3.56,0.05
+dodoma_t3_morogoro,100.0,102.0,Kibaigwa,roadside settlement,4484.0,50.48,0,0,0,3.55,0.03
+harare_r4_nyamapanda,138.0,140.0,Mutoko,roadside settlement,1315.0,56.6,0,0,0,3.54,0.04
+dodoma_t3_rusomo,84.0,86.0,Chikuyu,town,3403.0,54.32,0,2,0,3.54,0.04
+harare_r4_nyamapanda,10.0,12.0,The Grange,roadside settlement,1670.0,60.58,0,0,0,3.54,0.04
+johannesburg_r24_rustenburg,46.0,48.0,,roadside settlement,2634.0,60.95,1,0,0,3.52,0.04
+maputo_n1_pemba,20.0,22.0,Michafutene,town,3757.0,49.22,9,0,0,3.5,0.02
+johannesburg_r59_dealesville,54.0,56.0,Arconpark,roadside settlement,1089.0,66.97,0,0,0,3.48,0.04
+dodoma_t5_iringa,122.0,124.0,Kisima,roadside settlement,1341.0,64.78,0,2,0,3.46,0.04
+lusaka_t4_234_km,42.0,44.0,Chongwe,roadside settlement,2412.0,55.95,0,0,0,3.43,0.02
+johannesburg_r24_rustenburg,20.0,22.0,Manufacta,town,5552.0,45.12,10,0,0,3.38,0.04
+pretoria_n4_lekubu,106.0,108.0,Proteapark,roadside settlement,2333.0,52.82,0,0,0,3.37,0.05
+harare_a4_beitbridge,570.0,572.0,Milayo,roadside settlement,1700.0,63.15,0,0,0,3.36,0.02
+dodoma_t5_arusha,90.0,92.0,Kidoka,open road,1080.0,67.7,0,1,0,3.34,0.05
+dodoma_t3_morogoro,126.0,128.0,Ukwamani,roadside settlement,2362.0,57.0,0,2,0,3.34,0.03
+windhoek_b1_797_km,88.0,90.0,Rehoboth,roadside settlement,1473.0,60.22,0,0,0,3.31,0.21
+windhoek_c28_swakopmund,0.0,2.0,Windhoek West,roadside settlement,3525.0,49.18,3,2,0,3.3,0.39
+dodoma_t3_rusomo,78.0,80.0,Maweni,roadside settlement,1118.0,66.8,0,2,0,3.3,0.03
+dodoma_t3_rusomo,86.0,88.0,Mwiboo,roadside settlement,1081.0,66.65,0,0,0,3.29,0.03
+windhoek_b2_walvis_bay,0.0,2.0,,roadside settlement,904.0,68.95,0,0,0,3.29,0.16
+dodoma_t3_morogoro,140.0,142.0,Mtumbatu,roadside settlement,1291.0,63.22,0,0,0,3.27,0.03
+dodoma_t3_morogoro,192.0,194.0,Dumila,roadside settlement,4674.0,47.5,0,0,0,3.26,0.03
+johannesburg_r24_rustenburg,10.0,12.0,Bosmont,town,5738.0,44.85,21,2,0,3.25,0.04
+dodoma_t3_morogoro,102.0,104.0,Kibaigwa,roadside settlement,2489.0,54.0,0,2,0,3.24,0.03
+gaborone_a1_121_km,6.0,8.0,,roadside settlement,2990.0,50.58,2,0,0,3.22,0.05
+dodoma_t5_iringa,46.0,48.0,Mlowa,roadside settlement,1326.0,64.28,0,0,0,3.21,0.03
+dodoma_t3_rusomo,124.0,126.0,Kilimatinde,roadside settlement,3065.0,56.28,1,1,1,3.21,0.03
+pretoria_n14_springbok,12.0,14.0,Hennopspark,roadside settlement,3167.0,51.5,0,0,0,3.21,0.04
+dodoma_t3_rusomo,2.0,4.0,Nkuhungu,town,3258.0,48.7,0,0,0,3.19,0.03
+johannesburg_r24_rustenburg,26.0,28.0,Mindalore,roadside settlement,3936.0,47.0,24,0,0,3.16,0.04
+gaborone_a12_326_km,12.0,14.0,Metsimotlhabe,roadside settlement,2594.0,58.0,0,0,0,3.16,0.04
+harare_p1_mucumbura,124.0,126.0,,roadside settlement,1245.0,64.3,0,0,0,3.16,0.04
+dodoma_t3_morogoro,164.0,166.0,Magubike,roadside settlement,1586.0,61.2,0,4,0,3.15,0.03
+johannesburg_r59_dealesville,44.0,46.0,Noldick,roadside settlement,1051.0,65.78,0,0,0,3.14,0.04
+lusaka_m9_mongu,106.0,108.0,Kasalu,roadside settlement,1117.0,65.28,0,3,0,3.12,0.03
+harare_r2_plumtree,148.0,150.0,,roadside settlement,1091.0,65.68,0,0,0,3.1,0.03
+pretoria_n14_springbok,10.0,12.0,Centurion,roadside settlement,1407.0,62.2,0,0,0,3.08,0.04
+gaborone_a12_326_km,0.0,2.0,Mogoditshane,town,3025.0,50.0,19,0,0,3.02,0.04
+lusaka_m9_mongu,12.0,14.0,,roadside settlement,1414.0,61.65,0,0,0,3.01,0.03
+harare_r2_plumtree,8.0,10.0,Warren Park D,roadside settlement,1968.0,57.5,0,0,0,2.99,0.03
+dodoma_t3_rusomo,56.0,58.0,Bahi,open road,1139.0,67.18,0,0,0,2.99,0.03
+gaborone_a1_ramokgwebana,10.0,12.0,Gaborone North,roadside settlement,1013.0,65.82,0,0,0,2.99,0.04
+dodoma_t5_iringa,36.0,38.0,Nkulabi,roadside settlement,1225.0,62.25,0,0,0,2.96,0.03
+harare_a1_chirundu,198.0,200.0,Karoi,town,3197.0,55.88,0,0,0,2.93,0.03
+harare_p1_mucumbura,152.0,154.0,Mount Darwin,roadside settlement,1473.0,57.22,0,0,0,2.91,0.03
+johannesburg_r24_rustenburg,28.0,30.0,Lewisham,town,3483.0,47.25,13,0,0,2.87,0.03
+kigali_nr3_gatuna,74.0,76.0,Gatuna,roadside settlement,2011.0,54.78,0,0,0,2.87,0.04
+dodoma_t5_arusha,14.0,16.0,,roadside settlement,3200.0,51.88,0,2,0,2.86,0.04
+gaborone_a1_121_km,2.0,4.0,,roadside settlement,2008.0,53.9,4,0,0,2.83,0.04
+dodoma_t5_iringa,4.0,6.0,Chinyoya,town,3256.0,47.88,1,0,0,2.82,0.03
+johannesburg_r59_dealesville,56.0,58.0,Duncanville,roadside settlement,945.0,66.47,3,0,0,2.77,0.03
+johannesburg_r25_groblersdal,86.0,88.0,Erasmus,roadside settlement,1036.0,64.38,0,0,0,2.72,0.04
+harare_r4_nyamapanda,8.0,10.0,Chisipite,roadside settlement,1502.0,58.68,1,0,0,2.71,0.03
+johannesburg_r25_groblersdal,2.0,4.0,Orange Grove,town,7356.0,38.7,22,0,0,2.64,0.03
+gaborone_a1_121_km,104.0,106.0,,roadside settlement,782.0,67.72,4,0,0,2.61,0.04
+dodoma_t5_arusha,34.0,36.0,Zanka,roadside settlement,955.0,64.72,0,2,0,2.59,0.04
+windhoek_b1_797_km,90.0,92.0,Rehoboth,town,2127.0,51.85,0,0,0,2.58,0.16
+harare_p1_mucumbura,80.0,82.0,Bindura,roadside settlement,919.0,64.65,0,0,0,2.46,0.03
+lusaka_t4_234_km,154.0,156.0,,roadside settlement,1141.0,60.65,0,2,0,2.44,0.02
+gaborone_a1_ramokgwebana,194.0,196.0,Mahalapye,town,2433.0,50.0,0,0,0,2.43,0.03
+dodoma_t5_arusha,0.0,2.0,,town,5268.0,41.62,0,3,0,2.42,0.03
+lusaka_m9_mongu,22.0,24.0,,roadside settlement,1017.0,62.35,0,0,0,2.42,0.02
+harare_p1_mucumbura,150.0,152.0,Mount Darwin,roadside settlement,1346.0,58.75,0,0,0,2.37,0.03
+lusaka_m9_mongu,8.0,10.0,,roadside settlement,904.0,63.2,1,0,0,2.35,0.02
+gaborone_a12_326_km,2.0,4.0,Mogoditshane,town,2344.0,50.0,18,0,0,2.34,0.03
+dodoma_t5_arusha,12.0,14.0,,town,2205.0,52.38,0,0,0,2.31,0.03
+windhoek_b6_buitepos,210.0,212.0,Nossobville,roadside settlement,835.0,66.0,0,0,0,2.3,0.28
+pretoria_n4_lekubu,8.0,10.0,Karenpark,roadside settlement,786.0,66.1,0,0,0,2.3,0.03
+harare_a1_chirundu,116.0,118.0,Mapako,roadside settlement,1073.0,60.4,0,0,0,2.3,0.03
+dodoma_t5_arusha,40.0,42.0,Meia Meia,roadside settlement,812.0,65.72,0,0,0,2.26,0.03
+pretoria_n4_lekubu,102.0,104.0,Cashan,roadside settlement,2718.0,47.9,0,0,0,2.2,0.03
+dodoma_t5_arusha,112.0,114.0,Chemba,roadside settlement,1070.0,60.5,0,2,0,2.2,0.03
+lusaka_m9_mongu,104.0,106.0,Kasalu,roadside settlement,708.0,66.78,0,2,0,2.14,0.02
+windhoek_b1_797_km,8.0,10.0,Cimbebasia,open road,1081.0,58.75,0,0,0,2.12,0.13
+windhoek_b1_797_km,0.0,2.0,Windhoek,town,2222.0,48.95,15,1,0,2.1,0.13
+harare_r4_nyamapanda,142.0,144.0,Mutoko,roadside settlement,675.0,66.6,0,0,0,2.08,0.02
+harare_r4_nyamapanda,18.0,20.0,,roadside settlement,802.0,62.42,0,0,0,2.07,0.02
+kigali_nr3_gatuna,16.0,18.0,Rusine,open road,680.0,58.62,0,0,0,2.03,0.03
+harare_r4_nyamapanda,2.0,4.0,Eastlea,roadside settlement,1481.0,53.62,0,0,0,1.97,0.02
+windhoek_b1_797_km,92.0,94.0,Rehoboth,town,1535.0,56.42,0,0,0,1.94,0.12
+gaborone_a1_ramokgwebana,192.0,194.0,Mahalapye,town,1885.0,50.0,0,0,0,1.88,0.03
+gaborone_a1_ramokgwebana,482.0,484.0,Tshesebe,roadside settlement,641.0,65.3,0,0,0,1.86,0.03
+kigali_nr3_gatuna,28.0,30.0,Carrier,roadside settlement,867.0,59.75,0,0,0,1.83,0.02
+windhoek_c26_194_km,4.0,6.0,Academia,town,2457.0,46.9,7,2,0,1.79,0.42
+harare_p1_mucumbura,6.0,8.0,,roadside settlement,532.0,66.8,0,0,0,1.69,0.02
+kigali_nr3_gatuna,26.0,28.0,Cyamutara,roadside settlement,1147.0,55.52,0,0,0,1.66,0.02
+kigali_nr3_gatuna,10.0,12.0,Nyacyonga,roadside settlement,473.0,68.2,0,0,0,1.62,0.02
+windhoek_b2_walvis_bay,182.0,184.0,Karibib,town,1443.0,54.15,0,0,0,1.58,0.08
+gaborone_a1_ramokgwebana,114.0,116.0,Dibete Station,roadside settlement,515.0,66.62,0,0,0,1.56,0.02
+windhoek_b2_walvis_bay,362.0,364.0,Kramersdorf,town,2780.0,42.42,6,0,0,1.48,0.07
+windhoek_c26_194_km,0.0,2.0,Windhoek Central,town,1636.0,47.38,18,3,1,1.32,0.31
+windhoek_b6_buitepos,0.0,2.0,Luxury Hill,town,1471.0,49.92,10,0,0,1.3,0.16
+windhoek_b2_walvis_bay,378.0,380.0,Langstrand,open road,357.0,65.32,0,0,0,1.29,0.06
+windhoek_b1_797_km,194.0,196.0,Kalkrand,roadside settlement,417.0,66.85,0,0,0,1.24,0.08
+windhoek_b2_walvis_bay,392.0,394.0,Otweya,roadside settlement,296.0,69.08,0,0,0,1.06,0.05
+windhoek_b6_buitepos,208.0,210.0,Gobabis,town,1007.0,50.0,4,1,0,1.01,0.12
+windhoek_b2_walvis_bay,180.0,182.0,Usab,roadside settlement,325.0,67.97,0,0,0,0.97,0.05
+windhoek_b2_walvis_bay,360.0,362.0,Kramersdorf Extension,roadside settlement,377.0,61.55,0,0,0,0.96,0.05
+windhoek_b6_buitepos,2.0,4.0,Avis,roadside settlement,1369.0,46.82,4,0,0,0.94,0.11
+windhoek_b2_walvis_bay,380.0,382.0,Langstrand,roadside settlement,330.0,63.62,0,0,0,0.94,0.04
+windhoek_b2_walvis_bay,70.0,72.0,,roadside settlement,333.0,67.25,0,0,0,0.89,0.04
+windhoek_b1_797_km,4.0,6.0,Suiderhof,roadside settlement,621.0,57.05,2,0,0,0.78,0.05
+windhoek_c28_swakopmund,6.0,8.0,Arusha,roadside settlement,1369.0,48.35,0,0,0,0.78,0.09
+windhoek_c26_194_km,2.0,4.0,Southern Industrial Area,town,525.0,49.75,17,2,0,0.51,0.12
+windhoek_c26_194_km,6.0,8.0,Academia,town,412.0,50.95,14,0,0,0.48,0.11
+windhoek_b6_buitepos,4.0,6.0,Avis,roadside settlement,393.0,52.65,0,0,0,0.37,0.04
+windhoek_b1_797_km,2.0,4.0,Southern Industrial Area,roadside settlement,260.0,56.22,4,0,0,0.36,0.02
+windhoek_b6_buitepos,206.0,208.0,Gobabis,open road,125.0,66.78,0,1,0,0.33,0.04
+windhoek_b1_797_km,6.0,8.0,Prosperita,town,279.0,50.0,12,0,2,0.28,0.02
+windhoek_b6_buitepos,156.0,158.0,Witvlei,open road,166.0,59.8,0,0,0,0.27,0.03
+windhoek_c28_swakopmund,4.0,6.0,Otjomuise,open road,75.0,67.58,2,0,0,0.26,0.03
+windhoek_b1_797_km,38.0,40.0,Crinium Lake Estate,open road,66.0,69.1,0,0,0,0.24,0.01
+windhoek_b6_buitepos,202.0,204.0,,open road,65.0,69.45,0,0,0,0.23,0.03
+windhoek_c28_swakopmund,34.0,36.0,Neuheusis,open road,98.0,55.03,0,1,0,0.23,0.03
+windhoek_b6_buitepos,154.0,156.0,Witvlei,open road,163.0,64.05,0,0,0,0.21,0.02
+windhoek_b6_buitepos,58.0,60.0,Seeis,open road,41.0,68.3,0,0,0,0.15,0.02
+windhoek_c26_194_km,14.0,16.0,,open road,21.0,68.2,0,0,0,0.07,0.02
+windhoek_c28_swakopmund,28.0,30.0,,open road,18.0,61.32,0,0,0,0.07,0.01
+windhoek_c26_194_km,124.0,126.0,,open road,11.0,67.9,0,0,0,0.03,0.01
+windhoek_c28_swakopmund,188.0,190.0,,open road,7.0,69.95,0,0,0,0.03,0.0
+windhoek_c28_swakopmund,64.0,66.0,,open road,7.0,68.65,0,0,0,0.02,0.0
+windhoek_c26_194_km,68.0,70.0,,open road,8.0,66.7,0,0,0,0.02,0.01
+windhoek_c28_swakopmund,14.0,16.0,,open road,9.0,45.95,0,0,0,0.02,0.0
+windhoek_c28_swakopmund,42.0,44.0,,open road,4.0,63.28,0,0,0,0.01,0.0
+windhoek_c26_194_km,166.0,168.0,,open road,3.0,68.65,0,0,0,0.01,0.0
+windhoek_c26_194_km,118.0,120.0,,open road,3.0,57.42,0,0,0,0.01,0.0
+windhoek_c26_194_km,106.0,108.0,,open road,3.0,68.97,0,0,0,0.01,0.0
