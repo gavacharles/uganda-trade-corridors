@@ -36,8 +36,8 @@ from cartography import INK, INK2, SURF
 from travel_model import CENTRAL, P, piece_minutes
 
 BUF_M = 300
-WPS = []
-for url in C.WORLDPOP:   # one raster per country
+WPS = list(getattr(C, "POP_RASTERS", []))   # a study may supply its own population rasters
+for url in ([] if WPS else C.WORLDPOP):   # otherwise WorldPop, one raster per country
     path = os.path.join(C.DATA, "worldpop", os.path.basename(url))
     if not os.path.exists(path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -61,7 +61,8 @@ for wp in WPS:
             b = src.bounds
             if x1 < b.left or x0 > b.right or y1 < b.bottom or y0 > b.top:
                 continue
-            w = from_bounds(x0 - 0.01, y0 - 0.01, x1 + 0.01, y1 + 0.01, transform=src.transform)
+            pad = 0.01 if src.crs.is_geographic else 1000   # about 1 km, in degrees or metres
+            w = from_bounds(x0 - pad, y0 - pad, x1 + pad, y1 + pad, transform=src.transform)
             w = w.round_offsets().round_lengths()
             a = src.read(1, window=w, boundless=True, fill_value=0)
             tf = src.window_transform(w)

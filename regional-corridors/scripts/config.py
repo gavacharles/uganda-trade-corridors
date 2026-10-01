@@ -64,6 +64,11 @@ def _ghsl_tiles():
 
 GHSL_TILES = _ghsl_tiles() if _arteries else []
 
+# Population: GHS-POP 2025 (100 m) on the same tiles, one consistent product across ten countries
+# (scripts/download_ghs_pop.py). 19_safety.py uses POP_RASTERS when it is set, WorldPop otherwise.
+POP_DIR = os.path.join(DATA, "ghs_pop")
+POP_RASTERS = [os.path.join(POP_DIR, f"GHS_POP_E2025_GLOBE_R2023A_54009_100_V1_0_{t}.tif") for t in GHSL_TILES]
+
 # Not used here (no live traffic collection), but 02_segments.py reads them.
 TOMTOM_PROBES = {}
 TOMTOM_DAILY_REQUESTS = 2400
