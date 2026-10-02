@@ -63,7 +63,7 @@ def theme(ax, values, cmap, norm, lw=3.4, extent=M.EXT_UG, towns=True):
     d.sort_values("v").plot(ax=ax, aspect=None, column="v", cmap=cmap, norm=norm, linewidth=lw, zorder=6)
     if towns:
         M.town_labels(ax, TOWNS, size=8, extent=extent)
-    K.furniture(ax, km=100 if extent == M.EXT_UG else 10)
+    K.furniture(ax, km=100 if extent == M.EXT_UG else 10, arrow=extent == M.EXT_UG)
 
 
 def key(fig, ax, cmap, norm, bounds, label, labels=None):
@@ -87,30 +87,71 @@ def panel_label(ax, s):
             zorder=30, bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85))
 
 
+# Close-up windows (lon0, lon1, lat0, lat1), about 30-45 km across
+WIN = {"Kampala": (32.40, 32.80, 0.17, 0.50), "Jinja–Iganga": (33.12, 33.52, 0.38, 0.68),
+       "Mbarara": (30.50, 30.82, -0.72, -0.47), "Karuma–Kigumba": (32.00, 32.32, 1.80, 2.08),
+       "Lukaya–Masaka": (31.70, 32.02, -0.40, -0.08), "Busitema–Tororo": (33.85, 34.25, 0.48, 0.76),
+       "Fort Portal": (30.12, 30.44, 0.52, 0.80)}
+SINGLE_RECTS = [[0.64, 0.625, 0.34, 0.26], [0.64, 0.335, 0.34, 0.26], [0.64, 0.045, 0.34, 0.26]]
+
+
+def two_rects(x0):
+    return [[x0 + i * 0.16, 0.03, 0.15, 0.26] for i in range(3)]
+
+
+def mark(ax, win, label):
+    ax.add_patch(Rectangle((win[0], win[2]), win[1] - win[0], win[3] - win[2], fill=False, ec=INK, lw=1.3, zorder=25))
+    ax.text(win[0], win[3], f" {label}", fontsize=9, fontweight="bold", color=INK, va="bottom", ha="left", zorder=26,
+            bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.85))
+
+
+def context(ax, win):
+    """Street-level context under a close-up: building footprints and the main road network."""
+    bb = M.buildings[M.buildings.longitude.between(win[0], win[1]) & M.buildings.latitude.between(win[2], win[3])]
+    ax.scatter(bb.longitude, bb.latitude, s=0.12, color="#a8a296", linewidths=0, zorder=3, rasterized=True)
+    rr = M.froads.cx[win[0]:win[1], win[2]:win[3]]
+    rr = rr[rr.highway.isin(["motorway", "trunk", "primary", "secondary", "tertiary", "unclassified"])]
+    if len(rr):
+        rr.plot(ax=ax, aspect=None, color="#8c887f", linewidth=0.45, zorder=4)
+    M.place_labels(ax, *win, n=6, size=6.5)
+
+
+def closeups(fig, overviews, rects, names, draw):
+    """Numbered close-up panels; each window is boxed and numbered on every overview."""
+    for i, (rect, name) in enumerate(zip(rects, names), 1):
+        win = WIN[name]
+        ax = fig.add_axes(rect)
+        draw(ax, win)
+        context(ax, win)
+        for s_ in ax.spines.values():
+            s_.set_visible(True); s_.set_color(INK); s_.set_linewidth(1)
+        ax.set_title(f"{i}. {name}", fontsize=9.5, color=INK, loc="left")
+        for ov in overviews:
+            mark(ov, win, str(i))
+
+
+def theme_draw(values, cmap, norm):
+    return lambda ax, win: theme(ax, values, cmap, norm, lw=4.6, extent=win, towns=False)
+
+
 # ---------------------------------------------------------------- p01 road types
 KAMPALA = (32.30, 32.90, 0.10, 0.62)
 tcol = list(M.TYPE_COL.values())
 tmap = ListedColormap(tcol)
 tnorm = BoundaryNorm([-0.5, 0.5, 1.5, 2.5], 3)
 tval = P.road_type.map({k: i for i, k in enumerate(M.TYPE_COL)}).to_numpy(float)
-fig = plt.figure(figsize=(15, 10.5), facecolor=SURF)
-ax = fig.add_axes([0.01, 0.08, 0.62, 0.84])
+fig = plt.figure(figsize=(16, 11), facecolor=SURF)
+ax = fig.add_axes([0.01, 0.05, 0.58, 0.87])
 theme(ax, tval, tmap, tnorm)
-ax.add_patch(Rectangle((KAMPALA[0], KAMPALA[2]), KAMPALA[1] - KAMPALA[0], KAMPALA[3] - KAMPALA[2], fill=False,
-                       ec=INK, lw=1.2, zorder=20))
-ins = fig.add_axes([0.65, 0.30, 0.34, 0.48])
-theme(ins, tval, tmap, tnorm, lw=4.5, extent=KAMPALA, towns=False)
-M.place_labels(ins, *KAMPALA, n=10, size=7)
-for s_ in ins.spines.values():
-    s_.set_visible(True); s_.set_color(INK)
-ins.set_title("Kampala's exits", fontsize=9.5, color=INK, loc="left")
+closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Mbarara"], theme_draw(tval, tmap, tnorm))
 t = O("typology_summary.csv")
 share = t.groupby("road_type").km.sum() / t.km.sum()
 ax.legend(handles=[Line2D([], [], color=c, lw=5, label=f"{k} ({share[k]:.0%} of length)") for k, c in M.TYPE_COL.items()],
-          loc="upper left", bbox_to_anchor=(1.03, 0.20), frameon=True, facecolor="white", edgecolor="#d8d5ce",
-          fontsize=10, title="road type (k-means on roadside measures)", title_fontsize=9)
+          loc="upper left", bbox_to_anchor=(0.0, 0.66), frameon=True, facecolor="white", edgecolor="#d8d5ce",
+          fontsize=9.5, title="road type (k-means on roadside measures)", title_fontsize=9)
 head(fig, "What the corridors have become: road type along every 500 m",
-     "Open road, roadside settlement or town, from buildings within 100 m and 300 m, joining roads and roadside activity.")
+     "Open road, roadside settlement or town, from buildings within 100 m and 300 m, joining roads and roadside activity. "
+     "Close-ups 1–3: every building footprint and the main roads.")
 save(fig, "p01_road_types_map.png")
 
 # ---------------------------------------------------------------- p02 growth
@@ -123,7 +164,8 @@ P2 = P[["corridor", "piece"]].merge(gt[["corridor", "piece", "n16", "n23"]], how
 grp = (P.corridor + "_" + (P.piece // 4).astype(str)).to_numpy()
 sums = P2.assign(g=grp).groupby("g")[["n16", "n23"]].transform("sum")
 pct = np.where(sums.n16 > 50, (sums.n23 / sums.n16 - 1) * 100, np.nan)
-fig, axs = plt.subplots(1, 2, figsize=(17, 9.6), facecolor=SURF, gridspec_kw=dict(wspace=0.12))
+fig = plt.figure(figsize=(17, 13), facecolor=SURF)
+axs = [fig.add_axes([0.01, 0.33, 0.47, 0.60]), fig.add_axes([0.51, 0.33, 0.47, 0.60])]
 b1 = [0, 0.5, 1, 2, 4, 8, 100]
 c1, n1 = seq(["#f1eee6", "#e6d5b8", "#d2ad74", "#b57d3b", "#8a5420", "#5a3210"], b1)
 theme(axs[0], binned(added), c1, n1)
@@ -136,6 +178,9 @@ theme(axs[1], pct, c2, n2)
 key(fig, axs[1], c2, n2, b2, "growth in buildings within 300 m, 2016–2023 (per 2 km)",
     labels=["< 10%", "10–20%", "20–30%", "30–45%", "45–60%", "> 60%"])
 panel_label(axs[1], "(b)")
+GW = ["Kampala", "Karuma–Kigumba", "Lukaya–Masaka"]
+closeups(fig, [axs[0]], two_rects(0.01), GW, theme_draw(binned(added), c1, n1))
+closeups(fig, [axs[1]], two_rects(0.51), GW, theme_draw(pct, c2, n2))
 head(fig, "How fast the roadside is building up",
      "(a) GHSL built-up surface, observed 2000 and 2020, per 2 km stretch. (b) Google Open Buildings 2.5D Temporal "
      "building counts, 2016 to 2023, per 2 km stretch.")
@@ -145,7 +190,8 @@ save(fig, "p02_growth_map.png")
 S = O("safety_pieces.csv")
 people = by_piece(S.assign(v=S.people_300m / 0.5), "v")
 expo = by_piece(S.assign(v=S.exposure / 0.5), "v")
-fig, axs = plt.subplots(1, 2, figsize=(17, 9.6), facecolor=SURF, gridspec_kw=dict(wspace=0.12))
+fig = plt.figure(figsize=(17, 13), facecolor=SURF)
+axs = [fig.add_axes([0.01, 0.33, 0.47, 0.60]), fig.add_axes([0.51, 0.33, 0.47, 0.60])]
 b1 = [0, 500, 1000, 2000, 4000, 8000, 1e9]
 c1, n1 = seq(["#f6efe2", "#f1d9a8", "#e6b765", "#d18f2e", "#a8641b", "#6f3d0f"], b1)
 theme(axs[0], binned(people), c1, n1)
@@ -175,6 +221,18 @@ axs[1].legend(handles=[Line2D([], [], marker="o", ls="none", color="#1b5e8c", ma
               loc="upper left", bbox_to_anchor=(0.0, 0.93), frameon=True, facecolor="white", edgecolor="#d8d5ce",
               fontsize=8.5)
 panel_label(axs[1], "(b)")
+
+
+def expo_draw(ax, win):
+    theme(ax, binned(expo), c2, n2, lw=4.6, extent=win, towns=False)
+    ax.scatter(c_.x, c_.y, s=9, color="#123f63", zorder=9, linewidths=0)
+    ax.scatter([p.x for p in bpt], [p.y for p in bpt], marker="^", s=70, color="white", edgecolor=INK, linewidth=1.2,
+               zorder=12)
+
+
+EW = ["Kampala", "Jinja–Iganga", "Lukaya–Masaka"]
+closeups(fig, [axs[0]], two_rects(0.01), EW, theme_draw(binned(people), c1, n1))
+closeups(fig, [axs[1]], two_rects(0.51), EW, expo_draw)
 head(fig, "Who lives beside the corridors, and where fast trucks pass them",
      "(a) WorldPop 2025 within 300 m of the road. (b) Exposure per 2 km; school stretches and the 2018 police black "
      "spots located by place name.")
@@ -183,8 +241,8 @@ save(fig, "p03_people_exposure_map.png")
 # ---------------------------------------------------------------- p04 fuel
 F = O("fuel_co2_pieces.csv")
 fuel = by_piece(F.assign(v=F.friction_litres / 0.5), "v")
-fig = plt.figure(figsize=(10.5, 11), facecolor=SURF)
-ax = fig.add_axes([0.03, 0.05, 0.94, 0.86])
+fig = plt.figure(figsize=(16, 11), facecolor=SURF)
+ax = fig.add_axes([0.01, 0.05, 0.58, 0.87])
 b = [-100, 0, 0.05, 0.1, 0.2, 0.4, 100]
 cm, nm = seq(["#dfe8ee", "#f2efe6", "#d9e1c2", "#a9c27d", "#6c9a45", "#355f1f"], b)
 theme(ax, binned(fuel), cm, nm)
@@ -196,6 +254,7 @@ txt = "\n".join(f"{C.CORRIDORS[c]['short']}: {r.friction_litres_trip:.0f} L per 
                 for c, r in fc.iterrows())
 ax.text(0.015, 0.84, txt, transform=ax.transAxes, fontsize=8.5, color=INK, va="top", zorder=20,
         bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#d8d5ce"))
+closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Mbarara"], theme_draw(binned(fuel), cm, nm))
 head(fig, "Where roadside friction burns diesel",
      "Physical fuel model on the travel-time model's speeds: slow-downs, re-acceleration and idling against open road; per 2 km.")
 save(fig, "p04_fuel_map.png")
@@ -204,7 +263,8 @@ save(fig, "p04_fuel_map.png")
 T = O("pieces_typed.csv")
 wet = by_piece(T, "wet_days_per_year")
 fr = O("fragile_stretches.csv").head(10).reset_index(drop=True)
-fig, axs = plt.subplots(1, 2, figsize=(17, 9.6), facecolor=SURF, gridspec_kw=dict(wspace=0.12))
+fig = plt.figure(figsize=(17, 13), facecolor=SURF)
+axs = [fig.add_axes([0.01, 0.33, 0.47, 0.60]), fig.add_axes([0.51, 0.33, 0.47, 0.60])]
 b1 = [0, 30, 35, 40, 45, 55, 100]
 c1, n1 = seq(["#eef3f7", "#cfe0ec", "#9fc2db", "#6a9dc4", "#3c74a6", "#1b4a78"], b1)
 theme(axs[0], binned(wet), c1, n1)
@@ -232,26 +292,47 @@ axs[1].text(0.015, 0.90, "Most flood-fragile 2 km\n(water crossings, wetland,\nh
             transform=axs[1].transAxes, fontsize=8, color=INK, va="top", zorder=20,
             bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#d8d5ce"))
 panel_label(axs[1], "(b)")
+closeups(fig, [axs[0]], two_rects(0.01), ["Busitema–Tororo", "Lukaya–Masaka", "Fort Portal"],
+         theme_draw(binned(wet), c1, n1))
+for j, (i, rect) in enumerate(zip((0, 1, 3), two_rects(0.51))):
+    r, pt = fr.iloc[i], fpt[i]
+    ax_ = fig.add_axes(rect)
+    M.closeup(ax_, r.corridor, pt.x, pt.y, 0.02, rect[2] * 17 / 0.04,
+              f"{i + 1}. {r.place if isinstance(r.place, str) else 'unnamed'}, {C.CORRIDORS[r.corridor]['short']} "
+              f"km {r.km_from:.0f}", None)
+    for s_ in ax_.spines.values():
+        s_.set_visible(True); s_.set_color(INK)
 head(fig, "Rain and the places most likely to flood",
-     "(a) Heavy-rain days per year along each road, per 2 km. (b) Flood-fragility ranking of 2 km stretches (18_reliability.py).")
+     "(a) Heavy-rain days per year along each road, per 2 km; close-ups 1–3. (b) Flood-fragility ranking of 2 km stretches "
+     "(18_reliability.py); below, 4 km street-level views of stretches 1, 2 and 4: water, wetland, buildings, roads.")
 save(fig, "p05_rain_fragility_map.png")
 
 # ---------------------------------------------------------------- p06 controls
-fig = plt.figure(figsize=(10.5, 11), facecolor=SURF)
-ax = fig.add_axes([0.03, 0.05, 0.94, 0.86])
-M.base(ax)
-M.context_labels(ax)
-for corridor in C.CORRIDORS:
-    M.corridor_line(ax, corridor, "#e3ddcf", lw=2.6)
 c = P.geometry.centroid
 CTRL = [("signals", "P", "#5d6764", 26, "traffic signals"), ("ped_crossings", "o", "#9fb3b0", 14, "pedestrian crossings"),
         ("humps", "X", "#d9a441", 30, "speed humps mapped in OSM"), ("level_crossings", "*", "#8a6b4e", 50, "level crossings"),
         ("police_posts", "D", "#4e7c8a", 34, "police posts"), ("weighbridges", "s", "#17252a", 80, "weighbridges")]
-hand = []
-for col, mk, colr, sz, lab in CTRL:
-    m = (by_piece(T, col) > 0)
-    ax.scatter(c.x[m], c.y[m], marker=mk, s=sz, color=colr, edgecolor="white", linewidth=0.5, zorder=8 + sz / 100)
-    hand.append(Line2D([], [], marker=mk, ls="none", color=colr, markersize=7, label=f"{lab} ({int(m.sum())} pieces)"))
+
+
+def controls(ax, ext=M.EXT_UG, k=1.0):
+    M.base(ax, ext)
+    M.context_labels(ax)
+    for corridor in C.CORRIDORS:
+        M.corridor_line(ax, corridor, "#e3ddcf", lw=2.6 * (1.6 if k > 1 else 1))
+    hand = []
+    for col, mk, colr, sz, lab in CTRL:
+        m = (by_piece(T, col) > 0)
+        ax.scatter(c.x[m], c.y[m], marker=mk, s=sz * k, color=colr, edgecolor="white", linewidth=0.5, zorder=8 + sz / 100)
+        hand.append(Line2D([], [], marker=mk, ls="none", color=colr, markersize=7, label=f"{lab} ({int(m.sum())} pieces)"))
+    if ext != M.EXT_UG:
+        K.scalebar(ax, km=10)
+    return hand
+
+
+fig = plt.figure(figsize=(16, 11), facecolor=SURF)
+ax = fig.add_axes([0.01, 0.05, 0.58, 0.87])
+hand = controls(ax)
+closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Lukaya–Masaka"], lambda a, w: controls(a, w, k=2.2))
 M.town_labels(ax, TOWNS, size=8)
 M.border_marks(ax)
 K.furniture(ax, km=100)

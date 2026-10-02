@@ -101,12 +101,34 @@ def lines(ax, region, col, cmap, norm, lw=3.0, extent=None):
     v.plot(ax=ax, aspect=None, column=col, cmap=cmap, norm=norm, linewidth=lw, zorder=6)
 
 
+# Close-up windows at hub scale (lon0, lon1, lat0, lat1)
+CW = [("Kampala", (32.40, 32.85, 0.13, 0.55)), ("Nairobi", (36.62, 37.10, -1.48, -1.05)),
+      ("Dar es Salaam", (38.92, 39.36, -6.98, -6.60)), ("Lusaka", (28.08, 28.52, -15.62, -15.22)),
+      ("Gauteng", (27.75, 28.45, -26.35, -25.65))]
+import pyarrow.parquet as pq  # noqa: E402
+BLD = pq.read_table(os.path.join(C.DATA, "buildings.parquet"), columns=["latitude", "longitude"]).to_pandas()
+BLD = BLD.astype("float32")
+ROADS = {}
+
+
+def context(ax, win):
+    x0, x1, y0, y1 = win
+    bb = BLD[BLD.longitude.between(x0, x1) & BLD.latitude.between(y0, y1)]
+    ax.scatter(bb.longitude, bb.latitude, s=0.25, color="#b0aa9f", linewidths=0, zorder=3.5, rasterized=True)
+    if win not in ROADS:
+        r = gpd.read_file(os.path.join(C.DATA, "osm_features.gpkg"), layer="roads", bbox=(x0, y0, x1, y1))
+        ROADS[win] = r[r.highway.isin(["motorway", "trunk", "primary", "secondary", "tertiary"])]
+    if len(ROADS[win]):
+        ROADS[win].plot(ax=ax, aspect=None, color="#8c887f", linewidth=0.4, zorder=4)
+
+
 def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=None):
     cmap = ListedColormap(colors)
     norm = BoundaryNorm(bounds, cmap.N)
-    fig = plt.figure(figsize=(17, 11), facecolor=SURF)
-    axE = fig.add_axes([0.01, 0.30, 0.40, 0.60])
-    axS = fig.add_axes([0.42, 0.04, 0.50, 0.86])
+    fine = col[:-2] if col.endswith("_2") and col[:-2] in P else col   # close-ups show every 500 m
+    fig = plt.figure(figsize=(18, 14.5), facecolor=SURF)
+    axE = fig.add_axes([0.01, 0.36, 0.40, 0.56])
+    axS = fig.add_axes([0.42, 0.31, 0.49, 0.61])
     for ax, reg in ((axE, "East"), (axS, "Southern")):
         basemap(ax, EXT[reg])
         lines(ax, reg, col, cmap, norm)
@@ -115,28 +137,33 @@ def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=Non
         ax.text(0.02, 0.98, f"{reg} Africa", transform=ax.transAxes, fontsize=13, fontweight="bold", va="top",
                 color=INK, zorder=20, bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85))
     K.north_arrow(axS)
-    axS.add_patch(Rectangle((GAUT[0], GAUT[2]), GAUT[1] - GAUT[0], GAUT[3] - GAUT[2], fill=False, ec=INK, lw=1.1,
-                            zorder=14))
-    ins = fig.add_axes([0.03, 0.04, 0.30, 0.23])
-    basemap(ins, GAUT)
-    lines(ins, None, col, cmap, norm, lw=3.4, extent=GAUT)
-    hubs(ins, GAUT, fs=8)
-    K.scalebar(ins, km=50)
-    for s_ in ins.spines.values():
-        s_.set_visible(True); s_.set_color(INK)
-    ins.set_title("Gauteng inset", fontsize=9, color=INK, loc="left")
-    kax = fig.add_axes([0.935, 0.25, 0.012, 0.5])
+    for i, (nm, win) in enumerate(CW, 1):
+        ov = axE if win[2] > -12 and win[0] > 29 and nm != "Lusaka" else axS
+        ov.add_patch(Rectangle((win[0], win[2]), win[1] - win[0], win[3] - win[2], fill=False, ec=INK, lw=1.2, zorder=25))
+        ov.text(win[0], win[3], f" {i}", fontsize=10, fontweight="bold", color=INK, va="bottom", zorder=26,
+                bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.85))
+        ax = fig.add_axes([0.01 + (i - 1) * 0.196, 0.03, 0.18, 0.25])
+        basemap(ax, win)
+        context(ax, win)
+        lines(ax, None, fine, cmap, norm, lw=2.2, extent=win)
+        hubs(ax, win, fs=8)
+        K.scalebar(ax, km=10)
+        for s_ in ax.spines.values():
+            s_.set_visible(True); s_.set_color(INK)
+        ax.set_title(f"{i}. {nm}", fontsize=10.5, color=INK, loc="left")
+    kax = fig.add_axes([0.935, 0.42, 0.012, 0.40])
     n = len(bounds) - 1
     kax.imshow(np.arange(n)[:, None], cmap=ListedColormap(colors), aspect="auto", origin="lower", extent=(0, 1, 0, n))
     kax.set_xticks([]); kax.set_yticks(np.arange(n) + 0.5); kax.set_yticklabels(labels, fontsize=8.5)
     kax.yaxis.tick_right(); kax.tick_params(length=0)
-    fig.text(0.925, 0.77, key_label, fontsize=9, color=INK, ha="left", va="bottom", wrap=True)
+    fig.text(0.925, 0.835, key_label, fontsize=9, color=INK, ha="left", va="bottom")
     for s_ in kax.spines.values():
         s_.set_visible(False)
     fig.text(0.01, 0.985, title, fontsize=16, color=INK, va="top")
-    fig.text(0.01, 0.955, sub, fontsize=10, color=INK2, va="top")
-    fig.text(0.42, 0.012, "Sources: OpenStreetMap; Google Open Buildings v3; GHSL; GHS-POP 2025; CHIRPS; Natural Earth; study model.",
-        fontsize=7.5, color=INK2)
+    fig.text(0.01, 0.96, sub + " Close-ups 1–5: every 500 m, with building footprints and main roads.", fontsize=10,
+             color=INK2, va="top")
+    fig.text(0.01, 0.005, "Sources: OpenStreetMap; Google Open Buildings v3; GHSL; GHS-POP 2025; CHIRPS; Natural Earth; "
+             "study model.", fontsize=7.5, color=INK2)
     save(fig, name, SUB)
 
 
