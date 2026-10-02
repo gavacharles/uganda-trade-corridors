@@ -153,8 +153,10 @@ def fit_extent(bounds, box_w, box_h, pad=0.08):
     return (cx - w / 2, cx + w / 2, cy - h / 2, cy + h / 2)
 
 
-def closeup(ax, corridor, lon, lat, half, inch_per_deg, title, info):
-    """Street-level view: buildings, OSM roads, water, controls, the corridor coloured by delay."""
+def closeup(ax, corridor, lon, lat, half, inch_per_deg, title, info, theme=None):
+    """Street-level view: buildings, OSM roads, water, controls, the corridor coloured by delay,
+    or by theme = (values aligned with `pieces`, cmap, norm), in which case every corridor in the
+    window is drawn."""
     x0, x1, y0, y1 = lon - half, lon + half, lat - half, lat + half
     K.frame(ax, (x0, x1, y0, y1))
     ax.set_facecolor(LAND)
@@ -170,9 +172,18 @@ def closeup(ax, corridor, lon, lat, half, inch_per_deg, title, info):
     for hw, g in rr.groupby("highway"):
         if hw in ROAD_W:
             g.plot(ax=ax, aspect=None, color=ROAD, linewidth=ROAD_W[hw] * 0.8, zorder=4)
-    pc = pieces[pieces.corridor == corridor].cx[x0:x1, y0:y1]
-    pc.plot(ax=ax, aspect=None, color=INK, linewidth=6.2, zorder=5)
-    pc.plot(ax=ax, aspect=None, column="truck_min_per_km", cmap=DELAY_CMAP, norm=DELAY_NORM, linewidth=4.2, zorder=6)
+    if theme is None:
+        pc = pieces[pieces.corridor == corridor].cx[x0:x1, y0:y1]
+        pc.plot(ax=ax, aspect=None, color=INK, linewidth=6.2, zorder=5)
+        pc.plot(ax=ax, aspect=None, column="truck_min_per_km", cmap=DELAY_CMAP, norm=DELAY_NORM, linewidth=4.2,
+                zorder=6)
+    else:
+        pc = pieces.assign(theme_v=theme[0]).cx[x0:x1, y0:y1]
+        pc.plot(ax=ax, aspect=None, color=INK, linewidth=6.2, zorder=5)
+        pc.plot(ax=ax, aspect=None, color="#d9d4c7", linewidth=4.2, zorder=5.5)
+        pc = pc.dropna(subset=["theme_v"])
+        if len(pc):
+            pc.plot(ax=ax, aspect=None, column="theme_v", cmap=theme[1], norm=theme[2], linewidth=4.2, zorder=6)
     pp = fpts.cx[x0:x1, y0:y1]
     for k, (m, _) in MARK.items():
         q = pp[pp.mkind == k]

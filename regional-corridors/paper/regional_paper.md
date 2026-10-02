@@ -155,7 +155,7 @@ Table: Table 2. East and Southern Africa compared (median across arteries, first
 | People within 300 m per km | 1,225 | 271 |
 | Safety exposure per km | 1.09 | 0.44 |
 
-![Figure @M1. Road type along every 500 m of the 54 roads, clustered jointly across the region, with a Gauteng inset. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm01_road_types.png){6.3}
+![Figure @M1. Road type along every 500 m of the 54 roads, clustered jointly across the region, with a Gauteng inset. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm01_road_types.png){6.3}
 
 ![Figure @F2. Share of each country's road length by type (all roads leaving the country's hubs; road types clustered jointly across the region).](../figures/compare/k09_road_types.png){6.3}
 
@@ -163,7 +163,7 @@ Table: Table 2. East and Southern Africa compared (median across arteries, first
 
 The roadside is also building up faster in the East (Figures @M2 and @F4). Built-up land within 300 m grew by a median 54% between 2000 and 2020 on East African arteries against 35% in the South. In both regions most of the added area lies in roadside settlements: East African settlements grew 80% and Southern ones 45%, against 16–20% for towns. Kenya, Tanzania and Rwanda show the fastest growth (median 57–63%); South Africa the slowest (22%).
 
-![Figure @M2. Built-up land added within 300 m per km of road, 2000–2020 (GHSL), per 2 km. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm02_growth.png){6.3}
+![Figure @M2. Built-up land added within 300 m per km of road, 2000–2020 (GHSL), per 2 km. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm02_growth.png){6.3}
 
 ![Figure @F4. Growth of built-up land within 300 m, 2000–2020, and controls mapped in OpenStreetMap per 100 km, by country.](../figures/compare/k03_growth.png){6.3}
 
@@ -173,7 +173,7 @@ A loaded truck loses a median 35 minutes per 100 km on East African arteries and
 
 The spread within countries is wide. Johannesburg's R24 to Rustenburg is the worst single road in the study at 92 truck-minutes per 100 km, almost entirely signals and crossings through the West Rand. Johannesburg's N3 to Durban loses 27.
 
-![Figure @M7. Truck minutes lost per km against open road along every road, per 2 km (loaded truck leaving the hub, light traffic, dry day). Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm07_delay.png){6.3}
+![Figure @M7. Truck minutes lost per km against open road along every road, per 2 km (loaded truck leaving the hub, light traffic, dry day). Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm07_delay.png){6.3}
 
 ![Figure @F5. Truck and car minutes lost per 100 km, one dot per road (first 200 km), by country.](../figures/compare/k01_delay.png){6.3}
 
@@ -211,7 +211,7 @@ Table: Table 3. Share of truck minutes lost by cause, all roads (central estimat
 
 The signals result needs care. OSM records a median 7.5 controls per 100 km on Southern arteries against 1.5 in the East. Johannesburg's arteries have 29 per 100 km, and the R24 has 104. South Africa's road network is mapped in great detail, including every signal and pedestrian crossing in Gauteng. Ugandan, Tanzanian and Rwandan towns have signals and crossings too, but far fewer are mapped. Some of the Southern signal delay is real, since the metropolitan arteries of Gauteng are signalised urban roads for their first tens of kilometres. Some of the East–South gap in controls, however, is a gap in mapping. For that reason the paper's headline comparisons rest on buildings, junctions and terrain, which come from imagery and elevation rather than from mappers. Figure @M6 maps the gap. Gauteng's arteries carry more than 20 recorded controls per 10 km on many stretches, while most East African roads, including their town centres, have none recorded.
 
-![Figure @M6. Controls recorded in OpenStreetMap per 10 km of road (signals, pedestrian and level crossings, humps, police posts and weighbridges): the mapping gap made visible. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm06_controls.png){{6.3}}
+![Figure @M6. Controls recorded in OpenStreetMap per 10 km of road (signals, pedestrian and level crossings, humps, police posts and weighbridges): the mapping gap made visible. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm06_controls.png){{6.3}}
 
 
 Rank stability is modest everywhere. The cause that is most often largest comes first in a median 68% of draws (range 30–100%). In the East, the leading truck cause is hills on six roads, roadside activity on five, weighbridges on five, and police posts or humps on two each. In the South, it is signals and crossings on twelve roads, hills on nine, police posts on seven and weighbridges on five.
@@ -273,19 +273,19 @@ The worst 2 km stretches fall into two groups (Figures @F9 and @S9). In the East
 
 About 8 million people live within 300 m of the 54 roads; some are counted twice where roads overlap near the hubs. East African arteries have a median 1,225 people within 300 m per km against 271 in the South, and 2.5 times the exposure per km (1.09 against 0.44; Figures @M3 and @F11). In both regions, roadside settlements hold about half the people but two-thirds of the exposure (65% in the East, 70% in the South), because trucks there still run fast. Towns hold 45–55% of the people but only a quarter to a third of the exposure, because the town limit and friction hold trucks down. Pieces with a school, trucks above 50 km/h and no mapped crossing within 500 m number 1,023 in the East and 202 in the South. Both counts are upper bounds where crossings are poorly mapped, so the East's count is the more inflated.
 
-![Figure @M3. Safety exposure per km (people within 300 m × trucks × (truck speed/50)⁴), per 2 km. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm03_exposure.png){6.3}
+![Figure @M3. Safety exposure per km (people within 300 m × trucks × (truck speed/50)⁴), per 2 km. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm03_exposure.png){6.3}
 
 ![Figure @F11. Safety exposure: people within 300 m per km and exposure per km, by country.](../figures/compare/k04_safety.png){6.3}
 
 Roadside friction raises a loaded truck's fuel use by a median 11.3 litres per 100 km in the East and 8.5 in the South (Figures @M4 and @F12). It accounts for 29% and 22% of trip fuel. Mozambique (19 litres per 100 km) and Kenya (12) are highest; Namibia (3) and Zimbabwe (5) are lowest. Gauteng's signalised R24 and R29 burn 23 litres per 100 km extra. At the assumed 1,000 trucks a day per road, friction across the 54 roads would amount to about 1.4 Mt of CO₂ a year, an order of magnitude that only real counts could firm up.
 
-![Figure @M4. Extra diesel per km per loaded truck from roadside friction, per 2 km. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm04_fuel.png){6.3}
+![Figure @M4. Extra diesel per km per loaded truck from roadside friction, per 2 km. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm04_fuel.png){6.3}
 
 ![Figure @F12. Extra diesel per 100 km per loaded truck, and extra CO₂ per km of road a year, by country.](../figures/compare/k05_fuel_co2.png){6.3}
 
 Lost time costs a loaded truck a median US$13 per 100 km in the East and US$7 in the South. Rain makes East African roads less reliable: the buffer index for trucks, the extra time to plan for so that a truck is late on only one day in twenty, is a median 7.1% against 5.2% (Figures @M5 and @F13).
 
-![Figure @M5. Days a year with at least 10 mm of rain along every road (CHIRPS 2006–2025), per 2 km. Close-ups 1–5 (Kampala, Nairobi, Dar es Salaam, Lusaka, Gauteng) show every 500 m with building footprints and main roads.](../figures/maps/rm05_rain.png){6.3}
+![Figure @M5. Days a year with at least 10 mm of rain along every road (CHIRPS 2006–2025), per 2 km. Close-ups 1–5 (4 km windows) show street level where the measure peaks in five countries: every building footprint, the road network, water and controls.](../figures/maps/rm05_rain.png){6.3}
 
 ![Figure @F13. Cost of lost time per 100 km per truck, and the buffer index for rain, by country.](../figures/compare/k06_cost_reliability.png){6.3}
 

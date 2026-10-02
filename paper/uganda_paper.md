@@ -95,7 +95,7 @@ Table: Table 2. Causes measured for each 500 m piece.
 
 Figure @P6 shows the controls that OpenStreetMap records along the corridors. Pedestrian crossings appear on 53 pieces, police posts on 39 and weighbridges on 5. Signals appear on only 5 pieces and humps on 22, far fewer than exist on the ground, which is why humps are assumed in the model (Section 3.4).
 
-![Figure @P6. Controls recorded in OpenStreetMap along the five corridors; each marker is a 500 m piece with at least one control of that kind. Numbered close-ups show building footprints and the main road network.](../figures/p06_controls_map.png){5.6}
+![Figure @P6. Controls recorded in OpenStreetMap along the five corridors; each marker is a 500 m piece with at least one control of that kind. Numbered close-ups (4 km windows) show street level where the measure peaks: every building footprint, the road network, water and controls.](../figures/p06_controls_map.png){5.6}
 
 ## 3.3 Pieces and road types
 
@@ -203,13 +203,13 @@ Table: Table 5. Road types and growth by corridor.
 | Hoima (A9) | 18% | 74% | 8% | +57% | +48% |
 | Bwera (A5) | 29% | 67% | 4% | +57% | +41% |
 
-![Figure @P1. Road type of every 500 m piece along the five corridors, with Kampala's exits enlarged. Numbered close-ups show building footprints and the main road network.](../figures/p01_road_types_map.png){6.3}
+![Figure @P1. Road type of every 500 m piece along the five corridors, with Kampala's exits enlarged. Numbered close-ups (4 km windows) show street level where the measure peaks: every building footprint, the road network, water and controls.](../figures/p01_road_types_map.png){6.3}
 
 ![Figure @F2. Road types along each corridor: share of length and buildings within 100 m per km of each type.](../figures/f02_typology.png){6.3}
 
 Built-up land within 300 m of the road grew by 27% (Malaba) to 68% (Elegu) between 2000 and 2020 (Figures @P2(a) and @F3). Most of the added area lies in roadside settlements between towns, not in the towns themselves: towns grew 13–21%, settlements 45–102%. Open road grew fastest in percentage terms (186–307%) from a tiny base, and this is how new settlements appear. The fastest-growing 5 km on each road are at Baggala on the Malaba road, Kichwabugingo near Karuma on the Elegu road, Kassana on the Katuna road, and Kasangobe and Kalambi on the Hoima and Bwera roads just outside Kampala.
 
-![Figure @P2. Where the roadside built up: (a) built-up land added within 300 m per km, 2000–2020 (GHSL); (b) growth in building count within 300 m, 2016–2023 (Open Buildings 2.5D Temporal), per 2 km. Numbered close-ups show building footprints and the main road network.](../figures/p02_growth_map.png){6.3}
+![Figure @P2. Where the roadside built up: (a) built-up land added within 300 m per km, 2000–2020 (GHSL); (b) growth in building count within 300 m, 2016–2023 (Open Buildings 2.5D Temporal), per 2 km. Numbered close-ups (4 km windows) show street level where the measure peaks: every building footprint, the road network, water and controls.](../figures/p02_growth_map.png){6.3}
 
 ![Figure @F3. Built-up land within 300 m along each corridor, 2000 and 2020 (GHSL).](../figures/f03_growth.png){6.3}
 
@@ -316,13 +316,13 @@ Per trip, a loaded truck loses US$25–67. The annual figures rest on surveyed c
 
 Rain adds a further 24–53 truck-minutes on a wet day. Replaying 2006–2025, the 95th-percentile day is 5–8% slower than a typical day, and the Malaba road is the least reliable: its buffer index is 7.7%, with 87 days a year more than 2% slower (Figure @F12). The flood-exposure ranking puts the Busabi and Butema wetland stretches on the A1 and Lbanda, Kaziru and Kyoko on the A2 first. The Mpondwe stretch where a flood destroyed the Uganda–DR Congo bridge in May 2020 ranks at the 92nd percentile on the A5. The ranking finds fragile places but would not have singled out that one (Figure @P5).
 
-![Figure @P5. (a) Days a year with at least 10 mm of rain along each corridor (CHIRPS 2006–2025); (b) the ten most flood-fragile 2 km stretches and the 2020 Mpondwe flood.](../figures/p05_rain_fragility_map.png){6.3}
+![Figure @P5. (a) Days a year with at least 10 mm of rain along each corridor (CHIRPS 2006–2025); (b) the ten most flood-fragile 2 km stretches and the 2020 Mpondwe flood; close-ups (4 km) of the wettest stretches and of the most fragile ones, with water, wetland and buildings.](../figures/p05_rain_fragility_map.png){6.3}
 
 ![Figure @F12. Truck trip time by month from the rain that fell each day, 2006–2025: mean and 95th-percentile day.](../figures/f09_reliability.png){6.3}
 
 Roadside friction burns an extra 29–75 litres of diesel per loaded truck trip (Figures @P4 and @F13), 25–41% of the trip's fuel. Across the five roads this is about 52 million litres, 138 kt of CO₂ and US$70 million of diesel a year at central values. The Malaba road accounts for nearly half (63 kt). Roadside activity and joining roads are the largest fuel causes on most roads, because they force repeated slow-downs and re-accelerations; on the Malaba road the assumed humps (20 L) lead. Hills and town limits are slightly negative: a truck held to a lower speed burns less fuel against air resistance. The assumed humps make the Malaba figure the least certain.
 
-![Figure @P4. Extra diesel per km per loaded truck from roadside friction, per 2 km, with each corridor's litres per trip and CO₂ a year. Numbered close-ups show building footprints and the main road network.](../figures/p04_fuel_map.png){5.6}
+![Figure @P4. Extra diesel per km per loaded truck from roadside friction, per 2 km, with each corridor's litres per trip and CO₂ a year. Numbered close-ups (4 km windows) show street level where the measure peaks: every building footprint, the road network, water and controls.](../figures/p04_fuel_map.png){5.6}
 
 ![Figure @F13. Extra diesel per loaded truck trip by cause, and CO₂ a year by corridor.](../figures/f16_fuel_co2.png){6.3}
 
@@ -330,7 +330,7 @@ Roadside friction burns an extra 29–75 litres of diesel per loaded truck trip 
 
 About 1.18 million people live within 300 m of the five roads. Roadside settlements hold 49–76% of them but 65–79% of the exposure, because trucks there still average about 56 km/h. In towns, by contrast, the speed limit and friction hold trucks near 43 km/h (Figures @P3 and @F14). The highest-exposure stretches are the A1's first 8 km through Nakawa and Kireka, and the approaches to Jinja. In 688 half-km pieces, a school, trucks above 50 km/h and no mapped crossing within 500 m coincide; this is an upper bound, since OSM under-records crossings.
 
-![Figure @P3. (a) People living within 300 m per km (WorldPop 2025); (b) safety exposure per km, with school stretches and the located police black spots. Numbered close-ups show building footprints and the main road network.](../figures/p03_people_exposure_map.png){6.3}
+![Figure @P3. (a) People living within 300 m per km (WorldPop 2025); (b) safety exposure per km, with school stretches and the located police black spots. Numbered close-ups (4 km windows) show street level where the measure peaks: every building footprint, the road network, water and controls.](../figures/p03_people_exposure_map.png){6.3}
 
 ![Figure @F14. Safety exposure along each corridor (people within 300 m × trucks × (speed/50)⁴), by road type.](../figures/f10_safety.png){6.3}
 

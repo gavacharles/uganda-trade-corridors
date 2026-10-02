@@ -101,28 +101,103 @@ def lines(ax, region, col, cmap, norm, lw=3.0, extent=None):
     v.plot(ax=ax, aspect=None, column=col, cmap=cmap, norm=norm, linewidth=lw, zorder=6)
 
 
-# Close-up windows at hub scale (lon0, lon1, lat0, lat1)
-CW = [("Kampala", (32.40, 32.85, 0.13, 0.55)), ("Nairobi", (36.62, 37.10, -1.48, -1.05)),
-      ("Dar es Salaam", (38.92, 39.36, -6.98, -6.60)), ("Lusaka", (28.08, 28.52, -15.62, -15.22)),
-      ("Gauteng", (27.75, 28.45, -26.35, -25.65))]
 import pyarrow.parquet as pq  # noqa: E402
-BLD = pq.read_table(os.path.join(C.DATA, "buildings.parquet"), columns=["latitude", "longitude"]).to_pandas()
-BLD = BLD.astype("float32")
-ROADS = {}
+from matplotlib.lines import Line2D as _L  # noqa: E402
+from matplotlib.patches import Patch as _Pa  # noqa: E402
+BLD = pq.read_table(os.path.join(C.DATA, "buildings.parquet"),
+                    columns=["latitude", "longitude", "area_in_meters"]).to_pandas().astype("float32")
+FEAT = os.path.join(C.DATA, "osm_features.gpkg")
+HALF = 0.018   # 4 km windows, as the bottleneck close-ups
+ROAD_W = {"motorway": 2.2, "trunk": 2.2, "primary": 2.0, "secondary": 1.5, "tertiary": 1.2,
+          "residential": 0.7, "unclassified": 0.7, "service": 0.45, "track": 0.45}
+MARK = {"police_post": ("D", "police post"), "weighbridge": ("s", "weighbridge"), "traffic_signals": ("P", "signals"),
+        "pedestrian_crossing": ("o", "pedestrian crossing"), "market": ("^", "market"), "fuel": ("v", "fuel station"),
+        "speed_hump": ("X", "speed hump (OSM)"), "level_crossing": ("*", "level crossing")}
+CLOSE_KEY = ([_L([], [], marker="s", ls="none", markersize=5, color="#9d988c", label="building (Open Buildings)"),
+              _L([], [], color="#6f6c66", lw=1.2, label="other roads (OSM)"),
+              _L([], [], color="#7fa9cf", lw=1.2, label="waterway"),
+              _Pa(color="#dcebf5", label="wetland"), _Pa(color="#f6e3c8", label="market area")]
+             + [_L([], [], marker=m, ls="none", markersize=6, markerfacecolor="white", markeredgecolor=INK, label=l)
+                for m, l in MARK.values()])
+PLACE_RANK = {"city": 0, "town": 1, "suburb": 2, "village": 3, "neighbourhood": 4, "locality": 5, "hamlet": 6}
+P = P.merge(T[["corridor", "piece", "place", "buildings_100m"]], how="left")
+P["country"] = P.corridor.map(ART.country)
+CEN = P.geometry.centroid
 
 
-def context(ax, win):
-    x0, x1, y0, y1 = win
+def win_read(layer, x0, x1, y0, y1):
+    return gpd.read_file(FEAT, layer=layer, bbox=(x0, y0, x1, y1))
+
+
+def street(ax, i, col, cmap, norm, inch_per_deg, title):
+    """Street-level close-up (4 km) around piece i: footprints, roads, water, controls, the study roads
+    coloured by the map's theme."""
+    lon, lat = CEN.x[i], CEN.y[i]
+    x0, x1, y0, y1 = lon - HALF, lon + HALF, lat - HALF, lat + HALF
+    K.frame(ax, (x0, x1, y0, y1))
+    ax.set_facecolor(LAND)
+    wa = win_read("areas", x0, x1, y0, y1)
+    for k, c_ in (("wetland", "#dcebf5"), ("market", "#f6e3c8")):
+        if len(wa) and (wa.kind == k).any():
+            wa[wa.kind == k].plot(ax=ax, aspect=None, color=c_, linewidth=0, zorder=1)
+    ww = win_read("waterways", x0, x1, y0, y1)
+    if len(ww):
+        ww.plot(ax=ax, aspect=None, color="#7fa9cf", linewidth=0.9, zorder=2)
     bb = BLD[BLD.longitude.between(x0, x1) & BLD.latitude.between(y0, y1)]
-    ax.scatter(bb.longitude, bb.latitude, s=0.25, color="#b0aa9f", linewidths=0, zorder=3.5, rasterized=True)
-    if win not in ROADS:
-        r = gpd.read_file(os.path.join(C.DATA, "osm_features.gpkg"), layer="roads", bbox=(x0, y0, x1, y1))
-        ROADS[win] = r[r.highway.isin(["motorway", "trunk", "primary", "secondary", "tertiary"])]
-    if len(ROADS[win]):
-        ROADS[win].plot(ax=ax, aspect=None, color="#8c887f", linewidth=0.4, zorder=4)
+    side = np.sqrt(bb.area_in_meters) / 111_320 * inch_per_deg * 72
+    ax.scatter(bb.longitude, bb.latitude, s=np.maximum(side, 0.9) ** 2, marker="s", color="#9d988c", linewidths=0,
+               zorder=3)
+    rr = win_read("roads", x0, x1, y0, y1)
+    for hw, g in rr.groupby("highway"):
+        if hw in ROAD_W:
+            g.plot(ax=ax, aspect=None, color="#6f6c66", linewidth=ROAD_W[hw] * 0.8, zorder=4)
+    pc = P.cx[x0:x1, y0:y1]
+    pc.plot(ax=ax, aspect=None, color=INK, linewidth=6.2, zorder=5)
+    pc.plot(ax=ax, aspect=None, color="#d9d4c7", linewidth=4.2, zorder=5.5)
+    v = pc.dropna(subset=[col])
+    if len(v):
+        v.plot(ax=ax, aspect=None, column=col, cmap=cmap, norm=norm, linewidth=4.2, zorder=6)
+    pp = win_read("points", x0, x1, y0, y1)
+    pp["mkind"] = pp.kind.replace({"checkpoint_or_police": "police_post", "rumble_strip": "speed_hump"})
+    for k, (m, _) in MARK.items():
+        q = pp[pp.mkind == k]
+        ax.scatter(q.geometry.x, q.geometry.y, marker=m, s=40, color="white", edgecolor=INK, linewidth=1.0, zorder=8)
+    pl = pp[(pp.kind == "place") & pp.name.notna()]
+    pl = pl[~pl.name.str.contains("/")]
+    if len(pl):
+        pl = pl.assign(r=pl.place.map(PLACE_RANK).fillna(9)).sort_values("r").drop_duplicates("name").head(6)
+        ax.scatter(pl.geometry.x, pl.geometry.y, s=8, color=INK, zorder=14, linewidths=0)
+        ts = [ax.text(x, y, t, fontsize=6.5, color=INK, zorder=16, style="italic",
+                      bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.8))
+              for x, y, t in zip(pl.geometry.x, pl.geometry.y, pl.name)]
+        K.adjust_text(ts, x=list(pl.geometry.x), y=list(pl.geometry.y), ax=ax, expand=(1.2, 1.4))
+    K.scalebar(ax, km=1)
+    for s_ in ax.spines.values():
+        s_.set_visible(True); s_.set_color(INK)
+    ax.set_title(title, fontsize=8.5, color=INK, loc="left")
 
 
-def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=None):
+def pick_sites(score, mask=None, n_east=3, n_south=2):
+    """Where the theme peaks: the top piece in each country, best countries first, three East and two
+    Southern, so the close-ups travel across the region."""
+    v = pd.Series(score, dtype=float, index=P.index)
+    if mask is not None:
+        v[~np.asarray(mask)] = np.nan
+    v = v.dropna()
+    best = v.groupby(P.country[v.index]).idxmax()
+    ranked = sorted(best, key=lambda i: -v[i])
+    east = [i for i in ranked if P.region[i] == "East"][:n_east]
+    south = [i for i in ranked if P.region[i] == "Southern"][:n_south]
+    return east + south
+
+
+def site_title(n, i, extra):
+    place = P.place[i] if isinstance(P.place[i], str) else "unnamed place"
+    return f"{n}. {place} ({SHORT.get(P.country[i], P.country[i])})\n{ART.road[P.corridor[i]]}, km {P.piece[i] * 0.5:.0f}\n{extra}"
+
+
+def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=None, mask=None, sites=None,
+              extra=lambda i: "", score=None):
     cmap = ListedColormap(colors)
     norm = BoundaryNorm(bounds, cmap.N)
     fine = col[:-2] if col.endswith("_2") and col[:-2] in P else col   # close-ups show every 500 m
@@ -137,20 +212,15 @@ def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=Non
         ax.text(0.02, 0.98, f"{reg} Africa", transform=ax.transAxes, fontsize=13, fontweight="bold", va="top",
                 color=INK, zorder=20, bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85))
     K.north_arrow(axS)
-    for i, (nm, win) in enumerate(CW, 1):
-        ov = axE if win[2] > -12 and win[0] > 29 and nm != "Lusaka" else axS
-        ov.add_patch(Rectangle((win[0], win[2]), win[1] - win[0], win[3] - win[2], fill=False, ec=INK, lw=1.2, zorder=25))
-        ov.text(win[0], win[3], f" {i}", fontsize=10, fontweight="bold", color=INK, va="bottom", zorder=26,
-                bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.85))
-        ax = fig.add_axes([0.01 + (i - 1) * 0.196, 0.03, 0.18, 0.25])
-        basemap(ax, win)
-        context(ax, win)
-        lines(ax, None, fine, cmap, norm, lw=2.2, extent=win)
-        hubs(ax, win, fs=8)
-        K.scalebar(ax, km=10)
-        for s_ in ax.spines.values():
-            s_.set_visible(True); s_.set_color(INK)
-        ax.set_title(f"{i}. {nm}", fontsize=10.5, color=INK, loc="left")
+    idx = pick_sites(P[col] if score is None else score, mask) if sites is None else sites
+    for n, i in enumerate(idx, 1):
+        ov = axE if P.region[i] == "East" else axS
+        ov.text(CEN.x[i], CEN.y[i], str(n), ha="center", va="center", fontsize=9, fontweight="bold", color=INK,
+                zorder=30, bbox=dict(boxstyle="circle,pad=0.25", fc="white", ec=INK, lw=1.2))
+        ax = fig.add_axes([0.01 + (n - 1) * 0.196, 0.035, 0.18, 0.235])
+        street(ax, i, fine, cmap, norm, 0.18 * 18 / (2 * HALF), site_title(n, i, extra(i)))
+    fig.legend(handles=CLOSE_KEY, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=7, frameon=False, fontsize=8.5,
+               labelcolor=INK2)
     kax = fig.add_axes([0.935, 0.42, 0.012, 0.40])
     n = len(bounds) - 1
     kax.imshow(np.arange(n)[:, None], cmap=ListedColormap(colors), aspect="auto", origin="lower", extent=(0, 1, 0, n))
@@ -160,7 +230,7 @@ def two_panel(col, colors, bounds, labels, key_label, title, sub, name, cats=Non
     for s_ in kax.spines.values():
         s_.set_visible(False)
     fig.text(0.01, 0.985, title, fontsize=16, color=INK, va="top")
-    fig.text(0.01, 0.96, sub + " Close-ups 1–5: every 500 m, with building footprints and main roads.", fontsize=10,
+    fig.text(0.01, 0.96, sub + " Close-ups 1–5 (4 km): where the measure peaks in five countries; buildings at footprint size.", fontsize=10,
              color=INK2, va="top")
     fig.text(0.01, 0.005, "Sources: OpenStreetMap; Google Open Buildings v3; GHSL; GHS-POP 2025; CHIRPS; Natural Earth; "
              "study model.", fontsize=7.5, color=INK2)
@@ -173,37 +243,44 @@ two_panel("type_code", ["#a9c8ec", "#3574c4", "#0d2d57"], [-0.5, 0.5, 1.5, 2.5],
           ["open road", "roadside\nsettlement", "town"], "road type\n(joint k-means)",
           "What lines the roads: road type along every 500 m",
           "Open road, roadside settlement or town, clustered jointly across all 54 roads so each label means the same everywhere.",
-          "rm01_road_types.png")
+          "rm01_road_types.png", score=P.buildings_100m, mask=(P.road_type == "roadside settlement").to_numpy(),
+          extra=lambda i: f"roadside settlement: {P.buildings_100m[i]:.0f} buildings within 100 m")
 two_panel("added_per_km_2", ["#f1eee6", "#e6d5b8", "#d2ad74", "#b57d3b", "#8a5420", "#5a3210"],
           [-100, 0.25, 0.5, 1, 2, 4, 1000], ["< 0.25", "0.25–0.5", "0.5–1", "1–2", "2–4", "> 4"],
           "built-up ha added\nwithin 300 m per km,\n2000–2020",
           "Where the roadside built up, 2000–2020",
-          "GHSL built-up surface within 300 m of the road, observed 2000 and 2020, per 2 km.", "rm02_growth.png")
+          "GHSL built-up surface within 300 m of the road, observed 2000 and 2020, per 2 km.", "rm02_growth.png",
+          extra=lambda i: f"+{P.added_per_km_2[i]:.1f} ha built up per km, 2000–2020")
 two_panel("exposure_per_km_2", ["#f3eee8", "#f3cdbd", "#e89b7f", "#d0613f", "#a6321b", "#6b1408"],
           [-1, 0.1, 0.25, 0.5, 1, 2, 1e9], ["< 0.1", "0.1–0.25", "0.25–0.5", "0.5–1", "1–2", "> 2"],
           "safety exposure\nper km\n(people × trucks\n× (speed/50)⁴)",
           "Where fast trucks pass people",
           "People within 300 m (GHS-POP 2025) × trucks × (truck speed/50)⁴, per 2 km; one assumed truck count on every road.",
-          "rm03_exposure.png")
+          "rm03_exposure.png",
+          extra=lambda i: f"exposure {P.exposure_per_km_2[i]:.1f} per km")
 two_panel("fuel_per_km_2", ["#dfe8ee", "#f2efe6", "#d9e1c2", "#a9c27d", "#6c9a45", "#355f1f"],
           [-100, 0, 0.05, 0.1, 0.2, 0.4, 100], ["saving", "0–0.05", "0.05–0.1", "0.1–0.2", "0.2–0.4", "> 0.4"],
           "extra diesel per km\nper loaded truck (L)",
           "Where roadside friction burns diesel",
           "Physical fuel model on the travel-time model's speeds, against open road, per 2 km. Climbs held back save fuel.",
-          "rm04_fuel.png")
+          "rm04_fuel.png",
+          extra=lambda i: f"{P.fuel_per_km_2[i]:.2f} L extra diesel per km")
 two_panel("wet_days_per_year_2", ["#eef3f7", "#cfe0ec", "#9fc2db", "#6a9dc4", "#3c74a6", "#1b4a78"],
           [0, 10, 20, 30, 40, 55, 200], ["< 10", "10–20", "20–30", "30–40", "40–55", "> 55"],
           "days a year with\n≥ 10 mm rain\n(CHIRPS 2006–2025)",
           "How often heavy rain falls on the roads",
-          "Mean days a year with at least 10 mm of rain on each piece, 2006–2025, per 2 km.", "rm05_rain.png")
+          "Mean days a year with at least 10 mm of rain on each piece, 2006–2025, per 2 km.", "rm05_rain.png",
+          extra=lambda i: f"{P.wet_days_per_year_2[i]:.0f} days a year with ≥ 10 mm rain")
 two_panel("controls_10", ["#f2efe6", "#d6dfe2", "#a9bfc7", "#6f97a6", "#3f6e80", "#173f4f"],
           [-1, 0.5, 2.5, 5, 10, 20, 1e9], ["none", "1–2", "3–5", "6–10", "11–20", "> 20"],
           "controls mapped in\nOSM per 10 km\n(signals, crossings,\nhumps, police posts,\nweighbridges)",
           "The mapping gap: controls recorded in OpenStreetMap",
           "Gauteng's roads are mapped control by control; most East African towns are not. Comparisons of controls are partly comparisons of mapping.",
-          "rm06_controls.png")
+          "rm06_controls.png",
+          extra=lambda i: f"{P.controls_10[i]:.0f} controls mapped within 10 km")
 two_panel("per_km_2", ["#e3ded3", "#fde6da", "#f6b596", "#eb6834", "#b8491c", "#7c2e0f"],
           [-1, 0.25, 0.5, 1, 2, 4, 1000], ["< 0.25", "0.25–0.5", "0.5–1", "1–2", "2–4", "> 4"],
           "truck minutes lost\nper km vs open road",
           "Where trucks lose time",
-          "Travel-time model, loaded truck leaving the hub, light traffic, dry day; per 2 km.", "rm07_delay.png")
+          "Travel-time model, loaded truck leaving the hub, light traffic, dry day; per 2 km.", "rm07_delay.png",
+          extra=lambda i: f"{P.per_km_2[i]:.1f} truck min lost per km")
