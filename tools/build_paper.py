@@ -146,7 +146,16 @@ def add_table(doc, caption, rows):
 
 def build(md_path, out):
     base = os.path.dirname(os.path.abspath(md_path))
-    lines = open(md_path, encoding="utf-8").read().split("\n")
+    text = open(md_path, encoding="utf-8").read()
+    # Figure labels (@name) are numbered in the order their images appear, so inserting a figure
+    # renumbers every reference to the ones after it
+    order = re.findall(r"^!\[Figure @(\w+)\.", text, flags=re.M)
+    num = {k: str(i + 1) for i, k in enumerate(order)}
+    missing = set(re.findall(r"@(\w+)", text)) - set(num) - {"gmail"}
+    if missing:
+        sys.exit(f"figure labels referenced but not placed: {sorted(missing)}")
+    text = re.sub(r"@(\w+)", lambda m: num.get(m.group(1), m.group(0)), text)
+    lines = text.split("\n")
     meta = {}
     while lines and re.match(r"^(title|subtitle|author|affil|email|keywords):", lines[0]):
         k, v = lines.pop(0).split(":", 1)
