@@ -1,38 +1,37 @@
-# LinkedIn post: regional comparison
+# LinkedIn post: regional comparison (derived from the Substack article)
 
-Media: rx1_two_corridors.mp4 (video), or rx3_country_ranking.mp4. Add the Substack link where marked.
+Media: rx1_two_corridors.mp4 (video). Alternative: rx14_map_tour.mp4.
+Put the Substack link where marked. Put the map link in the first comment too, since LinkedIn shows posts with links less often.
 
 ---
 
-A truck leaving Nairobi for the Ugandan border loses 197 minutes to the roadside. A truck leaving Pretoria for Zimbabwe, over the same 440 km, loses 82.
+Same truck. Same 440 km. Same tarmac.
 
-The tarmac is not the difference. The roadside is.
+Nairobi → Ugandan border: the truck loses more than three hours to the roadside.
+Pretoria → Zimbabwean border: under an hour and a half.
 
-I followed every main road out of 12 African capitals and trade hubs: Kampala, Nairobi, Kigali, Dodoma, Dar es Salaam, Pretoria, Johannesburg, Gaborone, Harare, Lusaka, Maputo and Windhoek. That is 54 roads and about 15,000 km. I cut each road into 500 m pieces and measured, from open data, what lines it:
+Nothing dramatic causes the difference. It is a thousand slow-downs: a market on the shoulder, a minibus loading, a side road, a speed hump, a police check. The Kenyan truck passes about 73,000 buildings within 100 m of the road. The South African truck passes about 8,900.
 
-- buildings and markets;
-- junctions, signals, humps and police posts;
-- weighbridges and hills.
+I followed every main road out of 12 African capitals and trade hubs: 54 roads, 15,000 km, measured every 500 m from open data. What I found:
 
-A travel-time model then turned each cause into minutes, fuel and risk.
+🚛 Twice the delay. A loaded truck loses a median 35 minutes per 100 km on East African roads, and 18 in Southern Africa.
 
-What came out:
+🏘️ The roads have become towns. About two-thirds of East Africa's main-road length runs through roadside settlement or town, against a third in the South. Roadside building alone tracks lost time across all 54 roads (r = 0.73).
 
-🚛 A loaded truck loses a median 35 minutes per 100 km on East African roads, against 18 in Southern Africa. Rwanda (47), Mozambique (42), Kenya (38) and Uganda (35) lead; Zimbabwe (12) and Namibia (15) are lowest.
+📈 And they're still filling in. Built-up land beside East African roads grew about 50% between 2000 and 2020; in the South, about 35%.
 
-🏘️ About two-thirds of East African road length now runs through roadside settlement or town, against a third in the South. Roadside building alone explains much of the difference (r = 0.73 across all 54 roads).
+⛽ Diesel. Over those 440 km, the Kenyan truck burns about 114 extra litres to stop-and-go. The South African truck burns 28.
 
-📈 The roadside is filling in faster in the East: built-up land within 300 m grew about 50% from 2000 to 2020, against about 35%.
+🚸 People. On Nairobi–Malaba, a truck passes about 160,000 people at more than 50 km/h, and 31 school stretches with no marked crossing. On Pretoria–Beitbridge: about 39,000 people and 2 school stretches.
 
-⛽ Friction costs a loaded truck about 11 extra litres of diesel per 100 km in the East and 9 in the South.
+One caveat I want to be upfront about: OpenStreetMap records traffic signals and crossings far more completely in South Africa than in East Africa. So the comparison rests on buildings, side roads and hills, not on mapped controls.
 
-🚸 East African roads have 4.5 times the people living beside them per km, and 2.5 times the road-safety exposure.
+What would help:
+1. Fix the control points: weigh-in-motion and no routine police stops.
+2. Treat the worst stretches: service roads, bus bays and safe school crossings.
+3. Plan the frontage before new roads become towns too.
 
-One honest caveat: OpenStreetMap maps traffic signals and crossings far more completely in South Africa than in East Africa, so I lean on buildings and terrain for the comparison, not on mapped controls.
+Full story with 14 animations: [Substack link]
+Explore every 2 km stretch yourself, down to street level: https://gavacharles.github.io/uganda-trade-corridors/regional.html
 
-What it means: East Africa's trade corridors have become linear towns. Border reforms and new pavements leave that untouched. The answers are service roads and safe crossings on the worst stretches, land-use control on new frontage, and fewer stops at weighbridges and police posts.
-
-The full write-up, with maps for every country: [Substack link]
-Code and data (open): https://github.com/gavacharles/uganda-trade-corridors
-
-#Transport #Logistics #EastAfrica #SouthernAfrica #RoadSafety #OpenData #UrbanPlanning #TradeCorridors
+#Transport #Logistics #EastAfrica #SouthernAfrica #RoadSafety #UrbanPlanning #OpenData #Sustainability
