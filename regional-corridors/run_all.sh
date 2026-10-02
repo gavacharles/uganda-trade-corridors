@@ -21,4 +21,8 @@ step 05 $PY -W ignore run.py 05
 step 00 $PY -W ignore run.py 00 -- 2006 2025
 for s in 06 08 09 10 16 17 18 19 20; do step $s $PY -W ignore run.py $s; done
 step compare $PY -W ignore scripts/compare.py
+# The shared scripts also draw all-roads figures (f02-f16, g01-g03) that cannot be read with 54
+# roads; the country, hub and close-up sheets replace them.
+rm -f figures/{f02_typology,f03_growth,f04_minutes_by_cause,f05_hotspots,f07_scenarios,f08_costs,f09_reliability,f10_safety,f16_fuel_co2,g01_waterfall,g02_rank_stability,g03_strip_maps}.png
+for s in figures figures_by_country figures_by_hub closeups; do step $s $PY -W ignore scripts/$s.py; done
 echo "== all done  $(date '+%H:%M')"
