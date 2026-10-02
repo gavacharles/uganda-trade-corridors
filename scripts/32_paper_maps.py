@@ -87,51 +87,55 @@ def panel_label(ax, s):
             zorder=30, bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85))
 
 
-# Close-up windows (lon0, lon1, lat0, lat1), about 30-45 km across
-WIN = {"Kampala": (32.40, 32.80, 0.17, 0.50), "Jinja–Iganga": (33.12, 33.52, 0.38, 0.68),
-       "Mbarara": (30.50, 30.82, -0.72, -0.47), "Karuma–Kigumba": (32.00, 32.32, 1.80, 2.08),
-       "Lukaya–Masaka": (31.70, 32.02, -0.40, -0.08), "Busitema–Tororo": (33.85, 34.25, 0.48, 0.76),
-       "Fort Portal": (30.12, 30.44, 0.52, 0.80)}
-SINGLE_RECTS = [[0.64, 0.625, 0.34, 0.26], [0.64, 0.335, 0.34, 0.26], [0.64, 0.045, 0.34, 0.26]]
+T = O("pieces_typed.csv")
+CEN = P.geometry.centroid
+PLACE = by_piece(T, "place")
+KAMPALA_XY = (32.5825, 0.3136)
+SINGLE_RECTS = [[0.62, 0.64, 0.37, 0.24], [0.62, 0.345, 0.37, 0.24], [0.62, 0.05, 0.37, 0.24]]
+HALF = 0.018   # street-level close-ups: 4 km windows, as the bottleneck close-ups (m03)
 
 
 def two_rects(x0):
     return [[x0 + i * 0.16, 0.03, 0.15, 0.26] for i in range(3)]
 
 
-def mark(ax, win, label):
-    ax.add_patch(Rectangle((win[0], win[2]), win[1] - win[0], win[3] - win[2], fill=False, ec=INK, lw=1.3, zorder=25))
-    ax.text(win[0], win[3], f" {label}", fontsize=9, fontweight="bold", color=INK, va="bottom", ha="left", zorder=26,
-            bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.85))
+def sites(score, n=3, mask=None, exclude=(), min_deg=0.25):
+    """The n highest-scoring pieces, at least ~25 km from each other and from `exclude`."""
+    v = pd.Series(score, dtype=float)
+    if mask is not None:
+        v[~np.asarray(mask)] = np.nan
+    keep = list(exclude)
+    for i in v.dropna().sort_values(ascending=False).index:
+        if all(np.hypot(CEN.x[i] - CEN.x[j], CEN.y[i] - CEN.y[j]) > min_deg for j in keep):
+            keep.append(i)
+        if len(keep) == len(exclude) + n:
+            break
+    return keep[len(exclude):]
 
 
-def context(ax, win):
-    """Street-level context under a close-up: building footprints and the main road network."""
-    bb = M.buildings[M.buildings.longitude.between(win[0], win[1]) & M.buildings.latitude.between(win[2], win[3])]
-    ax.scatter(bb.longitude, bb.latitude, s=0.12, color="#a8a296", linewidths=0, zorder=3, rasterized=True)
-    rr = M.froads.cx[win[0]:win[1], win[2]:win[3]]
-    rr = rr[rr.highway.isin(["motorway", "trunk", "primary", "secondary", "tertiary", "unclassified"])]
-    if len(rr):
-        rr.plot(ax=ax, aspect=None, color="#8c887f", linewidth=0.45, zorder=4)
-    M.place_labels(ax, *win, n=6, size=6.5)
+def site_title(n, i, extra):
+    place = PLACE[i] if isinstance(PLACE[i], str) else "unnamed place"
+    return f"{n}. {place}, {C.CORRIDORS[P.corridor[i]]['short']} road km {P.piece[i] * 0.5:.0f}\n{extra}"
 
 
-def closeups(fig, overviews, rects, names, draw):
-    """Numbered close-up panels; each window is boxed and numbered on every overview."""
-    for i, (rect, name) in enumerate(zip(rects, names), 1):
-        win = WIN[name]
+def street_closeups(fig, overviews, rects, idx, extras, theme_=None, figw=16, start=1):
+    """Street-level close-ups (4 km) at the given pieces, numbered on every overview."""
+    for n, (rect, i, ex) in enumerate(zip(rects, idx, extras), start):
         ax = fig.add_axes(rect)
-        draw(ax, win)
-        context(ax, win)
+        M.closeup(ax, P.corridor[i], CEN.x[i], CEN.y[i], HALF, rect[2] * figw / (2 * HALF), site_title(n, i, ex),
+                  None, theme=theme_)
         for s_ in ax.spines.values():
-            s_.set_visible(True); s_.set_color(INK); s_.set_linewidth(1)
-        ax.set_title(f"{i}. {name}", fontsize=9.5, color=INK, loc="left")
-        for ov in overviews:
-            mark(ov, win, str(i))
+            s_.set_visible(True); s_.set_color(INK)
+        ax.title.set_fontsize(8.5)
+    if start == 1:   # one key for the close-ups' symbols, under the figure
+        fig.legend(handles=M.CLOSEUP_LEGEND, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=7, frameon=False,
+                   fontsize=8.5, labelcolor=INK2)
+    for ov in overviews:
+        M.numbered_markers(ov, [CEN.x[i] for i in idx], [CEN.y[i] for i in idx],
+                           list(range(start, start + len(idx))), size=7.5)
 
 
-def theme_draw(values, cmap, norm):
-    return lambda ax, win: theme(ax, values, cmap, norm, lw=4.6, extent=win, towns=False)
+FAR = np.hypot(CEN.x - KAMPALA_XY[0], CEN.y - KAMPALA_XY[1]).to_numpy() > 0.35   # outside greater Kampala
 
 
 # ---------------------------------------------------------------- p01 road types
@@ -143,7 +147,12 @@ tval = P.road_type.map({k: i for i, k in enumerate(M.TYPE_COL)}).to_numpy(float)
 fig = plt.figure(figsize=(16, 11), facecolor=SURF)
 ax = fig.add_axes([0.01, 0.05, 0.58, 0.87])
 theme(ax, tval, tmap, tnorm)
-closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Mbarara"], theme_draw(tval, tmap, tnorm))
+dense = by_piece(T, "buildings_100m")
+i1 = sites(dense, 1, mask=(P.road_type == "town").to_numpy() & FAR)
+i2 = sites(dense, 2, mask=(P.road_type == "roadside settlement").to_numpy() & FAR, exclude=i1)
+idx = i1 + i2
+street_closeups(fig, [ax], SINGLE_RECTS, idx, [f"{P.road_type[i]}: {dense[i]:.0f} buildings within 100 m of this 500 m"
+                                               for i in idx], theme_=(tval, tmap, tnorm))
 t = O("typology_summary.csv")
 share = t.groupby("road_type").km.sum() / t.km.sum()
 ax.legend(handles=[Line2D([], [], color=c, lw=5, label=f"{k} ({share[k]:.0%} of length)") for k, c in M.TYPE_COL.items()],
@@ -151,7 +160,7 @@ ax.legend(handles=[Line2D([], [], color=c, lw=5, label=f"{k} ({share[k]:.0%} of 
           fontsize=9.5, title="road type (k-means on roadside measures)", title_fontsize=9)
 head(fig, "What the corridors have become: road type along every 500 m",
      "Open road, roadside settlement or town, from buildings within 100 m and 300 m, joining roads and roadside activity. "
-     "Close-ups 1–3: every building footprint and the main roads.")
+     "Close-ups (4 km): the densest town and roadside settlements outside Kampala; buildings at footprint size.")
 save(fig, "p01_road_types_map.png")
 
 # ---------------------------------------------------------------- p02 growth
@@ -178,9 +187,12 @@ theme(axs[1], pct, c2, n2)
 key(fig, axs[1], c2, n2, b2, "growth in buildings within 300 m, 2016–2023 (per 2 km)",
     labels=["< 10%", "10–20%", "20–30%", "30–45%", "45–60%", "> 60%"])
 panel_label(axs[1], "(b)")
-GW = ["Kampala", "Karuma–Kigumba", "Lukaya–Masaka"]
-closeups(fig, [axs[0]], two_rects(0.01), GW, theme_draw(binned(added), c1, n1))
-closeups(fig, [axs[1]], two_rects(0.51), GW, theme_draw(pct, c2, n2))
+va, vb = binned(added), pct
+ia, ib = sites(va), sites(vb, mask=FAR)
+street_closeups(fig, [axs[0]], two_rects(0.01), ia, [f"+{va[i]:.1f} ha built up per km, 2000–2020" for i in ia],
+                (va, c1, n1), figw=17)
+street_closeups(fig, [axs[1]], two_rects(0.51), ib, [f"+{vb[i]:.0f}% buildings, 2016–2023" for i in ib],
+                (vb, c2, n2), figw=17, start=4)
 head(fig, "How fast the roadside is building up",
      "(a) GHSL built-up surface, observed 2000 and 2020, per 2 km stretch. (b) Google Open Buildings 2.5D Temporal "
      "building counts, 2016 to 2023, per 2 km stretch.")
@@ -223,16 +235,13 @@ axs[1].legend(handles=[Line2D([], [], marker="o", ls="none", color="#1b5e8c", ma
 panel_label(axs[1], "(b)")
 
 
-def expo_draw(ax, win):
-    theme(ax, binned(expo), c2, n2, lw=4.6, extent=win, towns=False)
-    ax.scatter(c_.x, c_.y, s=9, color="#123f63", zorder=9, linewidths=0)
-    ax.scatter([p.x for p in bpt], [p.y for p in bpt], marker="^", s=70, color="white", edgecolor=INK, linewidth=1.2,
-               zorder=12)
 
-
-EW = ["Kampala", "Jinja–Iganga", "Lukaya–Masaka"]
-closeups(fig, [axs[0]], two_rects(0.01), EW, theme_draw(binned(people), c1, n1))
-closeups(fig, [axs[1]], two_rects(0.51), EW, expo_draw)
+va, vb = binned(people), binned(expo)
+ia, ib = sites(va, mask=FAR), sites(vb, mask=FAR)
+street_closeups(fig, [axs[0]], two_rects(0.01), ia, [f"{va[i]:,.0f} people within 300 m per km" for i in ia],
+                (va, c1, n1), figw=17)
+street_closeups(fig, [axs[1]], two_rects(0.51), ib, [f"exposure {vb[i]:.1f} per km" for i in ib], (vb, c2, n2),
+                figw=17, start=4)
 head(fig, "Who lives beside the corridors, and where fast trucks pass them",
      "(a) WorldPop 2025 within 300 m of the road. (b) Exposure per 2 km; school stretches and the 2018 police black "
      "spots located by place name.")
@@ -254,7 +263,10 @@ txt = "\n".join(f"{C.CORRIDORS[c]['short']}: {r.friction_litres_trip:.0f} L per 
                 for c, r in fc.iterrows())
 ax.text(0.015, 0.84, txt, transform=ax.transAxes, fontsize=8.5, color=INK, va="top", zorder=20,
         bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#d8d5ce"))
-closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Mbarara"], theme_draw(binned(fuel), cm, nm))
+vf = binned(fuel)
+idx = sites(vf)
+street_closeups(fig, [ax], SINGLE_RECTS, idx, [f"{vf[i]:.2f} L extra diesel per km per loaded truck" for i in idx],
+                (vf, cm, nm))
 head(fig, "Where roadside friction burns diesel",
      "Physical fuel model on the travel-time model's speeds: slow-downs, re-acceleration and idling against open road; per 2 km.")
 save(fig, "p04_fuel_map.png")
@@ -292,8 +304,10 @@ axs[1].text(0.015, 0.90, "Most flood-fragile 2 km\n(water crossings, wetland,\nh
             transform=axs[1].transAxes, fontsize=8, color=INK, va="top", zorder=20,
             bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#d8d5ce"))
 panel_label(axs[1], "(b)")
-closeups(fig, [axs[0]], two_rects(0.01), ["Busitema–Tororo", "Lukaya–Masaka", "Fort Portal"],
-         theme_draw(binned(wet), c1, n1))
+vw = binned(wet)
+iw = sites(vw)
+street_closeups(fig, [axs[0]], two_rects(0.01), iw, [f"{vw[i]:.0f} days a year with ≥ 10 mm rain" for i in iw],
+                (vw, c1, n1), figw=17)
 for j, (i, rect) in enumerate(zip((0, 1, 3), two_rects(0.51))):
     r, pt = fr.iloc[i], fpt[i]
     ax_ = fig.add_axes(rect)
@@ -332,7 +346,14 @@ def controls(ax, ext=M.EXT_UG, k=1.0):
 fig = plt.figure(figsize=(16, 11), facecolor=SURF)
 ax = fig.add_axes([0.01, 0.05, 0.58, 0.87])
 hand = controls(ax)
-closeups(fig, [ax], SINGLE_RECTS, ["Kampala", "Jinja–Iganga", "Lukaya–Masaka"], lambda a, w: controls(a, w, k=2.2))
+hot = M.hot.sort_values("truck_excess_min", ascending=False)
+picks = []
+for word in ("weighbridge", "signals", "police"):
+    r = hot[hot.main_causes.str.split(";").str[0].str.contains(word)].iloc[0]
+    d = P[P.corridor == r.corridor]
+    picks.append((d.piece * 0.5 - (r.km_from + r.km_to) / 2).abs().idxmin())
+street_closeups(fig, [ax], SINGLE_RECTS, picks, [f"truck +{hot.loc[hot.main_causes.str.split(';').str[0].str.contains(w)].iloc[0].truck_excess_min:.1f} min over 2 km: "
+                                                 f"{w}" for w in ("weighbridge", "signals", "police posts")])
 M.town_labels(ax, TOWNS, size=8)
 M.border_marks(ax)
 K.furniture(ax, km=100)
