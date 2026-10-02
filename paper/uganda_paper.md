@@ -54,7 +54,7 @@ Stop-and-go driving raises fuel use per kilometre. Each deceleration wastes kine
 
 ## 3.1 Corridors
 
-The corridors are the five national routes leaving Kampala that are longer than 100 km. They were found by the companion paper's search, which follows every numbered motorway, trunk or primary route passing within 8 km of the city centre. Table 1 lists them; Figure 1 maps them. Four end at a border: Malaba (Kenya), Elegu (South Sudan), Katuna (Rwanda) and Mpondwe/Bwera (DR Congo). The fifth, the A9 to Hoima, serves the Albertine oil region.
+The corridors are the five national routes leaving Kampala that are longer than 100 km. They were found by the companion paper's search, which follows every numbered motorway, trunk or primary route passing within 8 km of the city centre. Table 1 lists them; Figure @F1 maps them. Four end at a border: Malaba (Kenya), Elegu (South Sudan), Katuna (Rwanda) and Mpondwe/Bwera (DR Congo). The fifth, the A9 to Hoima, serves the Albertine oil region.
 
 Table: Table 1. The five corridors.
 
@@ -66,7 +66,7 @@ Table: Table 1. The five corridors.
 | Kampala → Hoima | A9 | 194 | Albertine oil region |
 | Kampala → Fort Portal → Kasese → Bwera | A5 | 418 | North Kivu, DR Congo |
 
-![Figure 1. Study area: the five corridors leaving Kampala, with towns, border crossings and the weighbridges found in OpenStreetMap.](../figures/m01_study_area.png){5.6}
+![Figure @F1. Study area: the five corridors leaving Kampala, with towns, border crossings and the weighbridges found in OpenStreetMap.](../figures/m01_study_area.png){5.6}
 
 ## 3.2 Data
 
@@ -92,6 +92,10 @@ Table: Table 2. Causes measured for each 500 m piece.
 | Water | Waterway crossings; wetland share | OSM |
 | Weather | Days a year with ≥ 10 mm of rain, 2006–2025 | CHIRPS |
 | Growth | Built-up land within 300 m, 2000–2020; buildings 2016–2023 | GHSL; Open Buildings Temporal |
+
+Figure @P6 shows the controls that OpenStreetMap records along the corridors. Pedestrian crossings appear on 53 pieces, police posts on 39 and weighbridges on 5. Signals appear on only 5 pieces and humps on 22, far fewer than exist on the ground, which is why humps are assumed in the model (Section 3.4).
+
+![Figure @P6. Controls recorded in OpenStreetMap along the five corridors; each marker is a 500 m piece with at least one control of that kind.](../figures/p06_controls_map.png){5.6}
 
 ## 3.3 Pieces and road types
 
@@ -187,7 +191,7 @@ Table: Table 4. Model against independent trip times (car, minutes).
 
 ## 4.1 What the corridors have become
 
-Roadside settlement is now the normal condition of a Ugandan trade corridor (Figure 2; Table 5). It makes up 56% of the Elegu road and 74% of the Hoima road. Open road, averaging fewer than ten buildings within 100 m per 500 m piece, is 18–36%. Towns are 4–22%; the Malaba road, through Mukono, Lugazi, Jinja, Iganga and Tororo, has the most. Roadside settlements average 90–156 buildings within 100 m per 500 m piece, and towns 338–416. Even in settlements, three to five minor roads join per km.
+Roadside settlement is now the normal condition of a Ugandan trade corridor (Figures @P1 and @F2; Table 5). It makes up 56% of the Elegu road and 74% of the Hoima road. Open road, averaging fewer than ten buildings within 100 m per 500 m piece, is 18–36%. Towns are 4–22%; the Malaba road, through Mukono, Lugazi, Jinja, Iganga and Tororo, has the most. Roadside settlements average 90–156 buildings within 100 m per 500 m piece, and towns 338–416. Even in settlements, three to five minor roads join per km.
 
 Table: Table 5. Road types and growth by corridor.
 
@@ -199,15 +203,19 @@ Table: Table 5. Road types and growth by corridor.
 | Hoima (A9) | 18% | 74% | 8% | +57% | +48% |
 | Bwera (A5) | 29% | 67% | 4% | +57% | +41% |
 
-![Figure 2. Road types along each corridor: share of length and buildings within 100 m per km of each type.](../figures/f02_typology.png){6.3}
+![Figure @P1. Road type of every 500 m piece along the five corridors, with Kampala's exits enlarged.](../figures/p01_road_types_map.png){6.3}
 
-Built-up land within 300 m of the road grew by 27% (Malaba) to 68% (Elegu) between 2000 and 2020 (Figure 3). Most of the added area lies in roadside settlements between towns, not in the towns themselves: towns grew 13–21%, settlements 45–102%. Open road grew fastest in percentage terms (186–307%) from a tiny base, and this is how new settlements appear. The fastest-growing 5 km on each road are at Baggala on the Malaba road, Kichwabugingo near Karuma on the Elegu road, Kassana on the Katuna road, and Kasangobe and Kalambi on the Hoima and Bwera roads just outside Kampala.
+![Figure @F2. Road types along each corridor: share of length and buildings within 100 m per km of each type.](../figures/f02_typology.png){6.3}
 
-![Figure 3. Built-up land within 300 m along each corridor, 2000 and 2020 (GHSL).](../figures/f03_growth.png){6.3}
+Built-up land within 300 m of the road grew by 27% (Malaba) to 68% (Elegu) between 2000 and 2020 (Figures @P2(a) and @F3). Most of the added area lies in roadside settlements between towns, not in the towns themselves: towns grew 13–21%, settlements 45–102%. Open road grew fastest in percentage terms (186–307%) from a tiny base, and this is how new settlements appear. The fastest-growing 5 km on each road are at Baggala on the Malaba road, Kichwabugingo near Karuma on the Elegu road, Kassana on the Katuna road, and Kasangobe and Kalambi on the Hoima and Bwera roads just outside Kampala.
 
-The temporal building layer shows the growth continuing (Figure 4). Building counts within 300 m rose 22–48% over 2016–2023 by fitted trend, or 2.8–5.8% a year. That is two to four times GHSL's observed rate for 2015–2020, so GHSL's projection to 2026 (+5–10%) understates recent building. Land 1–2 km back grew faster in percentage terms (36–57%) from a lower base. Per km², however, the roadside gained 1.6–2.1 times as many buildings as the control ring: the corridor attracts building in absolute terms, not by drawing it from behind. A step in 2020–22 appears near the road and behind it alike, so part of it may be a change in imagery or model rather than on the ground.
+![Figure @P2. Where the roadside built up: (a) built-up land added within 300 m per km, 2000–2020 (GHSL); (b) growth in building count within 300 m, 2016–2023 (Open Buildings 2.5D Temporal), per 2 km.](../figures/p02_growth_map.png){6.3}
 
-![Figure 4. Buildings within 300 m of each corridor, 2016–2023 (Open Buildings 2.5D Temporal), against a control ring 1–2 km away; growth by road type.](../figures/f17_growth_temporal.png){6.3}
+![Figure @F3. Built-up land within 300 m along each corridor, 2000 and 2020 (GHSL).](../figures/f03_growth.png){6.3}
+
+The temporal building layer shows the growth continuing (Figures @P2(b) and @F4). Building counts within 300 m rose 22–48% over 2016–2023 by fitted trend, or 2.8–5.8% a year. That is two to four times GHSL's observed rate for 2015–2020, so GHSL's projection to 2026 (+5–10%) understates recent building. Land 1–2 km back grew faster in percentage terms (36–57%) from a lower base. Per km², however, the roadside gained 1.6–2.1 times as many buildings as the control ring: the corridor attracts building in absolute terms, not by drawing it from behind. A step in 2020–22 appears near the road and behind it alike, so part of it may be a change in imagery or model rather than on the ground.
+
+![Figure @F4. Buildings within 300 m of each corridor, 2016–2023 (Open Buildings 2.5D Temporal), against a control ring 1–2 km away; growth by road type.](../figures/f17_growth_temporal.png){6.3}
 
 ## 4.2 Time lost and why
 
@@ -223,7 +231,7 @@ Table: Table 6. Minutes added per trip, leaving Kampala (central estimate and 5�
 | Hoima (A9) | 167 | 226 | 59 (47–91) | 34 (24–52) | +24 |
 | Bwera (A5) | 358 | 482 | 124 (99–181) | 63 (44–97) | +52 |
 
-Figure 5 breaks the delay into its causes, and Figure 6 shows how a truck trip builds up cause by cause. For cars, roadside activity is the largest steady cause everywhere: 16–33 minutes per trip, followed by assumed humps, town limits and joining roads. On the Malaba road, signals and crossings at the Kampala end add 10 minutes.
+Figure @F5 breaks the delay into its causes, and Figure @F6 shows how a truck trip builds up cause by cause. For cars, roadside activity is the largest steady cause everywhere: 16–33 minutes per trip, followed by assumed humps, town limits and joining roads. On the Malaba road, signals and crossings at the Kampala end add 10 minutes.
 
 For trucks the picture differs road by road:
 
@@ -232,11 +240,11 @@ For trucks the picture differs road by road:
 - **Elegu road:** roadside activity (29), police posts (15), humps (13), hills (13) and the Luwero weighbridge (10).
 - **Hoima road:** roadside activity alone (19 minutes) is the largest cause.
 
-![Figure 5. Minutes added per trip by each cause, car and truck, leaving Kampala (central estimate and 5–95% range; one scale for all roads).](../figures/f04_minutes_by_cause.png){6.3}
+![Figure @F5. Minutes added per trip by each cause, car and truck, leaving Kampala (central estimate and 5–95% range; one scale for all roads).](../figures/f04_minutes_by_cause.png){6.3}
 
-![Figure 6. How a loaded truck's trip grows from open-road time, cause by cause. Causes are switched off one at a time, so they overlap; the grey bar balances the total.](../figures/g01_waterfall.png){5.8}
+![Figure @F6. How a loaded truck's trip grows from open-road time, cause by cause. Causes are switched off one at a time, so they overlap; the grey bar balances the total.](../figures/g01_waterfall.png){5.8}
 
-Rank stability tempers these rankings (Figure 7). For cars, roadside activity is the largest cause in 81–100% of draws on four roads and 56% on the Malaba road, where humps and signals compete. For trucks, no ranking is certain:
+Rank stability tempers these rankings (Figure @F7). For cars, roadside activity is the largest cause in 81–100% of draws on four roads and 56% on the Malaba road, where humps and signals compete. For trucks, no ranking is certain:
 
 - hills are first on the Bwera road in 57% of draws and roadside activity in 43%;
 - police posts lead on the Elegu road in 56% of draws, because the stop time ranges from 0 to 5 minutes;
@@ -245,26 +253,32 @@ Rank stability tempers these rankings (Figure 7). For cars, roadside activity is
 
 Statements about "the" main cause of truck delay should therefore carry these shares.
 
-![Figure 7. Rank stability: share of 1,000 draws in which each cause adds the most minutes.](../figures/g02_rank_stability.png){6.3}
+![Figure @F7. Rank stability: share of 1,000 draws in which each cause adds the most minutes.](../figures/g02_rank_stability.png){6.3}
 
 ## 4.3 Where: the worst stretches
 
-Figure 8 maps truck minutes lost per km along all five roads, and Figure 9 shows close-ups of the worst stretches. The single worst 2 km stretches are weighbridges: Buwanga near Magamaga and Namutere on the A1, Magezi near Lukaya and Rwebihuro near Mbarara on the A2, and Kizito near Luwero on the A6. Each costs 10–12 truck-minutes, almost all at the weighbridge itself. Leaving these aside, the worst stretches are town entries close to Kampala:
+Figure @F8 maps truck minutes lost per km along all five roads, and Figure @F9 shows close-ups of the worst stretches. The single worst 2 km stretches are weighbridges: Buwanga near Magamaga and Namutere on the A1, Magezi near Lukaya and Rwebihuro near Mbarara on the A2, and Kizito near Luwero on the A6. Each costs 10–12 truck-minutes, almost all at the weighbridge itself. Leaving these aside, the worst stretches are town entries close to Kampala:
 
 - Nakawa and Kireka on the A1, where signals, crossings and humps add 5–9 minutes per 2 km;
 - Nansana and Ocheng on the A9;
 - Buloba on the A5;
 - Kitaka on the A2.
 
-The border approach at Bibia on the A6 is another. The close-ups show the pattern behind the numbers: continuous roofs on both sides, a fine mesh of minor roads joining the corridor, fuel stations and markets at the junctions, and controls stacked within a few hundred metres.
+The border approach at Bibia on the A6 is another.
 
-![Figure 8. Truck minutes lost per km against open road on every corridor; numbered: the national hotspots.](../figures/m02_bottlenecks.png){5.6}
+Kampala's exits concentrate these problems (Figure @P7). In the first 35 km, all five corridors run through near-continuous building, and minor roads join every few hundred metres. Delay of 1–4 truck-minutes per km clusters at Nansana on the A6 and A9, Kyengera and Kitemu on the A2, and Mukono on the A1. Figure @A1 shows the full analysis sheet for one corridor, the Malaba road: its ten worst stretches, its long profile, three close-ups and their causes. The close-ups show the pattern behind the numbers: continuous roofs on both sides, a fine mesh of minor roads joining the corridor, fuel stations and markets at the junctions, and controls stacked within a few hundred metres.
 
-![Figure 9. Close-ups (4 km windows) of the national hotspots: buildings at footprint size, every OSM road, water and controls.](../figures/m03_hotspots.png){6.3}
+![Figure @F8. Truck minutes lost per km against open road on every corridor; numbered: the national hotspots.](../figures/m02_bottlenecks.png){5.6}
+
+![Figure @P7. Leaving Kampala: every building footprint within 1 km of the corridors, the main road network and truck minutes lost per km over the first 35 km.](../figures/p07_kampala_exit_map.png){6.3}
+
+![Figure @F9. Close-ups (4 km windows) of the national hotspots: buildings at footprint size, every OSM road, water and controls.](../figures/m03_hotspots.png){6.3}
+
+![Figure @A1. Corridor sheet for Kampala–Malaba (A1): map of truck delay with the ten worst 2 km stretches, long profile, close-ups and causes.](../figures/m05_atlas_kampala_malaba.png){6.3}
 
 ## 4.4 Fixes
 
-Table 7 and Figure 10 report what each fix would save per truck trip.
+Table 7 and Figure @F10 report what each fix would save per truck trip.
 
 - **Weigh-in-motion screening** saves 8 minutes on the Elegu road and 16 minutes each on the Malaba and Katuna roads, where it would apply at Luwero, Magamaga and Busitema, and Lukaya and Mbarara.
 - **No stops at police posts** saves 4–15 minutes. The Elegu road gains most, but the 5–95% range runs to over an hour because the stop time is so uncertain.
@@ -286,11 +300,11 @@ Table: Table 7. Truck minutes saved per trip by each fix (central estimate).
 
 *Weigh-in-motion, no police stops, the two bypasses and service roads on the worst 20 km.
 
-![Figure 10. Minutes saved per trip by each fix, with 5–95% ranges.](../figures/f07_scenarios.png){6.3}
+![Figure @F10. Minutes saved per trip by each fix, with 5–95% ranges.](../figures/f07_scenarios.png){6.3}
 
 ## 4.5 Cost, reliability, fuel and carbon
 
-At central values, delay costs heavy trucks about US$41 million a year across the five roads (Figure 11):
+At central values, delay costs heavy trucks about US$41 million a year across the five roads (Figure @F11):
 
 - US$19.5 million on the Malaba road, which carries some 1,540 trucks a day;
 - US$7.4 million on the Katuna road and US$6.8 million on the Elegu road;
@@ -298,31 +312,37 @@ At central values, delay costs heavy trucks about US$41 million a year across th
 
 Per trip, a loaded truck loses US$25–67. The annual figures rest on surveyed counts for the Malaba, Katuna and Bwera roads and assumed counts for the other two, and their ranges are wide (US$12–47 million on the Malaba road alone).
 
-![Figure 11. Annual cost of truck delay by corridor and cause, with ranges.](../figures/f08_costs.png){6.3}
+![Figure @F11. Annual cost of truck delay by corridor and cause, with ranges.](../figures/f08_costs.png){6.3}
 
-Rain adds a further 24–53 truck-minutes on a wet day. Replaying 2006–2025, the 95th-percentile day is 5–8% slower than a typical day, and the Malaba road is the least reliable: its buffer index is 7.7%, with 87 days a year more than 2% slower (Figure 12). The flood-exposure ranking puts the Busabi and Butema wetland stretches on the A1 and Lbanda, Kaziru and Kyoko on the A2 first. The Mpondwe stretch where a flood destroyed the Uganda–DR Congo bridge in May 2020 ranks at the 92nd percentile on the A5. The ranking finds fragile places but would not have singled out that one.
+Rain adds a further 24–53 truck-minutes on a wet day. Replaying 2006–2025, the 95th-percentile day is 5–8% slower than a typical day, and the Malaba road is the least reliable: its buffer index is 7.7%, with 87 days a year more than 2% slower (Figure @F12). The flood-exposure ranking puts the Busabi and Butema wetland stretches on the A1 and Lbanda, Kaziru and Kyoko on the A2 first. The Mpondwe stretch where a flood destroyed the Uganda–DR Congo bridge in May 2020 ranks at the 92nd percentile on the A5. The ranking finds fragile places but would not have singled out that one (Figure @P5).
 
-![Figure 12. Truck trip time by month from the rain that fell each day, 2006–2025: mean and 95th-percentile day.](../figures/f09_reliability.png){6.3}
+![Figure @P5. (a) Days a year with at least 10 mm of rain along each corridor (CHIRPS 2006–2025); (b) the ten most flood-fragile 2 km stretches and the 2020 Mpondwe flood.](../figures/p05_rain_fragility_map.png){6.3}
 
-Roadside friction burns an extra 29–75 litres of diesel per loaded truck trip (Figure 13), 25–41% of the trip's fuel. Across the five roads this is about 52 million litres, 138 kt of CO₂ and US$70 million of diesel a year at central values. The Malaba road accounts for nearly half (63 kt). Roadside activity and joining roads are the largest fuel causes on most roads, because they force repeated slow-downs and re-accelerations; on the Malaba road the assumed humps (20 L) lead. Hills and town limits are slightly negative: a truck held to a lower speed burns less fuel against air resistance. The assumed humps make the Malaba figure the least certain.
+![Figure @F12. Truck trip time by month from the rain that fell each day, 2006–2025: mean and 95th-percentile day.](../figures/f09_reliability.png){6.3}
 
-![Figure 13. Extra diesel per loaded truck trip by cause, and CO₂ a year by corridor.](../figures/f16_fuel_co2.png){6.3}
+Roadside friction burns an extra 29–75 litres of diesel per loaded truck trip (Figures @P4 and @F13), 25–41% of the trip's fuel. Across the five roads this is about 52 million litres, 138 kt of CO₂ and US$70 million of diesel a year at central values. The Malaba road accounts for nearly half (63 kt). Roadside activity and joining roads are the largest fuel causes on most roads, because they force repeated slow-downs and re-accelerations; on the Malaba road the assumed humps (20 L) lead. Hills and town limits are slightly negative: a truck held to a lower speed burns less fuel against air resistance. The assumed humps make the Malaba figure the least certain.
+
+![Figure @P4. Extra diesel per km per loaded truck from roadside friction, per 2 km, with each corridor's litres per trip and CO₂ a year.](../figures/p04_fuel_map.png){5.6}
+
+![Figure @F13. Extra diesel per loaded truck trip by cause, and CO₂ a year by corridor.](../figures/f16_fuel_co2.png){6.3}
 
 ## 4.6 People beside the road
 
-About 1.18 million people live within 300 m of the five roads. Roadside settlements hold 49–76% of them but 65–79% of the exposure, because trucks there still average about 56 km/h. In towns, by contrast, the speed limit and friction hold trucks near 43 km/h (Figure 14). The highest-exposure stretches are the A1's first 8 km through Nakawa and Kireka, and the approaches to Jinja. In 688 half-km pieces, a school, trucks above 50 km/h and no mapped crossing within 500 m coincide; this is an upper bound, since OSM under-records crossings.
+About 1.18 million people live within 300 m of the five roads. Roadside settlements hold 49–76% of them but 65–79% of the exposure, because trucks there still average about 56 km/h. In towns, by contrast, the speed limit and friction hold trucks near 43 km/h (Figures @P3 and @F14). The highest-exposure stretches are the A1's first 8 km through Nakawa and Kireka, and the approaches to Jinja. In 688 half-km pieces, a school, trucks above 50 km/h and no mapped crossing within 500 m coincide; this is an upper bound, since OSM under-records crossings.
 
-![Figure 14. Safety exposure along each corridor (people within 300 m × trucks × (speed/50)⁴), by road type.](../figures/f10_safety.png){6.3}
+![Figure @P3. (a) People living within 300 m per km (WorldPop 2025); (b) safety exposure per km, with school stretches and the located police black spots.](../figures/p03_people_exposure_map.png){6.3}
 
-Of 58 crash black spots named by police traffic officers, 40 can be located on the roads (Figure 15). Compared with random stretches near a named place, their stretches rank high on roadside buildings (71st percentile, p < 0.001) and joining roads (65th, p = 0.003). They rank low on truck speed (32nd, p < 0.001). Black spots are therefore busy trading centres where traffic slows and mixes, not fast open bends. The exposure index points at them only weakly (59th percentile, p = 0.08), because its speed⁴ term favours fast stretches. Officers' judgement and the power model thus disagree about where risk lies, and the paper reports both.
+![Figure @F14. Safety exposure along each corridor (people within 300 m × trucks × (speed/50)⁴), by road type.](../figures/f10_safety.png){6.3}
 
-![Figure 15. Where police black spots rank on exposure, buildings, joining roads, speed and design, against random stretches.](../figures/f15_black_spots.png){6.3}
+Of 58 crash black spots named by police traffic officers, 40 can be located on the roads (Figures @P3(b) and @F15). Compared with random stretches near a named place, their stretches rank high on roadside buildings (71st percentile, p < 0.001) and joining roads (65th, p = 0.003). They rank low on truck speed (32nd, p < 0.001). Black spots are therefore busy trading centres where traffic slows and mixes, not fast open bends. The exposure index points at them only weakly (59th percentile, p = 0.08), because its speed⁴ term favours fast stretches. Officers' judgement and the power model thus disagree about where risk lies, and the paper reports both.
+
+![Figure @F15. Where police black spots rank on exposure, buildings, joining roads, speed and design, against random stretches.](../figures/f15_black_spots.png){6.3}
 
 ## 4.7 Friction in the whole trip
 
-The Observatory's GPS and cargo-tracking data put Kampala-to-border transit at 17–93 hours in 2025–26, against 5–9 hours of modelled driving (Figure 16). Roadside and control friction, at 1.8–2.7 hours per trip, is therefore 2–14% of the real door-to-door time. The rest is stopped time: by drivers' own records, rest and meals take 63% of stopped time and border procedures 23%. The Malaba border crossing itself averaged 48 minutes in 2025, less than the two hours of friction between Kampala and the border. The Observatory's measured median weighbridge stop of 12 minutes supports the model's 10-minute assumption.
+The Observatory's GPS and cargo-tracking data put Kampala-to-border transit at 17–93 hours in 2025–26, against 5–9 hours of modelled driving (Figure @F16). Roadside and control friction, at 1.8–2.7 hours per trip, is therefore 2–14% of the real door-to-door time. The rest is stopped time: by drivers' own records, rest and meals take 63% of stopped time and border procedures 23%. The Malaba border crossing itself averaged 48 minutes in 2025, less than the two hours of friction between Kampala and the border. The Observatory's measured median weighbridge stop of 12 minutes supports the model's 10-minute assumption.
 
-![Figure 16. Observed truck transit (NCTTCA, GPS and RECTS) against modelled driving time, and why trucks stop.](../figures/f14_transit_gap.png){6.3}
+![Figure @F16. Observed truck transit (NCTTCA, GPS and RECTS) against modelled driving time, and why trucks stop.](../figures/f14_transit_gap.png){6.3}
 
 ## 4.8 Trucks from space (experimental)
 
