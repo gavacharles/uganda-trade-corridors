@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaving the Capital</title>
+<meta name="description" content="54 main roads out of 12 East and Southern African hubs, every 2 km: road type, time lost, safety, fuel, growth, rain and mapped controls.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+:root{--ink:#1d2321;--ink2:#5d6764;--surf:#fcfcfb;--line:#e6e4de;--east:#c4532d;--south:#3d7f8f;--panel:#ffffff}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--surf);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{display:flex;height:100%}
+#side{width:340px;flex:none;overflow-y:auto;background:var(--panel);border-right:1px solid var(--line);padding:16px 16px 24px}
+#map{flex:1;min-width:0}
+h1{font-size:20px;margin:0 0 4px}
+.sub{color:var(--ink2);font-size:13px;margin:0 0 14px}
+h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin:18px 0 6px}
+.layers{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.layers button,.base button{border:1px solid var(--line);background:#f6f4ef;color:var(--ink);border-radius:6px;padding:6px 8px;font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.layers button.on,.base button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.base{display:flex;gap:6px}
+#legend .row{display:flex;align-items:center;gap:8px;font-size:12.5px;margin:2px 0}
+#legend .sw{width:26px;height:8px;border-radius:2px;flex:none}
+#legend .note{color:var(--ink2);font-size:12px;margin-top:4px}
+.hubs{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.hubs button{border:0;background:none;text-align:left;padding:3px 4px;border-radius:4px;cursor:pointer;font:inherit;font-size:13px;color:var(--ink)}
+.hubs button:hover{background:#f1efe9}
+.hubs .e{border-left:3px solid var(--east)}.hubs .s{border-left:3px solid var(--south)}
+#info{margin-top:14px;padding:10px 12px;background:#f6f4ef;border-radius:8px;font-size:13px;min-height:60px}
+#info b{font-size:14px}
+#info table{border-collapse:collapse;width:100%;margin-top:6px}
+#info td{padding:1px 0}#info td+td{text-align:right;font-variant-numeric:tabular-nums}
+label.chk{display:flex;gap:6px;align-items:center;font-size:13px;margin-top:8px;cursor:pointer}
+.foot{color:var(--ink2);font-size:11.5px;margin-top:16px}
+.foot a{color:var(--ink2)}
+.leaflet-popup-content{font:13px/1.45 system-ui,sans-serif;color:var(--ink);margin:10px 12px}
+.leaflet-popup-content b{font-size:14px}
+.hublabel{background:rgba(255,255,255,.85);border:0;box-shadow:none;font-weight:700;font-size:12px;padding:1px 4px;color:var(--ink)}
+.hublabel:before{display:none}
+#toggle{display:none}
+@media (max-width:760px){
+  #app{flex-direction:column}
+  #side{width:100%;height:auto;max-height:45%;border-right:0;border-bottom:1px solid var(--line);padding:12px 16px}
+  #toggle{display:block;position:absolute;right:16px;top:12px;border:1px solid var(--line);background:#fff;border-radius:6px;padding:4px 8px}
+  #side.min .hide-min{display:none}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <button id="toggle" onclick="document.getElementById('side').classList.toggle('min')">☰</button>
+    <h1>Leaving the capital</h1>
+    <p class="sub">54 main roads out of 12 East and Southern African hubs, every 2 km. Click a road or a ● for details; zoom in to street level.</p>
+    <div class="hide-min">
+      <h2>Show</h2>
+      <div class="layers" id="layers"></div>
+      <h2>Legend</h2>
+      <div id="legend"></div>
+      <label class="chk"><input type="checkbox" id="showhot" checked> worst stretches (●), per country</label>
+      <h2>Basemap</h2>
+      <div class="base" id="base"></div>
+      <h2>Fly to a hub</h2>
+      <div class="hubs" id="hubs"></div>
+    </div>
+    <div id="info">Hover over a road to see its 2 km stretch.</div>
+    <p class="foot hide-min">Open data: OpenStreetMap, Google Open Buildings, GHSL, GHS-POP 2025, CHIRPS; travel-time and fuel models as in the paper. Light traffic, dry day. Controls are as mapped in OSM, far more completely in South Africa. Code and data: <a href="https://github.com/gavacharles/uganda-trade-corridors">github.com/gavacharles/uganda-trade-corridors</a></p>
+  </aside>
+  <div id="map"></div>
+</div>
+<script>
+const D = /*DATA*/{}/*END*/;
+const TYPES = ["open road", "roadside settlement", "town"];
+const L8 = {
+  delay:   {name:"Time lost", f:"d", bins:[0.25,0.5,1,2,4], cols:["#e3ded3","#fde6da","#f6b596","#eb6834","#b8491c","#7c2e0f"], unit:"truck min lost per km", fmt:v=>v.toFixed(2)},
+  type:    {name:"Road type", f:"t", cat:true, cols:["#a9c8ec","#3574c4","#0d2d57"], labels:TYPES, unit:"road type (clustered jointly)"},
+  growth:  {name:"Growth", f:"gr", bins:[0.25,0.5,1,2,4], cols:["#f1eee6","#e6d5b8","#d2ad74","#b57d3b","#8a5420","#5a3210"], unit:"built-up ha added within 300 m per km, 2000–2020", fmt:v=>v.toFixed(1)},
+  people:  {name:"People", f:"p", bins:[250,500,1000,2000,4000], cols:["#f6efe2","#f1d9a8","#e6b765","#d18f2e","#a8641b","#6f3d0f"], unit:"people within 300 m per km", fmt:v=>v.toLocaleString()},
+  exposure:{name:"Safety", f:"e", bins:[0.1,0.25,0.5,1,2], cols:["#f3eee8","#f3cdbd","#e89b7f","#d0613f","#a6321b","#6b1408"], unit:"exposure per km: people × trucks × (speed/50)⁴", fmt:v=>v.toFixed(2)},
+  fuel:    {name:"Diesel", f:"f", bins:[0,0.05,0.1,0.2,0.4], cols:["#dfe8ee","#f2efe6","#d9e1c2","#a9c27d","#6c9a45","#355f1f"], unit:"extra litres per km per loaded truck (first class: saving on climbs)", fmt:v=>v.toFixed(2)},
+  rain:    {name:"Rain", f:"w", bins:[10,20,30,40,55], cols:["#eef3f7","#cfe0ec","#9fc2db","#6a9dc4","#3c74a6","#1b4a78"], unit:"days a year with ≥ 10 mm rain", fmt:v=>v.toFixed(0)},
+  controls:{name:"Mapped controls", f:"k", bins:[0.5,1.5,2.5,4.5,8.5], cols:["#f2efe6","#d6dfe2","#a9bfc7","#6f97a6","#3f6e80","#173f4f"], unit:"controls mapped in OSM per 2 km (signals, crossings, humps, police, weighbridges)", fmt:v=>v.toFixed(0)}
+};
+const BASES = {
+  light:{name:"Map", url:"https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", att:"Basemap © Esri, HERE, Garmin, © OpenStreetMap contributors", max:16},
+  sat:{name:"Satellite", url:"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", att:"Imagery © Esri, Maxar, Earthstar Geographics", max:19}
+};
+// ---------- state in the URL hash, so a view can be shared (and screenshotted)
+function readHash(){ const h={}; location.hash.slice(1).split("&").forEach(kv=>{const [k,v]=kv.split("="); if(k) h[k]=decodeURIComponent(v||"")}); return h }
+const H0 = readHash();
+let layer = L8[H0.layer] ? H0.layer : "delay";
+let base = BASES[H0.base] ? H0.base : "light";
+const map = L.map("map", {preferCanvas:true, zoomControl:true}).setView([H0.lat?+H0.lat:-12, H0.lon?+H0.lon:30], H0.z?+H0.z:4);
+let tiles = L.tileLayer(BASES[base].url, {attribution:BASES[base].att, maxZoom:BASES[base].max}).addTo(map);
+const renderer = L.canvas({padding:0.3});
+function colour(v){ const s=L8[layer]; if(s.cat) return s.cols[v]; let i=0; while(i<s.bins.length && v>=s.bins[i]) i++; return s.cols[i] }
+function width(){ const z=map.getZoom(); return z<6?3:z<9?4:z<12?5.5:z<15?7:9 }
+const lines = D.segs.map((s,idx)=>{
+  const pl = L.polyline(s.g, {renderer, color:colour(s[L8[layer].f]), weight:width(), opacity:0.95, lineCap:"butt"});
+  pl.on("mouseover", ()=>showSeg(idx)); pl.on("click", e=>{showSeg(idx); popupSeg(idx, e.latlng)});
+  return pl.addTo(map) });
+const casing = null;
+function restyle(){ const w=width(); lines.forEach((pl,i)=>pl.setStyle({color:colour(D.segs[i][L8[layer].f]), weight:w})) }
+map.on("zoomend", restyle);
+// ---------- hubs and hotspots
+D.hubs.forEach(h=>{
+  L.circleMarker([h.lat,h.lon], {radius:6, color:"#fff", weight:2, fillColor:"#1d2321", fillOpacity:1}).addTo(map)
+   .bindTooltip(h.name, {permanent:true, direction:"right", className:"hublabel", offset:[6,0]})
+   .on("click", ()=>showHub(h));
+});
+const hotLayer = L.layerGroup(D.hot.map(h=>L.circleMarker([h.lat,h.lon], {radius:4.5, color:"#1d2321", weight:1.5, fillColor:"#fff", fillOpacity:1})
+   .bindPopup(hotHtml(h)).on("click", ()=>{ setHash({pop:"h"+h.id}) }))).addTo(map);
+document.getElementById("showhot").onchange = e => e.target.checked ? hotLayer.addTo(map) : map.removeLayer(hotLayer);
+function hotHtml(h){ return `<b>${h.place}</b> (${h.country})<br>${h.road}, km ${h.km} · ${h.type}<br><b>truck +${h.truck} min</b>, car +${h.car} min over 2 km<br><span style="color:#5d6764">${h.causes.replace(/; /g,"<br>")}</span>` }
+// ---------- panels
+function segHtml(i){
+  const s=D.segs[i], c=D.corr[s.c];
+  return `<b>${s.pl||"unnamed place"}</b><br>${c.road} · ${c.country}<br>km ${s.km}–${(s.km+2).toFixed(0)} · ${TYPES[s.t]}
+  <table><tr><td>truck minutes lost per km</td><td>${s.d.toFixed(2)}</td></tr>
+  <tr><td>buildings within 100 m per km</td><td>${s.b}</td></tr>
+  <tr><td>people within 300 m per km</td><td>${s.p.toLocaleString()}</td></tr>
+  <tr><td>safety exposure per km</td><td>${s.e.toFixed(2)}</td></tr>
+  <tr><td>extra diesel, L per km</td><td>${s.f.toFixed(2)}</td></tr>
+  <tr><td>built-up ha added per km, 2000–20</td><td>${s.gr.toFixed(1)}</td></tr>
+  <tr><td>heavy-rain days a year</td><td>${s.w.toFixed(0)}</td></tr>
+  <tr><td>controls mapped (OSM)</td><td>${s.k}</td></tr></table>
+  <div style="color:#5d6764;margin-top:6px">Whole road: ${c.tm} truck min lost per 100 km · ${Math.round(c.set*100)}% settlement or town</div>` }
+function showSeg(i){ document.getElementById("info").innerHTML = segHtml(i) }
+function popupSeg(i, ll){ L.popup().setLatLng(ll).setContent(segHtml(i)).openOn(map); setHash({pop:"s"+i}) }
+function showHub(h){
+  map.flyTo([h.lat,h.lon], 10, {duration:1.2});
+  document.getElementById("info").innerHTML = `<b>${h.name}</b> (${h.country}) · ${h.region} Africa · ${h.n} roads
+  <table><tr><td>truck min lost per 100 km</td><td>${h.tm}</td></tr><tr><td>settlement or town</td><td>${Math.round(h.set*100)}%</td></tr>
+  <tr><td>buildings within 100 m per km</td><td>${h.bld}</td></tr><tr><td>people within 300 m per km</td><td>${h.ppl.toLocaleString()}</td></tr>
+  <tr><td>safety exposure per km</td><td>${h.exp}</td></tr><tr><td>roadside growth 2000–2020</td><td>+${h.gr}%</td></tr></table>
+  <div style="color:#5d6764;margin-top:6px">First 200 km of each road.</div>` }
+function legend(){
+  const s=L8[layer]; let h="";
+  if(s.cat){ s.labels.forEach((l,i)=>h+=`<div class="row"><span class="sw" style="background:${s.cols[i]}"></span>${l}</div>`) }
+  else { const b=s.bins; s.cols.forEach((c,i)=>{ const lab = i===0?`< ${b[0]}`: i===b.length?`> ${b[b.length-1]}`:`${b[i-1]}–${b[i]}`;
+    h+=`<div class="row"><span class="sw" style="background:${c};outline:1px solid #ddd"></span>${lab}</div>` }) }
+  document.getElementById("legend").innerHTML = h + `<div class="note">${s.unit}</div>` }
+function buttons(){
+  const el=document.getElementById("layers"); el.innerHTML="";
+  Object.entries(L8).forEach(([k,s])=>{ const b=document.createElement("button"); b.textContent=s.name; if(k===layer) b.className="on";
+    b.onclick=()=>{ layer=k; buttons(); legend(); restyle(); setHash({}) }; el.appendChild(b) });
+  const be=document.getElementById("base"); be.innerHTML="";
+  Object.entries(BASES).forEach(([k,s])=>{ const b=document.createElement("button"); b.textContent=s.name; if(k===base) b.className="on";
+    b.onclick=()=>{ base=k; map.removeLayer(tiles); tiles=L.tileLayer(s.url,{attribution:s.att,maxZoom:s.max}).addTo(map); tiles.bringToBack(); buttons(); setHash({}) };
+    be.appendChild(b) }) }
+const hubEl=document.getElementById("hubs");
+[...D.hubs].sort((a,b)=>(a.region>b.region)-(a.region<b.region)||a.name.localeCompare(b.name)).forEach(h=>{
+  const b=document.createElement("button"); b.className=h.region==="East"?"e":"s"; b.textContent=h.name; b.onclick=()=>{ showHub(h); setHash({hub:h.name}) }; hubEl.appendChild(b) });
+let extra = {};
+function setHash(o){ extra = Object.assign({}, o); const c=map.getCenter();
+  const parts={layer, base, z:map.getZoom(), lat:c.lat.toFixed(4), lon:c.lng.toFixed(4), ...extra};
+  history.replaceState(null, "", "#"+Object.entries(parts).map(([k,v])=>k+"="+encodeURIComponent(v)).join("&")) }
+map.on("moveend", ()=>setHash(extra));
+buttons(); legend();
+// open what the hash asks for
+if(H0.pop && H0.pop[0]==="h"){ const h=D.hot[+H0.pop.slice(1)]; if(h) L.popup().setLatLng([h.lat,h.lon]).setContent(hotHtml(h)).openOn(map) }
+if(H0.pop && H0.pop[0]==="s"){ const i=+H0.pop.slice(1), s=D.segs[i]; if(s){ showSeg(i); const g=s.g[0][Math.floor(s.g[0].length/2)]; L.popup().setLatLng(g).setContent(segHtml(i)).openOn(map) } }
+if(H0.hub){ const h=D.hubs.find(x=>x.name===H0.hub); if(h){ showHub(h) } }
+if(H0.panel==="0") document.getElementById("side").style.display="none";
+</script>
+</body>
+</html>
