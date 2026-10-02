@@ -58,6 +58,6 @@ Made by `scripts/figures.py` (after `run.py ... 26` and `scripts/compare.py`); e
 | `figures/by_hub/<hub>_1`–`_4` | Every road in its own panel (`figures_by_hub.py`): km-by-km profile, causes, safety and fuel along the road, rain by month and fixes |
 | `figures/closeups/c_<iso>.png`, `closeups/<iso>/` | 4 km close-ups of the worst stretches per country, as paper 1's m03 (`closeups.py`): buildings at footprint size, joining roads, water, controls; at most two weighbridges per country |
 
-The shared scripts' all-roads figures (`f02`–`f16`, `g01`–`g03`) are kept but are unreadable with 54 roads; use the country and hub sheets instead.
+The shared scripts' all-roads figures (`f02`–`f16`, `g01`–`g03`) are deleted by `run_all.sh`: with 54 roads they cannot be read. The country, hub and close-up sheets replace them.
 
 Caveats that the figures carry: signals, crossings, humps, police posts and weighbridges come from OSM, mapped far more densely in South Africa (and schools in Uganda); speed humps and stop times are assumptions; trucks per day are one assumed figure for every artery; population is GHS-POP 2025.
