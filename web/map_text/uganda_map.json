@@ -1,0 +1,17 @@
+{
+ "LW": "1.7",
+ "HOTZ": "8",
+ "TITLE": "Uganda Corridors, Street Level",
+ "H1": "Uganda's trade corridors",
+ "OGTITLE": "Uganda's five trade corridors, every 2 km, down to street level",
+ "OGDESC": "Time lost, safety, diesel and roadside growth on Uganda's five trade corridors out of Kampala, every 2 km, with every building at the bottlenecks. Open data.",
+ "SUB": "The five trade corridors out of Kampala, every 2 km. Tap a road or a ● for details. Press ▶ Fly-through to visit the worst bottlenecks at street level.",
+ "ALLROADS": "All five corridors",
+ "HUBHEAD": "Fly to a town",
+ "HOTHEAD": "Ten worst stretches, by corridor",
+ "HOMETITLE": "Whole country",
+ "TYPENOTE": "clustered on the five corridors (paper 1)",
+ "HUBNOTE": "",
+ "DETDIR": "detail_ug",
+ "FOOT": "Open data: OpenStreetMap, Google Open Buildings, GHSL, WorldPop 2025, CHIRPS; travel-time and fuel models as in the paper. Light traffic, dry day; speed humps assumed in towns. Code, data and paper: <a href=\"https://github.com/gavacharles/uganda-trade-corridors\">github.com/gavacharles/uganda-trade-corridors</a> · <a href=\"./\">The Uganda explorer</a> · <a href=\"regional.html\">The regional map (54 roads, 12 hubs)</a>"
+}

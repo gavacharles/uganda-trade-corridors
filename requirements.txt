@@ -49,3 +49,4 @@ xarray==2024.7.0
 zipp==3.23.1
 python-pptx==1.0.2
 earthengine-api==1.6.15
+websocket-client  # drives headless Chrome to record the map fly-throughs

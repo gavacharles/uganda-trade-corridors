@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{OGDESC}}">
+<meta property="og:title" content="{{OGTITLE}}">
+<meta property="og:description" content="{{OGDESC}}">
+<link rel="preconnect" href="https://server.arcgisonline.com" crossorigin>
+<link rel="dns-prefetch" href="https://server.arcgisonline.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+:root{--ink:#1d2321;--ink2:#5d6764;--surf:#fcfcfb;--line:#e6e4de;--chip:#f3f1ec;--east:#c4532d;--south:#3d7f8f;--panel:#fff;--shadow:0 2px 10px rgba(0,0,0,.18)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--surf);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+#app{position:fixed;inset:0;display:flex}
+#map{flex:1;min-width:0;background:#c9dbe6}
+/* ---------- side panel (desktop) / bottom sheet (phone) */
+#side{width:360px;flex:none;overflow-y:auto;background:var(--panel);border-right:1px solid var(--line);padding:16px 16px 28px;z-index:1001}
+#grab{display:none}
+h1{font-size:20px;margin:0 0 2px}
+.sub{color:var(--ink2);font-size:13px;margin:0 0 10px}
+h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);margin:16px 0 6px}
+select{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+#info{padding:10px 12px;background:var(--chip);border-radius:10px;font-size:13px;min-height:64px}
+#info b{font-size:14.5px}
+#info table{border-collapse:collapse;width:100%;margin-top:6px}
+#info td{padding:2px 0;border-top:1px solid #e9e6df}#info td+td{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+#info .muted{color:var(--ink2);margin-top:6px}
+.hubs{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.hubs button,.hot button{border:0;background:none;text-align:left;padding:5px 6px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px;color:var(--ink);width:100%}
+.hubs button:hover,.hot button:hover{background:var(--chip)}
+.hubs .e{border-left:3px solid var(--east)}.hubs .s{border-left:3px solid var(--south)}
+.hot details{border-top:1px solid var(--line)}
+.hot summary{cursor:pointer;padding:6px 2px;font-weight:600;font-size:13px}
+.hot button span{color:var(--ink2);float:right;font-variant-numeric:tabular-nums}
+.foot{color:var(--ink2);font-size:11.5px;margin-top:16px}
+.foot a{color:var(--ink2)}
+/* ---------- floating controls on the map */
+.fbar{position:absolute;z-index:1000;display:flex;gap:6px;align-items:center}
+#topbar{top:10px;left:376px;right:10px;flex-wrap:wrap}
+#tools{position:absolute;z-index:1000;right:10px;top:62px;display:flex;flex-direction:column;gap:6px}
+.seg{display:flex;background:#fff;border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+.seg button{border:0;background:#fff;font:inherit;font-size:13px;padding:8px 11px;cursor:pointer;color:var(--ink);white-space:nowrap}
+.seg button.on{background:var(--ink);color:#fff}
+#layerSel{width:auto;max-width:190px;box-shadow:var(--shadow);border:0;font-weight:600}
+.iconbtn{width:38px;height:38px;border-radius:10px;border:0;background:#fff;box-shadow:var(--shadow);cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center}
+#legendBox{position:absolute;left:372px;bottom:24px;z-index:1000;background:rgba(255,255,255,.95);border-radius:10px;box-shadow:var(--shadow);padding:8px 10px;font-size:12px;max-width:260px}
+#legendBox .ttl{font-weight:600;margin-bottom:4px}
+#legendBox.min .ttl:after{content:" ▸ legend";color:var(--ink2);font-weight:400}
+#legendBox .row{display:flex;align-items:center;gap:7px;margin:1px 0}
+#legendBox .sw{width:22px;height:8px;border-radius:2px;flex:none;outline:1px solid rgba(0,0,0,.08)}
+#legendBox .note{color:var(--ink2);margin-top:3px;font-size:11px}
+#tourBtn{position:absolute;z-index:1000;left:50%;transform:translateX(-50%);bottom:28px;border:0;border-radius:22px;background:var(--ink);color:#fff;font:inherit;font-weight:600;font-size:14px;padding:10px 18px;box-shadow:var(--shadow);cursor:pointer;margin-left:180px}
+#tourBtn.on{background:#c4532d}
+#tourCard{position:absolute;z-index:1000;right:12px;bottom:28px;max-width:300px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:12px 14px;font-size:13px;display:none;border-left:5px solid var(--east)}
+#tourCard b{font-size:15px}#tourCard .big{font-size:22px;font-weight:700;margin:4px 0}#tourCard .k{color:var(--ink2);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+body.video #side,body.video #topbar,body.video #tools,body.video #tourBtn,body.video .leaflet-control-zoom{display:none!important}
+#vtitle{display:none;position:absolute;z-index:1000;left:0;right:0;top:0;padding:14px 22px 22px;background:linear-gradient(rgba(16,22,20,.82),rgba(16,22,20,0));color:#fff;pointer-events:none}
+body.video #vtitle{display:block}
+#vtitle .t{font-size:30px;font-weight:800;letter-spacing:-.01em}#vtitle .s{font-size:16px;opacity:.9;margin-top:2px}
+body.video #tourCard{right:22px;bottom:34px;max-width:390px;font-size:15px;padding:14px 18px}
+body.video #tourCard b{font-size:19px}body.video #tourCard .big{font-size:27px}body.video #tourCard .k{font-size:13px}
+body.video #legendBox{left:16px;bottom:30px}
+#toast{position:absolute;left:50%;top:60px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:6px 12px;border-radius:8px;font-size:13px;z-index:1100;display:none}
+.leaflet-popup-content{font:13px/1.45 system-ui,sans-serif;color:var(--ink);margin:10px 12px;max-width:260px}
+.leaflet-popup-content b{font-size:14px}
+.leaflet-popup-content table{border-collapse:collapse;width:100%;margin-top:4px}
+.leaflet-popup-content td{padding:1px 0}.leaflet-popup-content td+td{text-align:right;font-weight:600}
+.hublabel{background:rgba(255,255,255,.88);border:0;box-shadow:none;font-weight:700;font-size:12px;padding:1px 4px;color:var(--ink)}
+.hublabel:before{display:none}
+.leaflet-control-zoom{border:0!important;box-shadow:var(--shadow)!important}
+/* ---------- phone */
+@media (max-width:760px){
+  #app{flex-direction:column}
+  #side{position:absolute;left:0;right:0;bottom:0;width:auto;max-height:78%;border-right:0;border-radius:16px 16px 0 0;box-shadow:0 -3px 14px rgba(0,0,0,.2);padding:4px 16px calc(18px + env(safe-area-inset-bottom));transform:translateY(calc(100% - 132px));transition:transform .25s ease}
+  #side.open{transform:none}
+  #grab{display:block;width:44px;height:5px;border-radius:3px;background:#cfcac0;margin:6px auto 8px;cursor:pointer}
+  h1{font-size:17px}.sub{display:none}
+  #topbar{left:8px;right:8px;top:calc(8px + env(safe-area-inset-top));flex-wrap:nowrap}
+  #layerSel{flex:1 1 auto;min-width:0;width:0;max-width:none;font-size:13px;padding:8px 6px}
+  .seg{flex:none}
+  .seg button{padding:8px 8px;font-size:12px}
+  #tools{top:calc(58px + env(safe-area-inset-top));right:8px}
+  #legendBox{bottom:144px;left:8px;font-size:11px;padding:6px 8px;max-width:180px}
+  body.sheet #legendBox{display:none}
+  #legendBox.min .row,#legendBox.min .note{display:none}
+  .leaflet-control-zoom{display:none}
+  .leaflet-control-attribution{font-size:9px}
+  #tourBtn{margin-left:0;bottom:142px;padding:8px 14px;font-size:13px}
+  #tourCard{left:8px;right:8px;top:calc(56px + env(safe-area-inset-top));bottom:auto;max-width:none;font-size:12px;padding:8px 10px}
+  #tourCard .big{font-size:18px}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <div id="grab" title="Show or hide the panel"></div>
+    <h1>{{H1}}</h1>
+    <p class="sub">{{SUB}}</p>
+    <div id="info">Tap or hover over a road to see its 2 km stretch.</div>
+    <h2>Pick a road</h2>
+    <select id="roadSel"><option value="">{{ALLROADS}}</option></select>
+    <h2>{{HUBHEAD}}</h2>
+    <div class="hubs" id="hubs"></div>
+    <h2>{{HOTHEAD}}</h2>
+    <div class="hot" id="hotList"></div>
+    <label style="display:flex;gap:6px;align-items:center;font-size:13px;margin-top:10px"><input type="checkbox" id="showdet" checked> street detail near the bottlenecks (zoom in): buildings at footprint size, side roads, streams, controls</label>
+    <label style="display:flex;gap:6px;align-items:center;font-size:13px;margin-top:6px"><input type="checkbox" id="showhot" checked> show them on the map (●, from country zoom)</label>
+    <p class="foot">{{FOOT}}</p>
+  </aside>
+  <div id="map"></div>
+</div>
+<div id="topbar" class="fbar">
+  <select id="layerSel" aria-label="Map layer"></select>
+  <div class="seg" id="baseSeg"></div>
+</div>
+<div id="tools">
+  <button class="iconbtn" id="locBtn" title="Show my location" aria-label="Show my location">◎</button>
+  <button class="iconbtn" id="shareBtn" title="Copy a link to this view" aria-label="Share this view">⤴</button>
+  <button class="iconbtn" id="homeBtn" title="{{HOMETITLE}}" aria-label="{{HOMETITLE}}">⌂</button>
+</div>
+<button id="tourBtn" title="Fly from bottleneck to bottleneck">▶ Fly-through</button>
+<div id="tourCard"></div>
+<div id="vtitle"><div class="t"></div><div class="s"></div></div>
+<div id="legendBox"></div>
+<div id="toast"></div>
+<script>
+const D = /*DATA*/{}/*END*/;
+const TYPES = ["open road", "roadside settlement", "town"];
+const L8 = {
+  delay:   {name:"Time lost", f:"d", bins:[0.25,0.5,1,2,4], cols:["#e3ded3","#fde6da","#f6b596","#eb6834","#b8491c","#7c2e0f"], unit:"truck minutes lost per km vs open road"},
+  type:    {name:"Road type", f:"t", cat:true, cols:["#a9c8ec","#3574c4","#0d2d57"], labels:TYPES, unit:"{{TYPENOTE}}"},
+  growth:  {name:"Roadside growth", f:"gr", bins:[0.25,0.5,1,2,4], cols:["#f1eee6","#e6d5b8","#d2ad74","#b57d3b","#8a5420","#5a3210"], unit:"built-up ha added within 300 m per km, 2000–2020"},
+  people:  {name:"People", f:"p", bins:[250,500,1000,2000,4000], cols:["#f6efe2","#f1d9a8","#e6b765","#d18f2e","#a8641b","#6f3d0f"], unit:"people living within 300 m per km"},
+  exposure:{name:"Road safety", f:"e", bins:[0.1,0.25,0.5,1,2], cols:["#f3eee8","#f3cdbd","#e89b7f","#d0613f","#a6321b","#6b1408"], unit:"exposure per km: people × trucks × (speed/50)⁴"},
+  fuel:    {name:"Extra diesel", f:"f", bins:[0,0.05,0.1,0.2,0.4], cols:["#dfe8ee","#f2efe6","#d9e1c2","#a9c27d","#6c9a45","#355f1f"], unit:"extra litres per km per loaded truck (first class: saving on climbs)"},
+  rain:    {name:"Heavy rain", f:"w", bins:[10,20,30,40,55], cols:["#eef3f7","#cfe0ec","#9fc2db","#6a9dc4","#3c74a6","#1b4a78"], unit:"days a year with ≥ 10 mm rain (2006–2025)"},
+  controls:{name:"Mapped controls", f:"k", bins:[0.5,1.5,2.5,4.5,8.5], cols:["#f2efe6","#d6dfe2","#a9bfc7","#6f97a6","#3f6e80","#173f4f"], unit:"controls in OSM per 2 km: signals, crossings, humps, police, weighbridges"}
+};
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const BASES = {
+  map:{name:"Map", layers:[[ESRI+"Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", 16],[ESRI+"Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", 16]], att:"Basemap © Esri, HERE, Garmin, © OpenStreetMap contributors"},
+  sat:{name:"Satellite", layers:[[ESRI+"World_Imagery/MapServer/tile/{z}/{y}/{x}", 17]], att:"Imagery © Esri, Maxar, Earthstar Geographics"},
+  hyb:{name:"Labels", layers:[[ESRI+"World_Imagery/MapServer/tile/{z}/{y}/{x}", 17],[ESRI+"Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", 19],[ESRI+"Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}", 19]], att:"Imagery and labels © Esri, Maxar, Earthstar Geographics, HERE, Garmin"}
+};
+const phone = () => window.matchMedia("(max-width:760px)").matches;
+function readHash(){ const h={}; location.hash.slice(1).split("&").forEach(kv=>{const [k,v]=kv.split("="); if(k) h[k]=decodeURIComponent(v||"")}); return h }
+const H0 = readHash();
+let layer = L8[H0.layer] ? H0.layer : "delay";
+let base = BASES[H0.base] ? H0.base : "map";
+let road = H0.road !== undefined && H0.road !== "" ? +H0.road : null;
+const map = L.map("map", {preferCanvas:true, zoomControl:!phone(), maxZoom:19, attributionControl:true})
+  .setView([H0.lat?+H0.lat:-12, H0.lon?+H0.lon:30], H0.z?+H0.z:(phone()?3:4));
+if(!phone()) map.zoomControl.setPosition("bottomright");
+let tiles = [];
+function setBase(k){ tiles.forEach(t=>map.removeLayer(t)); base=k;
+  tiles = BASES[k].layers.map(([u,mz],i)=>L.tileLayer(u,{maxZoom:19, maxNativeZoom:mz, attribution:i?"":BASES[k].att, pane:i?"overlayPane":"tilePane", zIndex:i?650:1,
+    keepBuffer:4, updateWhenZooming:false, crossOrigin:true, errorTileUrl:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}));
+  tiles.forEach((t,i)=>{ t.addTo(map); if(i) t.getContainer().style.pointerEvents="none" });
+  document.querySelectorAll("#baseSeg button").forEach(b=>b.classList.toggle("on", b.dataset.k===k)); share(false);
+  try{ under.redraw(); over.redraw() }catch(e){} }
+// labels pane above the roads
+map.createPane("labels"); map.getPane("labels").style.zIndex=650; map.getPane("labels").style.pointerEvents="none";
+const renderer = L.canvas({padding:0.4, tolerance: phone()?8:3});
+function colour(v){ const s=L8[layer]; if(s.cat) return s.cols[v]; let i=0; while(i<s.bins.length && v>=s.bins[i]) i++; return s.cols[i] }
+function width(){ const z=map.getZoom(), k={{LW}}; if(phone() && z<6) return 3.2*k; return (z<5?2.4:z<7?3.2:z<9?4.2:z<12?5.5:z<15?7:9)*(z<12?k:1) }
+const lines = D.segs.map((s,idx)=>{
+  const pl = L.polyline(s.g, {renderer, color:colour(s[L8[layer].f]), weight:width(), opacity:0.95, lineCap:"butt"});
+  pl.on("mouseover", ()=>{ if(!phone()) showSeg(idx) });
+  pl.on("click", e=>{ showSeg(idx); popupSeg(idx, e.latlng) });
+  return pl.addTo(map) });
+function restyle(){ const w=width(); lines.forEach((pl,i)=>{ const s=D.segs[i], dim = road!==null && s.c!==road;
+  pl.setStyle({color:colour(s[L8[layer].f]), weight: dim? Math.max(1.5,w*0.45): (road!==null? w*1.3: w), opacity: dim?0.35:0.95}) }) }
+map.on("zoomend", restyle);
+// ---------- hubs and hotspots
+D.hubs.forEach(h=>{
+  L.circleMarker([h.lat,h.lon], {radius:6, color:"#fff", weight:2, fillColor:"#1d2321", fillOpacity:1, pane:"markerPane"}).addTo(map)
+   .bindTooltip(h.name, {permanent:true, direction:"right", className:"hublabel", offset:[6,0]})
+   .on("click", ()=>showHub(h));
+});
+function hotHtml(h){ return `<b>${h.place}</b> · ${h.country}<br>${h.road}, km ${h.km} · ${h.type}<br><b>truck +${h.truck} min</b>, car +${h.car} min over 2 km<div style="color:#5d6764;margin-top:4px">${h.causes.replace(/; /g,"<br>")}</div>` }
+const hotMarkers = D.hot.map(h=>L.circleMarker([h.lat,h.lon], {radius:phone()?6:5, color:"#1d2321", weight:1.8, fillColor:"#fff", fillOpacity:1, pane:"markerPane"})
+   .bindPopup(hotHtml(h)).on("click", ()=>share(false,{pop:"h"+h.id})));
+const hotLayer = L.layerGroup(hotMarkers).addTo(map);
+function hotVis(){ const want=document.getElementById("showhot").checked && map.getZoom()>={{HOTZ}};
+  if(want && !map.hasLayer(hotLayer)) hotLayer.addTo(map); if(!want && map.hasLayer(hotLayer)) map.removeLayer(hotLayer) }
+document.getElementById("showhot").onchange = hotVis; map.on("zoomend", hotVis);
+function flyHot(h){ if(base==="map") setBase("hyb"); map.flyTo([h.lat,h.lon], 15, {duration:1.4});
+  map.once("moveend", ()=>hotMarkers[h.id].openPopup()); closeSheet() }
+
+// ---------- street detail: footprints, side roads, streams, wetlands, controls, places (near the stops)
+const DET = {}, DETWANT = {};
+const HWW = [2.4, 2.4, 2.1, 1.7, 1.35, 0.9, 0.8, 0.55, 0.5];
+function dec(b, T){ const bin=atob(b), u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i); return new T(u.buffer) }
+function loadDetail(){
+  if(!document.getElementById("showdet").checked || map.getZoom()<11) return Promise.resolve();
+  const b=map.getBounds(), ps=[];
+  D.win.forEach((w,i)=>{ if(w[2]<b.getWest()||w[0]>b.getEast()||w[3]<b.getSouth()||w[1]>b.getNorth()) return;
+    if(!DETWANT[i]) DETWANT[i]=fetch("{{DETDIR}}/w"+i+".json").then(r=>r.json()).then(d=>{
+      d.X=dec(d.bx,Uint16Array); d.Y=dec(d.by,Uint16Array); d.S=dec(d.bs,Uint8Array); d.w0=w; DET[i]=d; under.redraw(); over.redraw(); legend() }).catch(()=>{ DETWANT[i]=null });
+    ps.push(DETWANT[i]) });
+  return Promise.all(ps) }
+const CanvasLayer = L.Layer.extend({
+  initialize(pane, paint){ this._paneName=pane; this._paint=paint },
+  onAdd(m){ this._map=m; this._c=L.DomUtil.create("canvas","",m.getPane(this._paneName)); this._c.style.pointerEvents="none";
+    m.on("move zoom resize viewreset", this._soon, this); this.redraw() },
+  onRemove(m){ L.DomUtil.remove(this._c); m.off("move zoom resize viewreset", this._soon, this) },
+  _soon(){ if(this._q) return; this._q=requestAnimationFrame(()=>{ this._q=0; this.redraw() }) },
+  redraw(){ const m=this._map; if(!m) return; const s=m.getSize(), r=window.devicePixelRatio||1, c=this._c;
+    c.width=s.x*r; c.height=s.y*r; c.style.width=s.x+"px"; c.style.height=s.y+"px"; L.DomUtil.setPosition(c, m.containerPointToLayerPoint([0,0]));
+    const ctx=c.getContext("2d"); ctx.setTransform(r,0,0,r,0,0); ctx.clearRect(0,0,s.x,s.y);
+    if(document.getElementById("showdet").checked && m.getZoom()>=11) this._paint(ctx, m, s) } });
+function proj(m, w){ // linear lon/lat -> pixel within a 6 km window (Mercator is near-linear there)
+  const a=m.latLngToContainerPoint([w[1],w[0]]), b=m.latLngToContainerPoint([w[3],w[2]]);
+  const kx=(b.x-a.x)/(w[2]-w[0]), ky=(b.y-a.y)/(w[3]-w[1]); return [(x,y)=>[a.x+(x-w[0])*kx, a.y+(y-w[1])*ky], kx] }
+function visible(m, w){ const b=m.getBounds(); return !(w[2]<b.getWest()||w[0]>b.getEast()||w[3]<b.getSouth()||w[1]>b.getNorth()) }
+map.createPane("detUnder"); map.getPane("detUnder").style.zIndex=390;
+map.createPane("detOver"); map.getPane("detOver").style.zIndex=640;
+const under = new CanvasLayer("detUnder", (ctx, m)=>{
+  const z=m.getZoom(), sat=base!=="map", fade=Math.min(1,(z-11)/1.2);
+  Object.values(DET).forEach(d=>{ const w=d.w0; if(!visible(m,w)) return; const [P,kx]=proj(m,w);
+    const pxm = kx/(111320*Math.cos((w[1]+w[3])/2*Math.PI/180)); // pixels per metre
+    ctx.globalAlpha=fade;
+    d.a.forEach(([k,c])=>{ ctx.beginPath(); for(let i=0;i<c.length;i+=2){ const [x,y]=P(c[i],c[i+1]); i?ctx.lineTo(x,y):ctx.moveTo(x,y) }
+      ctx.fillStyle = k==="wetland" ? (sat?"rgba(120,180,235,.16)":"#dcebf5") : (sat?"rgba(246,227,200,.22)":"#f6e3c8"); ctx.fill();
+      if(sat){ ctx.strokeStyle=k==="wetland"?"rgba(150,200,245,.7)":"rgba(246,227,200,.7)"; ctx.lineWidth=1; ctx.setLineDash([4,3]); ctx.stroke(); ctx.setLineDash([]) } });
+    ctx.strokeStyle=sat?"#8fc3f0":"#7fa9cf"; ctx.lineWidth=Math.max(1,Math.min(3,(z-11)*0.7));
+    d.w.forEach(c=>{ ctx.beginPath(); for(let i=0;i<c.length;i+=2){ const [x,y]=P(c[i],c[i+1]); i?ctx.lineTo(x,y):ctx.moveTo(x,y) } ctx.stroke() });
+    const rk=Math.max(0.35,Math.min(2.4,(z-11)*0.55));
+    ctx.strokeStyle=sat?"rgba(255,255,255,.75)":"#6f6c66"; ctx.lineCap="round";
+    d.r.forEach(([h,c])=>{ ctx.lineWidth=HWW[h]*rk; ctx.beginPath(); for(let i=0;i<c.length;i+=2){ const [x,y]=P(c[i],c[i+1]); i?ctx.lineTo(x,y):ctx.moveTo(x,y) } ctx.stroke() });
+    const n = z>=12.3 ? d.S.length : 0; ctx.globalAlpha=fade*Math.min(1,Math.max(0,(z-12.3)/0.8)); ctx.fillStyle=sat?"rgba(255,236,170,.0)":"#9d988c";
+    if(sat){ ctx.strokeStyle="rgba(255,222,120,.9)"; ctx.lineWidth=1 }
+    for(let i=0;i<n;i++){ const x=d.o[0]+d.X[i]*1e-5, y=d.o[1]+d.Y[i]*1e-5, [px,py]=P(x,y), sz=Math.max(1.2,d.S[i]*pxm);
+      if(sat) ctx.strokeRect(px-sz/2,py-sz/2,sz,sz); else ctx.fillRect(px-sz/2,py-sz/2,sz,sz) }
+    ctx.globalAlpha=1 }) });
+function sym(ctx, k, x, y, r){
+  ctx.beginPath();
+  if(k==="c"){ ctx.arc(x,y,r,0,7) } else if(k==="w"){ ctx.rect(x-r,y-r,2*r,2*r) }
+  else if(k==="p"){ ctx.moveTo(x,y-r*1.3);ctx.lineTo(x+r*1.3,y);ctx.lineTo(x,y+r*1.3);ctx.lineTo(x-r*1.3,y);ctx.closePath() }
+  else if(k==="m"){ ctx.moveTo(x,y-r*1.2);ctx.lineTo(x+r*1.1,y+r*0.8);ctx.lineTo(x-r*1.1,y+r*0.8);ctx.closePath() }
+  else if(k==="f"){ ctx.moveTo(x,y+r*1.2);ctx.lineTo(x+r*1.1,y-r*0.8);ctx.lineTo(x-r*1.1,y-r*0.8);ctx.closePath() }
+  else if(k==="s"){ const t=r*0.45; ctx.rect(x-t,y-r,2*t,2*r); ctx.rect(x-r,y-t,2*r,2*t) }
+  else if(k==="h"){ ctx.moveTo(x-r,y-r);ctx.lineTo(x+r,y+r);ctx.moveTo(x+r,y-r);ctx.lineTo(x-r,y+r) }
+  else if(k==="l"){ for(let j=0;j<10;j++){ const a=j*Math.PI/5-Math.PI/2, q=j%2?r*0.5:r*1.25; j?ctx.lineTo(x+q*Math.cos(a),y+q*Math.sin(a)):ctx.moveTo(x+q*Math.cos(a),y+q*Math.sin(a)) } ctx.closePath() }
+  else if(k==="k"){ ctx.arc(x,y,r*0.8,0,7) }
+  ctx.fillStyle = k==="k" ? "#d9a441" : "#fff"; if(k!=="h") ctx.fill(); ctx.lineWidth=k==="h"?2.4:1.3; ctx.strokeStyle="#1d2321"; ctx.stroke() }
+const over = new CanvasLayer("detOver", (ctx, m)=>{
+  const z=m.getZoom(); if(z<13) return; const r=z<14?3.5:z<15.5?4.5:5.5;
+  Object.values(DET).forEach(d=>{ const w=d.w0; if(!visible(m,w)) return; const [P]=proj(m,w);
+    d.k.forEach(([k,x,y])=>{ const [px,py]=P(x,y); sym(ctx,k,px,py,r) });
+    ctx.font="italic 600 11.5px system-ui,sans-serif"; ctx.textBaseline="middle";
+    d.n.filter(q=>q[3]<=(z<14?3:6)).forEach(([nm,x,y])=>{ const [px,py]=P(x,y); ctx.lineWidth=3; ctx.strokeStyle="rgba(255,255,255,.9)";
+      ctx.strokeText(nm,px+5,py); ctx.fillStyle="#1d2321"; ctx.fillText(nm,px+5,py) }) }) });
+under.addTo(map); over.addTo(map);
+map.on("moveend", loadDetail);
+document.getElementById("showdet").onchange=()=>{ loadDetail(); under.redraw(); over.redraw(); legend() };
+// ---------- fly-through: bottleneck to bottleneck, down to street level
+let touring=false, tourTimer=null, tourI=0;
+const tc=document.getElementById("tourCard"), tb=document.getElementById("tourBtn");
+function tourStop(){ touring=false; clearTimeout(tourTimer); tb.classList.remove("on"); tb.textContent="▶ Fly-through"; tc.style.display="none" }
+function tourShow(i){ const t=D.tour[i];
+  tc.style.borderLeftColor = t.region==="East" ? "#c4532d" : "#3d7f8f";
+  tc.innerHTML=`<div class="k">${i+1} / ${D.tour.length} · ${t.country}</div><b>${t.place}</b><br>${t.road}, km ${t.km} · ${t.type}
+   <div class="big">+${t.truck} truck min over 2 km</div><div style="color:#5d6764">${t.causes.replace(/; /g,"<br>")}</div>`;
+  tc.style.display="block" }
+function tourGo(){ if(!touring) return; const t=D.tour[tourI]; tc.style.display="none";
+  map.flyTo([t.lat,t.lon], phone()?15:15.5, {duration: 5});
+  map.once("moveend", ()=>{ if(!touring) return; loadDetail(); tourShow(tourI);
+    tourTimer=setTimeout(()=>{ tourI=(tourI+1)%D.tour.length; tourGo() }, 5500) }) }
+tb.onclick=()=>{ if(touring){ tourStop(); return } touring=true; tb.classList.add("on"); tb.textContent="■ Stop"; closeSheet();
+  if(map.getZoom()>13) tourI=(tourI+1)%D.tour.length; tourGo() };
+map.getContainer().addEventListener("pointerdown", ()=>{ if(touring) tourStop() });
+// ---------- panels
+function segHtml(i){
+  const s=D.segs[i], c=D.corr[s.c];
+  return `<b>${s.pl||"unnamed place"}</b><br>${c.road} · ${c.country}<br>km ${s.km}–${(s.km+2).toFixed(0)} · ${TYPES[s.t]}
+  <table><tr><td>truck min lost per km</td><td>${s.d.toFixed(2)}</td></tr>
+  <tr><td>buildings within 100 m /km</td><td>${s.b}</td></tr>
+  <tr><td>people within 300 m /km</td><td>${s.p.toLocaleString()}</td></tr>
+  <tr><td>safety exposure /km</td><td>${s.e.toFixed(2)}</td></tr>
+  <tr><td>extra diesel, L /km</td><td>${s.f.toFixed(2)}</td></tr>
+  <tr><td>built-up ha added /km, 2000–20</td><td>${s.gr.toFixed(1)}</td></tr>
+  <tr><td>heavy-rain days a year</td><td>${s.w.toFixed(0)}</td></tr>
+  <tr><td>controls mapped (OSM)</td><td>${s.k}</td></tr></table>
+  <div class="muted" style="color:#5d6764;margin-top:6px">Whole road: ${c.tm} truck min lost per 100 km · ${Math.round(c.set*100)}% settlement or town</div>` }
+function showSeg(i){ document.getElementById("info").innerHTML = segHtml(i) }
+function popupSeg(i, ll){ L.popup({maxWidth:270}).setLatLng(ll).setContent(segHtml(i)).openOn(map); share(false,{pop:"s"+i}) }
+function showHub(h){
+  map.flyTo([h.lat,h.lon], phone()?(h.z||9):(h.z||10), {duration:1.2}); closeSheet();
+  if(h.tm===undefined){ document.getElementById("info").innerHTML=`<b>${h.name}</b>`; return }
+  document.getElementById("info").innerHTML = `<b>${h.name}</b> · ${h.country} · ${h.region} Africa · ${h.n} roads
+  <table><tr><td>truck min lost per 100 km</td><td>${h.tm}</td></tr><tr><td>settlement or town</td><td>${Math.round(h.set*100)}%</td></tr>
+  <tr><td>buildings within 100 m per km</td><td>${h.bld}</td></tr><tr><td>people within 300 m per km</td><td>${h.ppl.toLocaleString()}</td></tr>
+  <tr><td>safety exposure per km</td><td>${h.exp}</td></tr><tr><td>roadside growth 2000–2020</td><td>+${h.gr}%</td></tr></table>
+  <div class="muted">{{HUBNOTE}}</div>` }
+function showRoad(ci){
+  road = ci; restyle(); share(false);
+  if(ci===null){ document.getElementById("info").innerHTML="Tap or hover over a road to see its 2 km stretch."; return }
+  const c=D.corr[ci]; const b=L.latLngBounds([]); D.segs.forEach(s=>{ if(s.c===ci) s.g.forEach(l=>l.forEach(p=>b.extend(p))) });
+  map.flyToBounds(b, {padding:[30,30], duration:1.2}); closeSheet();
+  document.getElementById("info").innerHTML = `<b>${c.road}</b><br>${c.country} · ${c.region} Africa${c.trade?" · trade corridor":""} · ${c.km} km studied
+  <table><tr><td>truck min lost per 100 km</td><td>${c.tm}</td></tr><tr><td>settlement or town</td><td>${Math.round(c.set*100)}%</td></tr>
+  <tr><td>buildings within 100 m per km</td><td>${c.bld}</td></tr><tr><td>safety exposure per km</td><td>${c.exp}</td></tr></table>` }
+function legend(){
+  const s=L8[layer]; let h=`<div class="ttl">${s.name}</div>`;
+  if(s.cat){ s.labels.forEach((l,i)=>h+=`<div class="row"><span class="sw" style="background:${s.cols[i]}"></span>${l}</div>`) }
+  else { const b=s.bins; s.cols.forEach((c,i)=>{ const lab = i===0?`< ${b[0]}`: i===b.length?`> ${b[b.length-1]}`:`${b[i-1]}–${b[i]}`;
+    h+=`<div class="row"><span class="sw" style="background:${c}"></span>${lab}</div>` }) }
+  if(map.getZoom()>=12 && document.getElementById("showdet").checked && Object.keys(DET).length)
+    h += `<div class="ttl" style="margin-top:6px">Street detail</div><div class="row"><span class="sw" style="background:#9d988c;width:8px;height:8px"></span>building (footprint size)</div>
+    <div class="row"><span class="sw" style="background:#6f6c66;height:3px"></span>side road</div><div class="row"><span class="sw" style="background:#7fa9cf;height:3px"></span>stream</div>
+    <div class="row">○ crossing ✚ signals ◇ police □ weighbridge</div><div class="row">✕ hump △ market ▽ fuel ★ level crossing ● school</div>`;
+  document.getElementById("legendBox").innerHTML = h + `<div class="note">${s.unit}</div>` }
+map.on("zoomend", ()=>legend());
+document.getElementById("legendBox").onclick = e => e.currentTarget.classList.toggle("min");
+if(phone()) document.getElementById("legendBox").classList.add("min");
+// controls
+const ls=document.getElementById("layerSel");
+Object.entries(L8).forEach(([k,s])=>{ const o=document.createElement("option"); o.value=k; o.textContent=s.name; ls.appendChild(o) });
+ls.value=layer; ls.onchange=()=>{ layer=ls.value; legend(); restyle(); share(false) };
+const bs=document.getElementById("baseSeg");
+Object.entries(BASES).forEach(([k,s])=>{ const b=document.createElement("button"); b.textContent=phone()?{map:"Map",sat:"Sat",hyb:"Sat+"}[k]:s.name; b.dataset.k=k; b.onclick=()=>setBase(k); bs.appendChild(b) });
+const rs=document.getElementById("roadSel");
+const byC={}; D.corr.forEach((c,i)=>(byC[c.country]=byC[c.country]||[]).push([i,c]));
+Object.keys(byC).sort().forEach(k=>{ const g=document.createElement("optgroup"); g.label=k;
+  byC[k].sort((a,b)=>a[1].road.localeCompare(b[1].road)).forEach(([i,c])=>{ const o=document.createElement("option"); o.value=i; o.textContent=c.road+(c.trade?" ★":""); g.appendChild(o) });
+  rs.appendChild(g) });
+rs.onchange=()=>showRoad(rs.value===""?null:+rs.value);
+const hubEl=document.getElementById("hubs");
+[...D.hubs].sort((a,b)=>(a.region>b.region)-(a.region<b.region)||a.name.localeCompare(b.name)).forEach(h=>{
+  const b=document.createElement("button"); b.className=h.region==="East"?"e":"s"; b.textContent=h.name; b.onclick=()=>{ showHub(h); share(false,{hub:h.name}) }; hubEl.appendChild(b) });
+const hl=document.getElementById("hotList"); const hc={};
+D.hot.forEach(h=>(hc[h.country]=hc[h.country]||[]).push(h));
+Object.keys(hc).sort().forEach(k=>{ const d=document.createElement("details"); d.innerHTML=`<summary>${k}</summary>`;
+  hc[k].sort((a,b)=>b.truck-a.truck).forEach(h=>{ const b=document.createElement("button"); b.innerHTML=`${h.place}<span>+${h.truck} min</span>`; b.onclick=()=>flyHot(h); d.appendChild(b) });
+  hl.appendChild(d) });
+// bottom sheet
+const side=document.getElementById("side");
+function sheet(open){ side.classList.toggle("open", open); document.body.classList.toggle("sheet", open) }
+document.getElementById("grab").onclick=()=>sheet(!side.classList.contains("open"));
+side.querySelector("h1").onclick=()=>{ if(phone()) sheet(!side.classList.contains("open")) };
+function closeSheet(){ sheet(false) }
+let y0=null; side.addEventListener("touchstart",e=>{ y0=e.touches[0].clientY },{passive:true});
+side.addEventListener("touchend",e=>{ if(y0===null) return; const dy=e.changedTouches[0].clientY-y0;
+  if(dy<-40 && side.scrollTop===0) sheet(true); if(dy>40 && side.scrollTop===0) sheet(false); y0=null },{passive:true});
+map.on("click", ()=>{ if(phone()) closeSheet() });
+// locate, share
+let me=null;
+document.getElementById("locBtn").onclick=()=>map.locate({setView:true, maxZoom:13});
+map.on("locationfound", e=>{ if(me) map.removeLayer(me); me=L.circleMarker(e.latlng,{radius:7,color:"#fff",weight:2,fillColor:"#2a78d6",fillOpacity:1}).addTo(map) });
+map.on("locationerror", ()=>toast("Location not available"));
+function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.style.display="block"; setTimeout(()=>el.style.display="none",1800) }
+let extra = {};
+function share(copy, o){ if(o) extra=o; const c=map.getCenter();
+  const parts={layer, base, z:map.getZoom(), lat:c.lat.toFixed(4), lon:c.lng.toFixed(4)};
+  if(road!==null) parts.road=road; Object.assign(parts, extra);
+  history.replaceState(null, "", "#"+Object.entries(parts).map(([k,v])=>k+"="+encodeURIComponent(v)).join("&"));
+  if(copy){ if(navigator.share && phone()) navigator.share({title:document.title, url:location.href}).catch(()=>{});
+    else navigator.clipboard.writeText(location.href).then(()=>toast("Link copied"),()=>toast(location.href)) } }
+document.getElementById("shareBtn").onclick=()=>share(true);
+map.on("moveend", ()=>share(false));
+setBase(base); legend();
+if(road!==null){ rs.value=road; restyle(); showRoad(road) }
+if(H0.pop && H0.pop[0]==="h"){ const h=D.hot[+H0.pop.slice(1)]; if(h) setTimeout(()=>hotMarkers[h.id].openPopup(),300) }
+if(H0.pop && H0.pop[0]==="s"){ const i=+H0.pop.slice(1), s=D.segs[i]; if(s){ showSeg(i); const g=s.g[0][Math.floor(s.g[0].length/2)]; L.popup({maxWidth:270}).setLatLng(g).setContent(segHtml(i)).openOn(map) } }
+if(H0.hub){ const h=D.hubs.find(x=>x.name===H0.hub); if(h) showHub(h) }
+if(H0.panel==="0"){ side.style.display="none" }
+if(H0.sheet==="1"){ sheet(true) }
+const ALL = L.latLngBounds(D.segs.flatMap(s=>s.g.flat()));
+function home(){ map.fitBounds(ALL, {paddingTopLeft:[10, phone()?60:10], paddingBottomRight:[10, phone()?140:10]}) }
+document.getElementById("homeBtn").onclick=()=>{ home(); if(road!==null){ rs.value=""; showRoad(null) } };
+if(!H0.z && road===null) home();
+loadDetail();
+if(H0.tour==="1") setTimeout(()=>tb.click(), 800);
+// ---------- video mode: the recorder (tools/record_tour.py) sets the camera frame by frame
+if(H0.video==="1"){
+  document.body.classList.add("video"); map.invalidateSize({animate:false}); map.options.zoomSnap=0; map.removeLayer(hotLayer);
+  document.getElementById("showhot").checked=false; map.off("zoomend", hotVis);
+  document.querySelector("#vtitle .t").textContent = H0.vt || ""; document.querySelector("#vtitle .s").textContent = H0.vs || "";
+  const idle = ()=>new Promise(r=>{ const t0=performance.now(); let calm=0;
+    (function poll(){ calm = tiles.some(t=>t.isLoading()) ? 0 : calm+1;
+      if(calm>=3 || performance.now()-t0>10000) r(); else setTimeout(poll,80) })() });
+  const raf = ()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  window.__cam = async (lat, lon, z) => { map.setView([lat,lon], z, {animate:false}); await loadDetail(); await idle(); under.redraw(); over.redraw(); restyle(); legend(); await raf(); return true };
+  window.__card = i => { if(i<0) tc.style.display="none"; else tourShow(i); return true };
+  window.__ready = true;
+}
+</script>
+</body>
+</html>
