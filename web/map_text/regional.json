@@ -1,0 +1,17 @@
+{
+ "LW": "1",
+ "HOTZ": "5",
+ "TITLE": "Leaving the Capital",
+ "H1": "Leaving the capital",
+ "OGTITLE": "Leaving the capital: 54 African trade roads, every 2 km",
+ "OGDESC": "Time lost, safety, diesel and roadside growth on the main roads out of 12 East and Southern African hubs, every 2 km, down to street level. Open data.",
+ "SUB": "54 main roads out of 12 East and Southern African hubs, every 2 km. Tap a road or a ● for details. Press ▶ Fly-through to visit each country's worst bottleneck at street level.",
+ "ALLROADS": "All 54 roads",
+ "HUBHEAD": "Fly to a hub",
+ "HOTHEAD": "Worst stretches, by country",
+ "HOMETITLE": "Whole region",
+ "TYPENOTE": "clustered jointly across all 54 roads",
+ "HUBNOTE": "First 200 km of each road.",
+ "DETDIR": "detail",
+ "FOOT": "Open data: OpenStreetMap, Google Open Buildings, GHSL, GHS-POP 2025, CHIRPS; travel-time and fuel models as in the paper. Light traffic, dry day. Controls are as mapped in OSM, far more completely in South Africa. Code, data and paper: <a href=\"https://github.com/gavacharles/uganda-trade-corridors\">github.com/gavacharles/uganda-trade-corridors</a> · Uganda in detail: <a href=\"uganda_map.html\">the Uganda street-level map</a> and <a href=\"./\">the Uganda explorer</a>"
+}

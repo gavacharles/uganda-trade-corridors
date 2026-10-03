@@ -22,7 +22,7 @@ jobs:
       - name: Site from web/ (index = explorer)
         run: |
           mkdir -p _site
-          cp -r web/explorer.html web/story.html web/story_img web/regional.html web/detail _site/
+          cp -r web/explorer.html web/story.html web/story_img web/regional.html web/detail web/uganda_map.html web/detail_ug _site/
           cp web/explorer.html _site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
