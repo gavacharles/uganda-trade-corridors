@@ -168,23 +168,46 @@ map.createPane("labels"); map.getPane("labels").style.zIndex=650; map.getPane("l
 const renderer = L.canvas({padding:0.4, tolerance: phone()?8:3});
 function colour(v){ const s=L8[layer]; if(s.cat) return s.cols[v]; let i=0; while(i<s.bins.length && v>=s.bins[i]) i++; return s.cols[i] }
 function width(){ const z=map.getZoom(), k={{LW}}; if(phone() && z<6) return 3.2*k; return (z<5?2.4:z<7?3.2:z<9?4.2:z<12?5.5:z<15?7:9)*(z<12?k:1) }
-const lines = D.segs.map((s,idx)=>{
-  const pl = L.polyline(s.g, {renderer, color:colour(s[L8[layer].f]), weight:width(), opacity:0.95, lineCap:"butt"});
-  pl.on("mouseover", ()=>{ if(!phone()) showSeg(idx) });
-  pl.on("click", e=>{ showSeg(idx); popupSeg(idx, e.latlng) });
-  return pl.addTo(map) });
-function restyle(){ const w=width(); lines.forEach((pl,i)=>{ const s=D.segs[i], dim = road!==null && s.c!==road;
-  pl.setStyle({color:colour(s[L8[layer].f]), weight: dim? Math.max(1.5,w*0.45): (road!==null? w*1.3: w), opacity: dim?0.35:0.95}) }) }
-map.on("zoomend", restyle);
+// Roads: one polyline per colour class (about 8), not one per stretch, so taps, zooms and restyles
+// stay cheap on phones; the stretch under a tap is found with a grid index instead.
+function cls(v){ const s=L8[layer]; if(s.cat) return v; let i=0; while(i<s.bins.length && v>=s.bins[i]) i++; return i }
+let roadLayers=[];
+function restyle(){
+  roadLayers.forEach(l=>map.removeLayer(l)); roadLayers=[];
+  const f=L8[layer].f, groups={};
+  D.segs.forEach(s=>{ const dim = road!==null && s.c!==road, k=(dim?0:1)+"_"+cls(s[f]);
+    (groups[k]=groups[k]||{dim, c:cls(s[f]), col:colour(s[f]), parts:[]}).parts.push(...s.g) });
+  Object.values(groups).sort((a,b)=>(b.dim-a.dim)||(a.c-b.c)).forEach(g=>{
+    const pl=L.polyline(g.parts, {renderer, color:g.col, opacity:g.dim?0.35:0.95, lineCap:"butt", interactive:false, smoothFactor:1.5});
+    pl._dim=g.dim; roadLayers.push(pl.addTo(map)) });
+  rewidth() }
+function rewidth(){ const w=width(); roadLayers.forEach(l=>l.setStyle({weight: l._dim? Math.max(1.5,w*0.45): (road!==null? w*1.3: w)})) }
+map.on("zoomend", rewidth);
+// grid index of stretch vertices, 0.1 degree cells
+const GRID={}, GC=0.1;
+D.segs.forEach((s,i)=>s.g.forEach(l=>l.forEach(([la,lo])=>{ const k=Math.floor(lo/GC)+":"+Math.floor(la/GC); const a=(GRID[k]=GRID[k]||[]); if(a[a.length-1]!==i) a.push(i) })));
+function pick(ll, tol){
+  const z=map.getZoom(), pt=map.project(ll,z), dpp=360/(256*Math.pow(2,z)), r=Math.ceil(tol*dpp/GC)+1;
+  const cx=Math.floor(ll.lng/GC), cy=Math.floor(ll.lat/GC), seen=new Set(); let best=-1, bd=tol*tol;
+  for(let x=cx-r;x<=cx+r;x++) for(let y=cy-r;y<=cy+r;y++) (GRID[x+":"+y]||[]).forEach(i=>{ if(seen.has(i)) return; seen.add(i);
+    D.segs[i].g.forEach(l=>{ for(let j=1;j<l.length;j++){ const a=map.project(l[j-1],z), b=map.project(l[j],z);
+      const dx=b.x-a.x, dy=b.y-a.y, t=Math.max(0,Math.min(1,((pt.x-a.x)*dx+(pt.y-a.y)*dy)/(dx*dx+dy*dy||1)));
+      const ex=a.x+t*dx-pt.x, ey=a.y+t*dy-pt.y, d=ex*ex+ey*ey; if(d<bd){ bd=d; best=i } } }) });
+  return best }
+map.on("click", e=>{ const i=pick(e.latlng, phone()?14:7); if(i>=0){ showSeg(i); popupSeg(i, e.latlng) } });
+let hoverT=0;
+map.on("mousemove", e=>{ if(phone()) return; const t=performance.now(); if(t-hoverT<60) return; hoverT=t;
+  const i=pick(e.latlng, 6); map.getContainer().style.cursor = i>=0 ? "pointer" : ""; if(i>=0) showSeg(i) });
+restyle();
 // ---------- hubs and hotspots
 D.hubs.forEach(h=>{
   L.circleMarker([h.lat,h.lon], {radius:6, color:"#fff", weight:2, fillColor:"#1d2321", fillOpacity:1, pane:"markerPane"}).addTo(map)
    .bindTooltip(h.name, {permanent:true, direction:"right", className:"hublabel", offset:[6,0]})
-   .on("click", ()=>showHub(h));
+   .on("click", e=>{ L.DomEvent.stopPropagation(e); showHub(h) });
 });
 function hotHtml(h){ return `<b>${h.place}</b> · ${h.country}<br>${h.road}, km ${h.km} · ${h.type}<br><b>truck +${h.truck} min</b>, car +${h.car} min over 2 km<div style="color:#5d6764;margin-top:4px">${h.causes.replace(/; /g,"<br>")}</div>` }
 const hotMarkers = D.hot.map(h=>L.circleMarker([h.lat,h.lon], {radius:phone()?6:5, color:"#1d2321", weight:1.8, fillColor:"#fff", fillOpacity:1, pane:"markerPane"})
-   .bindPopup(hotHtml(h)).on("click", ()=>share(false,{pop:"h"+h.id})));
+   .bindPopup(hotHtml(h)).on("click", e=>{ L.DomEvent.stopPropagation(e); share(false,{pop:"h"+h.id}) }));
 const hotLayer = L.layerGroup(hotMarkers).addTo(map);
 function hotVis(){ const want=document.getElementById("showhot").checked && map.getZoom()>={{HOTZ}};
   if(want && !map.hasLayer(hotLayer)) hotLayer.addTo(map); if(!want && map.hasLayer(hotLayer)) map.removeLayer(hotLayer) }
@@ -204,20 +227,23 @@ function loadDetail(){
       d.X=dec(d.bx,Uint16Array); d.Y=dec(d.by,Uint16Array); d.S=dec(d.bs,Uint8Array); d.w0=w; DET[i]=d; under.redraw(); over.redraw(); legend() }).catch(()=>{ DETWANT[i]=null });
     ps.push(DETWANT[i]) });
   return Promise.all(ps) }
+const PADF=0.35;   // detail canvases are drawn this much wider than the screen on each side
 const CanvasLayer = L.Layer.extend({
   initialize(pane, paint){ this._paneName=pane; this._paint=paint },
   onAdd(m){ this._map=m; this._c=L.DomUtil.create("canvas","",m.getPane(this._paneName)); this._c.style.pointerEvents="none";
-    m.on("move zoom resize viewreset", this._soon, this); this.redraw() },
-  onRemove(m){ L.DomUtil.remove(this._c); m.off("move zoom resize viewreset", this._soon, this) },
+    m.on("moveend zoomend resize viewreset", this._soon, this); m.on("zoomstart", this._hide, this); this.redraw() },
+  onRemove(m){ L.DomUtil.remove(this._c); m.off("moveend zoomend resize viewreset", this._soon, this); m.off("zoomstart", this._hide, this) },
+  _hide(){ if(this._c) this._c.style.visibility="hidden" },
   _soon(){ if(this._q) return; this._q=requestAnimationFrame(()=>{ this._q=0; this.redraw() }) },
-  redraw(){ const m=this._map; if(!m) return; const s=m.getSize(), r=window.devicePixelRatio||1, c=this._c;
-    c.width=s.x*r; c.height=s.y*r; c.style.width=s.x+"px"; c.style.height=s.y+"px"; L.DomUtil.setPosition(c, m.containerPointToLayerPoint([0,0]));
-    const ctx=c.getContext("2d"); ctx.setTransform(r,0,0,r,0,0); ctx.clearRect(0,0,s.x,s.y);
+  redraw(){ const m=this._map; if(!m) return; const s=m.getSize(), r=Math.min(window.devicePixelRatio||1, 2), c=this._c;
+    const px=Math.round(s.x*PADF), py=Math.round(s.y*PADF), W=s.x+2*px, H=s.y+2*py;
+    c.width=W*r; c.height=H*r; c.style.width=W+"px"; c.style.height=H+"px"; L.DomUtil.setPosition(c, m.containerPointToLayerPoint([-px,-py]));
+    const ctx=c.getContext("2d"); ctx.setTransform(r,0,0,r,px*r,py*r); ctx.clearRect(-px,-py,W,H); c.style.visibility="visible";
     if(document.getElementById("showdet").checked && m.getZoom()>=11) this._paint(ctx, m, s) } });
 function proj(m, w){ // linear lon/lat -> pixel within a 6 km window (Mercator is near-linear there)
   const a=m.latLngToContainerPoint([w[1],w[0]]), b=m.latLngToContainerPoint([w[3],w[2]]);
   const kx=(b.x-a.x)/(w[2]-w[0]), ky=(b.y-a.y)/(w[3]-w[1]); return [(x,y)=>[a.x+(x-w[0])*kx, a.y+(y-w[1])*ky], kx] }
-function visible(m, w){ const b=m.getBounds(); return !(w[2]<b.getWest()||w[0]>b.getEast()||w[3]<b.getSouth()||w[1]>b.getNorth()) }
+function visible(m, w){ const b=m.getBounds().pad(PADF); return !(w[2]<b.getWest()||w[0]>b.getEast()||w[3]<b.getSouth()||w[1]>b.getNorth()) }
 map.createPane("detUnder"); map.getPane("detUnder").style.zIndex=390;
 map.createPane("detOver"); map.getPane("detOver").style.zIndex=640;
 const under = new CanvasLayer("detUnder", (ctx, m)=>{
@@ -386,7 +412,7 @@ if(H0.video==="1"){
     (function poll(){ calm = tiles.some(t=>t.isLoading()) ? 0 : calm+1;
       if(calm>=3 || performance.now()-t0>10000) r(); else setTimeout(poll,80) })() });
   const raf = ()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
-  window.__cam = async (lat, lon, z) => { map.setView([lat,lon], z, {animate:false}); await loadDetail(); await idle(); under.redraw(); over.redraw(); restyle(); legend(); await raf(); return true };
+  window.__cam = async (lat, lon, z) => { map.setView([lat,lon], z, {animate:false}); await loadDetail(); await idle(); under.redraw(); over.redraw(); rewidth(); legend(); await raf(); return true };
   window.__card = i => { if(i<0) tc.style.display="none"; else tourShow(i); return true };
   window.__ready = true;
 }
