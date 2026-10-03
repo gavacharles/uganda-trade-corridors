@@ -53,6 +53,14 @@ Explore 54 roads out of 12 African capitals, every 2 km: time lost, safety, dies
 Free and open:
 https://gavacharles.github.io/uganda-trade-corridors/regional.html
 
+## Post 6b · the fly-through — media: rx15_bottleneck_flythrough.mp4
+
+Ten countries. Ten bottlenecks. One flight.
+
+From the air to street level at the worst 2 km in each country. In 9 of 10, it's the signals and crossings on the way out of the capital. In Zambia, police posts at Chirundu.
+
+Explore them all: https://gavacharles.github.io/uganda-trade-corridors/regional.html
+
 ## Post 7 · the Substack article — media: cover_regional.png
 
 New on Substack: Leaving the capital.
@@ -64,6 +72,8 @@ East Africa pays twice. Here's why, in 14 animations:
 [Substack link]
 
 ## Spare clips (replies, or later posts)
+
+- rx15_bottleneck_flythrough.mp4: fly to the worst stretch in each of the ten countries, from the air down to street level (80 s; good as a standalone post)
 
 - rx2_roadside_growth.mp4: the roadside filling in, 2000→2020 (East +~50%, South +~35%)
 - rx4_street_growth.mp4: one stretch in Rwanda and one in Mozambique building up, at street level

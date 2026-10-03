@@ -30,4 +30,4 @@ B = pq.read_table(os.path.join(C.DATA, "buildings.parquet"),
 flylib.fly("rx15_bottleneck_flythrough", os.path.join(C.FIGURES, "social"), P, sites, countries, lakes,
            set(ART.country), os.path.join(C.DATA, "osm_features.gpkg"), B,
            "Ten countries, ten bottlenecks", "Flying to the 2 km stretch in each country where the roadside costs "
-           "a loaded truck most (weighbridge stops left aside)", (29.0, -14.0, 30.0))
+           "a loaded truck most (weighbridge stops left aside)", (29.0, -13.5, 58.0))

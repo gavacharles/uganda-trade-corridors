@@ -96,7 +96,7 @@ So part of Southern Africa's apparent "signals problem" is a mapping story. That
 
 Every country has its own worst stretch: the 2 km where the roadside costs a loaded truck most, weighbridge stops left aside.
 
-[media: rx13_bottleneck_tour.mp4]
+[media: rx15_bottleneck_flythrough.mp4]
 
 ## What would fix it?
 

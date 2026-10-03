@@ -47,4 +47,4 @@ flylib.fly("a7_bottleneck_flythrough", C.FIGURES, P[["corridor", "geometry", "pe
            {"Uganda"}, os.path.join(C.DATA, "osm_features.gpkg"), B,
            "Uganda's bottlenecks, from the air to the street",
            "The worst 2 km on each trade corridor and the two worst weighbridges; truck minutes lost against open road",
-           (32.3, 1.4, 6.5))
+           (32.3, 1.4, 11.5))

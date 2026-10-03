@@ -62,8 +62,12 @@ def path(a, b, n):
     for i in range(n):
         u = ease((i + 1) / n)
         lw = (1 - u) * np.log(a[2]) + u * np.log(b[2]) + bump * np.sin(np.pi * u)
-        # move the centre mostly while zoomed out
-        v = ease(min(max((u - 0.15) / 0.7, 0), 1))
+        if a[2] > dist * 1.4:          # target already in view: arrive first, then zoom in
+            v = ease(min(u / 0.45, 1))
+        elif b[2] > dist * 1.4:        # zooming out to a view that holds the start: zoom first, then move
+            v = ease(max((u - 0.55) / 0.45, 0))
+        else:                          # stop to stop: move while zoomed out
+            v = ease(min(max((u - 0.15) / 0.7, 0), 1))
         out.append((a[0] + (b[0] - a[0]) * v, a[1] + (b[1] - a[1]) * v, float(np.exp(lw))))
     return out
 
