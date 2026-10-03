@@ -64,6 +64,7 @@ body.video #vtitle{display:block}
 body.video #tourCard{right:22px;bottom:34px;max-width:390px;font-size:15px;padding:14px 18px}
 body.video #tourCard b{font-size:19px}body.video #tourCard .big{font-size:27px}body.video #tourCard .k{font-size:13px}
 body.video #legendBox{left:16px;bottom:30px}
+.iconbtn.on{background:#d9a441;color:#1d2321}
 #toast{position:absolute;left:50%;top:60px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:6px 12px;border-radius:8px;font-size:13px;z-index:1100;display:none}
 .leaflet-popup-content{font:13px/1.45 system-ui,sans-serif;color:var(--ink);margin:10px 12px;max-width:260px}
 .leaflet-popup-content b{font-size:14px}
@@ -121,6 +122,7 @@ body.video #legendBox{left:16px;bottom:30px}
 <div id="tools">
   <button class="iconbtn" id="locBtn" title="Show my location" aria-label="Show my location">◎</button>
   <button class="iconbtn" id="shareBtn" title="Copy a link to this view" aria-label="Share this view">⤴</button>
+  <button class="iconbtn" id="lightBtn" title="Light mode: faster on slow phones" aria-label="Light mode">⚡</button>
   <button class="iconbtn" id="homeBtn" title="{{HOMETITLE}}" aria-label="{{HOMETITLE}}">⌂</button>
 </div>
 <button id="tourBtn" title="Fly from bottleneck to bottleneck">▶ Fly-through</button>
@@ -157,12 +159,28 @@ const map = L.map("map", {preferCanvas:true, zoomControl:!phone(), maxZoom:19, a
   .setView([H0.lat?+H0.lat:-12, H0.lon?+H0.lon:30], H0.z?+H0.z:(phone()?3:4));
 if(!phone()) map.zoomControl.setPosition("bottomright");
 let tiles = [];
-function setBase(k){ tiles.forEach(t=>map.removeLayer(t)); base=k;
-  tiles = BASES[k].layers.map(([u,mz],i)=>L.tileLayer(u,{maxZoom:19, maxNativeZoom:mz, attribution:i?"":BASES[k].att, pane:i?"overlayPane":"tilePane", zIndex:i?650:1,
-    keepBuffer:4, updateWhenZooming:false, crossOrigin:true, errorTileUrl:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}));
+// ---------- light mode: satellite only at street level, coarser tiles, one tile layer, simpler detail.
+// On by itself when the phone asks to save data or the connection is 2G/3G; the choice is remembered.
+const LIGHT_SAT_Z = 12;
+let light = H0.video==="1" ? false : H0.light!==undefined ? H0.light==="1" : (()=>{
+  try{ const v=localStorage.getItem("mapLight"); if(v!==null) return v==="1" }catch(e){}
+  const c=navigator.connection; return !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType||""))) })();
+let shown=null;
+function shownBase(){ return (light && base!=="map" && map.getZoom()<LIGHT_SAT_Z) ? "map" : base }
+function applyTiles(force){
+  const sb=shownBase(); if(!force && sb===shown) return; shown=sb;
+  tiles.forEach(t=>map.removeLayer(t));
+  let ls=BASES[sb].layers; if(light) ls = sb==="hyb" ? ls.slice(0,2) : ls.slice(0,1);
+  tiles = ls.map(([u,mz],i)=>L.tileLayer(u,{maxZoom:19, maxNativeZoom:mz, attribution:i?"":BASES[sb].att, pane:i?"overlayPane":"tilePane", zIndex:i?650:1,
+    keepBuffer: light?2:4, updateWhenIdle: light?true:undefined, updateWhenZooming:false, crossOrigin:true,
+    // light mode: tiles one zoom level coarser, shown at 512 px (a quarter of the downloads, slightly softer)
+    tileSize: light?512:256, zoomOffset: light?-1:0, minNativeZoom: light?1:0,
+    errorTileUrl:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}));
   tiles.forEach((t,i)=>{ t.addTo(map); if(i) t.getContainer().style.pointerEvents="none" });
-  document.querySelectorAll("#baseSeg button").forEach(b=>b.classList.toggle("on", b.dataset.k===k)); share(false);
   try{ under.redraw(); over.redraw() }catch(e){} }
+function setBase(k){ base=k; applyTiles(true);
+  document.querySelectorAll("#baseSeg button").forEach(b=>b.classList.toggle("on", b.dataset.k===k)); share(false) }
+map.on("zoomend", ()=>applyTiles(false));
 // labels pane above the roads
 map.createPane("labels"); map.getPane("labels").style.zIndex=650; map.getPane("labels").style.pointerEvents="none";
 const renderer = L.canvas({padding:0.4, tolerance: phone()?8:3});
@@ -235,7 +253,7 @@ const CanvasLayer = L.Layer.extend({
   onRemove(m){ L.DomUtil.remove(this._c); m.off("moveend zoomend resize viewreset", this._soon, this); m.off("zoomstart", this._hide, this) },
   _hide(){ if(this._c) this._c.style.visibility="hidden" },
   _soon(){ if(this._q) return; this._q=requestAnimationFrame(()=>{ this._q=0; this.redraw() }) },
-  redraw(){ const m=this._map; if(!m) return; const s=m.getSize(), r=Math.min(window.devicePixelRatio||1, 2), c=this._c;
+  redraw(){ const m=this._map; if(!m) return; const s=m.getSize(), r=light?1:Math.min(window.devicePixelRatio||1, 2), c=this._c;
     const px=Math.round(s.x*PADF), py=Math.round(s.y*PADF), W=s.x+2*px, H=s.y+2*py;
     c.width=W*r; c.height=H*r; c.style.width=W+"px"; c.style.height=H+"px"; L.DomUtil.setPosition(c, m.containerPointToLayerPoint([-px,-py]));
     const ctx=c.getContext("2d"); ctx.setTransform(r,0,0,r,px*r,py*r); ctx.clearRect(-px,-py,W,H); c.style.visibility="visible";
@@ -247,7 +265,7 @@ function visible(m, w){ const b=m.getBounds().pad(PADF); return !(w[2]<b.getWest
 map.createPane("detUnder"); map.getPane("detUnder").style.zIndex=390;
 map.createPane("detOver"); map.getPane("detOver").style.zIndex=640;
 const under = new CanvasLayer("detUnder", (ctx, m)=>{
-  const z=m.getZoom(), sat=base!=="map", fade=Math.min(1,(z-11)/1.2);
+  const z=m.getZoom(), sat=shownBase()!=="map", fade=Math.min(1,(z-11)/1.2), bz=light?13:12.3;
   Object.values(DET).forEach(d=>{ const w=d.w0; if(!visible(m,w)) return; const [P,kx]=proj(m,w);
     const pxm = kx/(111320*Math.cos((w[1]+w[3])/2*Math.PI/180)); // pixels per metre
     ctx.globalAlpha=fade;
@@ -259,7 +277,7 @@ const under = new CanvasLayer("detUnder", (ctx, m)=>{
     const rk=Math.max(0.35,Math.min(2.4,(z-11)*0.55));
     ctx.strokeStyle=sat?"rgba(255,255,255,.75)":"#6f6c66"; ctx.lineCap="round";
     d.r.forEach(([h,c])=>{ ctx.lineWidth=HWW[h]*rk; ctx.beginPath(); for(let i=0;i<c.length;i+=2){ const [x,y]=P(c[i],c[i+1]); i?ctx.lineTo(x,y):ctx.moveTo(x,y) } ctx.stroke() });
-    const n = z>=12.3 ? d.S.length : 0; ctx.globalAlpha=fade*Math.min(1,Math.max(0,(z-12.3)/0.8)); ctx.fillStyle=sat?"rgba(255,236,170,.0)":"#9d988c";
+    const n = z>=bz ? d.S.length : 0; ctx.globalAlpha=fade*Math.min(1,Math.max(0,(z-bz)/0.8)); ctx.fillStyle=sat?"rgba(255,236,170,.0)":"#9d988c";
     if(sat){ ctx.strokeStyle="rgba(255,222,120,.9)"; ctx.lineWidth=1 }
     for(let i=0;i<n;i++){ const x=d.o[0]+d.X[i]*1e-5, y=d.o[1]+d.Y[i]*1e-5, [px,py]=P(x,y), sz=Math.max(1.2,d.S[i]*pxm);
       if(sat) ctx.strokeRect(px-sz/2,py-sz/2,sz,sz); else ctx.fillRect(px-sz/2,py-sz/2,sz,sz) }
@@ -295,7 +313,7 @@ function tourShow(i){ const t=D.tour[i];
    <div class="big">+${t.truck} truck min over 2 km</div><div style="color:#5d6764">${t.causes.replace(/; /g,"<br>")}</div>`;
   tc.style.display="block" }
 function tourGo(){ if(!touring) return; const t=D.tour[tourI]; tc.style.display="none";
-  map.flyTo([t.lat,t.lon], phone()?15:15.5, {duration: 5});
+  map.flyTo([t.lat,t.lon], phone()?15:15.5, {duration: light?3:5});
   map.once("moveend", ()=>{ if(!touring) return; loadDetail(); tourShow(tourI);
     tourTimer=setTimeout(()=>{ tourI=(tourI+1)%D.tour.length; tourGo() }, 5500) }) }
 tb.onclick=()=>{ if(touring){ tourStop(); return } touring=true; tb.classList.add("on"); tb.textContent="■ Stop"; closeSheet();
@@ -384,11 +402,17 @@ function toast(t){ const el=document.getElementById("toast"); el.textContent=t; 
 let extra = {};
 function share(copy, o){ if(o) extra=o; const c=map.getCenter();
   const parts={layer, base, z:map.getZoom(), lat:c.lat.toFixed(4), lon:c.lng.toFixed(4)};
-  if(road!==null) parts.road=road; Object.assign(parts, extra);
+  if(road!==null) parts.road=road; if(light) parts.light=1; Object.assign(parts, extra);
   history.replaceState(null, "", "#"+Object.entries(parts).map(([k,v])=>k+"="+encodeURIComponent(v)).join("&"));
   if(copy){ if(navigator.share && phone()) navigator.share({title:document.title, url:location.href}).catch(()=>{});
     else navigator.clipboard.writeText(location.href).then(()=>toast("Link copied"),()=>toast(location.href)) } }
 document.getElementById("shareBtn").onclick=()=>share(true);
+const lb=document.getElementById("lightBtn");
+function lightUI(){ lb.classList.toggle("on", light); lb.title = light ? "Light mode is on: satellite only at street level. Tap to turn off" : "Light mode: faster on slow phones" }
+lb.onclick=()=>{ light=!light; try{ localStorage.setItem("mapLight", light?"1":"0") }catch(e){}
+  lightUI(); applyTiles(true); legend(); share(false);
+  toast(light ? "Light mode on: satellite only when zoomed in to street level" : "Light mode off") };
+lightUI();
 map.on("moveend", ()=>share(false));
 setBase(base); legend();
 if(road!==null){ rs.value=road; restyle(); showRoad(road) }
