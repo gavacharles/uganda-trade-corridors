@@ -1,56 +1,61 @@
-# Kampala mass transit: where would BRT or light rail make sense? (third study, first pass)
+# Kampala mass transit: where would BRT or light rail make sense? (third study)
 
-A first screening of Greater Kampala's roads for bus rapid transit (BRT) and light rail, from open data, reusing the corridor studies' methods. It is a scoping exercise for a full study, not an appraisal.
+Greater Kampala's roads screened for bus rapid transit (BRT) and light rail from open data. The study combines roadside land use, the space between building lines, network design and access equity, with satellite and GIS cartography. Peak road speeds are unknown and no survey is possible now, so congestion is swept rather than assumed.
 
-## First pass (`scripts/k01_screen.py`, `scripts/k02_maps.py`)
+## Pipeline (run in order)
 
-1. **Network:** every motorway, trunk, primary, secondary and tertiary road in the box 32.35–32.90 E, 0.02–0.55 N (OSM; 3,580 segments split at junctions). The tolled Entebbe Expressway (M3) is left out of the public-transport network. The Northern Bypass (M20) runs at a peak 40 km/h.
-2. **Speeds:** an assumed peak speed per road class (trunk 32, primary 26, secondary 22, tertiary 18 km/h), lowered by roadside friction where the land within about 150 m is built up (GHSL 2020). This is the form of paper 1's travel-time model.
-3. **Demand:** about 1.1 km zones (1,886 origins, 6.6 million residents in WorldPop 2025). Trips go from residents to built-up floor area (a proxy for jobs, schools and markets) in an origin-constrained gravity model on network time. Trips under 6 minutes are treated as walked. All trips are routed on fastest paths, giving a **relative** person-trip load on every road, not a count.
-4. **Screening:** named roads within 20 km of the centre, by load, length, residents within an 800 m walk, road width in OSM (dual carriageway or 4+ lanes) and the rail reserve. The thresholds are illustrative.
+| Script | Does | Writes |
+|---|---|---|
+| `k01_screen.py` | Road network (OSM, 3,580 segments split at junctions); peak speeds lowered by roadside friction (GHSL 2020); gravity demand from residents (WorldPop 2025) to built-up floor area; person-trip load on every road | `outputs/edges.gpkg`, `zones.csv`, `corridors.csv` |
+| `k02_maps.py` | Corridor ranking within 20 km of the centre; load map, candidates, street-level close-ups | `outputs/corridors_core.csv`, `figures/k01`–`k03` |
+| `k03_buildings.py` | All 2.39 million Open Buildings footprints in Greater Kampala | `data/` (not committed) |
+| `k04_clearance.py` | **Option 1:** clear width between building lines every 100 m (2,347 cross-sections); buildings inside a 24 m or 30 m corridor; the land use of the frontage and of every building affected | `outputs/clearance.csv`, `demolitions_by_landuse.csv`, `clearance_sections.gpkg` |
+| `k05_scenarios.py` | Each candidate alone as BRT (22 km/h) or light rail (28 km/h), at four congestion levels | `outputs/scenarios.csv` |
+| `k06_figures.py` | Break-even, access by line, clearance | `figures/k04`–`k06` |
+| `k07_landuse.py` | **Land-use patterns** in 250 m cells from footprints (density, median size, coverage) and OSM land use: wetland/water, commercial/industrial, institutional, dense small-plot, planned/larger-plot, peri-urban, rural | `outputs/landuse_cells.parquet`, `landuse.tif`, `landuse_summary.csv` |
+| `tnet.py` | Shared network model: transit lines as their own layer, transfers through road nodes, access within 45 minutes, Gini, gains by land-use group | |
+| `k09_networks.py` | **Networks:** two networks grown corridor by corridor, one for time saved per km (efficiency) and one for access gained by residents of dense small-plot settlement per km (equity); both tested as BRT and light rail at every congestion level | `outputs/network_steps.csv`, `networks.csv`, `network_zone_access.parquet` |
+| `k10_equity.py` | **Equity:** gains by land use and distance from the centre, Lorenz curves, gain against today's access | `outputs/equity.csv`, `figures/k10_equity.png` |
+| `k11_satmaps.py`, `satmap.py` | **Satellite and GIS maps** (Esri World Imagery, cached): networks, land use with satellite close-ups, pinch points at street level, access gain | `figures/s01`–`s04` |
 
-| File | Shows |
-|---|---|
-| `figures/k01_load_map.png` | Every road by modelled person-trip load, with the railway |
-| `figures/k02_candidates.png` | The screened corridors |
-| `figures/k03_closeups.png` | Street level (4 km) at the busiest stretch of the top candidates: building footprints, roads, load, rail |
-| `outputs/corridors_core.csv` | The ranking |
+The congestion levels are roads at 1×, 1.5×, 2× and 3× the travel time assumed in k01. "Central" in what follows means 2×.
 
-## First-pass result
+## Results
 
-- **Northern Bypass (M20):** the strongest single candidate. It carries the most modelled load, has about 21,500 residents per km within walking distance and is already a dual carriageway, so a busway or light rail fits without demolition. As a ring it serves orbital trips, not the radial trips into the centre.
-- **Jinja Road (A1):** the strongest radial. Part of it is dual carriageway, and 60% of its core length lies within 500 m of the metre-gauge railway. That raises the question of rail-based commuter service versus a busway beside it.
-- **Masaka (A2), Entebbe (A3), Hoima/Nansana (A9), Gulu/Bombo (A6) and Gayaza roads:** high load and dense catchments, but single carriageways lined with buildings. BRT would need land or would have to take lanes from general traffic. The short Bwaise stretch of Bombo Road has the highest load per km of any road.
+**Land use (k07).** 52% of residents live in planned or larger-plot areas, 19% peri-urban, 15% in dense small-plot settlement (the pattern of unplanned, informal settlement: 35 or more buildings per hectare, median footprint under 70 m²), 8% rural and 4% in wetland cells.
 
-## Second pass (`k03`–`k06`)
+**Option 1: room, and who would be moved (k04).**
+- The Northern Bypass has room almost everywhere: fewer than 1 building per km lies inside a 24 m corridor.
+- Masaka, Jinja, Entebbe and Hoima/Nansana roads would lose 10–14 buildings per km. Most of them stand in planned areas, but 33–87 per road stand in dense small-plot settlement.
+- Bwaise on Bombo Road would lose 38 per km, 143 of its 210 in dense small-plot settlement.
+- Kireka Road would lose 95 per km, 268 in dense small-plot settlement and 79 in wetland.
+- The pinch points (`s03`) show these stretches on satellite imagery.
 
-- **k03_buildings.py:** all 2.39 million Open Buildings footprints in Greater Kampala (kept in `data/`, not committed).
-- **k04_clearance.py:** the clear width between building lines every 100 m along the candidates (2,347 cross-sections), and the buildings inside a 24 m or a 30 m corridor. The results are in `outputs/clearance.csv` and `figures/k06_clearance.png`.
-- **k05_scenarios.py:** each candidate as a BRT line (22 km/h) or light rail (28 km/h) in its own lane, on the same network. There is no data on peak road speeds, so road congestion is swept: roads at 1×, 1.5×, 2× and 3× the assumed travel time. The script reports trip time saved, and the change in jobs (floor area) reachable in 45 minutes for everyone and for the 40% with the least access. The results are in `outputs/scenarios.csv`, `figures/k04_breakeven.png` and `figures/k05_access.png`.
+**Single lines (k05).** At the assumed speeds no line saves time. At central congestion each radial saves about 2–3% of all trip time; Entebbe Road and Nansana–Busunju Road do best. Light rail saves 10–20% more than BRT on the same line.
 
-**What it shows**
-- **No single line saves much.** On its own, each radial saves 2–3% of all trip time when roads run at half the assumed speed. **A five-line BRT network** (Northern Bypass with Jinja, Masaka, Entebbe and Hoima roads) saves about 10% at that congestion and 16% at a third of the speed. The gain comes from the network, not from any one corridor.
-- **Congestion decides the case.** At the assumed speeds, every line saves under 1%. The case rests on how slow the roads really are at peak, which is the number Kampala lacks.
-- **Light rail beats BRT by only 10–20% in time saved** on the same alignment. That is not enough to pay for the difference in cost.
-- **There is space, but not everywhere.** Masaka, Jinja and Entebbe roads would lose 10–13 buildings per km for a 24 m corridor, and the Northern Bypass almost none. Bwaise on Bombo Road, Mbogo Road and Kireka would lose 38–95 buildings per km.
-- **Equity ranks the lines differently.** Gayaza and Entebbe roads raise access most for the 40% with the least access today. Masaka and Jinja roads raise it most on average.
-- **The Northern Bypass:** at 40 km/h, its general lanes are already faster than a BRT line. It earns its place only as part of a network, or if its traffic slows.
+**Networks (k09).** Greedy growth, at central congestion:
+- **Efficiency network:** Bombo Road (Bwaise), Hoima/Nansana Road, Entebbe Road, Ggaba Road, Masaka Road and Gayaza Road, 102 km. As BRT it saves 9.7% of all trip time, rising to 16.4% at 3× congestion.
+- **Equity network:** the same corridors, except Kireka Road in place of Entebbe Road, 82 km. It saves 7.3%.
+- The two objectives nearly coincide, because the dense settlements lie along the busiest radials.
+- **The network is worth more than its lines.** Lines that each save 2–3% together save about 10%, since travellers transfer between them.
+- **The Northern Bypass is not chosen.** Its general lanes already run at 40 km/h.
+
+**Equity (k10).** With the efficiency BRT network:
+- **By land use:** residents of dense small-plot settlement gain the most reachable jobs and services (+19%). Planned areas gain +18%, peri-urban +14% and rural +11%.
+- **By distance:** homes 10–15 km out gain most (+25%), and homes beyond 20 km gain only +5%.
+- **Spread of access:** the network does not make access more even. The Gini rises slightly, from 0.470 to 0.477. Central and radial residents gain; the fringe is left out unless the lines reach it.
 
 ## Limits
 
-- There is no traffic speed data. Speeds are assumptions shaped by friction, which is why congestion is swept rather than assumed.
-- Demand is a gravity index from population and built-up land, not a travel survey or a count of minibus-taxi passengers. It is held fixed, so no mode shift is modelled.
-- Clear width is measured between building footprints. It ignores walls, utilities and land ownership.
+- **No speed data.** Peak speeds are assumptions shaped by friction, which is why congestion is swept rather than assumed.
+- **Demand is an index, held fixed.** It is a gravity model from population and built-up floor area, not a travel survey, and no mode shift is modelled.
+- **Land-use classes come from building form.** "Dense small-plot" describes the pattern, not tenure; deciding who must be compensated needs cadastral and settlement data.
+- **Clear width is measured between footprints.** It ignores walls, utilities, drainage and land ownership.
+- **No cost-benefit yet.** Costs per km (DART in Dar es Salaam, Nairobi BRT) are the next input.
 
-## A novel study: proposal
+## What makes the study novel
 
-**Working title:** *Where the roadside decides: open-data screening of BRT and light rail for a minibus-taxi city.*
-
-The novelty lies in four things, together:
-
-1. **Ribbon development as a transit design constraint.** Most screening uses demand alone. This study measures the clear width between building lines every 100 m from footprints and turns it into land take and demolitions per km, city-wide, from open data.
-2. **Congestion as a swept unknown, not an assumption.** With no speed data, the study reports the congestion level at which each line or network breaks even. A short GPS or taxi-app survey can then confirm or reject it, which makes the question one that can be answered cheaply.
-3. **Network over corridor.** Lines appraised one at a time look weak; as a network they save four to five times more. The study would test this with a proper network design rather than single lines.
-4. **Access equity for minibus-taxi users.** The study measures the gain for the 40% of residents with the least access, not only the average. Corridors rank differently on the two.
-
-To strengthen it: peak speeds (GPS traces or a few weeks of traffic data), minibus-taxi routes and stages (Digital Transport for Africa GTFS where it exists), KCCA counts or a travel survey for calibration, the metre-gauge commuter-rail plans, and costs per km from Dar es Salaam's DART and Nairobi's BRT.
+1. **Roadside land use as a transit design constraint.** The clear width between buildings is measured every 100 m across a whole African city from open footprints. Each pinch point is classed by land use, so the demolition and resettlement burden of each corridor is known before design.
+2. **Congestion as the unknown, not an assumption.** The study reports the congestion level at which each line or network pays off; any future speed data or survey can then confirm or reject it.
+3. **Designing networks, not appraising lines.** Greedy network growth under two objectives shows that the network roughly triples what its lines save alone, and that efficiency and equity largely agree in Kampala.
+4. **Equity for minibus-taxi users by settlement type.** Gains are measured for residents of dense small-plot settlement, by distance and as a Lorenz/Gini shift. They show who gains and who is left at the fringe.

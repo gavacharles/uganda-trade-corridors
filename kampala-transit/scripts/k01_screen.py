@@ -75,14 +75,28 @@ with rasterio.open(os.path.join(DATA, "worldpop", "uga_pop_2025_CN_100m_R2024B_v
     pop[pop < 0] = 0
     T = src.window_transform(win)
     shape = pop.shape
-built = np.zeros(shape, "float32")
+# GHSL built-up surface (m2 per 100 m Mollweide cell), sampled at every WorldPop cell centre.
+# (Reprojecting the tiles with rasterio.warp.reproject filled the grid with the 65535 no-data value.)
+from pyproj import Transformer  # noqa: E402
+rr_, cc_ = np.mgrid[0:shape[0], 0:shape[1]]
+lon_, lat_ = rasterio.transform.xy(T, rr_.ravel(), cc_.ravel())
+mx, my = Transformer.from_crs(4326, "ESRI:54009", always_xy=True).transform(np.asarray(lon_), np.asarray(lat_))
+bm2 = np.zeros(mx.size, "float32")
 for path in ("built_s_2020_R9_C22.tif", "built_s_2020_R10_C22.tif"):
     with rasterio.open(os.path.join(DATA, "ghsl", path)) as src:
-        tmp = np.zeros(shape, "float32")
-        reproject(rasterio.band(src, 1), tmp, dst_transform=T, dst_crs="EPSG:4326", resampling=Resampling.average,
-                  src_nodata=src.nodata, dst_nodata=0)
-        built = np.maximum(built, tmp)
-built_frac = np.clip(built / 10000.0 * (100 * 100) / (92.6 * 92.6), 0, 1)   # share of the cell built over
+        r_, c_ = rasterio.transform.rowcol(src.transform, mx, my)
+        r_, c_ = np.asarray(r_), np.asarray(c_)
+        ok = (r_ >= 0) & (r_ < src.height) & (c_ >= 0) & (c_ < src.width)
+        if not ok.any():
+            continue
+        win = rasterio.windows.Window(c_[ok].min(), r_[ok].min(), c_[ok].max() - c_[ok].min() + 1,
+                                      r_[ok].max() - r_[ok].min() + 1)
+        a = src.read(1, window=win)
+        v = a[r_[ok] - win.row_off, c_[ok] - win.col_off].astype("float32")
+        v[v == src.nodata] = 0
+        bm2[ok] = np.maximum(bm2[ok], v)
+built_frac = np.clip(bm2.reshape(shape) / 10000.0, 0, 1)        # share of the ground built over
+built = built_frac * (abs(T.a) * 111320) * (abs(T.e) * 110570)   # m2 built in each WorldPop cell
 log("population", f"{pop.sum():,.0f}", "residents in the box")
 
 
