@@ -83,7 +83,7 @@ def lu_of(lon, lat):
 S4 = S.to_crs(4326)
 S["landuse"] = lu_of(S4.geometry.x.values, S4.geometry.y.values)
 B["landuse"] = lu_of(B.longitude.values, B.latitude.values)
-demo = []
+demo, demo_pts = [], []
 rows = []
 for route, s in S.groupby("route"):
     d = E[E.route == route]
@@ -98,6 +98,8 @@ for route, s in S.groupby("route"):
         r[f"demolish_{k}_per_km"] = len(idx) / max(r["km"], 0.1)
         r[f"demolish_{k}_m2"] = float(B.area_in_meters.values[idx].sum())
         if k == "tight":
+            demo_pts.append(pd.DataFrame(dict(route=route, lon=B.longitude.values[idx], lat=B.latitude.values[idx],
+                                              area_m2=B.area_in_meters.values[idx])))
             for cl, n in pd.Series(B.landuse.values[idx]).value_counts().items():
                 demo.append(dict(route=route, landuse=cl, buildings=n,
                                  m2=float(B.area_in_meters.values[idx][B.landuse.values[idx] == cl].sum())))
@@ -109,6 +111,7 @@ R = pd.DataFrame(rows).merge(C[["route", "name", "screen", "load_mean", "catch_p
 R = R.sort_values("load_mean", ascending=False)
 S.to_crs(4326).to_file(os.path.join(KT, "outputs", "clearance_sections.gpkg"), driver="GPKG")
 R.to_csv(os.path.join(KT, "outputs", "clearance.csv"), index=False)
+pd.concat(demo_pts).to_csv(os.path.join(KT, "outputs", "demolished_buildings.csv"), index=False)
 pd.DataFrame(demo).merge(C[["route", "name"]], on="route").to_csv(os.path.join(KT, "outputs", "demolitions_by_landuse.csv"),
                                                                  index=False)
 print(R[["name", "km", "width_median", "width_p10", "fits_full", "fits_tight", "demolish_full", "demolish_tight",

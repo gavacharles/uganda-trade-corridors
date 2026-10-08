@@ -120,45 +120,84 @@ F = pd.DataFrame(frac)
 LU["osm_label"] = np.where(F.max(axis=1) > 0.5, F.idxmax(axis=1), None)
 print(LU.osm_label.value_counts(), flush=True)
 
-FEATS = ["bld_ha", "med_m2", "mean_m2", "coverage", "small_share", "size_spread", "pop", "img_r", "img_g", "img_b",
-         "img_r_sd", "img_g_sd", "img_b_sd", "img_bright", "img_exg", "img_veg", "img_red", "img_bright", "img_grad"]
-FEATS = list(dict.fromkeys(FEATS))
-X = LU[FEATS].fillna(0).to_numpy()
-lab = LU.osm_label.notna().to_numpy() & (acc["n"] > 100)
+FORM = ["bld_ha", "med_m2", "mean_m2", "coverage", "small_share", "size_spread", "pop"]
+IMG = ["img_r", "img_g", "img_b", "img_r_sd", "img_g_sd", "img_b_sd", "img_bright", "img_exg", "img_veg", "img_red",
+       "img_grad"]
+# Google satellite embeddings (k08a), 64 bands averaged per cell
+_emb = os.path.join(KT, "data", "embeddings_2022.tif")
+EMB = []
+if os.path.exists(_emb):
+    with rasterio.open(_emb) as src:
+        ea = src.read().reshape(src.count, -1)
+    EMB = [f"emb_A{i:02d}" for i in range(ea.shape[0])]
+    for i, c in enumerate(EMB):
+        LU[c] = ea[i]
+SETS = {"building form": FORM, "form + image features": FORM + IMG}
+if EMB:
+    SETS["satellite embeddings"] = EMB
+    SETS["form + embeddings"] = FORM + EMB
+    SETS["all"] = FORM + IMG + EMB
+# open water (no buildings, labelled water) is left out of training and testing: it is trivial and
+# would inflate accuracy
+openwater = (LU.osm_label == "wetland / water") & (LU.n.fillna(0) == 0) & (F["wetland / water"] > 0.9)
+lab = LU.osm_label.notna().to_numpy() & (acc["n"] > 100) & ~openwater.to_numpy()
 y = LU.osm_label[lab].to_numpy()
 rr_, cc_ = np.divmod(np.arange(W_ * H_), W_)
 block = (rr_ // 11) * 1000 + (cc_ // 11)       # 11 cells = about 2.5 km
 groups = block[lab]
+print(f"{lab.sum():,} labelled cells after removing {int(openwater.sum()):,} open-water cells", flush=True)
 
-# ---------------------------------------------------------------- spatial cross-validation
-pred = np.empty(len(y), dtype=object)
-for tr, te in GroupKFold(n_splits=5).split(X[lab], y, groups):
-    rf = RandomForestClassifier(n_estimators=400, min_samples_leaf=2, class_weight="balanced", n_jobs=2, random_state=0)
-    rf.fit(X[lab][tr], y[tr])
-    pred[te] = rf.predict(X[lab][te])
-rep = classification_report(y, pred, output_dict=True, zero_division=0)
-cv = pd.DataFrame(rep).T
-cv.to_csv(os.path.join(KT, "outputs", "ml_landuse_cv.csv"))
-print(classification_report(y, pred, zero_division=0))
-print(f"spatial CV accuracy {accuracy_score(y, pred):.3f}, macro F1 {f1_score(y, pred, average='macro'):.3f}", flush=True)
-# form-only and image-only models, to show what each adds
-for name, cols in (("form only", FEATS[:7]), ("image only", FEATS[7:])):
-    Xi = LU[cols].fillna(0).to_numpy()[lab]
-    p2 = np.empty(len(y), dtype=object)
-    for tr, te in GroupKFold(n_splits=5).split(Xi, y, groups):
-        p2[te] = RandomForestClassifier(n_estimators=300, min_samples_leaf=2, class_weight="balanced", n_jobs=2,
-                                        random_state=0).fit(Xi[tr], y[tr]).predict(Xi[te])
-    cv.loc[f"accuracy, {name}"] = [accuracy_score(y, p2), f1_score(y, p2, average="macro"), np.nan, np.nan]
-    print(f"{name}: accuracy {accuracy_score(y, p2):.3f}, macro F1 {f1_score(y, p2, average='macro'):.3f}")
-cv.to_csv(os.path.join(KT, "outputs", "ml_landuse_cv.csv"))
+# ---------------------------------------------------------------- spatial cross-validation of each feature set
+from sklearn.metrics import balanced_accuracy_score  # noqa: E402
+RF = dict(n_estimators=400, min_samples_leaf=2, class_weight="balanced", n_jobs=2, random_state=0)
+cvrows, preds = [], {}
+for name, cols in SETS.items():
+    Xs = LU[cols].fillna(0).to_numpy()[lab]
+    p_ = np.empty(len(y), dtype=object)
+    for tr, te in GroupKFold(n_splits=5).split(Xs, y, groups):
+        p_[te] = RandomForestClassifier(**RF).fit(Xs[tr], y[tr]).predict(Xs[te])
+    preds[name] = p_
+    f1s = f1_score(y, p_, average=None, labels=sorted(set(y)), zero_division=0)
+    cvrows.append(dict(features=name, n_features=len(cols), accuracy=accuracy_score(y, p_),
+                       balanced_accuracy=balanced_accuracy_score(y, p_), macro_f1=f1_score(y, p_, average="macro"),
+                       **{f"f1 {c}": v for c, v in zip(sorted(set(y)), f1s)}))
+    print(f"{name:24s} accuracy {cvrows[-1]['accuracy']:.3f}  balanced {cvrows[-1]['balanced_accuracy']:.3f}  "
+          f"macro F1 {cvrows[-1]['macro_f1']:.3f}", flush=True)
+CVT = pd.DataFrame(cvrows)
+CVT.to_csv(os.path.join(KT, "outputs", "ml_landuse_cv.csv"), index=False)
+BEST = CVT.sort_values("macro_f1").features.iloc[-1]
+FEATS = SETS[BEST]
+pred = preds[BEST]
+cv = pd.DataFrame(classification_report(y, pred, output_dict=True, zero_division=0)).T
+cv.to_csv(os.path.join(KT, "outputs", "ml_landuse_cv_best.csv"))
+print(f"best feature set: {BEST}")
+print(classification_report(y, pred, zero_division=0), flush=True)
 
-rf = RandomForestClassifier(n_estimators=400, min_samples_leaf=2, class_weight="balanced", n_jobs=2, random_state=0)
+X = LU[FEATS].fillna(0).to_numpy()
+rf = RandomForestClassifier(**RF)
 rf.fit(X[lab], y)
 P = rf.predict_proba(X)
 LU["ml_class"] = rf.classes_[P.argmax(axis=1)]
 LU["ml_conf"] = P.max(axis=1)
-pd.DataFrame({"feature": FEATS, "importance": rf.feature_importances_}).sort_values("importance", ascending=False).to_csv(
-    os.path.join(KT, "outputs", "ml_importance.csv"), index=False)
+for i, c in enumerate(rf.classes_):
+    LU[f"p_{c}"] = P[:, i]
+
+# ---------------------------------------------------------------- SHAP: what drives each class
+import shap  # noqa: E402
+rs = np.random.default_rng(0)
+samp = rs.choice(np.flatnonzero(lab), size=min(1500, lab.sum()), replace=False)
+ex = shap.TreeExplainer(rf)
+sv = ex.shap_values(X[samp], check_additivity=False)
+sv = np.stack(sv, axis=-1) if isinstance(sv, list) else sv           # (n, features, classes)
+mabs = np.abs(sv).mean(axis=0)                                        # (features, classes)
+IMP = pd.DataFrame(mabs, index=FEATS, columns=rf.classes_)
+IMP["all classes"] = IMP.sum(axis=1)
+IMP.sort_values("all classes", ascending=False).to_csv(os.path.join(KT, "outputs", "ml_shap.csv"))
+pd.DataFrame({"feature": FEATS, "importance": IMP["all classes"].to_numpy()}).sort_values(
+    "importance", ascending=False).to_csv(os.path.join(KT, "outputs", "ml_importance.csv"), index=False)
+grp = IMP["all classes"].groupby(lambda f: "embedding" if f.startswith("emb_") else "image" if f.startswith("img_")
+                                 else "building form").sum()
+print("SHAP share by feature group:", (grp / grp.sum()).round(3).to_dict(), flush=True)
 
 # ---------------------------------------------------------------- unsupervised check on residential cells
 res = LU.cls.isin(["dense small-plot", "planned / larger-plot", "peri-urban"]).to_numpy()
@@ -192,6 +231,7 @@ LU["code"] = LU.cls.map({k: i for i, k in enumerate(CLASSES)}).astype("uint8")
 print("changed by the model:", int((LU.cls != LU.cls_rule).sum()), "cells;",
       f"{LU['pop'][LU.cls != LU.cls_rule].sum():,.0f} residents", flush=True)
 keep = [c for c in LU.columns if not c.startswith("img_") or c in ("img_veg", "img_red", "img_grad")]
+keep = [c for c in keep if not c.startswith("emb_")]
 LU[keep].to_parquet(os.path.join(KT, "outputs", "landuse_cells.parquet"))
 with rasterio.open(os.path.join(KT, "outputs", "landuse.tif"), "r+") as dst:
     dst.write(LU.code.to_numpy().reshape(H_, W_), 1)
@@ -222,8 +262,9 @@ from matplotlib.patches import Patch  # noqa: E402
 ax.legend(handles=[Patch(color=c, label=k) for k, c in zip(ML, MLC)], loc="lower left", fontsize=9, frameon=True)
 ax2 = fig.add_axes([0.47, 0.52, 0.22, 0.34])
 imp = pd.read_csv(os.path.join(KT, "outputs", "ml_importance.csv")).head(12)[::-1]
-ax2.barh(imp.feature, imp.importance, color=["#3a7d5c" if f.startswith("img") else "#c4532d" for f in imp.feature])
-ax2.set_title("What the model uses (red: building form, green: imagery)", loc="left", fontsize=10.5, color=INK)
+ax2.barh(imp.feature, imp.importance, color=["#2e86c1" if f.startswith("emb") else "#3a7d5c" if f.startswith("img")
+                                             else "#c4532d" for f in imp.feature])
+ax2.set_title("SHAP (red: building form, green: imagery)", loc="left", fontsize=10, color=INK)
 ax2.tick_params(labelsize=8.5)
 for s_ in ("top", "right"):
     ax2.spines[s_].set_visible(False)
@@ -234,7 +275,8 @@ for j, (c, col) in enumerate(zip(cvt.columns, ("#9fb3b0", "#4e7c8a", INK))):
     ax3.bar(x + (j - 1) * 0.27, cvt[c], width=0.26, color=col, label=c)
 ax3.set_xticks(x); ax3.set_xticklabels([c.replace(" / ", "/\n") for c in cvt.index], fontsize=8)
 ax3.set_ylim(0, 1); ax3.legend(frameon=False, fontsize=8.5)
-ax3.set_title(f"Spatial cross-validation (accuracy {accuracy_score(y, pred):.0%})", loc="left", fontsize=10.5, color=INK)
+ax3.set_title(f"Spatial CV, {BEST} (macro F1 {f1_score(y, pred, average='macro'):.2f})", loc="left", fontsize=10.5,
+              color=INK)
 for s_ in ("top", "right"):
     ax3.spines[s_].set_visible(False)
 ax4 = fig.add_axes([0.47, 0.06, 0.51, 0.36])
@@ -248,8 +290,9 @@ for i in range(ct.shape[0]):
 ax4.set_title(f"Unsupervised check: {kb} groups found by a Gaussian mixture in residential cells, against the rule "
               f"classes (share of each group; adjusted Rand {ari:.2f})", loc="left", fontsize=10.5, color=INK)
 fig.text(0.01, 0.96, "Machine learning for land use: building form plus satellite imagery", fontsize=16, color=INK)
-fig.text(0.01, 0.925, f"Random forest trained on {lab.sum():,} cells labelled in OpenStreetMap, tested on held-out "
-         "2.5 km blocks, then applied to every 250 m cell. Imagery © Esri, Maxar, Earthstar Geographics.",
+fig.text(0.01, 0.925, f"Random forest trained on {lab.sum():,} cells labelled in OpenStreetMap (open water left out), tested "
+         "on held-out 2.5 km blocks. Feature sets compared: " + "; ".join(f"{r.features} {r.macro_f1:.2f}" for r in
+         CVT.itertuples()) + " (macro F1).",
          fontsize=9.5, color=INK2)
 fig.savefig(os.path.join(KT, "figures", "k08_ml_landuse.png"), dpi=160, facecolor=SURF, bbox_inches="tight")
 print("wrote k08_ml_landuse.png")
