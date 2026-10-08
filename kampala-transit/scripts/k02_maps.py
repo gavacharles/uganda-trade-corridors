@@ -134,7 +134,8 @@ fig.savefig(os.path.join(FIG, "k02_candidates.png"), dpi=160, facecolor=SURF, bb
 plt.close(fig)
 
 # ---------------------------------------------------------------- k03 close-ups
-B = pq.read_table(os.path.join(ROOT, "data", "buildings.parquet"),
+_kb = os.path.join(ROOT, "kampala-transit", "data", "buildings_pts.parquet")   # city-wide (k03), if downloaded
+B = pq.read_table(_kb if os.path.exists(_kb) else os.path.join(ROOT, "data", "buildings.parquet"),
                   columns=["latitude", "longitude", "area_in_meters"]).to_pandas()
 osm = gpd.read_file(os.path.join(ROOT, "data", "osm_features.gpkg"), layer="roads", bbox=EXT[0:1] + EXT[2:3] + EXT[1:2] + EXT[3:4])
 cand = C[C.screen.str.contains("rail|BRT")]
@@ -179,7 +180,7 @@ for ax in axs.ravel()[len(picks):]:
     ax.set_axis_off()
 fig.suptitle("Street level at the busiest stretch of each candidate (4 km windows)", x=0.02, ha="left", fontsize=15,
              color=INK)
-fig.text(0.02, 0.935, "Building footprints (Google Open Buildings, available within 1 km of the trade corridors), "
+fig.text(0.02, 0.935, "Building footprints (Google Open Buildings v3), "
          "the road network (OSM), modelled load, railway. Footprints show the space a busway would have to find.",
          fontsize=9.5, color=INK2)
 fig.savefig(os.path.join(FIG, "k03_closeups.png"), dpi=150, facecolor=SURF, bbox_inches="tight")
