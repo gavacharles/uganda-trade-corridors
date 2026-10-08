@@ -66,6 +66,24 @@ S = pd.DataFrame(secs)
 S = gpd.GeoDataFrame(S, geometry=gpd.points_from_xy(S.x, S.y), crs=UTM)
 print(len(S), "cross-sections")
 
+# land use (k07) of every cross-section and of every building inside the corridor
+import rasterio  # noqa: E402
+with rasterio.open(os.path.join(KT, "outputs", "landuse.tif")) as lu:
+    LUA, LUT = lu.read(1), lu.transform
+CLS = ["wetland / water", "commercial / industrial", "institutional", "dense small-plot", "planned / larger-plot",
+       "peri-urban", "rural / open"]
+
+
+def lu_of(lon, lat):
+    r, c = rasterio.transform.rowcol(LUT, lon, lat)
+    r, c = np.clip(np.asarray(r), 0, LUA.shape[0] - 1), np.clip(np.asarray(c), 0, LUA.shape[1] - 1)
+    return np.array(CLS)[LUA[r, c]]
+
+
+S4 = S.to_crs(4326)
+S["landuse"] = lu_of(S4.geometry.x.values, S4.geometry.y.values)
+B["landuse"] = lu_of(B.longitude.values, B.latitude.values)
+demo = []
 rows = []
 for route, s in S.groupby("route"):
     d = E[E.route == route]
@@ -79,10 +97,19 @@ for route, s in S.groupby("route"):
         r[f"demolish_{k}"] = len(idx)
         r[f"demolish_{k}_per_km"] = len(idx) / max(r["km"], 0.1)
         r[f"demolish_{k}_m2"] = float(B.area_in_meters.values[idx].sum())
+        if k == "tight":
+            for cl, n in pd.Series(B.landuse.values[idx]).value_counts().items():
+                demo.append(dict(route=route, landuse=cl, buildings=n,
+                                 m2=float(B.area_in_meters.values[idx][B.landuse.values[idx] == cl].sum())))
+    for cl, sh in s.landuse.value_counts(normalize=True).items():
+        r[f"frontage_{cl}"] = sh
+    r["tight_fail_dense"] = ((s.width < WIDTHS["tight"]) & (s.landuse == "dense small-plot")).mean()
     rows.append(r)
 R = pd.DataFrame(rows).merge(C[["route", "name", "screen", "load_mean", "catch_pop_per_km"]], on="route")
 R = R.sort_values("load_mean", ascending=False)
 S.to_crs(4326).to_file(os.path.join(KT, "outputs", "clearance_sections.gpkg"), driver="GPKG")
 R.to_csv(os.path.join(KT, "outputs", "clearance.csv"), index=False)
+pd.DataFrame(demo).merge(C[["route", "name"]], on="route").to_csv(os.path.join(KT, "outputs", "demolitions_by_landuse.csv"),
+                                                                 index=False)
 print(R[["name", "km", "width_median", "width_p10", "fits_full", "fits_tight", "demolish_full", "demolish_tight",
          "demolish_tight_per_km"]].round(2).to_string())
