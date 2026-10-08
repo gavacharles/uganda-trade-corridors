@@ -13,7 +13,7 @@ Kampala moves on minibus taxis and motorcycle taxis on roads that double as the 
 - satellite imagery;
 - built-up surface (GHSL) and population (WorldPop).
 
-Land use is classified in 250 m cells by rules on building form, refined with a random forest trained on OpenStreetMap labels and imagery features. The forest reaches 92% accuracy under spatial cross-validation. The clear width between building lines is measured every 100 m along 15 candidate corridors, and the buildings a 24 m corridor would displace are counted by land use.
+Land use is classified in 250 m cells by rules on building form, refined with a random forest trained on OpenStreetMap labels and satellite-image features. Under spatial cross-validation the forest reaches 84% accuracy (macro F1 0.61), and SHAP values show building form and imagery contributing about equally. Land-use uncertainty is carried through to displacement and equity by Monte Carlo. The clear width between building lines is measured every 100 m along 15 candidate corridors, and the buildings a 24 m corridor would displace are counted by land use.
 
 A gravity demand model and a multimodal network model then test each corridor alone and two networks grown corridor by corridor: one for time saved and one for access gained by residents of dense, small-plot settlement. Because peak speeds are unknown, road congestion is swept rather than assumed, and the appraisal reports the congestion at which each option pays.
 
@@ -28,6 +28,8 @@ The roadside, measured from space, decides where rapid transit fits and who pays
 # 1. Introduction
 
 Greater Kampala has about 6.6 million residents within the study area. They travel overwhelmingly by minibus taxi ("matatu"), motorcycle taxi ("boda boda") and on foot. The arterial roads radiating from the centre carry this traffic along with freight to Uganda's borders. A companion paper shows that these roads have become high streets for most of their length, lined with trading centres, markets, taxi stages and side roads (Gava, 2026). Rapid transit, whether a busway or a tramway, is the standard response of growing cities to congested arterials. Kampala has seen BRT and light-rail proposals over the past decade, but no network has been built.
+
+The city's growth has outpaced its road network. Built-up land around Kampala has spread along the arterials into Wakiso and Mukono, and daily commutes now cross several administrative boundaries. A single, mostly two-lane road carries minibus taxis, motorcycles, private cars, freight and pedestrians, with stopping and loading at the kerb throughout. Public transport is provided by thousands of independent owners and drivers organised around stages and routes. Any trunk service would have to be fitted into that industry rather than imposed on empty streets.
 
 Two gaps make it hard to judge where rapid transit would make sense.
 
@@ -53,9 +55,18 @@ BRT has spread from Curitiba and Bogotá to more than 170 cities, valued for del
 
 Most trips in African cities are made by minibus and motorcycle taxis operating without public subsidy (Behrens et al., 2016; Kumar et al., 2021). Accessibility, the opportunities reachable in a given time, has become the preferred measure of what transport offers residents (Geurs and van Wee, 2004; Venter et al., 2019). Work on transport justice argues that improvements should be judged by how they change the distribution of access, not its average (Lucas, 2012; Martens, 2017; Pereira et al., 2017). Informal settlement is often where access is poorest and where transport projects displace people. Yet the location of informal settlement is rarely mapped city-wide.
 
-## 2.3 Mapping the city from space
+## 2.3 Appraisal when a key input is unknown
 
-Building footprints extracted from high-resolution imagery now cover most of Africa (Sirko et al., 2021). Morphological measures of footprints, such as density, size and spacing, distinguish planned from unplanned settlement in many cities. Machine learning on imagery features maps land use where cadastres are incomplete (Kuffer et al., 2016; Wurm et al., 2019). OpenStreetMap's road network is close to complete (Barrington-Leigh and Millard-Ball, 2017). Its land-use polygons cover only parts of most African cities, which makes them a natural training set for predicting the rest. To our knowledge, no study has combined footprint-based clearance, ML land use and network accessibility to screen rapid transit for a whole African city.
+Transport appraisal normally takes a base-year speed and demand and projects them forward. Where a key input cannot be observed, the decision-making-under-deep-uncertainty literature recommends a different approach. Instead of choosing one value, it explores the range of plausible conditions and identifies the region in which each option succeeds (Lempert et al., 2003; Marchau et al., 2019). Scenario discovery asks under what conditions a policy fails, not what its expected value is. This paper applies that logic to the one input Kampala lacks: by sweeping congestion, it reports the threshold at which each option pays.
+
+## 2.4 Mapping the city from space
+
+Building footprints extracted from high-resolution imagery now cover most of Africa (Sirko et al., 2021). Morphological measures of footprints, such as density, size and spacing, distinguish planned from unplanned settlement in many cities. Machine learning on imagery features maps land use where cadastres are incomplete (Kuffer et al., 2016; Wurm et al., 2019). OpenStreetMap's road network is close to complete (Barrington-Leigh and Millard-Ball, 2017). Its land-use polygons cover only parts of most African cities, which makes them a natural training set for predicting the rest. Morphological indicators from footprints separate formal from informal settlement with useful accuracy in Nairobi, Dar es Salaam and elsewhere. Imagery texture and spectral measures add information on roof material, spacing and vegetation (Kuffer et al., 2016; Wurm et al., 2019). Two practices make such classifiers credible in planning research:
+
+- spatial cross-validation, which avoids the inflated accuracy that comes from testing on a training cell's neighbour;
+- explanation of what the model relies on, increasingly with SHAP values (Lundberg and Lee, 2017).
+
+To our knowledge, no study has combined footprint-based clearance, ML land use and network accessibility to screen rapid transit for a whole African city.
 
 # 3. Study area and data
 
@@ -79,7 +90,7 @@ Table: Table 1. Data.
 
 **Network.** The road network is split at every junction. Each segment gets an assumed peak speed by class (trunk 32, primary 26, secondary 22, tertiary 18 km/h), reduced by up to 35% where the land within about 150 m is built up. This follows the roadside-friction form of the companion paper. The tolled Entebbe Expressway is excluded from the public-transport network. The Northern Bypass, a dual carriageway with at-grade junctions, runs at 40 km/h.
 
-**Demand.** Demand is an origin-constrained gravity model on about 1.1 km zones (1,886 origins):
+**Demand.** Demand is an origin-constrained gravity model on about 1.1 km zones (1,886 origins). Trips from zone *i* to zone *j* are T_ij = P_i · A_j exp(−t_ij/τ) / Σ_k A_k exp(−t_ik/τ), where P_i is the number of residents, A_j the built-up floor area and t_ij the peak door-to-door time. In practice:
 
 - one public-transport trip per resident, distributed to built-up floor area with an exponential decay in travel time (τ = 25 minutes);
 - trips under six minutes treated as walked;
@@ -113,7 +124,11 @@ The rules are refined with a random forest (400 trees, balanced class weights). 
 - the share of red/orange and of bright roofs;
 - texture, as the mean image gradient.
 
-Labels are the 23,585 cells where one OpenStreetMap land-use group covers more than half the cell. Accuracy is measured by spatial cross-validation: the city is cut into 2.5 km blocks and whole blocks are held out, so the model is never scored on a neighbour of a training cell.
+Labels are the cells where one OpenStreetMap land-use group covers more than half the cell. Open water (cells labelled water with no buildings) is left out of training and testing: it is trivial to classify and would inflate accuracy. That leaves 10,182 labelled cells.
+
+Accuracy is measured by spatial cross-validation: the city is cut into 2.5 km blocks and whole blocks are held out, so the model is never scored on a neighbour of a training cell. Because the classes are unbalanced, the paper reports balanced accuracy and macro F1 alongside accuracy.
+
+Two feature sets are compared: building form alone, and form with imagery. The model is explained with SHAP values (Lundberg and Lee, 2017), computed with TreeExplainer on 1,500 labelled cells.
 
 The model's predictions replace the rule class where it is at least 60% confident of wetland, commercial/industrial or institutional use, or of residential use where the rules said otherwise. As an unsupervised check, a Gaussian mixture model is fitted to the residential cells, with the number of groups chosen by BIC, and its groups are compared with the rule classes.
 
@@ -145,6 +160,9 @@ Each network grows to six corridors and is then evaluated at all congestion leve
 
 ## 4.5 Equity
 
+Access for zone *i* is A_i = Σ_j F_j · 1[t_ij ≤ 45 min], the floor area F_j reachable within 45 minutes. A cumulative-opportunity measure is used because it is easy to interpret and to compare across groups (Geurs and van Wee, 2004).
+
+
 Access is the built-up floor area reachable within 45 minutes door to door. Gains are reported:
 
 - by the land-use class residents live in;
@@ -152,7 +170,19 @@ Access is the built-up floor area reachable within 45 minutes door to door. Gain
 - for the 40% of residents with the least access today;
 - as the shift in the population-weighted Lorenz curve and Gini coefficient of access.
 
-## 4.6 Appraisal
+## 4.6 Land-use uncertainty
+
+The classifier's probabilities are carried through the analysis. In each of 500 draws, every cell's class is sampled from the random forest's probabilities. Residential draws are split by building form, as in the rules, and farm or forest draws become rural.
+
+For each draw, three things are recomputed:
+
+- the buildings inside each corridor by land use;
+- the share of residents in each class;
+- the efficiency network's access gain by class.
+
+The results are reported as the final classification with 5–95% ranges.
+
+## 4.7 Appraisal
 
 Benefits are travel-time savings only. Operating costs, emissions and safety are left out, so the benefits are conservative. Costs are capital per km, resettlement per displaced building, and operation and maintenance. Table 2 gives the ranges, each drawn from a triangular distribution 2,000 times. The appraisal uses a 12% discount rate, four years of construction and 25 years of operation.
 
@@ -179,9 +209,19 @@ On the rule-based classification refined by the model:
 - 15% in dense small-plot settlement, concentrated in a belt around the centre;
 - 6% in rural cells and 5% in wetland or water cells (@S2).
 
-The random forest reaches 92% accuracy under spatial cross-validation. F1 scores are 0.93 for residential, 0.95 for wetland/water, 0.70 for farm and forest, and 0.62 for commercial/industrial. It fails on institutional land, which has only 41 training cells (@M1).
+With building form and imagery, the random forest reaches 84% accuracy under spatial cross-validation, with a balanced accuracy of 0.59 and a macro F1 of 0.61 (Table 5; @M1). It classifies residential land reliably (F1 0.93), farm and forest well (0.76), and wetland and commercial land moderately (0.72 and 0.62). It fails on institutional land, which has only 41 training cells.
 
-Imagery features carry most of the signal: alone they reach 91% accuracy, against 85% for building form alone. Image texture and colour spread rank among the most important features. The Gaussian mixture separates dense small-plot settlement as its own group (60% of one group), independently of the rules. The model changed the class of 4,024 cells, home to about 300,000 residents, mainly between wetland and residential at the settlement edge.
+Adding imagery to building form raises accuracy from 76% to 84% and macro F1 from 0.52 to 0.61. Most of the gain is for wetland (F1 0.54 to 0.72) and commercial land (0.46 to 0.62).
+
+SHAP attributes 48% of the model's decisions to building form and 52% to imagery. The single most influential features are resident density, image texture (mean gradient), building coverage and building density. Texture distinguishes tightly packed roofs from open and vegetated ground.
+
+Table: Table 5. Spatial cross-validation of the land-use classifier (open water excluded; 10,182 cells).
+
+| Features | Accuracy | Balanced accuracy | Macro F1 | F1 residential | F1 wetland | F1 commercial |
+|---|---|---|---|---|---|---|
+| Building form (7) | 0.76 | 0.50 | 0.52 | 0.92 | 0.54 | 0.46 |
+| Form and imagery (18) | 0.84 | 0.59 | 0.61 | 0.93 | 0.72 | 0.62 |
+ The Gaussian mixture separates dense small-plot settlement as its own group (60% of one group), independently of the rules. The model changed the class of 4,779 cells, home to about 350,000 residents, mainly between wetland and residential at the settlement edge.
 
 ![Figure @S2. Land-use patterns of Greater Kampala in 250 m cells, with satellite close-ups of a typical cell of each pattern.](../figures/s02_landuse.png){6.3}
 
@@ -262,6 +302,16 @@ Table: Table 4. Benefit–cost ratios (central, 5–95%) and probability of exce
 
 ![Figure @A1. Benefit–cost ratios with 5–95% ranges, by congestion level.](../figures/k12_appraisal.png){6.3}
 
+## 5.7 How sure are the land-use results?
+
+The results that matter most for the study are robust to land-use uncertainty (@U1):
+
+- **Dense small-plot settlement** holds 15% of residents (5–95% range 14.6–15.1%). Its access gain under the efficiency network is +18.6% (18.5–18.8%).
+- **Displacement:** the network's 24 m corridors contain 432 buildings in dense small-plot settlement (406–436). Kireka Road has the widest range, 268 (214–333), because it borders wetland.
+- **What is uncertain** is the split at the city's edge between peri-urban, rural and wetland cells. Their share of residents moves by several points between draws. Results for those classes should be read with that range in mind.
+
+![Figure @U1. Land-use uncertainty carried to equity gains and to displacement in dense settlement (500 draws from the classifier's probabilities).](../figures/k13_uncertainty.png){6.3}
+
 # 6. Discussion
 
 ## 6.1 Congestion decides; measure it
@@ -280,9 +330,29 @@ Space is less binding than often assumed. The main radials offer a 24 m corridor
 
 Residents of dense small-plot settlement gain most in relative terms, but access as a whole does not become more equal. The greatest unmet need is at the fringe beyond 20 km, where the city is growing fastest. Trunk lines reach the fringe only if they extend there. Feeder services, run by the minibus taxi industry, could carry the trunk lines' benefits to the fringe. Designing for equity changes the network only at the margin in Kampala, because the busiest corridors already serve the densest settlement.
 
-## 6.5 What machine learning adds
+## 6.5 Phasing, paratransit and resettlement
 
-The random forest adds land-use labels where OpenStreetMap has none, and it shows that the imagery carries more of the signal than building form. Unsupervised clustering found the dense small-plot pattern on its own, which supports the rule-based classes. Neither replaces ground truth on tenure or income. Together they make a city-wide first map of who lives at the roadside, from data any city can obtain.
+**Phasing.** The appraisal suggests a phased programme. Entebbe Road and Hoima/Nansana Road reach benefit–cost ratios of about 1.5 on their own at central congestion, cost a few hundred million dollars each, and displace mostly buildings in planned areas. Built first, they would show whether Kampala's congestion lies above the threshold, at modest risk. The network's other corridors can follow once the first lines' ridership and speeds are observed.
+
+**Minibus taxis.** Experience in Lagos, Johannesburg and Dar es Salaam shows that BRT in African cities succeeds or fails on its relationship with the incumbent paratransit industry (Behrens et al., 2016; Rizzo, 2017). In Kampala the efficiency network's gains depend on transfers between lines, and on feeders that bring passengers from the fringe to the trunk lines. Both are natural roles for the minibus taxi industry if it is brought in as an operator rather than displaced.
+
+**Resettlement.** The pinch points concentrate displacement in dense small-plot settlement and wetland, where tenure is often informal. International lending standards require resettlement to restore livelihoods and to cover people without formal title (World Bank, 2017). The footprint counts here are a first estimate of that obligation, by corridor and land use, available before any alignment is drawn. The resettlement unit costs used in the appraisal (US$ 10–60 thousand per building) make displacement a modest share of a BRT network's cost. The social cost of moving roadside traders and residents is larger than its price.
+
+## 6.6 Transferability
+
+Every input is global and openly licensed:
+
+- building footprints;
+- OpenStreetMap roads and land use;
+- GHSL built-up surface;
+- WorldPop population;
+- satellite imagery.
+
+The pipeline can therefore be repeated for any city where rapid transit is being considered, even without traffic data or a cadastre. The congestion sweep makes the missing input explicit rather than hiding it in an assumption. The footprint clearance, land-use classification and network design run in minutes on a laptop.
+
+## 6.7 What machine learning adds
+
+The random forest adds land-use labels where OpenStreetMap has none. Imagery raises macro F1 from 0.52 to 0.61, mostly by separating wetland and commercial land from residential. SHAP shows that texture and resident density drive the decisions, and Monte Carlo shows which conclusions survive the classifier's errors. Unsupervised clustering found the dense small-plot pattern on its own, which supports the rule-based classes. Neither replaces ground truth on tenure or income. Together they make a city-wide first map of who lives at the roadside, from data any city can obtain.
 
 # 7. Limitations
 
@@ -330,6 +400,12 @@ Lucas, K., 2012. Transport and social exclusion: where are we now? Transport Pol
 
 Martens, K., 2017. Transport Justice: Designing Fair Transportation Systems. Routledge, New York.
 
+Lundberg, S.M., Lee, S.-I., 2017. A unified approach to interpreting model predictions. Advances in Neural Information Processing Systems 30, 4765–4774.
+
+Lempert, R.J., Popper, S.W., Bankes, S.C., 2003. Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis. RAND, Santa Monica.
+
+Marchau, V.A.W.J., Walker, W.E., Bloemen, P.J.T.M., Popper, S.W. (Eds.), 2019. Decision Making under Deep Uncertainty: From Theory to Practice. Springer, Cham.
+
 Pereira, R.H.M., Schwanen, T., Banister, D., 2017. Distributive justice and equity in transportation. Transport Reviews 37(2), 170–191.
 
 Pesaresi, M., Politis, P., 2023. GHS-BUILT-S R2023A: GHS built-up surface grid, derived from Sentinel-2 composite and Landsat, multitemporal (1975–2030). European Commission, Joint Research Centre.
@@ -341,5 +417,7 @@ Sirko, W., Kashubin, S., Ritter, M., et al., 2021. Continental-scale building de
 Tatem, A.J., 2017. WorldPop, open data for spatial demography. Scientific Data 4, 170004.
 
 Venter, C., Mahendra, A., Hidalgo, D., 2019. From Mobility to Access for All: Expanding Urban Transportation Choices in the Global South. World Resources Institute, Washington, DC.
+
+World Bank, 2017. The World Bank Environmental and Social Framework (ESS5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement). World Bank, Washington, DC.
 
 Wurm, M., Stark, T., Zhu, X.X., Weigand, M., Taubenböck, H., 2019. Semantic segmentation of slums in satellite images using transfer learning on fully convolutional neural networks. ISPRS Journal of Photogrammetry and Remote Sensing 150, 59–69.

@@ -1,0 +1,141 @@
+route,landuse,central,p5,p95,name
+A1,dense small-plot,83,63.95,83.0,Jinja Road (A1)
+A1,planned / larger-plot,165,131.0,171.04999999999995,Jinja Road (A1)
+A1,peri-urban,5,15.0,20.0,Jinja Road (A1)
+A1,rural / open,0,0.0,20.0,Jinja Road (A1)
+A1,wetland / water,0,0.0,28.049999999999955,Jinja Road (A1)
+A1,commercial / industrial,42,12.0,46.0,Jinja Road (A1)
+A1,institutional,0,0.0,11.049999999999955,Jinja Road (A1)
+A2,dense small-plot,33,30.950000000000003,33.0,Kampala - Masaka Road (A2)
+A2,planned / larger-plot,226,204.0,225.0,Kampala - Masaka Road (A2)
+A2,peri-urban,0,0.0,0.0,Kampala - Masaka Road (A2)
+A2,rural / open,0,0.0,7.0,Kampala - Masaka Road (A2)
+A2,wetland / water,3,2.0,20.0,Kampala - Masaka Road (A2)
+A2,commercial / industrial,0,0.0,8.0,Kampala - Masaka Road (A2)
+A2,institutional,0,0.0,2.0499999999999545,Kampala - Masaka Road (A2)
+A3,dense small-plot,88,85.0,88.0,Entebbe Road (A3)
+A3,planned / larger-plot,202,193.0,208.0,Entebbe Road (A3)
+A3,peri-urban,6,0.0,6.0,Entebbe Road (A3)
+A3,rural / open,0,0.0,11.0,Entebbe Road (A3)
+A3,wetland / water,1,0.0,15.049999999999955,Entebbe Road (A3)
+A3,commercial / industrial,6,0.0,3.0,Entebbe Road (A3)
+A3,institutional,0,0.0,1.0,Entebbe Road (A3)
+A5,dense small-plot,103,92.0,103.0,Fort Portal - Kampala Road (A5)
+A5,planned / larger-plot,246,218.95,242.04999999999995,Fort Portal - Kampala Road (A5)
+A5,peri-urban,13,1.9500000000000028,11.0,Fort Portal - Kampala Road (A5)
+A5,rural / open,0,1.0,19.0,Fort Portal - Kampala Road (A5)
+A5,wetland / water,6,6.0,33.0,Fort Portal - Kampala Road (A5)
+A5,commercial / industrial,0,0.0,9.0,Fort Portal - Kampala Road (A5)
+A5,institutional,0,0.0,4.0,Fort Portal - Kampala Road (A5)
+A6,dense small-plot,65,52.0,65.0,Gulu - Kampala Road (A6)
+A6,planned / larger-plot,111,83.95,109.0,Gulu - Kampala Road (A6)
+A6,peri-urban,36,9.0,29.0,Gulu - Kampala Road (A6)
+A6,rural / open,3,1.0,21.0,Gulu - Kampala Road (A6)
+A6,wetland / water,4,10.0,40.0,Gulu - Kampala Road (A6)
+A6,commercial / industrial,1,0.0,14.0,Gulu - Kampala Road (A6)
+A6,institutional,0,0.0,13.049999999999955,Gulu - Kampala Road (A6)
+A9,dense small-plot,84,80.0,85.0,Nansana - Busunju Road (A9)
+A9,planned / larger-plot,156,118.95,153.04999999999995,Nansana - Busunju Road (A9)
+A9,peri-urban,4,0.0,4.0,Nansana - Busunju Road (A9)
+A9,rural / open,1,0.0,19.0,Nansana - Busunju Road (A9)
+A9,wetland / water,3,4.0,33.049999999999955,Nansana - Busunju Road (A9)
+A9,commercial / industrial,0,0.0,8.049999999999955,Nansana - Busunju Road (A9)
+A9,institutional,0,0.0,1.0,Nansana - Busunju Road (A9)
+Bishop Tucker Road,dense small-plot,0,0.0,0.0,Bishop Tucker Road
+Bishop Tucker Road,planned / larger-plot,296,188.85000000000002,294.0,Bishop Tucker Road
+Bishop Tucker Road,peri-urban,9,0.0,9.0,Bishop Tucker Road
+Bishop Tucker Road,rural / open,2,0.0,68.09999999999991,Bishop Tucker Road
+Bishop Tucker Road,wetland / water,0,0.0,75.0,Bishop Tucker Road
+Bishop Tucker Road,commercial / industrial,24,1.0,55.0,Bishop Tucker Road
+Bishop Tucker Road,institutional,2,0.0,26.049999999999955,Bishop Tucker Road
+Bwaise I 14302,dense small-plot,143,121.85000000000001,143.0,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,planned / larger-plot,65,52.95,67.0,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,peri-urban,0,0.0,0.0,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,rural / open,0,0.0,0.0,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,wetland / water,0,0.0,23.049999999999955,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,commercial / industrial,2,0.0,10.049999999999955,Bombo Road (Bwaise I 14302)
+Bwaise I 14302,institutional,0,0.0,0.0,Bombo Road (Bwaise I 14302)
+Gayaza Road,dense small-plot,46,45.0,50.0,Gayaza Road
+Gayaza Road,planned / larger-plot,288,255.0,288.0,Gayaza Road
+Gayaza Road,peri-urban,4,0.0,4.0,Gayaza Road
+Gayaza Road,rural / open,0,0.0,15.0,Gayaza Road
+Gayaza Road,wetland / water,7,2.0,29.0,Gayaza Road
+Gayaza Road,commercial / industrial,0,0.0,4.0,Gayaza Road
+Gayaza Road,institutional,0,0.0,4.0,Gayaza Road
+Ggaba Road,dense small-plot,38,25.0,38.0,Ggaba Road
+Ggaba Road,planned / larger-plot,115,104.0,115.0,Ggaba Road
+Ggaba Road,peri-urban,0,0.0,0.0,Ggaba Road
+Ggaba Road,rural / open,0,0.0,2.0,Ggaba Road
+Ggaba Road,wetland / water,1,0.0,16.0,Ggaba Road
+Ggaba Road,commercial / industrial,0,0.0,7.0,Ggaba Road
+Ggaba Road,institutional,0,0.0,0.0,Ggaba Road
+Kampala Road,dense small-plot,0,0.0,0.0,Kampala Road
+Kampala Road,planned / larger-plot,67,56.0,67.0,Kampala Road
+Kampala Road,peri-urban,0,11.0,11.0,Kampala Road
+Kampala Road,rural / open,0,0.0,3.0499999999999545,Kampala Road
+Kampala Road,wetland / water,0,0.0,2.0,Kampala Road
+Kampala Road,commercial / industrial,11,0.0,11.0,Kampala Road
+Kampala Road,institutional,0,0.0,0.0,Kampala Road
+Kireka Road,dense small-plot,268,214.0,333.0,Kireka Road
+Kireka Road,planned / larger-plot,52,50.0,65.0,Kireka Road
+Kireka Road,peri-urban,0,0.0,0.0,Kireka Road
+Kireka Road,rural / open,0,0.0,0.0,Kireka Road
+Kireka Road,wetland / water,79,9.0,132.04999999999995,Kireka Road
+Kireka Road,commercial / industrial,0,0.0,0.0,Kireka Road
+Kireka Road,institutional,0,0.0,0.0,Kireka Road
+Lubiri Ring Road,dense small-plot,33,33.0,33.0,Lubiri Ring Road
+Lubiri Ring Road,planned / larger-plot,42,33.0,42.0,Lubiri Ring Road
+Lubiri Ring Road,peri-urban,10,2.0,10.0,Lubiri Ring Road
+Lubiri Ring Road,rural / open,2,0.0,8.0,Lubiri Ring Road
+Lubiri Ring Road,wetland / water,0,0.0,17.0,Lubiri Ring Road
+Lubiri Ring Road,commercial / industrial,0,0.0,0.0,Lubiri Ring Road
+Lubiri Ring Road,institutional,0,0.0,2.0,Lubiri Ring Road
+M20,dense small-plot,5,4.0,5.0,Northern Bypass (M20)
+M20,planned / larger-plot,13,11.0,14.0,Northern Bypass (M20)
+M20,peri-urban,1,0.0,1.0,Northern Bypass (M20)
+M20,rural / open,0,0.0,2.0,Northern Bypass (M20)
+M20,wetland / water,1,0.0,3.0,Northern Bypass (M20)
+M20,commercial / industrial,0,0.0,1.0,Northern Bypass (M20)
+M20,institutional,0,0.0,1.0,Northern Bypass (M20)
+Mbogo Road,dense small-plot,0,0.0,0.0,Mbogo Road
+Mbogo Road,planned / larger-plot,363,309.0,361.04999999999995,Mbogo Road
+Mbogo Road,peri-urban,20,6.0,20.0,Mbogo Road
+Mbogo Road,rural / open,0,0.0,27.0,Mbogo Road
+Mbogo Road,wetland / water,1,1.0,46.0,Mbogo Road
+Mbogo Road,commercial / industrial,0,0.0,19.0,Mbogo Road
+Mbogo Road,institutional,0,0.0,14.0,Mbogo Road
+Mutundwe Road,dense small-plot,28,20.0,28.0,Mutundwe Road
+Mutundwe Road,planned / larger-plot,164,153.0,164.0,Mutundwe Road
+Mutundwe Road,peri-urban,0,0.0,0.0,Mutundwe Road
+Mutundwe Road,rural / open,0,0.0,0.0,Mutundwe Road
+Mutundwe Road,wetland / water,0,0.0,13.199999999999818,Mutundwe Road
+Mutundwe Road,commercial / industrial,0,0.0,0.0,Mutundwe Road
+Mutundwe Road,institutional,0,0.0,0.0,Mutundwe Road
+Namugongo Road,dense small-plot,33,33.0,33.0,Namugongo Road
+Namugongo Road,planned / larger-plot,143,136.0,143.0,Namugongo Road
+Namugongo Road,peri-urban,0,0.0,0.0,Namugongo Road
+Namugongo Road,rural / open,0,0.0,0.0,Namugongo Road
+Namugongo Road,wetland / water,0,0.0,7.0,Namugongo Road
+Namugongo Road,commercial / industrial,0,0.0,0.0,Namugongo Road
+Namugongo Road,institutional,0,0.0,0.0,Namugongo Road
+Nsanji - Buloba Road,dense small-plot,40,40.0,40.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,planned / larger-plot,172,149.0,172.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,peri-urban,10,4.0,10.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,rural / open,0,0.0,16.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,wetland / water,3,1.0,19.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,commercial / industrial,0,0.0,0.0,Nsanji - Buloba Road
+Nsanji - Buloba Road,institutional,0,0.0,4.0499999999999545,Nsanji - Buloba Road
+Old Jinja Road,dense small-plot,74,29.0,75.0,Old Jinja Road
+Old Jinja Road,planned / larger-plot,144,116.35000000000004,156.0,Old Jinja Road
+Old Jinja Road,peri-urban,0,0.0,5.0,Old Jinja Road
+Old Jinja Road,rural / open,0,0.0,16.0,Old Jinja Road
+Old Jinja Road,wetland / water,0,0.0,57.0,Old Jinja Road
+Old Jinja Road,commercial / industrial,50,27.950000000000003,68.04999999999995,Old Jinja Road
+Old Jinja Road,institutional,0,0.0,3.099999999999909,Old Jinja Road
+efficiency network,dense small-plot,432,405.95,436.0,efficiency network
+efficiency network,planned / larger-plot,1052,975.95,1033.0,efficiency network
+efficiency network,peri-urban,14,2.0,12.0,efficiency network
+efficiency network,rural / open,1,4.0,34.0,efficiency network
+efficiency network,wetland / water,15,30.950000000000003,85.04999999999995,efficiency network
+efficiency network,commercial / industrial,8,1.0,22.0,efficiency network
+efficiency network,institutional,0,0.0,8.0,efficiency network
