@@ -13,9 +13,11 @@ Greater Kampala's roads screened for bus rapid transit (BRT) and light rail from
 | `k05_scenarios.py` | Each candidate alone as BRT (22 km/h) or light rail (28 km/h), at four congestion levels | `outputs/scenarios.csv` |
 | `k06_figures.py` | Break-even, access by line, clearance | `figures/k04`–`k06` |
 | `k07_landuse.py` | **Land-use patterns** in 250 m cells from footprints (density, median size, coverage) and OSM land use: wetland/water, commercial/industrial, institutional, dense small-plot, planned/larger-plot, peri-urban, rural | `outputs/landuse_cells.parquet`, `landuse.tif`, `landuse_summary.csv` |
+| `k08_ml_landuse.py` | **Machine learning:** a random forest on building form and satellite imagery features (Esri, zoom 15), trained on OSM-labelled cells with 2.5 km spatial cross-validation (92% accuracy; imagery alone 91%, form alone 85%); it refines the classes where it is at least 60% sure. A Gaussian mixture on residential cells serves as an unsupervised check | `outputs/ml_landuse_cv.csv`, `ml_importance.csv`, `ml_gmm.csv`, `figures/k08_ml_landuse.png` |
 | `tnet.py` | Shared network model: transit lines as their own layer, transfers through road nodes, access within 45 minutes, Gini, gains by land-use group | |
 | `k09_networks.py` | **Networks:** two networks grown corridor by corridor, one for time saved per km (efficiency) and one for access gained by residents of dense small-plot settlement per km (equity); both tested as BRT and light rail at every congestion level | `outputs/network_steps.csv`, `networks.csv`, `network_zone_access.parquet` |
 | `k10_equity.py` | **Equity:** gains by land use and distance from the centre, Lorenz curves, gain against today's access | `outputs/equity.csv`, `figures/k10_equity.png` |
+| `k12_appraisal.py` | **Costs and benefits:** capital, resettlement per displaced building and O&M against time savings; 2,000 draws, 12% discount rate, 25 years | `outputs/appraisal.csv`, `figures/k12_appraisal.png` |
 | `k11_satmaps.py`, `satmap.py` | **Satellite and GIS maps** (Esri World Imagery, cached): networks, land use with satellite close-ups, pinch points at street level, access gain | `figures/s01`–`s04` |
 
 The congestion levels are roads at 1×, 1.5×, 2× and 3× the travel time assumed in k01. "Central" in what follows means 2×.
@@ -44,6 +46,10 @@ The congestion levels are roads at 1×, 1.5×, 2× and 3× the travel time assum
 - **By land use:** residents of dense small-plot settlement gain the most reachable jobs and services (+19%). Planned areas gain +18%, peri-urban +14% and rural +11%.
 - **By distance:** homes 10–15 km out gain most (+25%), and homes beyond 20 km gain only +5%.
 - **Spread of access:** the network does not make access more even. The Gini rises slightly, from 0.470 to 0.477. Central and radial residents gain; the fringe is left out unless the lines reach it.
+
+**Would it pay (k12)?** At central congestion the efficiency BRT network has a benefit–cost ratio of 1.33 (5–95% range 0.65–2.57), above one in 74% of draws, for about US$ 1.1 billion including resettlement. It does not pay at 1.5× congestion (0.48) and pays clearly at 3× (3.3). Entebbe Road and Nansana–Busunju Road alone reach about 1.5 and make natural first phases. Light rail on the network (about US$ 3.6 billion) pays only at 3× congestion (1.1). Benefits are time savings only.
+
+**Paper:** `paper/kampala_transit_paper.docx` (source `paper/kampala_transit_paper.md`, built with `tools/build_paper.py`).
 
 ## Limits
 
