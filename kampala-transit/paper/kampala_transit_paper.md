@@ -1,5 +1,5 @@
-title: Where the roadside decides
-subtitle: Screening bus rapid transit and light rail for Kampala with building footprints, satellite imagery and machine learning
+title: Roadside settlement and the feasibility of rapid transit in Kampala
+subtitle: An assessment using building footprints, satellite imagery and machine learning
 author: Charles Gava
 affil: [Affiliation]
 email: gavacharles85@gmail.com
