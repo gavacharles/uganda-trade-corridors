@@ -13,7 +13,6 @@ Web map: https://gavacharles.github.io/uganda-trade-corridors/ (deployed by `.gi
 | `outputs/` | Result tables (pieces, causes, costs, scenarios, fuel and CO₂, safety, black spots) |
 | `figures/` | Maps, atlases, charts and animations |
 | `web/` | Web map data builder (`build_web_data.py`) and generated data |
-| `paper/` | Manuscript (Markdown, Word, PDF) |
 | `presentation/` | Slide deck and its builder |
 | `social/` | Post drafts and media |
 | `kampala-transit/`, `regional-corridors/` | Companion analyses, each with its own README |

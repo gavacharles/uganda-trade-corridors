@@ -50,7 +50,7 @@ The congestion levels are roads at 1×, 1.5×, 2× and 3× the travel time assum
 
 **Would it pay (k12)?** At central congestion the efficiency BRT network has a benefit–cost ratio of 1.33 (5–95% range 0.65–2.57), above one in 74% of draws, for about US$ 1.1 billion including resettlement. It does not pay at 1.5× congestion (0.48) and pays clearly at 3× (3.3). Entebbe Road and Nansana–Busunju Road alone reach about 1.5 and make natural first phases. Light rail on the network (about US$ 3.6 billion) pays only at 3× congestion (1.1). Benefits are time savings only.
 
-**Paper:** `paper/kampala_transit_paper.docx` (source `paper/kampala_transit_paper.md`, built with `tools/build_paper.py`).
+**Paper:** built locally with `tools/build_paper.py` and kept private until publication.
 
 **Uncertainty (k13).** The key results survive the classifier's errors. Dense small-plot settlement holds 15% of residents (draws 14.6–15.1%), and its access gain is +18.6% (18.5–18.8%). The network's 24 m corridors contain 432 buildings in dense settlement (406–436). The split between peri-urban, rural and wetland at the city's edge is uncertain.
 
