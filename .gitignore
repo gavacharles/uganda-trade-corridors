@@ -7,3 +7,17 @@ regional-corridors/data/
 /data
 regional-corridors/data
 kampala-transit/data/
+
+# Paper drafts and write-ups are kept private (moved 2026-11-20)
+/paper/
+/kampala-transit/paper/
+/regional-corridors/paper/
+/social/drafts_page/index.html
+/presentation/*.pptx
+/social/**/*.md
+/social/**/*.txt
+/social/**/*.docx
+/social/**/*.doc
+/social/**/*.pdf
+/social/**/*.pptx
+/social/**/*.tex
